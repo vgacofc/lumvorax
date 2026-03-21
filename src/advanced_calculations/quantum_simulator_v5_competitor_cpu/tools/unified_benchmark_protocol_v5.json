@@ -1,0 +1,10 @@
+{
+  "version": "v5-strict-unified-1",
+  "description": "Strict unified benchmark protocol: same circuit family, same qubit sizes, same shot budget across all competitors.",
+  "circuit_family": "ghz",
+  "workloads": [
+    {"circuit": "ghz", "qubits": 4, "shots": 256},
+    {"circuit": "ghz", "qubits": 8, "shots": 256},
+    {"circuit": "ghz", "qubits": 12, "shots": 256}
+  ]
+}

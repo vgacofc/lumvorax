@@ -1,0 +1,45 @@
+LUMVORAX V13 Certification Test
+Logs
+Version 19 failed to run after 17.1s
+Accelerator
+
+GPU P100
+Environment
+
+Latest Container Image
+Output
+
+6.84 kB
+Time
+	
+#
+	
+Log Message
+5.2s	1	Processing /kaggle/input/nx47-dependencies/imagecodecs-2026.1.14-cp311-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl
+5.7s	2	Requirement already satisfied: numpy in /usr/local/lib/python3.12/dist-packages (from imagecodecs==2026.1.14) (2.0.2)
+8.0s	3	Installing collected packages: imagecodecs
+8.7s	4	Successfully installed imagecodecs-2026.1.14
+10.8s	5	{
+10.8s	6	  "status": "fail",
+10.8s	7	  "error_type": "RuntimeError",
+10.8s	8	  "error": "native_so_load_enforced_failed: /kaggle/input/nx47-dependencies/liblumvorax.so: undefined symbol: lum_logf",
+10.8s	9	  "report": "/kaggle/working/lumvorax_360_validation_report_v13_strict.json",
+10.8s	10	  "dataset_root": "/kaggle/input/nx47-dependencies",
+10.8s	11	  "native_lib": "/kaggle/input/nx47-dependencies/liblumvorax.so",
+10.8s	12	  "missing_required_packages": [],
+10.8s	13	  "incompatible_required_packages": [],
+10.8s	14	  "so_load_status": null,
+10.8s	15	  "so_symbol_count": 0,
+10.8s	16	  "roundtrip_status": null,
+10.8s	17	  "warnings_count": 0,
+10.8s	18	  "events_count": 6,
+10.8s	19	  "elapsed_ns": 9726390937
+10.8s	20	}
+13.4s	21	/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+13.4s	22	  cells[i][c] = re.sub('\\\\\|', '|', cell)
+13.7s	23	/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+13.7s	24	  text = re.sub(r'_', '\_', text) # Escape underscores in display text
+14.4s	25	/usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=["nbconvert.preprocessors.ExtractOutputPreprocessor"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.
+14.4s	26	  warn(
+14.5s	27	[NbConvertApp] Converting notebook __script__.ipynb to html
+16.1s	28	[NbConvertApp] Writing 369726 bytes to __results__.html

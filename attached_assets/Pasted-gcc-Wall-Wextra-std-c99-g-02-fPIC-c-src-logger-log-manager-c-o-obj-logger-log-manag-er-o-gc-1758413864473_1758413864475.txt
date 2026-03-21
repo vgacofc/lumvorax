@@ -1,0 +1,65 @@
+gcc -Wall -Wextra -std=c99 -g -02 -fPIC -c src/logger/log_manager.c -o obj/logger/log_manag er.o
+
+gcc -Wall -Wextra -std=c99 -g -02 -fPIC -c src/debug/memory_tracker.c -o obj/debug/memory_t racker.o
+
+gcc -Wall -Wextra -std=c99-g-02-fPIC -c src/debug/forensic_logger.c -o obj/debug/forensi c_logger.o
+
+gcc -Wall -Wextra -std=c99-g-02-fPIC -c src/debug/ultra_forensic_logger.c -o obj/debug/u
+
+ltra_forensic_logger.o
+
+gcc -Wall -Wextra -std=c99-g-02-fPIC -c src/debug/enhanced_logging.c -o obj/debug/enhanc ed_logging.o
+
+gcc -Wall -Wextra -std=c99-g-02-fPIC -c src/debug/logging_system.c -o obj/debug/logging_
+
+system.o
+
+gcc -Wall -Wextra -std=c99-g-02-fPIC -c src/crypto/crypto_validator.c -o obj/crypto/cryp to_validator.o
+
+gcc -Wall -Wextra -std=c99 -g -02 -fPIC -c src/persistence/data_persistence.c -o obj/persis tence/data_persistence.o
+
+gcc -Wall -Wextra -std=c99-g-02-fPIC -c src/persistence/transaction_wal_extension.c -o o
+
+bj/persistence/transaction_wal_extension.o
+
+gcc -Wall -Wextra -std=c99-g-02-fPIC -c src/persistence/recovery_manager_extension.c -o
+
+obj/persistence/recovery_manager_extension.o
+
+gcc -Wall -Wextra -std=c99 -g -02 -fPIC -c src/optimization/memory_optimizer.c -o obj/optim
+
+ization/memory_optimizer.o
+
+gcc -Wall -Wextra -std=c99-g-02-fPIC -c src/optimization/pareto_optimizer.c -o obj/optim
+
+ization/pareto_optimizer.o
+
+gcc -Wall -Wextra -std=c99 -g -02 -fPIC -c src/optimization/pareto_inverse_optimizer.c -o o
+
+bj/optimization/pareto_inverse_optimizer.o
+
+gcc -Wall -Wextra -std=c99 -g-02-fPIC -c src/optimization/simd_optimizer.c -o obj/optimiz ation/simd_optimizer.o
+
+gcc -Wall -Wextra -std=c99-g-02-fPIC -c src/optimization/zero_copy_allocator.c -o obj/op
+
+timization/zero_copy_allocator.o
+
+gcc -Wall -Wextra -std=c99 -g -02 -fPIC -c src/parallel/parallel_processor.c -o obj/paralle l/parallel_processor.o
+
+src/parallel/parallel_processor.c: In function 'parallel_processor_wait_for_completion':
+
+src/parallel/parallel_processor.c:127:9: error: implicit declaration of function 'usleep'; did you mean
+
+'sleep'? [-Wimplicit-function-declaration]
+
+127 |
+
+usleep(1000); // Sleep 1ms
+
+22222
+
+sleep
+
+make: *** [Makefile: 144: obj/parallel/parallel_processor.o] Error 1
+
+~/workspace$

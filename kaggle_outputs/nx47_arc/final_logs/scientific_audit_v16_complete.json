@@ -1,0 +1,10 @@
+[
+  {
+    "metric": "EQUATION_SOLVE_LATENCY",
+    "value": 323645,
+    "unit": "ns",
+    "timestamp": 1770669159120201313,
+    "bit_audit": "0b1100010010010101011100011100000000100000110010110011001100001",
+    "entropy_trace": "a1bbddd357ad2114f465fc2c362662ee5fa6d62e70e68a92318afa43456867dbfc3c0089f0fc1cc5832d10620033da26574c8ff2aefe4cc98e925a559b23f0a9"
+  }
+]

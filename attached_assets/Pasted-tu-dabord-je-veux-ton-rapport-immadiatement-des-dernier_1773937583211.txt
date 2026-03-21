@@ -1,0 +1,54 @@
+tu dabord, je veux ton rapport immadiatement des dernier reusltat pour valider  les correction du src/advanced_calculations/quantum_problem_hubbard_hts/CHAT/analysechatgpt52.md et 51.md.
+Tous les cœurs de processeur détectés sont-ils bien utilisés ?
+
+Mon autre question est la suivante : pourquoi est-ce que je vois énormément de zéros après la virgule dans la valeur des résultats bruts ? Cela ne devrait-il pas afficher la valeur exacte, à la précision de la virgule près ?
+
+Ensuite, où sont passés les millions de logs et de métriques (plus de 4 millions déjà signalés dans les anciens rapports) que produisaient les exécutions précédentes ? À ma connaissance, lorsqu’on augmente la granularité des logs, il devrait y avoir une augmentation du nombre de lignes de métriques, jusqu’à un niveau de détail à la nanoseconde, non ?
+
+Je l’ai déjà dit à plusieurs reprises : la priorité est d’augmenter la granularité des logs générés à chaque nouveau run. Chaque exécution doit permettre d’identifier où ajouter encore plus de logs en profondeur, en utilisant toutes les ressources matérielles disponibles jusqu’à 99 %, peu importe le temps, la quantité de RAM, de CPU ou de disque, ou encore la taille des lignes de logs et des métriques. Tout doit être tracé à 100 %, du plus haut niveau détecté jusqu’au niveau le plus bas, à chaque run, sans jamais supprimer aucun log dans les exécutions futures.
+
+Ensuite, l’affichage des logs en temps réel dans la console ne montre pas exactement les fonctions utilisées. Je vois seulement le nom du fichier et la ligne d’exécution, mais je ne vois pas l’algorithme utilisé ni le type de calcul effectué. As-tu uniquement affiché les checkpoints ? Et toutes ces informations sont-elles bien générées dans les fichiers de logs ?
+
+Enfin, pourquoi la taille du cluster (scaling exploré de 8×8 — 64 sites — à 255×255 — 65 025 sites) n’augmente-t-elle pas encore dynamiquement jusqu’à atteindre une convergence totale à 100 % ?
+
+---
+encore une fois le sinformation des metriquie detailler sistem en disparue , plus de calcule par seconnde, latence, qubit simulé reussi a produire reellement et autre detaille de metrique deja demander dans le raPport precedent 
+quel sont tous les OBSERVED restant et que fautil individuellment et  realiser pour regler leur probleme definitivement pour quil puise passer en PASS?  et regle aussi le probleme suivant, c'est fichier la aussi doivent subir une rotation a 20 mo, tout les fichier genere quel quil soit  ne doivent pas depanser 20mo et tout le futur log generer doivent etre envoyer dans le git lfs : ~/workspace$ git push origin main 
+Enumerating objects: 192, done.
+Counting objects: 100% (192/192), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (149/149), done.
+Writing objects: 100% (150/150), 57.71 MiB | 4.82 MiB/s, done.
+Total 150 (delta 25), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (25/25), completed with 11 local objects.
+remote: warning: File src/advanced_calculations/quantum_problem_hubbard_hts/results/research_20260319T142510Z_1741/tests/parallel_tempering_mc_results_part_aa.csv is 98.26 MB; this is larger than GitHub's recommended maximum file size of 50.00 MB
+remote: warning: File src/advanced_calculations/quantum_problem_hubbard_hts/results/research_20260319T142510Z_1741/tests/parallel_tempering_mc_results_part_ab.csv is 77.80 MB; this is larger than GitHub's recommended maximum file size of 50.00 MB
+remote: error: Trace: de54742a83602aa0470f9d9f9552958f2e1a42ed1c2b5cc99990d9da733b7a27
+remote: error: See https://gh.io/lfs for more information.
+remote: error: File src/advanced_calculations/quantum_problem_hubbard_hts/results/research_20260319T142510Z_1741/tests/parallel_tempering_mc_results.csv is 109.33 MB; this exceeds GitHub's file size limit of 100.00 MB
+remote: error: File src/advanced_calculations/quantum_problem_hubbard_hts/results/research_20260319T142510Z_1741/tests/worm_mc_attempt_log.csv is 120.42 MB; this exceeds GitHub's file size limit of 100.00 MB
+remote: error: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.
+To https://github.com/lumc01/Lumvorax
+ ! [remote rejected]     main -> main (pre-receive hook declined)
+error: failed to push some refs to 'https://github.com/lumc01/Lumvorax'
+~/workspace$ 
+
+~/workspace$ git push origin main
+Enumerating objects: 114, done.
+Counting objects: 100% (114/114), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (65/65), done.
+Writing objects: 100% (68/68), 56.83 MiB | 4.71 MiB/s, done.
+Total 68 (delta 26), reused 8 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (26/26), completed with 9 local objects.
+remote: warning: File src/advanced_calculations/quantum_problem_hubbard_hts/results/research_20260319T150318Z_437/tests/parallel_tempering_mc_results_part_aa.csv is 98.25 MB; this is larger than GitHub's recommended maximum file size of 50.00 MB
+remote: warning: File src/advanced_calculations/quantum_problem_hubbard_hts/results/research_20260319T150318Z_437/tests/parallel_tempering_mc_results_part_ab.csv is 77.79 MB; this is larger than GitHub's recommended maximum file size of 50.00 MB
+remote: error: Trace: 18ec3640c71583de7764d62dd640ae8e3640303dfa32efe32613c88d3195d4c1
+remote: error: See https://gh.io/lfs for more information.
+remote: error: File src/advanced_calculations/quantum_problem_hubbard_hts/results/research_20260319T150318Z_437/tests/parallel_tempering_mc_results.csv is 109.30 MB; this exceeds GitHub's file size limit of 100.00 MB
+remote: error: File src/advanced_calculations/quantum_problem_hubbard_hts/results/research_20260319T150318Z_437/tests/worm_mc_attempt_log.csv is 120.42 MB; this exceeds GitHub's file size limit of 100.00 MB
+remote: error: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.
+To https://github.com/lumc01/Lumvorax
+ ! [remote rejected]     main -> main (pre-receive hook declined)
+error: failed to push some refs to 'https://github.com/lumc01/Lumvorax'
+~/workspace$

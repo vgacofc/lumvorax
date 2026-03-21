@@ -1,0 +1,61 @@
+mkdir -p obj/debug obj/lum obj/vorax obj/parser obj/binary obj/logger obj/crypto obj/persistence obj/advanced_calculations obj/complex_modules bin
+mkdir -p logs/forensic/{modules,tests,metrics,operations,summary,validation}
+clang -Wall -Wextra -std=c99 -O3 -g -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -DFORENSIC_ULTRA_STRICT=1 -I./src -I./src/debug -I./src/lum -I./src/vorax -I./src/parser -I./src/binary -I./src/logger -I./src/crypto -I./src/persistence -I./src/advanced_calculations -I./src/complex_modules -c src/debug/ultra_forensic_logger.c -o obj/debug/ultra_forensic_logger.o
+In file included from src/debug/ultra_forensic_logger.c:2:
+src/debug/ultra_forensic_logger.h:47:1: error: unknown type name 'bool'
+   47 | bool ultra_forensic_logger_init(void);
+      | ^
+src/debug/ultra_forensic_logger.h:53:72: error: unknown type name 'bool'
+   53 |                                  const char* module, const char* test, bool success);
+      |                                                                        ^
+src/debug/ultra_forensic_logger.h:60:1: error: unknown type name 'bool'
+   60 | bool ultra_forensic_validate_all_logs_exist(void);
+      | ^
+src/debug/ultra_forensic_logger.c:15:8: error: unknown type name 'bool'
+   15 | static bool g_forensic_initialized = false;
+      |        ^
+src/debug/ultra_forensic_logger.c:15:38: error: use of undeclared identifier 'false'
+   15 | static bool g_forensic_initialized = false;
+      |                                      ^
+src/debug/ultra_forensic_logger.c:27:8: error: unknown type name 'bool'
+   27 | static bool create_forensic_directories(void) {
+      |        ^
+src/debug/ultra_forensic_logger.c:41:20: error: use of undeclared identifier 'false'; did you mean 'else'?
+   41 |             return false;
+      |                    ^~~~~
+      |                    else
+src/debug/ultra_forensic_logger.c:41:20: error: expected expression
+src/debug/ultra_forensic_logger.c:44:12: error: use of undeclared identifier 'true'
+   44 |     return true;
+      |            ^
+src/debug/ultra_forensic_logger.c:47:1: error: unknown type name 'bool'
+   47 | bool ultra_forensic_logger_init(void) {
+      | ^
+src/debug/ultra_forensic_logger.c:52:16: error: use of undeclared identifier 'true'
+   52 |         return true;
+      |                ^
+src/debug/ultra_forensic_logger.c:58:16: error: use of undeclared identifier 'false'; did you mean 'else'?
+   58 |         return false;
+      |                ^~~~~
+      |                else
+src/debug/ultra_forensic_logger.c:58:16: error: expected expression
+src/debug/ultra_forensic_logger.c:65:30: error: use of undeclared identifier 'true'
+   65 |     g_forensic_initialized = true;
+      |                              ^
+src/debug/ultra_forensic_logger.c:69:12: error: use of undeclared identifier 'true'
+   69 |     return true;
+      |            ^
+src/debug/ultra_forensic_logger.c:84:30: error: use of undeclared identifier 'false'; did you mean 'else'?
+   84 |     g_forensic_initialized = false;
+      |                              ^~~~~
+      |                              else
+src/debug/ultra_forensic_logger.c:84:30: error: expected expression
+src/debug/ultra_forensic_logger.c:168:72: error: unknown type name 'bool'
+  168 |                                  const char* module, const char* test, bool success) {
+      |                                                                        ^
+src/debug/ultra_forensic_logger.c:247:1: error: unknown type name 'bool'
+  247 | bool ultra_forensic_validate_all_logs_exist(void) {
+      | ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+make: *** [Makefile.forensic:39: obj/debug/ultra_forensic_logger.o] Error 1

@@ -1,0 +1,142 @@
+{
+  "source_root": "/home/runner/workspace/src/projetx_NQubit NX/NQubit_v6",
+  "integration_root": "/home/runner/workspace/src/quantum/nqubit_v6_integration",
+  "files": [
+    {
+      "file": "nqubit_v6_catlin_kaggle_kernel.py",
+      "source_exists": true,
+      "integration_exists": true,
+      "source_lines": 399,
+      "integration_lines": 399,
+      "identical": true,
+      "diff_line_count": 0
+    },
+    {
+      "file": "Makefile",
+      "source_exists": true,
+      "integration_exists": true,
+      "source_lines": 31,
+      "integration_lines": 38,
+      "identical": false,
+      "diff_line_count": 21
+    },
+    {
+      "file": "README.md",
+      "source_exists": true,
+      "integration_exists": true,
+      "source_lines": 20,
+      "integration_lines": 20,
+      "identical": true,
+      "diff_line_count": 0
+    },
+    {
+      "file": "KAGGLE_NOTEBOOK_FIX_V6.md",
+      "source_exists": true,
+      "integration_exists": true,
+      "source_lines": 31,
+      "integration_lines": 31,
+      "identical": true,
+      "diff_line_count": 0
+    },
+    {
+      "file": "tools/acquire_real_hardware_v6.py",
+      "source_exists": true,
+      "integration_exists": true,
+      "source_lines": 113,
+      "integration_lines": 113,
+      "identical": true,
+      "diff_line_count": 0
+    },
+    {
+      "file": "tools/build_manifest_v6.py",
+      "source_exists": true,
+      "integration_exists": true,
+      "source_lines": 46,
+      "integration_lines": 46,
+      "identical": true,
+      "diff_line_count": 0
+    },
+    {
+      "file": "tools/collect_system_metrics_v6.py",
+      "source_exists": true,
+      "integration_exists": true,
+      "source_lines": 112,
+      "integration_lines": 112,
+      "identical": true,
+      "diff_line_count": 0
+    },
+    {
+      "file": "tools/generate_v6_post_run_report.py",
+      "source_exists": true,
+      "integration_exists": true,
+      "source_lines": 92,
+      "integration_lines": 92,
+      "identical": true,
+      "diff_line_count": 0
+    },
+    {
+      "file": "tools/sign_manifest_v6.sh",
+      "source_exists": true,
+      "integration_exists": true,
+      "source_lines": 14,
+      "integration_lines": 14,
+      "identical": true,
+      "diff_line_count": 0
+    },
+    {
+      "file": "tools/stress_harness_v6.py",
+      "source_exists": true,
+      "integration_exists": true,
+      "source_lines": 66,
+      "integration_lines": 66,
+      "identical": true,
+      "diff_line_count": 0
+    },
+    {
+      "file": "tools/verify_manifest_v6.py",
+      "source_exists": true,
+      "integration_exists": true,
+      "source_lines": 44,
+      "integration_lines": 44,
+      "identical": true,
+      "diff_line_count": 0
+    },
+    {
+      "file": "tests/test_hardware_capture_v6.py",
+      "source_exists": true,
+      "integration_exists": true,
+      "source_lines": 27,
+      "integration_lines": 27,
+      "identical": true,
+      "diff_line_count": 0
+    },
+    {
+      "file": "tests/test_kernel_v6.py",
+      "source_exists": true,
+      "integration_exists": true,
+      "source_lines": 29,
+      "integration_lines": 29,
+      "identical": true,
+      "diff_line_count": 0
+    },
+    {
+      "file": "tests/test_manifest_tools_v6.py",
+      "source_exists": true,
+      "integration_exists": true,
+      "source_lines": 37,
+      "integration_lines": 37,
+      "identical": true,
+      "diff_line_count": 0
+    },
+    {
+      "file": "tests/test_system_metrics_v6.py",
+      "source_exists": true,
+      "integration_exists": true,
+      "source_lines": 29,
+      "integration_lines": 29,
+      "identical": true,
+      "diff_line_count": 0
+    }
+  ],
+  "all_identical": false
+}

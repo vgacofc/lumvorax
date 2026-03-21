@@ -1,0 +1,125 @@
+~/workspace$ ./run_44_modules_test.sh
+=== SCRIPT EXÉCUTION COMPLÈTE 44 MODULES LUM/VORAX ===
+Conformité standards forensiques ISO/IEC 27037
+
+Phase 1: Nettoyage et préparation
+rm -rf obj bin logs
+mkdir -p obj bin logs
+
+Phase 2: Compilation système complet
+gcc -Wall -Wextra -std=c99 -g -O2 -fPIC -c src/lum/lum_core.c -o obj/lum/lum_core.o
+gcc -Wall -Wextra -std=c99 -g -O2 -fPIC -c src/vorax/vorax_operations.c -o obj/vorax/vorax_operations.o
+gcc -Wall -Wextra -std=c99 -g -O2 -fPIC -c src/binary/binary_lum_converter.c -o obj/binary/binary_lum_converter.o
+gcc -Wall -Wextra -std=c99 -g -O2 -fPIC -c src/parser/vorax_parser.c -o obj/parser/vorax_parser.o
+gcc -Wall -Wextra -std=c99 -g -O2 -fPIC -c src/logger/lum_logger.c -o obj/logger/lum_logger.o
+gcc -Wall -Wextra -std=c99 -g -O2 -fPIC -c src/logger/log_manager.c -o obj/logger/log_manager.o
+gcc -Wall -Wextra -std=c99 -g -O2 -fPIC -c src/debug/memory_tracker.c -o obj/debug/memory_tracker.o
+gcc -Wall -Wextra -std=c99 -g -O2 -fPIC -c src/debug/forensic_logger.c -o obj/debug/forensic_logger.o
+gcc -Wall -Wextra -std=c99 -g -O2 -fPIC -c src/debug/ultra_forensic_logger.c -o obj/debug/ultra_forensic_logger.o
+gcc -Wall -Wextra -std=c99 -g -O2 -fPIC -c src/crypto/crypto_validator.c -o obj/crypto/crypto_validator.o
+gcc -Wall -Wextra -std=c99 -g -O2 -fPIC -c src/persistence/data_persistence.c -o obj/persistence/data_persistence.o
+gcc -Wall -Wextra -std=c99 -g -O2 -fPIC -c src/persistence/transaction_wal_extension.c -o obj/persistence/transaction_wal_extension.o
+gcc -Wall -Wextra -std=c99 -g -O2 -fPIC -c src/persistence/recovery_manager_extension.c -o obj/persistence/recovery_manager_extension.o
+src/persistence/data_persistence.c: In function ‘persistence_context_create’:
+src/persistence/data_persistence.c:66:47: warning: ‘/.write_test’ directive output may be truncated writing 12 bytes into a region of size between 1 and 1024 [-Wformat-truncation=]
+   66 |     snprintf(test_file, sizeof(test_file), "%s/.write_test", ctx->storage_directory);
+      |                                               ^~~~~~~~~~~~
+src/persistence/data_persistence.c:66:5: note: ‘snprintf’ output between 13 and 1036 bytes into a destination of size 1024
+   66 |     snprintf(test_file, sizeof(test_file), "%s/.write_test", ctx->storage_directory);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -Wall -Wextra -std=c99 -g -O2 -fPIC -c src/optimization/memory_optimizer.c -o obj/optimization/memory_optimizer.o
+src/persistence/data_persistence.c: In function ‘persistence_save_lum’:
+src/persistence/data_persistence.c:307:48: warning: ‘%s’ directive output may be truncated writing up to 1021 bytes into a region of size between 2 and 1023 [-Wformat-truncation=]
+  307 |     snprintf(full_path, sizeof(full_path), "%s/%s", ctx->storage_directory, filename);
+      |                                                ^~
+src/persistence/data_persistence.c:307:5: note: ‘snprintf’ output between 2 and 2044 bytes into a destination of size 1024
+  307 |     snprintf(full_path, sizeof(full_path), "%s/%s", ctx->storage_directory, filename);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/persistence/data_persistence.c: In function ‘persistence_load_lum’:
+src/persistence/data_persistence.c:386:48: warning: ‘%s’ directive output may be truncated writing up to 1021 bytes into a region of size between 2 and 1023 [-Wformat-truncation=]
+  386 |     snprintf(full_path, sizeof(full_path), "%s/%s", ctx->storage_directory, filename);
+      |                                                ^~
+src/persistence/data_persistence.c:386:5: note: ‘snprintf’ output between 2 and 2044 bytes into a destination of size 1024
+  386 |     snprintf(full_path, sizeof(full_path), "%s/%s", ctx->storage_directory, filename);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/persistence/data_persistence.c: In function ‘persistence_save_group’:
+src/persistence/data_persistence.c:483:48: warning: ‘%s’ directive output may be truncated writing up to 1021 bytes into a region of size between 2 and 1023 [-Wformat-truncation=]
+  483 |     snprintf(full_path, sizeof(full_path), "%s/%s", ctx->storage_directory, filename);
+      |                                                ^~
+src/persistence/data_persistence.c:483:5: note: ‘snprintf’ output between 2 and 2044 bytes into a destination of size 1024
+  483 |     snprintf(full_path, sizeof(full_path), "%s/%s", ctx->storage_directory, filename);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/persistence/data_persistence.c: In function ‘persistence_load_group’:
+src/persistence/data_persistence.c:582:48: warning: ‘%s’ directive output may be truncated writing up to 1021 bytes into a region of size between 2 and 1023 [-Wformat-truncation=]
+  582 |     snprintf(full_path, sizeof(full_path), "%s/%s", ctx->storage_directory, filename);
+      |                                                ^~
+src/persistence/data_persistence.c:582:5: note: ‘snprintf’ output between 2 and 2044 bytes into a destination of size 1024
+  582 |     snprintf(full_path, sizeof(full_path), "%s/%s", ctx->storage_directory, filename);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -Wall -Wextra -std=c99 -g -O2 -fPIC -c src/optimization/pareto_optimizer.c -o obj/optimization/pareto_optimizer.o
+gcc -Wall -Wextra -std=c99 -g -O2 -fPIC -c src/optimization/pareto_inverse_optimizer.c -o obj/optimization/pareto_inverse_optimizer.o
+gcc -Wall -Wextra -std=c99 -g -O2 -fPIC -c src/optimization/simd_optimizer.c -o obj/optimization/simd_optimizer.o
+gcc -Wall -Wextra -std=c99 -g -O2 -fPIC -c src/optimization/zero_copy_allocator.c -o obj/optimization/zero_copy_allocator.o
+src/lum/lum_core.c: In function ‘lum_group_process_batch_50m_optimized’:
+src/lum/lum_core.c:699:9: error: duplicate case value
+  699 |         case LUM_BATCH_SORT_BY_ID:
+      |         ^~~~
+src/lum/lum_core.c:675:9: note: previously used here
+  675 |         case LUM_BATCH_SORT_BY_ID:
+      |         ^~~~
+src/lum/lum_core.c:713:9: error: duplicate case value
+  713 |         case LUM_BATCH_DEFRAGMENT:
+      |         ^~~~
+src/lum/lum_core.c:689:9: note: previously used here
+  689 |         case LUM_BATCH_DEFRAGMENT:
+      |         ^~~~
+make: *** [Makefile:117: obj/lum/lum_core.o] Error 1
+make: *** Waiting for unfinished jobs....
+src/optimization/simd_optimizer.c: In function ‘simd_optimize_lum_operations’:
+src/optimization/simd_optimizer.c:373:5: error: implicit declaration of function ‘clock_gettime’ [-Wimplicit-function-declaration]
+  373 |     clock_gettime(CLOCK_MONOTONIC, &start);
+      |     ^~~~~~~~~~~~~
+src/optimization/simd_optimizer.c:373:19: error: ‘CLOCK_MONOTONIC’ undeclared (first use in this function)
+  373 |     clock_gettime(CLOCK_MONOTONIC, &start);
+      |                   ^~~~~~~~~~~~~~~
+src/optimization/simd_optimizer.c:373:19: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Makefile:141: obj/optimization/simd_optimizer.o] Error 1
+src/optimization/zero_copy_allocator.c: In function ‘get_timestamp_us’:
+src/optimization/zero_copy_allocator.c:23:5: error: implicit declaration of function ‘clock_gettime’ [-Wimplicit-function-declaration]
+   23 |     clock_gettime(CLOCK_MONOTONIC, &ts);
+      |     ^~~~~~~~~~~~~
+src/optimization/zero_copy_allocator.c:23:19: error: ‘CLOCK_MONOTONIC’ undeclared (first use in this function)
+   23 |     clock_gettime(CLOCK_MONOTONIC, &ts);
+      |                   ^~~~~~~~~~~~~~~
+src/optimization/zero_copy_allocator.c:23:19: note: each undeclared identifier is reported only once for each function it appears in
+src/optimization/zero_copy_allocator.c: In function ‘zero_copy_enable_mmap_backing’:
+src/optimization/zero_copy_allocator.c:269:9: error: implicit declaration of function ‘ftruncate’; did you mean ‘strncat’? [-Wimplicit-function-declaration]
+  269 |     if (ftruncate(fd, pool->total_size) != 0) {
+      |         ^~~~~~~~~
+      |         strncat
+src/optimization/zero_copy_allocator.c: In function ‘zero_copy_prefault_pages’:
+src/optimization/zero_copy_allocator.c:309:24: error: implicit declaration of function ‘getpagesize’ [-Wimplicit-function-declaration]
+  309 |     size_t page_size = getpagesize();
+      |                        ^~~~~~~~~~~
+src/optimization/zero_copy_allocator.c: In function ‘zero_copy_advise_sequential’:
+src/optimization/zero_copy_allocator.c:327:9: error: implicit declaration of function ‘madvise’ [-Wimplicit-function-declaration]
+  327 |     if (madvise(pool->memory_region, pool->total_size, MADV_SEQUENTIAL) == 0) {
+      |         ^~~~~~~
+src/optimization/zero_copy_allocator.c:327:56: error: ‘MADV_SEQUENTIAL’ undeclared (first use in this function)
+  327 |     if (madvise(pool->memory_region, pool->total_size, MADV_SEQUENTIAL) == 0) {
+      |                                                        ^~~~~~~~~~~~~~~
+make: *** [Makefile:141: obj/optimization/zero_copy_allocator.o] Error 1
+src/optimization/pareto_optimizer.c: In function ‘pareto_optimize_fuse_operation’:
+src/optimization/pareto_optimizer.c:375:9: warning: ‘strncat’ output may be truncated copying between 0 and 255 bytes from a string of length 255 [-Wstringop-truncation]
+  375 |         strncat(result->message, improvement_msg, sizeof(result->message) - strlen(result->message) - 1);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/optimization/pareto_optimizer.c: In function ‘pareto_optimize_split_operation’:
+src/optimization/pareto_optimizer.c:408:9: warning: ‘strncat’ output may be truncated copying between 0 and 255 bytes from a string of length 255 [-Wstringop-truncation]
+  408 |         strncat(result->message, optimization_msg, sizeof(result->message) - strlen(result->message) - 1);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/optimization/pareto_optimizer.c: In function ‘pareto_optimize_cycle_operation’:
+src/optimization/pareto_optimizer.c:438:9: warning: ‘strncat’ output may be truncated copying between 0 and 255 bytes from a string of length 255 [-Wstringop-truncation]
+  438 |         strncat(result->message, optimization_msg, sizeof(result->message) - strlen(result->message) - 1);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+❌ Échec compilation - arrêt du processus
+~/workspace$ 

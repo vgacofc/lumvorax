@@ -1,0 +1,39 @@
+=== TESTS DE CONSERVATION MATHÉMATIQUE LUM/VORAX ===
+Validation des propriétés de conservation du système...
+
+=== TEST CONSERVATION FUSE ===
+Avant FUSE: Groupe1=10, Groupe2=15, Total=25
+Après FUSE: 25 LUMs
+✅ Conservation: 25 = 25
+
+=== TEST CONSERVATION SPLIT ===
+Avant SPLIT: 100 LUMs en 1 groupe
+  Groupe 1: 25 LUMs
+  Groupe 2: 25 LUMs
+  Groupe 3: 25 LUMs
+  Groupe 4: 25 LUMs
+Après SPLIT: 100 LUMs en 4 groupes
+✅ Conservation: 100 = 100
+
+=== TEST CONSERVATION CYCLE ===
+Avant CYCLE: 17 LUMs, modulo 5
+Après CYCLE: 2 LUMs (attendu: 2)
+✅ Conservation modulo: 2 = 2
+
+=== TEST INVARIANT PRÉSENCE ===
+Entrée: -5 -> Présence: 1 ✅
+Entrée: 0 -> Présence: 0 ✅
+Entrée: 1 -> Présence: 1 ✅
+Entrée: 2 -> Présence: 1 ✅
+Entrée: 42 -> Présence: 1 ✅
+Entrée: 255 -> Présence: 1 ✅
+Entrée: -1 -> Présence: 1 ✅
+
+=== TEST UNICITÉ DES IDs ===
+✅ Tous les 1000 IDs sont uniques
+   Plage: 160 à 1159
+
+=== RÉSUMÉ VALIDATION MATHÉMATIQUE ===
+✅ SUCCÈS: Toutes les propriétés de conservation sont respectées
+✅ Le système LUM/VORAX est mathématiquement cohérent
+✅ Les invariants sont préservés dans toutes les opérations

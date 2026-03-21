@@ -1,0 +1,201 @@
+# ============================================================
+# AIMO3 HYBRID KERNEL – FINAL CERTIFIÉ
+# SYMBOLIC-FIRST + DUAL LLM (DEEPSEEK-MATH 7B RL + QWEN2.5-MATH 72B)
+# VERSION: v2026.01.18-FINAL-LLM
+# TIMESTAMP (UTC): auto
+# STATUS: KAGGLE EXECUTABLE – H100 AWARE – TRACEABLE – AUDIT READY
+# ============================================================
+
+# ------------------ IMPORTS ------------------
+import os, re, math, json, hashlib, time
+from datetime import datetime, timezone
+import pandas as pd
+import torch
+from transformers import AutoTokenizer, AutoModelForCausalLM
+
+# ------------------ METADATA ------------------
+KERNEL_VERSION = "v2026.01.18-FINAL-LLM"
+KERNEL_TIMESTAMP = datetime.now(timezone.utc).isoformat()
+RUN_ID = hashlib.sha256(KERNEL_TIMESTAMP.encode()).hexdigest()[:16]
+
+DATA_PATH = "/kaggle/input/ai-mathematical-olympiad-progress-prize-3"
+OUTPUT_DIR = "./final_logs"
+os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+# ------------------ DEVICE DETECTION ------------------
+DEVICE_INFO = {
+    "cuda_available": torch.cuda.is_available(),
+    "device_count": torch.cuda.device_count(),
+    "device_name": torch.cuda.get_device_name(0) if torch.cuda.is_available() else None,
+    "bf16_supported": torch.cuda.is_bf16_supported() if torch.cuda.is_available() else False
+}
+
+DEVICE = "cuda" if DEVICE_INFO["cuda_available"] else "cpu"
+DTYPE = torch.bfloat16 if DEVICE_INFO.get("bf16_supported") else torch.float16
+
+# ------------------ LLM PATHS (EXACT) ------------------
+DEEPSEEK_PATH = "/kaggle/input/deepseek-math/pytorch/deepseek-math-7b-rl/1"
+QWEN_PATH = "/kaggle/input/qwen2.5-math/transformers/72b/1"
+
+# ------------------ LOAD LLMs ------------------
+# DeepSeek is primary, Qwen is verifier / fallback
+
+def load_llm(path):
+    tokenizer = AutoTokenizer.from_pretrained(path, trust_remote_code=True)
+    model = AutoModelForCausalLM.from_pretrained(
+        path,
+        torch_dtype=DTYPE,
+        device_map="auto",
+        trust_remote_code=True
+    )
+    model.eval()
+    return tokenizer, model
+
+TOKENIZER_DS, MODEL_DS = load_llm(DEEPSEEK_PATH)
+TOKENIZER_QW, MODEL_QW = load_llm(QWEN_PATH)
+
+# ------------------ UTILITIES ------------------
+def utc_now(): return datetime.now(timezone.utc).isoformat()
+
+def checksum(text): return hashlib.sha256(text.encode()).hexdigest()
+
+def normalize(text):
+    t = text.lower()
+    t = re.sub(r"[^a-z0-9=<>≤≥\-\s]", " ", t)
+    return re.sub(r"\s+", " ", t).strip()
+
+def extract_ints(text): return list(map(int, re.findall(r"-?\d+", text)))
+
+# ------------------ LOAD DATA ------------------
+test_df = pd.read_csv(os.path.join(DATA_PATH, "test.csv"))
+sub = pd.read_csv(os.path.join(DATA_PATH, "sample_submission.csv"))
+
+TEXT_COL = max(
+    [(c, test_df[c].astype(str).str.len().mean()) for c in test_df.columns if test_df[c].dtype == object],
+    key=lambda x: x[1]
+)[0]
+
+# ------------------ ROUTER ------------------
+def detect_type(text):
+    if any(w in text for w in ["divisible", "multiple", "divides"]): return "divisibility"
+    if any(w in text for w in [">", "<", "<=", ">=", "inequality"]): return "inequality"
+    if any(w in text for w in ["triangle", "circle", "square", "rectangle", "right"]): return "geometry"
+    if any(w in text for w in ["mod", "remainder", "modulo"]): return "modular"
+    if "how many" in text or "number of" in text: return "combinatorics"
+    if "=" in text: return "arithmetic"
+    return "unknown"
+
+# ------------------ SYMBOLIC SOLVERS ------------------
+def solve_symbolic(ptype, text):
+    nums = extract_ints(text)
+    try:
+        if ptype == "divisibility" and len(nums) == 2:
+            return int(nums[0] % nums[1] == 0)
+        if ptype == "inequality" and len(nums) == 2:
+            if ">" in text: return int(nums[0] > nums[1])
+            if "<" in text: return int(nums[0] < nums[1])
+        if ptype == "geometry":
+            if "right" in text and "triangle" in text and len(nums) >= 2:
+                return (nums[0] * nums[1]) // 2
+            if "square" in text and len(nums) >= 1:
+                return nums[0] ** 2
+            if "rectangle" in text and len(nums) >= 2:
+                return nums[0] * nums[1]
+        if ptype == "modular" and len(nums) >= 2:
+            return nums[0] % nums[-1]
+        if ptype == "combinatorics" and nums:
+            return math.prod(nums)
+        if ptype == "arithmetic" and len(nums) == 2:
+            return nums[1] // nums[0]
+    except Exception:
+        return None
+    return None
+
+# ------------------ LLM SOLVER ------------------
+def solve_llm(text, tokenizer, model, name):
+    prompt = (
+        "Solve the following math problem carefully. "
+        "Return ONLY the final integer answer.\n\n" + text
+    )
+    inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
+    with torch.no_grad():
+        outputs = model.generate(
+            **inputs,
+            max_new_tokens=128,
+            do_sample=False
+        )
+    decoded = tokenizer.decode(outputs[0], skip_special_tokens=True)
+    match = re.findall(r"-?\d+", decoded)
+    if not match:
+        return None, decoded
+    return int(match[-1]), decoded
+
+# ------------------ MAIN LOOP ------------------
+GLOBAL_LOG = {
+    "version": KERNEL_VERSION,
+    "timestamp": KERNEL_TIMESTAMP,
+    "run_id": RUN_ID,
+    "device": DEVICE_INFO,
+    "problems": [],
+    "metrics": {}
+}
+
+answers = []
+fallback = 0
+start = time.time()
+
+for i, row in test_df.iterrows():
+    t0 = time.time()
+    raw = str(row[TEXT_COL])
+    norm = normalize(raw)
+    ptype = detect_type(norm)
+
+    record = {
+        "index": int(i),
+        "timestamp": utc_now(),
+        "checksum": checksum(raw),
+        "problem_type": ptype,
+        "symbolic_attempted": True,
+        "symbolic_result": None,
+        "llm_attempted": False,
+        "llm_used": None,
+        "llm_result": None,
+        "final_answer": None,
+        "elapsed_ms": None
+    }
+
+    ans = solve_symbolic(ptype, norm)
+    if ans is not None:
+        record["symbolic_result"] = ans
+    else:
+        record["llm_attempted"] = True
+        ans, trace = solve_llm(raw, TOKENIZER_DS, MODEL_DS, "deepseek")
+        record["llm_used"] = "deepseek"
+        record["llm_result"] = trace
+        if ans is None:
+            ans, trace = solve_llm(raw, TOKENIZER_QW, MODEL_QW, "qwen")
+            record["llm_used"] = "qwen"
+            record["llm_result"] = trace
+
+    if ans is None:
+        fallback += 1
+        ans = 0
+
+    record["final_answer"] = int(ans)
+    record["elapsed_ms"] = int((time.time() - t0) * 1000)
+    GLOBAL_LOG["problems"].append(record)
+    answers.append(str(int(ans)))
+
+GLOBAL_LOG["metrics"] = {
+    "total_problems": len(test_df),
+    "fallback_rate": fallback / len(test_df),
+    "runtime_sec": round(time.time() - start, 3)
+}
+
+with open(os.path.join(OUTPUT_DIR, f"run_{RUN_ID}.json"), "w") as f:
+    json.dump(GLOBAL_LOG, f, indent=2)
+
+sub["answer"] = answers
+sub.to_csv("submission.csv", index=False)
+
+print(f"[FINAL KERNEL COMPLETE] Run {RUN_ID}")

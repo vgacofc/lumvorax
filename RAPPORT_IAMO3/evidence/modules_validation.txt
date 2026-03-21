@@ -1,0 +1,88 @@
+Modules core:
+src/binary/:
+total 24
+drwxr-xr-x 1 runner runner    88 Sep 20 18:11 .
+drwxr-xr-x 1 runner runner   420 Sep 20 18:17 ..
+-rw-r--r-- 1 runner runner 14347 Sep 20 18:11 binary_lum_converter.c
+-rw-r--r-- 1 runner runner  2542 Sep 20 18:11 binary_lum_converter.h
+
+src/logger/:
+total 52
+drwxr-xr-x 1 runner runner   138 Sep 20 18:11 .
+drwxr-xr-x 1 runner runner   420 Sep 20 18:17 ..
+-rw-r--r-- 1 runner runner  7625 Sep 20 18:11 log_manager.c
+-rw-r--r-- 1 runner runner  1727 Sep 20 18:11 log_manager.h
+-rw-r--r-- 1 runner runner 17287 Sep 20 18:11 lum_logger.c
+-rw-r--r-- 1 runner runner  7586 Sep 20 18:11 lum_logger.h
+-rw-r--r-- 1 runner runner  6766 Sep 20 18:11 lum_logger.h.backup
+
+src/lum/:
+total 380
+drwxr-xr-x 1 runner runner    116 Sep 20 18:15 .
+drwxr-xr-x 1 runner runner    420 Sep 20 18:17 ..
+-rw-r--r-- 1 runner runner  31954 Sep 20 18:15 lum_core.c
+-rw-r--r-- 1 runner runner   8053 Sep 20 18:11 lum_core.h
+-rw-r--r-- 1 runner runner 328752 Sep 20 18:11 lum_core.h.gch
+-rw-r--r-- 1 runner runner   5362 Sep 20 18:11 lum_optimized_variants.h
+
+src/parser/:
+total 32
+drwxr-xr-x 1 runner runner    56 Sep 20 18:11 .
+drwxr-xr-x 1 runner runner   420 Sep 20 18:17 ..
+-rw-r--r-- 1 runner runner 20023 Sep 20 18:11 vorax_parser.c
+-rw-r--r-- 1 runner runner  5408 Sep 20 18:11 vorax_parser.h
+
+src/vorax/:
+total 32
+drwxr-xr-x 1 runner runner    72 Sep 20 18:15 .
+drwxr-xr-x 1 runner runner   420 Sep 20 18:17 ..
+-rw-r--r-- 1 runner runner 19779 Sep 20 18:15 vorax_operations.c
+-rw-r--r-- 1 runner runner  2910 Sep 20 18:11 vorax_operations.h
+Modules avancés:
+total 432
+drwxr-xr-x 1 runner runner  1498 Sep 20 18:13 .
+drwxr-xr-x 1 runner runner   420 Sep 20 18:17 ..
+-rw-r--r-- 1 runner runner 18964 Sep 20 18:11 audio_processor.c
+-rw-r--r-- 1 runner runner  2500 Sep 20 18:11 audio_processor.h
+-rw-r--r-- 1 runner runner 18002 Sep 20 18:11 blackbox_universal_module.c
+-rw-r--r-- 1 runner runner  4992 Sep 20 18:11 blackbox_universal_module.h
+-rw-r--r-- 1 runner runner 18942 Sep 20 18:11 collatz_analyzer.c
+-rw-r--r-- 1 runner runner  5368 Sep 20 18:11 collatz_analyzer.h
+drwxr-xr-x 1 runner runner    34 Sep 20 18:11 disabled
+-rw-r--r-- 1 runner runner 16846 Sep 20 18:11 golden_score_optimizer.c
+-rw-r--r-- 1 runner runner  5560 Sep 20 18:11 golden_score_optimizer.h
+-rw-r--r-- 1 runner runner 15723 Sep 20 18:11 image_processor.c
+-rw-r--r-- 1 runner runner  2303 Sep 20 18:11 image_processor.h
+-rw-r--r-- 1 runner runner 17965 Sep 20 18:11 knapsack_optimizer.c
+-rw-r--r-- 1 runner runner  4475 Sep 20 18:11 knapsack_optimizer.h
+-rw-r--r-- 1 runner runner 14048 Sep 20 18:11 mathematical_research_engine.c
+-rw-r--r-- 1 runner runner  3438 Sep 20 18:11 mathematical_research_engine.h
+-rw-r--r-- 1 runner runner 19821 Sep 20 18:11 matrix_calculator.c
+-rw-r--r-- 1 runner runner  5921 Sep 20 18:11 matrix_calculator.h
+-rw-r--r-- 1 runner runner 15258 Sep 20 18:11 neural_advanced_optimizers.c
+-rw-r--r-- 1 runner runner  5341 Sep 20 18:11 neural_advanced_optimizers.h
+-rw-r--r-- 1 runner runner 60271 Sep 20 18:11 neural_blackbox_computer.c
+-rw-r--r-- 1 runner runner 11732 Sep 20 18:13 neural_blackbox_computer.h
+-rw-r--r-- 1 runner runner 21000 Sep 20 18:11 neural_blackbox_ultra_precision_tests.c
+-rw-r--r-- 1 runner runner  5029 Sep 20 18:11 neural_blackbox_ultra_precision_tests.h
+-rw-r--r-- 1 runner runner 19561 Sep 20 18:11 neural_network_processor.c
+-rw-r--r-- 1 runner runner  6710 Sep 20 18:11 neural_network_processor.h
+-rw-r--r-- 1 runner runner  5780 Sep 20 18:11 neural_ultra_precision_architecture.c
+-rw-r--r-- 1 runner runner  3417 Sep 20 18:11 neural_ultra_precision_architecture.h
+-rw-r--r-- 1 runner runner 20103 Sep 20 18:11 quantum_simulator.c
+-rw-r--r-- 1 runner runner  6452 Sep 20 18:11 quantum_simulator.h
+-rw-r--r-- 1 runner runner 13715 Sep 20 18:11 tsp_optimizer.c
+-rw-r--r-- 1 runner runner  3705 Sep 20 18:11 tsp_optimizer.h
+-rw-r--r-- 1 runner runner  2070 Sep 20 18:11 video_processor.h
+Modules complexes:
+total 120
+drwxr-xr-x 1 runner runner   348 Sep 20 18:11 .
+drwxr-xr-x 1 runner runner   420 Sep 20 18:17 ..
+-rw-r--r-- 1 runner runner 20046 Sep 20 18:11 ai_dynamic_config_manager.c
+-rw-r--r-- 1 runner runner  7919 Sep 20 18:11 ai_dynamic_config_manager.h
+-rw-r--r-- 1 runner runner 20971 Sep 20 18:11 ai_optimization.c
+-rw-r--r-- 1 runner runner  9000 Sep 20 18:11 ai_optimization.h
+-rw-r--r-- 1 runner runner 13061 Sep 20 18:11 distributed_computing.c
+-rw-r--r-- 1 runner runner  7891 Sep 20 18:11 distributed_computing.h
+-rw-r--r-- 1 runner runner 16982 Sep 20 18:11 realtime_analytics.c
+-rw-r--r-- 1 runner runner  6749 Sep 20 18:11 realtime_analytics.h

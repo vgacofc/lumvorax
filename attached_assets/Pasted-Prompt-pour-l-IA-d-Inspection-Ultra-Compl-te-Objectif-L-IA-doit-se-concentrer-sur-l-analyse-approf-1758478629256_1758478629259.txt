@@ -1,0 +1,21 @@
+Prompt pour l'IA d'Inspection Ultra-Complète
+Objectif : L'IA doit se concentrer sur l'analyse approfondie de chaque ligne des 33 modules restants pour identifier les anomalies, les erreurs, les solutions et les optimisations possibles. Chaque module doit faire l'objet d'un rapport détaillé en Markdown, numéroté, et ne doit pas être modifié avant l'approbation des résultats.
+
+Instructions :
+
+Inspection Module par Module : Analyser chaque module individuellement, ligne par ligne, sans exception. Chaque module doit être complètement examiné pour toutes les erreurs potentielles, optimisations possibles, et anomalies existantes.
+Documentation Pédagogique : Pour chaque module, rédiger un article individuelle détaillé contenant :
+Description du module
+Nombre de lignes de code
+Nombre de lignes de code valides (excluant les commentaires)
+Résumé des erreurs identifiées avec des détails sur la nature de chaque erreur
+Solutions proposées pour chaque erreur, accompagnées d'explications claires et pédagogiques sur les raisons de ces solutions.
+État Avancement : Fournir un état d'avancement réel pour chaque module analysé, y compris :
+Statut : Fonctionnel, en cours de correction, ou suspendu
+Historique des erreurs passées et un résumé des corrections effectuées
+Métriques réelles mesurées lors de la dernière exécution, impactant la performance de chaque module.
+Utilisation des Standards : Avant de procéder à l'analyse, lire le fichier  et le fichier , et s'assurer que toutes les normes de codage sont respectées lors de l'inspection.
+Rapports en Markdown : Générer un rapport final unique contenant tous les rapports individuels de chaque module, étalonnés et numérotés pour une revue systématique et facile. Ce rapport doit être exempt de toute erreur ou avertissement.
+Validation des Corrections : Confirmer que toutes les corrections passées ont été mises en œuvre correctement. Les rapports doivent inclure des vérifications pour assurer la conformité et l'absence de warnings.
+Attendre les Ordres : Aucune modification ne devra être apportée au code ou aux fichiers avant que des ordres explicites soient donnés après la soumission des rapports.
+En appliquant ces instructions, l'IA produira des résultats détaillés et complets tout en respectant la hiérarchie et la structure nécessaire. Cela garantira que le travail progressif et les performances du système soient clairement représentés et faciles à suivre.

@@ -1,0 +1,35 @@
+~/workspace$ # Tests de stress pour métriques de performance réelles
+~/workspace$ if [ -f "performance_test.c" ]; then
+>     clang -o performance_test performance_test.c -lm
+>     ./performance_test > performance_results_$(date +%Y%m%d_%H%M%S).log 2>&1
+> fi
+/nix/store/x7w0rmkaam7aikclyhwdbn8wmmq29ma6-binutils-2.44/bin/ld: /tmp/performance_test-6c0600.o: in function `test_lum_performance':
+performance_test.c:(.text+0x9a): undefined reference to `lum_create'
+/nix/store/x7w0rmkaam7aikclyhwdbn8wmmq29ma6-binutils-2.44/bin/ld: performance_test.c:(.text+0xa7): undefined reference to `lum_destroy'
+/nix/store/x7w0rmkaam7aikclyhwdbn8wmmq29ma6-binutils-2.44/bin/ld: /tmp/performance_test-6c0600.o: in function `test_crypto_performance':
+performance_test.c:(.text+0x179): undefined reference to `sha256_hash'
+/nix/store/x7w0rmkaam7aikclyhwdbn8wmmq29ma6-binutils-2.44/bin/ld: /tmp/performance_test-6c0600.o: in function `test_conversion_performance':
+performance_test.c:(.text+0x282): undefined reference to `convert_int32_to_lum'
+/nix/store/x7w0rmkaam7aikclyhwdbn8wmmq29ma6-binutils-2.44/bin/ld: performance_test.c:(.text+0x2ab): undefined reference to `convert_lum_to_int32'
+/nix/store/x7w0rmkaam7aikclyhwdbn8wmmq29ma6-binutils-2.44/bin/ld: performance_test.c:(.text+0x2da): undefined reference to `binary_lum_result_destroy'
+/nix/store/x7w0rmkaam7aikclyhwdbn8wmmq29ma6-binutils-2.44/bin/ld: /tmp/performance_test-6c0600.o: in function `test_vorax_performance':
+performance_test.c:(.text+0x35f): undefined reference to `lum_group_create'
+/nix/store/x7w0rmkaam7aikclyhwdbn8wmmq29ma6-binutils-2.44/bin/ld: performance_test.c:(.text+0x36d): undefined reference to `lum_group_create'
+/nix/store/x7w0rmkaam7aikclyhwdbn8wmmq29ma6-binutils-2.44/bin/ld: performance_test.c:(.text+0x3a1): undefined reference to `lum_create'
+/nix/store/x7w0rmkaam7aikclyhwdbn8wmmq29ma6-binutils-2.44/bin/ld: performance_test.c:(.text+0x3c7): undefined reference to `lum_create'
+/nix/store/x7w0rmkaam7aikclyhwdbn8wmmq29ma6-binutils-2.44/bin/ld: performance_test.c:(.text+0x3d8): undefined reference to `lum_group_add'
+/nix/store/x7w0rmkaam7aikclyhwdbn8wmmq29ma6-binutils-2.44/bin/ld: performance_test.c:(.text+0x3e5): undefined reference to `lum_group_add'
+/nix/store/x7w0rmkaam7aikclyhwdbn8wmmq29ma6-binutils-2.44/bin/ld: performance_test.c:(.text+0x3ee): undefined reference to `lum_destroy'
+/nix/store/x7w0rmkaam7aikclyhwdbn8wmmq29ma6-binutils-2.44/bin/ld: performance_test.c:(.text+0x3f7): undefined reference to `lum_destroy'
+/nix/store/x7w0rmkaam7aikclyhwdbn8wmmq29ma6-binutils-2.44/bin/ld: performance_test.c:(.text+0x437): undefined reference to `vorax_fuse'
+/nix/store/x7w0rmkaam7aikclyhwdbn8wmmq29ma6-binutils-2.44/bin/ld: performance_test.c:(.text+0x44f): undefined reference to `vorax_result_destroy'
+/nix/store/x7w0rmkaam7aikclyhwdbn8wmmq29ma6-binutils-2.44/bin/ld: performance_test.c:(.text+0x4b3): undefined reference to `lum_group_destroy'
+/nix/store/x7w0rmkaam7aikclyhwdbn8wmmq29ma6-binutils-2.44/bin/ld: performance_test.c:(.text+0x4bc): undefined reference to `lum_group_destroy'
+/nix/store/x7w0rmkaam7aikclyhwdbn8wmmq29ma6-binutils-2.44/bin/ld: /tmp/performance_test-6c0600.o: in function `test_memory_usage':
+performance_test.c:(.text+0x533): undefined reference to `lum_group_create'
+/nix/store/x7w0rmkaam7aikclyhwdbn8wmmq29ma6-binutils-2.44/bin/ld: performance_test.c:(.text+0x567): undefined reference to `lum_create'
+/nix/store/x7w0rmkaam7aikclyhwdbn8wmmq29ma6-binutils-2.44/bin/ld: performance_test.c:(.text+0x578): undefined reference to `lum_group_add'
+/nix/store/x7w0rmkaam7aikclyhwdbn8wmmq29ma6-binutils-2.44/bin/ld: performance_test.c:(.text+0x581): undefined reference to `lum_destroy'
+/nix/store/x7w0rmkaam7aikclyhwdbn8wmmq29ma6-binutils-2.44/bin/ld: performance_test.c:(.text+0x5b1): undefined reference to `lum_group_destroy'
+clang-14: error: linker command failed with exit code 1 (use -v to see invocation)
+~/workspace$ 

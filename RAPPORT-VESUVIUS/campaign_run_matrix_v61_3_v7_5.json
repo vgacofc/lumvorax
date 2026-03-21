@@ -1,0 +1,156 @@
+{
+  "v61_3": [
+    {
+      "run_id": "v61.3-run-01",
+      "NX47_PCTL_HI_BASE": 87.5,
+      "NX47_PCTL_HI_GAIN": 5.0,
+      "NX47_PCTL_HI_MIN": 87.0,
+      "NX47_PCTL_HI_MAX": 96.0,
+      "NX47_PCTL_LO_GAP": 6.0,
+      "NX47_PCTL_LO_MIN": 80.0
+    },
+    {
+      "run_id": "v61.3-run-02",
+      "NX47_PCTL_HI_BASE": 87.5,
+      "NX47_PCTL_HI_GAIN": 6.0,
+      "NX47_PCTL_HI_MIN": 87.0,
+      "NX47_PCTL_HI_MAX": 96.0,
+      "NX47_PCTL_LO_GAP": 6.0,
+      "NX47_PCTL_LO_MIN": 80.0
+    },
+    {
+      "run_id": "v61.3-run-03",
+      "NX47_PCTL_HI_BASE": 88,
+      "NX47_PCTL_HI_GAIN": 5.0,
+      "NX47_PCTL_HI_MIN": 87.0,
+      "NX47_PCTL_HI_MAX": 96.0,
+      "NX47_PCTL_LO_GAP": 6.0,
+      "NX47_PCTL_LO_MIN": 80.0
+    },
+    {
+      "run_id": "v61.3-run-04",
+      "NX47_PCTL_HI_BASE": 88,
+      "NX47_PCTL_HI_GAIN": 6.0,
+      "NX47_PCTL_HI_MIN": 87.0,
+      "NX47_PCTL_HI_MAX": 96.0,
+      "NX47_PCTL_LO_GAP": 6.0,
+      "NX47_PCTL_LO_MIN": 80.0
+    },
+    {
+      "run_id": "v61.3-run-05",
+      "NX47_PCTL_HI_BASE": 88.5,
+      "NX47_PCTL_HI_GAIN": 5.0,
+      "NX47_PCTL_HI_MIN": 87.0,
+      "NX47_PCTL_HI_MAX": 96.0,
+      "NX47_PCTL_LO_GAP": 6.0,
+      "NX47_PCTL_LO_MIN": 80.0
+    },
+    {
+      "run_id": "v61.3-run-06",
+      "NX47_PCTL_HI_BASE": 88.5,
+      "NX47_PCTL_HI_GAIN": 6.0,
+      "NX47_PCTL_HI_MIN": 87.0,
+      "NX47_PCTL_HI_MAX": 96.0,
+      "NX47_PCTL_LO_GAP": 6.0,
+      "NX47_PCTL_LO_MIN": 80.0
+    },
+    {
+      "run_id": "v61.3-run-07",
+      "NX47_PCTL_HI_BASE": 89,
+      "NX47_PCTL_HI_GAIN": 5.0,
+      "NX47_PCTL_HI_MIN": 87.0,
+      "NX47_PCTL_HI_MAX": 96.0,
+      "NX47_PCTL_LO_GAP": 6.0,
+      "NX47_PCTL_LO_MIN": 80.0
+    },
+    {
+      "run_id": "v61.3-run-08",
+      "NX47_PCTL_HI_BASE": 89,
+      "NX47_PCTL_HI_GAIN": 6.0,
+      "NX47_PCTL_HI_MIN": 87.0,
+      "NX47_PCTL_HI_MAX": 96.0,
+      "NX47_PCTL_LO_GAP": 6.0,
+      "NX47_PCTL_LO_MIN": 80.0
+    },
+    {
+      "run_id": "v61.3-run-09",
+      "NX47_PCTL_HI_BASE": 89.5,
+      "NX47_PCTL_HI_GAIN": 5.0,
+      "NX47_PCTL_HI_MIN": 87.0,
+      "NX47_PCTL_HI_MAX": 96.0,
+      "NX47_PCTL_LO_GAP": 6.0,
+      "NX47_PCTL_LO_MIN": 80.0
+    },
+    {
+      "run_id": "v61.3-run-10",
+      "NX47_PCTL_HI_BASE": 89.5,
+      "NX47_PCTL_HI_GAIN": 6.0,
+      "NX47_PCTL_HI_MIN": 87.0,
+      "NX47_PCTL_HI_MAX": 96.0,
+      "NX47_PCTL_LO_GAP": 6.0,
+      "NX47_PCTL_LO_MIN": 80.0
+    }
+  ],
+  "v7_5": [
+    {
+      "run_id": "v7.5-run-01",
+      "NX46_THRESHOLD_QUANTILE": 0.97,
+      "NX46_SCORE_BLEND_3D_WEIGHT": 0.68,
+      "NX46_Z_SMOOTHING_RADIUS": 2
+    },
+    {
+      "run_id": "v7.5-run-02",
+      "NX46_THRESHOLD_QUANTILE": 0.97,
+      "NX46_SCORE_BLEND_3D_WEIGHT": 0.72,
+      "NX46_Z_SMOOTHING_RADIUS": 2
+    },
+    {
+      "run_id": "v7.5-run-03",
+      "NX46_THRESHOLD_QUANTILE": 0.972,
+      "NX46_SCORE_BLEND_3D_WEIGHT": 0.68,
+      "NX46_Z_SMOOTHING_RADIUS": 2
+    },
+    {
+      "run_id": "v7.5-run-04",
+      "NX46_THRESHOLD_QUANTILE": 0.972,
+      "NX46_SCORE_BLEND_3D_WEIGHT": 0.72,
+      "NX46_Z_SMOOTHING_RADIUS": 2
+    },
+    {
+      "run_id": "v7.5-run-05",
+      "NX46_THRESHOLD_QUANTILE": 0.974,
+      "NX46_SCORE_BLEND_3D_WEIGHT": 0.68,
+      "NX46_Z_SMOOTHING_RADIUS": 2
+    },
+    {
+      "run_id": "v7.5-run-06",
+      "NX46_THRESHOLD_QUANTILE": 0.974,
+      "NX46_SCORE_BLEND_3D_WEIGHT": 0.72,
+      "NX46_Z_SMOOTHING_RADIUS": 2
+    },
+    {
+      "run_id": "v7.5-run-07",
+      "NX46_THRESHOLD_QUANTILE": 0.976,
+      "NX46_SCORE_BLEND_3D_WEIGHT": 0.68,
+      "NX46_Z_SMOOTHING_RADIUS": 2
+    },
+    {
+      "run_id": "v7.5-run-08",
+      "NX46_THRESHOLD_QUANTILE": 0.976,
+      "NX46_SCORE_BLEND_3D_WEIGHT": 0.72,
+      "NX46_Z_SMOOTHING_RADIUS": 2
+    },
+    {
+      "run_id": "v7.5-run-09",
+      "NX46_THRESHOLD_QUANTILE": 0.978,
+      "NX46_SCORE_BLEND_3D_WEIGHT": 0.68,
+      "NX46_Z_SMOOTHING_RADIUS": 2
+    },
+    {
+      "run_id": "v7.5-run-10",
+      "NX46_THRESHOLD_QUANTILE": 0.978,
+      "NX46_SCORE_BLEND_3D_WEIGHT": 0.72,
+      "NX46_Z_SMOOTHING_RADIUS": 2
+    }
+  ]
+}

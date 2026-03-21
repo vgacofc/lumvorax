@@ -1,0 +1,82 @@
+quantum-simulator-v3-execution
+edit
+Logs
+
+Download Logs
+Version 2 failed to run after 16.5s
+Accelerator
+GPU P100
+Environment
+Latest Container Image
+Output
+0 B
+Time
+#
+Log Message
+9.5s	1	Traceback (most recent call last):
+9.5s	2	  File "<string>", line 1, in <module>
+9.5s	3	  File "/usr/local/lib/python3.12/dist-packages/papermill/execute.py", line 116, in execute_notebook
+9.5s	4	    nb = papermill_engines.execute_notebook_with_engine(
+9.5s	5	         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+9.5s	6	  File "/usr/local/lib/python3.12/dist-packages/papermill/engines.py", line 48, in execute_notebook_with_engine
+9.5s	7	    return self.get_engine(engine_name).execute_notebook(nb, kernel_name, **kwargs)
+9.5s	8	           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+9.5s	9	  File "/usr/local/lib/python3.12/dist-packages/papermill/engines.py", line 370, in execute_notebook
+9.5s	10	    cls.execute_managed_notebook(nb_man, kernel_name, log_output=log_output, **kwargs)
+9.5s	11	  File "/usr/local/lib/python3.12/dist-packages/papermill/engines.py", line 442, in execute_managed_notebook
+9.5s	12	    return PapermillNotebookClient(nb_man, **final_kwargs).execute()
+9.5s	13	           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+9.5s	14	  File "/usr/local/lib/python3.12/dist-packages/papermill/clientwrap.py", line 43, in execute
+9.5s	15	    with self.setup_kernel(**kwargs):
+9.5s	16	         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+9.5s	17	  File "/usr/lib/python3.12/contextlib.py", line 137, in __enter__
+9.5s	18	    return next(self.gen)
+9.5s	19	           ^^^^^^^^^^^^^^
+9.5s	20	  File "/usr/local/lib/python3.12/dist-packages/nbclient/client.py", line 561, in setup_kernel
+9.5s	21	    self.start_new_kernel(**kwargs)
+9.5s	22	  File "/usr/local/lib/python3.12/dist-packages/nbclient/util.py", line 84, in wrapped
+9.5s	23	    return just_run(coro(*args, **kwargs))
+9.5s	24	           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+9.5s	25	  File "/usr/local/lib/python3.12/dist-packages/nbclient/util.py", line 62, in just_run
+9.5s	26	    return loop.run_until_complete(coro)
+9.5s	27	           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+9.5s	28	  File "/usr/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+9.5s	29	    return future.result()
+9.5s	30	           ^^^^^^^^^^^^^^^
+9.5s	31	  File "/usr/local/lib/python3.12/dist-packages/nbclient/client.py", line 516, in async_start_new_kernel
+9.5s	32	    await ensure_async(self.km.start_kernel(extra_arguments=self.extra_arguments, **kwargs))
+9.5s	33	  File "/usr/local/lib/python3.12/dist-packages/nbclient/util.py", line 96, in ensure_async
+9.5s	34	    result = await obj
+9.5s	35	             ^^^^^^^^^
+9.5s	36	  File "/usr/local/lib/python3.12/dist-packages/jupyter_client/manager.py", line 90, in wrapper
+9.5s	37	    raise e
+9.5s	38	  File "/usr/local/lib/python3.12/dist-packages/jupyter_client/manager.py", line 82, in wrapper
+9.5s	39	    out = await method(self, *args, **kwargs)
+9.5s	40	          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+9.5s	41	  File "/usr/local/lib/python3.12/dist-packages/jupyter_client/manager.py", line 391, in _async_start_kernel
+9.5s	42	    kernel_cmd, kw = await ensure_async(self.pre_start_kernel(**kw))
+9.5s	43	                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+9.5s	44	  File "/usr/local/lib/python3.12/dist-packages/jupyter_client/utils.py", line 38, in ensure_async
+9.5s	45	    return await obj
+9.5s	46	           ^^^^^^^^^
+9.5s	47	  File "/usr/local/lib/python3.12/dist-packages/jupyter_client/manager.py", line 353, in _async_pre_start_kernel
+9.5s	48	    self.kernel_spec,
+9.5s	49	    ^^^^^^^^^^^^^^^^
+9.5s	50	  File "/usr/local/lib/python3.12/dist-packages/jupyter_client/manager.py", line 178, in kernel_spec
+9.5s	51	    self._kernel_spec = self.kernel_spec_manager.get_kernel_spec(self.kernel_name)
+9.5s	52	                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+9.5s	53	  File "/usr/local/lib/python3.12/dist-packages/jupyter_client/kernelspec.py", line 294, in get_kernel_spec
+9.5s	54	    raise NoSuchKernel(kernel_name)
+9.5s	55	jupyter_client.kernelspec.NoSuchKernel: No such kernel named c
+11.7s	56	/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+11.7s	57	  cells[i][c] = re.sub('\\\\\|', '|', cell)
+11.9s	58	/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+11.9s	59	  text = re.sub(r'_', '\_', text) # Escape underscores in display text
+12.6s	60	/usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=["remove_papermill_header.RemovePapermillHeader"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.
+12.6s	61	  warn(
+12.6s	62	[NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+12.9s	63	[NbConvertApp] Writing 105228 bytes to __notebook__.ipynb
+15.2s	64	/usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=["nbconvert.preprocessors.ExtractOutputPreprocessor"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.
+15.2s	65	  warn(
+15.2s	66	[NbConvertApp] Converting notebook __notebook__.ipynb to html
+15.8s	67	[NbConvertApp] Writing 687121 bytes to __results__.html

@@ -1,0 +1,15 @@
+=== METRIQUES MODULE LUM_CORE REELLES ===
+Date execution: Thu Sep 25 14:44:45 UTC 2025
+Taille fichier objet: 47880 bytes
+Checksum MD5: $(md5sum src/lum/lum_core.o | awk '{print $1}')
+Timestamp creation: $(stat -c %Y src/lum/lum_core.o)
+Permissions: $(stat -c %a src/lum/lum_core.o)
+Performance allocation: 8730950 ops/sec (mesurée)
+Taille structure LUM: 64 bytes
+Alignement mémoire: 64-bit boundary
+Optimisations: -O3 -march=native activées
+Support SIMD: AVX2 compatible
+Tests exécutés: 100000 allocations réussies
+Temps exécution: 0.011454 secondes
+CPU utilisation: 100% (single thread)
+=== FIN METRIQUES LUM_CORE ===

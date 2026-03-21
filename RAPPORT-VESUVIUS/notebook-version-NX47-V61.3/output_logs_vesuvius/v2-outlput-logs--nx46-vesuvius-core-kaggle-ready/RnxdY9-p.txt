@@ -1,0 +1,53 @@
+10.2s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+10.2s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+10.2s 3 0.00s - to python to disable frozen modules.
+10.2s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+11.1s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+11.1s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+11.1s 7 0.00s - to python to disable frozen modules.
+11.1s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+13.0s 9 [ROADMAP] audit_discovery: 100.0%
+13.0s 10 [ROADMAP] package_submission: 30.0%
+13.0s 11 [ROADMAP] package_submission: 60.0%
+13.0s 12 [ROADMAP] package_submission: 100.0%
+13.0s 13 [ROADMAP] finalize_forensics: 60.0%
+13.0s 14 [ROADMAP] finalize_forensics: 100.0%
+13.0s 15 {
+13.0s 16 "status": "100%_OFFLINE_ACTIVATED",
+13.0s 17 "active_neurons": 0,
+13.0s 18 "total_allocations": 0,
+13.0s 19 "total_pixels_processed": 0,
+13.0s 20 "total_ink_pixels": 0,
+13.0s 21 "ink_ratio": 0.0,
+13.0s 22 "qi_index_real": 0.0,
+13.0s 23 "cpu_total_ns": 1272266,
+13.0s 24 "merkle_root": null,
+13.0s 25 "layout_detected": "empty",
+13.0s 26 "train_items": [],
+13.0s 27 "test_items": [],
+13.0s 28 "train_threshold": 0.5,
+13.0s 29 "submission_csv": null,
+13.0s 30 "submission_zip": null,
+13.0s 31 "zip_members_validated": null,
+13.0s 32 "zip_missing": [],
+13.0s 33 "zip_extra": [],
+13.0s 34 "roadmap_percent": {
+13.0s 35 "audit_discovery": 100.0,
+13.0s 36 "train_thresholds": 0.0,
+13.0s 37 "infer_predictions": 0.0,
+13.0s 38 "package_submission": 100.0,
+13.0s 39 "finalize_forensics": 60.0
+13.0s 40 }
+13.0s 41 }
+16.4s 42 /usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+16.4s 43 cells[i][c] = re.sub('\\\\\|', '|', cell)
+16.6s 44 /usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+16.6s 45 text = re.sub(r'_', '\_', text) # Escape underscores in display text
+17.6s 46 /usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=["remove_papermill_header.RemovePapermillHeader"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.
+17.6s 47 warn(
+17.6s 48 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+18.0s 49 [NbConvertApp] Writing 28256 bytes to __notebook__.ipynb
+21.6s 50 /usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=["nbconvert.preprocessors.ExtractOutputPreprocessor"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.
+21.6s 51 warn(
+21.6s 52 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+22.9s 53 [NbConvertApp] Writing 382778 bytes to __results__.html

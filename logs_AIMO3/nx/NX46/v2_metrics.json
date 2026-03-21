@@ -1,0 +1,9 @@
+{
+  "neurons": {
+    "before": 0,
+    "after": 5000
+  },
+  "activation": {
+    "total": 100.0
+  }
+}

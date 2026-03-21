@@ -1,0 +1,45 @@
+{
+  "version": "v3",
+  "seed_formula_main": "0xABC000 + scenario*7919",
+  "seed_formula_phase": "0xABC000 + scenario*7919 + run*104729",
+  "scenarios_main": 360,
+  "scenarios_phase": 360,
+  "runs_per_scenario_phase": 30,
+  "artifacts": [
+    {
+      "file": "src/projetx_NQubit NX/NQubit_v3/results/nqbit_benchmark.csv",
+      "sha256": "c92365749035b6e61ebe2ade16f8ff541a1f7d257713409a23f70e78025aecde",
+      "bytes": 35547
+    },
+    {
+      "file": "src/projetx_NQubit NX/NQubit_v3/results/nqbit_stats_v2.csv",
+      "sha256": "423322642a41c6cb2a9086eb0ed84afa6a91d73010530b28620473397ab32fde",
+      "bytes": 347
+    },
+    {
+      "file": "src/projetx_NQubit NX/NQubit_v3/results/rapport_final.md",
+      "sha256": "718023029a678159727c55d3221888bf6648b975a8f0699d57412d014c91fd86",
+      "bytes": 780
+    },
+    {
+      "file": "src/projetx_NQubit NX/NQubit_v3/results/nqbit_forensic_ns.log",
+      "sha256": "fb43b5a3252f90e10204c104a39d617b2f48cc138dbc9ba72127c6951ec773f1",
+      "bytes": 162432
+    },
+    {
+      "file": "src/projetx_NQubit NX/NQubit_v3/results/test_extended_forensic.log",
+      "sha256": "e7174fb404781b8887f203a2b151b98539d35f0d8c05048884647c4bf39a983b",
+      "bytes": 269
+    },
+    {
+      "file": "src/projetx_NQubit NX/NQubit_v3/results/phase_p0_p1_metrics.csv",
+      "sha256": "1a078f05525e53b313b6ccaf43676a0930a59e1f3b3121616ca3b5a7039cdf55",
+      "bytes": 1037
+    },
+    {
+      "file": "src/projetx_NQubit NX/NQubit_v3/results/phase_p0_p1_forensic.log",
+      "sha256": "036ffd05533d2dc01c9e8de2eaa37ba17ab9e8e715cef38472268149cba036cd",
+      "bytes": 1491
+    }
+  ]
+}

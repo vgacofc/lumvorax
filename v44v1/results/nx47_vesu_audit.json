@@ -1,0 +1,20 @@
+[
+    {
+        "timestamp_ns": 1770162288176319055,
+        "event": "INFERENCE_START",
+        "details": "Starting global inference",
+        "signature": "590fb4d141640a9c57840fceb0f70aa066a337a30f0b5a20d7aaa6f146b608eebad14c71216c1dc2ac2b3febf2c491bfe797f8d4f9586c5ca2fb81cbf818d52d"
+    },
+    {
+        "timestamp_ns": 1770162288180395062,
+        "event": "ERROR",
+        "details": "No .tif files found in expected data sources.",
+        "signature": "449e2d911c04b3e2fdc8bea3a98c409b20ff1d61f29fda5610c8c6431e2f5dd8761c4382a7add50213f9d4b6f3a47b3bb15355aeefe720925c1170df29207277"
+    },
+    {
+        "timestamp_ns": 1770162288208710718,
+        "event": "SUBMISSION_GENERATED",
+        "details": "submission.csv saved with 0 entries",
+        "signature": "4b0a0802d342186b95d4485cababec4d72db305dc9e063c34d17812ae4af7f6e1afd9f41102ef2ae9d0d2d7a90f35df3a461d7e2b48d5f125ffbb0e7f078d754"
+    }
+]

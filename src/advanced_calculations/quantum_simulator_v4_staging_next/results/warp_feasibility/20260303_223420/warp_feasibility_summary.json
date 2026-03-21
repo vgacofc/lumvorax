@@ -1,0 +1,17 @@
+{
+  "run_id": "20260303_223420",
+  "model": "warp_feasibility_proxy_v1",
+  "notes": "Order-of-magnitude feasibility proxy inspired by Alcubierre scaling; not a full Einstein solver.",
+  "steps": 800,
+  "ns_step": 1000,
+  "radius_m": 80.0,
+  "shell_m": 1.2,
+  "v_over_c_target": 0.35,
+  "mean_abs_negative_energy_j": 7.914951446664426e+46,
+  "max_abs_negative_energy_j": 8.635308322872918e+46,
+  "feasible_rows": 0,
+  "feasible_rate": 0.0,
+  "forensic_chain_final_hash": "aba65739d4f76ce322689b98d1b6b366ed50c5581cc1e25c5bbce1755582b1d5",
+  "forensic_chain_genesis": "GENESIS",
+  "max_memory_mb": 21.203
+}

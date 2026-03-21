@@ -1,0 +1,11 @@
+{
+  "run_id": "20260303_122226",
+  "plan_only": false,
+  "skip_install": false,
+  "total": 6,
+  "clone_ok": 6,
+  "install_ok": 5,
+  "import_ok": 0,
+  "snippet_ok": 0,
+  "max_memory_mb": 16.0
+}

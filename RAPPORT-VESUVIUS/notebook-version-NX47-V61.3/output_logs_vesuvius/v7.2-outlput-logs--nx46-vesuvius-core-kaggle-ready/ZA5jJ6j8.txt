@@ -1,0 +1,1423 @@
+7.2s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+7.2s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+7.2s 3 0.00s - to python to disable frozen modules.
+7.2s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+7.8s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+7.8s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+7.8s 7 0.00s - to python to disable frozen modules.
+7.8s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+10.8s 9 Processing /kaggle/input/datasets/ndarray2000/nx47-dependencies/imagecodecs-2026.1.14-cp311-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl
+11.0s 10 Processing /kaggle/input/datasets/ndarray2000/nx47-dependencies/imagecodecs-2026.1.14-cp311-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl
+11.5s 11 Requirement already satisfied: numpy in /usr/local/lib/python3.12/dist-packages (from imagecodecs==2026.1.14) (2.0.2)
+11.7s 12 Requirement already satisfied: numpy in /usr/local/lib/python3.12/dist-packages (from imagecodecs==2026.1.14) (2.0.2)
+13.3s 13 Installing collected packages: imagecodecs
+13.5s 14 Installing collected packages: imagecodecs
+13.8s 15 Successfully installed imagecodecs-2026.1.14
+14.0s 16 Successfully installed imagecodecs-2026.1.14
+14.9s 17 Processing /kaggle/input/datasets/ndarray2000/nx47-dependencies/tifffile-2026.1.28-py3-none-any.whl
+15.0s 18 Requirement already satisfied: numpy in /usr/local/lib/python3.12/dist-packages (from tifffile==2026.1.28) (2.0.2)
+15.1s 19 Processing /kaggle/input/datasets/ndarray2000/nx47-dependencies/tifffile-2026.1.28-py3-none-any.whl
+15.1s 20 Requirement already satisfied: numpy in /usr/local/lib/python3.12/dist-packages (from tifffile==2026.1.28) (2.0.2)
+16.8s 21 Installing collected packages: tifffile
+16.8s 22 Attempting uninstall: tifffile
+17.0s 23 Installing collected packages: tifffile
+17.0s 24 Attempting uninstall: tifffile
+17.1s 25 Found existing installation: tifffile 2025.10.16
+17.1s 26 Uninstalling tifffile-2025.10.16:
+17.1s 27 Successfully uninstalled tifffile-2025.10.16
+17.3s 28 Found existing installation: tifffile 2025.10.16
+17.3s 29 Uninstalling tifffile-2025.10.16:
+17.3s 30 Successfully uninstalled tifffile-2025.10.16
+17.4s 31 Successfully installed tifffile-2026.1.28
+17.6s 32 Successfully installed tifffile-2026.1.28
+19.8s 33 [ROADMAP] audit_discovery: 100.0%
+19.8s 34 [ROADMAP] train_thresholds: 0.2%
+24.0s 35 [ROADMAP] train_thresholds: 0.4%
+27.6s 36 [ROADMAP] train_thresholds: 0.6%
+31.1s 37 [ROADMAP] train_thresholds: 0.8%
+34.6s 38 [ROADMAP] train_thresholds: 1.0%
+38.2s 39 [ROADMAP] train_thresholds: 1.2%
+41.7s 40 [ROADMAP] train_thresholds: 1.4%
+45.2s 41 [ROADMAP] train_thresholds: 1.6%
+48.5s 42 [ROADMAP] train_thresholds: 1.8%
+52.2s 43 [ROADMAP] train_thresholds: 2.0%
+55.6s 44 [ROADMAP] train_thresholds: 2.1%
+59.0s 45 [ROADMAP] train_thresholds: 2.3%
+62.3s 46 [ROADMAP] train_thresholds: 2.5%
+65.9s 47 [ROADMAP] train_thresholds: 2.7%
+69.3s 48 [ROADMAP] train_thresholds: 2.9%
+72.9s 49 [ROADMAP] train_thresholds: 3.1%
+76.4s 50 [ROADMAP] train_thresholds: 3.3%
+80.1s 51 [ROADMAP] train_thresholds: 3.5%
+83.7s 52 [ROADMAP] train_thresholds: 3.7%
+87.2s 53 [ROADMAP] train_thresholds: 3.9%
+90.7s 54 [ROADMAP] train_thresholds: 4.1%
+94.5s 55 [ROADMAP] train_thresholds: 4.3%
+98.1s 56 [ROADMAP] train_thresholds: 4.5%
+101.8s 57 [ROADMAP] train_thresholds: 4.7%
+103.7s 58 [ROADMAP] train_thresholds: 4.9%
+107.2s 59 [ROADMAP] train_thresholds: 5.1%
+110.9s 60 [ROADMAP] train_thresholds: 5.3%
+114.4s 61 [ROADMAP] train_thresholds: 5.5%
+117.7s 62 [ROADMAP] train_thresholds: 5.7%
+121.4s 63 [ROADMAP] train_thresholds: 5.9%
+124.9s 64 [ROADMAP] train_thresholds: 6.1%
+128.5s 65 [ROADMAP] train_thresholds: 6.2%
+132.0s 66 [ROADMAP] train_thresholds: 6.4%
+135.6s 67 [ROADMAP] train_thresholds: 6.6%
+139.2s 68 [ROADMAP] train_thresholds: 6.8%
+142.8s 69 [ROADMAP] train_thresholds: 7.0%
+146.3s 70 [ROADMAP] train_thresholds: 7.2%
+149.8s 71 [ROADMAP] train_thresholds: 7.4%
+153.6s 72 [ROADMAP] train_thresholds: 7.6%
+157.1s 73 [ROADMAP] train_thresholds: 7.8%
+160.7s 74 [ROADMAP] train_thresholds: 8.0%
+164.2s 75 [ROADMAP] train_thresholds: 8.2%
+167.7s 76 [ROADMAP] train_thresholds: 8.4%
+171.3s 77 [ROADMAP] train_thresholds: 8.6%
+174.9s 78 [ROADMAP] train_thresholds: 8.8%
+178.7s 79 [ROADMAP] train_thresholds: 9.0%
+182.1s 80 [ROADMAP] train_thresholds: 9.2%
+185.6s 81 [ROADMAP] train_thresholds: 9.4%
+189.1s 82 [ROADMAP] train_thresholds: 9.6%
+192.5s 83 [ROADMAP] train_thresholds: 9.8%
+195.9s 84 [ROADMAP] train_thresholds: 10.0%
+199.6s 85 [ROADMAP] train_thresholds: 10.2%
+203.2s 86 [ROADMAP] train_thresholds: 10.4%
+206.7s 87 [ROADMAP] train_thresholds: 10.5%
+210.1s 88 [ROADMAP] train_thresholds: 10.7%
+213.7s 89 [ROADMAP] train_thresholds: 10.9%
+217.3s 90 [ROADMAP] train_thresholds: 11.1%
+220.7s 91 [ROADMAP] train_thresholds: 11.3%
+224.2s 92 [ROADMAP] train_thresholds: 11.5%
+227.6s 93 [ROADMAP] train_thresholds: 11.7%
+231.0s 94 [ROADMAP] train_thresholds: 11.9%
+234.6s 95 [ROADMAP] train_thresholds: 12.1%
+238.2s 96 [ROADMAP] train_thresholds: 12.3%
+241.8s 97 [ROADMAP] train_thresholds: 12.5%
+245.0s 98 [ROADMAP] train_thresholds: 12.7%
+248.5s 99 [ROADMAP] train_thresholds: 12.9%
+251.9s 100 [ROADMAP] train_thresholds: 13.1%
+255.3s 101 [ROADMAP] train_thresholds: 13.3%
+258.7s 102 [ROADMAP] train_thresholds: 13.5%
+262.1s 103 [ROADMAP] train_thresholds: 13.7%
+264.1s 104 [ROADMAP] train_thresholds: 13.9%
+267.6s 105 [ROADMAP] train_thresholds: 14.1%
+271.1s 106 [ROADMAP] train_thresholds: 14.3%
+274.6s 107 [ROADMAP] train_thresholds: 14.5%
+278.1s 108 [ROADMAP] train_thresholds: 14.6%
+281.5s 109 [ROADMAP] train_thresholds: 14.8%
+284.9s 110 [ROADMAP] train_thresholds: 15.0%
+288.5s 111 [ROADMAP] train_thresholds: 15.2%
+291.8s 112 [ROADMAP] train_thresholds: 15.4%
+295.2s 113 [ROADMAP] train_thresholds: 15.6%
+298.7s 114 [ROADMAP] train_thresholds: 15.8%
+302.2s 115 [ROADMAP] train_thresholds: 16.0%
+305.6s 116 [ROADMAP] train_thresholds: 16.2%
+309.1s 117 [ROADMAP] train_thresholds: 16.4%
+312.7s 118 [ROADMAP] train_thresholds: 16.6%
+316.1s 119 [ROADMAP] train_thresholds: 16.8%
+319.5s 120 [ROADMAP] train_thresholds: 17.0%
+323.1s 121 [ROADMAP] train_thresholds: 17.2%
+325.0s 122 [ROADMAP] train_thresholds: 17.4%
+328.4s 123 [ROADMAP] train_thresholds: 17.6%
+331.7s 124 [ROADMAP] train_thresholds: 17.8%
+335.3s 125 [ROADMAP] train_thresholds: 18.0%
+338.7s 126 [ROADMAP] train_thresholds: 18.2%
+342.3s 127 [ROADMAP] train_thresholds: 18.4%
+345.6s 128 [ROADMAP] train_thresholds: 18.6%
+349.1s 129 [ROADMAP] train_thresholds: 18.8%
+352.6s 130 [ROADMAP] train_thresholds: 18.9%
+355.9s 131 [ROADMAP] train_thresholds: 19.1%
+359.3s 132 [ROADMAP] train_thresholds: 19.3%
+363.0s 133 [ROADMAP] train_thresholds: 19.5%
+366.5s 134 [ROADMAP] train_thresholds: 19.7%
+370.0s 135 [ROADMAP] train_thresholds: 19.9%
+373.7s 136 [ROADMAP] train_thresholds: 20.1%
+377.1s 137 [ROADMAP] train_thresholds: 20.3%
+380.5s 138 [ROADMAP] train_thresholds: 20.5%
+384.0s 139 [ROADMAP] train_thresholds: 20.7%
+387.5s 140 [ROADMAP] train_thresholds: 20.9%
+389.5s 141 [ROADMAP] train_thresholds: 21.1%
+393.0s 142 [ROADMAP] train_thresholds: 21.3%
+396.5s 143 [ROADMAP] train_thresholds: 21.5%
+399.9s 144 [ROADMAP] train_thresholds: 21.7%
+403.3s 145 [ROADMAP] train_thresholds: 21.9%
+406.6s 146 [ROADMAP] train_thresholds: 22.1%
+410.2s 147 [ROADMAP] train_thresholds: 22.3%
+413.8s 148 [ROADMAP] train_thresholds: 22.5%
+417.3s 149 [ROADMAP] train_thresholds: 22.7%
+420.8s 150 [ROADMAP] train_thresholds: 22.9%
+424.4s 151 [ROADMAP] train_thresholds: 23.0%
+428.0s 152 [ROADMAP] train_thresholds: 23.2%
+431.7s 153 [ROADMAP] train_thresholds: 23.4%
+435.3s 154 [ROADMAP] train_thresholds: 23.6%
+438.7s 155 [ROADMAP] train_thresholds: 23.8%
+442.2s 156 [ROADMAP] train_thresholds: 24.0%
+446.0s 157 [ROADMAP] train_thresholds: 24.2%
+449.4s 158 [ROADMAP] train_thresholds: 24.4%
+452.9s 159 [ROADMAP] train_thresholds: 24.6%
+456.5s 160 [ROADMAP] train_thresholds: 24.8%
+460.1s 161 [ROADMAP] train_thresholds: 25.0%
+463.6s 162 [ROADMAP] train_thresholds: 25.2%
+467.0s 163 [ROADMAP] train_thresholds: 25.4%
+470.4s 164 [ROADMAP] train_thresholds: 25.6%
+474.1s 165 [ROADMAP] train_thresholds: 25.8%
+477.7s 166 [ROADMAP] train_thresholds: 26.0%
+481.4s 167 [ROADMAP] train_thresholds: 26.2%
+485.1s 168 [ROADMAP] train_thresholds: 26.4%
+488.7s 169 [ROADMAP] train_thresholds: 26.6%
+492.4s 170 [ROADMAP] train_thresholds: 26.8%
+496.0s 171 [ROADMAP] train_thresholds: 27.0%
+498.0s 172 [ROADMAP] train_thresholds: 27.1%
+501.5s 173 [ROADMAP] train_thresholds: 27.3%
+505.0s 174 [ROADMAP] train_thresholds: 27.5%
+508.5s 175 [ROADMAP] train_thresholds: 27.7%
+512.1s 176 [ROADMAP] train_thresholds: 27.9%
+515.6s 177 [ROADMAP] train_thresholds: 28.1%
+519.3s 178 [ROADMAP] train_thresholds: 28.3%
+522.9s 179 [ROADMAP] train_thresholds: 28.5%
+526.4s 180 [ROADMAP] train_thresholds: 28.7%
+529.9s 181 [ROADMAP] train_thresholds: 28.9%
+533.3s 182 [ROADMAP] train_thresholds: 29.1%
+536.9s 183 [ROADMAP] train_thresholds: 29.3%
+540.2s 184 [ROADMAP] train_thresholds: 29.5%
+543.6s 185 [ROADMAP] train_thresholds: 29.7%
+547.0s 186 [ROADMAP] train_thresholds: 29.9%
+550.4s 187 [ROADMAP] train_thresholds: 30.1%
+553.7s 188 [ROADMAP] train_thresholds: 30.3%
+557.2s 189 [ROADMAP] train_thresholds: 30.5%
+560.8s 190 [ROADMAP] train_thresholds: 30.7%
+564.2s 191 [ROADMAP] train_thresholds: 30.9%
+567.8s 192 [ROADMAP] train_thresholds: 31.1%
+571.5s 193 [ROADMAP] train_thresholds: 31.2%
+575.1s 194 [ROADMAP] train_thresholds: 31.4%
+578.5s 195 [ROADMAP] train_thresholds: 31.6%
+582.0s 196 [ROADMAP] train_thresholds: 31.8%
+583.9s 197 [ROADMAP] train_thresholds: 32.0%
+587.4s 198 [ROADMAP] train_thresholds: 32.2%
+590.9s 199 [ROADMAP] train_thresholds: 32.4%
+594.4s 200 [ROADMAP] train_thresholds: 32.6%
+598.0s 201 [ROADMAP] train_thresholds: 32.8%
+601.3s 202 [ROADMAP] train_thresholds: 33.0%
+604.7s 203 [ROADMAP] train_thresholds: 33.2%
+608.2s 204 [ROADMAP] train_thresholds: 33.4%
+611.6s 205 [ROADMAP] train_thresholds: 33.6%
+615.1s 206 [ROADMAP] train_thresholds: 33.8%
+618.7s 207 [ROADMAP] train_thresholds: 34.0%
+622.3s 208 [ROADMAP] train_thresholds: 34.2%
+625.7s 209 [ROADMAP] train_thresholds: 34.4%
+629.1s 210 [ROADMAP] train_thresholds: 34.6%
+632.4s 211 [ROADMAP] train_thresholds: 34.8%
+635.8s 212 [ROADMAP] train_thresholds: 35.0%
+639.4s 213 [ROADMAP] train_thresholds: 35.2%
+641.3s 214 [ROADMAP] train_thresholds: 35.4%
+645.1s 215 [ROADMAP] train_thresholds: 35.5%
+648.5s 216 [ROADMAP] train_thresholds: 35.7%
+651.9s 217 [ROADMAP] train_thresholds: 35.9%
+655.5s 218 [ROADMAP] train_thresholds: 36.1%
+658.9s 219 [ROADMAP] train_thresholds: 36.3%
+662.5s 220 [ROADMAP] train_thresholds: 36.5%
+665.9s 221 [ROADMAP] train_thresholds: 36.7%
+669.2s 222 [ROADMAP] train_thresholds: 36.9%
+672.6s 223 [ROADMAP] train_thresholds: 37.1%
+676.1s 224 [ROADMAP] train_thresholds: 37.3%
+679.6s 225 [ROADMAP] train_thresholds: 37.5%
+683.0s 226 [ROADMAP] train_thresholds: 37.7%
+686.4s 227 [ROADMAP] train_thresholds: 37.9%
+690.0s 228 [ROADMAP] train_thresholds: 38.1%
+693.6s 229 [ROADMAP] train_thresholds: 38.3%
+697.1s 230 [ROADMAP] train_thresholds: 38.5%
+700.5s 231 [ROADMAP] train_thresholds: 38.7%
+704.0s 232 [ROADMAP] train_thresholds: 38.9%
+707.5s 233 [ROADMAP] train_thresholds: 39.1%
+710.8s 234 [ROADMAP] train_thresholds: 39.3%
+714.3s 235 [ROADMAP] train_thresholds: 39.5%
+717.8s 236 [ROADMAP] train_thresholds: 39.6%
+721.2s 237 [ROADMAP] train_thresholds: 39.8%
+724.5s 238 [ROADMAP] train_thresholds: 40.0%
+728.1s 239 [ROADMAP] train_thresholds: 40.2%
+731.6s 240 [ROADMAP] train_thresholds: 40.4%
+735.1s 241 [ROADMAP] train_thresholds: 40.6%
+738.6s 242 [ROADMAP] train_thresholds: 40.8%
+742.2s 243 [ROADMAP] train_thresholds: 41.0%
+745.5s 244 [ROADMAP] train_thresholds: 41.2%
+749.0s 245 [ROADMAP] train_thresholds: 41.4%
+752.4s 246 [ROADMAP] train_thresholds: 41.6%
+755.8s 247 [ROADMAP] train_thresholds: 41.8%
+759.3s 248 [ROADMAP] train_thresholds: 42.0%
+762.9s 249 [ROADMAP] train_thresholds: 42.2%
+766.3s 250 [ROADMAP] train_thresholds: 42.4%
+769.8s 251 [ROADMAP] train_thresholds: 42.6%
+773.2s 252 [ROADMAP] train_thresholds: 42.8%
+776.6s 253 [ROADMAP] train_thresholds: 43.0%
+780.2s 254 [ROADMAP] train_thresholds: 43.2%
+783.6s 255 [ROADMAP] train_thresholds: 43.4%
+787.2s 256 [ROADMAP] train_thresholds: 43.6%
+789.3s 257 [ROADMAP] train_thresholds: 43.8%
+793.0s 258 [ROADMAP] train_thresholds: 43.9%
+796.5s 259 [ROADMAP] train_thresholds: 44.1%
+800.0s 260 [ROADMAP] train_thresholds: 44.3%
+803.5s 261 [ROADMAP] train_thresholds: 44.5%
+807.0s 262 [ROADMAP] train_thresholds: 44.7%
+810.5s 263 [ROADMAP] train_thresholds: 44.9%
+814.0s 264 [ROADMAP] train_thresholds: 45.1%
+817.3s 265 [ROADMAP] train_thresholds: 45.3%
+820.9s 266 [ROADMAP] train_thresholds: 45.5%
+824.4s 267 [ROADMAP] train_thresholds: 45.7%
+827.9s 268 [ROADMAP] train_thresholds: 45.9%
+831.4s 269 [ROADMAP] train_thresholds: 46.1%
+834.8s 270 [ROADMAP] train_thresholds: 46.3%
+838.1s 271 [ROADMAP] train_thresholds: 46.5%
+841.6s 272 [ROADMAP] train_thresholds: 46.7%
+845.0s 273 [ROADMAP] train_thresholds: 46.9%
+848.5s 274 [ROADMAP] train_thresholds: 47.1%
+851.8s 275 [ROADMAP] train_thresholds: 47.3%
+855.4s 276 [ROADMAP] train_thresholds: 47.5%
+858.8s 277 [ROADMAP] train_thresholds: 47.7%
+862.3s 278 [ROADMAP] train_thresholds: 47.9%
+865.7s 279 [ROADMAP] train_thresholds: 48.0%
+869.4s 280 [ROADMAP] train_thresholds: 48.2%
+871.4s 281 [ROADMAP] train_thresholds: 48.4%
+874.9s 282 [ROADMAP] train_thresholds: 48.6%
+878.3s 283 [ROADMAP] train_thresholds: 48.8%
+881.9s 284 [ROADMAP] train_thresholds: 49.0%
+885.4s 285 [ROADMAP] train_thresholds: 49.2%
+888.8s 286 [ROADMAP] train_thresholds: 49.4%
+892.3s 287 [ROADMAP] train_thresholds: 49.6%
+895.7s 288 [ROADMAP] train_thresholds: 49.8%
+899.2s 289 [ROADMAP] train_thresholds: 50.0%
+902.5s 290 [ROADMAP] train_thresholds: 50.2%
+906.0s 291 [ROADMAP] train_thresholds: 50.4%
+909.5s 292 [ROADMAP] train_thresholds: 50.6%
+912.9s 293 [ROADMAP] train_thresholds: 50.8%
+916.4s 294 [ROADMAP] train_thresholds: 51.0%
+919.8s 295 [ROADMAP] train_thresholds: 51.2%
+923.2s 296 [ROADMAP] train_thresholds: 51.4%
+926.5s 297 [ROADMAP] train_thresholds: 51.6%
+930.0s 298 [ROADMAP] train_thresholds: 51.8%
+933.5s 299 [ROADMAP] train_thresholds: 52.0%
+937.0s 300 [ROADMAP] train_thresholds: 52.1%
+940.3s 301 [ROADMAP] train_thresholds: 52.3%
+943.6s 302 [ROADMAP] train_thresholds: 52.5%
+946.9s 303 [ROADMAP] train_thresholds: 52.7%
+950.3s 304 [ROADMAP] train_thresholds: 52.9%
+953.8s 305 [ROADMAP] train_thresholds: 53.1%
+957.2s 306 [ROADMAP] train_thresholds: 53.3%
+960.7s 307 [ROADMAP] train_thresholds: 53.5%
+964.3s 308 [ROADMAP] train_thresholds: 53.7%
+967.7s 309 [ROADMAP] train_thresholds: 53.9%
+971.1s 310 [ROADMAP] train_thresholds: 54.1%
+974.5s 311 [ROADMAP] train_thresholds: 54.3%
+978.0s 312 [ROADMAP] train_thresholds: 54.5%
+981.5s 313 [ROADMAP] train_thresholds: 54.7%
+984.9s 314 [ROADMAP] train_thresholds: 54.9%
+988.3s 315 [ROADMAP] train_thresholds: 55.1%
+991.8s 316 [ROADMAP] train_thresholds: 55.3%
+995.5s 317 [ROADMAP] train_thresholds: 55.5%
+999.1s 318 [ROADMAP] train_thresholds: 55.7%
+1002.4s 319 [ROADMAP] train_thresholds: 55.9%
+1006.0s 320 [ROADMAP] train_thresholds: 56.1%
+1009.3s 321 [ROADMAP] train_thresholds: 56.2%
+1012.7s 322 [ROADMAP] train_thresholds: 56.4%
+1016.3s 323 [ROADMAP] train_thresholds: 56.6%
+1019.7s 324 [ROADMAP] train_thresholds: 56.8%
+1023.2s 325 [ROADMAP] train_thresholds: 57.0%
+1026.7s 326 [ROADMAP] train_thresholds: 57.2%
+1030.4s 327 [ROADMAP] train_thresholds: 57.4%
+1033.8s 328 [ROADMAP] train_thresholds: 57.6%
+1037.2s 329 [ROADMAP] train_thresholds: 57.8%
+1040.7s 330 [ROADMAP] train_thresholds: 58.0%
+1042.6s 331 [ROADMAP] train_thresholds: 58.2%
+1045.9s 332 [ROADMAP] train_thresholds: 58.4%
+1049.4s 333 [ROADMAP] train_thresholds: 58.6%
+1053.1s 334 [ROADMAP] train_thresholds: 58.8%
+1056.6s 335 [ROADMAP] train_thresholds: 59.0%
+1060.0s 336 [ROADMAP] train_thresholds: 59.2%
+1063.4s 337 [ROADMAP] train_thresholds: 59.4%
+1066.9s 338 [ROADMAP] train_thresholds: 59.6%
+1070.3s 339 [ROADMAP] train_thresholds: 59.8%
+1073.9s 340 [ROADMAP] train_thresholds: 60.0%
+1075.7s 341 [ROADMAP] train_thresholds: 60.2%
+1078.9s 342 [ROADMAP] train_thresholds: 60.4%
+1082.5s 343 [ROADMAP] train_thresholds: 60.5%
+1085.9s 344 [ROADMAP] train_thresholds: 60.7%
+1089.2s 345 [ROADMAP] train_thresholds: 60.9%
+1092.7s 346 [ROADMAP] train_thresholds: 61.1%
+1094.5s 347 [ROADMAP] train_thresholds: 61.3%
+1097.9s 348 [ROADMAP] train_thresholds: 61.5%
+1101.4s 349 [ROADMAP] train_thresholds: 61.7%
+1104.8s 350 [ROADMAP] train_thresholds: 61.9%
+1108.2s 351 [ROADMAP] train_thresholds: 62.1%
+1111.7s 352 [ROADMAP] train_thresholds: 62.3%
+1115.5s 353 [ROADMAP] train_thresholds: 62.5%
+1118.9s 354 [ROADMAP] train_thresholds: 62.7%
+1122.4s 355 [ROADMAP] train_thresholds: 62.9%
+1125.7s 356 [ROADMAP] train_thresholds: 63.1%
+1129.2s 357 [ROADMAP] train_thresholds: 63.3%
+1132.6s 358 [ROADMAP] train_thresholds: 63.5%
+1136.1s 359 [ROADMAP] train_thresholds: 63.7%
+1139.6s 360 [ROADMAP] train_thresholds: 63.9%
+1141.4s 361 [ROADMAP] train_thresholds: 64.1%
+1144.9s 362 [ROADMAP] train_thresholds: 64.3%
+1148.4s 363 [ROADMAP] train_thresholds: 64.5%
+1151.8s 364 [ROADMAP] train_thresholds: 64.6%
+1155.4s 365 [ROADMAP] train_thresholds: 64.8%
+1158.7s 366 [ROADMAP] train_thresholds: 65.0%
+1162.1s 367 [ROADMAP] train_thresholds: 65.2%
+1165.5s 368 [ROADMAP] train_thresholds: 65.4%
+1168.7s 369 [ROADMAP] train_thresholds: 65.6%
+1172.3s 370 [ROADMAP] train_thresholds: 65.8%
+1175.8s 371 [ROADMAP] train_thresholds: 66.0%
+1179.3s 372 [ROADMAP] train_thresholds: 66.2%
+1181.2s 373 [ROADMAP] train_thresholds: 66.4%
+1184.6s 374 [ROADMAP] train_thresholds: 66.6%
+1188.1s 375 [ROADMAP] train_thresholds: 66.8%
+1191.5s 376 [ROADMAP] train_thresholds: 67.0%
+1194.9s 377 [ROADMAP] train_thresholds: 67.2%
+1198.5s 378 [ROADMAP] train_thresholds: 67.4%
+1202.0s 379 [ROADMAP] train_thresholds: 67.6%
+1204.0s 380 [ROADMAP] train_thresholds: 67.8%
+1205.8s 381 [ROADMAP] train_thresholds: 68.0%
+1209.2s 382 [ROADMAP] train_thresholds: 68.2%
+1212.7s 383 [ROADMAP] train_thresholds: 68.4%
+1216.2s 384 [ROADMAP] train_thresholds: 68.6%
+1219.6s 385 [ROADMAP] train_thresholds: 68.8%
+1223.2s 386 [ROADMAP] train_thresholds: 68.9%
+1226.7s 387 [ROADMAP] train_thresholds: 69.1%
+1230.0s 388 [ROADMAP] train_thresholds: 69.3%
+1233.8s 389 [ROADMAP] train_thresholds: 69.5%
+1237.2s 390 [ROADMAP] train_thresholds: 69.7%
+1241.0s 391 [ROADMAP] train_thresholds: 69.9%
+1244.4s 392 [ROADMAP] train_thresholds: 70.1%
+1247.9s 393 [ROADMAP] train_thresholds: 70.3%
+1251.3s 394 [ROADMAP] train_thresholds: 70.5%
+1254.8s 395 [ROADMAP] train_thresholds: 70.7%
+1258.2s 396 [ROADMAP] train_thresholds: 70.9%
+1261.8s 397 [ROADMAP] train_thresholds: 71.1%
+1265.2s 398 [ROADMAP] train_thresholds: 71.3%
+1268.6s 399 [ROADMAP] train_thresholds: 71.5%
+1272.0s 400 [ROADMAP] train_thresholds: 71.7%
+1275.5s 401 [ROADMAP] train_thresholds: 71.9%
+1279.0s 402 [ROADMAP] train_thresholds: 72.1%
+1282.6s 403 [ROADMAP] train_thresholds: 72.3%
+1286.2s 404 [ROADMAP] train_thresholds: 72.5%
+1288.1s 405 [ROADMAP] train_thresholds: 72.7%
+1291.7s 406 [ROADMAP] train_thresholds: 72.9%
+1295.2s 407 [ROADMAP] train_thresholds: 73.0%
+1298.8s 408 [ROADMAP] train_thresholds: 73.2%
+1302.2s 409 [ROADMAP] train_thresholds: 73.4%
+1305.7s 410 [ROADMAP] train_thresholds: 73.6%
+1309.3s 411 [ROADMAP] train_thresholds: 73.8%
+1312.9s 412 [ROADMAP] train_thresholds: 74.0%
+1316.6s 413 [ROADMAP] train_thresholds: 74.2%
+1320.3s 414 [ROADMAP] train_thresholds: 74.4%
+1324.2s 415 [ROADMAP] train_thresholds: 74.6%
+1328.0s 416 [ROADMAP] train_thresholds: 74.8%
+1331.5s 417 [ROADMAP] train_thresholds: 75.0%
+1335.2s 418 [ROADMAP] train_thresholds: 75.2%
+1338.7s 419 [ROADMAP] train_thresholds: 75.4%
+1340.7s 420 [ROADMAP] train_thresholds: 75.6%
+1344.2s 421 [ROADMAP] train_thresholds: 75.8%
+1346.5s 422 [ROADMAP] train_thresholds: 76.0%
+1350.1s 423 [ROADMAP] train_thresholds: 76.2%
+1353.7s 424 [ROADMAP] train_thresholds: 76.4%
+1357.3s 425 [ROADMAP] train_thresholds: 76.6%
+1361.0s 426 [ROADMAP] train_thresholds: 76.8%
+1364.8s 427 [ROADMAP] train_thresholds: 77.0%
+1368.5s 428 [ROADMAP] train_thresholds: 77.1%
+1372.3s 429 [ROADMAP] train_thresholds: 77.3%
+1375.7s 430 [ROADMAP] train_thresholds: 77.5%
+1379.3s 431 [ROADMAP] train_thresholds: 77.7%
+1383.0s 432 [ROADMAP] train_thresholds: 77.9%
+1386.6s 433 [ROADMAP] train_thresholds: 78.1%
+1390.1s 434 [ROADMAP] train_thresholds: 78.3%
+1393.7s 435 [ROADMAP] train_thresholds: 78.5%
+1397.2s 436 [ROADMAP] train_thresholds: 78.7%
+1400.8s 437 [ROADMAP] train_thresholds: 78.9%
+1404.1s 438 [ROADMAP] train_thresholds: 79.1%
+1407.6s 439 [ROADMAP] train_thresholds: 79.3%
+1409.6s 440 [ROADMAP] train_thresholds: 79.5%
+1413.0s 441 [ROADMAP] train_thresholds: 79.7%
+1416.4s 442 [ROADMAP] train_thresholds: 79.9%
+1419.8s 443 [ROADMAP] train_thresholds: 80.1%
+1423.5s 444 [ROADMAP] train_thresholds: 80.3%
+1427.1s 445 [ROADMAP] train_thresholds: 80.5%
+1430.6s 446 [ROADMAP] train_thresholds: 80.7%
+1434.0s 447 [ROADMAP] train_thresholds: 80.9%
+1437.4s 448 [ROADMAP] train_thresholds: 81.1%
+1440.8s 449 [ROADMAP] train_thresholds: 81.2%
+1442.5s 450 [ROADMAP] train_thresholds: 81.4%
+1445.9s 451 [ROADMAP] train_thresholds: 81.6%
+1449.3s 452 [ROADMAP] train_thresholds: 81.8%
+1451.4s 453 [ROADMAP] train_thresholds: 82.0%
+1454.9s 454 [ROADMAP] train_thresholds: 82.2%
+1458.3s 455 [ROADMAP] train_thresholds: 82.4%
+1461.8s 456 [ROADMAP] train_thresholds: 82.6%
+1465.2s 457 [ROADMAP] train_thresholds: 82.8%
+1468.8s 458 [ROADMAP] train_thresholds: 83.0%
+1472.2s 459 [ROADMAP] train_thresholds: 83.2%
+1475.7s 460 [ROADMAP] train_thresholds: 83.4%
+1479.2s 461 [ROADMAP] train_thresholds: 83.6%
+1482.5s 462 [ROADMAP] train_thresholds: 83.8%
+1485.8s 463 [ROADMAP] train_thresholds: 84.0%
+1489.2s 464 [ROADMAP] train_thresholds: 84.2%
+1492.6s 465 [ROADMAP] train_thresholds: 84.4%
+1494.4s 466 [ROADMAP] train_thresholds: 84.6%
+1497.9s 467 [ROADMAP] train_thresholds: 84.8%
+1501.4s 468 [ROADMAP] train_thresholds: 85.0%
+1504.7s 469 [ROADMAP] train_thresholds: 85.2%
+1508.2s 470 [ROADMAP] train_thresholds: 85.4%
+1511.8s 471 [ROADMAP] train_thresholds: 85.5%
+1515.2s 472 [ROADMAP] train_thresholds: 85.7%
+1518.7s 473 [ROADMAP] train_thresholds: 85.9%
+1522.2s 474 [ROADMAP] train_thresholds: 86.1%
+1525.5s 475 [ROADMAP] train_thresholds: 86.3%
+1527.3s 476 [ROADMAP] train_thresholds: 86.5%
+1530.8s 477 [ROADMAP] train_thresholds: 86.7%
+1534.1s 478 [ROADMAP] train_thresholds: 86.9%
+1537.5s 479 [ROADMAP] train_thresholds: 87.1%
+1541.0s 480 [ROADMAP] train_thresholds: 87.3%
+1543.0s 481 [ROADMAP] train_thresholds: 87.5%
+1544.9s 482 [ROADMAP] train_thresholds: 87.7%
+1548.3s 483 [ROADMAP] train_thresholds: 87.9%
+1551.7s 484 [ROADMAP] train_thresholds: 88.1%
+1555.1s 485 [ROADMAP] train_thresholds: 88.3%
+1558.6s 486 [ROADMAP] train_thresholds: 88.5%
+1562.0s 487 [ROADMAP] train_thresholds: 88.7%
+1565.4s 488 [ROADMAP] train_thresholds: 88.9%
+1568.7s 489 [ROADMAP] train_thresholds: 89.1%
+1572.3s 490 [ROADMAP] train_thresholds: 89.3%
+1575.6s 491 [ROADMAP] train_thresholds: 89.5%
+1579.1s 492 [ROADMAP] train_thresholds: 89.6%
+1582.4s 493 [ROADMAP] train_thresholds: 89.8%
+1585.8s 494 [ROADMAP] train_thresholds: 90.0%
+1589.2s 495 [ROADMAP] train_thresholds: 90.2%
+1592.7s 496 [ROADMAP] train_thresholds: 90.4%
+1596.2s 497 [ROADMAP] train_thresholds: 90.6%
+1599.7s 498 [ROADMAP] train_thresholds: 90.8%
+1603.1s 499 [ROADMAP] train_thresholds: 91.0%
+1606.6s 500 [ROADMAP] train_thresholds: 91.2%
+1610.1s 501 [ROADMAP] train_thresholds: 91.4%
+1613.5s 502 [ROADMAP] train_thresholds: 91.6%
+1616.9s 503 [ROADMAP] train_thresholds: 91.8%
+1618.7s 504 [ROADMAP] train_thresholds: 92.0%
+1622.2s 505 [ROADMAP] train_thresholds: 92.2%
+1625.7s 506 [ROADMAP] train_thresholds: 92.4%
+1629.4s 507 [ROADMAP] train_thresholds: 92.6%
+1632.9s 508 [ROADMAP] train_thresholds: 92.8%
+1636.3s 509 [ROADMAP] train_thresholds: 93.0%
+1639.7s 510 [ROADMAP] train_thresholds: 93.2%
+1643.2s 511 [ROADMAP] train_thresholds: 93.4%
+1646.7s 512 [ROADMAP] train_thresholds: 93.6%
+1650.3s 513 [ROADMAP] train_thresholds: 93.8%
+1654.1s 514 [ROADMAP] train_thresholds: 93.9%
+1657.6s 515 [ROADMAP] train_thresholds: 94.1%
+1661.0s 516 [ROADMAP] train_thresholds: 94.3%
+1664.7s 517 [ROADMAP] train_thresholds: 94.5%
+1668.1s 518 [ROADMAP] train_thresholds: 94.7%
+1671.6s 519 [ROADMAP] train_thresholds: 94.9%
+1675.0s 520 [ROADMAP] train_thresholds: 95.1%
+1678.3s 521 [ROADMAP] train_thresholds: 95.3%
+1681.7s 522 [ROADMAP] train_thresholds: 95.5%
+1684.9s 523 [ROADMAP] train_thresholds: 95.7%
+1688.3s 524 [ROADMAP] train_thresholds: 95.9%
+1691.7s 525 [ROADMAP] train_thresholds: 96.1%
+1695.2s 526 [ROADMAP] train_thresholds: 96.3%
+1698.7s 527 [ROADMAP] train_thresholds: 96.5%
+1702.3s 528 [ROADMAP] train_thresholds: 96.7%
+1705.8s 529 [ROADMAP] train_thresholds: 96.9%
+1709.3s 530 [ROADMAP] train_thresholds: 97.1%
+1712.7s 531 [ROADMAP] train_thresholds: 97.3%
+1716.0s 532 [ROADMAP] train_thresholds: 97.5%
+1719.5s 533 [ROADMAP] train_thresholds: 97.7%
+1723.2s 534 [ROADMAP] train_thresholds: 97.9%
+1727.0s 535 [ROADMAP] train_thresholds: 98.0%
+1730.7s 536 [ROADMAP] train_thresholds: 98.2%
+1734.5s 537 [ROADMAP] train_thresholds: 98.4%
+1738.0s 538 [ROADMAP] train_thresholds: 98.6%
+1740.2s 539 [ROADMAP] train_thresholds: 98.8%
+1743.9s 540 [ROADMAP] train_thresholds: 99.0%
+1747.5s 541 [ROADMAP] train_thresholds: 99.2%
+1751.4s 542 [ROADMAP] train_thresholds: 99.4%
+1755.0s 543 [ROADMAP] train_thresholds: 99.6%
+1758.6s 544 [ROADMAP] train_thresholds: 99.8%
+1762.1s 545 [ROADMAP] train_thresholds: 100.0%
+1765.5s 546 [ROADMAP] infer_predictions: 100.0%
+1768.9s 547 [ROADMAP] package_submission: 20.0%
+1768.9s 548 [ROADMAP] package_submission: 100.0%
+1768.9s 549 [ROADMAP] finalize_forensics: 100.0%
+1768.9s 550 {
+1768.9s 551 "runtime_status": "offline_activated",
+1768.9s 552 "pipeline_status": "success",
+1768.9s 553 "active_neurons": 1257219,
+1768.9s 554 "total_allocations": 513,
+1768.9s 555 "total_pixels_processed": 51499008,
+1768.9s 556 "total_ink_pixels": 25700716,
+1768.9s 557 "ink_ratio": 0.49905264194603516,
+1768.9s 558 "qi_index_real": 3.1769734087191994e-05,
+1768.9s 559 "cpu_total_ns": 1621008468584,
+1768.9s 560 "merkle_root": "464d501d4d0647c6380ea48e5894c1008fee1102749fa52c4c39851a5278621bb8b87a82ad192ffb84c9a72eee397a2acf0c9275f09553dc6e4c3340980dae3d",
+1768.9s 561 "status": "100%_OFFLINE_ACTIVATED",
+1768.9s 562 "layout_detected": "competition_test_images",
+1768.9s 563 "configured_data_root": "/kaggle/input/vesuvius-challenge-ink-detection",
+1768.9s 564 "effective_data_root": "/kaggle/input/competitions/vesuvius-challenge-surface-detection",
+1768.9s 565 "discovery_attempts": [
+1768.9s 566 {
+1768.9s 567 "root": "/kaggle/input/competitions/vesuvius-challenge-surface-detection",
+1768.9s 568 "mode": "competition_test_images",
+1768.9s 569 "train": 786,
+1768.9s 570 "test": 1
+1768.9s 571 }
+1768.9s 572 ],
+1768.9s 573 "train_items_total": 786,
+1768.9s 574 "train_items_with_labels": 512,
+1768.9s 575 "train_items_skipped_no_label": 0,
+1768.9s 576 "train_items": [
+1768.9s 577 "1004283650.tif",
+1768.9s 578 "1006462223.tif",
+1768.9s 579 "1013184726.tif",
+1768.9s 580 "102536988.tif",
+1768.9s 581 "1029212680.tif",
+1768.9s 582 "1033375083.tif",
+1768.9s 583 "1033784946.tif",
+1768.9s 584 "1044587645.tif",
+1768.9s 585 "105068588.tif",
+1768.9s 586 "105796630.tif",
+1768.9s 587 "1059332280.tif",
+1768.9s 588 "1061356924.tif",
+1768.9s 589 "1075217434.tif",
+1768.9s 590 "1079776201.tif",
+1768.9s 591 "1083486419.tif",
+1768.9s 592 "108672114.tif",
+1768.9s 593 "1105906805.tif",
+1768.9s 594 "1108059824.tif",
+1768.9s 595 "110997297.tif",
+1768.9s 596 "1113943087.tif",
+1768.9s 597 "1127903126.tif",
+1768.9s 598 "1128635125.tif",
+1768.9s 599 "114235076.tif",
+1768.9s 600 "11460685.tif",
+1768.9s 601 "1154777170.tif",
+1768.9s 602 "1156808983.tif",
+1768.9s 603 "1157445126.tif",
+1768.9s 604 "1159818141.tif",
+1768.9s 605 "11630450.tif",
+1768.9s 606 "1168011639.tif",
+1768.9s 607 "1176487902.tif",
+1768.9s 608 "118041886.tif",
+1768.9s 609 "1182039038.tif",
+1768.9s 610 "118632705.tif",
+1768.9s 611 "1186499682.tif",
+1768.9s 612 "1189767014.tif",
+1768.9s 613 "1200862647.tif",
+1768.9s 614 "1201940326.tif",
+1768.9s 615 "1204899528.tif",
+1768.9s 616 "1208001693.tif",
+1768.9s 617 "1210295426.tif",
+1768.9s 618 "1210615920.tif",
+1768.9s 619 "1210927642.tif",
+1768.9s 620 "1215679884.tif",
+1768.9s 621 "1219581388.tif",
+1768.9s 622 "1230055797.tif",
+1768.9s 623 "1235128733.tif",
+1768.9s 624 "1238314834.tif",
+1768.9s 625 "1238390590.tif",
+1768.9s 626 "1239284127.tif",
+1768.9s 627 "1240194203.tif",
+1768.9s 628 "1242812707.tif",
+1768.9s 629 "1242962297.tif",
+1768.9s 630 "1253813461.tif",
+1768.9s 631 "1255754809.tif",
+1768.9s 632 "1261544272.tif",
+1768.9s 633 "1267989019.tif",
+1768.9s 634 "1271223370.tif",
+1768.9s 635 "1272760814.tif",
+1768.9s 636 "1294570892.tif",
+1768.9s 637 "1296996509.tif",
+1768.9s 638 "1306752115.tif",
+1768.9s 639 "1311779219.tif",
+1768.9s 640 "1316805721.tif",
+1768.9s 641 "1329351767.tif",
+1768.9s 642 "1330705651.tif",
+1768.9s 643 "1332121747.tif",
+1768.9s 644 "1341999317.tif",
+1768.9s 645 "1351645019.tif",
+1768.9s 646 "1354910392.tif",
+1768.9s 647 "1367329139.tif",
+1768.9s 648 "1368903217.tif",
+1768.9s 649 "1369609932.tif",
+1768.9s 650 "1370134939.tif",
+1768.9s 651 "1379194145.tif",
+1768.9s 652 "1391167593.tif",
+1768.9s 653 "1395654524.tif",
+1768.9s 654 "1404108352.tif",
+1768.9s 655 "1412233012.tif",
+1768.9s 656 "1420786524.tif",
+1768.9s 657 "1424527489.tif",
+1768.9s 658 "1425151232.tif",
+1768.9s 659 "1430679851.tif",
+1768.9s 660 "1435658104.tif",
+1768.9s 661 "1440669255.tif",
+1768.9s 662 "1442179410.tif",
+1768.9s 663 "1448189335.tif",
+1768.9s 664 "1449602646.tif",
+1768.9s 665 "1454104195.tif",
+1768.9s 666 "1459340749.tif",
+1768.9s 667 "1460828631.tif",
+1768.9s 668 "1471460767.tif",
+1768.9s 669 "1480691377.tif",
+1768.9s 670 "1483500546.tif",
+1768.9s 671 "149409101.tif",
+1768.9s 672 "1497289496.tif",
+1768.9s 673 "1503030068.tif",
+1768.9s 674 "1505524936.tif",
+1768.9s 675 "1505792607.tif",
+1768.9s 676 "1506367235.tif",
+1768.9s 677 "1508330045.tif",
+1768.9s 678 "1519902750.tif",
+1768.9s 679 "1522833038.tif",
+1768.9s 680 "1524465289.tif",
+1768.9s 681 "1526377662.tif",
+1768.9s 682 "15307632.tif",
+1768.9s 683 "1531506078.tif",
+1768.9s 684 "1542708535.tif",
+1768.9s 685 "1553955454.tif",
+1768.9s 686 "1556295020.tif",
+1768.9s 687 "1557465183.tif",
+1768.9s 688 "1561013957.tif",
+1768.9s 689 "1565784049.tif",
+1768.9s 690 "1566185731.tif",
+1768.9s 691 "1577382633.tif",
+1768.9s 692 "1578248244.tif",
+1768.9s 693 "158898728.tif",
+1768.9s 694 "1589119778.tif",
+1768.9s 695 "159112826.tif",
+1768.9s 696 "1596691633.tif",
+1768.9s 697 "1603877492.tif",
+1768.9s 698 "1607714040.tif",
+1768.9s 699 "1612471366.tif",
+1768.9s 700 "1613378452.tif",
+1768.9s 701 "1615896532.tif",
+1768.9s 702 "1616597122.tif",
+1768.9s 703 "1625676216.tif",
+1768.9s 704 "1625909146.tif",
+1768.9s 705 "162812671.tif",
+1768.9s 706 "1634687021.tif",
+1768.9s 707 "1639956906.tif",
+1768.9s 708 "1642047701.tif",
+1768.9s 709 "164224384.tif",
+1768.9s 710 "1643996246.tif",
+1768.9s 711 "1655876858.tif",
+1768.9s 712 "1662041291.tif",
+1768.9s 713 "1666298112.tif",
+1768.9s 714 "1669670049.tif",
+1768.9s 715 "1671010748.tif",
+1768.9s 716 "1679790444.tif",
+1768.9s 717 "1681590107.tif",
+1768.9s 718 "1687829027.tif",
+1768.9s 719 "1693625989.tif",
+1768.9s 720 "1693721638.tif",
+1768.9s 721 "1704770049.tif",
+1768.9s 722 "1706947731.tif",
+1768.9s 723 "1715403595.tif",
+1768.9s 724 "1720613063.tif",
+1768.9s 725 "1722912570.tif",
+1768.9s 726 "1725830085.tif",
+1768.9s 727 "17283971.tif",
+1768.9s 728 "1732242978.tif",
+1768.9s 729 "1734818300.tif",
+1768.9s 730 "1737469977.tif",
+1768.9s 731 "1741397554.tif",
+1768.9s 732 "1746646794.tif",
+1768.9s 733 "1757276221.tif",
+1768.9s 734 "1762562855.tif",
+1768.9s 735 "176501514.tif",
+1768.9s 736 "1779677207.tif",
+1768.9s 737 "1783261305.tif",
+1768.9s 738 "1790344501.tif",
+1768.9s 739 "1790856995.tif",
+1768.9s 740 "1791213794.tif",
+1768.9s 741 "1793326608.tif",
+1768.9s 742 "1795164441.tif",
+1768.9s 743 "1796385572.tif",
+1768.9s 744 "1796762532.tif",
+1768.9s 745 "1798146413.tif",
+1768.9s 746 "1812790174.tif",
+1768.9s 747 "1815623142.tif",
+1768.9s 748 "1818529443.tif",
+1768.9s 749 "1820528268.tif",
+1768.9s 750 "1823626595.tif",
+1768.9s 751 "1825838007.tif",
+1768.9s 752 "1834183371.tif",
+1768.9s 753 "1837890067.tif",
+1768.9s 754 "1842921029.tif",
+1768.9s 755 "1845578058.tif",
+1768.9s 756 "1851560107.tif",
+1768.9s 757 "185176123.tif",
+1768.9s 758 "1853493924.tif",
+1768.9s 759 "1858247918.tif",
+1768.9s 760 "1866627733.tif",
+1768.9s 761 "1871106040.tif",
+1768.9s 762 "1876224755.tif",
+1768.9s 763 "1878959347.tif",
+1768.9s 764 "1881495000.tif",
+1768.9s 765 "1882650170.tif",
+1768.9s 766 "1890221621.tif",
+1768.9s 767 "1890409640.tif",
+1768.9s 768 "1891372224.tif",
+1768.9s 769 "1914571029.tif",
+1768.9s 770 "1923436243.tif",
+1768.9s 771 "1927075549.tif",
+1768.9s 772 "193365288.tif",
+1768.9s 773 "1939536631.tif",
+1768.9s 774 "1960540938.tif",
+1768.9s 775 "1961113613.tif",
+1768.9s 776 "1963069058.tif",
+1768.9s 777 "1966171058.tif",
+1768.9s 778 "196724516.tif",
+1768.9s 779 "1967300661.tif",
+1768.9s 780 "19797301.tif",
+1768.9s 781 "1985075117.tif",
+1768.9s 782 "1996567865.tif",
+1768.9s 783 "2003263496.tif",
+1768.9s 784 "2004658464.tif",
+1768.9s 785 "2007080007.tif",
+1768.9s 786 "2012359760.tif",
+1768.9s 787 "2018034763.tif",
+1768.9s 788 "2021834463.tif",
+1768.9s 789 "2024572193.tif",
+1768.9s 790 "2035810630.tif",
+1768.9s 791 "2046703546.tif",
+1768.9s 792 "2051981635.tif",
+1768.9s 793 "2059872339.tif",
+1768.9s 794 "206065757.tif",
+1768.9s 795 "2067397446.tif",
+1768.9s 796 "2068510087.tif",
+1768.9s 797 "2079519026.tif",
+1768.9s 798 "2082949504.tif",
+1768.9s 799 "2087850246.tif",
+1768.9s 800 "2088623970.tif",
+1768.9s 801 "209220243.tif",
+1768.9s 802 "2093229706.tif",
+1768.9s 803 "2098828418.tif",
+1768.9s 804 "2101035605.tif",
+1768.9s 805 "2104413478.tif",
+1768.9s 806 "2106649393.tif",
+1768.9s 807 "2111177666.tif",
+1768.9s 808 "2116132949.tif",
+1768.9s 809 "2116542410.tif",
+1768.9s 810 "2125961987.tif",
+1768.9s 811 "2128181788.tif",
+1768.9s 812 "2131767139.tif",
+1768.9s 813 "2136851012.tif",
+1768.9s 814 "2137776807.tif",
+1768.9s 815 "2142002305.tif",
+1768.9s 816 "2147357641.tif",
+1768.9s 817 "2150538987.tif",
+1768.9s 818 "215093936.tif",
+1768.9s 819 "2152970898.tif",
+1768.9s 820 "2155812540.tif",
+1768.9s 821 "2157512838.tif",
+1768.9s 822 "216571367.tif",
+1768.9s 823 "216657071.tif",
+1768.9s 824 "2178672922.tif",
+1768.9s 825 "2188050882.tif",
+1768.9s 826 "2194377014.tif",
+1768.9s 827 "2203617984.tif",
+1768.9s 828 "2203858319.tif",
+1768.9s 829 "2205179329.tif",
+1768.9s 830 "2206870115.tif",
+1768.9s 831 "2210475972.tif",
+1768.9s 832 "2212990887.tif",
+1768.9s 833 "2214190880.tif",
+1768.9s 834 "2220704498.tif",
+1768.9s 835 "2220787575.tif",
+1768.9s 836 "2228083941.tif",
+1768.9s 837 "2238739625.tif",
+1768.9s 838 "2257172177.tif",
+1768.9s 839 "2268918028.tif",
+1768.9s 840 "2272064421.tif",
+1768.9s 841 "2272910022.tif",
+1768.9s 842 "2280761294.tif",
+1768.9s 843 "2285337981.tif",
+1768.9s 844 "2290837.tif",
+1768.9s 845 "2292614243.tif",
+1768.9s 846 "2294602175.tif",
+1768.9s 847 "2306395636.tif",
+1768.9s 848 "2311643839.tif",
+1768.9s 849 "2314417530.tif",
+1768.9s 850 "2330704793.tif",
+1768.9s 851 "2332602982.tif",
+1768.9s 852 "2335392878.tif",
+1768.9s 853 "2337322763.tif",
+1768.9s 854 "2352678715.tif",
+1768.9s 855 "2361792849.tif",
+1768.9s 856 "236296322.tif",
+1768.9s 857 "237111043.tif",
+1768.9s 858 "2373617013.tif",
+1768.9s 859 "2375325173.tif",
+1768.9s 860 "2377884359.tif",
+1768.9s 861 "239904888.tif",
+1768.9s 862 "2402197522.tif",
+1768.9s 863 "2410046565.tif",
+1768.9s 864 "241509106.tif",
+1768.9s 865 "241514276.tif",
+1768.9s 866 "2419036429.tif",
+1768.9s 867 "2423079874.tif",
+1768.9s 868 "2424610202.tif",
+1768.9s 869 "244496252.tif",
+1768.9s 870 "2445577751.tif",
+1768.9s 871 "2454492741.tif",
+1768.9s 872 "2456859500.tif",
+1768.9s 873 "246751123.tif",
+1768.9s 874 "2473381112.tif",
+1768.9s 875 "2475831799.tif",
+1768.9s 876 "2489372663.tif",
+1768.9s 877 "2495748513.tif",
+1768.9s 878 "2496585510.tif",
+1768.9s 879 "2497392974.tif",
+1768.9s 880 "2502110845.tif",
+1768.9s 881 "250913537.tif",
+1768.9s 882 "251333914.tif",
+1768.9s 883 "2517705156.tif",
+1768.9s 884 "2524776433.tif",
+1768.9s 885 "2530405250.tif",
+1768.9s 886 "2531358332.tif",
+1768.9s 887 "2536049117.tif",
+1768.9s 888 "2540481853.tif",
+1768.9s 889 "2544642863.tif",
+1768.9s 890 "2550619349.tif",
+1768.9s 891 "2552677227.tif",
+1768.9s 892 "2553197977.tif",
+1768.9s 893 "2555675774.tif",
+1768.9s 894 "2556347231.tif",
+1768.9s 895 "2579374491.tif",
+1768.9s 896 "2589044500.tif",
+1768.9s 897 "2590633777.tif",
+1768.9s 898 "2600169169.tif",
+1768.9s 899 "2615287684.tif",
+1768.9s 900 "262156460.tif",
+1768.9s 901 "2623225052.tif",
+1768.9s 902 "2623678684.tif",
+1768.9s 903 "2626593634.tif",
+1768.9s 904 "2632109508.tif",
+1768.9s 905 "263322541.tif",
+1768.9s 906 "2642624633.tif",
+1768.9s 907 "2652698199.tif",
+1768.9s 908 "2653068915.tif",
+1768.9s 909 "2656396745.tif",
+1768.9s 910 "2660177791.tif",
+1768.9s 911 "2669341205.tif",
+1768.9s 912 "2669969378.tif",
+1768.9s 913 "2673757182.tif",
+1768.9s 914 "2676456148.tif",
+1768.9s 915 "2689046967.tif",
+1768.9s 916 "26894125.tif",
+1768.9s 917 "2705604173.tif",
+1768.9s 918 "2708764018.tif",
+1768.9s 919 "2713673035.tif",
+1768.9s 920 "2716466411.tif",
+1768.9s 921 "2716752782.tif",
+1768.9s 922 "2716947869.tif",
+1768.9s 923 "2727460783.tif",
+1768.9s 924 "2734445540.tif",
+1768.9s 925 "2736169384.tif",
+1768.9s 926 "2737376036.tif",
+1768.9s 927 "2741330005.tif",
+1768.9s 928 "2757751083.tif",
+1768.9s 929 "2757775745.tif",
+1768.9s 930 "2759477755.tif",
+1768.9s 931 "2761996776.tif",
+1768.9s 932 "2763227159.tif",
+1768.9s 933 "2768504081.tif",
+1768.9s 934 "2770853879.tif",
+1768.9s 935 "2773856183.tif",
+1768.9s 936 "2775536173.tif",
+1768.9s 937 "2778370612.tif",
+1768.9s 938 "278498200.tif",
+1768.9s 939 "2785199107.tif",
+1768.9s 940 "2786449252.tif",
+1768.9s 941 "2789632551.tif",
+1768.9s 942 "2790504204.tif",
+1768.9s 943 "2808420551.tif",
+1768.9s 944 "2809620240.tif",
+1768.9s 945 "2813533679.tif",
+1768.9s 946 "2815220063.tif",
+1768.9s 947 "2821927657.tif",
+1768.9s 948 "2844417457.tif",
+1768.9s 949 "2851151222.tif",
+1768.9s 950 "2855094384.tif",
+1768.9s 951 "2869809793.tif",
+1768.9s 952 "2875030463.tif",
+1768.9s 953 "2880423383.tif",
+1768.9s 954 "2881190689.tif",
+1768.9s 955 "288548608.tif",
+1768.9s 956 "2887085917.tif",
+1768.9s 957 "2894972157.tif",
+1768.9s 958 "2902578006.tif",
+1768.9s 959 "2902582474.tif",
+1768.9s 960 "2908683777.tif",
+1768.9s 961 "2910938028.tif",
+1768.9s 962 "2933605769.tif",
+1768.9s 963 "2935800469.tif",
+1768.9s 964 "294458037.tif",
+1768.9s 965 "2945808105.tif",
+1768.9s 966 "2961522369.tif",
+1768.9s 967 "2961547523.tif",
+1768.9s 968 "2966806958.tif",
+1768.9s 969 "2972783115.tif",
+1768.9s 970 "29754811.tif",
+1768.9s 971 "2981267096.tif",
+1768.9s 972 "2983822886.tif",
+1768.9s 973 "2988217553.tif",
+1768.9s 974 "2988223195.tif",
+1768.9s 975 "3002733017.tif",
+1768.9s 976 "3003756173.tif",
+1768.9s 977 "3012922391.tif",
+1768.9s 978 "3016463213.tif",
+1768.9s 979 "3019071518.tif",
+1768.9s 980 "3020371188.tif",
+1768.9s 981 "3020373917.tif",
+1768.9s 982 "302353284.tif",
+1768.9s 983 "302991709.tif",
+1768.9s 984 "3031545955.tif",
+1768.9s 985 "3034991642.tif",
+1768.9s 986 "3035195503.tif",
+1768.9s 987 "3037854247.tif",
+1768.9s 988 "3040864797.tif",
+1768.9s 989 "3043804417.tif",
+1768.9s 990 "304383493.tif",
+1768.9s 991 "3046048622.tif",
+1768.9s 992 "3049591468.tif",
+1768.9s 993 "3056295573.tif",
+1768.9s 994 "3060150865.tif",
+1768.9s 995 "3061154571.tif",
+1768.9s 996 "3064717657.tif",
+1768.9s 997 "3065239797.tif",
+1768.9s 998 "3066128920.tif",
+1768.9s 999 "3070061281.tif",
+1768.9s 1000 "3072203034.tif",
+1768.9s 1001 "3074797420.tif",
+1768.9s 1002 "3076490891.tif",
+1768.9s 1003 "3088997407.tif",
+1768.9s 1004 "3090197578.tif",
+1768.9s 1005 "3097347461.tif",
+1768.9s 1006 "3099819923.tif",
+1768.9s 1007 "3102979250.tif",
+1768.9s 1008 "311543433.tif",
+1768.9s 1009 "3137156884.tif",
+1768.9s 1010 "3138051242.tif",
+1768.9s 1011 "3141052542.tif",
+1768.9s 1012 "3144205538.tif",
+1768.9s 1013 "3146430389.tif",
+1768.9s 1014 "315189226.tif",
+1768.9s 1015 "3152234929.tif",
+1768.9s 1016 "3156756992.tif",
+1768.9s 1017 "3158644933.tif",
+1768.9s 1018 "3164491657.tif",
+1768.9s 1019 "3183136322.tif",
+1768.9s 1020 "3183278576.tif",
+1768.9s 1021 "3185727008.tif",
+1768.9s 1022 "3188147679.tif",
+1768.9s 1023 "3189521677.tif",
+1768.9s 1024 "3194326202.tif",
+1768.9s 1025 "3198627305.tif",
+1768.9s 1026 "3211982948.tif",
+1768.9s 1027 "3214941840.tif",
+1768.9s 1028 "3237609845.tif",
+1768.9s 1029 "324225693.tif",
+1768.9s 1030 "3248922039.tif",
+1768.9s 1031 "3250832839.tif",
+1768.9s 1032 "3253501219.tif",
+1768.9s 1033 "3265775428.tif",
+1768.9s 1034 "3276984492.tif",
+1768.9s 1035 "327851248.tif",
+1768.9s 1036 "3280953653.tif",
+1768.9s 1037 "3281388561.tif",
+1768.9s 1038 "3290306825.tif",
+1768.9s 1039 "3294954456.tif",
+1768.9s 1040 "3298840559.tif",
+1768.9s 1041 "3318424972.tif",
+1768.9s 1042 "3318557622.tif",
+1768.9s 1043 "3320274.tif",
+1768.9s 1044 "3321304167.tif",
+1768.9s 1045 "3324873066.tif",
+1768.9s 1046 "3328549068.tif",
+1768.9s 1047 "3335656968.tif",
+1768.9s 1048 "3337576154.tif",
+1768.9s 1049 "3340933719.tif",
+1768.9s 1050 "3342671660.tif",
+1768.9s 1051 "3346244732.tif",
+1768.9s 1052 "3346415441.tif",
+1768.9s 1053 "3346651832.tif",
+1768.9s 1054 "3351412255.tif",
+1768.9s 1055 "3355195275.tif",
+1768.9s 1056 "3361709803.tif",
+1768.9s 1057 "3370691076.tif",
+1768.9s 1058 "3371019516.tif",
+1768.9s 1059 "3376387932.tif",
+1768.9s 1060 "338740527.tif",
+1768.9s 1061 "3389327496.tif",
+1768.9s 1062 "3393924745.tif",
+1768.9s 1063 "3394433588.tif",
+1768.9s 1064 "3403995981.tif",
+1768.9s 1065 "3406558476.tif",
+1768.9s 1066 "3406708348.tif",
+1768.9s 1067 "3409971532.tif",
+1768.9s 1068 "3414512299.tif",
+1768.9s 1069 "3414605268.tif",
+1768.9s 1070 "3419802889.tif",
+1768.9s 1071 "342428192.tif",
+1768.9s 1072 "342477941.tif",
+1768.9s 1073 "3431039202.tif",
+1768.9s 1074 "3436049398.tif",
+1768.9s 1075 "3436915414.tif",
+1768.9s 1076 "3439864183.tif",
+1768.9s 1077 "3442657655.tif",
+1768.9s 1078 "3443360699.tif",
+1768.9s 1079 "344456112.tif",
+1768.9s 1080 "3467185855.tif",
+1768.9s 1081 "3497041635.tif",
+1768.9s 1082 "3513954919.tif",
+1768.9s 1083 "3515764944.tif",
+1768.9s 1084 "3522460784.tif",
+1768.9s 1085 "3522504366.tif",
+1768.9s 1086 "3527825464.tif",
+1768.9s 1087 "3535030114.tif",
+1768.9s 1088 "3542835985.tif",
+1768.9s 1089 "3545147380.tif",
+1768.9s 1090 "3554743381.tif",
+1768.9s 1091 "3562312952.tif",
+1768.9s 1092 "3595246520.tif",
+1768.9s 1093 "3598654160.tif",
+1768.9s 1094 "3602356228.tif",
+1768.9s 1095 "3603241078.tif",
+1768.9s 1096 "360339268.tif",
+1768.9s 1097 "3603497779.tif",
+1768.9s 1098 "3608009641.tif",
+1768.9s 1099 "3614895682.tif",
+1768.9s 1100 "3620638870.tif",
+1768.9s 1101 "3622438556.tif",
+1768.9s 1102 "3628843560.tif",
+1768.9s 1103 "363381119.tif",
+1768.9s 1104 "3635486343.tif",
+1768.9s 1105 "3637340207.tif",
+1768.9s 1106 "3642178743.tif",
+1768.9s 1107 "364539111.tif",
+1768.9s 1108 "3647910527.tif",
+1768.9s 1109 "364978558.tif",
+1768.9s 1110 "3652794077.tif",
+1768.9s 1111 "3662102503.tif",
+1768.9s 1112 "3663725364.tif",
+1768.9s 1113 "3664792107.tif",
+1768.9s 1114 "3676026615.tif",
+1768.9s 1115 "3681179135.tif",
+1768.9s 1116 "3686818985.tif",
+1768.9s 1117 "3691457079.tif",
+1768.9s 1118 "3694884789.tif",
+1768.9s 1119 "3700757712.tif",
+1768.9s 1120 "370627915.tif",
+1768.9s 1121 "3707256544.tif",
+1768.9s 1122 "3710912607.tif",
+1768.9s 1123 "3721853537.tif",
+1768.9s 1124 "3732127861.tif",
+1768.9s 1125 "3742893488.tif",
+1768.9s 1126 "3767466977.tif",
+1768.9s 1127 "3769121277.tif",
+1768.9s 1128 "3770778897.tif",
+1768.9s 1129 "3774596591.tif",
+1768.9s 1130 "378779937.tif",
+1768.9s 1131 "3788871542.tif",
+1768.9s 1132 "3792996653.tif",
+1768.9s 1133 "3794425553.tif",
+1768.9s 1134 "3794435116.tif",
+1768.9s 1135 "3797609646.tif",
+1768.9s 1136 "3803006499.tif",
+1768.9s 1137 "38034250.tif",
+1768.9s 1138 "3808412216.tif",
+1768.9s 1139 "3811489418.tif",
+1768.9s 1140 "3819086916.tif",
+1768.9s 1141 "3820901393.tif",
+1768.9s 1142 "3823213091.tif",
+1768.9s 1143 "3830755614.tif",
+1768.9s 1144 "3834183540.tif",
+1768.9s 1145 "3837479943.tif",
+1768.9s 1146 "3846096767.tif",
+1768.9s 1147 "3853942725.tif",
+1768.9s 1148 "3854101708.tif",
+1768.9s 1149 "3854983004.tif",
+1768.9s 1150 "3866421231.tif",
+1768.9s 1151 "3878283235.tif",
+1768.9s 1152 "3887603902.tif",
+1768.9s 1153 "3897872090.tif",
+1768.9s 1154 "3904609999.tif",
+1768.9s 1155 "3918162598.tif",
+1768.9s 1156 "3919317307.tif",
+1768.9s 1157 "3921214992.tif",
+1768.9s 1158 "3921562037.tif",
+1768.9s 1159 "3922476405.tif",
+1768.9s 1160 "3924902780.tif",
+1768.9s 1161 "3925240194.tif",
+1768.9s 1162 "3929972930.tif",
+1768.9s 1163 "3931084502.tif",
+1768.9s 1164 "3931902777.tif",
+1768.9s 1165 "3939111351.tif",
+1768.9s 1166 "3958093739.tif",
+1768.9s 1167 "3962971462.tif",
+1768.9s 1168 "3963531557.tif",
+1768.9s 1169 "3965259126.tif",
+1768.9s 1170 "3965555633.tif",
+1768.9s 1171 "3968673855.tif",
+1768.9s 1172 "3970017952.tif",
+1768.9s 1173 "3970776156.tif",
+1768.9s 1174 "3977024865.tif",
+1768.9s 1175 "3978531923.tif",
+1768.9s 1176 "3978718576.tif",
+1768.9s 1177 "3982999424.tif",
+1768.9s 1178 "398977019.tif",
+1768.9s 1179 "399611216.tif",
+1768.9s 1180 "4014453466.tif",
+1768.9s 1181 "4015222329.tif",
+1768.9s 1182 "4020494299.tif",
+1768.9s 1183 "4023763904.tif",
+1768.9s 1184 "4024699648.tif",
+1768.9s 1185 "4024884955.tif",
+1768.9s 1186 "4026460947.tif",
+1768.9s 1187 "4031467781.tif",
+1768.9s 1188 "404970490.tif",
+1768.9s 1189 "4055275941.tif",
+1768.9s 1190 "40625686.tif",
+1768.9s 1191 "4063221641.tif",
+1768.9s 1192 "4064202950.tif",
+1768.9s 1193 "4065328827.tif",
+1768.9s 1194 "4066091069.tif",
+1768.9s 1195 "406944815.tif",
+1768.9s 1196 "4070071601.tif",
+1768.9s 1197 "4081240825.tif",
+1768.9s 1198 "4089994719.tif",
+1768.9s 1199 "4105398542.tif",
+1768.9s 1200 "4107199299.tif",
+1768.9s 1201 "4109320911.tif",
+1768.9s 1202 "4112966741.tif",
+1768.9s 1203 "4113035720.tif",
+1768.9s 1204 "4125736882.tif",
+1768.9s 1205 "415208576.tif",
+1768.9s 1206 "4158695626.tif",
+1768.9s 1207 "417091286.tif",
+1768.9s 1208 "4174099222.tif",
+1768.9s 1209 "4180160757.tif",
+1768.9s 1210 "4183432614.tif",
+1768.9s 1211 "4184728487.tif",
+1768.9s 1212 "4185163701.tif",
+1768.9s 1213 "418613908.tif",
+1768.9s 1214 "4187712419.tif",
+1768.9s 1215 "4192381697.tif",
+1768.9s 1216 "4192772397.tif",
+1768.9s 1217 "4193724049.tif",
+1768.9s 1218 "419698042.tif",
+1768.9s 1219 "4205218927.tif",
+1768.9s 1220 "4208123944.tif",
+1768.9s 1221 "4209891505.tif",
+1768.9s 1222 "4213889683.tif",
+1768.9s 1223 "4216652155.tif",
+1768.9s 1224 "4218389312.tif",
+1768.9s 1225 "4221764104.tif",
+1768.9s 1226 "4224411365.tif",
+1768.9s 1227 "4229347055.tif",
+1768.9s 1228 "4233602520.tif",
+1768.9s 1229 "4235140888.tif",
+1768.9s 1230 "4239546470.tif",
+1768.9s 1231 "4244019916.tif",
+1768.9s 1232 "4246483381.tif",
+1768.9s 1233 "4256996840.tif",
+1768.9s 1234 "426871543.tif",
+1768.9s 1235 "4273576431.tif",
+1768.9s 1236 "4280519539.tif",
+1768.9s 1237 "4288082812.tif",
+1768.9s 1238 "4293224556.tif",
+1768.9s 1239 "435122332.tif",
+1768.9s 1240 "436578995.tif",
+1768.9s 1241 "446913980.tif",
+1768.9s 1242 "44701864.tif",
+1768.9s 1243 "453687900.tif",
+1768.9s 1244 "45525309.tif",
+1768.9s 1245 "456049089.tif",
+1768.9s 1246 "46039092.tif",
+1768.9s 1247 "464289213.tif",
+1768.9s 1248 "469631183.tif",
+1768.9s 1249 "469842901.tif",
+1768.9s 1250 "469888632.tif",
+1768.9s 1251 "477109023.tif",
+1768.9s 1252 "48696132.tif",
+1768.9s 1253 "489699498.tif",
+1768.9s 1254 "489804959.tif",
+1768.9s 1255 "500230427.tif",
+1768.9s 1256 "501349675.tif",
+1768.9s 1257 "508375143.tif",
+1768.9s 1258 "508465689.tif",
+1768.9s 1259 "513390852.tif",
+1768.9s 1260 "516292750.tif",
+1768.9s 1261 "521237884.tif",
+1768.9s 1262 "529850947.tif",
+1768.9s 1263 "530021252.tif",
+1768.9s 1264 "53160227.tif",
+1768.9s 1265 "535029841.tif",
+1768.9s 1266 "535534919.tif",
+1768.9s 1267 "537634870.tif",
+1768.9s 1268 "537867812.tif",
+1768.9s 1269 "541673255.tif",
+1768.9s 1270 "544161273.tif",
+1768.9s 1271 "547922158.tif",
+1768.9s 1272 "549744828.tif",
+1768.9s 1273 "555297952.tif",
+1768.9s 1274 "567464717.tif",
+1768.9s 1275 "568160669.tif",
+1768.9s 1276 "571334887.tif",
+1768.9s 1277 "572077733.tif",
+1768.9s 1278 "583807726.tif",
+1768.9s 1279 "584514551.tif",
+1768.9s 1280 "595274163.tif",
+1768.9s 1281 "599381487.tif",
+1768.9s 1282 "601001728.tif",
+1768.9s 1283 "601514225.tif",
+1768.9s 1284 "60272894.tif",
+1768.9s 1285 "602831951.tif",
+1768.9s 1286 "608924538.tif",
+1768.9s 1287 "62269536.tif",
+1768.9s 1288 "628488599.tif",
+1768.9s 1289 "633046981.tif",
+1768.9s 1290 "63469416.tif",
+1768.9s 1291 "636928528.tif",
+1768.9s 1292 "638703951.tif",
+1768.9s 1293 "643395780.tif",
+1768.9s 1294 "648443467.tif",
+1768.9s 1295 "656697281.tif",
+1768.9s 1296 "657118714.tif",
+1768.9s 1297 "663106834.tif",
+1768.9s 1298 "677662996.tif",
+1768.9s 1299 "687559918.tif",
+1768.9s 1300 "690562299.tif",
+1768.9s 1301 "693501383.tif",
+1768.9s 1302 "694937072.tif",
+1768.9s 1303 "698453823.tif",
+1768.9s 1304 "702123980.tif",
+1768.9s 1305 "702267251.tif",
+1768.9s 1306 "70695797.tif",
+1768.9s 1307 "708370133.tif",
+1768.9s 1308 "711169763.tif",
+1768.9s 1309 "711832556.tif",
+1768.9s 1310 "714558499.tif",
+1768.9s 1311 "715431997.tif",
+1768.9s 1312 "716803219.tif",
+1768.9s 1313 "719197630.tif",
+1768.9s 1314 "722561671.tif",
+1768.9s 1315 "724175864.tif",
+1768.9s 1316 "725727411.tif",
+1768.9s 1317 "730065526.tif",
+1768.9s 1318 "744788585.tif",
+1768.9s 1319 "746664827.tif",
+1768.9s 1320 "762867428.tif",
+1768.9s 1321 "765473271.tif",
+1768.9s 1322 "772457118.tif",
+1768.9s 1323 "776379178.tif",
+1768.9s 1324 "777463733.tif",
+1768.9s 1325 "785433964.tif",
+1768.9s 1326 "787804611.tif",
+1768.9s 1327 "79646334.tif",
+1768.9s 1328 "797181487.tif",
+1768.9s 1329 "803213133.tif",
+1768.9s 1330 "805297990.tif",
+1768.9s 1331 "810239114.tif",
+1768.9s 1332 "817999107.tif",
+1768.9s 1333 "821686014.tif",
+1768.9s 1334 "826588329.tif",
+1768.9s 1335 "840310891.tif",
+1768.9s 1336 "850710964.tif",
+1768.9s 1337 "850790699.tif",
+1768.9s 1338 "865516044.tif",
+1768.9s 1339 "86701140.tif",
+1768.9s 1340 "867889560.tif",
+1768.9s 1341 "871773282.tif",
+1768.9s 1342 "872723030.tif",
+1768.9s 1343 "881402752.tif",
+1768.9s 1344 "885730675.tif",
+1768.9s 1345 "8862040.tif",
+1768.9s 1346 "890851788.tif",
+1768.9s 1347 "896875242.tif",
+1768.9s 1348 "90569866.tif",
+1768.9s 1349 "916238493.tif",
+1768.9s 1350 "917058676.tif",
+1768.9s 1351 "918445717.tif",
+1768.9s 1352 "925960484.tif",
+1768.9s 1353 "928131323.tif",
+1768.9s 1354 "933191725.tif",
+1768.9s 1355 "944699214.tif",
+1768.9s 1356 "948300397.tif",
+1768.9s 1357 "956073442.tif",
+1768.9s 1358 "961304774.tif",
+1768.9s 1359 "969293709.tif",
+1768.9s 1360 "975031774.tif",
+1768.9s 1361 "985841575.tif",
+1768.9s 1362 "992852942.tif"
+1768.9s 1363 ],
+1768.9s 1364 "test_items": [
+1768.9s 1365 "1407735.tif"
+1768.9s 1366 ],
+1768.9s 1367 "train_threshold": 0.03803769499063492,
+1768.9s 1368 "training_strategy": "supervised",
+1768.9s 1369 "scoring_mode": {
+1768.9s 1370 "use_3d_native_path": true,
+1768.9s 1371 "use_25d_path": false,
+1768.9s 1372 "score_blend_3d_weight": 0.78
+1768.9s 1373 },
+1768.9s 1374 "submission_csv": null,
+1768.9s 1375 "submission_zip": "/kaggle/working/submission.zip",
+1768.9s 1376 "submission_zip_aliases": [
+1768.9s 1377 "/kaggle/working/nx46_vesuvius/submission.zip",
+1768.9s 1378 "/kaggle/working/submission.zip",
+1768.9s 1379 "nx46_vesuvius/submission.zip",
+1768.9s 1380 "submission.zip"
+1768.9s 1381 ],
+1768.9s 1382 "zip_members_validated": true,
+1768.9s 1383 "zip_missing": [],
+1768.9s 1384 "zip_extra": [],
+1768.9s 1385 "competition_rules_validation": {
+1768.9s 1386 "status": "ok",
+1768.9s 1387 "expected_test_files": 1,
+1768.9s 1388 "submission_tif_files": 1,
+1768.9s 1389 "missing": [],
+1768.9s 1390 "unexpected": []
+1768.9s 1391 },
+1768.9s 1392 "submission_content_validation": {
+1768.9s 1393 "status": "ok",
+1768.9s 1394 "issues": []
+1768.9s 1395 },
+1768.9s 1396 "submission_format_profile": "kaggle_v8_5_style_zip_lzw_2d_uint8_0_255",
+1768.9s 1397 "material_head_enabled": true,
+1768.9s 1398 "material_outputs_files": 1,
+1768.9s 1399 "native_training_manifest": "/kaggle/working/nx46_vesuvius/native_training_manifest.json",
+1768.9s 1400 "a2z_audit_manifest_loaded": false,
+1768.9s 1401 "a2z_files_scanned": null,
+1768.9s 1402 "a2z_lines_scanned": null,
+1768.9s 1403 "roadmap_percent": {
+1768.9s 1404 "audit_discovery": 100.0,
+1768.9s 1405 "train_thresholds": 100.0,
+1768.9s 1406 "infer_predictions": 100.0,
+1768.9s 1407 "package_submission": 100.0,
+1768.9s 1408 "finalize_forensics": 100.0
+1768.9s 1409 }
+1768.9s 1410 }
+1768.9s 1411 READY: /kaggle/working/submission.zip
+1771.3s 1412 /usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+1771.3s 1413 cells[i][c] = re.sub('\\\\\|', '|', cell)
+1771.4s 1414 /usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+1771.4s 1415 text = re.sub(r'_', '\_', text) # Escape underscores in display text
+1772.1s 1416 /usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=["remove_papermill_header.RemovePapermillHeader"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.
+1772.1s 1417 warn(
+1772.1s 1418 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+1772.5s 1419 [NbConvertApp] Writing 105004 bytes to __notebook__.ipynb
+1774.9s 1420 /usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=["nbconvert.preprocessors.ExtractOutputPreprocessor"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.
+1774.9s 1421 warn(
+1774.9s 1422 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+1775.8s 1423 [NbConvertApp] Writing 525190 bytes to __results__.html

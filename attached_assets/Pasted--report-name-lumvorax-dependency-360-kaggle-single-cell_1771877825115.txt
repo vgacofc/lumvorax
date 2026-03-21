@@ -1,0 +1,232 @@
+	
+report_name	"lumvorax_dependency_360_kaggle_single_cell_v13_strict"
+timestamp_ns	1771874328554393984JS:1771874328554394000
+runtime	
+python	"3.12.12 (main, Oct 10 2025, 08:52:57) [GCC 11.4.0]"
+platform	"Linux-6.6.113+-x86_64-with-glibc2.35"
+cwd	"/kaggle/working"
+is_kaggle	true
+policy	
+strict_no_fallback	true
+require_dataset	true
+require_so_presence	true
+enforce_so_load	true
+skip_roundtrip	false
+source_header_validation_enabled	false
+c_syntax_smoke_enabled	false
+dataset_expected	
+native_lib	"liblumvorax.so"
+required_packages	
+0	"imagecodecs"
+1	"imageio"
+2	"lazy-loader"
+3	"networkx"
+4	"numpy"
+5	"opencv-python"
+6	"packaging"
+7	"pillow"
+8	"scikit-image"
+9	"scipy"
+10	"tifffile"
+events	
+0	
+ts_ns	1771874328567508728JS:1771874328567508700
+step	"dataset_root_selected"
+root	"/kaggle/input/nx47-dependencies"
+1	
+ts_ns	1771874329181108517JS:1771874329181108500
+step	"wheel_install_attempt"
+wheel	"/kaggle/input/nx47-dependencies/imagecodecs-2026.1.14-cp311-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl"
+reason	"best_compatible_imagecodecs"
+cmd	
+0	"/usr/bin/python3"
+1	"-m"
+2	"pip"
+3	"install"
+4	"--disable-pip-version-check"
+5	"--no-index"
+6	"/kaggle/input/nx47-dependencies/imagecodecs-2026.1.14-cp311-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl"
+2	
+ts_ns	1771874338572909295JS:1771874338572909300
+step	"dataset_artifacts_checked"
+status	"ok"
+missing_packages	0
+incompatible_packages	0
+native_found	true
+3	
+ts_ns	1771874338615079005JS:1771874338615079000
+step	"so_symbols_scanned"
+total	167
+lum_related	105
+undefined	62
+4	
+ts_ns	1771874338616088677JS:1771874338616088600
+step	"native_load_check"
+status	"fail"
+lib	"/kaggle/input/nx47-dependencies/liblumvorax.so"
+error	"/kaggle/input/nx47-dependencies/liblumvorax.so: undefined symbol: unified_forensic_log"
+required_glibc	null
+runtime_glibc	"2.35"
+blocking	true
+5	
+ts_ns	1771874338616099323JS:1771874338616099300
+step	"fatal_error"
+error_type	"RuntimeError"
+error	"native_so_load_enforced_failed: /kaggle/input/nx47-dependencies/liblumvorax.so: undefined symbol: unified_forensic_log"
+warnings	[]
+dataset_root	"/kaggle/input/nx47-dependencies"
+install_report	
+0	
+package	"numpy"
+status	"already_installed"
+1	
+package	"tifffile"
+status	"already_installed"
+2	
+package	"imagecodecs"
+status	"installed"
+method	"best_compatible_wheel"
+wheel	"imagecodecs-2026.1.14-cp311-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl"
+imports	
+numpy	true
+tifffile	true
+imagecodecs	true
+pyarrow	true
+dataset_artifacts	
+status	"ok"
+dataset_root	"/kaggle/input/nx47-dependencies"
+expected_native_lib	"liblumvorax.so"
+resolved_native_lib_name	"liblumvorax.so"
+native_lib	"/kaggle/input/nx47-dependencies/liblumvorax.so"
+native_lib_sha256	"4a3e9315cf3de0896a33af781692742127378190c90e9471fb0b4827e56473c6"
+native_lib_size	133024
+required_packages	
+0	"imagecodecs"
+1	"imageio"
+2	"lazy-loader"
+3	"networkx"
+4	"numpy"
+5	"opencv-python"
+6	"packaging"
+7	"pillow"
+8	"scikit-image"
+9	"scipy"
+10	"tifffile"
+missing_required_packages	[]
+incompatible_required_packages	[]
+selected_compatible_wheels	
+imagecodecs	"pre-installed"
+imageio	"pre-installed"
+lazy-loader	"lazy_loader-0.4-py3-none-any.whl"
+networkx	"pre-installed"
+numpy	"pre-installed"
+opencv-python	"pre-installed"
+packaging	"pre-installed"
+pillow	"pre-installed"
+scikit-image	"pre-installed"
+scipy	"pre-installed"
+tifffile	"pre-installed"
+wheel_compatibility	
+runtime_tag_head	
+0	"cp312-cp312-manylinux_2_35_x86_64"
+1	"cp312-cp312-manylinux_2_34_x86_64"
+2	"cp312-cp312-manylinux_2_33_x86_64"
+3	"cp312-cp312-manylinux_2_32_x86_64"
+4	"cp312-cp312-manylinux_2_31_x86_64"
+5	"cp312-cp312-manylinux_2_30_x86_64"
+6	"cp312-cp312-manylinux_2_29_x86_64"
+7	"cp312-cp312-manylinux_2_28_x86_64"
+8	"cp312-cp312-manylinux_2_27_x86_64"
+9	"cp312-cp312-manylinux_2_26_x86_64"
+10	"cp312-cp312-manylinux_2_25_x86_64"
+11	"cp312-cp312-manylinux_2_24_x86_64"
+12	"cp312-cp312-manylinux_2_23_x86_64"
+13	"cp312-cp312-manylinux_2_22_x86_64"
+14	"cp312-cp312-manylinux_2_21_x86_64"
+15	"cp312-cp312-manylinux_2_20_x86_64"
+16	"cp312-cp312-manylinux_2_19_x86_64"
+17	"cp312-cp312-manylinux_2_18_x86_64"
+18	"cp312-cp312-manylinux_2_17_x86_64"
+19	"cp312-cp312-manylinux2014_x86_64"
+20	"cp312-cp312-manylinux_2_16_x86_64"
+21	"cp312-cp312-manylinux_2_15_x86_64"
+22	"cp312-cp312-manylinux_2_14_x86_64"
+23	"cp312-cp312-manylinux_2_13_x86_64"
+wheel_inventory_count	12
+parse_errors	[]
+so_symbol_inventory	
+status	"ok"
+symbol_count_total	167
+symbol_count_lum_related	105
+undefined_symbol_count	62
+undefined_symbol_head	
+0	"abort@GLIBC_2.2.5"
+1	"aligned_alloc@GLIBC_2.16"
+2	"calloc@GLIBC_2.2.5"
+3	"clock_gettime@GLIBC_2.17"
+4	"close@GLIBC_2.2.5"
+5	"__errno_location@GLIBC_2.2.5"
+6	"exp"
+7	"fclose@GLIBC_2.2.5"
+8	"fflush@GLIBC_2.2.5"
+9	"fgets@GLIBC_2.2.5"
+10	"fopen@GLIBC_2.2.5"
+11	"forensic_log_individual_lum"
+12	"forensic_log_lum_operation"
+13	"fprintf@GLIBC_2.2.5"
+14	"fputc@GLIBC_2.2.5"
+15	"fputs@GLIBC_2.2.5"
+16	"fread@GLIBC_2.2.5"
+17	"free@GLIBC_2.2.5"
+18	"ftell@GLIBC_2.2.5"
+19	"fwrite@GLIBC_2.2.5"
+20	"getpid@GLIBC_2.2.5"
+21	"gettimeofday@GLIBC_2.2.5"
+22	"__isoc99_sscanf@GLIBC_2.7"
+23	"localtime@GLIBC_2.2.5"
+24	"lum_write_metadata_serialized"
+25	"lum_write_serialized"
+26	"malloc@GLIBC_2.2.5"
+27	"memcpy@GLIBC_2.14"
+28	"memset@GLIBC_2.2.5"
+29	"mkdir@GLIBC_2.2.5"
+30	"mmap@GLIBC_2.2.5"
+31	"munmap@GLIBC_2.2.5"
+32	"nanosleep@GLIBC_2.2.5"
+33	"open@GLIBC_2.2.5"
+34	"posix_memalign@GLIBC_2.2.5"
+35	"printf@GLIBC_2.2.5"
+36	"pthread_mutex_lock@GLIBC_2.2.5"
+37	"pthread_mutex_unlock@GLIBC_2.2.5"
+38	"putchar@GLIBC_2.2.5"
+39	"puts@GLIBC_2.2.5"
+40	"rand@GLIBC_2.2.5"
+41	"rand_r@GLIBC_2.2.5"
+42	"read@GLIBC_2.2.5"
+43	"realloc@GLIBC_2.2.5"
+44	"snprintf@GLIBC_2.2.5"
+45	"sqrt"
+46	"stderr@GLIBC_2.2.5"
+47	"stdout@GLIBC_2.2.5"
+48	"strdup@GLIBC_2.2.5"
+49	"strerror@GLIBC_2.2.5"
+50	"strftime@GLIBC_2.2.5"
+51	"strlen@GLIBC_2.2.5"
+52	"strncpy@GLIBC_2.2.5"
+53	"strndup@GLIBC_2.2.5"
+54	"strnlen@GLIBC_2.2.5"
+55	"strstr@GLIBC_2.2.5"
+56	"tanh"
+57	"time@GLIBC_2.2.5"
+58	"__tls_get_addr@GLIBC_2.3"
+59	"unified_forensic_log"
+60	"vprintf@GLIBC_2.2.5"
+61	"vsnprintf@GLIBC_2.2.5"
+lum_related_head	
+[0…99]	
+[100…104]	
+status	"fail"
+error_type	"RuntimeError"
+error	"native_so_load_enforced_failed: /kaggle/input/nx47-dependencies/liblumvorax.so: undefined symbol: unified_forensic_log"
+elapsed_ns	10061709733
+elapsed_s	10.061709733

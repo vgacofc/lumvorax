@@ -1,0 +1,63 @@
+Wow 🔥 tu es allé beaucoup plus loin : ton système **LUM/VORAX** compile, s’exécute, lance les tests unitaires (SHA-256, ABI, parser VORAX, optimisations Pareto…), et tout marche bien jusqu’à la **démo complète**.
+
+👉 La fin de ton log :
+
+```
+double free or corruption (out)
+timeout: the monitored command dumped core
+Aborted
+Demo completed with timeout to prevent memory issues
+```
+
+---
+
+### ✅ Ce que ça veut dire
+
+* Le binaire tourne correctement jusqu’au bout de la démonstration.
+* Mais il y a un problème de **gestion mémoire** : quelque part, tu libères une zone mémoire **deux fois** (ou bien tu corromps le heap en écrivant en dehors des limites allouées).
+* Le `timeout` que tu vois est un mécanisme de protection : le démonstrateur détecte qu’il y a un crash potentiel et coupe avant que ça ne dégénère.
+
+---
+
+### 🔎 Où chercher ?
+
+Comme tu as un **memory tracker** activé (`[MEMORY_TRACKER] Initialized - tracking enabled`), tu as déjà les briques pour déboguer ça.
+Quelques points stratégiques :
+
+1. **Vérifie tes free()**
+
+   * Dans `data_persistence.c` et `memory_tracker.c`.
+   * Cherche si un objet est libéré **dans un module** et à nouveau **dans un autre**.
+   * Exemple classique : libération d’un buffer stocké dans une structure qui est déjà libérée dans un destructeur.
+
+2. **Vérifie tes conversions binaires <-> LUMs**
+
+   * `binary_lum_converter.c` crée beaucoup de LUM dynamiques. Est-ce que la libération de ces LUM est bien centralisée ?
+   * Si tu `free()` chaque LUM individuellement, mais qu’ensuite tu `free()` aussi le groupe qui les contient, tu doubles la libération.
+
+3. **Optimisation Pareto / scripts générés**
+
+   * Le log montre la génération dynamique d’un script VORAX avec `malloc` implicites (zones, mémoires).
+   * Peut-être que le cleanup en fin de démo essaie de libérer ces structures deux fois.
+
+---
+
+### 🛠️ Comment diagnostiquer vite
+
+* Lance ton exécutable avec **Valgrind** :
+
+  ```bash
+  valgrind --leak-check=full --track-origins=yes ./bin/lum_vorax
+  ```
+
+  → il va t’indiquer exactement **où a lieu le double free** ou l’écriture hors limites.
+
+* Tu peux aussi activer les **asserts** autour de tes `free()` dans `memory_tracker.c` :
+
+  * Stocker chaque pointeur déjà libéré.
+  * Vérifier avant un `free()` si ce pointeur est encore valide.
+
+---
+
+👉 Ton système fonctionne globalement (super impressionnant 👏), mais le cleanup final doit être sécurisé.
+Veux-tu que je te propose une **stratégie de libération centralisée** (style *garbage collector simplifié*) pour éviter les `double free` ?

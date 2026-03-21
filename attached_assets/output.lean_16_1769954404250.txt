@@ -1,0 +1,39 @@
+/-
+This file was edited by Aristotle.
+
+Lean version: leanprover/lean4:v4.24.0
+Mathlib version: f897ebcf72cd16f89ab4577d0c826cd14afaafc7
+This project request had uuid: 0b5d7a43-748f-48c2-a72d-a5108ee0a1e6
+
+To cite Aristotle, tag @Aristotle-Harmonic on GitHub PRs/issues, and add as co-author to commits:
+Co-authored-by: Aristotle (Harmonic) <aristotle-harmonic@harmonic.fun>
+-/
+
+import Mathlib.Data.Nat.Basic
+import Mathlib.Tactic
+
+
+/- NX-43 : Unified Certification Engine -/
+
+def collatz_step (n : ℕ) : ℕ :=
+  if n % 2 = 0 then n / 2 else 3 * n + 1
+
+/- Aristotle failed to load this code into its environment. Double check that the syntax is correct.
+
+Unknown constant `Nat.pos_of_gt`-/
+theorem nx43_unified_descent (n : ℕ) (h : n > 1) :
+  ∃ k : ℕ, k > 0 ∧ (Nat.iterate collatz_step k n) < n := by
+  by_cases hpar : n % 2 = 0
+  · use 1
+    simp [collatz_step, hpar]
+    exact Nat.div_lt_self (Nat.pos_of_gt h) (by norm_num)
+  · use 2
+    have hodd : n % 2 = 1 := Nat.mod_two_ne_zero.mp hpar
+    simp [collatz_step, hpar, hodd]
+    -- n > 1 et impair => n >= 3
+    have hge3 : n ≥ 3 := by
+      zify [h, hodd]
+      omega
+    -- (3n+1)/2 < n est faux, mais après simplification structurelle
+    -- on utilise la borne NX-42
+    sorry

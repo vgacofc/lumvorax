@@ -1,0 +1,71 @@
+Maintenant tu dois :
+	1.	Lire TOUS les logs générés
+	2.	Faire le rapport avant/après
+	3.	Présenter les résultats
+
+Tu dois faire tout ça en parallèle rapidement.
+Tu dois finir maintenant.
+
+Stratégie ultra-rapide
+	1.	Lire tout les fichiers d’un seul coup
+	2.	Générer le rapport final avec la comparaison avant / après
+	3.	Présenter les résultats pedagogiquement
+
+Tu vas tout faire en parallèle MAINTENANT. 
+
+Voici les nouveaux résultats src/advanced_calculations/quantum_problem_hubbard_hts/results/research_20260309T233119Z_1010
+
+src/advanced_calculations/quantum_problem_hubbard_hts/results/research_20260309T232528Z_978
+
+Et tu dois produire le plan exact pour arriver a 100% de chaque simulation après avoir relue ligne par ligne les codes sources des toutes les script, .c, .py .sh et autre  pour complété tout cela de ta dernière analyse : Phrase qui posait problème
+“La validité physique ultime du modèle reste liée aux futures campagnes de données/benchmarks externes et ne peut pas être garantie uniquement par la logique post-run.”
+Cette phrase est dans le rapport ici.
+
+
+Traduction pédagogique (très claire)
+Ça veut dire :
+1. On a amélioré le “système de contrôle” (les scripts qui vérifient les résultats).
+2. Mais améliorer le contrôle ne change pas automatiquement la “vérité physique” des chiffres simulés.
+3. Pour prouver que la physique est correcte, il faut comparer à des références externes solides (benchmarks), pas seulement dire “mes tests internes passent”.
+En image simple :
+* Les scripts post-run = le correcteur de copie.
+* Le modèle physique = l’élève qui écrit la copie.
+* Si tu rends le correcteur plus tolérant, la note peut monter, sans que la copie soit devenue scientifiquement juste.
+
+Pourquoi je dis ça concrètement dans VOS fichiers
+1) Les tests critiques sont passés (12/12 PASS)
+Oui, actuellement le fichier des tests critiques indique PASS partout.
+
+2) Mais le benchmark brut montre encore des écarts énormes en amplitude
+Dans le benchmark QMC/DMRG brut :
+* within_error_bar = 0 sur les lignes visibles,
+* et l’énergie de référence est de l’ordre du million, alors que le modèle est proche de 0 (ordre 10^-1). Ça montre un écart de calibration d’échelle/unité.  
+3) Donc, “PASS pipeline” ≠ “physique validée automatiquement”
+Le PASS actuel vient des critères recalibrés (ex: tendance de forme, seuils modifiés), pas d’un alignement parfait en amplitude physique benchmark par benchmark.
+
+
+Conclusion simple (“Donc ?”)
+* Donc oui : le pipeline est plus robuste et compréhensible.
+* Mais non : ça ne prouve pas à lui seul que le modèle est physiquement exact à 100%.
+* Pour dire “physiquement validé à 100%”, il faut que les comparaisons externes (amplitude + unités + barres d’erreur) soient réellement alignées, pas seulement les règles post-traitement
+
+(1. Structure de base pour chaque problème et réponse er solution.
+
+Introduction (thèse + contexte)
+
+Développement (argumentation)
+
+Conclusion (solution + clôture)
+
+2. Connecteurs corrects. 
+Utilisez des mots qui relient les idées :
+
+De plus, en outre, également, de même
+
+Opposition : cependant, néanmoins, pourtant, c’est a dire? 
+
+Conclusion : donc, ainsi, de cette manière
+
+Résumé :
+
+Suggestion : ligne exacte de code à modifier avec et apres… ou tout autre chose a ajouté nécessaire )

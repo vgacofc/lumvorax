@@ -1,0 +1,19 @@
+{
+  "mode": "hardware_preferred",
+  "seed": 0,
+  "scenarios": 360,
+  "steps": 1400,
+  "max_qubits_width": 36,
+  "nqubits_simulated": 504000,
+  "nqubits_per_sec": 7636125.297,
+  "nqubit_avg_score": 0.961092098144,
+  "baseline_qubit_avg_score": 0.937390919875,
+  "nqubit_win_rate": 0.697222222222,
+  "nqubit_wins": 251,
+  "baseline_wins": 109,
+  "elapsed_ns": 66002060,
+  "used_hardware_entropy": true,
+  "latency_p50_ns": 177760,
+  "latency_p95_ns": 221420,
+  "latency_p99_ns": 248290
+}

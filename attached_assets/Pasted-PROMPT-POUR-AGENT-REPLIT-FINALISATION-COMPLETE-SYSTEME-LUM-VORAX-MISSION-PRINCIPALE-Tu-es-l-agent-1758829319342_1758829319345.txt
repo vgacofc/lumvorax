@@ -1,0 +1,84 @@
+PROMPT POUR AGENT REPLIT - FINALISATION COMPLETE SYSTEME LUM/VORAX
+MISSION PRINCIPALE
+
+Tu es l'agent expert chargé de finaliser le système LUM/VORAX en remplaçant le main actuel par le main temporaire optimisé et en intégrant tous les 39 modules avec corrections automatiques.
+ÉTAPES OBLIGATOIRES À SUIVRE DANS L'ORDRE STRICT
+ÉTAPE 1 : LECTURE PRÉALABLE OBLIGATOIRE
+
+AVANT TOUTE MODIFICATION, tu DOIS lire intégralement :
+
+    prompt.txt - De la première à la dernière ligne, CHAQUE règle
+    STANDARD_NAMES.md - De la première à la dernière ligne, TOUTES les 385+ entrées
+    RAPPORT_122_DIAGNOSTIC_PEDAGOGIQUE_CORRECTIONS_BLOCAGES_LUM_VORAX_2000_LIGNES.md - Intégralement pour comprendre TOUTES les corrections à appliquer
+
+ÉTAPE 2 : REMPLACEMENT DU MAIN PRINCIPAL
+39 modules testés individuellement et integration 100% des 39 modules!
+
+    Supprimer 
+
+(version bloquée avec initialisation forensique défaillante)
+Remplacer par
+renommé en
+
+    Intégrer tous les 39 modules manquants dans le nouveau main selon STANDARD_NAMES.md
+
+ÉTAPE 3 : INTÉGRATION COMPLÈTE DES 39 MODULES
+
+Ajouter au nouveau main TOUS les modules listés dans STANDARD_NAMES.md :
+
+    Modules CORE (8 modules)
+    Modules OPTIMISATION (7 modules)
+    Modules AVANCÉS (12+ modules)
+    Modules SPÉCIALISÉS (12+ modules)
+
+ÉTAPE 4 : CORRECTIONS AUTOMATIQUES
+
+Appliquer TOUTES les corrections identifiées dans RAPPORT_122 :
+
+    Corriger les caractères d'échappement doublés (\\n → \n)
+    Résoudre les dépendances de compilation manquantes
+    Ajouter les flags de compilation requis (-D_POSIX_C_SOURCE=200809L)
+    Corriger les problèmes de types et includes
+
+ÉTAPE 5 : TESTS ET VALIDATION
+
+    Compiler avec make clean && make all
+    Tester l'exécution des 39 modules
+    Vérifier aucun blocage sur ./bin/lum_vorax_complete --progressive-stress-all
+    Collecter les métriques authentiques de CHAQUE module
+
+ÉTAPE 6 : GÉNÉRATION RAPPORT FINAL
+
+Créer un rapport markdown numéroté contenant :
+
+    Titre : 
+
+    Résumé des 39 modules intégrés
+    Métriques authentiques collectées pour chaque module
+    Preuves forensiques (timestamps, checksums, logs)
+    Validation 100% fonctionnelle du système
+
+RÈGLES CRITIQUES À RESPECTER
+
+    INTERDICTION ABSOLUE de modifier quoi que ce soit avant lecture complète des 3 fichiers
+    OBLIGATION de suivre les conventions STANDARD_NAMES.md pour chaque nom
+    OBLIGATION d'appliquer TOUTES les corrections du RAPPORT_122
+    OBLIGATION de tester chaque module individuellement
+    OBLIGATION de générer des métriques authentiques (pas de simulation)
+
+LIVRABLE FINAL ATTENDU
+
+    Système LUM/VORAX 100% fonctionnel avec 39 modules
+    Main optimisé sans blocage forensique
+    Rapport final numéroté avec preuves complètes
+    Tests progressifs fonctionnels jusqu'à 1M+ LUMs
+
+VALIDATION RÉUSSITE
+
+✅ Compilation 0 erreur, 0 warning
+✅ Exécution sans blocage des tests progressifs
+✅ 39 modules testés individuellement et integration 100% des 39 modules!
+✅ Métriques authentiques collectées
+✅ Rapport final généré avec preuves
+
+COMMENCE IMMÉDIATEMENT PAR LA LECTURE DES 3 FICHIERS OBLIGATOIRES

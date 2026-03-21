@@ -1,0 +1,23 @@
+[
+  {
+    "path": "/dev/hwrng",
+    "ok": false,
+    "size": 0,
+    "bytes_per_sec": null,
+    "error": "[Errno 2] No such file or directory: '/dev/hwrng'"
+  },
+  {
+    "path": "/dev/random",
+    "ok": true,
+    "size": 4096,
+    "bytes_per_sec": 162346450.2723833,
+    "error": null
+  },
+  {
+    "path": "/dev/urandom",
+    "ok": true,
+    "size": 4096,
+    "bytes_per_sec": 204800005.1736833,
+    "error": null
+  }
+]

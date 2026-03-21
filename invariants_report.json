@@ -1,0 +1,1043 @@
+{
+  "conservation_presence": true,
+  "timestamp_monotonicity": true,
+  "mathematical_consistency": true,
+  "test_date": "Thu Sep 11 03:40:21 PM UTC 2025",
+  "test_results": {
+    "conservation": "=== LUM/VORAX System Demo ===
+Implementation complete du concept LUM/VORAX en C
+
+[MEMORY_TRACKER] Initialized - tracking enabled
+[MAIN] Memory tracking initialized
+[MEMORY_TRACKER] ALLOC: 0x5f72b0 (280 bytes) at src/logger/lum_logger.c:27 in lum_logger_create()
+[2025-09-11 15:40:20] [INFO] [1] LUM/VORAX System Demo Started
+1. Test des opérations de base LUM...
+[MEMORY_TRACKER] ALLOC: 0x5f8840 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] ALLOC: 0x5f8880 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] ALLOC: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+  ✓ Création de 3 LUMs: LUM[1]: presence=1, pos=(0,0), type=0, ts=34347827265888
+LUM[2]: presence=1, pos=(1,0), type=0, ts=34347827266568
+LUM[3]: presence=0, pos=(2,0), type=0, ts=34347827266968
+[MEMORY_TRACKER] ALLOC: 0x5f8900 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x5f8930 (480 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+  ✓ Groupe créé avec 3 LUMs
+Group[4]: 3 LUMs
+  LUM[1]: presence=1, pos=(0,0), type=0, ts=34347827265888
+  LUM[2]: presence=1, pos=(1,0), type=0, ts=34347827266568
+  LUM[3]: presence=0, pos=(2,0), type=0, ts=34347827266968
+[MEMORY_TRACKER] FREE: 0x5f8930 (480 bytes) at src/lum/lum_core.c:99 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:62
+[MEMORY_TRACKER] FREE: 0x5f8900 (40 bytes) at src/lum/lum_core.c:110 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:58
+[MEMORY_TRACKER] FREE: 0x5f8840 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] FREE: 0x5f8880 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] FREE: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+
+2. Test des opérations VORAX...
+[MEMORY_TRACKER] ALLOC: 0x5f8900 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x5f8b20 (96 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x5f8b90 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x5f8bc0 (144 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x5f8c60 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x5f8c90 (312 bytes) at src/vorax/vorax_operations.c:306 in vorax_result_create()
+[MEMORY_TRACKER] ALLOC: 0x5f8dd0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x5f8880 (48 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] FREE: 0x5f8880 (48 bytes) at src/lum/lum_core.c:99 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:62
+[MEMORY_TRACKER] FREE: 0x5f8dd0 (40 bytes) at src/lum/lum_core.c:110 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:58
+[MEMORY_TRACKER] FREE: 0x5f8c90 (312 bytes) at src/vorax/vorax_operations.c:352 in vorax_result_destroy() - originally allocated at src/vorax/vorax_operations.c:306
+[MEMORY_TRACKER] FREE: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:99 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:62
+[MEMORY_TRACKER] FREE: 0x5f8c60 (40 bytes) at src/lum/lum_core.c:110 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:58
+[MEMORY_TRACKER] ALLOC: 0x5f8c60 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x5f8e00 (240 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x5f8dd0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x5f8f00 (240 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x5f8c90 (312 bytes) at src/vorax/vorax_operations.c:306 in vorax_result_create()
+[MEMORY_TRACKER] ALLOC: 0x5f9000 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x5f9030 (192 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+  ✓ Fusion VORAX réussie: 4 LUMs résultants
+Group[15]: 4 LUMs
+  LUM[11]: presence=0, pos=(0,0), type=0, ts=34347827283018
+  LUM[12]: presence=1, pos=(1,0), type=0, ts=34347827283108
+  LUM[13]: presence=0, pos=(2,0), type=0, ts=34347827283168
+  LUM[14]: presence=1, pos=(3,0), type=0, ts=34347827283228
+[MEMORY_TRACKER] FREE: 0x5f9030 (192 bytes) at src/lum/lum_core.c:99 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:62
+[MEMORY_TRACKER] FREE: 0x5f9000 (40 bytes) at src/lum/lum_core.c:110 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:58
+[MEMORY_TRACKER] FREE: 0x5f8c90 (312 bytes) at src/vorax/vorax_operations.c:352 in vorax_result_destroy() - originally allocated at src/vorax/vorax_operations.c:306
+[MEMORY_TRACKER] FREE: 0x5f8e00 (240 bytes) at src/lum/lum_core.c:99 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:62
+[MEMORY_TRACKER] FREE: 0x5f8c60 (40 bytes) at src/lum/lum_core.c:110 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:58
+[MEMORY_TRACKER] FREE: 0x5f8f00 (240 bytes) at src/lum/lum_core.c:99 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:62
+[MEMORY_TRACKER] FREE: 0x5f8dd0 (40 bytes) at src/lum/lum_core.c:110 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:58
+
+3. Test de conversion binaire <-> LUM...
+  Conversion de l'entier 42 en LUMs...
+[MEMORY_TRACKER] ALLOC: 0x5f9100 (280 bytes) at src/binary/binary_lum_converter.c:273 in binary_lum_result_create()
+[MEMORY_TRACKER] ALLOC: 0x5f8dd0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x5f9220 (1536 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+  ✓ Conversion réussie: 32 bits traités
+[MEMORY_TRACKER] ALLOC: 0x5f8c60 (33 bytes) at src/binary/binary_lum_converter.c:317 in lum_group_to_binary_string()
+  Binaire: 00000000000000000000000000101010
+[MEMORY_TRACKER] FREE: 0x5f8c60 (33 bytes) at src/main.c:520 in demo_binary_conversion() - originally allocated at src/binary/binary_lum_converter.c:317
+  ✓ Conversion inverse: 42 -> 42 (OK)
+[MEMORY_TRACKER] FREE: 0x5f9220 (1536 bytes) at src/lum/lum_core.c:99 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:62
+[MEMORY_TRACKER] FREE: 0x5f8dd0 (40 bytes) at src/lum/lum_core.c:110 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:58
+[MEMORY_TRACKER] FREE: 0x5f9100 (280 bytes) at src/binary/binary_lum_converter.c:288 in binary_lum_result_destroy() - originally allocated at src/binary/binary_lum_converter.c:273
+
+  Conversion de la chaîne binaire '11010110' en LUMs...
+[MEMORY_TRACKER] ALLOC: 0x5f9100 (280 bytes) at src/binary/binary_lum_converter.c:273 in binary_lum_result_create()
+[MEMORY_TRACKER] ALLOC: 0x5f8dd0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x5f9220 (384 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+  ✓ Conversion réussie: 8 LUMs créées
+Group[49]: 8 LUMs
+  LUM[50]: presence=1, pos=(0,0), type=0, ts=34347827329008
+  LUM[51]: presence=1, pos=(1,0), type=0, ts=34347827329508
+  LUM[52]: presence=0, pos=(2,0), type=0, ts=34347827330608
+  LUM[53]: presence=1, pos=(3,0), type=0, ts=34347827331308
+  LUM[54]: presence=0, pos=(4,0), type=0, ts=34347827332068
+  LUM[55]: presence=1, pos=(5,0), type=0, ts=34347827332818
+  LUM[56]: presence=1, pos=(6,0), type=0, ts=34347827333498
+  LUM[57]: presence=0, pos=(7,0), type=0, ts=34347827334258
+[MEMORY_TRACKER] FREE: 0x5f9220 (384 bytes) at src/lum/lum_core.c:99 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:62
+[MEMORY_TRACKER] FREE: 0x5f8dd0 (40 bytes) at src/lum/lum_core.c:110 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:58
+[MEMORY_TRACKER] FREE: 0x5f9100 (280 bytes) at src/binary/binary_lum_converter.c:288 in binary_lum_result_destroy() - originally allocated at src/binary/binary_lum_converter.c:273
+
+4. Test du parser VORAX...
+  Parsing du code VORAX:
+zone A, B, C;
+mem buf;
+emit A += 3•;
+split A -> [B, C];
+move B -> C, 1•;
+
+[MEMORY_TRACKER] ALLOC: 0x5f93b0 (288 bytes) at src/parser/vorax_parser.c:197 in vorax_ast_create_node()
+[MEMORY_TRACKER] ALLOC: 0x5f94e0 (288 bytes) at src/parser/vorax_parser.c:197 in vorax_ast_create_node()
+[MEMORY_TRACKER] ALLOC: 0x5f9610 (288 bytes) at src/parser/vorax_parser.c:197 in vorax_ast_create_node()
+[MEMORY_TRACKER] ALLOC: 0x5f8dd0 (32 bytes) at src/parser/vorax_parser.c:221 in vorax_ast_add_child()
+[MEMORY_TRACKER] ALLOC: 0x5f9740 (288 bytes) at src/parser/vorax_parser.c:197 in vorax_ast_create_node()
+[MEMORY_TRACKER] ALLOC: 0x5f9870 (288 bytes) at src/parser/vorax_parser.c:197 in vorax_ast_create_node()
+[MEMORY_TRACKER] ALLOC: 0x5f8c60 (32 bytes) at src/parser/vorax_parser.c:221 in vorax_ast_add_child()
+[MEMORY_TRACKER] ALLOC: 0x5f99a0 (288 bytes) at src/parser/vorax_parser.c:197 in vorax_ast_create_node()
+[MEMORY_TRACKER] ALLOC: 0x5f9ad0 (288 bytes) at src/parser/vorax_parser.c:197 in vorax_ast_create_node()
+[MEMORY_TRACKER] ALLOC: 0x5f9000 (32 bytes) at src/parser/vorax_parser.c:221 in vorax_ast_add_child()
+[MEMORY_TRACKER] ALLOC: 0x5f9c00 (288 bytes) at src/parser/vorax_parser.c:197 in vorax_ast_create_node()
+[MEMORY_TRACKER] ALLOC: 0x5f9d30 (288 bytes) at src/parser/vorax_parser.c:197 in vorax_ast_create_node()
+[MEMORY_TRACKER] ALLOC: 0x5f9e60 (288 bytes) at src/parser/vorax_parser.c:197 in vorax_ast_create_node()
+[MEMORY_TRACKER] ALLOC: 0x5f9f90 (64 bytes) at src/parser/vorax_parser.c:221 in vorax_ast_add_child()
+  ✓ Parsing réussi, AST créé:
+    MEMORY_DECLARATION: program
+      MEMORY_DECLARATION: 
+        MEMORY_DECLARATION: A
+        MEMORY_DECLARATION: B
+        MEMORY_DECLARATION: C
+      MEMORY_ASSIGNMENT: 
+        MEMORY_ASSIGNMENT: buf
+      SPLIT_STATEMENT: A 3
+      MOVE_STATEMENT: A
+      STORE_STATEMENT: B -> C
+[MEMORY_TRACKER] ALLOC: 0x5f8c90 (312 bytes) at src/parser/vorax_parser.c:469 in vorax_execution_context_create()
+[MEMORY_TRACKER] ALLOC: 0x5f75d0 (80 bytes) at src/parser/vorax_parser.c:472 in vorax_execution_context_create()
+[MEMORY_TRACKER] ALLOC: 0x5f9fe0 (80 bytes) at src/parser/vorax_parser.c:473 in vorax_execution_context_create()
+[MEMORY_TRACKER] ALLOC: 0x5fa040 (64 bytes) at src/lum/lum_core.c:191 in lum_zone_create()
+[MEMORY_TRACKER] ALLOC: 0x5fa090 (80 bytes) at src/lum/lum_core.c:199 in lum_zone_create()
+[MEMORY_TRACKER] ALLOC: 0x5fa0f0 (64 bytes) at src/lum/lum_core.c:191 in lum_zone_create()
+[MEMORY_TRACKER] ALLOC: 0x5fa140 (80 bytes) at src/lum/lum_core.c:199 in lum_zone_create()
+[MEMORY_TRACKER] ALLOC: 0x5fa1a0 (64 bytes) at src/lum/lum_core.c:191 in lum_zone_create()
+[MEMORY_TRACKER] ALLOC: 0x5fa1f0 (80 bytes) at src/lum/lum_core.c:199 in lum_zone_create()
+[MEMORY_TRACKER] ALLOC: 0x5fa250 (80 bytes) at src/lum/lum_core.c:276 in lum_memory_create()
+  ✓ Exécution: Succès
+  Zones créées: 3
+  Mémoires créées: 1
+[MEMORY_TRACKER] FREE: 0x5fa090 (80 bytes) at src/lum/lum_core.c:220 in lum_zone_destroy() - originally allocated at src/lum/lum_core.c:199
+[MEMORY_TRACKER] FREE: 0x5fa040 (64 bytes) at src/lum/lum_core.c:223 in lum_zone_destroy() - originally allocated at src/lum/lum_core.c:191
+[MEMORY_TRACKER] FREE: 0x5fa140 (80 bytes) at src/lum/lum_core.c:220 in lum_zone_destroy() - originally allocated at src/lum/lum_core.c:199
+[MEMORY_TRACKER] FREE: 0x5fa0f0 (64 bytes) at src/lum/lum_core.c:223 in lum_zone_destroy() - originally allocated at src/lum/lum_core.c:191
+[MEMORY_TRACKER] FREE: 0x5fa1f0 (80 bytes) at src/lum/lum_core.c:220 in lum_zone_destroy() - originally allocated at src/lum/lum_core.c:199
+[MEMORY_TRACKER] FREE: 0x5fa1a0 (64 bytes) at src/lum/lum_core.c:223 in lum_zone_destroy() - originally allocated at src/lum/lum_core.c:191
+[MEMORY_TRACKER] FREE: 0x5fa250 (80 bytes) at src/lum/lum_core.c:302 in lum_memory_destroy() - originally allocated at src/lum/lum_core.c:276
+[MEMORY_TRACKER] FREE: 0x5f75d0 (80 bytes) at src/parser/vorax_parser.c:500 in vorax_execution_context_destroy() - originally allocated at src/parser/vorax_parser.c:472
+[MEMORY_TRACKER] FREE: 0x5f9fe0 (80 bytes) at src/parser/vorax_parser.c:501 in vorax_execution_context_destroy() - originally allocated at src/parser/vorax_parser.c:473
+[MEMORY_TRACKER] FREE: 0x5f8c90 (312 bytes) at src/parser/vorax_parser.c:502 in vorax_execution_context_destroy() - originally allocated at src/parser/vorax_parser.c:469
+[MEMORY_TRACKER] FREE: 0x5f9610 (288 bytes) at src/parser/vorax_parser.c:238 in vorax_ast_destroy() - originally allocated at src/parser/vorax_parser.c:197
+[MEMORY_TRACKER] FREE: 0x5f9740 (288 bytes) at src/parser/vorax_parser.c:238 in vorax_ast_destroy() - originally allocated at src/parser/vorax_parser.c:197
+[MEMORY_TRACKER] FREE: 0x5f9870 (288 bytes) at src/parser/vorax_parser.c:238 in vorax_ast_destroy() - originally allocated at src/parser/vorax_parser.c:197
+[MEMORY_TRACKER] FREE: 0x5f8dd0 (32 bytes) at src/parser/vorax_parser.c:237 in vorax_ast_destroy() - originally allocated at src/parser/vorax_parser.c:221
+[MEMORY_TRACKER] FREE: 0x5f94e0 (288 bytes) at src/parser/vorax_parser.c:238 in vorax_ast_destroy() - originally allocated at src/parser/vorax_parser.c:197
+[MEMORY_TRACKER] FREE: 0x5f9ad0 (288 bytes) at src/parser/vorax_parser.c:238 in vorax_ast_destroy() - originally allocated at src/parser/vorax_parser.c:197
+[MEMORY_TRACKER] FREE: 0x5f9000 (32 bytes) at src/parser/vorax_parser.c:237 in vorax_ast_destroy() - originally allocated at src/parser/vorax_parser.c:221
+[MEMORY_TRACKER] FREE: 0x5f99a0 (288 bytes) at src/parser/vorax_parser.c:238 in vorax_ast_destroy() - originally allocated at src/parser/vorax_parser.c:197
+[MEMORY_TRACKER] FREE: 0x5f9c00 (288 bytes) at src/parser/vorax_parser.c:238 in vorax_ast_destroy() - originally allocated at src/parser/vorax_parser.c:197
+[MEMORY_TRACKER] FREE: 0x5f9d30 (288 bytes) at src/parser/vorax_parser.c:238 in vorax_ast_destroy() - originally allocated at src/parser/vorax_parser.c:197
+[MEMORY_TRACKER] FREE: 0x5f9e60 (288 bytes) at src/parser/vorax_parser.c:238 in vorax_ast_destroy() - originally allocated at src/parser/vorax_parser.c:197
+[MEMORY_TRACKER] FREE: 0x5f9f90 (64 bytes) at src/parser/vorax_parser.c:237 in vorax_ast_destroy() - originally allocated at src/parser/vorax_parser.c:221
+[MEMORY_TRACKER] FREE: 0x5f93b0 (288 bytes) at src/parser/vorax_parser.c:238 in vorax_ast_destroy() - originally allocated at src/parser/vorax_parser.c:197
+
+5. Scénario complet...
+  Scénario: Pipeline de traitement LUM avec logging complet
+[MEMORY_TRACKER] ALLOC: 0x5f8c90 (312 bytes) at src/parser/vorax_parser.c:469 in vorax_execution_context_create()
+[MEMORY_TRACKER] ALLOC: 0x5f9fe0 (80 bytes) at src/parser/vorax_parser.c:472 in vorax_execution_context_create()
+[MEMORY_TRACKER] ALLOC: 0x5f75d0 (80 bytes) at src/parser/vorax_parser.c:473 in vorax_execution_context_create()
+[MEMORY_TRACKER] ALLOC: 0x5f9f90 (64 bytes) at src/lum/lum_core.c:191 in lum_zone_create()
+[MEMORY_TRACKER] ALLOC: 0x5fa250 (80 bytes) at src/lum/lum_core.c:199 in lum_zone_create()
+[MEMORY_TRACKER] ALLOC: 0x5fa1a0 (64 bytes) at src/lum/lum_core.c:191 in lum_zone_create()
+[MEMORY_TRACKER] ALLOC: 0x5fa1f0 (80 bytes) at src/lum/lum_core.c:199 in lum_zone_create()
+[MEMORY_TRACKER] ALLOC: 0x5fa0f0 (64 bytes) at src/lum/lum_core.c:191 in lum_zone_create()
+[MEMORY_TRACKER] ALLOC: 0x5fa140 (80 bytes) at src/lum/lum_core.c:199 in lum_zone_create()
+[MEMORY_TRACKER] ALLOC: 0x5fa090 (80 bytes) at src/lum/lum_core.c:276 in lum_memory_create()
+[MEMORY_TRACKER] ALLOC: 0x5f9d30 (312 bytes) at src/vorax/vorax_operations.c:306 in vorax_result_create()
+[MEMORY_TRACKER] ALLOC: 0x5f9000 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x5fa2b0 (336 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x5f88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+  ✓ Émission de 7 LUMs dans Input
+[MEMORY_TRACKER] ALLOC: 0x5fa410 (312 bytes) at src/vorax/vorax_operations.c:306 in vorax_result_create()
+[MEMORY_TRACKER] ALLOC: 0x5f8dd0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x5fa550 (336 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+  ✓ Déplacement vers Process: Moved 7 LUMs from Input to Process
+[MEMORY_TRACKER] ALLOC: 0x5fa6b0 (312 bytes) at src/vorax/vorax_operations.c:306 in vorax_result_create()
+[MEMORY_TRACKER] ALLOC: 0x5f8c60 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x5f9e70 (96 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x5f9ee0 (96 bytes) at src/lum/lum_core.c:318 in lum_memory_store()
+[MEMORY_TRACKER] FREE: 0x5f9e70 (96 bytes) at src/lum/lum_core.c:99 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:62
+[MEMORY_TRACKER] FREE: 0x5f8c60 (40 bytes) at src/lum/lum_core.c:110 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:58
+  ✓ Stockage en mémoire: Stored 2 LUMs in memory buffer
+[MEMORY_TRACKER] ALLOC: 0x5fa7f0 (312 bytes) at src/vorax/vorax_operations.c:306 in vorax_result_create()
+[MEMORY_TRACKER] ALLOC: 0x5f8c60 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x5f9e70 (96 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+  ✓ Récupération vers Output: Retrieved 2 LUMs from memory buffer to zone Output
+[MEMORY_TRACKER] FREE: 0x5fa7f0 (312 bytes) at src/vorax/vorax_operations.c:352 in vorax_result_destroy() - originally allocated at src/vorax/vorax_operations.c:306
+[MEMORY_TRACKER] FREE: 0x5fa6b0 (312 bytes) at src/vorax/vorax_operations.c:352 in vorax_result_destroy() - originally allocated at src/vorax/vorax_operations.c:306
+[MEMORY_TRACKER] FREE: 0x5fa410 (312 bytes) at src/vorax/vorax_operations.c:352 in vorax_result_destroy() - originally allocated at src/vorax/vorax_operations.c:306
+[MEMORY_TRACKER] FREE: 0x5f9d30 (312 bytes) at src/vorax/vorax_operations.c:352 in vorax_result_destroy() - originally allocated at src/vorax/vorax_operations.c:306
+  État final:
+    Input: vide
+    Process: non-vide
+    Output: non-vide
+    Buffer: occupé
+[MEMORY_TRACKER] FREE: 0x5fa2b0 (336 bytes) at src/lum/lum_core.c:99 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:62
+[MEMORY_TRACKER] FREE: 0x5f9000 (40 bytes) at src/lum/lum_core.c:110 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:58
+[MEMORY_TRACKER] FREE: 0x5fa250 (80 bytes) at src/lum/lum_core.c:220 in lum_zone_destroy() - originally allocated at src/lum/lum_core.c:199
+[MEMORY_TRACKER] FREE: 0x5f9f90 (64 bytes) at src/lum/lum_core.c:223 in lum_zone_destroy() - originally allocated at src/lum/lum_core.c:191
+[MEMORY_TRACKER] FREE: 0x5fa550 (336 bytes) at src/lum/lum_core.c:99 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:62
+[MEMORY_TRACKER] FREE: 0x5f8dd0 (40 bytes) at src/lum/lum_core.c:110 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:58
+[MEMORY_TRACKER] FREE: 0x5fa1f0 (80 bytes) at src/lum/lum_core.c:220 in lum_zone_destroy() - originally allocated at src/lum/lum_core.c:199
+[MEMORY_TRACKER] FREE: 0x5fa1a0 (64 bytes) at src/lum/lum_core.c:223 in lum_zone_destroy() - originally allocated at src/lum/lum_core.c:191
+[MEMORY_TRACKER] FREE: 0x5f9e70 (96 bytes) at src/lum/lum_core.c:99 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:62
+[MEMORY_TRACKER] FREE: 0x5f8c60 (40 bytes) at src/lum/lum_core.c:110 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:58
+[MEMORY_TRACKER] FREE: 0x5fa140 (80 bytes) at src/lum/lum_core.c:220 in lum_zone_destroy() - originally allocated at src/lum/lum_core.c:199
+[MEMORY_TRACKER] FREE: 0x5fa0f0 (64 bytes) at src/lum/lum_core.c:223 in lum_zone_destroy() - originally allocated at src/lum/lum_core.c:191
+[MEMORY_TRACKER] FREE: 0x5f9ee0 (96 bytes) at src/lum/lum_core.c:299 in lum_memory_destroy() - originally allocated at src/lum/lum_core.c:318
+[MEMORY_TRACKER] FREE: 0x5fa090 (80 bytes) at src/lum/lum_core.c:302 in lum_memory_destroy() - originally allocated at src/lum/lum_core.c:276
+[MEMORY_TRACKER] FREE: 0x5f9fe0 (80 bytes) at src/parser/vorax_parser.c:500 in vorax_execution_context_destroy() - originally allocated at src/parser/vorax_parser.c:472
+[MEMORY_TRACKER] FREE: 0x5f75d0 (80 bytes) at src/parser/vorax_parser.c:501 in vorax_execution_context_destroy() - originally allocated at src/parser/vorax_parser.c:473
+[MEMORY_TRACKER] FREE: 0x5f8c90 (312 bytes) at src/parser/vorax_parser.c:502 in vorax_execution_context_destroy() - originally allocated at src/parser/vorax_parser.c:469
+  ✓ Scénario complet terminé
+
+6. Démonstration Module IA Optimization...
+
+6. Démonstration Module IA Optimization...
+[MEMORY_TRACKER] ALLOC: 0x5fa0f0 (64 bytes) at src/complex_modules/ai_optimization.c:393 in ai_optimization_config_create_default()
+[MEMORY_TRACKER] ALLOC: 0x5f8c60 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x5fa930 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x5f93b0 (128 bytes) at src/complex_modules/ai_optimization.c:215 in ai_optimize_genetic_algorithm()
+[MEMORY_TRACKER] ALLOC: 0x5fa1a0 (72 bytes) at src/complex_modules/ai_optimization.c:146 in genetic_optimizer_create()
+[MEMORY_TRACKER] ALLOC: 0x6064c0 (800 bytes) at src/complex_modules/ai_optimization.c:150 in genetic_optimizer_create()
+[MEMORY_TRACKER] ALLOC: 0x6067f0 (800 bytes) at src/complex_modules/ai_optimization.c:151 in genetic_optimizer_create()
+[MEMORY_TRACKER] ALLOC: 0x5f8dd0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x606b20 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x5f9000 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x6126b0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x5f9f50 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x61e240 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x5f9440 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x629dd0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x5f9470 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x635960 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x5f94a0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x6414f0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x64d080 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x64d0b0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x658c40 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x658c70 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x664800 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x664830 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x6703c0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x6703f0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x67bf80 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x67bfb0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x687b40 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x687b70 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x693700 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x693730 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x69f2c0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x69f2f0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x6aae80 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x6aaeb0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x6b6a40 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x6b6a70 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x6c2600 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x6c2630 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x6ce1c0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x6ce1f0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x6d9d80 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x6d9db0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x6e5940 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x6e5970 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x6f1500 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x6f1530 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x6fd0c0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x6fd0f0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x708c80 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x708cb0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x714840 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x714870 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x720400 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x720430 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x72bfc0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x72bff0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x737b80 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x737bb0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x743740 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x743770 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x74f300 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x74f330 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x75aec0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x75aef0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x766a80 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x766ab0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x772640 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x772670 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x77e200 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x77e230 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x789dc0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x789df0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x795980 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x7959b0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x7a1540 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x7a1570 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x7ad100 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x7ad130 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x7b8cc0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x7b8cf0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x7c4880 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x7c48b0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x7d0440 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x7d0470 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x7dc000 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x7dc030 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x7e7bc0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x7e7bf0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x7f3780 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x7f37b0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x7ff340 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x7ff370 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x80af00 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x80af30 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x816ac0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x816af0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x822680 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x8226b0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x82e240 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x82e270 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x839e00 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x839e30 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x8459c0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x8459f0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x851580 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x8515b0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x85d140 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x85d170 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x868d00 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x868d30 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x8748c0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x8748f0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x880480 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x8804b0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x88c040 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x88c070 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x897c00 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x897c30 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x8a37c0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x8a37f0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x8af380 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x8af3b0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x8baf40 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x8baf70 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x8c6b00 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x8c6b30 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x8d26c0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x8d26f0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x8de280 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x8de2b0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x8e9e40 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x8e9e70 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x8f5a00 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x8f5a30 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x9015c0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x9015f0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x90d180 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x90d1b0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x918d40 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x918d70 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x924900 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x924930 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x9304c0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x9304f0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x93c080 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x93c0b0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x947c40 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x947c70 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x953800 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x953830 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x95f3c0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x95f3f0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x96af80 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x96afb0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x976b40 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x976b70 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x982700 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x982730 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x98e2c0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x98e2f0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x999e80 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x999eb0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x9a5a40 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x9a5a70 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x9b1600 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x9b1630 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x9bd1c0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x9bd1f0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x9c8d80 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x9c8db0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x9d4940 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x9d4970 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x9e0500 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x9e0530 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x9ec0c0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x9ec0f0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x9f7c80 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x9f7cb0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0xa03840 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0xa03870 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0xa0f400 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0xa0f430 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0xa1afc0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0xa1aff0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0xa26b80 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0xa26bb0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0xa32740 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0xa32770 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0xa3e300 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0xa3e330 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0xa49ec0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0xa49ef0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0xa55a80 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0xa55ab0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0xa61640 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0xa61670 (48000 b",
+    "timestamps": "=== LUM/VORAX System Demo ===
+Implementation complete du concept LUM/VORAX en C
+
+[MEMORY_TRACKER] Initialized - tracking enabled
+[MAIN] Memory tracking initialized
+[MEMORY_TRACKER] ALLOC: 0x18e72b0 (280 bytes) at src/logger/lum_logger.c:27 in lum_logger_create()
+[2025-09-11 15:40:21] [INFO] [1] LUM/VORAX System Demo Started
+1. Test des opérations de base LUM...
+[MEMORY_TRACKER] ALLOC: 0x18e8840 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] ALLOC: 0x18e8880 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] ALLOC: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+  ✓ Création de 3 LUMs: LUM[1]: presence=1, pos=(0,0), type=0, ts=34348429794426
+LUM[2]: presence=1, pos=(1,0), type=0, ts=34348429794866
+LUM[3]: presence=0, pos=(2,0), type=0, ts=34348429795176
+[MEMORY_TRACKER] ALLOC: 0x18e8900 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x18e8930 (480 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+  ✓ Groupe créé avec 3 LUMs
+Group[4]: 3 LUMs
+  LUM[1]: presence=1, pos=(0,0), type=0, ts=34348429794426
+  LUM[2]: presence=1, pos=(1,0), type=0, ts=34348429794866
+  LUM[3]: presence=0, pos=(2,0), type=0, ts=34348429795176
+[MEMORY_TRACKER] FREE: 0x18e8930 (480 bytes) at src/lum/lum_core.c:99 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:62
+[MEMORY_TRACKER] FREE: 0x18e8900 (40 bytes) at src/lum/lum_core.c:110 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:58
+[MEMORY_TRACKER] FREE: 0x18e8840 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] FREE: 0x18e8880 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] FREE: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+
+2. Test des opérations VORAX...
+[MEMORY_TRACKER] ALLOC: 0x18e8900 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x18e8b20 (96 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x18e8b90 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x18e8bc0 (144 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x18e8c60 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x18e8c90 (312 bytes) at src/vorax/vorax_operations.c:306 in vorax_result_create()
+[MEMORY_TRACKER] ALLOC: 0x18e8dd0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x18e8880 (48 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] FREE: 0x18e8880 (48 bytes) at src/lum/lum_core.c:99 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:62
+[MEMORY_TRACKER] FREE: 0x18e8dd0 (40 bytes) at src/lum/lum_core.c:110 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:58
+[MEMORY_TRACKER] FREE: 0x18e8c90 (312 bytes) at src/vorax/vorax_operations.c:352 in vorax_result_destroy() - originally allocated at src/vorax/vorax_operations.c:306
+[MEMORY_TRACKER] FREE: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:99 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:62
+[MEMORY_TRACKER] FREE: 0x18e8c60 (40 bytes) at src/lum/lum_core.c:110 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:58
+[MEMORY_TRACKER] ALLOC: 0x18e8c60 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x18e8e00 (240 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x18e8dd0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x18e8f00 (240 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x18e8c90 (312 bytes) at src/vorax/vorax_operations.c:306 in vorax_result_create()
+[MEMORY_TRACKER] ALLOC: 0x18e9000 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x18e9030 (192 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+  ✓ Fusion VORAX réussie: 4 LUMs résultants
+Group[15]: 4 LUMs
+  LUM[11]: presence=0, pos=(0,0), type=0, ts=34348429805186
+  LUM[12]: presence=1, pos=(1,0), type=0, ts=34348429805246
+  LUM[13]: presence=0, pos=(2,0), type=0, ts=34348429805296
+  LUM[14]: presence=1, pos=(3,0), type=0, ts=34348429805346
+[MEMORY_TRACKER] FREE: 0x18e9030 (192 bytes) at src/lum/lum_core.c:99 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:62
+[MEMORY_TRACKER] FREE: 0x18e9000 (40 bytes) at src/lum/lum_core.c:110 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:58
+[MEMORY_TRACKER] FREE: 0x18e8c90 (312 bytes) at src/vorax/vorax_operations.c:352 in vorax_result_destroy() - originally allocated at src/vorax/vorax_operations.c:306
+[MEMORY_TRACKER] FREE: 0x18e8e00 (240 bytes) at src/lum/lum_core.c:99 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:62
+[MEMORY_TRACKER] FREE: 0x18e8c60 (40 bytes) at src/lum/lum_core.c:110 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:58
+[MEMORY_TRACKER] FREE: 0x18e8f00 (240 bytes) at src/lum/lum_core.c:99 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:62
+[MEMORY_TRACKER] FREE: 0x18e8dd0 (40 bytes) at src/lum/lum_core.c:110 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:58
+
+3. Test de conversion binaire <-> LUM...
+  Conversion de l'entier 42 en LUMs...
+[MEMORY_TRACKER] ALLOC: 0x18e9100 (280 bytes) at src/binary/binary_lum_converter.c:273 in binary_lum_result_create()
+[MEMORY_TRACKER] ALLOC: 0x18e8dd0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x18e9220 (1536 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+  ✓ Conversion réussie: 32 bits traités
+[MEMORY_TRACKER] ALLOC: 0x18e8c60 (33 bytes) at src/binary/binary_lum_converter.c:317 in lum_group_to_binary_string()
+  Binaire: 00000000000000000000000000101010
+[MEMORY_TRACKER] FREE: 0x18e8c60 (33 bytes) at src/main.c:520 in demo_binary_conversion() - originally allocated at src/binary/binary_lum_converter.c:317
+  ✓ Conversion inverse: 42 -> 42 (OK)
+[MEMORY_TRACKER] FREE: 0x18e9220 (1536 bytes) at src/lum/lum_core.c:99 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:62
+[MEMORY_TRACKER] FREE: 0x18e8dd0 (40 bytes) at src/lum/lum_core.c:110 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:58
+[MEMORY_TRACKER] FREE: 0x18e9100 (280 bytes) at src/binary/binary_lum_converter.c:288 in binary_lum_result_destroy() - originally allocated at src/binary/binary_lum_converter.c:273
+
+  Conversion de la chaîne binaire '11010110' en LUMs...
+[MEMORY_TRACKER] ALLOC: 0x18e9100 (280 bytes) at src/binary/binary_lum_converter.c:273 in binary_lum_result_create()
+[MEMORY_TRACKER] ALLOC: 0x18e8dd0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x18e9220 (384 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+  ✓ Conversion réussie: 8 LUMs créées
+Group[49]: 8 LUMs
+  LUM[50]: presence=1, pos=(0,0), type=0, ts=34348429850946
+  LUM[51]: presence=1, pos=(1,0), type=0, ts=34348429851766
+  LUM[52]: presence=0, pos=(2,0), type=0, ts=34348429852466
+  LUM[53]: presence=1, pos=(3,0), type=0, ts=34348429853216
+  LUM[54]: presence=0, pos=(4,0), type=0, ts=34348429853936
+  LUM[55]: presence=1, pos=(5,0), type=0, ts=34348429854636
+  LUM[56]: presence=1, pos=(6,0), type=0, ts=34348429855366
+  LUM[57]: presence=0, pos=(7,0), type=0, ts=34348429856096
+[MEMORY_TRACKER] FREE: 0x18e9220 (384 bytes) at src/lum/lum_core.c:99 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:62
+[MEMORY_TRACKER] FREE: 0x18e8dd0 (40 bytes) at src/lum/lum_core.c:110 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:58
+[MEMORY_TRACKER] FREE: 0x18e9100 (280 bytes) at src/binary/binary_lum_converter.c:288 in binary_lum_result_destroy() - originally allocated at src/binary/binary_lum_converter.c:273
+
+4. Test du parser VORAX...
+  Parsing du code VORAX:
+zone A, B, C;
+mem buf;
+emit A += 3•;
+split A -> [B, C];
+move B -> C, 1•;
+
+[MEMORY_TRACKER] ALLOC: 0x18e93b0 (288 bytes) at src/parser/vorax_parser.c:197 in vorax_ast_create_node()
+[MEMORY_TRACKER] ALLOC: 0x18e94e0 (288 bytes) at src/parser/vorax_parser.c:197 in vorax_ast_create_node()
+[MEMORY_TRACKER] ALLOC: 0x18e9610 (288 bytes) at src/parser/vorax_parser.c:197 in vorax_ast_create_node()
+[MEMORY_TRACKER] ALLOC: 0x18e8dd0 (32 bytes) at src/parser/vorax_parser.c:221 in vorax_ast_add_child()
+[MEMORY_TRACKER] ALLOC: 0x18e9740 (288 bytes) at src/parser/vorax_parser.c:197 in vorax_ast_create_node()
+[MEMORY_TRACKER] ALLOC: 0x18e9870 (288 bytes) at src/parser/vorax_parser.c:197 in vorax_ast_create_node()
+[MEMORY_TRACKER] ALLOC: 0x18e8c60 (32 bytes) at src/parser/vorax_parser.c:221 in vorax_ast_add_child()
+[MEMORY_TRACKER] ALLOC: 0x18e99a0 (288 bytes) at src/parser/vorax_parser.c:197 in vorax_ast_create_node()
+[MEMORY_TRACKER] ALLOC: 0x18e9ad0 (288 bytes) at src/parser/vorax_parser.c:197 in vorax_ast_create_node()
+[MEMORY_TRACKER] ALLOC: 0x18e9000 (32 bytes) at src/parser/vorax_parser.c:221 in vorax_ast_add_child()
+[MEMORY_TRACKER] ALLOC: 0x18e9c00 (288 bytes) at src/parser/vorax_parser.c:197 in vorax_ast_create_node()
+[MEMORY_TRACKER] ALLOC: 0x18e9d30 (288 bytes) at src/parser/vorax_parser.c:197 in vorax_ast_create_node()
+[MEMORY_TRACKER] ALLOC: 0x18e9e60 (288 bytes) at src/parser/vorax_parser.c:197 in vorax_ast_create_node()
+[MEMORY_TRACKER] ALLOC: 0x18e9f90 (64 bytes) at src/parser/vorax_parser.c:221 in vorax_ast_add_child()
+  ✓ Parsing réussi, AST créé:
+    MEMORY_DECLARATION: program
+      MEMORY_DECLARATION: 
+        MEMORY_DECLARATION: A
+        MEMORY_DECLARATION: B
+        MEMORY_DECLARATION: C
+      MEMORY_ASSIGNMENT: 
+        MEMORY_ASSIGNMENT: buf
+      SPLIT_STATEMENT: A 3
+      MOVE_STATEMENT: A
+      STORE_STATEMENT: B -> C
+[MEMORY_TRACKER] ALLOC: 0x18e8c90 (312 bytes) at src/parser/vorax_parser.c:469 in vorax_execution_context_create()
+[MEMORY_TRACKER] ALLOC: 0x18e75d0 (80 bytes) at src/parser/vorax_parser.c:472 in vorax_execution_context_create()
+[MEMORY_TRACKER] ALLOC: 0x18e9fe0 (80 bytes) at src/parser/vorax_parser.c:473 in vorax_execution_context_create()
+[MEMORY_TRACKER] ALLOC: 0x18ea040 (64 bytes) at src/lum/lum_core.c:191 in lum_zone_create()
+[MEMORY_TRACKER] ALLOC: 0x18ea090 (80 bytes) at src/lum/lum_core.c:199 in lum_zone_create()
+[MEMORY_TRACKER] ALLOC: 0x18ea0f0 (64 bytes) at src/lum/lum_core.c:191 in lum_zone_create()
+[MEMORY_TRACKER] ALLOC: 0x18ea140 (80 bytes) at src/lum/lum_core.c:199 in lum_zone_create()
+[MEMORY_TRACKER] ALLOC: 0x18ea1a0 (64 bytes) at src/lum/lum_core.c:191 in lum_zone_create()
+[MEMORY_TRACKER] ALLOC: 0x18ea1f0 (80 bytes) at src/lum/lum_core.c:199 in lum_zone_create()
+[MEMORY_TRACKER] ALLOC: 0x18ea250 (80 bytes) at src/lum/lum_core.c:276 in lum_memory_create()
+  ✓ Exécution: Succès
+  Zones créées: 3
+  Mémoires créées: 1
+[MEMORY_TRACKER] FREE: 0x18ea090 (80 bytes) at src/lum/lum_core.c:220 in lum_zone_destroy() - originally allocated at src/lum/lum_core.c:199
+[MEMORY_TRACKER] FREE: 0x18ea040 (64 bytes) at src/lum/lum_core.c:223 in lum_zone_destroy() - originally allocated at src/lum/lum_core.c:191
+[MEMORY_TRACKER] FREE: 0x18ea140 (80 bytes) at src/lum/lum_core.c:220 in lum_zone_destroy() - originally allocated at src/lum/lum_core.c:199
+[MEMORY_TRACKER] FREE: 0x18ea0f0 (64 bytes) at src/lum/lum_core.c:223 in lum_zone_destroy() - originally allocated at src/lum/lum_core.c:191
+[MEMORY_TRACKER] FREE: 0x18ea1f0 (80 bytes) at src/lum/lum_core.c:220 in lum_zone_destroy() - originally allocated at src/lum/lum_core.c:199
+[MEMORY_TRACKER] FREE: 0x18ea1a0 (64 bytes) at src/lum/lum_core.c:223 in lum_zone_destroy() - originally allocated at src/lum/lum_core.c:191
+[MEMORY_TRACKER] FREE: 0x18ea250 (80 bytes) at src/lum/lum_core.c:302 in lum_memory_destroy() - originally allocated at src/lum/lum_core.c:276
+[MEMORY_TRACKER] FREE: 0x18e75d0 (80 bytes) at src/parser/vorax_parser.c:500 in vorax_execution_context_destroy() - originally allocated at src/parser/vorax_parser.c:472
+[MEMORY_TRACKER] FREE: 0x18e9fe0 (80 bytes) at src/parser/vorax_parser.c:501 in vorax_execution_context_destroy() - originally allocated at src/parser/vorax_parser.c:473
+[MEMORY_TRACKER] FREE: 0x18e8c90 (312 bytes) at src/parser/vorax_parser.c:502 in vorax_execution_context_destroy() - originally allocated at src/parser/vorax_parser.c:469
+[MEMORY_TRACKER] FREE: 0x18e9610 (288 bytes) at src/parser/vorax_parser.c:238 in vorax_ast_destroy() - originally allocated at src/parser/vorax_parser.c:197
+[MEMORY_TRACKER] FREE: 0x18e9740 (288 bytes) at src/parser/vorax_parser.c:238 in vorax_ast_destroy() - originally allocated at src/parser/vorax_parser.c:197
+[MEMORY_TRACKER] FREE: 0x18e9870 (288 bytes) at src/parser/vorax_parser.c:238 in vorax_ast_destroy() - originally allocated at src/parser/vorax_parser.c:197
+[MEMORY_TRACKER] FREE: 0x18e8dd0 (32 bytes) at src/parser/vorax_parser.c:237 in vorax_ast_destroy() - originally allocated at src/parser/vorax_parser.c:221
+[MEMORY_TRACKER] FREE: 0x18e94e0 (288 bytes) at src/parser/vorax_parser.c:238 in vorax_ast_destroy() - originally allocated at src/parser/vorax_parser.c:197
+[MEMORY_TRACKER] FREE: 0x18e9ad0 (288 bytes) at src/parser/vorax_parser.c:238 in vorax_ast_destroy() - originally allocated at src/parser/vorax_parser.c:197
+[MEMORY_TRACKER] FREE: 0x18e9000 (32 bytes) at src/parser/vorax_parser.c:237 in vorax_ast_destroy() - originally allocated at src/parser/vorax_parser.c:221
+[MEMORY_TRACKER] FREE: 0x18e99a0 (288 bytes) at src/parser/vorax_parser.c:238 in vorax_ast_destroy() - originally allocated at src/parser/vorax_parser.c:197
+[MEMORY_TRACKER] FREE: 0x18e9c00 (288 bytes) at src/parser/vorax_parser.c:238 in vorax_ast_destroy() - originally allocated at src/parser/vorax_parser.c:197
+[MEMORY_TRACKER] FREE: 0x18e9d30 (288 bytes) at src/parser/vorax_parser.c:238 in vorax_ast_destroy() - originally allocated at src/parser/vorax_parser.c:197
+[MEMORY_TRACKER] FREE: 0x18e9e60 (288 bytes) at src/parser/vorax_parser.c:238 in vorax_ast_destroy() - originally allocated at src/parser/vorax_parser.c:197
+[MEMORY_TRACKER] FREE: 0x18e9f90 (64 bytes) at src/parser/vorax_parser.c:237 in vorax_ast_destroy() - originally allocated at src/parser/vorax_parser.c:221
+[MEMORY_TRACKER] FREE: 0x18e93b0 (288 bytes) at src/parser/vorax_parser.c:238 in vorax_ast_destroy() - originally allocated at src/parser/vorax_parser.c:197
+
+5. Scénario complet...
+  Scénario: Pipeline de traitement LUM avec logging complet
+[MEMORY_TRACKER] ALLOC: 0x18e8c90 (312 bytes) at src/parser/vorax_parser.c:469 in vorax_execution_context_create()
+[MEMORY_TRACKER] ALLOC: 0x18e9fe0 (80 bytes) at src/parser/vorax_parser.c:472 in vorax_execution_context_create()
+[MEMORY_TRACKER] ALLOC: 0x18e75d0 (80 bytes) at src/parser/vorax_parser.c:473 in vorax_execution_context_create()
+[MEMORY_TRACKER] ALLOC: 0x18e9f90 (64 bytes) at src/lum/lum_core.c:191 in lum_zone_create()
+[MEMORY_TRACKER] ALLOC: 0x18ea250 (80 bytes) at src/lum/lum_core.c:199 in lum_zone_create()
+[MEMORY_TRACKER] ALLOC: 0x18ea1a0 (64 bytes) at src/lum/lum_core.c:191 in lum_zone_create()
+[MEMORY_TRACKER] ALLOC: 0x18ea1f0 (80 bytes) at src/lum/lum_core.c:199 in lum_zone_create()
+[MEMORY_TRACKER] ALLOC: 0x18ea0f0 (64 bytes) at src/lum/lum_core.c:191 in lum_zone_create()
+[MEMORY_TRACKER] ALLOC: 0x18ea140 (80 bytes) at src/lum/lum_core.c:199 in lum_zone_create()
+[MEMORY_TRACKER] ALLOC: 0x18ea090 (80 bytes) at src/lum/lum_core.c:276 in lum_memory_create()
+[MEMORY_TRACKER] ALLOC: 0x18e9d30 (312 bytes) at src/vorax/vorax_operations.c:306 in vorax_result_create()
+[MEMORY_TRACKER] ALLOC: 0x18e9000 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x18ea2b0 (336 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+[MEMORY_TRACKER] ALLOC: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:14 in lum_create()
+[MEMORY_TRACKER] FREE: 0x18e88c0 (48 bytes) at src/lum/lum_core.c:42 in lum_destroy() - originally allocated at src/lum/lum_core.c:14
+  ✓ Émission de 7 LUMs dans Input
+[MEMORY_TRACKER] ALLOC: 0x18ea410 (312 bytes) at src/vorax/vorax_operations.c:306 in vorax_result_create()
+[MEMORY_TRACKER] ALLOC: 0x18e8dd0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x18ea550 (336 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+  ✓ Déplacement vers Process: Moved 7 LUMs from Input to Process
+[MEMORY_TRACKER] ALLOC: 0x18ea6b0 (312 bytes) at src/vorax/vorax_operations.c:306 in vorax_result_create()
+[MEMORY_TRACKER] ALLOC: 0x18e8c60 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x18e9e70 (96 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x18e9ee0 (96 bytes) at src/lum/lum_core.c:318 in lum_memory_store()
+[MEMORY_TRACKER] FREE: 0x18e9e70 (96 bytes) at src/lum/lum_core.c:99 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:62
+[MEMORY_TRACKER] FREE: 0x18e8c60 (40 bytes) at src/lum/lum_core.c:110 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:58
+  ✓ Stockage en mémoire: Stored 2 LUMs in memory buffer
+[MEMORY_TRACKER] ALLOC: 0x18ea7f0 (312 bytes) at src/vorax/vorax_operations.c:306 in vorax_result_create()
+[MEMORY_TRACKER] ALLOC: 0x18e8c60 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x18e9e70 (96 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+  ✓ Récupération vers Output: Retrieved 2 LUMs from memory buffer to zone Output
+[MEMORY_TRACKER] FREE: 0x18ea7f0 (312 bytes) at src/vorax/vorax_operations.c:352 in vorax_result_destroy() - originally allocated at src/vorax/vorax_operations.c:306
+[MEMORY_TRACKER] FREE: 0x18ea6b0 (312 bytes) at src/vorax/vorax_operations.c:352 in vorax_result_destroy() - originally allocated at src/vorax/vorax_operations.c:306
+[MEMORY_TRACKER] FREE: 0x18ea410 (312 bytes) at src/vorax/vorax_operations.c:352 in vorax_result_destroy() - originally allocated at src/vorax/vorax_operations.c:306
+[MEMORY_TRACKER] FREE: 0x18e9d30 (312 bytes) at src/vorax/vorax_operations.c:352 in vorax_result_destroy() - originally allocated at src/vorax/vorax_operations.c:306
+  État final:
+    Input: vide
+    Process: non-vide
+    Output: non-vide
+    Buffer: occupé
+[MEMORY_TRACKER] FREE: 0x18ea2b0 (336 bytes) at src/lum/lum_core.c:99 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:62
+[MEMORY_TRACKER] FREE: 0x18e9000 (40 bytes) at src/lum/lum_core.c:110 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:58
+[MEMORY_TRACKER] FREE: 0x18ea250 (80 bytes) at src/lum/lum_core.c:220 in lum_zone_destroy() - originally allocated at src/lum/lum_core.c:199
+[MEMORY_TRACKER] FREE: 0x18e9f90 (64 bytes) at src/lum/lum_core.c:223 in lum_zone_destroy() - originally allocated at src/lum/lum_core.c:191
+[MEMORY_TRACKER] FREE: 0x18ea550 (336 bytes) at src/lum/lum_core.c:99 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:62
+[MEMORY_TRACKER] FREE: 0x18e8dd0 (40 bytes) at src/lum/lum_core.c:110 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:58
+[MEMORY_TRACKER] FREE: 0x18ea1f0 (80 bytes) at src/lum/lum_core.c:220 in lum_zone_destroy() - originally allocated at src/lum/lum_core.c:199
+[MEMORY_TRACKER] FREE: 0x18ea1a0 (64 bytes) at src/lum/lum_core.c:223 in lum_zone_destroy() - originally allocated at src/lum/lum_core.c:191
+[MEMORY_TRACKER] FREE: 0x18e9e70 (96 bytes) at src/lum/lum_core.c:99 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:62
+[MEMORY_TRACKER] FREE: 0x18e8c60 (40 bytes) at src/lum/lum_core.c:110 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:58
+[MEMORY_TRACKER] FREE: 0x18ea140 (80 bytes) at src/lum/lum_core.c:220 in lum_zone_destroy() - originally allocated at src/lum/lum_core.c:199
+[MEMORY_TRACKER] FREE: 0x18ea0f0 (64 bytes) at src/lum/lum_core.c:223 in lum_zone_destroy() - originally allocated at src/lum/lum_core.c:191
+[MEMORY_TRACKER] FREE: 0x18e9ee0 (96 bytes) at src/lum/lum_core.c:299 in lum_memory_destroy() - originally allocated at src/lum/lum_core.c:318
+[MEMORY_TRACKER] FREE: 0x18ea090 (80 bytes) at src/lum/lum_core.c:302 in lum_memory_destroy() - originally allocated at src/lum/lum_core.c:276
+[MEMORY_TRACKER] FREE: 0x18e9fe0 (80 bytes) at src/parser/vorax_parser.c:500 in vorax_execution_context_destroy() - originally allocated at src/parser/vorax_parser.c:472
+[MEMORY_TRACKER] FREE: 0x18e75d0 (80 bytes) at src/parser/vorax_parser.c:501 in vorax_execution_context_destroy() - originally allocated at src/parser/vorax_parser.c:473
+[MEMORY_TRACKER] FREE: 0x18e8c90 (312 bytes) at src/parser/vorax_parser.c:502 in vorax_execution_context_destroy() - originally allocated at src/parser/vorax_parser.c:469
+  ✓ Scénario complet terminé
+
+6. Démonstration Module IA Optimization...
+
+6. Démonstration Module IA Optimization...
+[MEMORY_TRACKER] ALLOC: 0x18ea0f0 (64 bytes) at src/complex_modules/ai_optimization.c:393 in ai_optimization_config_create_default()
+[MEMORY_TRACKER] ALLOC: 0x18e8c60 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x18ea930 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x18e93b0 (128 bytes) at src/complex_modules/ai_optimization.c:215 in ai_optimize_genetic_algorithm()
+[MEMORY_TRACKER] ALLOC: 0x18ea1a0 (72 bytes) at src/complex_modules/ai_optimization.c:146 in genetic_optimizer_create()
+[MEMORY_TRACKER] ALLOC: 0x18f64c0 (800 bytes) at src/complex_modules/ai_optimization.c:150 in genetic_optimizer_create()
+[MEMORY_TRACKER] ALLOC: 0x18f67f0 (800 bytes) at src/complex_modules/ai_optimization.c:151 in genetic_optimizer_create()
+[MEMORY_TRACKER] ALLOC: 0x18e8dd0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x18f6b20 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x18e9000 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x19026b0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x18e9f50 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x190e240 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x18e9440 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1919dd0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x18e9470 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1925960 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x18e94a0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x19314f0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x193d080 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x193d0b0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1948c40 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1948c70 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1954800 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1954830 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x19603c0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x19603f0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x196bf80 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x196bfb0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1977b40 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1977b70 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1983700 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1983730 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x198f2c0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x198f2f0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x199ae80 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x199aeb0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x19a6a40 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x19a6a70 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x19b2600 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x19b2630 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x19be1c0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x19be1f0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x19c9d80 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x19c9db0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x19d5940 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x19d5970 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x19e1500 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x19e1530 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x19ed0c0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x19ed0f0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x19f8c80 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x19f8cb0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1a04840 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1a04870 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1a10400 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1a10430 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1a1bfc0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1a1bff0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1a27b80 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1a27bb0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1a33740 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1a33770 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1a3f300 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1a3f330 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1a4aec0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1a4aef0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1a56a80 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1a56ab0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1a62640 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1a62670 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1a6e200 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1a6e230 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1a79dc0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1a79df0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1a85980 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1a859b0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1a91540 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1a91570 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1a9d100 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1a9d130 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1aa8cc0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1aa8cf0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1ab4880 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1ab48b0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1ac0440 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1ac0470 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1acc000 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1acc030 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1ad7bc0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1ad7bf0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1ae3780 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1ae37b0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1aef340 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1aef370 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1afaf00 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1afaf30 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1b06ac0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1b06af0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1b12680 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1b126b0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1b1e240 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1b1e270 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1b29e00 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1b29e30 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1b359c0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1b359f0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1b41580 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1b415b0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1b4d140 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1b4d170 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1b58d00 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1b58d30 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1b648c0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1b648f0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1b70480 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1b704b0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1b7c040 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1b7c070 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1b87c00 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1b87c30 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1b937c0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1b937f0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1b9f380 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1b9f3b0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1baaf40 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1baaf70 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1bb6b00 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1bb6b30 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1bc26c0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1bc26f0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1bce280 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1bce2b0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1bd9e40 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1bd9e70 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1be5a00 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1be5a30 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1bf15c0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1bf15f0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1bfd180 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1bfd1b0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1c08d40 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1c08d70 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1c14900 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1c14930 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1c204c0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1c204f0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1c2c080 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1c2c0b0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1c37c40 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1c37c70 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1c43800 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1c43830 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1c4f3c0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1c4f3f0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1c5af80 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1c5afb0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1c66b40 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1c66b70 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1c72700 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1c72730 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1c7e2c0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1c7e2f0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1c89e80 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1c89eb0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1c95a40 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1c95a70 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1ca1600 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1ca1630 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1cad1c0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1cad1f0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1cb8d80 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1cb8db0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1cc4940 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1cc4970 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1cd0500 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1cd0530 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1cdc0c0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1cdc0f0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1ce7c80 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1ce7cb0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1cf3840 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1cf3870 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1cff400 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1cff430 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1d0afc0 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1d0aff0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1d16b80 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1d16bb0 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1d22740 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1d22770 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1d2e300 (40 bytes) at src/lum/lum_core.c:58 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1d2e330 (48000 bytes) at src/lum/lum_core.c:62 in lum_group_create()
+[MEMORY_TRACKER] ALLOC: 0x1d39ec0 (40 bytes) at src/lum/lum_core.c:58 "
+  }
+}

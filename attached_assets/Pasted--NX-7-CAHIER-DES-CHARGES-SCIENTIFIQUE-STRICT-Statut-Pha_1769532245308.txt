@@ -1,0 +1,224 @@
+# NX-7 — CAHIER DES CHARGES SCIENTIFIQUE STRICT
+
+## Statut
+
+Phase exploratoire **fondamentale**, non applicative, non optimisante.
+
+NX-7 vise **exclusivement** à tester, invalider ou confirmer ce qui reste **inconnu**, **non démontré**, ou **partiellement inféré** dans les phases NX-1 → NX-6.
+
+Aucune extrapolation cognitive, clinique ou technologique n’est autorisée.
+
+---
+
+## I. OBJECTIF GÉNÉRAL
+
+Transformer les hypothèses résiduelles de NX en **questions causales instrumentées**, mesurables, traçables, et réfutables.
+
+NX-7 ne cherche PAS :
+
+* à améliorer la performance,
+* à produire une tâche cognitive,
+* à démontrer une intelligence.
+
+NX-7 cherche :
+➡️ à **fermer le noyau causal** du neurone NX.
+
+---
+
+## II. CE QUI EST ACQUIS (CONTRAINTES FORTES)
+
+NX-7 DOIT respecter et intégrer comme axiomes :
+
+1. Le neurone NX est un **système dissipatif physique réel**.
+2. La communication est **régimique**, non symbolique.
+3. La mémoire est une **trace statistique dissipative**.
+4. Il existe plusieurs **régimes dynamiques** (INERTE / FONCTIONNEL / CHAOTIQUE / EFFONDREMENT).
+5. Les transitions présentent :
+
+   * hystérésis
+   * irréversibilité partielle
+6. L’énergie (ATP) est une **contrainte causale**, non un paramètre abstrait.
+7. Aucun poids, aucun stockage explicite, aucune optimisation globale.
+
+Toute proposition NX-7 violant un point ci-dessus est **invalidée a priori**.
+
+---
+
+## III. QUESTIONS OUVERTES MAJEURES À TESTER
+
+### Q1 — Résolution minimale de la mémoire
+
+**Question** :
+Existe-t-il une granularité minimale (densité / corrélation) d’invariants en dessous de laquelle aucune mémoire ne peut persister ?
+
+**Hypothèse testée** :
+Mémoire = phénomène critique multi-échelle.
+
+**Mesures requises** :
+
+* densité locale d’invariants
+* temps de persistance post-perturbation
+* seuils de disparition de l’hystérésis
+
+---
+
+### Q2 — Nature exacte de la “mémoire du système”
+
+**Question** :
+La mémoire réside-t-elle uniquement dans la distribution des invariants ou aussi dans leur géométrie topologique ?
+
+**Tests** :
+
+* invariants scalaires vs invariants corrélés
+* permutations conservant la densité mais détruisant la structure
+
+**Résultat attendu** :
+Dissociation densité / structure.
+
+---
+
+### Q3 — Trajectoires préférentielles (proto-raisonnement)
+
+**Question** :
+Existe-t-il des chemins dynamiques privilégiés indépendants des conditions initiales exactes ?
+
+**Mesures** :
+
+* graphes de transitions
+* attracteurs faibles (non stables)
+* fréquences de réémergence
+
+---
+
+### Q4 — Communication inter-NX (si réseau >1)
+
+**Question** :
+Le couplage de deux NX induit-il une synchronisation régimique sans signal explicite ?
+
+**Interdit** :
+
+* tout protocole de message
+
+**Mesures** :
+
+* corrélation de régimes
+* délais de bascule
+* rupture de cohérence
+
+---
+
+### Q5 — Pensée = navigation de régimes ? (pré-cognitif)
+
+**Question** :
+Un enchaînement stable de transitions peut-il émerger sans tâche ni objectif ?
+
+**Indicateurs** :
+
+* séquences répétées
+* compression dynamique
+* réduction d’entropie conditionnelle
+
+---
+
+### Q6 — Vitesse réelle de traitement
+
+**Question** :
+Quelle est la vitesse effective d’adaptation du système comparée aux ANN ?
+
+**Mesure** :
+Temps de réponse à perturbation / coût énergétique.
+
+---
+
+### Q7 — Pathologie de la stabilité
+
+**Question** :
+Existe-t-il un régime “trop stable” fonctionnellement mort mais énergétiquement viable ?
+
+**Lien** :
+NX-5_STABILITY_PATHOLOGY.md
+
+---
+
+## IV. EXPÉRIMENTS À IMPLÉMENTER
+
+### E1 — Scan de densité d’invariants
+
+* balayage continu
+* logs multi-échelles
+
+### E2 — Destruction topologique contrôlée
+
+* conservation énergie
+* permutation structurelle
+
+### E3 — Injection de bruit dirigé
+
+* bruit blanc vs bruit structuré
+
+### E4 — Couplage NX–NX
+
+* interaction faible / moyenne / forte
+
+### E5 — Répétition longue (fatigue)
+
+* cycles énergétiques
+* récupération partielle
+
+---
+
+## V. INSTRUMENTATION OBLIGATOIRE
+
+Chaque expérience DOIT produire :
+
+* logs persistés (.log)
+* données structurées (.json / .csv)
+* horodatage UTC
+* checksum
+* indicateur de complétude
+
+Aucun stdout seul n’est acceptable.
+
+---
+
+## VI. CRITÈRES DE SUCCÈS
+
+NX-7 est considéré **réussi** si :
+
+* au moins une hypothèse majeure est invalidée
+* ou une loi de seuil est identifiée
+* ou une impossibilité fondamentale est démontrée
+
+Le succès n’est PAS lié à un résultat positif.
+
+---
+
+## VII. CE QUE NX-7 NE DOIT PAS FAIRE
+
+❌ Démontrer une intelligence
+❌ Produire une tâche cognitive
+❌ Imiter un réseau ANN
+❌ Optimiser une métrique
+
+---
+
+## VIII. SORTIES ATTENDUES
+
+1. Carte finale des limites de NX
+2. Liste explicite de ce que NX ne peut PAS faire
+3. Base scientifique pour article fondationnel
+
+---
+
+## IX. POSITIONNEMENT FINAL
+
+NX-7 clôture la **phase causale fondamentale**.
+Toute phase ultérieure (NX-8+) sera soit :
+
+* théorique (mathématique)
+* soit comparative (ANN / SNN)
+* soit institutionnelle (revues)
+
+---
+
+**Fin du cahier de charges NX-7**

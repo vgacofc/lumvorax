@@ -1,0 +1,17 @@
+=== RAPPORT RÉSUMÉ FORENSIQUE ULTRA-STRICT v3.0 ===
+Timestamp: 23704047697208 | Modules: 8
+
+Hardware final: cpu_delta=0.00% mem_used=58.26% rss=7596KB peak=10028KB
+
+  hubbard_hts_advanced_parallel: metrics=1 ops=0 anomalies=0 mem=0
+  simulate_adv: metrics=2464000 ops=0 anomalies=1 mem=0
+  pt_mc_therm: metrics=148111 ops=0 anomalies=0 mem=0
+  pt_mc: metrics=380 ops=0 anomalies=0 mem=0
+  pt_mc_swap_detail: metrics=1480000 ops=0 anomalies=0 mem=0
+  pt_mc_vs_mc: metrics=35 ops=0 anomalies=0 mem=0
+  ed_validation_2x2: metrics=8 ops=0 anomalies=0 mem=0
+  benchmark_adv: metrics=6 ops=0 anomalies=0 mem=0
+
+Totaux: metrics=4092541 ops=0 anomalies=1
+
+=== FIN RAPPORT RÉSUMÉ ===

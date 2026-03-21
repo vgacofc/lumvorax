@@ -1,0 +1,89 @@
+Voici **10 grands problèmes mathématiques complexes encore non résolus** (ou partiellement résolus), parmi les plus célèbres et importants. Ils sont connus pour leur profondeur théorique et leurs implications majeures en mathématiques et en physique.
+
+---
+
+### 1. **Hypothèse de Riemann**
+
+👉 Porte sur la répartition des nombres premiers.
+Elle affirme que tous les zéros non triviaux de la fonction zêta de Riemann ont une partie réelle égale à 1/2.
+➡️ Considérée comme *le* problème central de la théorie des nombres.
+
+---
+
+### 2. **P vs NP**
+
+👉 Problème fondamental en informatique théorique.
+Question : *tout problème dont la solution est vérifiable rapidement peut-il être résolu rapidement ?*
+➡️ A d’énormes implications en cryptographie, optimisation et IA.
+
+---
+
+### 3. **Conjecture de Hodge**
+
+👉 Concerne la géométrie algébrique et la topologie.
+Elle relie la géométrie des variétés algébriques à leur structure topologique.
+➡️ Très abstraite mais centrale en géométrie moderne.
+
+---
+
+### 4. **Existence et régularité des équations de Navier–Stokes**
+
+👉 Concerne la dynamique des fluides (air, eau).
+On ne sait pas si, en 3D, les solutions existent toujours et restent régulières.
+➡️ Problème clé en physique et en ingénierie.
+
+---
+
+### 5. **Conjecture de Birch et Swinnerton-Dyer**
+
+👉 Porte sur les courbes elliptiques.
+Elle relie le nombre de solutions rationnelles à une fonction analytique.
+➡️ Cruciale en arithmétique et en cryptographie.
+
+---
+
+### 6. **Conjecture ABC**
+
+👉 Relie l’addition et la multiplication des entiers.
+Simple à énoncer mais extrêmement difficile à démontrer.
+➡️ Une preuve controversée existe, mais elle n’est pas acceptée universellement.
+
+---
+
+### 7. **Conjecture de Goldbach**
+
+👉 Tout nombre pair supérieur à 2 est-il la somme de deux nombres premiers ?
+➡️ Testée pour des nombres énormes, mais jamais démontrée.
+
+---
+
+### 8. **Problème de Collatz (ou conjecture de Syracuse)**
+
+👉 En partant de n’importe quel entier positif et en appliquant une règle simple, arrive-t-on toujours à 1 ?
+➡️ Extrêmement simple à formuler, mais toujours non prouvé.
+
+---
+
+### 9. **Conjecture des nombres premiers jumeaux**
+
+👉 Existe-t-il une infinité de paires de nombres premiers qui diffèrent de 2 (ex. 11 et 13) ?
+➡️ Des progrès importants ont été faits, mais pas de preuve complète.
+
+---
+
+### 10. **Problème du gap spectral (conjecture de Yang–Mills)**
+
+👉 Concerne la physique mathématique quantique.
+Il s’agit de démontrer l’existence d’une masse minimale dans certaines théories de champs.
+➡️ Lien profond entre mathématiques et physique fondamentale.
+
+---
+
+📌 **À noter** :
+Parmi ces problèmes, **les 7 premiers** faisaient partie des *problèmes du prix du millénaire* (1 million de dollars chacun). Un seul a été résolu à ce jour (la conjecture de Poincaré).
+
+Si tu veux, je peux :
+
+* simplifier l’un de ces problèmes,
+* expliquer pourquoi ils sont si difficiles,
+* ou te dire lequel est le plus accessible pour un étudiant. 😊

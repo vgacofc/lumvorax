@@ -1,0 +1,46 @@
+{
+  "run_id": "20260303_174354",
+  "plan_only": false,
+  "skip_install": false,
+  "strict_unified_protocol_enabled": true,
+  "strict_unified_protocol": {
+    "version": "v5-strict-unified-1",
+    "description": "Strict unified benchmark protocol: same circuit family, same qubit sizes, same shot budget across all competitors.",
+    "circuit_family": "ghz",
+    "workloads": [
+      {
+        "circuit": "ghz",
+        "qubits": 4,
+        "shots": 256
+      },
+      {
+        "circuit": "ghz",
+        "qubits": 8,
+        "shots": 256
+      },
+      {
+        "circuit": "ghz",
+        "qubits": 12,
+        "shots": 256
+      }
+    ]
+  },
+  "total": 5,
+  "clone_ok": 5,
+  "install_ok": 5,
+  "import_ok": 0,
+  "snippet_ok": 0,
+  "runtime_ready_total": 5,
+  "runtime_ready_snippet_ok": 0,
+  "runtime_ready_snippet_rate": 0.0,
+  "max_qubits_tested": 8,
+  "strict_unified_workloads_total": 0,
+  "strict_unified_workloads_ok": 0,
+  "strict_unified_workload_success_rate": 0.0,
+  "strict_max_qubits_success_competitors": 0,
+  "strict_competitor_stats": [],
+  "our_latest_v4_run_id": "20260303_174343",
+  "our_latest_v4_max_qubits_width": 36,
+  "our_vs_competitors_max_qubits_gap_pct": null,
+  "max_memory_mb": 17.316
+}

@@ -1,0 +1,18 @@
+{
+  "mode": "deterministic_seeded",
+  "seed": 9,
+  "scenarios": 360,
+  "steps": 1400,
+  "nqubits_simulated": 504000,
+  "nqubits_per_sec": 7578117.764,
+  "nqubit_avg_score": 0.963755271045,
+  "baseline_qubit_avg_score": 0.941333310634,
+  "nqubit_win_rate": 0.641666666667,
+  "nqubit_wins": 231,
+  "baseline_wins": 129,
+  "elapsed_ns": 66507280,
+  "used_hardware_entropy": false,
+  "latency_p50_ns": 179010,
+  "latency_p95_ns": 228830,
+  "latency_p99_ns": 283850
+}

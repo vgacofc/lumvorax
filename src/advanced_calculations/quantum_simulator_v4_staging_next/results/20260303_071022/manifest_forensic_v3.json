@@ -1,0 +1,933 @@
+{
+  "version": "v6",
+  "generated_at_utc": "2026-03-03T07:10:35.588076+00:00",
+  "source_of_truth": "manifest_forensic_v6.json (signed)",
+  "hash_algo": "sha256",
+  "artifacts": [
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_00.jsonl",
+      "sha256": "20d0ed983c8b588ee91cea2b17c9ceb6dd0cc6326f61bd6cbca2920511fa9376",
+      "bytes": 138872
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_00.summary.json",
+      "sha256": "2bf59bf0f325cb03c0d8b36b43a265a8f7e65aaa6322b1ee39c7bb2b1a3bb98b",
+      "bytes": 488
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_01.jsonl",
+      "sha256": "db99be23a590131e01508b02f1a6206a2a3cfe3af7eaf8d8680b507d5fee623c",
+      "bytes": 138836
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_01.summary.json",
+      "sha256": "7a96d62f3cee7e53a531b58dda94d12ff542c9fcf6200b8f5e2f10068d59f253",
+      "bytes": 488
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_02.jsonl",
+      "sha256": "bf89f1adf7210d8c0163112e05389c29bb9aa1b91534acd86307baf8d988b340",
+      "bytes": 138947
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_02.summary.json",
+      "sha256": "42ba8a7bf2c67de5f4753946381fa9fd7572f76e8238f8bd24ee7c479d30c2cd",
+      "bytes": 488
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_03.jsonl",
+      "sha256": "991bba8a6cacc6e07090b66000ad4716b76cb4dc6b91ec4620e30ba66c95c9f0",
+      "bytes": 138847
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_03.summary.json",
+      "sha256": "1b01725453d23f64fa2dcd40710f5b818931d630c08b428aa6f2aa36a80da48d",
+      "bytes": 488
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_04.jsonl",
+      "sha256": "8b7acc62e42869ffd828d694642a8d17e9d67bda7a419bff50e2608fe0af851a",
+      "bytes": 138972
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_04.summary.json",
+      "sha256": "79df2d0ee848d85bc10db354dc49181422438f0b9a7f69c0c519c0ef2abc04e1",
+      "bytes": 488
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_05.jsonl",
+      "sha256": "2fe11cdb1d33f5151e856d4ad06063eaf23bc405b1718d5a3d8967040b9f67f4",
+      "bytes": 139062
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_05.summary.json",
+      "sha256": "5da5464f3a61f4715aa32d69b06226ce4dfe65a9c47c173d0b32fc45b1ae2219",
+      "bytes": 488
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_06.jsonl",
+      "sha256": "3dc0d0797046183582d2355b89fead4632a8712dd7ed108bff768185024012af",
+      "bytes": 138987
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_06.summary.json",
+      "sha256": "82e25d78595abc62f6177397ef57e33110253ea634d23e4571d50278cdcd3f5b",
+      "bytes": 488
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_07.jsonl",
+      "sha256": "44d2f24ac1740c614c51ce1457eb048a7168cc1892963eb645c3b1a932fbd4ca",
+      "bytes": 138778
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_07.summary.json",
+      "sha256": "204d21f5ff54649734ab7480f46c0d60856bb064806c8fb697a4903a80c39451",
+      "bytes": 488
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_08.jsonl",
+      "sha256": "7f350348cd32bba69a046c3784e709da801bf82e4508fcaf1b49eb94616d6982",
+      "bytes": 139001
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_08.summary.json",
+      "sha256": "d947973b5286b97ed9bb8f9155c4f6579bf95c90b945a304e3a025cc14ca3eaf",
+      "bytes": 488
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_09.jsonl",
+      "sha256": "32af1a92c17d9e9d30a5546df03086c056a77b09fd57a843adf8ce82a7377f18",
+      "bytes": 139041
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_09.summary.json",
+      "sha256": "f705afe8a212ac261a3bf75c47a890dc657c8142aae7fa514a51a7c2b6a9b029",
+      "bytes": 489
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_10.jsonl",
+      "sha256": "9d48499eef0c8b45db88cb0b921a01d5bf83113376fc7bba8c13646bb89b414b",
+      "bytes": 138906
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_10.summary.json",
+      "sha256": "4be5f561861233b4dd2fea17959d5c69753afcf69b6d9315b0fecfb93ce685e0",
+      "bytes": 489
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_11.jsonl",
+      "sha256": "45bcf6d60484f77c826f6886755888c21eee10264809acac205dbb8df49b1cb8",
+      "bytes": 139001
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_11.summary.json",
+      "sha256": "69f6d1296576626900d25421b48d53ed5a814cbe10e40765204c5475bac86c47",
+      "bytes": 489
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_12.jsonl",
+      "sha256": "98da3d89393406225e0c9576b7d5775b1b643f92df1f30b177ca8ca2bb4edde5",
+      "bytes": 138928
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_12.summary.json",
+      "sha256": "22b652b288ca839b534ee17736cf473ad27e7be521ebd2822044c4b1e961f95d",
+      "bytes": 489
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_13.jsonl",
+      "sha256": "48a66146d87d3e095541b7fc37c37d3f885ee7272eea1061e3be3b1ed1d9a3e8",
+      "bytes": 139015
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_13.summary.json",
+      "sha256": "c0ff6e8c4996cf790e6b46196eec05ffdc99d79a1336ea310e58e3d7f4b6987b",
+      "bytes": 489
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_14.jsonl",
+      "sha256": "da35d98c1ed434c613083e892396e7e105f858bc6dd6eb826354cc9580b49f9f",
+      "bytes": 138917
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_14.summary.json",
+      "sha256": "b16be9c2bab763ea01442828e3249491b50f0a405c9fb1f50daf91a5e34c5f1c",
+      "bytes": 489
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_15.jsonl",
+      "sha256": "578a3b3ac2b990ed35efc343b8aba796c9b0646f47086ebfc0f0a7d4fba63383",
+      "bytes": 138960
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_15.summary.json",
+      "sha256": "0c25f1221a6e6b92f354fac5cb835282f426a43380d4762164f8ede087536b25",
+      "bytes": 489
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_16.jsonl",
+      "sha256": "ace2d7065e8ed84e66f28307a93ae8ce2e5df501e689f357afe32cea7eb8bbf7",
+      "bytes": 138970
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_16.summary.json",
+      "sha256": "50eddcbf87fe2038769fb7c7e27c23cdf58e58738b120ec803c081d7c3f8d7c9",
+      "bytes": 489
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_17.jsonl",
+      "sha256": "519bd5c336d32058c7fd776496ff7084948b9688b3eb1481b62f1edcf3e209cf",
+      "bytes": 138904
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_17.summary.json",
+      "sha256": "beddb2e857a62bc8849a74c68a590b6741959cc5e2db9f61c5d00ec6de8dc9e5",
+      "bytes": 489
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_18.jsonl",
+      "sha256": "4c2a3719e803a58dc79ab3934c4a542e4bde6cb4017875365214431db755b02b",
+      "bytes": 138888
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_18.summary.json",
+      "sha256": "fb36fdf477e09cf60809aeda8be3638d708b09b7086ff71c88020487f094d0ab",
+      "bytes": 489
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_19.jsonl",
+      "sha256": "9962ec6b5f3a8c5e9bef9c03f2bfbed2305a5a5078136a41bd30e0441dbf7658",
+      "bytes": 138752
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_19.summary.json",
+      "sha256": "743329e43a2cc8299e546406ea9406b4ca8820537815ff78cdcf674e1a514d89",
+      "bytes": 489
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_20.jsonl",
+      "sha256": "3cff7fc15bb4e829d003d1a453e22137b9373ca2562085d08a29e22a1b83335e",
+      "bytes": 138875
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_20.summary.json",
+      "sha256": "9f2ce269ec17b47d1a44edf2edceba86c2e6407e6be626a3408ecb6378903591",
+      "bytes": 489
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_21.jsonl",
+      "sha256": "76e83ed01b666d00a81e8562df88458378fadc25051ecd64bc30234aa72c5f65",
+      "bytes": 138822
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_21.summary.json",
+      "sha256": "2e41a1e6a19e0c35966b83dcd4cd7520f873547651bd943000b810b0ec4ea04d",
+      "bytes": 489
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_22.jsonl",
+      "sha256": "f245313e524bc14ba70494d0e159632abdc143660c52c9d68bef4d4adb3d28e6",
+      "bytes": 138738
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_22.summary.json",
+      "sha256": "996f351a016e6eee00a4c0f401ddc1c5b2730e05a24df2db93b90e843346dfae",
+      "bytes": 489
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_23.jsonl",
+      "sha256": "719b38559ee1a29e8bd2b5298f92f2006f0ad841e8bab87f0c02fdceec5a51dd",
+      "bytes": 138704
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_23.summary.json",
+      "sha256": "bc43a6fe0835a1df8e0069157c1ae1d8fd1d6f154d4e69c519a2da3cb801fe09",
+      "bytes": 489
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_24.jsonl",
+      "sha256": "787a0e8fa1d1c8ae788abdda1f30a177a7aba4fef8952f5e4edd2e682c8ae91c",
+      "bytes": 138785
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_24.summary.json",
+      "sha256": "0edc9baaf6fe833973ce5a62074cc88c35df8193fc18e1f6b313b16c1c168b9a",
+      "bytes": 489
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_25.jsonl",
+      "sha256": "b7ad0dcb25043945021243ae5dfd7e22694a5957d0e0c249af120bf48b912515",
+      "bytes": 138927
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_25.summary.json",
+      "sha256": "ba031bb8108b6d33483d30bf6642f9beb500143f5e7beee2a546be7428e96ec5",
+      "bytes": 489
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_26.jsonl",
+      "sha256": "15ff50b39eb4704df4266565dc4ea37659110ae983905510aad3d6fb28f6d7a7",
+      "bytes": 138921
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_26.summary.json",
+      "sha256": "d09d2cad6d626b86c84fbea03498f8ab7204fb90c85013b7cc31de0fc009d36b",
+      "bytes": 489
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_27.jsonl",
+      "sha256": "c5ce592bcc6b6f41dcb175f79f71a36c7dacf8d13c8e6c2ccc39062c4f37086b",
+      "bytes": 138934
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_27.summary.json",
+      "sha256": "b2691b5662e30b65348d7956b43382dcda162c48d16fa0f7d2c277109888e244",
+      "bytes": 489
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_28.jsonl",
+      "sha256": "2e70f3c4de522db6631f6c2cc9aba4c9ae43b5880ba48b13d12ea7dffbd36657",
+      "bytes": 138863
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_28.summary.json",
+      "sha256": "37616a03034702caadbb0c5cf35ebdaf7a7715ec72c7b392a3cbb409b889a2b6",
+      "bytes": 489
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_29.jsonl",
+      "sha256": "83c9dc1026ee0cf56cf25a9df9c5edcbea082bbabb26b54af1e2af0a4a21f41e",
+      "bytes": 138985
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/baseline_neutralized_run_29.summary.json",
+      "sha256": "69cd346ddbc61dff1022ed5d6bcfd88834aacd5885272e5cad618a5bc02ef327",
+      "bytes": 489
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/campaign_runs.csv",
+      "sha256": "a12e4faca95a3df0d11449418a27a568ddbc9249611975fe043536f8f6404a01",
+      "bytes": 16426
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_00.jsonl",
+      "sha256": "0886f26319ff944a7a8e9ff8ec070956d49a45350c80f9b20e0124d841d36643",
+      "bytes": 139839
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_00.summary.json",
+      "sha256": "a44919696a7b9e9478e0f93eae10566821eda91341dd263ded6a1a183291aebf",
+      "bytes": 489
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_01.jsonl",
+      "sha256": "12cbc00ed9eb0232fdb61deef6104fa5784601a2ef207109bdbd3a0c4f963904",
+      "bytes": 139893
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_01.summary.json",
+      "sha256": "2cb5d58a070dab512644f2dbc0b160dde398c75c57d8aae521195101fde56b79",
+      "bytes": 489
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_02.jsonl",
+      "sha256": "fbbc85d289b91aa31278502b587cd3f105283020ff5fbf86ff6ce3af0052d2c2",
+      "bytes": 140102
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_02.summary.json",
+      "sha256": "3576ddca7dc05535c7769d2dfd9950b853f76afcbc8e99858da48e6874e50744",
+      "bytes": 489
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_03.jsonl",
+      "sha256": "d3db97dc0091655a8c34419d64d6ed336a23a506b0704e82c749d8cbdff99f80",
+      "bytes": 139999
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_03.summary.json",
+      "sha256": "55c4d9add45785113f49685d39197ee45a656c135dcf9e016640cfc9abd386ba",
+      "bytes": 489
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_04.jsonl",
+      "sha256": "5e41acd160102e2b74468c53d6e77c16872d8a1213f9883c6697fcf32ea6c95b",
+      "bytes": 140159
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_04.summary.json",
+      "sha256": "86d19b32d002a8cb6ea10ab1c6e028fdb1e43df1b1a22520debb5f9d760ab409",
+      "bytes": 489
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_05.jsonl",
+      "sha256": "0c40446d54490d56e41b731fd8fa69d90c54c188fea39cabe710bbf559f28850",
+      "bytes": 140028
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_05.summary.json",
+      "sha256": "ce5bb163d0f4b99174d2a076c5e567c42155e096d54b33693d0e7597fd349e68",
+      "bytes": 489
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_06.jsonl",
+      "sha256": "8b869801095ae9327ae03b23cbead40b6f86e7d25af3d1b6106c8d3d55ccfb51",
+      "bytes": 140131
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_06.summary.json",
+      "sha256": "6e3f2034ebf259d4880854874cd33b636ca69f8e83192b9e7ac2c8ace80d1226",
+      "bytes": 489
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_07.jsonl",
+      "sha256": "717f69f6e3b1be3c58d4d28ec2cdfbe4f06546a2e920287d989fb41943a34c82",
+      "bytes": 139830
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_07.summary.json",
+      "sha256": "d87166ccde49f5149a07130df7ccc76e4479b94153d9185fbd4773e8287563eb",
+      "bytes": 489
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_08.jsonl",
+      "sha256": "089030091344818dd67c408b033a9cf9953f029961b1865d1044c29234ff663d",
+      "bytes": 140125
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_08.summary.json",
+      "sha256": "9611cdf0416850827357547b308a8ac531aa6ebe8f7d0ad75aed10e9b958c20f",
+      "bytes": 489
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_09.jsonl",
+      "sha256": "41b964c8cdf4e0d264cdcf1ee331d19c9543bad1b4a4ce31c83cf7c78ee71e70",
+      "bytes": 140145
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_09.summary.json",
+      "sha256": "f4392415891cc57d936f1cced585850d7b1649ba8aec0878b47c00342fbe5730",
+      "bytes": 490
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_10.jsonl",
+      "sha256": "0fb68f689ee08a8389c3c5ef2c41aa7c03eee7e0d6efae6b004e6b1465cd9aa7",
+      "bytes": 140001
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_10.summary.json",
+      "sha256": "514c0164b44cdf92d5525e641e80bf3651a4fbb607418f77b8898321baa6fb68",
+      "bytes": 490
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_11.jsonl",
+      "sha256": "98bc1b6c124b49328c0c0c91aba50ef9cecbba7902721d155a210c4fb906b129",
+      "bytes": 140209
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_11.summary.json",
+      "sha256": "a089758492fb82db079c0925b275b5817ddb4639a12ff7717caf85480a35ea06",
+      "bytes": 490
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_12.jsonl",
+      "sha256": "786b19bfd34b40c59170997a3f489b8e304a98082b73183f6e109cde7eb944a5",
+      "bytes": 140171
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_12.summary.json",
+      "sha256": "89d535b99cea0eb07f72d211265171737f70e00616a02b6010f9329c91180e5b",
+      "bytes": 490
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_13.jsonl",
+      "sha256": "6ab735937829c95834c8db618248eb03eff63b355f2159035a2a1b5968cbef23",
+      "bytes": 140193
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_13.summary.json",
+      "sha256": "cd4601749406d1ec07d77e59fe75418acf2270e47cab521865e317c9b7b2eaeb",
+      "bytes": 490
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_14.jsonl",
+      "sha256": "1cbe94afff01e08d07f848d660ba6c25102ea34bda1a6bc899f45d61352c4422",
+      "bytes": 140090
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_14.summary.json",
+      "sha256": "8a8b750bdc7abd382201adbe458942ce716f7a98fcff9cf98875e4190a5daf26",
+      "bytes": 490
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_15.jsonl",
+      "sha256": "9cf31aac27a7c7ae8106ae3716ac77f3570a9698e39a796d3c4c783e5bc40d69",
+      "bytes": 140216
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_15.summary.json",
+      "sha256": "0bebfd4df6807c6e29c5b2d0cf683a820baf244d3532eb5e653aa96e9d733335",
+      "bytes": 490
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_16.jsonl",
+      "sha256": "c28ed9a8a8368b01c5c816cc2199385df565bf0b0b38ae79a0ae53a15d03239c",
+      "bytes": 140252
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_16.summary.json",
+      "sha256": "5d0933d69aa428ecfae4a70bc7d78ffedb3ab6ffd69cdc50fdb5930d99378e20",
+      "bytes": 490
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_17.jsonl",
+      "sha256": "688ad1b1e82d4062d9edcdaa3c0875a3b1fca5a95006985fe3c1a6895d709cee",
+      "bytes": 140027
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_17.summary.json",
+      "sha256": "d7885bc76ea90642e9f90967685209fb16ecde2657cefbef8bd1c8f70c5dfade",
+      "bytes": 490
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_18.jsonl",
+      "sha256": "129423a363ef6a8279c45ce195d237e7cb606bc77e2528fb32944c9b172ff76a",
+      "bytes": 139852
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_18.summary.json",
+      "sha256": "544d411a51bbde78f324079c5f70b2c9985d75470897cc60fd6bd33d397deb52",
+      "bytes": 490
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_19.jsonl",
+      "sha256": "eb2986dfb4cc82b5fa984e0284ac0382c22da0f2779722d310e0ffcbe0e18777",
+      "bytes": 139775
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_19.summary.json",
+      "sha256": "15361e95bfccefbfccda798d44da3a88835fc451a221d2808c6500182ee97a7e",
+      "bytes": 490
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_20.jsonl",
+      "sha256": "da3731eeb13b979089b7879cba3f7bee78796e70ed3d71ccbc3a9cde44a8e1fb",
+      "bytes": 140027
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_20.summary.json",
+      "sha256": "2776bd43202a90b994549380f4c424fcc299860068a6bf60d6bad4b1b9d2676d",
+      "bytes": 490
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_21.jsonl",
+      "sha256": "cf2697c7f5ebc576939cf8ca5cd7e5361933a17676def4a088566594dc78322c",
+      "bytes": 140012
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_21.summary.json",
+      "sha256": "73780a2842ae3013839b7efb23aa374d49a3c3339c6c809635b43bbc8b393628",
+      "bytes": 490
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_22.jsonl",
+      "sha256": "164396b391d91eea416f2462957788650da2fae73e38d971608d9d1281450c6c",
+      "bytes": 139597
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_22.summary.json",
+      "sha256": "acced1afb73e42627ea43134bc45fff98dae36f2bf7c4a2ab5616c5c6291e4bb",
+      "bytes": 490
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_23.jsonl",
+      "sha256": "48d0607ebaa9966e429b3ebad7f5822c543835d21bf55a9ca6df57f71fb6302a",
+      "bytes": 139813
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_23.summary.json",
+      "sha256": "b5eb3054d7f9d7c9250138f5fb244bd09048a88623129d0edf955406ebcf7b2a",
+      "bytes": 490
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_24.jsonl",
+      "sha256": "b97c054281f2fc67f9ed034b83f9a99348364ca845451951ca0e6a35a2b6d3b0",
+      "bytes": 140153
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_24.summary.json",
+      "sha256": "0bab1e09f24f037f6bca99d013c3e036ea02ac363ce20635b042f5d8c3981d3f",
+      "bytes": 490
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_25.jsonl",
+      "sha256": "71949b2946d5f6daec42cfffb216ca546f91210c2efdfffc1b6eeb2619ae0069",
+      "bytes": 140012
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_25.summary.json",
+      "sha256": "7fe1da03dbcd6b423d4972c0d1429a0116972889ec897554db2999d98bf8df34",
+      "bytes": 490
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_26.jsonl",
+      "sha256": "4a464736de5c5a88414982036981ce9b9b596ea6a2982188be9932f8b81cf11c",
+      "bytes": 140084
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_26.summary.json",
+      "sha256": "dddfe7a0eb0cf615f17ef613acf827aeb67bba69742174ba3675a4e38e5edd93",
+      "bytes": 490
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_27.jsonl",
+      "sha256": "10a9c47c54cf4bc10034458f3cf8c0178b9843971ad683776faee91f974e8b10",
+      "bytes": 140057
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_27.summary.json",
+      "sha256": "f1300f5c1672bab2e7ebb8a90209374c8321f756d3b13925783f0085adab569f",
+      "bytes": 490
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_28.jsonl",
+      "sha256": "63ae5dcb22278400609496e7a6452d7d93208d32db4b1a655dbc84072a2677d7",
+      "bytes": 139941
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_28.summary.json",
+      "sha256": "ba68a6bfe2f057cec4d63c1bcb46b7e135cf7f10948306b6d7cc07228cfddadb",
+      "bytes": 490
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_29.jsonl",
+      "sha256": "66ac844e2549acf5f3c11ed845b43c0fcd88e1bd26149853ff7510dccaad08aa",
+      "bytes": 140238
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/deterministic_seeded_run_29.summary.json",
+      "sha256": "b1bcc5805ceb72d69c6da5e5b3e0b6ebb738c89c5f9a1bcb1fb4824b4128a751",
+      "bytes": 490
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/failure_reasons_frequency.csv",
+      "sha256": "f6600d210ff90d29237b57455139bb214011a34c682362d02c4d2373b1603872",
+      "bytes": 94
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/fusion_cli_v3",
+      "sha256": "b7a06801d025404762f65903a8343caff9c60044e6ab047e19ee8728b53e5d80",
+      "bytes": 21176
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_00.jsonl",
+      "sha256": "44d98b3748f0cf69427a45e449626983e81c0387bed82a1787741d9d7f690b4b",
+      "bytes": 139860
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_00.summary.json",
+      "sha256": "f6c698aa5c79542bd814883a0663d0167a7d5c34f92bdb4c77a068db88f00bbe",
+      "bytes": 486
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_01.jsonl",
+      "sha256": "091e37a35cb80e6e4bb63d0b73913c83072f8908ea4a4685f44a7aa346ee9c04",
+      "bytes": 139882
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_01.summary.json",
+      "sha256": "22398943bb016a4a61d1dd0aad6f371ed5aab59331192d636fa9680040aa0990",
+      "bytes": 486
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_02.jsonl",
+      "sha256": "71c401db0e41c23f776f88fc27493e292535c8d34cc6a601bba48b760e89bfaa",
+      "bytes": 140027
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_02.summary.json",
+      "sha256": "b0fdac2903992ef1976f06255739c6f8a52b51d55be535a92c041961732a040e",
+      "bytes": 486
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_03.jsonl",
+      "sha256": "99606882f97dac6b594ae23dbbc57021e235394cc829729b385b771d95240a1a",
+      "bytes": 140007
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_03.summary.json",
+      "sha256": "0bc1ff072ac92899590dd4d2d6387b7ee3ab4633ebcc458ae8e52329b59155c2",
+      "bytes": 486
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_04.jsonl",
+      "sha256": "0715be10c59bde35e9dc94a202a8dfc0b115986b8220321b0c51fa0dcc2683f9",
+      "bytes": 139937
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_04.summary.json",
+      "sha256": "b5b86110ec7c6fd7861c115dd925f6ef88435be2a1bf1a7cb29a037101461e75",
+      "bytes": 486
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_05.jsonl",
+      "sha256": "50f49790c0c48177896fed685c5982b635e6dd996c3d74de2813d8b42bddb219",
+      "bytes": 139901
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_05.summary.json",
+      "sha256": "b54ce4fb640c31ce6d7af65744fe353a1dc545259585c8778a7b5e032947231d",
+      "bytes": 486
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_06.jsonl",
+      "sha256": "1a19f601851eb29022ee43fb719aee3b3fca6b8caff9fcf7f2796ffa058abf95",
+      "bytes": 140083
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_06.summary.json",
+      "sha256": "cbfa3da70b6fb4a63f6b21e40dddaf8fa07aee1bbb3c3b04f12a216307398170",
+      "bytes": 486
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_07.jsonl",
+      "sha256": "d2b3aa796f7902cfac60ea35a10ce383f07ff8c900db8452d0871d9ddc4e0741",
+      "bytes": 139793
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_07.summary.json",
+      "sha256": "dcf7ef7f0c8971cd92174745a5d89ae622eb7d175434905b432984a9433a489b",
+      "bytes": 486
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_08.jsonl",
+      "sha256": "d0153d5241c11d3489e3921b224cf80bdadddc8e49dba186f9f4e4688619bfaf",
+      "bytes": 139904
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_08.summary.json",
+      "sha256": "866dec6529505212cdffdb9c710a93187723f2684b50dc6475bb13d975f9c100",
+      "bytes": 486
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_09.jsonl",
+      "sha256": "bf44c8362ba0bc99c9fed7c19b2599cf8eb0c5072f0fc04af950f7d54d95b466",
+      "bytes": 140083
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_09.summary.json",
+      "sha256": "b261a8cd68f80a83e7f12cdf3614a5e1b14b301f8beaeeb3769e6f0a61d81ccf",
+      "bytes": 486
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_10.jsonl",
+      "sha256": "0dc75a6878a8075f180298729cd50954aaa4ed2e031105743de79e7825e5527a",
+      "bytes": 140199
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_10.summary.json",
+      "sha256": "b0808c10a0029aa0b4922585b5bfcaa5ddc743b2f38ef06c33af65e4e5c81156",
+      "bytes": 486
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_11.jsonl",
+      "sha256": "57283692bcc8806e0d9eeec20aa1afe7259c142452750f16ab651c9306d582d5",
+      "bytes": 139906
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_11.summary.json",
+      "sha256": "7f79b8b2604d2a02d65692d2751763492d60e0ef023518958ba089f016d26534",
+      "bytes": 486
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_12.jsonl",
+      "sha256": "4b2ee45c9fac359b6111bb6da4e677d6ccbce6d902e589834ed97fe7ce829a28",
+      "bytes": 139904
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_12.summary.json",
+      "sha256": "06b56fca5e5047aab1326a34ad0cd5cf924f031d98f9bae4fe975a0897bd8790",
+      "bytes": 486
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_13.jsonl",
+      "sha256": "38bb6a6e730be366f4dfd73c84faf62dceb78f6fa04612ff8a36238d0bc7fa3a",
+      "bytes": 139974
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_13.summary.json",
+      "sha256": "8cae79cf25b0f2d165a5e3034bb91f4fa6dd2b2cbcd70bae091d83583601c43d",
+      "bytes": 486
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_14.jsonl",
+      "sha256": "c7927ed88b7865a0f639c7a7fc5da1f6acaa65d6633458d1a1d4c11acf78ab6d",
+      "bytes": 139677
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_14.summary.json",
+      "sha256": "f66b2f5770eb55da88f7afc3c4171789e401a35f5663be145081e5cf1079dd85",
+      "bytes": 486
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_15.jsonl",
+      "sha256": "e8c5c76b2e027ce0aab8e1e710a6f63066a29824e344818054a9435083dd5ebe",
+      "bytes": 140215
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_15.summary.json",
+      "sha256": "4aa02b42c6d945fe9995e8dd83b2a808a15ed293be428cbbd43d3fa410d573d4",
+      "bytes": 486
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_16.jsonl",
+      "sha256": "79d3f52a555cacee3e512dcb2a0ab9af82beea9775ca8ddebf0dee6597fdf039",
+      "bytes": 140029
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_16.summary.json",
+      "sha256": "f3613ee815e9b4f9a4de621d8a04a8bf1c0fa8bde70af356abdc3e9695add4af",
+      "bytes": 486
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_17.jsonl",
+      "sha256": "74f682b6eec4a65033d85f473e9f1b3123a96132f6cc5bee458b990df2828b50",
+      "bytes": 139963
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_17.summary.json",
+      "sha256": "e1e053aa20b102085468e89f30641bae501efdd8fca5265ee53867b1134c3327",
+      "bytes": 486
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_18.jsonl",
+      "sha256": "751b0326f5a5873d9a53151ca4b374d51609c5829677838fd50d3a8fa85f2fe6",
+      "bytes": 140197
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_18.summary.json",
+      "sha256": "7492fbf5bbd653fc962710607b5fc92c9bc534e17360d424a2a896a56b0b2c69",
+      "bytes": 486
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_19.jsonl",
+      "sha256": "acffe7a371f6720c459a24395be7f420d77b85dab4348f2c8488c83acc809080",
+      "bytes": 139833
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_19.summary.json",
+      "sha256": "17efa6193d2f42f218a1db1dc31209e705e538d36b95f44d8904a50bbde132eb",
+      "bytes": 486
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_20.jsonl",
+      "sha256": "3577a5f347c40bdba8b81701ae5f8742d025568d89af0ba94909d2e2b2086711",
+      "bytes": 139971
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_20.summary.json",
+      "sha256": "3e46e75e54d4345a85f9adc4481f1e8266a62847fc7fb20955ca16b4e1f19923",
+      "bytes": 486
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_21.jsonl",
+      "sha256": "ea21af5c1130f4df53b292be63d7b226320b9d3df85195128f4f83e149920c09",
+      "bytes": 140166
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_21.summary.json",
+      "sha256": "68ee277389900f4de8cc22378a59c5e0f304c94b9880538748bc319810d70029",
+      "bytes": 486
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_22.jsonl",
+      "sha256": "0f21a7753231a738c09929598c5486c302add70b6a71e803736d71dad172fea2",
+      "bytes": 139904
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_22.summary.json",
+      "sha256": "1f3b69814d675bdfb288bad3b7c2db44eea30260fd8f6105422f9fa69eea0233",
+      "bytes": 486
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_23.jsonl",
+      "sha256": "6e28e1cfb71d3d26fa68306549a609a6b27a5fdc1dd57a2a734bdf8c48cc2333",
+      "bytes": 140025
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_23.summary.json",
+      "sha256": "11edb255f97c0d1d1051c26d29045fe19ee1242eabff00c5ad475399c47bccee",
+      "bytes": 486
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_24.jsonl",
+      "sha256": "50c59ca857093013c1d649182b1316a398a3803ffde4ecbdb40c089470199f01",
+      "bytes": 139979
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_24.summary.json",
+      "sha256": "46ce40b80591afb4859db2f38ef10a6206746b865426e967928e008f28a15a2c",
+      "bytes": 486
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_25.jsonl",
+      "sha256": "49a8f8729cc31dd98706d0facea381ac193b18b5d58b766a27d4e43e1e4f8ff8",
+      "bytes": 140177
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_25.summary.json",
+      "sha256": "63578db6c88ec17a6de4870424c9bb9875146cfadde50e3d2159b999ed4fef13",
+      "bytes": 486
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_26.jsonl",
+      "sha256": "70b62eb0a7f3d1274b64b741a86c98c4cb2e88083b82a360f6f5e89a70278b83",
+      "bytes": 139722
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_26.summary.json",
+      "sha256": "1ed54c839cf2f0f7e3e3f8f10bd9e9b15e38dc490564ae2c08c5cbf2b4ac7ca1",
+      "bytes": 486
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_27.jsonl",
+      "sha256": "a4c334441ed7d7797f92bf8d8d96260244ce560b5e1095ad6a6284284d6d8fcd",
+      "bytes": 140056
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_27.summary.json",
+      "sha256": "a28df9d0e10580ff25eb09619d0d08fdefbc8af5c2da5a243fa86e992fe73abf",
+      "bytes": 486
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_28.jsonl",
+      "sha256": "3e764374b6be8d2959a2294afdf458ce499f1b1f7f08272c1521b4fe61923acd",
+      "bytes": 139979
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_28.summary.json",
+      "sha256": "7ce4a484bf3c2927f437cf14ae6c65d084fd32413558b398eea09973d3444fe4",
+      "bytes": 486
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_29.jsonl",
+      "sha256": "f8511904d536f07d7ca48434a226f4c4ebb4e82b2c1f5ef52255a4648ffefd01",
+      "bytes": 140117
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/hardware_preferred_run_29.summary.json",
+      "sha256": "865837d185febc6d53660a778632789a3b2974ce72a6f1a47af304feaa0e83dc",
+      "bytes": 486
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/official_smoke",
+      "sha256": "70106f4e0f95253859924a39fede48058405c7f592e954a4351800090fe6beb3",
+      "bytes": 56104
+    },
+    {
+      "file": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_071022/scenario_losses_frequency.csv",
+      "sha256": "c9f8237040fe93bc5b486d302868e901a983a68ae6fbb02ca03eaba33b400697",
+      "bytes": 11998
+    }
+  ]
+}

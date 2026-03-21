@@ -1,0 +1,423 @@
+0001: # ============================================================
+0002: # Vesuvius — SINGLE-PATH DROP-IN (public-anchored + private-seeded hysteresis)
+0003: # Goal: beat/at least match public 0.55 using ONE safe upgrade:
+0004: #   strong = (private_prob >= 0.90)
+0005: #   weak   = (private_prob >= 0.50) OR (public_argmax != 0)
+0006: #   mask   = binary_propagation(strong within weak) + closing + dust
+0007: #
+0008: # Writes: /kaggle/working/submission.zip
+0009: # ============================================================
+0010: 
+0011: from IPython.display import clear_output
+0012: import os
+0013: 
+0014: # protobuf compatibility shim (protobuf>=5 removed MessageFactory.GetPrototype used by some deps)
+0015: try:
+0016:     from google.protobuf import message_factory as _pb_message_factory
+0017:     if not hasattr(_pb_message_factory.MessageFactory, "GetPrototype"):
+0018:         def _compat_get_prototype(self, descriptor):
+0019:             return _pb_message_factory.GetMessageClass(descriptor)
+0020:         _pb_message_factory.MessageFactory.GetPrototype = _compat_get_prototype
+0021: except Exception:
+0022:     pass
+0023: 
+0024: # protobuf stability (common Kaggle container mismatch)
+0025: os.environ.setdefault("PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION", "python")
+0026: os.environ["KERAS_BACKEND"] = "jax"
+0027: os.environ.setdefault("OMP_NUM_THREADS", "4")
+0028: os.environ.setdefault("MKL_NUM_THREADS", "4")
+0029: os.environ.setdefault("OPENBLAS_NUM_THREADS", "4")
+0030: os.environ.setdefault("NUMEXPR_NUM_THREADS", "4")
+0031: 
+0032: var="/kaggle/input/vsdetection-packages-offline-installer-only/whls"
+0033: !pip install \
+0034:   "$var"/keras_nightly-*.whl \
+0035:   "$var"/tifffile-*.whl \
+0036:   "$var"/imagecodecs-*.whl \
+0037:   "$var"/medicai-*.whl \
+0038:   --no-index \
+0039:   --find-links "$var"
+0040: clear_output()
+0041: 
+0042: import time, zipfile
+0043: import numpy as np
+0044: import pandas as pd
+0045: import tifffile
+0046: import scipy.ndimage as ndi
+0047: from skimage.morphology import remove_small_objects
+0048: import keras
+0049: from medicai.transforms import Compose, NormalizeIntensity
+0050: from medicai.models import TransUNet
+0051: from medicai.utils.inference import SlidingWindowInference
+0052: 
+0053: print("Keras backend:", keras.config.backend(), "Keras version:", keras.version())
+0054: 
+0055: # ----------------------------
+0056: # CONFIG (minimal, safe)
+0057: # ----------------------------
+0058: CFG = dict(
+0059:     # model
+0060:     kaggle_model_path="/kaggle/input/vsd-model/keras/",
+0061:     weights_relpath="transunet/3/transunet.seresnext50.160px.comboloss.weights.h5",
+0062: 
+0063:     # SWI overlaps
+0064:     overlap_public=0.42,  # EXACT public 0.55
+0065:     overlap_base=0.43,    # EXACT private 0.55 (important!)
+0066:     overlap_hi=0.60,      # OV06
+0067:     OV06_MAIN_ONLY=True,
+0068: 
+0069:     # TTA
+0070:     USE_TTA=True,
+0071: 
+0072:     # binary logit definition (match your private 0.55)
+0073:     INK_MODE="fg12",
+0074: 
+0075:     # thresholds (match your private 0.55)
+0076:     T_low=0.50,
+0077:     T_high=0.90,
+0078: 
+0079:     # topology (match both notebooks' common setting)
+0080:     z_radius=3,
+0081:     xy_radius=2,
+0082:     dust_min_size=100,
+0083: 
+0084:     # warmup
+0085:     DO_WARMUP=True,
+0086: 
+0087: )
+0088: 
+0089: # SHF/RSR overlay isolated from competitor baseline config
+0090: # Baseline-safe defaults: disabled unless explicitly enabled
+0091: LUM_CFG = dict(
+0092:     # synchronized with competitor baseline parameters
+0093:     USE_LUM_RESONANCE=True,
+0094:     LUM_BLEND_ALPHA=CFG["overlap_base"],
+0095:     LUM_SPECTRAL_GAMMA=CFG["overlap_hi"],
+0096:     LUM_PRIOR_WEIGHT=CFG["overlap_public"],
+0097:     LUM_SMOOTH_STEPS=CFG["z_radius"],
+0098:     LUM_PRIOR_THRESHOLD=CFG["T_low"],
+0099: )
+0100: 
+0101: root_dir = "/kaggle/input/vesuvius-challenge-surface-detection"
+0102: test_dir = f"{root_dir}/test_images"
+0103: output_dir = "/kaggle/working/submission_masks"
+0104: zip_path = "/kaggle/working/submission.zip"
+0105: os.makedirs(output_dir, exist_ok=True)
+0106: 
+0107: test_df = pd.read_csv(f"{root_dir}/test.csv")
+0108: ids = test_df["id"].tolist()
+0109: print("Num test volumes:", len(ids))
+0110: 
+0111: ROI = (160, 160, 160)
+0112: 
+0113: # ----------------------------
+0114: # Transform (same style)
+0115: # ----------------------------
+0116: _val_pipeline = Compose([
+0117:     NormalizeIntensity(keys=["image"], nonzero=True, channel_wise=False),
+0118: ])
+0119: def val_transformation(image):
+0120:     return _val_pipeline({"image": image})["image"]
+0121: 
+0122: def load_volume(path):
+0123:     vol = tifffile.imread(path).astype(np.float32)
+0124:     return vol[None, ..., None]  # (1, D, H, W, 1)
+0125: 
+0126: # ----------------------------
+0127: # Numerics
+0128: # ----------------------------
+0129: def sigmoid_stable(x):
+0130:     x = np.asarray(x, dtype=np.float32)
+0131:     out = np.empty_like(x, dtype=np.float32)
+0132:     pos = x >= 0
+0133:     out[pos] = 1.0 / (1.0 + np.exp(-x[pos]))
+0134:     ex = np.exp(x[~pos])
+0135:     out[~pos] = ex / (1.0 + ex)
+0136:     return out
+0137: 
+0138: def logsumexp2(a, b):
+0139:     a = np.asarray(a, dtype=np.float32)
+0140:     b = np.asarray(b, dtype=np.float32)
+0141:     m = np.maximum(a, b)
+0142:     return m + np.log(np.exp(a - m) + np.exp(b - m) + 1e-12)
+0143: 
+0144: def binary_logit_from_multiclass_logits(logits_5d, mode="fg12"):
+0145:     x = np.asarray(logits_5d, dtype=np.float32)[0]  # (D,H,W,3)
+0146:     L0, L1, L2 = x[...,0], x[...,1], x[...,2]
+0147:     if mode == "fg12":
+0148:         return (logsumexp2(L1, L2) - L0).astype(np.float32, copy=False)
+0149:     elif mode == "class1":
+0150:         return (L1 - logsumexp2(L0, L2)).astype(np.float32, copy=False)
+0151:     else:
+0152:         raise ValueError(f"Unknown INK_MODE={mode}")
+0153: 
+0154: # ----------------------------
+0155: # LUM/VORAX SHF-RSR helpers
+0156: # ----------------------------
+0157: def shf_spectral_signature(prob):
+0158:     p = np.asarray(prob, dtype=np.float32)
+0159:     fft_mag = np.abs(np.fft.rfftn(p)).astype(np.float32, copy=False)
+0160:     hi = float(np.percentile(fft_mag, 92.0))
+0161:     lo = float(np.percentile(fft_mag, 60.0))
+0162:     score = hi / (lo + 1e-6)
+0163:     return float(np.clip(score, 0.0, 8.0))
+0164: 
+0165: def rsr_recursive_prior(pub_fg_bool, smooth_steps=2):
+0166:     prior = pub_fg_bool.astype(np.float32, copy=False)
+0167:     for _ in range(max(0, int(smooth_steps))):
+0168:         prior = ndi.gaussian_filter(prior, sigma=(0.0, 1.2, 1.2))
+0169:         prior = np.clip(prior, 0.0, 1.0)
+0170:     return prior
+0171: 
+0172: def lum_resonance_blend(prob, pub_fg_bool, lum_cfg):
+0173:     spectral = shf_spectral_signature(prob)
+0174:     spectral_gain = np.clip((spectral - 1.0) * lum_cfg["LUM_SPECTRAL_GAMMA"], 0.0, 1.0)
+0175: 
+0176:     prior = rsr_recursive_prior(pub_fg_bool, smooth_steps=lum_cfg["LUM_SMOOTH_STEPS"])
+0177:     prior_gate = (prior >= lum_cfg["LUM_PRIOR_THRESHOLD"]).astype(np.float32)
+0178: 
+0179:     alpha = float(lum_cfg["LUM_BLEND_ALPHA"])
+0180:     w_prior = float(lum_cfg["LUM_PRIOR_WEIGHT"])
+0181:     blended = prob * (1.0 - alpha) + alpha * ((1.0 - w_prior) * prob + w_prior * prior_gate)
+0182:     boosted = np.clip(blended + spectral_gain * prior * 0.08, 0.0, 1.0).astype(np.float32, copy=False)
+0183: 
+0184:     return boosted, {
+0185:         "lum_spectral_score": float(spectral),
+0186:         "lum_spectral_gain": float(spectral_gain),
+0187:         "lum_prior_mean": float(prior.mean()),
+0188:         "lum_prior_gate_rate": float(prior_gate.mean()),
+0189:     }
+0190: 
+0191: # ----------------------------
+0192: # Topology helpers
+0193: # ----------------------------
+0194: def build_anisotropic_struct(z_radius: int, xy_radius: int):
+0195:     z, r = int(z_radius), int(xy_radius)
+0196:     if z == 0 and r == 0:
+0197:         return None
+0198:     if z == 0 and r > 0:
+0199:         size = 2*r + 1
+0200:         struct = np.zeros((1, size, size), dtype=bool)
+0201:         cy = cx = r
+0202:         for dy in range(-r, r+1):
+0203:             for dx in range(-r, r+1):
+0204:                 if dy*dy + dx*dx <= r*r:
+0205:                     struct[0, cy+dy, cx+dx] = True
+0206:         return struct
+0207:     if z > 0 and r == 0:
+0208:         struct = np.zeros((2*z+1, 1, 1), dtype=bool)
+0209:         struct[:, 0, 0] = True
+0210:         return struct
+0211:     depth = 2*z + 1
+0212:     size  = 2*r + 1
+0213:     struct = np.zeros((depth, size, size), dtype=bool)
+0214:     cz = z; cy = cx = r
+0215:     for dz in range(-z, z+1):
+0216:         for dy in range(-r, r+1):
+0217:             for dx in range(-r, r+1):
+0218:                 if dy*dy + dx*dx <= r*r:
+0219:                     struct[cz+dz, cy+dy, cx+dx] = True
+0220:     return struct
+0221: 
+0222: def seeded_hysteresis_with_topology(
+0223:     prob, pub_fg_bool,
+0224:     T_low=0.50, T_high=0.90,
+0225:     z_radius=3, xy_radius=2, dust_min_size=100
+0226: ):
+0227:     prob = np.asarray(prob, dtype=np.float32)
+0228:     strong = prob >= float(T_high)
+0229: 
+0230:     # SAFE expansion: weak includes private weak OR public foreground
+0231:     weak = (prob >= float(T_low)) | pub_fg_bool
+0232: 
+0233:     if not strong.any():
+0234:         return np.zeros_like(prob, dtype=np.uint8)
+0235: 
+0236:     struct_hyst = ndi.generate_binary_structure(3, 3)
+0237:     mask = ndi.binary_propagation(strong, mask=weak, structure=struct_hyst)
+0238: 
+0239:     if not mask.any():
+0240:         return np.zeros_like(prob, dtype=np.uint8)
+0241: 
+0242:     struct_close = build_anisotropic_struct(z_radius, xy_radius)
+0243:     if struct_close is not None:
+0244:         mask = ndi.binary_closing(mask, structure=struct_close)
+0245: 
+0246:     if int(dust_min_size) > 0:
+0247:         mask = remove_small_objects(mask.astype(bool), min_size=int(dust_min_size))
+0248: 
+0249:     return mask.astype(np.uint8)
+0250: 
+0251: # ----------------------------
+0252: # Model + SWI (logits)
+0253: # ----------------------------
+0254: weights_path = f"{CFG['kaggle_model_path']}/{CFG['weights_relpath']}"
+0255: 
+0256: model = TransUNet(
+0257:     input_shape=(160, 160, 160, 1),
+0258:     encoder_name="seresnext50",
+0259:     classifier_activation=None,  # TRUE logits
+0260:     num_classes=3,
+0261: )
+0262: model.load_weights(weights_path)
+0263: print("Model params (M):", model.count_params() / 1e6)
+0264: 
+0265: def build_swi(overlap):
+0266:     return SlidingWindowInference(
+0267:         model,
+0268:         num_classes=3,
+0269:         roi_size=ROI,
+0270:         sw_batch_size=1,
+0271:         mode="gaussian",
+0272:         overlap=float(overlap),
+0273:     )
+0274: 
+0275: swi_public = build_swi(CFG["overlap_public"])  # public 0.55
+0276: swi_base   = build_swi(CFG["overlap_base"])    # private base 0.55
+0277: swi_hi     = build_swi(CFG["overlap_hi"])      # OV06
+0278: 
+0279: # ----------------------------
+0280: # TTA (same set)
+0281: # ----------------------------
+0282: def iter_tta(volume):
+0283:     yield volume, (lambda y: y)
+0284:     for axis in [1, 2, 3]:
+0285:         v = np.flip(volume, axis=axis)
+0286:         inv = (lambda y, axis=axis: np.flip(y, axis=axis))
+0287:         yield v, inv
+0288:     for k in [1, 2, 3]:
+0289:         v = np.rot90(volume, k=k, axes=(2, 3))
+0290:         inv = (lambda y, k=k: np.rot90(y, k=-k, axes=(2, 3)))
+0291:         yield v, inv
+0292: 
+0293: # ----------------------------
+0294: # Predict BOTH streams in one loop (single final path)
+0295: # - Public: mean multiclass logits -> argmax labels
+0296: # - Private: OV06 main-only + mean binary logits -> prob
+0297: # ----------------------------
+0298: def predict_pub_labels_and_private_prob(volume):
+0299:     mode = CFG["INK_MODE"]
+0300: 
+0301:     if not CFG["USE_TTA"]:
+0302:         l_pub = np.asarray(swi_public(volume))
+0303:         pub_labels = l_pub.argmax(-1).astype(np.uint8).squeeze()
+0304: 
+0305:         l_prv = np.asarray(swi_hi(volume))
+0306:         s = binary_logit_from_multiclass_logits(l_prv, mode=mode)
+0307:         prob = sigmoid_stable(s)
+0308:         return pub_labels, prob
+0309: 
+0310:     logits_sum = None
+0311:     s_sum = None
+0312:     n = 0
+0313: 
+0314:     for t, (v, inv) in enumerate(iter_tta(volume)):
+0315:         # public stream
+0316:         l_pub = np.asarray(swi_public(v))
+0317:         l_pub = inv(l_pub)
+0318:         logits_sum = l_pub.astype(np.float32) if logits_sum is None else (logits_sum + l_pub.astype(np.float32))
+0319: 
+0320:         # private stream (OV06 main-only)
+0321:         if CFG["OV06_MAIN_ONLY"]:
+0322:             swi_use = swi_hi if (t == 0) else swi_base
+0323:         else:
+0324:             swi_use = swi_hi
+0325: 
+0326:         l_prv = np.asarray(swi_use(v))
+0327:         l_prv = inv(l_prv)
+0328:         s = binary_logit_from_multiclass_logits(l_prv, mode=mode)
+0329:         s_sum = s.astype(np.float32) if s_sum is None else (s_sum + s.astype(np.float32))
+0330: 
+0331:         n += 1
+0332: 
+0333:     mean_logits = logits_sum / float(n)
+0334:     pub_labels = mean_logits.argmax(-1).astype(np.uint8).squeeze()
+0335: 
+0336:     s_mean = (s_sum / float(n)).astype(np.float32, copy=False)
+0337:     prob = sigmoid_stable(s_mean)
+0338:     return pub_labels, prob
+0339: 
+0340: # ----------------------------
+0341: # Warmup (compile once)
+0342: # ----------------------------
+0343: def warmup(volume):
+0344:     _ = np.asarray(swi_public(volume))
+0345:     _ = np.asarray(swi_base(volume))
+0346:     _ = np.asarray(swi_hi(volume))
+0347: 
+0348: # ----------------------------
+0349: # Run + zip
+0350: # ----------------------------
+0351: print("CFG:",
+0352:       f"overlap_public={CFG['overlap_public']}, overlap_base={CFG['overlap_base']}, overlap_hi={CFG['overlap_hi']},",
+0353:       f"INK_MODE={CFG['INK_MODE']}, T_low={CFG['T_low']}, T_high={CFG['T_high']},",
+0354:       f"OV06_MAIN_ONLY={CFG['OV06_MAIN_ONLY']},",
+0355:       f"USE_LUM_RESONANCE={LUM_CFG['USE_LUM_RESONANCE']}")
+0356: 
+0357: t_global0 = time.perf_counter()
+0358: run_rows = []
+0359: 
+0360: with zipfile.ZipFile(zip_path, "w", compression=zipfile.ZIP_DEFLATED) as zf:
+0361:     for i, image_id in enumerate(ids):
+0362:         t0 = time.perf_counter()
+0363: 
+0364:         tif_path = f"{test_dir}/{image_id}.tif"
+0365:         volume = load_volume(tif_path)
+0366:         volume = val_transformation(volume)
+0367: 
+0368:         if i == 0 and CFG["DO_WARMUP"]:
+0369:             print("Warming up JAX (compile once)...")
+0370:             warmup(volume)
+0371: 
+0372:         pub_labels, prob = predict_pub_labels_and_private_prob(volume)
+0373: 
+0374:         # public fg anchor (no topology here; used only as weak region expansion)
+0375:         pub_fg = (pub_labels != 0)
+0376: 
+0377:         lum_metrics = {
+0378:             "lum_spectral_score": 0.0,
+0379:             "lum_spectral_gain": 0.0,
+0380:             "lum_prior_mean": 0.0,
+0381:             "lum_prior_gate_rate": 0.0,
+0382:         }
+0383:         prob_for_output = prob
+0384:         if LUM_CFG["USE_LUM_RESONANCE"]:
+0385:             prob_for_output, lum_metrics = lum_resonance_blend(prob, pub_fg, LUM_CFG)
+0386: 
+0387:         # single final path
+0388:         output = seeded_hysteresis_with_topology(
+0389:             prob_for_output,
+0390:             pub_fg_bool=pub_fg,
+0391:             T_low=CFG["T_low"],
+0392:             T_high=CFG["T_high"],
+0393:             z_radius=CFG["z_radius"],
+0394:             xy_radius=CFG["xy_radius"],
+0395:             dust_min_size=CFG["dust_min_size"],
+0396:         )
+0397: 
+0398:         out_path = f"{output_dir}/{image_id}.tif"
+0399:         tifffile.imwrite(out_path, output.astype(np.uint8))
+0400:         zf.write(out_path, arcname=f"{image_id}.tif")
+0401:         os.remove(out_path)
+0402: 
+0403:         dt = time.perf_counter() - t0
+0404:         elapsed = time.perf_counter() - t_global0
+0405:         run_rows.append({
+0406:             "id": image_id,
+0407:             "positives": int(output.sum()),
+0408:             **lum_metrics,
+0409:             "minutes": float(dt / 60.0),
+0410:         })
+0411:         print(f"[{i+1}/{len(ids)}] id={image_id} | {dt/60:.2f} min | elapsed {elapsed/3600:.2f} h | positives={int(output.sum())} | lum_score={lum_metrics['lum_spectral_score']:.3f}")
+0412: 
+0413: if run_rows:
+0414:     run_df = pd.DataFrame(run_rows)
+0415:     print("\nLUM resonance summary:")
+0416:     print(run_df[["id", "positives", "lum_spectral_score", "lum_spectral_gain", "lum_prior_mean", "lum_prior_gate_rate", "minutes"]].to_string(index=False))
+0417: 
+0418: print("Submission ZIP:", zip_path)
+0419: 
+0420: 
+0421: 
+0422: 
+0423: 

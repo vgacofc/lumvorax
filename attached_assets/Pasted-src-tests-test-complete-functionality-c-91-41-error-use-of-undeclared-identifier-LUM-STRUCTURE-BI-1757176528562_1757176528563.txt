@@ -1,0 +1,188 @@
+src/tests/test_complete_functionality.c:91:41: error: use of undeclared identifier 'LUM_STRUCTURE_BINARY'; did you mean 'LUM_STRUCTURE_LINEAR'?
+    lum_t* lum3 = lum_create(1, 30, 40, LUM_STRUCTURE_BINARY);
+                                        ^~~~~~~~~~~~~~~~~~~~
+                                        LUM_STRUCTURE_LINEAR
+src/tests/../parallel/../lum/lum_core.h:28:5: note: 'LUM_STRUCTURE_LINEAR' declared here
+    LUM_STRUCTURE_LINEAR = 0,
+    ^
+src/tests/test_complete_functionality.c:226:30: error: use of undeclared identifier 'AST_PROGRAM'
+    TEST_ASSERT(ast->type == AST_PROGRAM, "Type AST correct");
+                             ^
+src/tests/test_complete_functionality.c:267:38: warning: implicit declaration of function 'performance_counter_create' is invalid in C99 [-Wimplicit-function-declaration]
+    performance_counter_t* counter = performance_counter_create();
+                                     ^
+src/tests/test_complete_functionality.c:267:28: warning: incompatible integer to pointer conversion initializing 'performance_counter_t *' with an expression of type 'int' [-Wint-conversion]
+    performance_counter_t* counter = performance_counter_create();
+                           ^         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/tests/test_complete_functionality.c:271:5: warning: implicit declaration of function 'performance_counter_start' is invalid in C99 [-Wimplicit-function-declaration]
+    performance_counter_start(counter);
+    ^
+src/tests/test_complete_functionality.c:279:22: warning: implicit declaration of function 'performance_counter_stop' is invalid in C99 [-Wimplicit-function-declaration]
+    double elapsed = performance_counter_stop(counter);
+                     ^
+src/tests/test_complete_functionality.c:286:5: error: use of undeclared identifier 'memory_footprint_t'; did you mean 'memory_pool_init'?
+    memory_footprint_t* footprint = memory_footprint_create();
+    ^~~~~~~~~~~~~~~~~~
+    memory_pool_init
+src/tests/../optimization/memory_optimizer.h:46:6: note: 'memory_pool_init' declared here
+bool memory_pool_init(memory_pool_t* pool, size_t size, size_t alignment);
+     ^
+src/tests/test_complete_functionality.c:286:37: warning: implicit declaration of function 'memory_footprint_create' is invalid in C99 [-Wimplicit-function-declaration]
+    memory_footprint_t* footprint = memory_footprint_create();
+                                    ^
+src/tests/test_complete_functionality.c:286:25: error: use of undeclared identifier 'footprint'
+    memory_footprint_t* footprint = memory_footprint_create();
+                        ^
+src/tests/test_complete_functionality.c:287:17: error: use of undeclared identifier 'footprint'
+    TEST_ASSERT(footprint != NULL, "Création empreinte mémoire");
+                ^
+src/tests/test_complete_functionality.c:289:5: warning: implicit declaration of function 'memory_footprint_update' is invalid in C99 [-Wimplicit-function-declaration]
+    memory_footprint_update(footprint);
+    ^
+src/tests/test_complete_functionality.c:289:29: error: use of undeclared identifier 'footprint'
+    memory_footprint_update(footprint);
+                            ^
+src/tests/test_complete_functionality.c:290:17: error: use of undeclared identifier 'footprint'
+    TEST_ASSERT(footprint->heap_usage >= 0, "Usage heap détecté");
+                ^
+src/tests/test_complete_functionality.c:291:17: error: use of undeclared identifier 'footprint'
+    TEST_ASSERT(footprint->stack_usage >= 0, "Usage stack mesuré");
+                ^
+src/tests/test_complete_functionality.c:293:44: error: use of undeclared identifier 'footprint'
+    printf("  Mémoire heap: %zu bytes\n", footprint->heap_usage);
+                                          ^
+src/tests/test_complete_functionality.c:294:45: error: use of undeclared identifier 'footprint'
+    printf("  Mémoire stack: %zu bytes\n", footprint->stack_usage);
+                                           ^
+src/tests/test_complete_functionality.c:296:5: warning: implicit declaration of function 'performance_counter_destroy' is invalid in C99 [-Wimplicit-function-declaration]
+    performance_counter_destroy(counter);
+    ^
+src/tests/test_complete_functionality.c:297:5: warning: implicit declaration of function 'memory_footprint_destroy' is invalid in C99 [-Wimplicit-function-declaration]
+    memory_footprint_destroy(footprint);
+    ^
+src/tests/test_complete_functionality.c:297:30: error: use of undeclared identifier 'footprint'
+    memory_footprint_destroy(footprint);
+                             ^
+src/tests/test_complete_functionality.c:299:17: warning: implicit declaration of function 'destroy' is invalid in C99 [-Wimplicit-function-declaration]
+    return true;destroy(counter);
+                ^
+src/tests/test_complete_functionality.c:300:30: error: use of undeclared identifier 'footprint'
+    memory_footprint_destroy(footprint);
+                             ^
+src/tests/test_complete_functionality.c:309:27: warning: implicit declaration of function 'memory_pool_create' is invalid in C99 [-Wimplicit-function-declaration]
+    memory_pool_t* pool = memory_pool_create(1024, 16); // 1KB aligné sur 16 bytes
+                          ^
+src/tests/test_complete_functionality.c:309:20: warning: incompatible integer to pointer conversion initializing 'memory_pool_t *' with an expression of type 'int' [-Wint-conversion]
+    memory_pool_t* pool = memory_pool_create(1024, 16); // 1KB aligné sur 16 bytes
+                   ^      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/tests/test_complete_functionality.c:311:23: error: no member named 'size' in 'memory_pool_t'
+    TEST_ASSERT(pool->size == 1024, "Taille pool correcte");
+                ~~~~  ^
+src/tests/test_complete_functionality.c:21:15: note: expanded from macro 'TEST_ASSERT'
+        if (!(condition)) { \
+              ^~~~~~~~~
+src/tests/test_complete_functionality.c:330:5: warning: implicit declaration of function 'memory_pool_get_stats' is invalid in C99 [-Wimplicit-function-declaration]
+    memory_pool_get_stats(pool, &stats);
+    ^
+src/tests/test_complete_functionality.c:331:23: error: no member named 'allocated_bytes' in 'memory_stats_t'
+    TEST_ASSERT(stats.allocated_bytes > 0, "Bytes alloués comptés");
+                ~~~~~ ^
+src/tests/test_complete_functionality.c:21:15: note: expanded from macro 'TEST_ASSERT'
+        if (!(condition)) { \
+              ^~~~~~~~~
+src/tests/test_complete_functionality.c:332:23: error: no member named 'free_bytes' in 'memory_stats_t'
+    TEST_ASSERT(stats.free_bytes < 1024, "Bytes libres corrects");
+                ~~~~~ ^
+src/tests/test_complete_functionality.c:21:15: note: expanded from macro 'TEST_ASSERT'
+        if (!(condition)) { \
+              ^~~~~~~~~
+src/tests/test_complete_functionality.c:336:18: error: no member named 'allocated_bytes' in 'memory_stats_t'
+           stats.allocated_bytes, stats.free_bytes);
+           ~~~~~ ^
+src/tests/test_complete_functionality.c:336:41: error: no member named 'free_bytes' in 'memory_stats_t'
+           stats.allocated_bytes, stats.free_bytes);
+                                  ~~~~~ ^
+src/tests/test_complete_functionality.c:338:5: warning: implicit declaration of function 'memory_pool_destroy' is invalid in C99 [-Wimplicit-function-declaration]
+    memory_pool_destroy(pool);
+    ^
+13 warnings and 17 errors generated.
+src/optimization/memory_optimizer.c:50:24: warning: implicitly declaring library function 'aligned_alloc' with type 'void *(unsigned long, unsigned long)' [-Wimplicit-function-declaration]
+    pool->pool_start = aligned_alloc(alignment, size);
+                       ^
+src/optimization/memory_optimizer.c:50:24: note: include the header <stdlib.h> or explicitly provide a declaration for 'aligned_alloc'
+1 warning generated.
+src/parallel/parallel_processor.c:125:9: warning: implicit declaration of function 'usleep' is invalid in C99 [-Wimplicit-function-declaration]
+        usleep(1000); // Sleep 1ms
+        ^
+1 warning generated.
+In file included from src/metrics/performance_metrics.c:3:
+src/metrics/performance_metrics.h:33:21: error: field has incomplete type 'struct timespec'
+    struct timespec last_updated;
+                    ^
+src/metrics/performance_metrics.h:33:12: note: forward declaration of 'struct timespec'
+    struct timespec last_updated;
+           ^
+src/metrics/performance_metrics.h:51:21: error: field has incomplete type 'struct timespec'
+    struct timespec start_time;
+                    ^
+src/metrics/performance_metrics.h:33:12: note: forward declaration of 'struct timespec'
+    struct timespec last_updated;
+           ^
+src/metrics/performance_metrics.h:65:21: error: field has incomplete type 'struct timespec'
+    struct timespec start_time;
+                    ^
+src/metrics/performance_metrics.h:33:12: note: forward declaration of 'struct timespec'
+    struct timespec last_updated;
+           ^
+src/metrics/performance_metrics.h:66:21: error: field has incomplete type 'struct timespec'
+    struct timespec end_time;
+                    ^
+src/metrics/performance_metrics.h:33:12: note: forward declaration of 'struct timespec'
+    struct timespec last_updated;
+           ^
+src/metrics/performance_metrics.c:24:5: warning: implicit declaration of function 'clock_gettime' is invalid in C99 [-Wimplicit-function-declaration]
+    clock_gettime(CLOCK_MONOTONIC, &metrics->start_time);
+    ^
+src/metrics/performance_metrics.c:24:19: error: use of undeclared identifier 'CLOCK_MONOTONIC'
+    clock_gettime(CLOCK_MONOTONIC, &metrics->start_time);
+                  ^
+src/metrics/performance_metrics.c:46:23: error: use of undeclared identifier 'CLOCK_MONOTONIC'
+        clock_gettime(CLOCK_MONOTONIC, &metrics->counters[i].last_updated);
+                      ^
+src/metrics/performance_metrics.c:82:9: warning: implicit declaration of function 'clock_gettime' is invalid in C99 [-Wimplicit-function-declaration]
+    if (clock_gettime(CLOCK_MONOTONIC, &timer->start_time) != 0) {
+        ^
+src/metrics/performance_metrics.c:82:23: error: use of undeclared identifier 'CLOCK_MONOTONIC'
+    if (clock_gettime(CLOCK_MONOTONIC, &timer->start_time) != 0) {
+                      ^
+src/metrics/performance_metrics.c:93:9: warning: implicit declaration of function 'clock_gettime' is invalid in C99 [-Wimplicit-function-declaration]
+    if (clock_gettime(CLOCK_MONOTONIC, &timer->end_time) != 0) {
+        ^
+src/metrics/performance_metrics.c:93:23: error: use of undeclared identifier 'CLOCK_MONOTONIC'
+    if (clock_gettime(CLOCK_MONOTONIC, &timer->end_time) != 0) {
+                      ^
+src/metrics/performance_metrics.c:354:5: warning: implicit declaration of function 'clock_gettime' is invalid in C99 [-Wimplicit-function-declaration]
+    clock_gettime(CLOCK_MONOTONIC, &counter->last_updated);
+    ^
+src/metrics/performance_metrics.c:354:19: error: use of undeclared identifier 'CLOCK_MONOTONIC'
+    clock_gettime(CLOCK_MONOTONIC, &counter->last_updated);
+                  ^
+src/metrics/performance_metrics.c:367:9: warning: implicit declaration of function 'clock_gettime' is invalid in C99 [-Wimplicit-function-declaration]
+        clock_gettime(CLOCK_MONOTONIC, &counter->last_updated);
+        ^
+src/metrics/performance_metrics.c:367:23: error: use of undeclared identifier 'CLOCK_MONOTONIC'
+        clock_gettime(CLOCK_MONOTONIC, &counter->last_updated);
+                      ^
+src/metrics/performance_metrics.c:375:21: error: variable has incomplete type 'struct timespec'
+    struct timespec end_time;
+                    ^
+src/metrics/performance_metrics.h:33:12: note: forward declaration of 'struct timespec'
+    struct timespec last_updated;
+           ^
+src/metrics/performance_metrics.c:376:5: warning: implicit declaration of function 'clock_gettime' is invalid in C99 [-Wimplicit-function-declaration]
+    clock_gettime(CLOCK_MONOTONIC, &end_time);
+    ^
+src/metrics/performance_metrics.c:376:19: error: use of undeclared identifier 'CLOCK_MONOTONIC'
+    clock_gettime(CLOCK_MONOTONIC, &end_time);
+                  ^
+6 warnings and 12 errors generated.

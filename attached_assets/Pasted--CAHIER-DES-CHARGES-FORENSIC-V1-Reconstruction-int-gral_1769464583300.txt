@@ -1,0 +1,263 @@
+# 🧠⚗️ CAHIER DES CHARGES FORENSIC V1
+
+## Reconstruction intégrale d’un neurone biologique réel
+
+**Programme : Simulation du cerveau humain – Phase 0 (Fondation biologique)**
+
+---
+
+## 0. POSITIONNEMENT STRATÉGIQUE (NON NÉGOCIABLE)
+
+### 0.1 Décision fondationnelle
+
+❌ Toute tentative de simulation directe du cerveau humain global est **structurellement mal posée**.
+
+✅ Le programme démarre **avant** la cognition, **avant** les réseaux, **avant** l’activité électrique.
+
+👉 **Objectif Phase 0** : reconstruire **un neurone biologique réel**, parfaitement fidèle, **atome par atome → cellule par cellule → neurone fonctionnel**, avec traçabilité intégrale.
+
+Ce neurone est l’**unité ontologique minimale** du programme cerveau.
+
+---
+
+## 1. OBJECTIF SCIENTIFIQUE EXACT
+
+### 1.1 Définition
+
+Construire un **jumeau biologique numérique** d’un neurone humain réel, incluant :
+
+* structure atomique
+* chimie complète
+* dynamique électrochimique
+* métabolisme
+* interactions gliales locales
+* plasticité synaptique
+
+➡️ Sans abstraction prématurée.
+➡️ Sans modèle moyenné.
+➡️ Sans paramètre ajusté ad hoc.
+
+### 1.2 Critère de réussite
+
+Un neurone est considéré **validé** si :
+
+* il génère des potentiels d’action corrects
+* il consomme de l’énergie biologiquement réaliste
+* il répond correctement aux stimuli chimiques et électriques
+* ses propriétés émergent **sans réglage externe**
+
+---
+
+## 2. AXIOME D’OBSTRUCTION (TRANSFERT LUMVORAX)
+
+### 2.1 Obstruction globale
+
+❌ Il n’existe **aucun modèle global universel du neurone**.
+
+### 2.2 Principe accepté
+
+✅ Toute dynamique neuronale est :
+
+* locale
+* multi-échelle
+* conditionnelle
+* dépendante de l’état interne
+
+➡️ **Aucune variable globale coercive** n’est admise.
+
+---
+
+## 3. ARCHITECTURE DE RECONSTRUCTION (DU PLUS FIN AU PLUS GROSSIER)
+
+### 3.1 Niveau 1 — Atomes
+
+**Éléments requis** :
+
+* H, C, N, O, P, S, Na⁺, K⁺, Ca²⁺, Cl⁻
+
+**Exigences** :
+
+* positions atomiques explicites
+* charges exactes
+* potentiels interatomiques traçables
+* température locale
+
+📌 Aucun champ effectif global autorisé.
+
+---
+
+### 3.2 Niveau 2 — Molécules
+
+**Inclure explicitement** :
+
+* eau structurée intracellulaire
+* lipides membranaires (bicouche réelle)
+* protéines (conformation native)
+* ARN / ADN mitochondrial
+* neurotransmetteurs
+
+**Contraintes** :
+
+* repliement protéique dynamique
+* liaisons faibles explicites
+* diffusion brownienne locale
+
+---
+
+### 3.3 Niveau 3 — Organites
+
+Reconstruction complète de :
+
+* noyau
+* mitochondries
+* réticulum endoplasmique
+* appareil de Golgi
+* lysosomes
+
+📌 **Métabolisme réel obligatoire** (ATP, NADH, gradients).
+
+---
+
+### 3.4 Niveau 4 — Cytosquelette (CRITIQUE)
+
+Inclure explicitement :
+
+* microtubules
+* actine
+* neurofilaments
+
+⚠️ Point clé :
+
+> les microtubules ne sont **pas** modélisés comme simples supports mécaniques
+
+➡️ Étudier leur rôle possible dans :
+
+* transport
+* synchronisation
+* effets quantiques locaux (sans hypothèse globale)
+
+---
+
+### 3.5 Niveau 5 — Membrane neuronale
+
+**Inclure explicitement** :
+
+* canaux ioniques individuels
+* pompes Na⁺/K⁺
+* canaux Ca²⁺ voltage-dépendants
+* récepteurs ligand-dépendants
+
+📌 Chaque canal = objet dynamique individuel.
+
+---
+
+### 3.6 Niveau 6 — Compartiments neuronaux
+
+Reconstruction séparée de :
+
+* dendrites
+* soma
+* axone
+* cône axonal
+
+➡️ Pas d’homogénéisation spatiale.
+
+---
+
+### 3.7 Niveau 7 — Synapse unique (UN SEUL)
+
+Avant tout réseau :
+
+* une synapse chimique
+* une synapse électrique
+
+Inclure :
+
+* vésicules
+* exocytose
+* recapture
+* délais réels
+
+---
+
+## 4. DYNAMIQUE TEMPORELLE
+
+### 4.1 Échelles de temps couvertes
+
+* femtoseconde (chimie)
+* milliseconde (potentiel d’action)
+* seconde (métabolisme)
+
+➡️ Simulation multi-horloges obligatoire.
+
+---
+
+## 5. INTERACTIONS GLIALES (NON OPTIONNEL)
+
+Inclure :
+
+* astrocytes adjacents
+* régulation ionique
+* recyclage neurotransmetteurs
+
+❌ Un neurone isolé sans glie est **biologiquement faux**.
+
+---
+
+## 6. FORME DES SORTIES (RÈGLES FORENSIC)
+
+### 6.1 Logs
+
+Chaque exécution DOIT produire :
+
+* logs persistants (.log)
+* JSON structurés
+* CSV
+* horodatage UTC
+* checksums SHA256
+* progression %
+* signal explicite de fin
+
+---
+
+### 6.2 Traçabilité
+
+* aucune valeur magique
+* aucune constante non sourcée
+* chaque paramètre doit être traçable à une mesure ou une loi physique
+
+---
+
+## 7. INTERDICTIONS ABSOLUES
+
+❌ Modèles moyens
+❌ Neurones "intégrateurs"
+❌ Réseaux abstraits
+❌ Ajustement post-hoc
+❌ Apprentissage type ANN
+
+---
+
+## 8. CRITÈRE DE CERTIFICATION
+
+Un neurone est certifié si :
+
+* les potentiels émergent spontanément
+* les fréquences sont réalistes
+* la consommation énergétique est correcte
+* la plasticité apparaît localement
+* les instabilités saturent (pas de divergence)
+
+---
+
+## 9. CONCLUSION FONDATIONNELLE
+
+> **Sans neurone biologiquement parfait, le cerveau n’existe pas scientifiquement.**
+
+Ce cahier des charges définit **la seule voie légitime** vers une simulation du cerveau humain.
+
+Toute étape ultérieure (réseau, cognition, conscience) est **interdite** tant que ce niveau n’est pas certifié.
+
+---
+
+**STATUT : CDC PHASE 0 — VERROUILLÉ**

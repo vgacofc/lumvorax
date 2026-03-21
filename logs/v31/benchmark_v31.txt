@@ -1,0 +1,24 @@
+=== V29 BENCHMARK - METRIQUES REELLES ===
+Date: Jan 23 2026 20:52:27
+Version: V29-NATIVE-C
+Session: V29_BENCHMARK_1769242729
+
+[BLOC 1] Performance brute - Create/Destroy
+  Operations: 100000 create + 100000 destroy
+  Temps total: 34.17 ms
+  Ops/seconde: 5.85 M ops/s
+  Latence moyenne: 170.85 ns
+
+[BLOC 2] Cache behavior - Sequential vs Random
+  Array size: 1048576 bytes
+  Temps sequentiel: 2.70 ms
+  Temps aleatoire: 2.39 ms
+  Ratio seq/rand: 0.88x
+  Throughput seq: 0.39 GB/s
+
+[BLOC 3] Forensic overhead simulation
+  Sans logging: 0.00 ms (0.00 ns/op)
+  Avec logging: 1779.67 ms (177967.11 ns/op)
+  Overhead: 4449177717.50% (+177967.11 ns/op)
+
+=== FIN BENCHMARK V29 ===

@@ -1,0 +1,15 @@
+et TOUJOUR ECRIRE COMPLETEMENT EN FRANCAIS DANS TON CHAN DE REFLEXION de limage fourni queje ne cest pas commen tu lappele ici.
+
+voici lerreur actuelle des modifcation que tu a faite  a corriger apre ma validation: [2026-03-14T14:15:15.417145198Z] run_research_cycle start stamp=20260314T141515Z
+make: Entering directory '/home/runner/workspace/src/advanced_calculations/quantum_problem_hubbard_hts'
+Makefile:23: *** missing separator (did you mean TAB instead of 8 spaces?).  Stop.
+make: Leaving directory '/home/runner/workspace/src/advanced_calculations/quantum_problem_hubbard_hts'
+
+ voici ce qui a été demander avant que tu commence le modification actuelle: procede immediatement a tout ce qui ce trouve dans les src/advanced_calculations/quantum_problem_hubbard_hts/CHAT/analysechatgpt22.md DE ÇA PREMIER A LA DERNIER LIGNE A INCLURE DE CE QUIL RESTE A FAIRE SANS EXEPTION! ( voici inclusion a ajoute en plus : Inclure et renforcer encore davantage notre LUM Vorax avec un niveau de granularité plus fin afin d’assurer un tracking maximal et de détecter les causes exactes de tous ces problèmes, ainsi que d’éventuels problèmes futurs encore non identifiés.
+Étudier l’intégration d'un nouveaux algorithmes parmi les plus précis existants, que Monte Carlo, en parallèle.
+Ne pas imposer de restriction de ressources hardware pour verifier jusque les consequence au bord de 99 % de resourceS RAM et CPU simultanment( dynamique).
+Augmenter au maximum la granularité de capture au niveau de la nanoseconde, en enregistrant nanoseconde par nanoseconde toutes les couches possibles.
+Mettre en place la conversion de tout le code .py en .c en mode shadow afin de valider que rien n’a été cassé, avant de basculer totalement vers du C pur, et corriger les problèmes du stop à l’étape 7 du BC-LV04.
+Détection de comportements non programmés ou non notifiés ?) AJOUTE CE QUI EST NECESAIRE QUE J'AURAIS OUBLIER DE PRECISER...
+
+voici tout ce que l'ancien agent a realiser avant que je te parle a toi : src/advanced_calculations/quantum_problem_hubbard_hts/CHAT/analysechatgpt22.1.md

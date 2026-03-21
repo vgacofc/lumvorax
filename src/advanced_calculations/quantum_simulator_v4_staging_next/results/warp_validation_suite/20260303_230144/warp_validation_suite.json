@@ -1,0 +1,216 @@
+{
+  "suite_run_id": "20260303_230144",
+  "cases_total": 3,
+  "all_cases_executed": true,
+  "all_chains_valid": true,
+  "all_ok": true,
+  "feasible_rate_mean": 0.0,
+  "feasible_rate_max": 0.0,
+  "energy_mean_j": 4.580388606303025e+46,
+  "energy_min_j": 3.903621016306803e+45,
+  "calc_rows_per_s_mean": 395.748963547059,
+  "decision": "NOT_FEASIBLE_PRESENT_PHYSICS",
+  "validation_protocol": {
+    "criteria": [
+      "execution_success",
+      "forensic_chain_integrity",
+      "cross-profile_consistency",
+      "energy_scale_plausibility"
+    ],
+    "pass_condition": "all_ok and feasible_rate_max > 0 for feasibility claim"
+  },
+  "cases": [
+    {
+      "case": "case_conservative",
+      "profile": "conservative",
+      "steps": 220,
+      "ns_step": 1000,
+      "returncode": 0,
+      "stdout": "/workspace/Lumvorax/src/advanced_calculations/quantum_simulator_v4_staging_next/results/warp_feasibility/case_conservative_20260303_230139",
+      "stderr": "",
+      "out_dir": "/workspace/Lumvorax/src/advanced_calculations/quantum_simulator_v4_staging_next/results/warp_feasibility/case_conservative_20260303_230139",
+      "chain_ok": true,
+      "chain_msg": "rows=660",
+      "summary": {
+        "run_id": "case_conservative_20260303_230139",
+        "model": "warp_feasibility_proxy_v2_gr1p1d_gr3p1d",
+        "metric_profile": "conservative",
+        "notes": "Numerical GR-inspired proxy (1+1D and coarse 3+1D), multi-shell scenarios, nanosecond forensic chain logging.",
+        "steps_per_scenario": 220,
+        "scenario_count": 3,
+        "rows_total": 660,
+        "calc_rows_per_second": 403.20170524657425,
+        "mean_abs_negative_energy_j": 3.903621016306803e+45,
+        "max_abs_negative_energy_j": 5.463487015258453e+45,
+        "feasible_rows": 0,
+        "feasible_rate": 0.0,
+        "forensic_chain_final_hash": "9f4a5caf64f04c5b9dedbd0c5d959c8355a314c9298b4ccaf7ea3eb2b476a495",
+        "forensic_chain_genesis": "GENESIS",
+        "max_memory_mb": 18.754,
+        "qubits_simulated": 0,
+        "qubits_note": "Warp GR feasibility module is non-quantum-field proxy; qubit count is not applicable.",
+        "models_breakdown": {
+          "gr_1p1d": {
+            "rows": 440,
+            "feasible": 0,
+            "max_curvature": 0.0016230774176657784
+          },
+          "gr_3p1d": {
+            "rows": 220,
+            "feasible": 0,
+            "max_curvature": 0.0024445544497088234
+          }
+        },
+        "system_metrics": {
+          "cpu_count_logical": 3,
+          "loadavg_1m": 0.1845703125,
+          "loadavg_5m": 0.09423828125,
+          "loadavg_15m": 0.02734375,
+          "mem_total_mb": 18361.215,
+          "mem_available_mb": 17718.316,
+          "self_vm_peak_kb": 24188,
+          "self_vm_hwm_kb": 19076,
+          "self_threads": 1,
+          "cgroup_memory_max": "17179869184",
+          "cgroup_memory_current": "5968429056",
+          "cgroup_cpu_max": "200000 100000"
+        },
+        "participating_modules": [
+          "run_gr_1p1d",
+          "run_gr_3p1d",
+          "estimate_negative_energy_joules",
+          "collect_system_metrics",
+          "hashlib.sha256 forensic chain"
+        ]
+      }
+    },
+    {
+      "case": "case_balanced",
+      "profile": "balanced",
+      "steps": 220,
+      "ns_step": 1000,
+      "returncode": 0,
+      "stdout": "/workspace/Lumvorax/src/advanced_calculations/quantum_simulator_v4_staging_next/results/warp_feasibility/case_balanced_20260303_230140",
+      "stderr": "",
+      "out_dir": "/workspace/Lumvorax/src/advanced_calculations/quantum_simulator_v4_staging_next/results/warp_feasibility/case_balanced_20260303_230140",
+      "chain_ok": true,
+      "chain_msg": "rows=660",
+      "summary": {
+        "run_id": "case_balanced_20260303_230140",
+        "model": "warp_feasibility_proxy_v2_gr1p1d_gr3p1d",
+        "metric_profile": "balanced",
+        "notes": "Numerical GR-inspired proxy (1+1D and coarse 3+1D), multi-shell scenarios, nanosecond forensic chain logging.",
+        "steps_per_scenario": 220,
+        "scenario_count": 3,
+        "rows_total": 660,
+        "calc_rows_per_second": 389.7418239443177,
+        "mean_abs_negative_energy_j": 2.3719786622677085e+46,
+        "max_abs_negative_energy_j": 3.3197719878750077e+46,
+        "feasible_rows": 0,
+        "feasible_rate": 0.0,
+        "forensic_chain_final_hash": "c251402fc01a936d123bea2034f02374d808efca99410e85fcb593fcc9be91fa",
+        "forensic_chain_genesis": "GENESIS",
+        "max_memory_mb": 19.629,
+        "qubits_simulated": 0,
+        "qubits_note": "Warp GR feasibility module is non-quantum-field proxy; qubit count is not applicable.",
+        "models_breakdown": {
+          "gr_1p1d": {
+            "rows": 440,
+            "feasible": 0,
+            "max_curvature": 0.0014534383009607646
+          },
+          "gr_3p1d": {
+            "rows": 220,
+            "feasible": 0,
+            "max_curvature": 0.0020429002121387747
+          }
+        },
+        "system_metrics": {
+          "cpu_count_logical": 3,
+          "loadavg_1m": 0.25,
+          "loadavg_5m": 0.109375,
+          "loadavg_15m": 0.03271484375,
+          "mem_total_mb": 18361.215,
+          "mem_available_mb": 17720.012,
+          "self_vm_peak_kb": 24188,
+          "self_vm_hwm_kb": 18976,
+          "self_threads": 1,
+          "cgroup_memory_max": "17179869184",
+          "cgroup_memory_current": "5969432576",
+          "cgroup_cpu_max": "200000 100000"
+        },
+        "participating_modules": [
+          "run_gr_1p1d",
+          "run_gr_3p1d",
+          "estimate_negative_energy_joules",
+          "collect_system_metrics",
+          "hashlib.sha256 forensic chain"
+        ]
+      }
+    },
+    {
+      "case": "case_aggressive",
+      "profile": "aggressive",
+      "steps": 220,
+      "ns_step": 1000,
+      "returncode": 0,
+      "stdout": "/workspace/Lumvorax/src/advanced_calculations/quantum_simulator_v4_staging_next/results/warp_feasibility/case_aggressive_20260303_230142",
+      "stderr": "",
+      "out_dir": "/workspace/Lumvorax/src/advanced_calculations/quantum_simulator_v4_staging_next/results/warp_feasibility/case_aggressive_20260303_230142",
+      "chain_ok": true,
+      "chain_msg": "rows=660",
+      "summary": {
+        "run_id": "case_aggressive_20260303_230142",
+        "model": "warp_feasibility_proxy_v2_gr1p1d_gr3p1d",
+        "metric_profile": "aggressive",
+        "notes": "Numerical GR-inspired proxy (1+1D and coarse 3+1D), multi-shell scenarios, nanosecond forensic chain logging.",
+        "steps_per_scenario": 220,
+        "scenario_count": 3,
+        "rows_total": 660,
+        "calc_rows_per_second": 394.3033614502852,
+        "mean_abs_negative_energy_j": 1.0978825055010686e+47,
+        "max_abs_negative_energy_j": 1.536560734295269e+47,
+        "feasible_rows": 0,
+        "feasible_rate": 0.0,
+        "forensic_chain_final_hash": "1f286635519fab8b0c7b3c1ff20e62036f97d8ed8539afac9777a7ba5ed71de0",
+        "forensic_chain_genesis": "GENESIS",
+        "max_memory_mb": 19.754,
+        "qubits_simulated": 0,
+        "qubits_note": "Warp GR feasibility module is non-quantum-field proxy; qubit count is not applicable.",
+        "models_breakdown": {
+          "gr_1p1d": {
+            "rows": 440,
+            "feasible": 0,
+            "max_curvature": 0.0013724743379217664
+          },
+          "gr_3p1d": {
+            "rows": 220,
+            "feasible": 0,
+            "max_curvature": 0.0014785196343262057
+          }
+        },
+        "system_metrics": {
+          "cpu_count_logical": 3,
+          "loadavg_1m": 0.25,
+          "loadavg_5m": 0.109375,
+          "loadavg_15m": 0.03271484375,
+          "mem_total_mb": 18361.215,
+          "mem_available_mb": 17721.117,
+          "self_vm_peak_kb": 24188,
+          "self_vm_hwm_kb": 19264,
+          "self_threads": 1,
+          "cgroup_memory_max": "17179869184",
+          "cgroup_memory_current": "5970100224",
+          "cgroup_cpu_max": "200000 100000"
+        },
+        "participating_modules": [
+          "run_gr_1p1d",
+          "run_gr_3p1d",
+          "estimate_negative_energy_joules",
+          "collect_system_metrics",
+          "hashlib.sha256 forensic chain"
+        ]
+      }
+    }
+  ]
+}

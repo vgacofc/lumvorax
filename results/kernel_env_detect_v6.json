@@ -1,0 +1,18 @@
+{
+  "python": "3.12.11",
+  "platform": "Linux-6.14.11-x86_64-with-glibc2.40",
+  "cpu_count": 8,
+  "cwd": "/home/runner/workspace",
+  "kaggle": false,
+  "replit": true,
+  "colab": false,
+  "cuda_visible_devices": null,
+  "gpu": {
+    "backend": null,
+    "available": false,
+    "name": null,
+    "count": 0
+  },
+  "compute_mode": "cpu",
+  "root": "/home/runner/workspace"
+}

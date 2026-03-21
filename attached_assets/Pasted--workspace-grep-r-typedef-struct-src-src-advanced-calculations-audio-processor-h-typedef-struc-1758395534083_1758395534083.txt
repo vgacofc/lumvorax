@@ -1,0 +1,217 @@
+~/workspace$ grep -r 'typedef struct' src/
+src/advanced_calculations/audio_processor.h:typedef struct {
+src/advanced_calculations/audio_processor.h:typedef struct {
+src/advanced_calculations/audio_processor.h:typedef struct {
+src/advanced_calculations/blackbox_universal_module.c:typedef struct {
+src/advanced_calculations/blackbox_universal_module.h:typedef struct {
+src/advanced_calculations/blackbox_universal_module.h:typedef struct {
+src/advanced_calculations/blackbox_universal_module.h:typedef struct {
+src/advanced_calculations/collatz_analyzer.h:typedef struct {
+src/advanced_calculations/collatz_analyzer.h:typedef struct {
+src/advanced_calculations/collatz_analyzer.h:typedef struct {
+src/advanced_calculations/collatz_analyzer.h:typedef struct {
+src/advanced_calculations/collatz_analyzer.h:typedef struct {
+src/advanced_calculations/collatz_analyzer.h:typedef struct {
+src/advanced_calculations/golden_score_optimizer.h:typedef struct golden_score_optimizer_t golden_score_optimizer_t;
+src/advanced_calculations/golden_score_optimizer.h:typedef struct golden_metrics_t {
+src/advanced_calculations/golden_score_optimizer.h:typedef struct golden_comparison_t {
+src/advanced_calculations/golden_score_optimizer.h:typedef struct {
+src/advanced_calculations/golden_score_optimizer.h:typedef struct {
+src/advanced_calculations/golden_score_optimizer.h:typedef struct {
+src/advanced_calculations/golden_score_optimizer.h:typedef struct {
+src/advanced_calculations/golden_score_optimizer.h:typedef struct {
+src/advanced_calculations/golden_score_optimizer.h:typedef struct {
+src/advanced_calculations/image_processor.h:typedef struct {
+src/advanced_calculations/image_processor.h:typedef struct {
+src/advanced_calculations/image_processor.h:typedef struct {
+src/advanced_calculations/knapsack_optimizer.h:typedef struct {
+src/advanced_calculations/knapsack_optimizer.h:typedef struct {
+src/advanced_calculations/knapsack_optimizer.h:typedef struct {
+src/advanced_calculations/knapsack_optimizer.h:typedef struct {
+src/advanced_calculations/knapsack_optimizer.h:typedef struct {
+src/advanced_calculations/mathematical_research_engine.h:typedef struct {
+src/advanced_calculations/mathematical_research_engine.h:typedef struct {
+src/advanced_calculations/mathematical_research_engine.h:typedef struct {
+src/advanced_calculations/mathematical_research_engine.h:typedef struct {
+src/advanced_calculations/matrix_calculator.h:typedef struct matrix_calculator_t {
+src/advanced_calculations/matrix_calculator.h:typedef struct matrix_result_t {
+src/advanced_calculations/matrix_calculator.h:typedef struct matrix_result_t matrix_calculator_result_t; // Alias pour compatibilité
+src/advanced_calculations/matrix_calculator.h:typedef struct {
+src/advanced_calculations/matrix_calculator.h:typedef struct matrix_lum_result_t {
+src/advanced_calculations/matrix_calculator.h:typedef struct {
+src/advanced_calculations/neural_advanced_optimizers.h:typedef struct {
+src/advanced_calculations/neural_advanced_optimizers.h:typedef struct {
+src/advanced_calculations/neural_advanced_optimizers.h:typedef struct {
+src/advanced_calculations/neural_blackbox_ultra_precision_tests.h:typedef struct {
+src/advanced_calculations/neural_blackbox_ultra_precision_tests.h:typedef struct {
+src/advanced_calculations/neural_network_processor.c:typedef struct {
+src/advanced_calculations/neural_network_processor.h:typedef struct {
+src/advanced_calculations/neural_network_processor.h:typedef struct {
+src/advanced_calculations/neural_network_processor.h:typedef struct {
+src/advanced_calculations/neural_network_processor.h:typedef struct {
+src/advanced_calculations/neural_network_processor.h:typedef struct {
+src/advanced_calculations/neural_ultra_precision_architecture.h:typedef struct {
+src/advanced_calculations/neural_ultra_precision_architecture.h:typedef struct neural_ultra_precision_config_t {
+src/advanced_calculations/quantum_simulator.h:typedef struct {
+src/advanced_calculations/quantum_simulator.h:typedef struct {
+src/advanced_calculations/quantum_simulator.h:typedef struct {
+src/advanced_calculations/quantum_simulator.h:typedef struct {
+src/advanced_calculations/quantum_simulator.h:typedef struct {
+src/advanced_calculations/tsp_optimizer.h:typedef struct {
+src/advanced_calculations/tsp_optimizer.h:typedef struct {
+src/advanced_calculations/tsp_optimizer.h:typedef struct {
+src/advanced_calculations/tsp_optimizer.h:typedef struct {
+src/advanced_calculations/tsp_optimizer.h:typedef struct {
+src/advanced_calculations/video_processor.h:typedef struct {
+src/advanced_calculations/video_processor.h:typedef struct {
+src/advanced_calculations/video_processor.h:typedef struct {
+src/advanced_calculations/neural_blackbox_computer.h:typedef struct adam_ultra_precise_optimizer_t {
+src/advanced_calculations/neural_blackbox_computer.h:typedef struct lbfgs_optimizer_t {
+src/advanced_calculations/neural_blackbox_computer.h:typedef struct newton_raphson_optimizer_t {
+src/advanced_calculations/neural_blackbox_computer.h:typedef struct {
+src/advanced_calculations/neural_blackbox_computer.h:typedef struct {
+src/advanced_calculations/neural_blackbox_computer.h:typedef struct {
+src/advanced_calculations/neural_blackbox_computer.h:typedef struct {
+src/advanced_calculations/neural_blackbox_computer.h:typedef struct {
+src/advanced_calculations/neural_blackbox_computer.h:typedef struct {
+src/binary/binary_lum_converter.h:typedef struct {
+src/binary/binary_lum_converter.h:typedef struct {
+src/common/common_types.h:typedef struct {
+src/common/common_types.h:typedef struct neural_layer_t {
+src/common/module_dependency_manager.h:typedef struct {
+src/common/module_dependency_manager.h:typedef struct {
+src/complex_modules/ai_dynamic_config_manager.h:typedef struct {
+src/complex_modules/ai_dynamic_config_manager.h:typedef struct {
+src/complex_modules/ai_dynamic_config_manager.h:typedef struct {
+src/complex_modules/ai_optimization.c:typedef struct {
+src/complex_modules/ai_optimization.h:typedef struct {
+src/complex_modules/ai_optimization.h:typedef struct {
+src/complex_modules/ai_optimization.h:typedef struct {
+src/complex_modules/ai_optimization.h:typedef struct {
+src/complex_modules/ai_optimization.h:typedef struct {
+src/complex_modules/ai_optimization.h:typedef struct {
+src/complex_modules/ai_optimization.h:typedef struct {
+src/complex_modules/distributed_computing.h:typedef struct {
+src/complex_modules/distributed_computing.h:typedef struct {
+src/complex_modules/distributed_computing.h:typedef struct {
+src/complex_modules/distributed_computing.h:typedef struct {
+src/complex_modules/distributed_computing.h:typedef struct {
+src/complex_modules/distributed_computing.h:typedef struct {
+src/complex_modules/distributed_computing.h:typedef struct {
+src/complex_modules/realtime_analytics.h:typedef struct {
+src/complex_modules/realtime_analytics.h:typedef struct {
+src/complex_modules/realtime_analytics.h:typedef struct {
+src/complex_modules/realtime_analytics.h:typedef struct {
+src/complex_modules/realtime_analytics.h:typedef struct {
+src/complex_modules/realtime_analytics.h:typedef struct {
+src/crypto/crypto_validator.h:typedef struct {
+src/crypto/crypto_validator.h:typedef struct {
+src/crypto/crypto_validator.h:typedef struct {
+src/crypto/crypto_validator.h:typedef struct {
+src/crypto/crypto_validator.h:typedef struct {
+src/crypto/crypto_validator.h:typedef struct {
+src/crypto/crypto_validator.h:typedef struct {
+src/crypto/crypto_validator.h:typedef struct {
+src/crypto/sha256_test_vectors.h:typedef struct {
+src/debug/memory_tracker.h:typedef struct {
+src/debug/memory_tracker.h:typedef struct {
+src/debug/ultra_forensic_logger.h:typedef struct {
+src/file_formats/lum_native_file_handler.h:typedef struct {
+src/file_formats/lum_native_file_handler.h:typedef struct {
+src/file_formats/lum_native_file_handler.h:typedef struct {
+src/file_formats/lum_native_file_handler.h:typedef struct {
+src/file_formats/lum_native_file_handler.h:typedef struct {
+src/file_formats/lum_native_universal_format.h:typedef struct {
+src/file_formats/lum_native_universal_format.h:typedef struct {
+src/file_formats/lum_native_universal_format.h:typedef struct {
+src/file_formats/lum_native_universal_format.h:typedef struct {
+src/file_formats/lum_native_universal_format.h:typedef struct {
+src/file_formats/lum_native_universal_format.h:typedef struct {
+src/file_formats/lum_secure_serialization.c:typedef struct {
+src/file_formats/lum_secure_serialization.c:typedef struct __attribute__((packed)) {
+src/file_formats/lum_secure_serialization.c:typedef struct __attribute__((packed)) {
+src/file_formats/lum_secure_serialization.h:typedef struct {
+src/file_formats/lum_secure_serialization.h:typedef struct {
+src/logger/log_manager.h:typedef struct {
+src/logger/log_manager.h:typedef struct {
+src/logger/lum_logger.h:typedef struct {
+src/logger/lum_logger.h:typedef struct {
+src/logger/lum_logger.h:typedef struct {
+src/logger/lum_logger.h:typedef struct {
+src/logger/lum_logger.h:typedef struct {
+src/logger/lum_logger.h.backup:typedef struct {
+src/logger/lum_logger.h.backup:typedef struct {
+src/logger/lum_logger.h.backup:typedef struct {
+src/logger/lum_logger.h.backup:typedef struct {
+src/logger/lum_logger.h.backup:typedef struct {
+src/lum/lum_core.h:typedef struct {
+src/lum/lum_core.h:typedef struct {
+src/lum/lum_core.h:typedef struct {
+src/lum/lum_core.h:typedef struct {
+src/lum/lum_core.h:typedef struct {
+src/lum/lum_optimized_variants.h:typedef struct {
+src/lum/lum_optimized_variants.h:typedef struct {
+src/lum/lum_optimized_variants.h:typedef struct {
+src/metrics/performance_metrics.h:typedef struct {
+src/metrics/performance_metrics.h:typedef struct {
+src/metrics/performance_metrics.h:typedef struct {
+src/metrics/performance_metrics.h:typedef struct {
+src/metrics/performance_metrics.h:typedef struct {
+src/metrics/performance_metrics.h:typedef struct {
+src/metrics/performance_metrics.h:typedef struct {
+src/metrics/performance_metrics.h:typedef struct {
+src/network/hostinger_client.h:typedef struct {
+src/network/hostinger_client.h:typedef struct {
+src/network/hostinger_resource_limiter.h:typedef struct hostinger_resource_monitor_t {
+src/optimization/memory_optimizer.c:typedef struct allocated_block {
+src/optimization/memory_optimizer.h:typedef struct {
+src/optimization/memory_optimizer.h:typedef struct {
+src/optimization/memory_optimizer.h:typedef struct {
+src/optimization/pareto_inverse_optimizer.h:typedef struct {
+src/optimization/pareto_inverse_optimizer.h:typedef struct {
+src/optimization/pareto_inverse_optimizer.h:typedef struct {
+src/optimization/pareto_metrics_documentation.h:typedef struct {
+src/optimization/pareto_optimizer.h:typedef struct {
+src/optimization/pareto_optimizer.h:typedef struct {
+src/optimization/pareto_optimizer.h:typedef struct {
+src/optimization/pareto_optimizer.h:typedef struct {
+src/optimization/simd_optimizer.h:typedef struct {
+src/optimization/simd_optimizer.h:typedef struct {
+src/optimization/simd_optimizer.h:typedef struct {
+src/optimization/zero_copy_allocator.c:typedef struct active_allocation {
+src/optimization/zero_copy_allocator.h:typedef struct {
+src/optimization/zero_copy_allocator.h:typedef struct free_block {
+src/optimization/zero_copy_allocator.h:typedef struct {
+src/parallel/parallel_processor.h:typedef struct parallel_task {
+src/parallel/parallel_processor.h:typedef struct {
+src/parallel/parallel_processor.h:typedef struct {
+src/parallel/parallel_processor.h:typedef struct {
+src/parallel/parallel_processor.h:typedef struct thread_pool thread_pool_t;
+src/parallel/parallel_processor.h:typedef struct {
+src/parallel/parallel_processor.h:typedef struct {
+src/parser/vorax_parser.h:typedef struct {
+src/parser/vorax_parser.h:typedef struct vorax_ast_node {
+src/parser/vorax_parser.h:typedef struct {
+src/parser/vorax_parser.h:typedef struct {
+src/persistence/data_persistence.h:typedef struct {
+src/persistence/data_persistence.h:typedef struct {
+src/persistence/data_persistence.h:typedef struct {
+src/persistence/data_persistence.h:typedef struct {
+src/persistence/data_persistence.h:typedef struct storage_backend_s storage_backend_t;
+src/persistence/data_persistence.h:typedef struct {
+src/persistence/data_persistence.h:typedef struct {
+src/persistence/recovery_manager_extension.h:typedef struct {
+src/persistence/recovery_manager_extension.h:typedef struct {
+src/persistence/transaction_wal_extension.h:typedef struct {
+src/persistence/transaction_wal_extension.h:typedef struct {
+src/persistence/transaction_wal_extension.h:typedef struct {
+src/spatial/lum_instant_displacement.h:typedef struct {
+src/spatial/lum_instant_displacement.h:typedef struct {
+src/tests/forensic_test_framework.h:typedef struct {
+src/tests/test_neural_blackbox_complete.c:    typedef struct {
+src/tests/test_regression_complete.c:typedef struct {
+src/tests/test_stress_million_lums.c:typedef struct {
+src/tests/test_stress_persistance_100m_extension.c:typedef struct {
+src/tests/test_stress_safe.c:typedef struct {
+src/vorax/vorax_operations.h:typedef struct {
+~/workspace$ 

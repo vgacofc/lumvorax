@@ -1,0 +1,87 @@
+{
+  "version": "C43",
+  "description": "Configuration pour les modules physiques indépendants — C43 — steps×5, sites augmentés, fermionic_sign_problem actif",
+  "modules": [
+    {"module": "hubbard_hts_core",                       "lx": 14, "ly": 14, "t_eV": 1.0,  "u_eV": 8.0,  "mu_eV": 0.20, "temp_K": 95.0,  "dt": 0.01, "steps": 14000},
+    {"module": "qcd_lattice_fullscale",                  "lx": 12, "ly": 12, "t_eV": 0.7,  "u_eV": 9.0,  "mu_eV": 0.10, "temp_K": 140.0, "dt": 0.01, "steps": 11000},
+    {"module": "quantum_field_noneq",                    "lx": 12, "ly": 11, "t_eV": 1.3,  "u_eV": 7.0,  "mu_eV": 0.05, "temp_K": 180.0, "dt": 0.01, "steps": 10500},
+    {"module": "dense_nuclear_fullscale",                "lx": 12, "ly": 11, "t_eV": 0.8,  "u_eV": 11.0, "mu_eV": 0.30, "temp_K": 80.0,  "dt": 0.01, "steps": 10500},
+    {"module": "quantum_chemistry_fullscale",            "lx": 12, "ly": 10, "t_eV": 1.6,  "u_eV": 6.5,  "mu_eV": 0.40, "temp_K": 60.0,  "dt": 0.01, "steps": 11000},
+    {"module": "spin_liquid_exotic",                     "lx": 16, "ly": 14, "t_eV": 0.9,  "u_eV": 10.5, "mu_eV": 0.12, "temp_K": 55.0,  "dt": 0.01, "steps": 13000},
+    {"module": "topological_correlated_materials",       "lx": 15, "ly": 15, "t_eV": 1.1,  "u_eV": 7.8,  "mu_eV": 0.15, "temp_K": 70.0,  "dt": 0.01, "steps": 12500},
+    {"module": "correlated_fermions_non_hubbard",        "lx": 14, "ly": 13, "t_eV": 1.2,  "u_eV": 8.6,  "mu_eV": 0.18, "temp_K": 85.0,  "dt": 0.01, "steps": 12000},
+    {"module": "multi_state_excited_chemistry",          "lx": 13, "ly": 12, "t_eV": 1.5,  "u_eV": 6.8,  "mu_eV": 0.22, "temp_K": 48.0,  "dt": 0.01, "steps": 11500},
+    {"module": "bosonic_multimode_systems",              "lx": 14, "ly": 12, "t_eV": 0.6,  "u_eV": 5.2,  "mu_eV": 0.06, "temp_K": 110.0, "dt": 0.01, "steps": 11000},
+    {"module": "multiscale_nonlinear_field_models",      "lx": 16, "ly": 12, "t_eV": 1.4,  "u_eV": 9.2,  "mu_eV": 0.10, "temp_K": 125.0, "dt": 0.01, "steps": 11500},
+    {"module": "far_from_equilibrium_kinetic_lattices",  "lx": 15, "ly": 13, "t_eV": 1.0,  "u_eV": 8.0,  "mu_eV": 0.09, "temp_K": 150.0, "dt": 0.01, "steps": 12000},
+    {"module": "multi_correlated_fermion_boson_networks","lx": 14, "ly": 14, "t_eV": 1.05, "u_eV": 7.4,  "mu_eV": 0.14, "temp_K": 100.0, "dt": 0.01, "steps": 11750},
+    {"module": "ed_validation_2x2",                      "lx":  2, "ly":  2, "t_eV": 1.0,  "u_eV": 4.0,  "mu_eV": 0.00, "temp_K": 10.0,  "dt": 0.01, "steps": 20000},
+    {"module": "fermionic_sign_problem",                 "lx": 12, "ly": 12, "t_eV": 1.0,  "u_eV": 14.0, "mu_eV": 0.00, "temp_K": 20.0,  "dt": 0.01, "steps": 15000,
+     "_comment": "C43-NOUVEAU : Problème du signe fermionique — U/t=14 (grand), demi-remplissage exact (mu=0), T=20K (très basse). Sign ratio attendu ≪ 0 → test régime de signe sévère."}
+  ],
+  "qmc": {
+    "burn_in_fraction": 0.20,
+    "iterations_multiplier": 5
+  },
+  "dmrg": {
+    "max_sweeps": 20,
+    "power_tol": 1e-10
+  },
+  "arpes": {
+    "window": 0.10,
+    "alpha_by_material": {
+      "YBCO": 4.50,
+      "Bi2212_OD": 3.50,
+      "Bi2212_UD": 4.80
+    }
+  },
+  "stm": {
+    "rolling_window": 10
+  },
+  "benchmark_refs": {
+    "qmc_dmrg_csv": "benchmarks/qmc_dmrg_reference_runtime.csv",
+    "v2_reference_csv": "benchmarks/v2.csv"
+  },
+  "sign_problem": {
+    "median_threshold_warn": 0.10,
+    "median_threshold_fail": 0.05,
+    "reweighting_enabled": true,
+    "statistical_overhead_factor": 12.0,
+    "log_sign_ratio_every_step": true,
+    "log_sign_histogram": true
+  },
+  "worm_mc": {
+    "calibration_enabled": true,
+    "target_acceptance_rate_min": 0.05,
+    "target_acceptance_rate_max": 0.40,
+    "calibration_sweeps": 50
+  },
+  "dynamic_hilbert_scan": {
+    "enabled": true,
+    "n_start": 121,
+    "ram_target_pct": 99.0,
+    "cpu_target_pct": 99.0,
+    "steps_per_size": 300,
+    "timeout_per_size_s": 300.0
+  },
+  "gap_spin_charge": {
+    "enabled": true,
+    "spin_gap_method": "susceptibility_peak",
+    "charge_gap_method": "ed_lanczos"
+  },
+  "autocorr": {
+    "sokal_c_factor": 6.0,
+    "max_window": 5000,
+    "log_tau_int_per_module": true,
+    "log_N_eff_per_module": true
+  },
+  "ptmc": {
+    "n_replicas": 8,
+    "n_sweeps": 20000,
+    "n_thermalize": 4000,
+    "steps_per_sweep": 500,
+    "divergence_threshold_eV_per_site": 0.5,
+    "log_swap_detail_every": 1,
+    "log_per_sweep_energy": true
+  }
+}

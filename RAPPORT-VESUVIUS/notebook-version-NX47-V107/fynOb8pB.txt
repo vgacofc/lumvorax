@@ -1,0 +1,370 @@
+8.4s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+8.4s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+8.4s 3 0.00s - to python to disable frozen modules.
+8.4s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+9.1s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+9.1s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+9.1s 7 0.00s - to python to disable frozen modules.
+9.1s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+15.1s 9 Processing /kaggle/input/datasets/ndarray2000/nx47-dependencies/imagecodecs-2026.1.14-cp311-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl
+15.3s 10 Processing /kaggle/input/datasets/ndarray2000/nx47-dependencies/imagecodecs-2026.1.14-cp311-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl
+15.4s 11 Requirement already satisfied: numpy in /usr/local/lib/python3.12/dist-packages (from imagecodecs==2026.1.14) (2.0.2)
+15.6s 12 Requirement already satisfied: numpy in /usr/local/lib/python3.12/dist-packages (from imagecodecs==2026.1.14) (2.0.2)
+17.5s 13 Installing collected packages: imagecodecs
+17.8s 14 Installing collected packages: imagecodecs
+18.2s 15 Successfully installed imagecodecs-2026.1.14
+18.4s 16 Successfully installed imagecodecs-2026.1.14
+19.5s 17 Processing /kaggle/input/datasets/ndarray2000/nx47-dependencies/tifffile-2026.1.28-py3-none-any.whl
+19.5s 18 Requirement already satisfied: numpy in /usr/local/lib/python3.12/dist-packages (from tifffile==2026.1.28) (2.0.2)
+19.7s 19 Processing /kaggle/input/datasets/ndarray2000/nx47-dependencies/tifffile-2026.1.28-py3-none-any.whl
+19.7s 20 Requirement already satisfied: numpy in /usr/local/lib/python3.12/dist-packages (from tifffile==2026.1.28) (2.0.2)
+21.7s 21 Installing collected packages: tifffile
+21.7s 22 Attempting uninstall: tifffile
+21.9s 23 Installing collected packages: tifffile
+21.9s 24 Attempting uninstall: tifffile
+22.0s 25 Found existing installation: tifffile 2025.10.16
+22.1s 26 Uninstalling tifffile-2025.10.16:
+22.1s 27 Successfully uninstalled tifffile-2025.10.16
+22.2s 28 Found existing installation: tifffile 2025.10.16
+22.2s 29 Uninstalling tifffile-2025.10.16:
+22.2s 30 Successfully uninstalled tifffile-2025.10.16
+22.4s 31 Successfully installed tifffile-2026.1.28
+22.6s 32 Successfully installed tifffile-2026.1.28
+22.6s 33 {"ts_ns": 1770855186065032331, "event": "INPUT_DISCOVERED", "file_count": 1, "using_gpu": true}
+22.6s 34 {"ts_ns": 1770855186065692248, "event": "FILE_START", "file": "1407735.tif", "index": 1, "total": 1}
+28.7s 35 {"ts_ns": 1770855192093389925, "event": "FEATURES", "file": "1407735.tif", "gradient_energy": 1.116988, "intensity_std": 0.110381, "intensity_mean": 0.329569, "entropy": -88.164857, "nx47_signal": -12.755178, "atom_neuron_signal": 0.509952, "fusion_score": 0.0}
+32.8s 36 {"ts_ns": 1770855196164224913, "event": "SLICE_METRIC", "z": 0, "fusion_score": 0.0, "local_std": 0.096359, "adaptive_weight": 0.12, "p_lo": 0.123148, "p_hi": 0.125251}
+32.8s 37 {"ts_ns": 1770855196170177165, "event": "SLICE_METRIC", "z": 1, "fusion_score": 0.0, "local_std": 0.096328, "adaptive_weight": 0.12, "p_lo": 0.122551, "p_hi": 0.124431}
+32.8s 38 {"ts_ns": 1770855196175145489, "event": "SLICE_METRIC", "z": 2, "fusion_score": 0.0, "local_std": 0.096401, "adaptive_weight": 0.12, "p_lo": 0.122845, "p_hi": 0.124828}
+32.8s 39 {"ts_ns": 1770855196179864581, "event": "SLICE_METRIC", "z": 3, "fusion_score": 0.0, "local_std": 0.096621, "adaptive_weight": 0.12, "p_lo": 0.122829, "p_hi": 0.124855}
+32.8s 40 {"ts_ns": 1770855196184373540, "event": "SLICE_METRIC", "z": 4, "fusion_score": 0.0, "local_std": 0.097391, "adaptive_weight": 0.12, "p_lo": 0.12285, "p_hi": 0.124907}
+32.8s 41 {"ts_ns": 1770855196189230318, "event": "SLICE_METRIC", "z": 5, "fusion_score": 0.0, "local_std": 0.098418, "adaptive_weight": 0.12, "p_lo": 0.122862, "p_hi": 0.124934}
+32.8s 42 {"ts_ns": 1770855196193979085, "event": "SLICE_METRIC", "z": 6, "fusion_score": 0.0, "local_std": 0.099298, "adaptive_weight": 0.12, "p_lo": 0.122899, "p_hi": 0.125033}
+32.8s 43 {"ts_ns": 1770855196198509051, "event": "SLICE_METRIC", "z": 7, "fusion_score": 0.0, "local_std": 0.099985, "adaptive_weight": 0.12, "p_lo": 0.122936, "p_hi": 0.125101}
+32.8s 44 {"ts_ns": 1770855196202808107, "event": "SLICE_METRIC", "z": 8, "fusion_score": 0.0, "local_std": 0.100243, "adaptive_weight": 0.12, "p_lo": 0.122926, "p_hi": 0.125032}
+32.8s 45 {"ts_ns": 1770855196207395644, "event": "SLICE_METRIC", "z": 9, "fusion_score": 0.0, "local_std": 0.100136, "adaptive_weight": 0.12, "p_lo": 0.122921, "p_hi": 0.125037}
+32.8s 46 {"ts_ns": 1770855196211964610, "event": "SLICE_METRIC", "z": 10, "fusion_score": 0.0, "local_std": 0.099865, "adaptive_weight": 0.12, "p_lo": 0.122857, "p_hi": 0.124934}
+32.8s 47 {"ts_ns": 1770855196217000374, "event": "SLICE_METRIC", "z": 11, "fusion_score": 0.0, "local_std": 0.099833, "adaptive_weight": 0.12, "p_lo": 0.122869, "p_hi": 0.124885}
+32.8s 48 {"ts_ns": 1770855196221382749, "event": "SLICE_METRIC", "z": 12, "fusion_score": 0.0, "local_std": 0.099797, "adaptive_weight": 0.12, "p_lo": 0.122858, "p_hi": 0.124922}
+32.8s 49 {"ts_ns": 1770855196226248897, "event": "SLICE_METRIC", "z": 13, "fusion_score": 0.0, "local_std": 0.099877, "adaptive_weight": 0.12, "p_lo": 0.122878, "p_hi": 0.124961}
+32.8s 50 {"ts_ns": 1770855196230682087, "event": "SLICE_METRIC", "z": 14, "fusion_score": 0.0, "local_std": 0.100122, "adaptive_weight": 0.12, "p_lo": 0.12288, "p_hi": 0.12508}
+32.8s 51 {"ts_ns": 1770855196235465517, "event": "SLICE_METRIC", "z": 15, "fusion_score": 0.0, "local_std": 0.100385, "adaptive_weight": 0.12, "p_lo": 0.122852, "p_hi": 0.124978}
+32.8s 52 {"ts_ns": 1770855196240386560, "event": "SLICE_METRIC", "z": 16, "fusion_score": 0.0, "local_std": 0.100472, "adaptive_weight": 0.12, "p_lo": 0.122836, "p_hi": 0.124969}
+32.8s 53 {"ts_ns": 1770855196245173899, "event": "SLICE_METRIC", "z": 17, "fusion_score": 0.0, "local_std": 0.10058, "adaptive_weight": 0.12, "p_lo": 0.122857, "p_hi": 0.124911}
+32.8s 54 {"ts_ns": 1770855196249575644, "event": "SLICE_METRIC", "z": 18, "fusion_score": 0.0, "local_std": 0.100466, "adaptive_weight": 0.12, "p_lo": 0.122912, "p_hi": 0.12505}
+32.8s 55 {"ts_ns": 1770855196254233115, "event": "SLICE_METRIC", "z": 19, "fusion_score": 0.0, "local_std": 0.10028, "adaptive_weight": 0.12, "p_lo": 0.122905, "p_hi": 0.125024}
+32.8s 56 {"ts_ns": 1770855196258810152, "event": "SLICE_METRIC", "z": 20, "fusion_score": 0.0, "local_std": 0.100196, "adaptive_weight": 0.12, "p_lo": 0.122864, "p_hi": 0.124976}
+32.8s 57 {"ts_ns": 1770855196263387967, "event": "SLICE_METRIC", "z": 21, "fusion_score": 0.0, "local_std": 0.100244, "adaptive_weight": 0.12, "p_lo": 0.122845, "p_hi": 0.124922}
+32.8s 58 {"ts_ns": 1770855196267927912, "event": "SLICE_METRIC", "z": 22, "fusion_score": 0.0, "local_std": 0.100472, "adaptive_weight": 0.12, "p_lo": 0.122878, "p_hi": 0.12507}
+32.8s 59 {"ts_ns": 1770855196272390012, "event": "SLICE_METRIC", "z": 23, "fusion_score": 0.0, "local_std": 0.1008, "adaptive_weight": 0.12, "p_lo": 0.122933, "p_hi": 0.125131}
+32.8s 60 {"ts_ns": 1770855196277119158, "event": "SLICE_METRIC", "z": 24, "fusion_score": 0.0, "local_std": 0.101166, "adaptive_weight": 0.12, "p_lo": 0.122941, "p_hi": 0.125138}
+32.8s 61 {"ts_ns": 1770855196281684562, "event": "SLICE_METRIC", "z": 25, "fusion_score": 0.0, "local_std": 0.101426, "adaptive_weight": 0.12, "p_lo": 0.122944, "p_hi": 0.125204}
+32.8s 62 {"ts_ns": 1770855196286082134, "event": "SLICE_METRIC", "z": 26, "fusion_score": 0.0, "local_std": 0.101291, "adaptive_weight": 0.12, "p_lo": 0.122924, "p_hi": 0.125119}
+32.8s 63 {"ts_ns": 1770855196290799188, "event": "SLICE_METRIC", "z": 27, "fusion_score": 0.0, "local_std": 0.100903, "adaptive_weight": 0.12, "p_lo": 0.122905, "p_hi": 0.125136}
+32.8s 64 {"ts_ns": 1770855196295773632, "event": "SLICE_METRIC", "z": 28, "fusion_score": 0.0, "local_std": 0.100605, "adaptive_weight": 0.12, "p_lo": 0.12295, "p_hi": 0.125152}
+32.8s 65 {"ts_ns": 1770855196300431657, "event": "SLICE_METRIC", "z": 29, "fusion_score": 0.0, "local_std": 0.100542, "adaptive_weight": 0.12, "p_lo": 0.122919, "p_hi": 0.125084}
+32.8s 66 {"ts_ns": 1770855196305208852, "event": "SLICE_METRIC", "z": 30, "fusion_score": 0.0, "local_std": 0.100586, "adaptive_weight": 0.12, "p_lo": 0.122917, "p_hi": 0.125187}
+32.8s 67 {"ts_ns": 1770855196309858882, "event": "SLICE_METRIC", "z": 31, "fusion_score": 0.0, "local_std": 0.100829, "adaptive_weight": 0.12, "p_lo": 0.12291, "p_hi": 0.125132}
+32.8s 68 {"ts_ns": 1770855196315308474, "event": "SLICE_METRIC", "z": 32, "fusion_score": 0.0, "local_std": 0.101327, "adaptive_weight": 0.12, "p_lo": 0.122921, "p_hi": 0.12515}
+32.8s 69 {"ts_ns": 1770855196319781586, "event": "SLICE_METRIC", "z": 33, "fusion_score": 0.0, "local_std": 0.101887, "adaptive_weight": 0.12, "p_lo": 0.122943, "p_hi": 0.125171}
+32.8s 70 {"ts_ns": 1770855196324574660, "event": "SLICE_METRIC", "z": 34, "fusion_score": 0.0, "local_std": 0.102309, "adaptive_weight": 0.12, "p_lo": 0.122936, "p_hi": 0.125153}
+32.8s 71 {"ts_ns": 1770855196329244444, "event": "SLICE_METRIC", "z": 35, "fusion_score": 0.0, "local_std": 0.102389, "adaptive_weight": 0.12, "p_lo": 0.122908, "p_hi": 0.125157}
+32.8s 72 {"ts_ns": 1770855196334271485, "event": "SLICE_METRIC", "z": 36, "fusion_score": 0.0, "local_std": 0.102419, "adaptive_weight": 0.12, "p_lo": 0.122973, "p_hi": 0.125286}
+32.8s 73 {"ts_ns": 1770855196339450307, "event": "SLICE_METRIC", "z": 37, "fusion_score": 0.0, "local_std": 0.102199, "adaptive_weight": 0.12, "p_lo": 0.122936, "p_hi": 0.125299}
+32.8s 74 {"ts_ns": 1770855196344169878, "event": "SLICE_METRIC", "z": 38, "fusion_score": 0.0, "local_std": 0.101819, "adaptive_weight": 0.12, "p_lo": 0.122955, "p_hi": 0.125262}
+32.8s 75 {"ts_ns": 1770855196349136403, "event": "SLICE_METRIC", "z": 39, "fusion_score": 0.0, "local_std": 0.101306, "adaptive_weight": 0.12, "p_lo": 0.122941, "p_hi": 0.125208}
+32.8s 76 {"ts_ns": 1770855196354195621, "event": "SLICE_METRIC", "z": 40, "fusion_score": 0.0, "local_std": 0.101269, "adaptive_weight": 0.12, "p_lo": 0.122915, "p_hi": 0.125142}
+32.8s 77 {"ts_ns": 1770855196358738848, "event": "SLICE_METRIC", "z": 41, "fusion_score": 0.0, "local_std": 0.10125, "adaptive_weight": 0.12, "p_lo": 0.122943, "p_hi": 0.125165}
+32.8s 78 {"ts_ns": 1770855196363076495, "event": "SLICE_METRIC", "z": 42, "fusion_score": 0.0, "local_std": 0.101233, "adaptive_weight": 0.12, "p_lo": 0.122928, "p_hi": 0.12522}
+33.0s 79 {"ts_ns": 1770855196368463313, "event": "SLICE_METRIC", "z": 43, "fusion_score": 0.0, "local_std": 0.101272, "adaptive_weight": 0.12, "p_lo": 0.122959, "p_hi": 0.125193}
+33.0s 80 {"ts_ns": 1770855196373827927, "event": "SLICE_METRIC", "z": 44, "fusion_score": 0.0, "local_std": 0.101158, "adaptive_weight": 0.12, "p_lo": 0.122917, "p_hi": 0.125163}
+33.0s 81 {"ts_ns": 1770855196378593081, "event": "SLICE_METRIC", "z": 45, "fusion_score": 0.0, "local_std": 0.100588, "adaptive_weight": 0.12, "p_lo": 0.122916, "p_hi": 0.125101}
+33.0s 82 {"ts_ns": 1770855196383354964, "event": "SLICE_METRIC", "z": 46, "fusion_score": 0.0, "local_std": 0.100184, "adaptive_weight": 0.12, "p_lo": 0.122912, "p_hi": 0.125061}
+33.0s 83 {"ts_ns": 1770855196387607183, "event": "SLICE_METRIC", "z": 47, "fusion_score": 0.0, "local_std": 0.09988, "adaptive_weight": 0.12, "p_lo": 0.122905, "p_hi": 0.12513}
+33.0s 84 {"ts_ns": 1770855196393172195, "event": "SLICE_METRIC", "z": 48, "fusion_score": 0.0, "local_std": 0.099537, "adaptive_weight": 0.12, "p_lo": 0.122936, "p_hi": 0.125126}
+33.0s 85 {"ts_ns": 1770855196397915655, "event": "SLICE_METRIC", "z": 49, "fusion_score": 0.0, "local_std": 0.099597, "adaptive_weight": 0.12, "p_lo": 0.122956, "p_hi": 0.125103}
+33.0s 86 {"ts_ns": 1770855196402692738, "event": "SLICE_METRIC", "z": 50, "fusion_score": 0.0, "local_std": 0.100042, "adaptive_weight": 0.12, "p_lo": 0.122963, "p_hi": 0.125089}
+33.0s 87 {"ts_ns": 1770855196407479873, "event": "SLICE_METRIC", "z": 51, "fusion_score": 0.0, "local_std": 0.1006, "adaptive_weight": 0.12, "p_lo": 0.122919, "p_hi": 0.125114}
+33.0s 88 {"ts_ns": 1770855196412250677, "event": "SLICE_METRIC", "z": 52, "fusion_score": 0.0, "local_std": 0.100968, "adaptive_weight": 0.12, "p_lo": 0.122942, "p_hi": 0.125347}
+33.0s 89 {"ts_ns": 1770855196417099368, "event": "SLICE_METRIC", "z": 53, "fusion_score": 0.0, "local_std": 0.10121, "adaptive_weight": 0.12, "p_lo": 0.122965, "p_hi": 0.125271}
+33.0s 90 {"ts_ns": 1770855196421500860, "event": "SLICE_METRIC", "z": 54, "fusion_score": 0.0, "local_std": 0.101232, "adaptive_weight": 0.12, "p_lo": 0.122985, "p_hi": 0.125235}
+33.0s 91 {"ts_ns": 1770855196426167717, "event": "SLICE_METRIC", "z": 55, "fusion_score": 0.0, "local_std": 0.101159, "adaptive_weight": 0.12, "p_lo": 0.122941, "p_hi": 0.125072}
+33.0s 92 {"ts_ns": 1770855196430512311, "event": "SLICE_METRIC", "z": 56, "fusion_score": 0.0, "local_std": 0.101033, "adaptive_weight": 0.12, "p_lo": 0.122897, "p_hi": 0.125051}
+33.0s 93 {"ts_ns": 1770855196435670834, "event": "SLICE_METRIC", "z": 57, "fusion_score": 0.0, "local_std": 0.101297, "adaptive_weight": 0.12, "p_lo": 0.122944, "p_hi": 0.125132}
+33.0s 94 {"ts_ns": 1770855196440318970, "event": "SLICE_METRIC", "z": 58, "fusion_score": 0.0, "local_std": 0.101776, "adaptive_weight": 0.12, "p_lo": 0.122965, "p_hi": 0.125197}
+33.0s 95 {"ts_ns": 1770855196445199853, "event": "SLICE_METRIC", "z": 59, "fusion_score": 0.0, "local_std": 0.102149, "adaptive_weight": 0.12, "p_lo": 0.123008, "p_hi": 0.125345}
+33.0s 96 {"ts_ns": 1770855196449461479, "event": "SLICE_METRIC", "z": 60, "fusion_score": 0.0, "local_std": 0.102385, "adaptive_weight": 0.12, "p_lo": 0.122979, "p_hi": 0.125324}
+33.0s 97 {"ts_ns": 1770855196454407518, "event": "SLICE_METRIC", "z": 61, "fusion_score": 0.0, "local_std": 0.102439, "adaptive_weight": 0.12, "p_lo": 0.123007, "p_hi": 0.125377}
+33.0s 98 {"ts_ns": 1770855196459058263, "event": "SLICE_METRIC", "z": 62, "fusion_score": 0.0, "local_std": 0.102564, "adaptive_weight": 0.12, "p_lo": 0.12299, "p_hi": 0.125223}
+33.0s 99 {"ts_ns": 1770855196463841574, "event": "SLICE_METRIC", "z": 63, "fusion_score": 0.0, "local_std": 0.103126, "adaptive_weight": 0.12, "p_lo": 0.122974, "p_hi": 0.12527}
+33.0s 100 {"ts_ns": 1770855196469191667, "event": "SLICE_METRIC", "z": 64, "fusion_score": 0.0, "local_std": 0.103837, "adaptive_weight": 0.12, "p_lo": 0.123014, "p_hi": 0.12536}
+33.0s 101 {"ts_ns": 1770855196474239307, "event": "SLICE_METRIC", "z": 65, "fusion_score": 0.0, "local_std": 0.104697, "adaptive_weight": 0.12, "p_lo": 0.123092, "p_hi": 0.125538}
+33.0s 102 {"ts_ns": 1770855196479174683, "event": "SLICE_METRIC", "z": 66, "fusion_score": 0.0, "local_std": 0.105551, "adaptive_weight": 0.12, "p_lo": 0.123073, "p_hi": 0.125668}
+33.0s 103 {"ts_ns": 1770855196483624689, "event": "SLICE_METRIC", "z": 67, "fusion_score": 0.0, "local_std": 0.106274, "adaptive_weight": 0.12, "p_lo": 0.123018, "p_hi": 0.125579}
+33.0s 104 {"ts_ns": 1770855196488302973, "event": "SLICE_METRIC", "z": 68, "fusion_score": 0.0, "local_std": 0.106698, "adaptive_weight": 0.12, "p_lo": 0.123025, "p_hi": 0.12559}
+33.0s 105 {"ts_ns": 1770855196493294952, "event": "SLICE_METRIC", "z": 69, "fusion_score": 0.0, "local_std": 0.107119, "adaptive_weight": 0.12, "p_lo": 0.123046, "p_hi": 0.125619}
+33.0s 106 {"ts_ns": 1770855196498112965, "event": "SLICE_METRIC", "z": 70, "fusion_score": 0.0, "local_std": 0.107035, "adaptive_weight": 0.12, "p_lo": 0.123097, "p_hi": 0.125862}
+33.0s 107 {"ts_ns": 1770855196502718895, "event": "SLICE_METRIC", "z": 71, "fusion_score": 0.0, "local_std": 0.107142, "adaptive_weight": 0.12, "p_lo": 0.123079, "p_hi": 0.125775}
+33.0s 108 {"ts_ns": 1770855196507464967, "event": "SLICE_METRIC", "z": 72, "fusion_score": 0.0, "local_std": 0.107675, "adaptive_weight": 0.12, "p_lo": 0.123023, "p_hi": 0.125717}
+33.0s 109 {"ts_ns": 1770855196512252366, "event": "SLICE_METRIC", "z": 73, "fusion_score": 0.0, "local_std": 0.108339, "adaptive_weight": 0.12, "p_lo": 0.123012, "p_hi": 0.125727}
+33.0s 110 {"ts_ns": 1770855196517221194, "event": "SLICE_METRIC", "z": 74, "fusion_score": 0.0, "local_std": 0.108594, "adaptive_weight": 0.12, "p_lo": 0.12311, "p_hi": 0.126087}
+33.0s 111 {"ts_ns": 1770855196522256674, "event": "SLICE_METRIC", "z": 75, "fusion_score": 0.0, "local_std": 0.108723, "adaptive_weight": 0.12, "p_lo": 0.123165, "p_hi": 0.126135}
+33.0s 112 {"ts_ns": 1770855196526975700, "event": "SLICE_METRIC", "z": 76, "fusion_score": 0.0, "local_std": 0.108681, "adaptive_weight": 0.12, "p_lo": 0.123146, "p_hi": 0.12598}
+33.0s 113 {"ts_ns": 1770855196532105287, "event": "SLICE_METRIC", "z": 77, "fusion_score": 0.0, "local_std": 0.108177, "adaptive_weight": 0.12, "p_lo": 0.123093, "p_hi": 0.125768}
+33.0s 114 {"ts_ns": 1770855196536957507, "event": "SLICE_METRIC", "z": 78, "fusion_score": 0.0, "local_std": 0.107275, "adaptive_weight": 0.12, "p_lo": 0.122993, "p_hi": 0.125758}
+33.0s 115 {"ts_ns": 1770855196542023308, "event": "SLICE_METRIC", "z": 79, "fusion_score": 0.0, "local_std": 0.106504, "adaptive_weight": 0.12, "p_lo": 0.123033, "p_hi": 0.125769}
+33.0s 116 {"ts_ns": 1770855196547419479, "event": "SLICE_METRIC", "z": 80, "fusion_score": 0.0, "local_std": 0.106104, "adaptive_weight": 0.12, "p_lo": 0.123019, "p_hi": 0.125801}
+33.0s 117 {"ts_ns": 1770855196552300737, "event": "SLICE_METRIC", "z": 81, "fusion_score": 0.0, "local_std": 0.105646, "adaptive_weight": 0.12, "p_lo": 0.123016, "p_hi": 0.125769}
+33.0s 118 {"ts_ns": 1770855196557087811, "event": "SLICE_METRIC", "z": 82, "fusion_score": 0.0, "local_std": 0.104972, "adaptive_weight": 0.12, "p_lo": 0.123004, "p_hi": 0.12562}
+33.0s 119 {"ts_ns": 1770855196561984059, "event": "SLICE_METRIC", "z": 83, "fusion_score": 0.0, "local_std": 0.104361, "adaptive_weight": 0.12, "p_lo": 0.122979, "p_hi": 0.125594}
+33.0s 120 {"ts_ns": 1770855196566781730, "event": "SLICE_METRIC", "z": 84, "fusion_score": 0.0, "local_std": 0.104004, "adaptive_weight": 0.12, "p_lo": 0.122966, "p_hi": 0.12556}
+33.2s 121 {"ts_ns": 1770855196573141393, "event": "SLICE_METRIC", "z": 85, "fusion_score": 0.0, "local_std": 0.103806, "adaptive_weight": 0.12, "p_lo": 0.123048, "p_hi": 0.125545}
+33.2s 122 {"ts_ns": 1770855196578807758, "event": "SLICE_METRIC", "z": 86, "fusion_score": 0.0, "local_std": 0.103658, "adaptive_weight": 0.12, "p_lo": 0.123036, "p_hi": 0.12562}
+33.2s 123 {"ts_ns": 1770855196583551898, "event": "SLICE_METRIC", "z": 87, "fusion_score": 0.0, "local_std": 0.103773, "adaptive_weight": 0.12, "p_lo": 0.12293, "p_hi": 0.125466}
+33.2s 124 {"ts_ns": 1770855196588400540, "event": "SLICE_METRIC", "z": 88, "fusion_score": 0.0, "local_std": 0.104117, "adaptive_weight": 0.12, "p_lo": 0.12296, "p_hi": 0.125436}
+33.2s 125 {"ts_ns": 1770855196593216855, "event": "SLICE_METRIC", "z": 89, "fusion_score": 0.0, "local_std": 0.104377, "adaptive_weight": 0.12, "p_lo": 0.122971, "p_hi": 0.125512}
+33.2s 126 {"ts_ns": 1770855196598105233, "event": "SLICE_METRIC", "z": 90, "fusion_score": 0.0, "local_std": 0.104357, "adaptive_weight": 0.12, "p_lo": 0.122973, "p_hi": 0.125575}
+33.2s 127 {"ts_ns": 1770855196603219083, "event": "SLICE_METRIC", "z": 91, "fusion_score": 0.0, "local_std": 0.104374, "adaptive_weight": 0.12, "p_lo": 0.122983, "p_hi": 0.125637}
+33.2s 128 {"ts_ns": 1770855196609141589, "event": "SLICE_METRIC", "z": 92, "fusion_score": 0.0, "local_std": 0.104453, "adaptive_weight": 0.12, "p_lo": 0.122964, "p_hi": 0.125497}
+33.2s 129 {"ts_ns": 1770855196614323154, "event": "SLICE_METRIC", "z": 93, "fusion_score": 0.0, "local_std": 0.104248, "adaptive_weight": 0.12, "p_lo": 0.122981, "p_hi": 0.125552}
+33.2s 130 {"ts_ns": 1770855196619324975, "event": "SLICE_METRIC", "z": 94, "fusion_score": 0.0, "local_std": 0.10411, "adaptive_weight": 0.12, "p_lo": 0.123009, "p_hi": 0.125583}
+33.2s 131 {"ts_ns": 1770855196624061128, "event": "SLICE_METRIC", "z": 95, "fusion_score": 0.0, "local_std": 0.104365, "adaptive_weight": 0.12, "p_lo": 0.122941, "p_hi": 0.125644}
+33.2s 132 {"ts_ns": 1770855196629410396, "event": "SLICE_METRIC", "z": 96, "fusion_score": 0.0, "local_std": 0.104601, "adaptive_weight": 0.12, "p_lo": 0.122945, "p_hi": 0.125523}
+33.2s 133 {"ts_ns": 1770855196634454918, "event": "SLICE_METRIC", "z": 97, "fusion_score": 0.0, "local_std": 0.104609, "adaptive_weight": 0.12, "p_lo": 0.122996, "p_hi": 0.125633}
+33.2s 134 {"ts_ns": 1770855196639334230, "event": "SLICE_METRIC", "z": 98, "fusion_score": 0.0, "local_std": 0.104608, "adaptive_weight": 0.12, "p_lo": 0.122986, "p_hi": 0.125609}
+33.2s 135 {"ts_ns": 1770855196643834717, "event": "SLICE_METRIC", "z": 99, "fusion_score": 0.0, "local_std": 0.104775, "adaptive_weight": 0.12, "p_lo": 0.122964, "p_hi": 0.125556}
+33.2s 136 {"ts_ns": 1770855196648655652, "event": "SLICE_METRIC", "z": 100, "fusion_score": 0.0, "local_std": 0.105102, "adaptive_weight": 0.12, "p_lo": 0.122895, "p_hi": 0.125414}
+33.2s 137 {"ts_ns": 1770855196653661127, "event": "SLICE_METRIC", "z": 101, "fusion_score": 0.0, "local_std": 0.105683, "adaptive_weight": 0.12, "p_lo": 0.122906, "p_hi": 0.125467}
+33.2s 138 {"ts_ns": 1770855196658235840, "event": "SLICE_METRIC", "z": 102, "fusion_score": 0.0, "local_std": 0.106263, "adaptive_weight": 0.12, "p_lo": 0.122955, "p_hi": 0.125633}
+33.2s 139 {"ts_ns": 1770855196662752119, "event": "SLICE_METRIC", "z": 103, "fusion_score": 0.0, "local_std": 0.106954, "adaptive_weight": 0.12, "p_lo": 0.122961, "p_hi": 0.125697}
+33.2s 140 {"ts_ns": 1770855196667817037, "event": "SLICE_METRIC", "z": 104, "fusion_score": 0.0, "local_std": 0.107536, "adaptive_weight": 0.12, "p_lo": 0.122919, "p_hi": 0.125575}
+33.2s 141 {"ts_ns": 1770855196672844585, "event": "SLICE_METRIC", "z": 105, "fusion_score": 0.0, "local_std": 0.107695, "adaptive_weight": 0.12, "p_lo": 0.122952, "p_hi": 0.125502}
+33.2s 142 {"ts_ns": 1770855196677653344, "event": "SLICE_METRIC", "z": 106, "fusion_score": 0.0, "local_std": 0.10747, "adaptive_weight": 0.12, "p_lo": 0.12298, "p_hi": 0.12558}
+33.2s 143 {"ts_ns": 1770855196682384639, "event": "SLICE_METRIC", "z": 107, "fusion_score": 0.0, "local_std": 0.10708, "adaptive_weight": 0.12, "p_lo": 0.122946, "p_hi": 0.125486}
+33.2s 144 {"ts_ns": 1770855196686967728, "event": "SLICE_METRIC", "z": 108, "fusion_score": 0.0, "local_std": 0.106542, "adaptive_weight": 0.12, "p_lo": 0.122922, "p_hi": 0.125446}
+33.2s 145 {"ts_ns": 1770855196692169959, "event": "SLICE_METRIC", "z": 109, "fusion_score": 0.0, "local_std": 0.105749, "adaptive_weight": 0.12, "p_lo": 0.122954, "p_hi": 0.125493}
+33.2s 146 {"ts_ns": 1770855196697024584, "event": "SLICE_METRIC", "z": 110, "fusion_score": 0.0, "local_std": 0.104944, "adaptive_weight": 0.12, "p_lo": 0.122851, "p_hi": 0.125412}
+33.2s 147 {"ts_ns": 1770855196701837974, "event": "SLICE_METRIC", "z": 111, "fusion_score": 0.0, "local_std": 0.104645, "adaptive_weight": 0.12, "p_lo": 0.122873, "p_hi": 0.125284}
+33.2s 148 {"ts_ns": 1770855196707239167, "event": "SLICE_METRIC", "z": 112, "fusion_score": 0.0, "local_std": 0.104299, "adaptive_weight": 0.12, "p_lo": 0.122832, "p_hi": 0.125419}
+33.2s 149 {"ts_ns": 1770855196712292829, "event": "SLICE_METRIC", "z": 113, "fusion_score": 0.0, "local_std": 0.103823, "adaptive_weight": 0.12, "p_lo": 0.12294, "p_hi": 0.125415}
+33.2s 150 {"ts_ns": 1770855196717181787, "event": "SLICE_METRIC", "z": 114, "fusion_score": 0.0, "local_std": 0.103421, "adaptive_weight": 0.12, "p_lo": 0.122875, "p_hi": 0.125414}
+33.2s 151 {"ts_ns": 1770855196722339696, "event": "SLICE_METRIC", "z": 115, "fusion_score": 0.0, "local_std": 0.103231, "adaptive_weight": 0.12, "p_lo": 0.122957, "p_hi": 0.12517}
+33.2s 152 {"ts_ns": 1770855196727281884, "event": "SLICE_METRIC", "z": 116, "fusion_score": 0.0, "local_std": 0.102587, "adaptive_weight": 0.12, "p_lo": 0.122835, "p_hi": 0.125086}
+33.2s 153 {"ts_ns": 1770855196732643250, "event": "SLICE_METRIC", "z": 117, "fusion_score": 0.0, "local_std": 0.101857, "adaptive_weight": 0.12, "p_lo": 0.122792, "p_hi": 0.125152}
+33.2s 154 {"ts_ns": 1770855196737146393, "event": "SLICE_METRIC", "z": 118, "fusion_score": 0.0, "local_std": 0.101402, "adaptive_weight": 0.12, "p_lo": 0.122817, "p_hi": 0.125068}
+33.2s 155 {"ts_ns": 1770855196741878761, "event": "SLICE_METRIC", "z": 119, "fusion_score": 0.0, "local_std": 0.10097, "adaptive_weight": 0.12, "p_lo": 0.122847, "p_hi": 0.125168}
+33.2s 156 {"ts_ns": 1770855196746580454, "event": "SLICE_METRIC", "z": 120, "fusion_score": 0.0, "local_std": 0.100494, "adaptive_weight": 0.12, "p_lo": 0.122864, "p_hi": 0.125051}
+33.2s 157 {"ts_ns": 1770855196751359413, "event": "SLICE_METRIC", "z": 121, "fusion_score": 0.0, "local_std": 0.100067, "adaptive_weight": 0.12, "p_lo": 0.122779, "p_hi": 0.125059}
+33.2s 158 {"ts_ns": 1770855196756319322, "event": "SLICE_METRIC", "z": 122, "fusion_score": 0.0, "local_std": 0.099882, "adaptive_weight": 0.12, "p_lo": 0.122793, "p_hi": 0.125027}
+33.2s 159 {"ts_ns": 1770855196761239581, "event": "SLICE_METRIC", "z": 123, "fusion_score": 0.0, "local_std": 0.099794, "adaptive_weight": 0.12, "p_lo": 0.122816, "p_hi": 0.125038}
+33.2s 160 {"ts_ns": 1770855196765869538, "event": "SLICE_METRIC", "z": 124, "fusion_score": 0.0, "local_std": 0.099719, "adaptive_weight": 0.12, "p_lo": 0.12281, "p_hi": 0.12506}
+33.2s 161 {"ts_ns": 1770855196771008018, "event": "SLICE_METRIC", "z": 125, "fusion_score": 0.0, "local_std": 0.09944, "adaptive_weight": 0.12, "p_lo": 0.122812, "p_hi": 0.125051}
+33.4s 162 {"ts_ns": 1770855196776086445, "event": "SLICE_METRIC", "z": 126, "fusion_score": 0.0, "local_std": 0.099016, "adaptive_weight": 0.12, "p_lo": 0.12281, "p_hi": 0.125196}
+33.4s 163 {"ts_ns": 1770855196781582456, "event": "SLICE_METRIC", "z": 127, "fusion_score": 0.0, "local_std": 0.098698, "adaptive_weight": 0.12, "p_lo": 0.122813, "p_hi": 0.125099}
+33.4s 164 {"ts_ns": 1770855196786604101, "event": "SLICE_METRIC", "z": 128, "fusion_score": 0.0, "local_std": 0.098476, "adaptive_weight": 0.12, "p_lo": 0.122785, "p_hi": 0.125005}
+33.4s 165 {"ts_ns": 1770855196791341187, "event": "SLICE_METRIC", "z": 129, "fusion_score": 0.0, "local_std": 0.098441, "adaptive_weight": 0.12, "p_lo": 0.122821, "p_hi": 0.124971}
+33.4s 166 {"ts_ns": 1770855196796457543, "event": "SLICE_METRIC", "z": 130, "fusion_score": 0.0, "local_std": 0.098347, "adaptive_weight": 0.12, "p_lo": 0.122785, "p_hi": 0.124988}
+33.4s 167 {"ts_ns": 1770855196801133470, "event": "SLICE_METRIC", "z": 131, "fusion_score": 0.0, "local_std": 0.098291, "adaptive_weight": 0.12, "p_lo": 0.122785, "p_hi": 0.125054}
+33.4s 168 {"ts_ns": 1770855196805953470, "event": "SLICE_METRIC", "z": 132, "fusion_score": 0.0, "local_std": 0.098379, "adaptive_weight": 0.12, "p_lo": 0.122788, "p_hi": 0.125011}
+33.4s 169 {"ts_ns": 1770855196810603110, "event": "SLICE_METRIC", "z": 133, "fusion_score": 0.0, "local_std": 0.098486, "adaptive_weight": 0.12, "p_lo": 0.122754, "p_hi": 0.124954}
+33.4s 170 {"ts_ns": 1770855196815368624, "event": "SLICE_METRIC", "z": 134, "fusion_score": 0.0, "local_std": 0.098572, "adaptive_weight": 0.12, "p_lo": 0.122763, "p_hi": 0.124913}
+33.4s 171 {"ts_ns": 1770855196819819964, "event": "SLICE_METRIC", "z": 135, "fusion_score": 0.0, "local_std": 0.098657, "adaptive_weight": 0.12, "p_lo": 0.122766, "p_hi": 0.124975}
+33.4s 172 {"ts_ns": 1770855196824269898, "event": "SLICE_METRIC", "z": 136, "fusion_score": 0.0, "local_std": 0.098858, "adaptive_weight": 0.12, "p_lo": 0.122746, "p_hi": 0.124973}
+33.4s 173 {"ts_ns": 1770855196829408265, "event": "SLICE_METRIC", "z": 137, "fusion_score": 0.0, "local_std": 0.099024, "adaptive_weight": 0.12, "p_lo": 0.122739, "p_hi": 0.124969}
+33.4s 174 {"ts_ns": 1770855196834480857, "event": "SLICE_METRIC", "z": 138, "fusion_score": 0.0, "local_std": 0.099275, "adaptive_weight": 0.12, "p_lo": 0.122743, "p_hi": 0.124927}
+33.4s 175 {"ts_ns": 1770855196839011736, "event": "SLICE_METRIC", "z": 139, "fusion_score": 0.0, "local_std": 0.099449, "adaptive_weight": 0.12, "p_lo": 0.122727, "p_hi": 0.124902}
+33.4s 176 {"ts_ns": 1770855196843532297, "event": "SLICE_METRIC", "z": 140, "fusion_score": 0.0, "local_std": 0.099854, "adaptive_weight": 0.12, "p_lo": 0.122717, "p_hi": 0.124939}
+33.4s 177 {"ts_ns": 1770855196847992871, "event": "SLICE_METRIC", "z": 141, "fusion_score": 0.0, "local_std": 0.100167, "adaptive_weight": 0.12, "p_lo": 0.122739, "p_hi": 0.12502}
+33.4s 178 {"ts_ns": 1770855196853130424, "event": "SLICE_METRIC", "z": 142, "fusion_score": 0.0, "local_std": 0.100555, "adaptive_weight": 0.12, "p_lo": 0.122731, "p_hi": 0.124928}
+33.4s 179 {"ts_ns": 1770855196857942418, "event": "SLICE_METRIC", "z": 143, "fusion_score": 0.0, "local_std": 0.10048, "adaptive_weight": 0.12, "p_lo": 0.122763, "p_hi": 0.125}
+33.4s 180 {"ts_ns": 1770855196863351979, "event": "SLICE_METRIC", "z": 144, "fusion_score": 0.0, "local_std": 0.100275, "adaptive_weight": 0.12, "p_lo": 0.122741, "p_hi": 0.125097}
+33.4s 181 {"ts_ns": 1770855196868265070, "event": "SLICE_METRIC", "z": 145, "fusion_score": 0.0, "local_std": 0.100362, "adaptive_weight": 0.12, "p_lo": 0.122724, "p_hi": 0.125048}
+33.4s 182 {"ts_ns": 1770855196873540388, "event": "SLICE_METRIC", "z": 146, "fusion_score": 0.0, "local_std": 0.100807, "adaptive_weight": 0.12, "p_lo": 0.122752, "p_hi": 0.125081}
+33.4s 183 {"ts_ns": 1770855196878828825, "event": "SLICE_METRIC", "z": 147, "fusion_score": 0.0, "local_std": 0.101232, "adaptive_weight": 0.12, "p_lo": 0.122755, "p_hi": 0.125111}
+33.4s 184 {"ts_ns": 1770855196884307356, "event": "SLICE_METRIC", "z": 148, "fusion_score": 0.0, "local_std": 0.101935, "adaptive_weight": 0.12, "p_lo": 0.122801, "p_hi": 0.125441}
+33.4s 185 {"ts_ns": 1770855196889733900, "event": "SLICE_METRIC", "z": 149, "fusion_score": 0.0, "local_std": 0.102762, "adaptive_weight": 0.12, "p_lo": 0.122852, "p_hi": 0.125492}
+33.4s 186 {"ts_ns": 1770855196895257390, "event": "SLICE_METRIC", "z": 150, "fusion_score": 0.0, "local_std": 0.103437, "adaptive_weight": 0.12, "p_lo": 0.122861, "p_hi": 0.125731}
+33.4s 187 {"ts_ns": 1770855196900330794, "event": "SLICE_METRIC", "z": 151, "fusion_score": 0.0, "local_std": 0.104262, "adaptive_weight": 0.12, "p_lo": 0.122905, "p_hi": 0.125556}
+33.4s 188 {"ts_ns": 1770855196904716436, "event": "SLICE_METRIC", "z": 152, "fusion_score": 0.0, "local_std": 0.105227, "adaptive_weight": 0.12, "p_lo": 0.122888, "p_hi": 0.125648}
+33.4s 189 {"ts_ns": 1770855196909390730, "event": "SLICE_METRIC", "z": 153, "fusion_score": 0.0, "local_std": 0.105977, "adaptive_weight": 0.12, "p_lo": 0.122926, "p_hi": 0.125841}
+33.4s 190 {"ts_ns": 1770855196914335093, "event": "SLICE_METRIC", "z": 154, "fusion_score": 0.0, "local_std": 0.107142, "adaptive_weight": 0.12, "p_lo": 0.122971, "p_hi": 0.12594}
+33.4s 191 {"ts_ns": 1770855196919112845, "event": "SLICE_METRIC", "z": 155, "fusion_score": 0.0, "local_std": 0.108595, "adaptive_weight": 0.12, "p_lo": 0.123028, "p_hi": 0.126117}
+33.4s 192 {"ts_ns": 1770855196923649692, "event": "SLICE_METRIC", "z": 156, "fusion_score": 0.0, "local_std": 0.10995, "adaptive_weight": 0.12, "p_lo": 0.122963, "p_hi": 0.125942}
+33.4s 193 {"ts_ns": 1770855196928767819, "event": "SLICE_METRIC", "z": 157, "fusion_score": 0.0, "local_std": 0.111307, "adaptive_weight": 0.12, "p_lo": 0.12299, "p_hi": 0.126354}
+33.4s 194 {"ts_ns": 1770855196933457724, "event": "SLICE_METRIC", "z": 158, "fusion_score": 0.0, "local_std": 0.112843, "adaptive_weight": 0.12, "p_lo": 0.12304, "p_hi": 0.126333}
+33.4s 195 {"ts_ns": 1770855196938193055, "event": "SLICE_METRIC", "z": 159, "fusion_score": 0.0, "local_std": 0.113929, "adaptive_weight": 0.12, "p_lo": 0.123088, "p_hi": 0.126544}
+33.4s 196 {"ts_ns": 1770855196943157327, "event": "SLICE_METRIC", "z": 160, "fusion_score": 0.0, "local_std": 0.114775, "adaptive_weight": 0.12, "p_lo": 0.123136, "p_hi": 0.126563}
+33.4s 197 {"ts_ns": 1770855196947528984, "event": "SLICE_METRIC", "z": 161, "fusion_score": 0.0, "local_std": 0.115477, "adaptive_weight": 0.12, "p_lo": 0.12321, "p_hi": 0.126976}
+33.4s 198 {"ts_ns": 1770855196952230633, "event": "SLICE_METRIC", "z": 162, "fusion_score": 0.0, "local_std": 0.115911, "adaptive_weight": 0.12, "p_lo": 0.123198, "p_hi": 0.126978}
+33.4s 199 {"ts_ns": 1770855196956809486, "event": "SLICE_METRIC", "z": 163, "fusion_score": 0.0, "local_std": 0.116376, "adaptive_weight": 0.12, "p_lo": 0.123263, "p_hi": 0.127125}
+33.4s 200 {"ts_ns": 1770855196961325455, "event": "SLICE_METRIC", "z": 164, "fusion_score": 0.0, "local_std": 0.117301, "adaptive_weight": 0.12, "p_lo": 0.123277, "p_hi": 0.127027}
+33.4s 201 {"ts_ns": 1770855196965992941, "event": "SLICE_METRIC", "z": 165, "fusion_score": 0.0, "local_std": 0.118298, "adaptive_weight": 0.12, "p_lo": 0.123326, "p_hi": 0.12711}
+33.4s 202 {"ts_ns": 1770855196970760315, "event": "SLICE_METRIC", "z": 166, "fusion_score": 0.0, "local_std": 0.119168, "adaptive_weight": 0.12, "p_lo": 0.12343, "p_hi": 0.127534}
+33.4s 203 {"ts_ns": 1770855196975365114, "event": "SLICE_METRIC", "z": 167, "fusion_score": 0.0, "local_std": 0.120018, "adaptive_weight": 0.12, "p_lo": 0.123486, "p_hi": 0.127847}
+33.6s 204 {"ts_ns": 1770855196980605802, "event": "SLICE_METRIC", "z": 168, "fusion_score": 0.0, "local_std": 0.120594, "adaptive_weight": 0.12, "p_lo": 0.123438, "p_hi": 0.127805}
+33.6s 205 {"ts_ns": 1770855196986112676, "event": "SLICE_METRIC", "z": 169, "fusion_score": 0.0, "local_std": 0.120485, "adaptive_weight": 0.12, "p_lo": 0.123441, "p_hi": 0.127685}
+33.6s 206 {"ts_ns": 1770855196991019221, "event": "SLICE_METRIC", "z": 170, "fusion_score": 0.0, "local_std": 0.120171, "adaptive_weight": 0.12, "p_lo": 0.12346, "p_hi": 0.127727}
+33.6s 207 {"ts_ns": 1770855196995629550, "event": "SLICE_METRIC", "z": 171, "fusion_score": 0.0, "local_std": 0.119955, "adaptive_weight": 0.12, "p_lo": 0.123403, "p_hi": 0.127589}
+33.6s 208 {"ts_ns": 1770855197000469565, "event": "SLICE_METRIC", "z": 172, "fusion_score": 0.0, "local_std": 0.119803, "adaptive_weight": 0.12, "p_lo": 0.123421, "p_hi": 0.127588}
+33.6s 209 {"ts_ns": 1770855197005010032, "event": "SLICE_METRIC", "z": 173, "fusion_score": 0.0, "local_std": 0.120161, "adaptive_weight": 0.12, "p_lo": 0.123419, "p_hi": 0.127742}
+33.6s 210 {"ts_ns": 1770855197010153221, "event": "SLICE_METRIC", "z": 174, "fusion_score": 0.0, "local_std": 0.121019, "adaptive_weight": 0.12, "p_lo": 0.123466, "p_hi": 0.127851}
+33.6s 211 {"ts_ns": 1770855197015189172, "event": "SLICE_METRIC", "z": 175, "fusion_score": 0.0, "local_std": 0.122059, "adaptive_weight": 0.12, "p_lo": 0.123484, "p_hi": 0.12802}
+33.6s 212 {"ts_ns": 1770855197019875571, "event": "SLICE_METRIC", "z": 176, "fusion_score": 0.0, "local_std": 0.123302, "adaptive_weight": 0.12, "p_lo": 0.1236, "p_hi": 0.128212}
+33.6s 213 {"ts_ns": 1770855197024692181, "event": "SLICE_METRIC", "z": 177, "fusion_score": 0.0, "local_std": 0.124269, "adaptive_weight": 0.12, "p_lo": 0.123766, "p_hi": 0.128586}
+33.6s 214 {"ts_ns": 1770855197029574209, "event": "SLICE_METRIC", "z": 178, "fusion_score": 0.0, "local_std": 0.124921, "adaptive_weight": 0.12, "p_lo": 0.1239, "p_hi": 0.128817}
+33.6s 215 {"ts_ns": 1770855197033784475, "event": "SLICE_METRIC", "z": 179, "fusion_score": 0.0, "local_std": 0.125062, "adaptive_weight": 0.12, "p_lo": 0.123785, "p_hi": 0.128738}
+33.6s 216 {"ts_ns": 1770855197038583965, "event": "SLICE_METRIC", "z": 180, "fusion_score": 0.0, "local_std": 0.125127, "adaptive_weight": 0.12, "p_lo": 0.123736, "p_hi": 0.128417}
+33.6s 217 {"ts_ns": 1770855197043468311, "event": "SLICE_METRIC", "z": 181, "fusion_score": 0.0, "local_std": 0.124691, "adaptive_weight": 0.12, "p_lo": 0.123668, "p_hi": 0.128515}
+33.6s 218 {"ts_ns": 1770855197047827482, "event": "SLICE_METRIC", "z": 182, "fusion_score": 0.0, "local_std": 0.124395, "adaptive_weight": 0.12, "p_lo": 0.123655, "p_hi": 0.128499}
+33.6s 219 {"ts_ns": 1770855197052309605, "event": "SLICE_METRIC", "z": 183, "fusion_score": 0.0, "local_std": 0.124096, "adaptive_weight": 0.12, "p_lo": 0.123644, "p_hi": 0.128421}
+33.6s 220 {"ts_ns": 1770855197056531114, "event": "SLICE_METRIC", "z": 184, "fusion_score": 0.0, "local_std": 0.123892, "adaptive_weight": 0.12, "p_lo": 0.123579, "p_hi": 0.128265}
+33.6s 221 {"ts_ns": 1770855197061153458, "event": "SLICE_METRIC", "z": 185, "fusion_score": 0.0, "local_std": 0.123419, "adaptive_weight": 0.12, "p_lo": 0.123533, "p_hi": 0.128245}
+33.6s 222 {"ts_ns": 1770855197066008732, "event": "SLICE_METRIC", "z": 186, "fusion_score": 0.0, "local_std": 0.12319, "adaptive_weight": 0.12, "p_lo": 0.123573, "p_hi": 0.128225}
+33.6s 223 {"ts_ns": 1770855197070796339, "event": "SLICE_METRIC", "z": 187, "fusion_score": 0.0, "local_std": 0.122902, "adaptive_weight": 0.12, "p_lo": 0.123604, "p_hi": 0.12812}
+33.6s 224 {"ts_ns": 1770855197076023352, "event": "SLICE_METRIC", "z": 188, "fusion_score": 0.0, "local_std": 0.122754, "adaptive_weight": 0.12, "p_lo": 0.123612, "p_hi": 0.12812}
+33.6s 225 {"ts_ns": 1770855197080640575, "event": "SLICE_METRIC", "z": 189, "fusion_score": 0.0, "local_std": 0.123011, "adaptive_weight": 0.12, "p_lo": 0.123589, "p_hi": 0.128013}
+33.6s 226 {"ts_ns": 1770855197085230729, "event": "SLICE_METRIC", "z": 190, "fusion_score": 0.0, "local_std": 0.123147, "adaptive_weight": 0.12, "p_lo": 0.123589, "p_hi": 0.128212}
+33.6s 227 {"ts_ns": 1770855197089528769, "event": "SLICE_METRIC", "z": 191, "fusion_score": 0.0, "local_std": 0.123022, "adaptive_weight": 0.12, "p_lo": 0.123575, "p_hi": 0.128558}
+33.6s 228 {"ts_ns": 1770855197095292422, "event": "SLICE_METRIC", "z": 192, "fusion_score": 0.0, "local_std": 0.122842, "adaptive_weight": 0.12, "p_lo": 0.123662, "p_hi": 0.128547}
+33.6s 229 {"ts_ns": 1770855197100107834, "event": "SLICE_METRIC", "z": 193, "fusion_score": 0.0, "local_std": 0.12287, "adaptive_weight": 0.12, "p_lo": 0.123553, "p_hi": 0.128154}
+33.6s 230 {"ts_ns": 1770855197104802444, "event": "SLICE_METRIC", "z": 194, "fusion_score": 0.0, "local_std": 0.122894, "adaptive_weight": 0.12, "p_lo": 0.123586, "p_hi": 0.128205}
+33.6s 231 {"ts_ns": 1770855197109361551, "event": "SLICE_METRIC", "z": 195, "fusion_score": 0.0, "local_std": 0.123103, "adaptive_weight": 0.12, "p_lo": 0.123687, "p_hi": 0.12832}
+33.6s 232 {"ts_ns": 1770855197113749982, "event": "SLICE_METRIC", "z": 196, "fusion_score": 0.0, "local_std": 0.123582, "adaptive_weight": 0.12, "p_lo": 0.123739, "p_hi": 0.128609}
+33.6s 233 {"ts_ns": 1770855197118730970, "event": "SLICE_METRIC", "z": 197, "fusion_score": 0.0, "local_std": 0.124339, "adaptive_weight": 0.12, "p_lo": 0.123708, "p_hi": 0.128505}
+33.6s 234 {"ts_ns": 1770855197123658632, "event": "SLICE_METRIC", "z": 198, "fusion_score": 0.0, "local_std": 0.124813, "adaptive_weight": 0.12, "p_lo": 0.123708, "p_hi": 0.128497}
+33.6s 235 {"ts_ns": 1770855197128256142, "event": "SLICE_METRIC", "z": 199, "fusion_score": 0.0, "local_std": 0.125144, "adaptive_weight": 0.12, "p_lo": 0.123746, "p_hi": 0.128743}
+33.6s 236 {"ts_ns": 1770855197133270516, "event": "SLICE_METRIC", "z": 200, "fusion_score": 0.0, "local_std": 0.125326, "adaptive_weight": 0.12, "p_lo": 0.123704, "p_hi": 0.128743}
+33.6s 237 {"ts_ns": 1770855197137500995, "event": "SLICE_METRIC", "z": 201, "fusion_score": 0.0, "local_std": 0.125431, "adaptive_weight": 0.12, "p_lo": 0.123735, "p_hi": 0.128633}
+33.6s 238 {"ts_ns": 1770855197141874705, "event": "SLICE_METRIC", "z": 202, "fusion_score": 0.0, "local_std": 0.125219, "adaptive_weight": 0.12, "p_lo": 0.12365, "p_hi": 0.12861}
+33.6s 239 {"ts_ns": 1770855197146667477, "event": "SLICE_METRIC", "z": 203, "fusion_score": 0.0, "local_std": 0.124955, "adaptive_weight": 0.12, "p_lo": 0.123689, "p_hi": 0.128549}
+33.6s 240 {"ts_ns": 1770855197151193385, "event": "SLICE_METRIC", "z": 204, "fusion_score": 0.0, "local_std": 0.124497, "adaptive_weight": 0.12, "p_lo": 0.123681, "p_hi": 0.128433}
+33.6s 241 {"ts_ns": 1770855197155609422, "event": "SLICE_METRIC", "z": 205, "fusion_score": 0.0, "local_std": 0.124433, "adaptive_weight": 0.12, "p_lo": 0.123677, "p_hi": 0.128467}
+33.6s 242 {"ts_ns": 1770855197160102872, "event": "SLICE_METRIC", "z": 206, "fusion_score": 0.0, "local_std": 0.124655, "adaptive_weight": 0.12, "p_lo": 0.123609, "p_hi": 0.128541}
+33.6s 243 {"ts_ns": 1770855197164805170, "event": "SLICE_METRIC", "z": 207, "fusion_score": 0.0, "local_std": 0.125283, "adaptive_weight": 0.12, "p_lo": 0.123714, "p_hi": 0.128483}
+33.6s 244 {"ts_ns": 1770855197170164025, "event": "SLICE_METRIC", "z": 208, "fusion_score": 0.0, "local_std": 0.125905, "adaptive_weight": 0.12, "p_lo": 0.123711, "p_hi": 0.128642}
+33.6s 245 {"ts_ns": 1770855197174706157, "event": "SLICE_METRIC", "z": 209, "fusion_score": 0.0, "local_std": 0.126651, "adaptive_weight": 0.12, "p_lo": 0.123878, "p_hi": 0.128944}
+33.6s 246 {"ts_ns": 1770855197179351256, "event": "SLICE_METRIC", "z": 210, "fusion_score": 0.0, "local_std": 0.126895, "adaptive_weight": 0.12, "p_lo": 0.123866, "p_hi": 0.129115}
+33.8s 247 {"ts_ns": 1770855197184178752, "event": "SLICE_METRIC", "z": 211, "fusion_score": 0.0, "local_std": 0.126835, "adaptive_weight": 0.12, "p_lo": 0.123744, "p_hi": 0.128951}
+33.8s 248 {"ts_ns": 1770855197189589927, "event": "SLICE_METRIC", "z": 212, "fusion_score": 0.0, "local_std": 0.126286, "adaptive_weight": 0.12, "p_lo": 0.123649, "p_hi": 0.128838}
+33.8s 249 {"ts_ns": 1770855197194192732, "event": "SLICE_METRIC", "z": 213, "fusion_score": 0.0, "local_std": 0.125818, "adaptive_weight": 0.12, "p_lo": 0.123681, "p_hi": 0.128788}
+33.8s 250 {"ts_ns": 1770855197199326152, "event": "SLICE_METRIC", "z": 214, "fusion_score": 0.0, "local_std": 0.12519, "adaptive_weight": 0.12, "p_lo": 0.123676, "p_hi": 0.128873}
+33.8s 251 {"ts_ns": 1770855197204166618, "event": "SLICE_METRIC", "z": 215, "fusion_score": 0.0, "local_std": 0.124805, "adaptive_weight": 0.12, "p_lo": 0.123646, "p_hi": 0.128619}
+33.8s 252 {"ts_ns": 1770855197208861556, "event": "SLICE_METRIC", "z": 216, "fusion_score": 0.0, "local_std": 0.124269, "adaptive_weight": 0.12, "p_lo": 0.123631, "p_hi": 0.128653}
+33.8s 253 {"ts_ns": 1770855197214136752, "event": "SLICE_METRIC", "z": 217, "fusion_score": 0.0, "local_std": 0.123817, "adaptive_weight": 0.12, "p_lo": 0.123589, "p_hi": 0.128528}
+33.8s 254 {"ts_ns": 1770855197218631427, "event": "SLICE_METRIC", "z": 218, "fusion_score": 0.0, "local_std": 0.123077, "adaptive_weight": 0.12, "p_lo": 0.123504, "p_hi": 0.128305}
+33.8s 255 {"ts_ns": 1770855197223265649, "event": "SLICE_METRIC", "z": 219, "fusion_score": 0.0, "local_std": 0.122467, "adaptive_weight": 0.12, "p_lo": 0.123515, "p_hi": 0.128449}
+33.8s 256 {"ts_ns": 1770855197227967173, "event": "SLICE_METRIC", "z": 220, "fusion_score": 0.0, "local_std": 0.121699, "adaptive_weight": 0.12, "p_lo": 0.123461, "p_hi": 0.128469}
+33.8s 257 {"ts_ns": 1770855197232313632, "event": "SLICE_METRIC", "z": 221, "fusion_score": 0.0, "local_std": 0.121534, "adaptive_weight": 0.12, "p_lo": 0.123401, "p_hi": 0.128233}
+33.8s 258 {"ts_ns": 1770855197236873232, "event": "SLICE_METRIC", "z": 222, "fusion_score": 0.0, "local_std": 0.121781, "adaptive_weight": 0.12, "p_lo": 0.123365, "p_hi": 0.1283}
+33.8s 259 {"ts_ns": 1770855197241239922, "event": "SLICE_METRIC", "z": 223, "fusion_score": 0.0, "local_std": 0.121867, "adaptive_weight": 0.12, "p_lo": 0.123437, "p_hi": 0.128279}
+33.8s 260 {"ts_ns": 1770855197246308367, "event": "SLICE_METRIC", "z": 224, "fusion_score": 0.0, "local_std": 0.121596, "adaptive_weight": 0.12, "p_lo": 0.123484, "p_hi": 0.128583}
+33.8s 261 {"ts_ns": 1770855197251136345, "event": "SLICE_METRIC", "z": 225, "fusion_score": 0.0, "local_std": 0.121337, "adaptive_weight": 0.12, "p_lo": 0.123299, "p_hi": 0.128177}
+33.8s 262 {"ts_ns": 1770855197255750727, "event": "SLICE_METRIC", "z": 226, "fusion_score": 0.0, "local_std": 0.120653, "adaptive_weight": 0.12, "p_lo": 0.123249, "p_hi": 0.127801}
+33.8s 263 {"ts_ns": 1770855197259846172, "event": "SLICE_METRIC", "z": 227, "fusion_score": 0.0, "local_std": 0.119601, "adaptive_weight": 0.12, "p_lo": 0.123228, "p_hi": 0.127797}
+33.8s 264 {"ts_ns": 1770855197264603859, "event": "SLICE_METRIC", "z": 228, "fusion_score": 0.0, "local_std": 0.119001, "adaptive_weight": 0.12, "p_lo": 0.123332, "p_hi": 0.127913}
+33.8s 265 {"ts_ns": 1770855197269093607, "event": "SLICE_METRIC", "z": 229, "fusion_score": 0.0, "local_std": 0.118781, "adaptive_weight": 0.12, "p_lo": 0.12331, "p_hi": 0.127948}
+33.8s 266 {"ts_ns": 1770855197273433487, "event": "SLICE_METRIC", "z": 230, "fusion_score": 0.0, "local_std": 0.118357, "adaptive_weight": 0.12, "p_lo": 0.123307, "p_hi": 0.127886}
+33.8s 267 {"ts_ns": 1770855197278169013, "event": "SLICE_METRIC", "z": 231, "fusion_score": 0.0, "local_std": 0.118088, "adaptive_weight": 0.12, "p_lo": 0.123178, "p_hi": 0.127562}
+33.8s 268 {"ts_ns": 1770855197282481383, "event": "SLICE_METRIC", "z": 232, "fusion_score": 0.0, "local_std": 0.118249, "adaptive_weight": 0.12, "p_lo": 0.123086, "p_hi": 0.127385}
+33.8s 269 {"ts_ns": 1770855197287251530, "event": "SLICE_METRIC", "z": 233, "fusion_score": 0.0, "local_std": 0.118382, "adaptive_weight": 0.12, "p_lo": 0.123152, "p_hi": 0.127469}
+33.8s 270 {"ts_ns": 1770855197291528156, "event": "SLICE_METRIC", "z": 234, "fusion_score": 0.0, "local_std": 0.118446, "adaptive_weight": 0.12, "p_lo": 0.123229, "p_hi": 0.127703}
+33.8s 271 {"ts_ns": 1770855197296131426, "event": "SLICE_METRIC", "z": 235, "fusion_score": 0.0, "local_std": 0.118944, "adaptive_weight": 0.12, "p_lo": 0.123305, "p_hi": 0.127684}
+33.8s 272 {"ts_ns": 1770855197300570109, "event": "SLICE_METRIC", "z": 236, "fusion_score": 0.0, "local_std": 0.119121, "adaptive_weight": 0.12, "p_lo": 0.123222, "p_hi": 0.127541}
+33.8s 273 {"ts_ns": 1770855197305564885, "event": "SLICE_METRIC", "z": 237, "fusion_score": 0.0, "local_std": 0.118769, "adaptive_weight": 0.12, "p_lo": 0.123253, "p_hi": 0.127459}
+33.8s 274 {"ts_ns": 1770855197310029805, "event": "SLICE_METRIC", "z": 238, "fusion_score": 0.0, "local_std": 0.118202, "adaptive_weight": 0.12, "p_lo": 0.123251, "p_hi": 0.127528}
+33.8s 275 {"ts_ns": 1770855197314225721, "event": "SLICE_METRIC", "z": 239, "fusion_score": 0.0, "local_std": 0.117453, "adaptive_weight": 0.12, "p_lo": 0.123142, "p_hi": 0.127346}
+33.8s 276 {"ts_ns": 1770855197319217356, "event": "SLICE_METRIC", "z": 240, "fusion_score": 0.0, "local_std": 0.116711, "adaptive_weight": 0.12, "p_lo": 0.123121, "p_hi": 0.127251}
+33.8s 277 {"ts_ns": 1770855197323762796, "event": "SLICE_METRIC", "z": 241, "fusion_score": 0.0, "local_std": 0.116014, "adaptive_weight": 0.12, "p_lo": 0.123082, "p_hi": 0.127251}
+33.8s 278 {"ts_ns": 1770855197328198113, "event": "SLICE_METRIC", "z": 242, "fusion_score": 0.0, "local_std": 0.115375, "adaptive_weight": 0.12, "p_lo": 0.123055, "p_hi": 0.127139}
+33.8s 279 {"ts_ns": 1770855197333263248, "event": "SLICE_METRIC", "z": 243, "fusion_score": 0.0, "local_std": 0.114709, "adaptive_weight": 0.12, "p_lo": 0.123054, "p_hi": 0.127371}
+33.8s 280 {"ts_ns": 1770855197337514414, "event": "SLICE_METRIC", "z": 244, "fusion_score": 0.0, "local_std": 0.11424, "adaptive_weight": 0.12, "p_lo": 0.123066, "p_hi": 0.127173}
+33.8s 281 {"ts_ns": 1770855197342278000, "event": "SLICE_METRIC", "z": 245, "fusion_score": 0.0, "local_std": 0.113673, "adaptive_weight": 0.12, "p_lo": 0.123028, "p_hi": 0.126987}
+33.8s 282 {"ts_ns": 1770855197346554429, "event": "SLICE_METRIC", "z": 246, "fusion_score": 0.0, "local_std": 0.113113, "adaptive_weight": 0.12, "p_lo": 0.122981, "p_hi": 0.126888}
+33.8s 283 {"ts_ns": 1770855197351163623, "event": "SLICE_METRIC", "z": 247, "fusion_score": 0.0, "local_std": 0.112896, "adaptive_weight": 0.12, "p_lo": 0.122966, "p_hi": 0.127011}
+33.8s 284 {"ts_ns": 1770855197356120767, "event": "SLICE_METRIC", "z": 248, "fusion_score": 0.0, "local_std": 0.112892, "adaptive_weight": 0.12, "p_lo": 0.122973, "p_hi": 0.126948}
+33.8s 285 {"ts_ns": 1770855197360551128, "event": "SLICE_METRIC", "z": 249, "fusion_score": 0.0, "local_std": 0.112583, "adaptive_weight": 0.12, "p_lo": 0.122994, "p_hi": 0.127039}
+33.8s 286 {"ts_ns": 1770855197365500324, "event": "SLICE_METRIC", "z": 250, "fusion_score": 0.0, "local_std": 0.111918, "adaptive_weight": 0.12, "p_lo": 0.123053, "p_hi": 0.127054}
+33.8s 287 {"ts_ns": 1770855197370332995, "event": "SLICE_METRIC", "z": 251, "fusion_score": 0.0, "local_std": 0.111214, "adaptive_weight": 0.12, "p_lo": 0.123001, "p_hi": 0.126999}
+33.8s 288 {"ts_ns": 1770855197375284262, "event": "SLICE_METRIC", "z": 252, "fusion_score": 0.0, "local_std": 0.11077, "adaptive_weight": 0.12, "p_lo": 0.12293, "p_hi": 0.126594}
+33.8s 289 {"ts_ns": 1770855197379693895, "event": "SLICE_METRIC", "z": 253, "fusion_score": 0.0, "local_std": 0.110511, "adaptive_weight": 0.12, "p_lo": 0.122906, "p_hi": 0.126564}
+33.8s 290 {"ts_ns": 1770855197384432463, "event": "SLICE_METRIC", "z": 254, "fusion_score": 0.0, "local_std": 0.11064, "adaptive_weight": 0.12, "p_lo": 0.12294, "p_hi": 0.1268}
+34.0s 291 {"ts_ns": 1770855197390149335, "event": "SLICE_METRIC", "z": 255, "fusion_score": 0.0, "local_std": 0.11116, "adaptive_weight": 0.12, "p_lo": 0.123013, "p_hi": 0.12705}
+34.0s 292 {"ts_ns": 1770855197395670657, "event": "SLICE_METRIC", "z": 256, "fusion_score": 0.0, "local_std": 0.111792, "adaptive_weight": 0.12, "p_lo": 0.122961, "p_hi": 0.126977}
+34.0s 293 {"ts_ns": 1770855197400819031, "event": "SLICE_METRIC", "z": 257, "fusion_score": 0.0, "local_std": 0.11181, "adaptive_weight": 0.12, "p_lo": 0.122962, "p_hi": 0.127032}
+34.0s 294 {"ts_ns": 1770855197405452435, "event": "SLICE_METRIC", "z": 258, "fusion_score": 0.0, "local_std": 0.111606, "adaptive_weight": 0.12, "p_lo": 0.122939, "p_hi": 0.126951}
+34.0s 295 {"ts_ns": 1770855197410297587, "event": "SLICE_METRIC", "z": 259, "fusion_score": 0.0, "local_std": 0.111249, "adaptive_weight": 0.12, "p_lo": 0.12297, "p_hi": 0.126856}
+34.0s 296 {"ts_ns": 1770855197415212594, "event": "SLICE_METRIC", "z": 260, "fusion_score": 0.0, "local_std": 0.11091, "adaptive_weight": 0.12, "p_lo": 0.122884, "p_hi": 0.126719}
+34.0s 297 {"ts_ns": 1770855197419637030, "event": "SLICE_METRIC", "z": 261, "fusion_score": 0.0, "local_std": 0.110658, "adaptive_weight": 0.12, "p_lo": 0.122916, "p_hi": 0.126816}
+34.0s 298 {"ts_ns": 1770855197424046239, "event": "SLICE_METRIC", "z": 262, "fusion_score": 0.0, "local_std": 0.110816, "adaptive_weight": 0.12, "p_lo": 0.12295, "p_hi": 0.126569}
+34.0s 299 {"ts_ns": 1770855197428912585, "event": "SLICE_METRIC", "z": 263, "fusion_score": 0.0, "local_std": 0.111088, "adaptive_weight": 0.12, "p_lo": 0.122953, "p_hi": 0.126802}
+34.0s 300 {"ts_ns": 1770855197433902225, "event": "SLICE_METRIC", "z": 264, "fusion_score": 0.0, "local_std": 0.111408, "adaptive_weight": 0.12, "p_lo": 0.122997, "p_hi": 0.126727}
+34.0s 301 {"ts_ns": 1770855197438790528, "event": "SLICE_METRIC", "z": 265, "fusion_score": 0.0, "local_std": 0.111573, "adaptive_weight": 0.12, "p_lo": 0.122972, "p_hi": 0.126901}
+34.0s 302 {"ts_ns": 1770855197443599799, "event": "SLICE_METRIC", "z": 266, "fusion_score": 0.0, "local_std": 0.11146, "adaptive_weight": 0.12, "p_lo": 0.123003, "p_hi": 0.126834}
+34.0s 303 {"ts_ns": 1770855197448234528, "event": "SLICE_METRIC", "z": 267, "fusion_score": 0.0, "local_std": 0.111248, "adaptive_weight": 0.12, "p_lo": 0.12295, "p_hi": 0.126475}
+34.0s 304 {"ts_ns": 1770855197453000574, "event": "SLICE_METRIC", "z": 268, "fusion_score": 0.0, "local_std": 0.111164, "adaptive_weight": 0.12, "p_lo": 0.122977, "p_hi": 0.126451}
+34.0s 305 {"ts_ns": 1770855197457737774, "event": "SLICE_METRIC", "z": 269, "fusion_score": 0.0, "local_std": 0.111549, "adaptive_weight": 0.12, "p_lo": 0.122895, "p_hi": 0.126275}
+34.0s 306 {"ts_ns": 1770855197462179003, "event": "SLICE_METRIC", "z": 270, "fusion_score": 0.0, "local_std": 0.112188, "adaptive_weight": 0.12, "p_lo": 0.122955, "p_hi": 0.126515}
+34.0s 307 {"ts_ns": 1770855197466868590, "event": "SLICE_METRIC", "z": 271, "fusion_score": 0.0, "local_std": 0.113041, "adaptive_weight": 0.12, "p_lo": 0.122969, "p_hi": 0.126702}
+34.0s 308 {"ts_ns": 1770855197472097768, "event": "SLICE_METRIC", "z": 272, "fusion_score": 0.0, "local_std": 0.114078, "adaptive_weight": 0.12, "p_lo": 0.123014, "p_hi": 0.126677}
+34.0s 309 {"ts_ns": 1770855197476362139, "event": "SLICE_METRIC", "z": 273, "fusion_score": 0.0, "local_std": 0.114884, "adaptive_weight": 0.12, "p_lo": 0.122995, "p_hi": 0.126714}
+34.0s 310 {"ts_ns": 1770855197481067866, "event": "SLICE_METRIC", "z": 274, "fusion_score": 0.0, "local_std": 0.115204, "adaptive_weight": 0.12, "p_lo": 0.123038, "p_hi": 0.126814}
+34.0s 311 {"ts_ns": 1770855197485779749, "event": "SLICE_METRIC", "z": 275, "fusion_score": 0.0, "local_std": 0.115348, "adaptive_weight": 0.12, "p_lo": 0.123052, "p_hi": 0.127166}
+34.0s 312 {"ts_ns": 1770855197490394928, "event": "SLICE_METRIC", "z": 276, "fusion_score": 0.0, "local_std": 0.115527, "adaptive_weight": 0.12, "p_lo": 0.123057, "p_hi": 0.127014}
+34.0s 313 {"ts_ns": 1770855197495496565, "event": "SLICE_METRIC", "z": 277, "fusion_score": 0.0, "local_std": 0.115373, "adaptive_weight": 0.12, "p_lo": 0.123132, "p_hi": 0.127163}
+34.0s 314 {"ts_ns": 1770855197500302635, "event": "SLICE_METRIC", "z": 278, "fusion_score": 0.0, "local_std": 0.115279, "adaptive_weight": 0.12, "p_lo": 0.123172, "p_hi": 0.127399}
+34.0s 315 {"ts_ns": 1770855197504663024, "event": "SLICE_METRIC", "z": 279, "fusion_score": 0.0, "local_std": 0.115263, "adaptive_weight": 0.12, "p_lo": 0.123119, "p_hi": 0.127334}
+34.0s 316 {"ts_ns": 1770855197509289200, "event": "SLICE_METRIC", "z": 280, "fusion_score": 0.0, "local_std": 0.115518, "adaptive_weight": 0.12, "p_lo": 0.123118, "p_hi": 0.127308}
+34.0s 317 {"ts_ns": 1770855197513689915, "event": "SLICE_METRIC", "z": 281, "fusion_score": 0.0, "local_std": 0.11593, "adaptive_weight": 0.12, "p_lo": 0.123108, "p_hi": 0.127427}
+34.0s 318 {"ts_ns": 1770855197518086054, "event": "SLICE_METRIC", "z": 282, "fusion_score": 0.0, "local_std": 0.116356, "adaptive_weight": 0.12, "p_lo": 0.123198, "p_hi": 0.127376}
+34.0s 319 {"ts_ns": 1770855197522815270, "event": "SLICE_METRIC", "z": 283, "fusion_score": 0.0, "local_std": 0.116681, "adaptive_weight": 0.12, "p_lo": 0.12332, "p_hi": 0.12755}
+34.0s 320 {"ts_ns": 1770855197527269570, "event": "SLICE_METRIC", "z": 284, "fusion_score": 0.0, "local_std": 0.117052, "adaptive_weight": 0.12, "p_lo": 0.123318, "p_hi": 0.127898}
+34.0s 321 {"ts_ns": 1770855197532290713, "event": "SLICE_METRIC", "z": 285, "fusion_score": 0.0, "local_std": 0.117068, "adaptive_weight": 0.12, "p_lo": 0.123231, "p_hi": 0.127866}
+34.0s 322 {"ts_ns": 1770855197537264671, "event": "SLICE_METRIC", "z": 286, "fusion_score": 0.0, "local_std": 0.117066, "adaptive_weight": 0.12, "p_lo": 0.123242, "p_hi": 0.127804}
+34.0s 323 {"ts_ns": 1770855197542041306, "event": "SLICE_METRIC", "z": 287, "fusion_score": 0.0, "local_std": 0.117167, "adaptive_weight": 0.12, "p_lo": 0.123207, "p_hi": 0.127697}
+34.0s 324 {"ts_ns": 1770855197547105437, "event": "SLICE_METRIC", "z": 288, "fusion_score": 0.0, "local_std": 0.117089, "adaptive_weight": 0.12, "p_lo": 0.123263, "p_hi": 0.127838}
+34.0s 325 {"ts_ns": 1770855197551736079, "event": "SLICE_METRIC", "z": 289, "fusion_score": 0.0, "local_std": 0.116971, "adaptive_weight": 0.12, "p_lo": 0.123207, "p_hi": 0.127649}
+34.0s 326 {"ts_ns": 1770855197556205704, "event": "SLICE_METRIC", "z": 290, "fusion_score": 0.0, "local_std": 0.116862, "adaptive_weight": 0.12, "p_lo": 0.123174, "p_hi": 0.127439}
+34.0s 327 {"ts_ns": 1770855197560657279, "event": "SLICE_METRIC", "z": 291, "fusion_score": 0.0, "local_std": 0.116563, "adaptive_weight": 0.12, "p_lo": 0.123193, "p_hi": 0.127399}
+34.0s 328 {"ts_ns": 1770855197565270095, "event": "SLICE_METRIC", "z": 292, "fusion_score": 0.0, "local_std": 0.116208, "adaptive_weight": 0.12, "p_lo": 0.123128, "p_hi": 0.127487}
+34.0s 329 {"ts_ns": 1770855197569947210, "event": "SLICE_METRIC", "z": 293, "fusion_score": 0.0, "local_std": 0.11575, "adaptive_weight": 0.12, "p_lo": 0.12313, "p_hi": 0.127241}
+34.0s 330 {"ts_ns": 1770855197574654049, "event": "SLICE_METRIC", "z": 294, "fusion_score": 0.0, "local_std": 0.115111, "adaptive_weight": 0.12, "p_lo": 0.123149, "p_hi": 0.127269}
+34.0s 331 {"ts_ns": 1770855197579324111, "event": "SLICE_METRIC", "z": 295, "fusion_score": 0.0, "local_std": 0.114711, "adaptive_weight": 0.12, "p_lo": 0.12309, "p_hi": 0.12714}
+34.0s 332 {"ts_ns": 1770855197583785578, "event": "SLICE_METRIC", "z": 296, "fusion_score": 0.0, "local_std": 0.114394, "adaptive_weight": 0.12, "p_lo": 0.123038, "p_hi": 0.127001}
+34.0s 333 {"ts_ns": 1770855197588723545, "event": "SLICE_METRIC", "z": 297, "fusion_score": 0.0, "local_std": 0.114088, "adaptive_weight": 0.12, "p_lo": 0.123013, "p_hi": 0.127074}
+34.2s 334 {"ts_ns": 1770855197594270935, "event": "SLICE_METRIC", "z": 298, "fusion_score": 0.0, "local_std": 0.114059, "adaptive_weight": 0.12, "p_lo": 0.122976, "p_hi": 0.127192}
+34.2s 335 {"ts_ns": 1770855197599855167, "event": "SLICE_METRIC", "z": 299, "fusion_score": 0.0, "local_std": 0.113892, "adaptive_weight": 0.12, "p_lo": 0.122987, "p_hi": 0.127193}
+34.2s 336 {"ts_ns": 1770855197604504785, "event": "SLICE_METRIC", "z": 300, "fusion_score": 0.0, "local_std": 0.113622, "adaptive_weight": 0.12, "p_lo": 0.122986, "p_hi": 0.127191}
+34.2s 337 {"ts_ns": 1770855197609523049, "event": "SLICE_METRIC", "z": 301, "fusion_score": 0.0, "local_std": 0.11317, "adaptive_weight": 0.12, "p_lo": 0.122975, "p_hi": 0.12715}
+34.2s 338 {"ts_ns": 1770855197615307150, "event": "SLICE_METRIC", "z": 302, "fusion_score": 0.0, "local_std": 0.112615, "adaptive_weight": 0.12, "p_lo": 0.123008, "p_hi": 0.126945}
+34.2s 339 {"ts_ns": 1770855197620261806, "event": "SLICE_METRIC", "z": 303, "fusion_score": 0.0, "local_std": 0.112011, "adaptive_weight": 0.12, "p_lo": 0.122969, "p_hi": 0.126877}
+34.2s 340 {"ts_ns": 1770855197625634388, "event": "SLICE_METRIC", "z": 304, "fusion_score": 0.0, "local_std": 0.111665, "adaptive_weight": 0.12, "p_lo": 0.122986, "p_hi": 0.12701}
+34.2s 341 {"ts_ns": 1770855197630419790, "event": "SLICE_METRIC", "z": 305, "fusion_score": 0.0, "local_std": 0.110939, "adaptive_weight": 0.12, "p_lo": 0.122976, "p_hi": 0.126835}
+34.2s 342 {"ts_ns": 1770855197634661037, "event": "SLICE_METRIC", "z": 306, "fusion_score": 0.0, "local_std": 0.110096, "adaptive_weight": 0.12, "p_lo": 0.12295, "p_hi": 0.126697}
+34.2s 343 {"ts_ns": 1770855197639386429, "event": "SLICE_METRIC", "z": 307, "fusion_score": 0.0, "local_std": 0.109329, "adaptive_weight": 0.12, "p_lo": 0.122944, "p_hi": 0.126543}
+34.2s 344 {"ts_ns": 1770855197644143705, "event": "SLICE_METRIC", "z": 308, "fusion_score": 0.0, "local_std": 0.108775, "adaptive_weight": 0.12, "p_lo": 0.122948, "p_hi": 0.126422}
+34.2s 345 {"ts_ns": 1770855197649015440, "event": "SLICE_METRIC", "z": 309, "fusion_score": 0.0, "local_std": 0.108315, "adaptive_weight": 0.12, "p_lo": 0.122943, "p_hi": 0.126463}
+34.2s 346 {"ts_ns": 1770855197653551091, "event": "SLICE_METRIC", "z": 310, "fusion_score": 0.0, "local_std": 0.108124, "adaptive_weight": 0.12, "p_lo": 0.122831, "p_hi": 0.126447}
+34.2s 347 {"ts_ns": 1770855197657973641, "event": "SLICE_METRIC", "z": 311, "fusion_score": 0.0, "local_std": 0.108254, "adaptive_weight": 0.12, "p_lo": 0.122829, "p_hi": 0.126237}
+34.2s 348 {"ts_ns": 1770855197662761824, "event": "SLICE_METRIC", "z": 312, "fusion_score": 0.0, "local_std": 0.108392, "adaptive_weight": 0.12, "p_lo": 0.122782, "p_hi": 0.126217}
+34.2s 349 {"ts_ns": 1770855197667715055, "event": "SLICE_METRIC", "z": 313, "fusion_score": 0.0, "local_std": 0.108258, "adaptive_weight": 0.12, "p_lo": 0.12285, "p_hi": 0.126233}
+34.2s 350 {"ts_ns": 1770855197672301147, "event": "SLICE_METRIC", "z": 314, "fusion_score": 0.0, "local_std": 0.107869, "adaptive_weight": 0.12, "p_lo": 0.122801, "p_hi": 0.126382}
+34.2s 351 {"ts_ns": 1770855197676862722, "event": "SLICE_METRIC", "z": 315, "fusion_score": 0.0, "local_std": 0.107758, "adaptive_weight": 0.12, "p_lo": 0.122872, "p_hi": 0.125952}
+34.2s 352 {"ts_ns": 1770855197681293011, "event": "SLICE_METRIC", "z": 316, "fusion_score": 0.0, "local_std": 0.10763, "adaptive_weight": 0.12, "p_lo": 0.122892, "p_hi": 0.126048}
+34.2s 353 {"ts_ns": 1770855197685936259, "event": "SLICE_METRIC", "z": 317, "fusion_score": 0.0, "local_std": 0.107645, "adaptive_weight": 0.12, "p_lo": 0.122825, "p_hi": 0.125801}
+34.2s 354 {"ts_ns": 1770855197690531480, "event": "SLICE_METRIC", "z": 318, "fusion_score": 0.0, "local_std": 0.107583, "adaptive_weight": 0.12, "p_lo": 0.122394, "p_hi": 0.125184}
+34.2s 355 {"ts_ns": 1770855197695339777, "event": "SLICE_METRIC", "z": 319, "fusion_score": 0.0, "local_std": 0.107903, "adaptive_weight": 0.12, "p_lo": 0.122879, "p_hi": 0.125923}
+55.4s 356 {"ts_ns": 1770855218956690002, "event": "FILE_DONE", "file": "1407735.tif", "slices": 320}
+55.4s 357 {"ts_ns": 1770855218961344289, "event": "EXEC_COMPLETE", "submission": "/kaggle/working/submission.zip"}
+55.4s 358 READY: /kaggle/working/submission.zip
+58.7s 359 /usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+58.7s 360 cells[i][c] = re.sub('\\\\\|', '|', cell)
+58.8s 361 /usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+58.8s 362 text = re.sub(r'_', '\_', text) # Escape underscores in display text
+59.7s 363 /usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=["remove_papermill_header.RemovePapermillHeader"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.
+59.7s 364 warn(
+59.7s 365 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+60.1s 366 [NbConvertApp] Writing 90388 bytes to __notebook__.ipynb
+63.2s 367 /usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=["nbconvert.preprocessors.ExtractOutputPreprocessor"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.
+63.2s 368 warn(
+63.2s 369 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+64.3s 370 [NbConvertApp] Writing 443713 bytes to __results__.html

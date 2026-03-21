@@ -1,0 +1,13 @@
+{
+  "id": "ndarray2000/lumvorax-quantum-v4",
+  "title": "Lumvorax Quantum V4",
+  "code_file": "lumvorax_quantum_v4_kaggle.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "dataset_sources": [],
+  "competition_sources": [],
+  "kernel_sources": []
+}

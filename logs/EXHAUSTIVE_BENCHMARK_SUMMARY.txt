@@ -1,0 +1,1000 @@
+[TEST] === SYSTÈME LUM/VORAX COMPLET - VERSION OPTIMISÉE ===
+Version: PRODUCTION v2.0 - 39 MODULES INTÉGRÉS
+Date: Jan 20 2026 15:39:26
+
+[SETUP] === VÉRIFICATION RÉPERTOIRES ===
+[DEBUG] Vérification répertoire logs: EXISTS
+[DEBUG] Vérification répertoire logs/forensic: EXISTS
+[DEBUG] Vérification répertoire logs/tests: EXISTS
+[DEBUG] Vérification répertoire logs/execution: EXISTS
+[DEBUG] Vérification répertoire bin: EXISTS
+
+[SETUP] === INITIALISATION MEMORY TRACKER SIMPLE ===
+[MEMORY_TRACKER] Initialized - tracking enabled
+[SUCCESS] Memory tracker initialisé (initialisation simple fonctionnelle)
+
+[TEST] === MODE STRESS PROGRESSIF - 39 MODULES ===
+[FORENSIC_FILE] Log réel créé: logs/forensic/forensic_session_1768923574_102383939.log
+[TEST] === LANCEMENT TESTS PROGRESSIFS 1 → 100K TOUS MODULES ===
+[TEST] === TESTS PROGRESSIFS 10 → 100K - TOUS LES 39 MODULES DISPONIBLES ===
+[FORENSIC] Initialisation logs individuels...
+[FORENSIC] Log initialized successfully: logs/forensic/forensic_session_73829_597362691.log
+
+[TEST] === ÉCHELLE 10 ÉLÉMENTS - AVEC OPTIMISATIONS SIMD/PARALLEL ===
+[DEBUG] Timestamp: 73829.597789111 ns
+[METRICS] LUM CORE @ 10 éléments...
+[MEMORY_TRACKER] ALLOC: 0x3ee79690 (48 bytes) at src/lum/lum_core.c:241 in lum_group_create()
+[OPTIMIZATION] lum_group_create: 64-byte aligned allocation successful (0x3ee79700)
+[MEMORY_TRACKER] ALLOC: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:133 in lum_create()
+[FORENSIC_REALTIME] LUM_CREATE: ID=2403030836, pos=(0,0), type=0, timestamp=73829598399041 ns
+[FORENSIC_CREATION] LUM_0: ID=2403030836, pos=(0,0), timestamp=73829598399041
+[DEBUG] lum_group_add: ENTREE group=0x3ee79690, lum=0x3ee7a710
+[DEBUG] lum_group_add: Validations OK, count=0, capacity=64
+[DEBUG] lum_group_add: AVANT copie LUM, index=0
+[DEBUG] lum_group_add: SUCCÈS - nouvelle count=1
+[FORENSIC_LUM] [73829598399041] LUM_2403030836 ADD_TO_GROUP
+[FORENSIC_REALTIME] LUM_ADD_TO_GROUP: count=1 at timestamp=73829599462861 ns
+[FORENSIC_GROUP_ADD] LUM_2403030836 added to group (total: 1)
+[MEMORY_TRACKER] FREE: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:189 in lum_destroy() - originally allocated at src/lum/lum_core.c:133
+[FORENSIC_LIFECYCLE] LUM_0: duration=1297040 ns
+[FORENSIC_DETAILED] Processing LUM 0/10 at timestamp 73829599547841
+[MEMORY_TRACKER] ALLOC: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:133 in lum_create()
+[FORENSIC_REALTIME] LUM_CREATE: ID=3364083193, pos=(1,0), type=0, timestamp=73829599800771 ns
+[FORENSIC_CREATION] LUM_1: ID=3364083193, pos=(1,0), timestamp=73829599800771
+[DEBUG] lum_group_add: ENTREE group=0x3ee79690, lum=0x3ee7a710
+[DEBUG] lum_group_add: Validations OK, count=1, capacity=64
+[DEBUG] lum_group_add: AVANT copie LUM, index=1
+[DEBUG] lum_group_add: SUCCÈS - nouvelle count=2
+[FORENSIC_LUM] [73829599800771] LUM_3364083193 ADD_TO_GROUP
+[FORENSIC_REALTIME] LUM_ADD_TO_GROUP: count=2 at timestamp=73829600168081 ns
+[FORENSIC_GROUP_ADD] LUM_3364083193 added to group (total: 2)
+[MEMORY_TRACKER] FREE: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:189 in lum_destroy() - originally allocated at src/lum/lum_core.c:133
+[FORENSIC_LIFECYCLE] LUM_1: duration=656340 ns
+[FORENSIC_DETAILED] Processing LUM 1/10 at timestamp 73829600289321
+[MEMORY_TRACKER] ALLOC: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:133 in lum_create()
+[FORENSIC_REALTIME] LUM_CREATE: ID=2531540004, pos=(2,0), type=0, timestamp=73829600548661 ns
+[FORENSIC_CREATION] LUM_2: ID=2531540004, pos=(2,0), timestamp=73829600548661
+[DEBUG] lum_group_add: ENTREE group=0x3ee79690, lum=0x3ee7a710
+[DEBUG] lum_group_add: Validations OK, count=2, capacity=64
+[DEBUG] lum_group_add: AVANT copie LUM, index=2
+[DEBUG] lum_group_add: SUCCÈS - nouvelle count=3
+[FORENSIC_LUM] [73829600548661] LUM_2531540004 ADD_TO_GROUP
+[FORENSIC_REALTIME] LUM_ADD_TO_GROUP: count=3 at timestamp=73829600828131 ns
+[FORENSIC_GROUP_ADD] LUM_2531540004 added to group (total: 3)
+[MEMORY_TRACKER] FREE: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:189 in lum_destroy() - originally allocated at src/lum/lum_core.c:133
+[FORENSIC_LIFECYCLE] LUM_2: duration=539290 ns
+[FORENSIC_DETAILED] Processing LUM 2/10 at timestamp 73829600901501
+[MEMORY_TRACKER] ALLOC: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:133 in lum_create()
+[FORENSIC_REALTIME] LUM_CREATE: ID=2156176198, pos=(3,0), type=0, timestamp=73829601267831 ns
+[FORENSIC_CREATION] LUM_3: ID=2156176198, pos=(3,0), timestamp=73829601267831
+[DEBUG] lum_group_add: ENTREE group=0x3ee79690, lum=0x3ee7a710
+[DEBUG] lum_group_add: Validations OK, count=3, capacity=64
+[DEBUG] lum_group_add: AVANT copie LUM, index=3
+[DEBUG] lum_group_add: SUCCÈS - nouvelle count=4
+[FORENSIC_LUM] [73829601267831] LUM_2156176198 ADD_TO_GROUP
+[FORENSIC_REALTIME] LUM_ADD_TO_GROUP: count=4 at timestamp=73829601522391 ns
+[FORENSIC_GROUP_ADD] LUM_2156176198 added to group (total: 4)
+[MEMORY_TRACKER] FREE: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:189 in lum_destroy() - originally allocated at src/lum/lum_core.c:133
+[FORENSIC_LIFECYCLE] LUM_3: duration=601170 ns
+[FORENSIC_DETAILED] Processing LUM 3/10 at timestamp 73829601585101
+[MEMORY_TRACKER] ALLOC: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:133 in lum_create()
+[FORENSIC_REALTIME] LUM_CREATE: ID=2988106164, pos=(4,0), type=0, timestamp=73829601759281 ns
+[FORENSIC_CREATION] LUM_4: ID=2988106164, pos=(4,0), timestamp=73829601759281
+[DEBUG] lum_group_add: ENTREE group=0x3ee79690, lum=0x3ee7a710
+[DEBUG] lum_group_add: Validations OK, count=4, capacity=64
+[DEBUG] lum_group_add: AVANT copie LUM, index=4
+[DEBUG] lum_group_add: SUCCÈS - nouvelle count=5
+[FORENSIC_LUM] [73829601759281] LUM_2988106164 ADD_TO_GROUP
+[FORENSIC_REALTIME] LUM_ADD_TO_GROUP: count=5 at timestamp=73829601998291 ns
+[FORENSIC_GROUP_ADD] LUM_2988106164 added to group (total: 5)
+[MEMORY_TRACKER] FREE: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:189 in lum_destroy() - originally allocated at src/lum/lum_core.c:133
+[FORENSIC_LIFECYCLE] LUM_4: duration=413130 ns
+[FORENSIC_DETAILED] Processing LUM 4/10 at timestamp 73829602059681
+[MEMORY_TRACKER] ALLOC: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:133 in lum_create()
+[FORENSIC_REALTIME] LUM_CREATE: ID=1027437065, pos=(5,0), type=0, timestamp=73829602273801 ns
+[FORENSIC_CREATION] LUM_5: ID=1027437065, pos=(5,0), timestamp=73829602273801
+[DEBUG] lum_group_add: ENTREE group=0x3ee79690, lum=0x3ee7a710
+[DEBUG] lum_group_add: Validations OK, count=5, capacity=64
+[DEBUG] lum_group_add: AVANT copie LUM, index=5
+[DEBUG] lum_group_add: SUCCÈS - nouvelle count=6
+[FORENSIC_LUM] [73829602273801] LUM_1027437065 ADD_TO_GROUP
+[FORENSIC_REALTIME] LUM_ADD_TO_GROUP: count=6 at timestamp=73829602529761 ns
+[FORENSIC_GROUP_ADD] LUM_1027437065 added to group (total: 6)
+[MEMORY_TRACKER] FREE: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:189 in lum_destroy() - originally allocated at src/lum/lum_core.c:133
+[FORENSIC_LIFECYCLE] LUM_5: duration=507190 ns
+[FORENSIC_DETAILED] Processing LUM 5/10 at timestamp 73829602623761
+[MEMORY_TRACKER] ALLOC: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:133 in lum_create()
+[FORENSIC_REALTIME] LUM_CREATE: ID=2961621700, pos=(6,0), type=0, timestamp=73829602830561 ns
+[FORENSIC_CREATION] LUM_6: ID=2961621700, pos=(6,0), timestamp=73829602830561
+[DEBUG] lum_group_add: ENTREE group=0x3ee79690, lum=0x3ee7a710
+[DEBUG] lum_group_add: Validations OK, count=6, capacity=64
+[DEBUG] lum_group_add: AVANT copie LUM, index=6
+[DEBUG] lum_group_add: SUCCÈS - nouvelle count=7
+[FORENSIC_LUM] [73829602830561] LUM_2961621700 ADD_TO_GROUP
+[FORENSIC_REALTIME] LUM_ADD_TO_GROUP: count=7 at timestamp=73829603229611 ns
+[FORENSIC_GROUP_ADD] LUM_2961621700 added to group (total: 7)
+[MEMORY_TRACKER] FREE: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:189 in lum_destroy() - originally allocated at src/lum/lum_core.c:133
+[FORENSIC_LIFECYCLE] LUM_6: duration=597990 ns
+[FORENSIC_DETAILED] Processing LUM 6/10 at timestamp 73829603303701
+[MEMORY_TRACKER] ALLOC: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:133 in lum_create()
+[FORENSIC_REALTIME] LUM_CREATE: ID=3755587313, pos=(7,0), type=0, timestamp=73829603463071 ns
+[FORENSIC_CREATION] LUM_7: ID=3755587313, pos=(7,0), timestamp=73829603463071
+[DEBUG] lum_group_add: ENTREE group=0x3ee79690, lum=0x3ee7a710
+[DEBUG] lum_group_add: Validations OK, count=7, capacity=64
+[DEBUG] lum_group_add: AVANT copie LUM, index=7
+[DEBUG] lum_group_add: SUCCÈS - nouvelle count=8
+[FORENSIC_LUM] [73829603463071] LUM_3755587313 ADD_TO_GROUP
+[FORENSIC_REALTIME] LUM_ADD_TO_GROUP: count=8 at timestamp=73829603689781 ns
+[FORENSIC_GROUP_ADD] LUM_3755587313 added to group (total: 8)
+[MEMORY_TRACKER] FREE: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:189 in lum_destroy() - originally allocated at src/lum/lum_core.c:133
+[FORENSIC_LIFECYCLE] LUM_7: duration=384160 ns
+[FORENSIC_DETAILED] Processing LUM 7/10 at timestamp 73829603746251
+[MEMORY_TRACKER] ALLOC: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:133 in lum_create()
+[FORENSIC_REALTIME] LUM_CREATE: ID=3237855954, pos=(8,0), type=0, timestamp=73829603904611 ns
+[FORENSIC_CREATION] LUM_8: ID=3237855954, pos=(8,0), timestamp=73829603904611
+[DEBUG] lum_group_add: ENTREE group=0x3ee79690, lum=0x3ee7a710
+[DEBUG] lum_group_add: Validations OK, count=8, capacity=64
+[DEBUG] lum_group_add: AVANT copie LUM, index=8
+[DEBUG] lum_group_add: SUCCÈS - nouvelle count=9
+[FORENSIC_LUM] [73829603904611] LUM_3237855954 ADD_TO_GROUP
+[FORENSIC_REALTIME] LUM_ADD_TO_GROUP: count=9 at timestamp=73829604242231 ns
+[FORENSIC_GROUP_ADD] LUM_3237855954 added to group (total: 9)
+[MEMORY_TRACKER] FREE: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:189 in lum_destroy() - originally allocated at src/lum/lum_core.c:133
+[FORENSIC_LIFECYCLE] LUM_8: duration=492240 ns
+[FORENSIC_DETAILED] Processing LUM 8/10 at timestamp 73829604296961
+[MEMORY_TRACKER] ALLOC: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:133 in lum_create()
+[FORENSIC_REALTIME] LUM_CREATE: ID=2869189864, pos=(9,0), type=0, timestamp=73829604457311 ns
+[FORENSIC_CREATION] LUM_9: ID=2869189864, pos=(9,0), timestamp=73829604457311
+[DEBUG] lum_group_add: ENTREE group=0x3ee79690, lum=0x3ee7a710
+[DEBUG] lum_group_add: Validations OK, count=9, capacity=64
+[DEBUG] lum_group_add: AVANT copie LUM, index=9
+[DEBUG] lum_group_add: SUCCÈS - nouvelle count=10
+[FORENSIC_LUM] [73829604457311] LUM_2869189864 ADD_TO_GROUP
+[FORENSIC_REALTIME] LUM_ADD_TO_GROUP: count=10 at timestamp=73829604959791 ns
+[FORENSIC_GROUP_ADD] LUM_2869189864 added to group (total: 10)
+[MEMORY_TRACKER] FREE: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:189 in lum_destroy() - originally allocated at src/lum/lum_core.c:133
+[FORENSIC_LIFECYCLE] LUM_9: duration=1412580 ns
+[FORENSIC_DETAILED] Processing LUM 9/10 at timestamp 73829605759231
+[SUCCESS] LUM CORE: 10 créés en 0.008 sec (1245 ops/sec)
+[DEBUG] lum_group_destroy: freeing lums array at 0x3ee79700 (10 elements) method=1
+[DEBUG] lum_group_destroy: freeing group structure at 0x3ee79690
+[MEMORY_TRACKER] FREE: 0x3ee79690 (48 bytes) at src/lum/lum_core.c:411 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:241
+[METRICS] VORAX OPERATIONS @ 10 éléments...
+[MEMORY_TRACKER] ALLOC: 0x3ee79690 (48 bytes) at src/lum/lum_core.c:241 in lum_group_create()
+[OPTIMIZATION] lum_group_create: 64-byte aligned allocation successful (0x3ee7c980)
+[MEMORY_TRACKER] ALLOC: 0x3ee7a960 (48 bytes) at src/lum/lum_core.c:241 in lum_group_create()
+[OPTIMIZATION] lum_group_create: 64-byte aligned allocation successful (0x3ee7d9c0)
+[MEMORY_TRACKER] ALLOC: 0x3ee7a9a0 (336 bytes) at src/vorax/vorax_operations.c:413 in vorax_result_create()
+[MEMORY_TRACKER] ALLOC: 0x3ee7ab00 (48 bytes) at src/lum/lum_core.c:241 in lum_group_create()
+[OPTIMIZATION] lum_group_create: 64-byte aligned allocation successful (0x3ee7ea00)
+[SUCCESS] VORAX: Fusion de 0 éléments réussie
+[DEBUG] lum_group_destroy: freeing lums array at 0x3ee7ea00 (0 elements) method=1
+[DEBUG] lum_group_destroy: freeing group structure at 0x3ee7ab00
+[MEMORY_TRACKER] FREE: 0x3ee7ab00 (48 bytes) at src/lum/lum_core.c:411 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:241
+[MEMORY_TRACKER] FREE: 0x3ee7a9a0 (336 bytes) at src/vorax/vorax_operations.c:460 in vorax_result_destroy() - originally allocated at src/vorax/vorax_operations.c:413
+[DEBUG] lum_group_destroy: freeing lums array at 0x3ee7c980 (0 elements) method=1
+[DEBUG] lum_group_destroy: freeing group structure at 0x3ee79690
+[MEMORY_TRACKER] FREE: 0x3ee79690 (48 bytes) at src/lum/lum_core.c:411 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:241
+[DEBUG] lum_group_destroy: freeing lums array at 0x3ee7d9c0 (0 elements) method=1
+[DEBUG] lum_group_destroy: freeing group structure at 0x3ee7a960
+[MEMORY_TRACKER] FREE: 0x3ee7a960 (48 bytes) at src/lum/lum_core.c:411 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:241
+[METRICS] SIMD OPTIMIZER @ 10 éléments...
+[MEMORY_TRACKER] ALLOC: 0x3ee7ab40 (272 bytes) at src/optimization/simd_optimizer.c:27 in simd_detect_capabilities()
+[SUCCESS] SIMD: AVX2=OUI, Vector Width=16, Échelle 10
+[SUCCESS] SIMD AVX2: Optimisations +300% activées pour 10 éléments
+[MEMORY_TRACKER] FREE: 0x3ee7ab40 (272 bytes) at src/optimization/simd_optimizer.c:81 in simd_capabilities_destroy() - originally allocated at src/optimization/simd_optimizer.c:27
+[METRICS] PARALLEL PROCESSOR @ 10 éléments...
+[SUCCESS] PARALLEL: Multi-threads activé, échelle 10
+[SUCCESS] PARALLEL VORAX: Optimisations +400% activées
+[METRICS] MEMORY OPTIMIZER @ 10 éléments...
+[MEMORY_TRACKER] ALLOC: 0x3ee7ac60 (96 bytes) at src/optimization/memory_optimizer.c:89 in memory_pool_create()
+[MEMORY_TRACKER] ALLOC: 0x3ee7acd0 (640 bytes) at src/optimization/memory_optimizer.c:142 in memory_pool_init()
+[SUCCESS] MEMORY: Pool 640 bytes, alignement 64B
+[SUCCESS] CACHE ALIGNMENT: +15% performance mémoire
+[MEMORY_POOL] Destroying pool 0x3ee7ac60
+[MEMORY_POOL] Freeing pool memory at 0x3ee7acd0
+[MEMORY_TRACKER] FREE: 0x3ee7acd0 (640 bytes) at src/optimization/memory_optimizer.c:107 in memory_pool_destroy() - originally allocated at src/optimization/memory_optimizer.c:142
+[MEMORY_POOL] Freeing pool structure at 0x3ee7ac60
+[MEMORY_TRACKER] FREE: 0x3ee7ac60 (96 bytes) at src/optimization/memory_optimizer.c:121 in memory_pool_destroy() - originally allocated at src/optimization/memory_optimizer.c:89
+[METRICS] AUDIO PROCESSOR @ 10 échantillons...
+[MEMORY_TRACKER] ALLOC: 0x3ee7af60 (112 bytes) at src/advanced_calculations/audio_processor.c:25 in audio_processor_create()
+[MEMORY_TRACKER] ALLOC: 0x7f7f44ea9010 (6144000 bytes) at src/advanced_calculations/audio_processor.c:35 in audio_processor_create()
+[MEMORY_TRACKER] ALLOC: 0x7f7f448cc010 (6144000 bytes) at src/advanced_calculations/audio_processor.c:36 in audio_processor_create()
+[MEMORY_TRACKER] ALLOC: 0x7f7f4486e010 (384000 bytes) at src/advanced_calculations/audio_processor.c:37 in audio_processor_create()
+[MEMORY_TRACKER] ALLOC: 0x7f7f44810010 (384000 bytes) at src/advanced_calculations/audio_processor.c:38 in audio_processor_create()
+[SUCCESS] AUDIO: 48kHz stéréo, 10 échantillons simulés
+[MEMORY_TRACKER] FREE: 0x7f7f44ea9010 (6144000 bytes) at src/advanced_calculations/audio_processor.c:75 in audio_processor_destroy() - originally allocated at src/advanced_calculations/audio_processor.c:35
+[MEMORY_TRACKER] FREE: 0x7f7f448cc010 (6144000 bytes) at src/advanced_calculations/audio_processor.c:76 in audio_processor_destroy() - originally allocated at src/advanced_calculations/audio_processor.c:36
+[MEMORY_TRACKER] FREE: 0x7f7f4486e010 (384000 bytes) at src/advanced_calculations/audio_processor.c:77 in audio_processor_destroy() - originally allocated at src/advanced_calculations/audio_processor.c:37
+[MEMORY_TRACKER] FREE: 0x7f7f44810010 (384000 bytes) at src/advanced_calculations/audio_processor.c:78 in audio_processor_destroy() - originally allocated at src/advanced_calculations/audio_processor.c:38
+[MEMORY_TRACKER] FREE: 0x3ee7af60 (112 bytes) at src/advanced_calculations/audio_processor.c:83 in audio_processor_destroy() - originally allocated at src/advanced_calculations/audio_processor.c:25
+[METRICS] IMAGE PROCESSOR @ 10 pixels...
+[MEMORY_TRACKER] ALLOC: 0x3ee7ac60 (96 bytes) at src/advanced_calculations/image_processor.c:20 in image_processor_create()
+[MEMORY_TRACKER] ALLOC: 0x3ee7afe0 (576 bytes) at src/advanced_calculations/image_processor.c:30 in image_processor_create()
+[MEMORY_TRACKER] ALLOC: 0x3ee7b230 (576 bytes) at src/advanced_calculations/image_processor.c:31 in image_processor_create()
+[SUCCESS] IMAGE: 3x3 pixels traités
+[MEMORY_TRACKER] FREE: 0x3ee7afe0 (576 bytes) at src/advanced_calculations/image_processor.c:65 in image_processor_destroy() - originally allocated at src/advanced_calculations/image_processor.c:30
+[MEMORY_TRACKER] FREE: 0x3ee7b230 (576 bytes) at src/advanced_calculations/image_processor.c:66 in image_processor_destroy() - originally allocated at src/advanced_calculations/image_processor.c:31
+[MEMORY_TRACKER] FREE: 0x3ee7ac60 (96 bytes) at src/advanced_calculations/image_processor.c:71 in image_processor_destroy() - originally allocated at src/advanced_calculations/image_processor.c:20
+[METRICS] TSP OPTIMIZER @ 10 villes...
+[MEMORY_TRACKER] ALLOC: 0x3ee7ac60 (104 bytes) at src/advanced_calculations/tsp_optimizer.c:382 in tsp_config_create_default()
+[SUCCESS] TSP: Configuration optimisation créée
+[MEMORY_TRACKER] FREE: 0x3ee7ac60 (104 bytes) at src/advanced_calculations/tsp_optimizer.c:408 in tsp_config_destroy() - originally allocated at src/advanced_calculations/tsp_optimizer.c:382
+[METRICS] MATRIX CALCULATOR @ 10 opérations...
+[SUCCESS] MATRIX: Module matrix_calculator disponible
+[METRICS] NEURAL NETWORK @ 10 neurones...
+[MEMORY_TRACKER] ALLOC: 0x3ee7ac60 (104 bytes) at src/advanced_calculations/neural_network_processor.c:553 in neural_network_create()
+[MEMORY_TRACKER] ALLOC: 0x3ee7b480 (24 bytes) at src/advanced_calculations/neural_network_processor.c:558 in neural_network_create()
+[MEMORY_TRACKER] ALLOC: 0x3ee7b4a0 (80 bytes) at src/advanced_calculations/neural_network_processor.c:179 in neural_layer_create_processor()
+[MEMORY_TRACKER] ALLOC: 0x3ee7c980 (131072 bytes) at src/advanced_calculations/neural_network_processor.c:192 in neural_layer_create_processor()
+[MEMORY_TRACKER] ALLOC: 0x3ee7b500 (1024 bytes) at src/advanced_calculations/neural_network_processor.c:198 in neural_layer_create_processor()
+[MEMORY_TRACKER] ALLOC: 0x3ee79700 (1024 bytes) at src/advanced_calculations/neural_network_processor.c:205 in neural_layer_create_processor()
+[MEMORY_TRACKER] ALLOC: 0x3ee79b10 (1024 bytes) at src/advanced_calculations/neural_network_processor.c:213 in neural_layer_create_processor()
+[MEMORY_TRACKER] ALLOC: 0x3ee79f20 (80 bytes) at src/advanced_calculations/neural_network_processor.c:179 in neural_layer_create_processor()
+[MEMORY_TRACKER] ALLOC: 0x3ee9c990 (65536 bytes) at src/advanced_calculations/neural_network_processor.c:192 in neural_layer_create_processor()
+[MEMORY_TRACKER] ALLOC: 0x3ee79f80 (512 bytes) at src/advanced_calculations/neural_network_processor.c:198 in neural_layer_create_processor()
+[MEMORY_TRACKER] ALLOC: 0x3ee7a190 (512 bytes) at src/advanced_calculations/neural_network_processor.c:205 in neural_layer_create_processor()
+[MEMORY_TRACKER] ALLOC: 0x3ee7a3a0 (512 bytes) at src/advanced_calculations/neural_network_processor.c:213 in neural_layer_create_processor()
+[MEMORY_TRACKER] ALLOC: 0x3ee7a5b0 (80 bytes) at src/advanced_calculations/neural_network_processor.c:179 in neural_layer_create_processor()
+[MEMORY_TRACKER] ALLOC: 0x3eeac9a0 (5120 bytes) at src/advanced_calculations/neural_network_processor.c:192 in neural_layer_create_processor()
+[MEMORY_TRACKER] ALLOC: 0x3ee7a610 (80 bytes) at src/advanced_calculations/neural_network_processor.c:198 in neural_layer_create_processor()
+[MEMORY_TRACKER] ALLOC: 0x3ee7a670 (80 bytes) at src/advanced_calculations/neural_network_processor.c:205 in neural_layer_create_processor()
+[MEMORY_TRACKER] ALLOC: 0x3eeaddb0 (80 bytes) at src/advanced_calculations/neural_network_processor.c:213 in neural_layer_create_processor()
+[SUCCESS] NEURAL: Réseau 128-64-10 créé
+[MEMORY_TRACKER] FREE: 0x3ee7c980 (131072 bytes) at src/advanced_calculations/neural_network_processor.c:255 in neural_layer_destroy_processor() - originally allocated at src/advanced_calculations/neural_network_processor.c:192
+[MEMORY_TRACKER] FREE: 0x3ee7b500 (1024 bytes) at src/advanced_calculations/neural_network_processor.c:256 in neural_layer_destroy_processor() - originally allocated at src/advanced_calculations/neural_network_processor.c:198
+[MEMORY_TRACKER] FREE: 0x3ee79700 (1024 bytes) at src/advanced_calculations/neural_network_processor.c:257 in neural_layer_destroy_processor() - originally allocated at src/advanced_calculations/neural_network_processor.c:205
+[MEMORY_TRACKER] FREE: 0x3ee79b10 (1024 bytes) at src/advanced_calculations/neural_network_processor.c:258 in neural_layer_destroy_processor() - originally allocated at src/advanced_calculations/neural_network_processor.c:213
+[MEMORY_TRACKER] FREE: 0x3ee7b4a0 (80 bytes) at src/advanced_calculations/neural_network_processor.c:268 in neural_layer_destroy_processor() - originally allocated at src/advanced_calculations/neural_network_processor.c:179
+[MEMORY_TRACKER] FREE: 0x3ee9c990 (65536 bytes) at src/advanced_calculations/neural_network_processor.c:255 in neural_layer_destroy_processor() - originally allocated at src/advanced_calculations/neural_network_processor.c:192
+[MEMORY_TRACKER] FREE: 0x3ee79f80 (512 bytes) at src/advanced_calculations/neural_network_processor.c:256 in neural_layer_destroy_processor() - originally allocated at src/advanced_calculations/neural_network_processor.c:198
+[MEMORY_TRACKER] FREE: 0x3ee7a190 (512 bytes) at src/advanced_calculations/neural_network_processor.c:257 in neural_layer_destroy_processor() - originally allocated at src/advanced_calculations/neural_network_processor.c:205
+[MEMORY_TRACKER] FREE: 0x3ee7a3a0 (512 bytes) at src/advanced_calculations/neural_network_processor.c:258 in neural_layer_destroy_processor() - originally allocated at src/advanced_calculations/neural_network_processor.c:213
+[MEMORY_TRACKER] FREE: 0x3ee79f20 (80 bytes) at src/advanced_calculations/neural_network_processor.c:268 in neural_layer_destroy_processor() - originally allocated at src/advanced_calculations/neural_network_processor.c:179
+[MEMORY_TRACKER] FREE: 0x3eeac9a0 (5120 bytes) at src/advanced_calculations/neural_network_processor.c:255 in neural_layer_destroy_processor() - originally allocated at src/advanced_calculations/neural_network_processor.c:192
+[MEMORY_TRACKER] FREE: 0x3ee7a610 (80 bytes) at src/advanced_calculations/neural_network_processor.c:256 in neural_layer_destroy_processor() - originally allocated at src/advanced_calculations/neural_network_processor.c:198
+[MEMORY_TRACKER] FREE: 0x3ee7a670 (80 bytes) at src/advanced_calculations/neural_network_processor.c:257 in neural_layer_destroy_processor() -[PERSISTENCE] Répertoire configuré: /home/runner/workspace/logs
+ originally allocated at src/advanced_calculations/neural_network_processor.c:205
+[MEMORY_TRACKER] FREE: 0x3eeaddb0 (80 bytes) at src/advanced_calculations/neural_network_processor.c:258 in neural_layer_destroy_processor() - originally allocated at src/advanced_calculations/neural_network_processor.c:213
+[MEMORY_TRACKER] FREE: 0x3ee7a5b0 (80 bytes) at src/advanced_calculations/neural_network_processor.c:268 in neural_layer_destroy_processor() - originally allocated at src/advanced_calculations/neural_network_processor.c:179
+[MEMORY_TRACKER] FREE: 0x3ee7b480 (24 bytes) at src/advanced_calculations/neural_network_processor.c:618 in neural_network_destroy() - originally allocated at src/advanced_calculations/neural_network_processor.c:558
+[MEMORY_TRACKER] FREE: 0x3ee7ac60 (104 bytes) at src/advanced_calculations/neural_network_processor.c:628 in neural_network_destroy() - originally allocated at src/advanced_calculations/neural_network_processor.c:553
+[METRICS] CRYPTO VALIDATOR...
+[ERROR] CRYPTO: Validation SHA-256 échouée
+[METRICS] DATA PERSISTENCE...
+[MEMORY_TRACKER] ALLOC: 0x3ee7c980 (4136 bytes) at src/persistence/data_persistence.c:24 in persistence_context_create()
+[SUCCESS] PERSISTENCE: Contexte créé dans logs/
+[MEMORY_TRACKER] FREE: 0x3ee7c980 (4136 bytes) at src/persistence/data_persistence.c:97 in persistence_context_destroy() - originally allocated at src/persistence/data_persistence.c:24
+[METRICS] BINARY LUM CONVERTER...
+[MEMORY_TRACKER] ALLOC: 0x3ee7ab40 (280 bytes) at src/binary/binary_lum_converter.c:304 in binary_lum_result_create()
+[SUCCESS] BINARY: Structure résultat créée
+[MEMORY_TRACKER] FREE: 0x3ee7ab40 (280 bytes) at src/binary/binary_lum_converter.c:319 in binary_lum_result_destroy() - originally allocated at src/binary/binary_lum_converter.c:304
+[METRICS] PERFORMANCE METRICS...
+[MEMORY_TRACKER] ALLOC: 0x3ee7dbb0 (6904 bytes) at src/metrics/performance_metrics.c:47 in performance_metrics_create()
+[SUCCESS] METRICS: Collecteur de métriques créé
+[MEMORY_TRACKER] FREE: 0x3ee7dbb0 (6904 bytes) at src/metrics/performance_metrics.c:81 in performance_metrics_destroy() - originally allocated at src/metrics/performance_metrics.c:47
+[TEST] === ÉCHELLE 10 COMPLÉTÉE ===
+
+[TEST] === ÉCHELLE 100 ÉLÉMENTS - AVEC OPTIMISATIONS SIMD/PARALLEL ===
+[DEBUG] Timestamp: 73829.609493001 ns
+[METRICS] LUM CORE @ 100 éléments...
+[MEMORY_TRACKER] ALLOC: 0x3ee7a960 (48 bytes) at src/lum/lum_core.c:241 in lum_group_create()
+[OPTIMIZATION] lum_group_create: 64-byte aligned allocation successful (0x3ee7dc00)
+[MEMORY_TRACKER] ALLOC: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:133 in lum_create()
+[FORENSIC_REALTIME] LUM_CREATE: ID=4178232767, pos=(0,0), type=0, timestamp=73829609737701 ns
+[FORENSIC_CREATION] LUM_0: ID=4178232767, pos=(0,0), timestamp=73829609737701
+[DEBUG] lum_group_add: ENTREE group=0x3ee7a960, lum=0x3ee7a710
+[DEBUG] lum_group_add: Validations OK, count=0, capacity=128
+[DEBUG] lum_group_add: AVANT copie LUM, index=0
+[DEBUG] lum_group_add: SUCCÈS - nouvelle count=1
+[FORENSIC_LUM] [73829609737701] LUM_4178232767 ADD_TO_GROUP
+[FORENSIC_REALTIME] LUM_ADD_TO_GROUP: count=1 at timestamp=73829610711011 ns
+[FORENSIC_GROUP_ADD] LUM_4178232767 added to group (total: 1)
+[MEMORY_TRACKER] FREE: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:189 in lum_destroy() - originally allocated at src/lum/lum_core.c:133
+[FORENSIC_LIFECYCLE] LUM_0: duration=1217470 ns
+[FORENSIC_DETAILED] Processing LUM 0/100 at timestamp 73829610835691
+[MEMORY_TRACKER] ALLOC: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:133 in lum_create()
+[FORENSIC_REALTIME] LUM_CREATE: ID=3054913580, pos=(1,0), type=0, timestamp=73829611152141 ns
+[FORENSIC_CREATION] LUM_1: ID=3054913580, pos=(1,0), timestamp=73829611152141
+[DEBUG] lum_group_add: ENTREE group=0x3ee7a960, lum=0x3ee7a710
+[DEBUG] lum_group_add: Validations OK, count=1, capacity=128
+[DEBUG] lum_group_add: AVANT copie LUM, index=1
+[DEBUG] lum_group_add: SUCCÈS - nouvelle count=2
+[FORENSIC_LUM] [73829611152141] LUM_3054913580 ADD_TO_GROUP
+[FORENSIC_REALTIME] LUM_ADD_TO_GROUP: count=2 at timestamp=73829611599431 ns
+[FORENSIC_GROUP_ADD] LUM_3054913580 added to group (total: 2)
+[MEMORY_TRACKER] FREE: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:189 in lum_destroy() - originally allocated at src/lum/lum_core.c:133
+[FORENSIC_LIFECYCLE] LUM_1: duration=739870 ns
+[FORENSIC_DETAILED] Processing LUM 1/100 at timestamp 73829611659951
+[MEMORY_TRACKER] ALLOC: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:133 in lum_create()
+[FORENSIC_REALTIME] LUM_CREATE: ID=2061593409, pos=(2,0), type=0, timestamp=73829611987681 ns
+[FORENSIC_CREATION] LUM_2: ID=2061593409, pos=(2,0), timestamp=73829611987681
+[DEBUG] lum_group_add: ENTREE group=0x3ee7a960, lum=0x3ee7a710
+[DEBUG] lum_group_add: Validations OK, count=2, capacity=128
+[DEBUG] lum_group_add: AVANT copie LUM, index=2
+[DEBUG] lum_group_add: SUCCÈS - nouvelle count=3
+[FORENSIC_LUM] [73829611987681] LUM_2061593409 ADD_TO_GROUP
+[FORENSIC_REALTIME] LUM_ADD_TO_GROUP: count=3 at timestamp=73829612493041 ns
+[FORENSIC_GROUP_ADD] LUM_2061593409 added to group (total: 3)
+[MEMORY_TRACKER] FREE: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:189 in lum_destroy() - originally allocated at src/lum/lum_core.c:133
+[FORENSIC_LIFECYCLE] LUM_2: duration=814410 ns
+[FORENSIC_DETAILED] Processing LUM 2/100 at timestamp 73829612591891
+[MEMORY_TRACKER] ALLOC: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:133 in lum_create()
+[FORENSIC_REALTIME] LUM_CREATE: ID=3340189240, pos=(3,0), type=0, timestamp=73829612831011 ns
+[FORENSIC_CREATION] LUM_3: ID=3340189240, pos=(3,0), timestamp=73829612831011
+[DEBUG] lum_group_add: ENTREE group=0x3ee7a960, lum=0x3ee7a710
+[DEBUG] lum_group_add: Validations OK, count=3, capacity=128
+[DEBUG] lum_group_add: AVANT copie LUM, index=3
+[DEBUG] lum_group_add: SUCCÈS - nouvelle count=4
+[FORENSIC_LUM] [73829612831011] LUM_3340189240 ADD_TO_GROUP
+[FORENSIC_REALTIME] LUM_ADD_TO_GROUP: count=4 at timestamp=73829613322151 ns
+[FORENSIC_GROUP_ADD] LUM_3340189240 added to group (total: 4)
+[MEMORY_TRACKER] FREE: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:189 in lum_destroy() - originally allocated at src/lum/lum_core.c:133
+[FORENSIC_LIFECYCLE] LUM_3: duration=1058790 ns
+[FORENSIC_DETAILED] Processing LUM 3/100 at timestamp 73829613758891
+[MEMORY_TRACKER] ALLOC: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:133 in lum_create()
+[FORENSIC_REALTIME] LUM_CREATE: ID=3252437034, pos=(4,0), type=0, timestamp=73829613999121 ns
+[FORENSIC_CREATION] LUM_4: ID=3252437034, pos=(4,0), timestamp=73829613999121
+[DEBUG] lum_group_add: ENTREE group=0x3ee7a960, lum=0x3ee7a710
+[DEBUG] lum_group_add: Validations OK, count=4, capacity=128
+[DEBUG] lum_group_add: AVANT copie LUM, index=4
+[DEBUG] lum_group_add: SUCCÈS - nouvelle count=5
+[FORENSIC_LUM] [73829613999121] LUM_3252437034 ADD_TO_GROUP
+[FORENSIC_REALTIME] LUM_ADD_TO_GROUP: count=5 at timestamp=73829615308101 ns
+[FORENSIC_GROUP_ADD] LUM_3252437034 added to group (total: 5)
+[MEMORY_TRACKER] FREE: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:189 in lum_destroy() - originally allocated at src/lum/lum_core.c:133
+[FORENSIC_LIFECYCLE] LUM_4: duration=2858360 ns
+[FORENSIC_DETAILED] Processing LUM 4/100 at timestamp 73829616715221
+[MEMORY_TRACKER] ALLOC: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:133 in lum_create()
+[FORENSIC_REALTIME] LUM_CREATE: ID=2553075930, pos=(5,0), type=0, timestamp=73829618054171 ns
+[FORENSIC_CREATION] LUM_5: ID=2553075930, pos=(5,0), timestamp=73829618054171
+[DEBUG] lum_group_add: ENTREE group=0x3ee7a960, lum=0x3ee7a710
+[DEBUG] lum_group_add: Validations OK, count=5, capacity=128
+[DEBUG] lum_group_add: AVANT copie LUM, index=5
+[DEBUG] lum_group_add: SUCCÈS - nouvelle count=6
+[FORENSIC_LUM] [73829618054171] LUM_2553075930 ADD_TO_GROUP
+[FORENSIC_REALTIME] LUM_ADD_TO_GROUP: count=6 at timestamp=73829619409451 ns
+[FORENSIC_GROUP_ADD] LUM_2553075930 added to group (total: 6)
+[MEMORY_TRACKER] FREE: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:189 in lum_destroy() - originally allocated at src/lum/lum_core.c:133
+[FORENSIC_LIFECYCLE] LUM_5: duration=4809680 ns
+[FORENSIC_DETAILED] Processing LUM 5/100 at timestamp 73829622154861
+[MEMORY_TRACKER] ALLOC: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:133 in lum_create()
+[FORENSIC_REALTIME] LUM_CREATE: ID=2176041968, pos=(6,0), type=0, timestamp=73829622380411 ns
+[FORENSIC_CREATION] LUM_6: ID=2176041968, pos=(6,0), timestamp=73829622380411
+[DEBUG] lum_group_add: ENTREE group=0x3ee7a960, lum=0x3ee7a710
+[DEBUG] lum_group_add: Validations OK, count=6, capacity=128
+[DEBUG] lum_group_add: AVANT copie LUM, index=6
+[DEBUG] lum_group_add: SUCCÈS - nouvelle count=7
+[FORENSIC_LUM] [73829622380411] LUM_2176041968 ADD_TO_GROUP
+[FORENSIC_REALTIME] LUM_ADD_TO_GROUP: count=7 at timestamp=73829622654841 ns
+[FORENSIC_GROUP_ADD] LUM_2176041968 added to group (total: 7)
+[MEMORY_TRACKER] FREE: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:189 in lum_destroy() - originally allocated at src/lum/lum_core.c:133
+[FORENSIC_LIFECYCLE] LUM_6: duration=500360 ns
+[FORENSIC_DETAILED] Processing LUM 6/100 at timestamp 73829622729291
+[MEMORY_TRACKER] ALLOC: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:133 in lum_create()
+[FORENSIC_REALTIME] LUM_CREATE: ID=2509260577, pos=(7,0), type=0, timestamp=73829622919211 ns
+[FORENSIC_CREATION] LUM_7: ID=2509260577, pos=(7,0), timestamp=73829622919211
+[DEBUG] lum_group_add: ENTREE group=0x3ee7a960, lum=0x3ee7a710
+[DEBUG] lum_group_add: Validations OK, count=7, capacity=128
+[DEBUG] lum_group_add: AVANT copie LUM, index=7
+[DEBUG] lum_group_add: SUCCÈS - nouvelle count=8
+[FORENSIC_LUM] [73829622919211] LUM_2509260577 ADD_TO_GROUP
+[FORENSIC_REALTIME] LUM_ADD_TO_GROUP: count=8 at timestamp=73829623202681 ns
+[FORENSIC_GROUP_ADD] LUM_2509260577 added to group (total: 8)
+[MEMORY_TRACKER] FREE: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:189 in lum_destroy() - originally allocated at src/lum/lum_core.c:133
+[FORENSIC_LIFECYCLE] LUM_7: duration=476690 ns
+[FORENSIC_DETAILED] Processing LUM 7/100 at timestamp 73829623270131
+[MEMORY_TRACKER] ALLOC: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:133 in lum_create()
+[FORENSIC_REALTIME] LUM_CREATE: ID=259218798, pos=(8,0), type=0, timestamp=73829624215251 ns
+[FORENSIC_CREATION] LUM_8: ID=259218798, pos=(8,0), timestamp=73829624215251
+[DEBUG] lum_group_add: ENTREE group=0x3ee7a960, lum=0x3ee7a710
+[DEBUG] lum_group_add: Validations OK, count=8, capacity=128
+[DEBUG] lum_group_add: AVANT copie LUM, index=8
+[DEBUG] lum_group_add: SUCCÈS - nouvelle count=9
+[FORENSIC_LUM] [73829624215251] LUM_259218798 ADD_TO_GROUP
+[FORENSIC_REALTIME] LUM_ADD_TO_GROUP: count=9 at timestamp=73829625119341 ns
+[FORENSIC_GROUP_ADD] LUM_259218798 added to group (total: 9)
+[MEMORY_TRACKER] FREE: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:189 in lum_destroy() - originally allocated at src/lum/lum_core.c:133
+[FORENSIC_LIFECYCLE] LUM_8: duration=1838110 ns
+[FORENSIC_DETAILED] Processing LUM 8/100 at timestamp 73829625187611
+[MEMORY_TRACKER] ALLOC: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:133 in lum_create()
+[FORENSIC_REALTIME] LUM_CREATE: ID=1879354121, pos=(9,0), type=0, timestamp=73829629057961 ns
+[FORENSIC_CREATION] LUM_9: ID=1879354121, pos=(9,0), timestamp=73829629057961
+[DEBUG] lum_group_add: ENTREE group=0x3ee7a960, lum=0x3ee7a710
+[DEBUG] lum_group_add: Validations OK, count=9, capacity=128
+[DEBUG] lum_group_add: AVANT copie LUM, index=9
+[DEBUG] lum_group_add: SUCCÈS - nouvelle count=10
+[FORENSIC_LUM] [73829629057961] LUM_1879354121 ADD_TO_GROUP
+[FORENSIC_REALTIME] LUM_ADD_TO_GROUP: count=10 at timestamp=73829629384541 ns
+[FORENSIC_GROUP_ADD] LUM_1879354121 added to group (total: 10)
+[MEMORY_TRACKER] FREE: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:189 in lum_destroy() - originally allocated at src/lum/lum_core.c:133
+[FORENSIC_LIFECYCLE] LUM_9: duration=4128330 ns
+[FORENSIC_DETAILED] Processing LUM 9/100 at timestamp 73829629462191
+[MEMORY_TRACKER] ALLOC: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:133 in lum_create()
+[FORENSIC_REALTIME] LUM_CREATE: ID=1305796935, pos=(10,0), type=0, timestamp=73829631109950 ns
+[FORENSIC_CREATION] LUM_10: ID=1305796935, pos=(10,0), timestamp=73829631109950
+[DEBUG] lum_group_add: ENTREE group=0x3ee7a960, lum=0x3ee7a710
+[DEBUG] lum_group_add: Validations OK, count=10, capacity=128
+[DEBUG] lum_group_add: AVANT copie LUM, index=10
+[DEBUG] lum_group_add: SUCCÈS - nouvelle count=11
+[FORENSIC_LUM] [73829631109950] LUM_1305796935 ADD_TO_GROUP
+[FORENSIC_REALTIME] LUM_ADD_TO_GROUP: count=11 at timestamp=73829631547511 ns
+[FORENSIC_GROUP_ADD] LUM_1305796935 added to group (total: 11)
+[MEMORY_TRACKER] FREE: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:189 in lum_destroy() - originally allocated at src/lum/lum_core.c:133
+[FORENSIC_LIFECYCLE] LUM_10: duration=2096970 ns
+[MEMORY_TRACKER] ALLOC: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:133 in lum_create()
+[FORENSIC_REALTIME] LUM_CREATE: ID=3133764612, pos=(11,0), type=0, timestamp=73829631767001 ns
+[FORENSIC_CREATION] LUM_11: ID=3133764612, pos=(11,0), timestamp=73829631767001
+[DEBUG] lum_group_add: ENTREE group=0x3ee7a960, lum=0x3ee7a710
+[DEBUG] lum_group_add: Validations OK, count=11, capacity=128
+[DEBUG] lum_group_add: AVANT copie LUM, index=11
+[DEBUG] lum_group_add: SUCCÈS - nouvelle count=12
+[FORENSIC_LUM] [73829631767001] LUM_3133764612 ADD_TO_GROUP
+[FORENSIC_REALTIME] LUM_ADD_TO_GROUP: count=12 at timestamp=73829632164201 ns
+[FORENSIC_GROUP_ADD] LUM_3133764612 added to group (total: 12)
+[MEMORY_TRACKER] FREE: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:189 in lum_destroy() - originally allocated at src/lum/lum_core.c:133
+[FORENSIC_LIFECYCLE] LUM_11: duration=609630 ns
+[MEMORY_TRACKER] ALLOC: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:133 in lum_create()
+[FORENSIC_REALTIME] LUM_CREATE: ID=1725535263, pos=(12,0), type=0, timestamp=73829632362111 ns
+[FORENSIC_CREATION] LUM_12: ID=1725535263, pos=(12,0), timestamp=73829632362111
+[DEBUG] lum_group_add: ENTREE group=0x3ee7a960, lum=0x3ee7a710
+[DEBUG] lum_group_add: Validations OK, count=12, capacity=128
+[DEBUG] lum_group_add: AVANT copie LUM, index=12
+[DEBUG] lum_group_add: SUCCÈS - nouvelle count=13
+[FORENSIC_LUM] [73829632362111] LUM_1725535263 ADD_TO_GROUP
+[FORENSIC_REALTIME] LUM_ADD_TO_GROUP: count=13 at timestamp=73829632641271 ns
+[FORENSIC_GROUP_ADD] LUM_1725535263 added to group (total: 13)
+[MEMORY_TRACKER] FREE: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:189 in lum_destroy() - originally allocated at src/lum/lum_core.c:133
+[FORENSIC_LIFECYCLE] LUM_12: duration=461630 ns
+[MEMORY_TRACKER] ALLOC: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:133 in lum_create()
+[FORENSIC_REALTIME] LUM_CREATE: ID=3068308415, pos=(13,0), type=0, timestamp=73829632818901 ns
+[FORENSIC_CREATION] LUM_13: ID=3068308415, pos=(13,0), timestamp=73829632818901
+[DEBUG] lum_group_add: ENTREE group=0x3ee7a960, lum=0x3ee7a710
+[DEBUG] lum_group_add: Validations OK, count=13, capacity=128
+[DEBUG] lum_group_add: AVANT copie LUM, index=13
+[DEBUG] lum_group_add: SUCCÈS - nouvelle count=14
+[FORENSIC_LUM] [73829632818901] LUM_3068308415 ADD_TO_GROUP
+[FORENSIC_REALTIME] LUM_ADD_TO_GROUP: count=14 at timestamp=73829633294511 ns
+[FORENSIC_GROUP_ADD] LUM_3068308415 added to group (total: 14)
+[MEMORY_TRACKER] FREE: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:189 in lum_destroy() - originally allocated at src/lum/lum_core.c:133
+[FORENSIC_LIFECYCLE] LUM_13: duration=672669 ns
+[MEMORY_TRACKER] ALLOC: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:133 in lum_create()
+[FORENSIC_REALTIME] LUM_CREATE: ID=1359327830, pos=(14,0), type=0, timestamp=73829633509590 ns
+[FORENSIC_CREATION] LUM_14: ID=1359327830, pos=(14,0), timestamp=73829633509590
+[DEBUG] lum_group_add: ENTREE group=0x3ee7a960, lum=0x3ee7a710
+[DEBUG] lum_group_add: Validations OK, count=14, capacity=128
+[DEBUG] lum_group_add: AVANT copie LUM, index=14
+[DEBUG] lum_group_add: SUCCÈS - nouvelle count=15
+[FORENSIC_LUM] [73829633509590] LUM_1359327830 ADD_TO_GROUP
+[FORENSIC_REALTIME] LUM_ADD_TO_GROUP: count=15 at timestamp=73829636317340 ns
+[FORENSIC_GROUP_ADD] LUM_1359327830 added to group (total: 15)
+[MEMORY_TRACKER] FREE: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:189 in lum_destroy() - originally allocated at src/lum/lum_core.c:133
+[FORENSIC_LIFECYCLE] LUM_14: duration=3063130 ns
+[MEMORY_TRACKER] ALLOC: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:133 in lum_create()
+[FORENSIC_REALTIME] LUM_CREATE: ID=2624353801, pos=(15,0), type=0, timestamp=73829636714240 ns
+[FORENSIC_CREATION] LUM_15: ID=2624353801, pos=(15,0), timestamp=73829636714240
+[DEBUG] lum_group_add: ENTREE group=0x3ee7a960, lum=0x3ee7a710
+[DEBUG] lum_group_add: Validations OK, count=15, capacity=128
+[DEBUG] lum_group_add: AVANT copie LUM, index=15
+[DEBUG] lum_group_add: SUCCÈS - nouvelle count=16
+[FORENSIC_LUM] [73829636714240] LUM_2624353801 ADD_TO_GROUP
+[FORENSIC_REALTIME] LUM_ADD_TO_GROUP: count=16 at timestamp=73829637207090 ns
+[FORENSIC_GROUP_ADD] LUM_2624353801 added to group (total: 16)
+[MEMORY_TRACKER] FREE: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:189 in lum_destroy() - originally allocated at src/lum/lum_core.c:133
+[FORENSIC_LIFECYCLE] LUM_15: duration=1862330 ns
+[MEMORY_TRACKER] ALLOC: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:133 in lum_create()
+[FORENSIC_REALTIME] LUM_CREATE: ID=3754634877, pos=(16,0), type=0, timestamp=73829638472480 ns
+[FORENSIC_CREATION] LUM_16: ID=3754634877, pos=(16,0), timestamp=73829638472480
+[DEBUG] lum_group_add: ENTREE group=0x3ee7a960, lum=0x3ee7a710
+[DEBUG] lum_group_add: Validations OK, count=16, capacity=128
+[DEBUG] lum_group_add: AVANT copie LUM, index=16
+[DEBUG] lum_group_add: SUCCÈS - nouvelle count=17
+[FORENSIC_LUM] [73829638472480] LUM_3754634877 ADD_TO_GROUP
+[FORENSIC_REALTIME] LUM_ADD_TO_GROUP: count=17 at timestamp=73829638887000 ns
+[FORENSIC_GROUP_ADD] LUM_3754634877 added to group (total: 17)
+[MEMORY_TRACKER] FREE: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:189 in lum_destroy() - originally allocated at src/lum/lum_core.c:133
+[FORENSIC_LIFECYCLE] LUM_16: duration=667960 ns
+[MEMORY_TRACKER] ALLOC: 0x3ee7a710 (64 bytes) at src/lum/lum_core.c:133 in lum_create()
+[FORENSIC_REALTIME] LUM_CREATE: ID=427338499, pos=(17,0), type=0, timestamp=73829640689840 ns
+[FORENSIC_CREATION] LUM_17: ID=427338499, pos=(17,0), timestamp=73829640689840
+[DEBUG] lum_group_add: ENTREE group=0x3ee7a960, lum=0x3ee7a710
+  0x1c33c7c0 (1984 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c33cf90 (1984 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c33d760 (1984 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c33df30 (1984 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c33e700 (1984 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c33eed0 (1984 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c33f6a0 (1984 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c33fe70 (1984 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c340640 (1984 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c340e10 (1984 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c3415e0 (1984 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c341db0 (1984 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c342580 (1984 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c342d50 (1984 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c343520 (1984 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c308590 (80 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:179 in neural_layer_create_processor()
+  0x1c3085f0 (128 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:192 in neural_layer_create_processor()
+  0x1c308680 (32 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:198 in neural_layer_create_processor()
+  0x1c3086b0 (32 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:205 in neural_layer_create_processor()
+  0x1c3086e0 (32 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:213 in neural_layer_create_processor()
+  0x1c308710 (80 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:179 in neural_layer_create_processor()
+  0x1c309a20 (64 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:205 in neural_layer_create_processor()
+  0x1c309a70 (64 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:213 in neural_layer_create_processor()
+  0x1c309ac0 (80 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:179 in neural_layer_create_processor()
+  0x1c309b20 (256 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:192 in neural_layer_create_processor()
+  0x1c309c30 (32 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:198 in neural_layer_create_processor()
+  0x1c309c60 (32 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:205 in neural_layer_create_processor()
+  0x1c309c90 (32 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:213 in neural_layer_create_processor()
+  0x1c309cc0 (80 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:179 in neural_layer_create_processor()
+  0x1c309d20 (32 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:192 in neural_layer_create_processor()
+  0x1c308770 (8 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:198 in neural_layer_create_processor()
+  0x1c309d50 (8 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:205 in neural_layer_create_processor()
+  0x1c309d70 (8 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:213 in neural_layer_create_processor()
+  0x1c333990 (64 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:198 in neural_layer_create_processor()
+  0x1c3339e0 (48 bytes) - allocated at src/lum/lum_core.c:241 in lum_group_create()
+  0x1c309fd0 (32 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:558 in neural_network_create()
+  0x1c343cf0 (64 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:198 in neural_layer_create_processor()
+  0x1c3d04f0 (800 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:258 in lum_matrix_create()
+  0x1c334a50 (56 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:244 in lum_matrix_create()
+  0x1c30b3a0 (560 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:258 in lum_matrix_create()
+  0x1c3d1680 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c3d2810 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c3d39a0 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c3d4b30 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c3d5cc0 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c3d6e50 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c3d7fe0 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c3d9170 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c3da300 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c3db490 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c3dc620 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c3dd7b0 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c3de940 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c3dfad0 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c3e0c60 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c3e1df0 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c3e2f80 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c3e4110 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c3e52a0 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c3e6430 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c3e75c0 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c3e8750 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c3e98e0 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c3eaa70 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c3ebc00 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c3ecd90 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c3edf20 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c3ef0b0 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c3f0240 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c3f13d0 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c3f2560 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c3f36f0 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c3f4880 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c3f5a10 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c3f6ba0 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c3f7d30 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c3f8ec0 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c3fa050 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c3fb1e0 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c3fc370 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c3fd500 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c3fe690 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c3ff820 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c4009b0 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c401b40 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c402cd0 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c403e60 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c404ff0 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c406180 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c407310 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c4084a0 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c409630 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c40a7c0 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c40b950 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c40cae0 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c40dc70 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c40ee00 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c40ff90 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c411120 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c4122b0 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c413440 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c4145d0 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c415760 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c4168f0 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c417a80 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c418c10 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c419da0 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c41af30 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c41c0c0 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c41d250 (4480 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c30b5e0 (80 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:179 in neural_layer_create_processor()
+  0x1c30b640 (128 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:192 in neural_layer_create_processor()
+  0x1c334a90 (32 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:198 in neural_layer_create_processor()
+  0x1c30b6d0 (32 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:205 in neural_layer_create_processor()
+  0x1c30b700 (32 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:213 in neural_layer_create_processor()
+  0x1c30b730 (80 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:179 in neural_layer_create_processor()
+  0x1c30b790 (256 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:192 in neural_layer_create_processor()
+  0x1c30b8a0 (64 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:205 in neural_layer_create_processor()
+  0x1c30b8f0 (64 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:213 in neural_layer_create_processor()
+  0x1c30b940 (80 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:179 in neural_layer_create_processor()
+  0x1c30b9a0 (256 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:192 in neural_layer_create_processor()
+  0x1c30bab0 (32 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:198 in neural_layer_create_processor()
+  0x1c30bae0 (32 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:205 in neural_layer_create_processor()
+  0x1c30bb10 (32 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:213 in neural_layer_create_processor()
+  0x1c30bb40 (80 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:179 in neural_layer_create_processor()
+  0x1c30bba0 (32 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:192 in neural_layer_create_processor()
+  0x1c333a20 (8 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:198 in neural_layer_create_processor()
+  0x1c30bbd0 (8 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:205 in neural_layer_create_processor()
+  0x1c30bbf0 (8 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:213 in neural_layer_create_processor()
+  0x1c30bc10 (48 bytes) - allocated at src/lum/lum_core.c:241 in lum_group_create()
+  0x1c353d50 (32 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:558 in neural_network_create()
+  0x1c3d1580 (56 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:244 in lum_matrix_create()
+  0x1c306b90 (800 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:258 in lum_matrix_create()
+  0x1c4d0d00 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c4d2610 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c4d3f20 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c4d5830 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c4d7140 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c4d8a50 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c4da360 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c4dbc70 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c4dd580 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c4dee90 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c4e07a0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c4e20b0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c4e39c0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c4e52d0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c4e6be0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c4e84f0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c4e9e00 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c4eb710 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c4ed020 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c4ee930 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c4f0240 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c4f1b50 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c4f3460 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c4f4d70 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c4f6680 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c4f7f90 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c4f98a0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c4fb1b0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c4fcac0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c4fe3d0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c4ffce0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5015f0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c502f00 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c504810 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c506120 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c507a30 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c509340 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c50ac50 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c50c560 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c50de70 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c50f780 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c511090 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5129a0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5142b0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c515bc0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5174d0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c518de0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c51a6f0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c51c000 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c51d910 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c51f220 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c520b30 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c522440 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c523d50 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c525660 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c526f70 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c528880 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c52a190 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c52baa0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c52d3b0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c52ecc0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5305d0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c531ee0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5337f0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c535100 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c536a10 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c538320 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c539c30 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c53b540 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c53ce50 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c53e760 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c540070 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c541980 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c543290 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c544ba0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5464b0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c547dc0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5496d0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c54afe0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c54c8f0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c54e200 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c54fb10 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c551420 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c552d30 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c554640 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c555f50 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c557860 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c559170 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c55aa80 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c55c390 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c55dca0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c55f5b0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c560ec0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5627d0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5640e0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5659f0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c567300 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c568c10 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c56a520 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c56be30 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c3d15c0 (80 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:179 in neural_layer_create_processor()
+  0x1c30b010 (128 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:192 in neural_layer_create_processor()
+  0x1c30b0a0 (32 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:198 in neural_layer_create_processor()
+  0x1c30b0d0 (32 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:205 in neural_layer_create_processor()
+  0x1c30b100 (32 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:213 in neural_layer_create_processor()
+  0x1c3d1620 (80 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:179 in neural_layer_create_processor()
+  0x1c30bc50 (256 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:192 in neural_layer_create_processor()
+  0x1c30bd60 (64 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:205 in neural_layer_create_processor()
+  0x1c30bdb0 (64 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:213 in neural_layer_create_processor()
+  0x1c30be00 (80 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:179 in neural_layer_create_processor()
+  0x1c306ec0 (256 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:192 in neural_layer_create_processor()
+  0x1c30b130 (32 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:198 in neural_layer_create_processor()
+  0x1c306fd0 (32 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:205 in neural_layer_create_processor()
+  0x1c307000 (32 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:213 in neural_layer_create_processor()
+  0x1c307030 (80 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:179 in neural_layer_create_processor()
+  0x1c307090 (32 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:192 in neural_layer_create_processor()
+  0x1c3070c0 (8 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:198 in neural_layer_create_processor()
+  0x1c3070e0 (8 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:205 in neural_layer_create_processor()
+  0x1c30be60 (64 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:198 in neural_layer_create_processor()
+  0x1c307120 (48 bytes) - allocated at src/lum/lum_core.c:241 in lum_group_create()
+  0x1c2f3710 (56 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:244 in lum_matrix_create()
+  0x1c3cfee0 (800 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:258 in lum_matrix_create()
+  0x1c57eaf0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c580400 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c581d10 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c583620 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c584f30 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c586840 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c588150 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c589a60 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c58b370 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c58cc80 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c58e590 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c58fea0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5917b0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5930c0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5949d0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5962e0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c597bf0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c599500 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c59ae10 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c59c720 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c59e030 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c59f940 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5a1250 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5a2b60 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5a4470 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5a5d80 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5a7690 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5a8fa0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5aa8b0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5ac1c0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5adad0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5af3e0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5b0cf0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5b2600 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5b3f10 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5b5820 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5b7130 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5b8a40 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5ba350 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5bbc60 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5bd570 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5bee80 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5c0790 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5c20a0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5c39b0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5c52c0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5c6bd0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5c84e0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5c9df0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5cb700 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5cd010 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5ce920 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5d0230 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5d1b40 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5d3450 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5d4d60 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5d6670 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5d7f80 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5d9890 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5db1a0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5dcab0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5de3c0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5dfcd0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5e15e0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5e2ef0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5e4800 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5e6110 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5e7a20 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5e9330 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5eac40 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5ec550 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5ede60 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5ef770 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5f1080 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5f2990 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5f42a0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5f5bb0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5f74c0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5f8dd0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5fa6e0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5fbff0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5fd900 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c5ff210 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c600b20 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c602430 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c603d40 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c605650 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c606f60 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c608870 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c60a180 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c60ba90 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c60d3a0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c60ecb0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c6105c0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c611ed0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c6137e0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c6150f0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c616a00 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c618310 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c619c20 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c2f3750 (80 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:179 in neural_layer_create_processor()
+  0x1c2f37b0 (128 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:192 in neural_layer_create_processor()
+  0x1c30beb0 (32 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:198 in neural_layer_create_processor()
+  0x1c2f3840 (32 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:205 in neural_layer_create_processor()
+  0x1c308190 (32 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:213 in neural_layer_create_processor()
+  0x1c3081c0 (80 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:179 in neural_layer_create_processor()
+  0x1c308220 (256 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:192 in neural_layer_create_processor()
+  0x1c308330 (64 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:205 in neural_layer_create_processor()
+  0x1c308380 (64 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:213 in neural_layer_create_processor()
+  0x1c3083d0 (80 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:179 in neural_layer_create_processor()
+  0x1c3d0210 (256 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:192 in neural_layer_create_processor()
+  0x1c3d0320 (32 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:198 in neural_layer_create_processor()
+  0x1c3d0350 (32 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:205 in neural_layer_create_processor()
+  0x1c3d0380 (32 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:213 in neural_layer_create_processor()
+  0x1c3d03b0 (80 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:179 in neural_layer_create_processor()
+  0x1c3d0410 (32 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:192 in neural_layer_create_processor()
+  0x1c307160 (8 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:198 in neural_layer_create_processor()
+  0x1c308430 (8 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:205 in neural_layer_create_processor()
+  0x1c3d0440 (8 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:213 in neural_layer_create_processor()
+  0x1c3d0460 (64 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:198 in neural_layer_create_processor()
+  0x1c3d04b0 (48 bytes) - allocated at src/lum/lum_core.c:241 in lum_group_create()
+  0x1c57d750 (32 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:558 in neural_network_create()
+  0x1c57e790 (56 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:244 in lum_matrix_create()
+  0x1c62c8e0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c62e1f0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c62fb00 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c631410 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c632d20 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c634630 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c635f40 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c637850 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c639160 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c63aa70 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c63c380 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c63dc90 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c63f5a0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c640eb0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c6427c0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c6440d0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c6459e0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c6472f0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c648c00 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c64a510 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c64be20 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c64d730 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c64f040 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c650950 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c652260 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c653b70 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c655480 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c656d90 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c6586a0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c659fb0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c65b8c0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c65d1d0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c65eae0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c6603f0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c661d00 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c663610 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c664f20 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c666830 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c668140 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c669a50 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c66b360 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c66cc70 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c66e580 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c66fe90 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c6717a0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c6730b0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c6749c0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c6762d0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c677be0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c6794f0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c67ae00 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c67c710 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c67e020 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c67f930 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c681240 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c682b50 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c684460 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c685d70 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c687680 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c688f90 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c68a8a0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c68c1b0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c68dac0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c68f3d0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c690ce0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c6925f0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c693f00 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c695810 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c697120 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c698a30 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c69a340 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c69bc50 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c69d560 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c69ee70 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c6a0780 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c6a2090 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c6a39a0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c6a52b0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c6a6bc0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c6a84d0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c6a9de0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c6ab6f0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c6ad000 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c6ae910 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c6b0220 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c6b1b30 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c6b3440 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c6b4d50 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c6b6660 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c6b7f70 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c6b9880 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c6bb190 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c6bcaa0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c6be3b0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c6bfcc0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c6c15d0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c6c2ee0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c6c47f0 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c6c6100 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c6c7a10 (6400 bytes) - allocated at src/advanced_calculations/matrix_calculator.c:265 in lum_matrix_create()
+  0x1c57e7d0 (80 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:179 in neural_layer_create_processor()
+  0x1c57e830 (128 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:192 in neural_layer_create_processor()
+  0x1c57e8c0 (32 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:198 in neural_layer_create_processor()
+  0x1c57e8f0 (32 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:205 in neural_layer_create_processor()
+  0x1c57e920 (32 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:213 in neural_layer_create_processor()
+  0x1c57e950 (80 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:179 in neural_layer_create_processor()
+  0x1c57e9b0 (256 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:192 in neural_layer_create_processor()
+  0x1c3d0820 (64 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:205 in neural_layer_create_processor()
+  0x1c3d0870 (64 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:213 in neural_layer_create_processor()
+  0x1c3d08c0 (80 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:179 in neural_layer_create_processor()
+  0x1c3d0920 (256 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:192 in neural_layer_create_processor()
+  0x1c57eac0 (32 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:198 in neural_layer_create_processor()
+  0x1c3d0a30 (32 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:205 in neural_layer_create_processor()
+  0x1c3d0a60 (32 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:213 in neural_layer_create_processor()
+  0x1c3d0a90 (80 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:179 in neural_layer_create_processor()
+  0x1c3d0af0 (32 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:192 in neural_layer_create_processor()
+  0x1c3d0b20 (8 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:198 in neural_layer_create_processor()
+  0x1c3d0b40 (8 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:205 in neural_layer_create_processor()
+  0x1c3d0b60 (8 bytes) - allocated at src/advanced_calculations/neural_network_processor.c:213 in neural_layer_create_processor()
+==============================
+
+[MEMORY_TRACKER] LEAK DETECTION: 727 leaks (2372176 bytes total)

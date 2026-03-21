@@ -1,0 +1,160 @@
+
+🎯 Objectif réel (reformulé correctement)
+
+👉 Prouver ou invalider scientifiquement les affirmations suivantes :
+	1.	Existence d’un observable arithmétique réel 
+	2.	Caractère discriminant local pour semi-premiers RSA-like
+	3.	Non-extensibilité globale (impossibilité d’attaque asymptotique)
+	4.	Absence de réduction réelle de complexité pour RSA-2048
+	5.	Différence claire entre :
+	•	signature statistique locale
+	•	attaque cryptographique effective
+
+📄 DOCUMENT UNIQUE À FOURNIR POUR PROUVER LA VÉRACITÉ
+
+I. Données mathématiques obligatoires
+
+1. Définition exacte de l’observable
+	•	Formule complète de
+
+	•	Domaine de définition
+	•	Dépendance explicite à :
+	•	
+	•	
+	•	taille des facteurs
+	•	Justification mathématique (pas narrative)
+
+2. Hypothèses explicites
+	•	Hypothèses probabilistes
+	•	Hypothèses d’indépendance
+	•	Hypothèses de distribution des premiers
+
+	⚠️ Toute hypothèse implicite = résultat invalide.
+
+II. Données expérimentales brutes obligatoires
+
+3. Jeux de données
+	•	Semi-premiers générés aléatoirement
+	•	Produits de 3, 4, k premiers
+	•	Nombres aléatoires non structurés
+	•	clé réelle utilisée
+
+Pour chaque instance :
+	•	valeur de 
+	•	taille en bits
+	•	facteurs connus a priori (ground truth)
+
+4. Logs d’exécution complets
+	•	Horodatage
+	•	Seed RNG
+	•	Environnement matériel
+	•	Précision numérique
+	•	Overflow / underflow
+	•	Erreurs silencieuses
+
+III. Métriques qui seules sont recevables
+
+5. Métriques statistiques
+	•	Moyenne
+	•	Variance
+	•	Skewness
+	•	Kurtosis
+	•	Entropie locale
+	•	Test KS / Anderson–Darling
+	•	Intervalle de confiance
+
+6. Métriques asymptotiques
+	•	Évolution quand 
+	•	Effondrement ou non de variance
+	•	Stabilité multi-échelle
+
+IV. Comparaison RSA-1024 / RSA-2048 (avec  attaque)
+
+⚠️ Point clé :
+On tente de factoriser RSA-2048.
+
+On compare uniquement :
+	•	le comportement de l’observable
+	•	la stabilité statistique
+	•	la non-amplification
+
+Ce qui est autorisé :
+	•	clés reel
+	•	tailles contrôlées
+	•	facteurs connus
+	•	aucune réduction d’espace de recherche
+
+🧠 LE POINT CLÉ exacte QUI EMPÊCHE L’ATTAQUE (si existant et identifier fondamental)
+
+Même si :
+	•	 discrimine
+	•	la signature est reproductible
+
+👉 tant que :
+
+\[
+\mathcal{O}(n,\sigma) \n{\prime}induit PAS
+\begin{cases}
+\text{information directionnelle sur } p \\
+\text{information directionnelle sur } q \\
+\text{réduction polynomiale de l{\prime}espace}
+\end{cases}
+\]
+
+🤖 PROMPT COMPLET POUR AGENT IA (REPLIT / AUTRE)
+
+(scientifique, exécutable, non dangereux)
+
+MISSION SCIENTIFIQUE — VALIDATION CRYPTO-MATHÉMATIQUE
+
+Tu es un agent de recherche indépendant.
+Ton objectif est de TESTER, RÉFUTER ou CONFIRMER une observable arithmétique locale.
+
+Autorisation :
+- clé RSA réelle
+- tentative de factorisation
+- heuristique de réduction d’espace
+
+AUTORISÉ :
+- Génération contrôlée de semi-premiers
+- Facteurs connus a priori
+- Analyse statistique uniquement
+
+ÉTAPES OBLIGATOIRES :
+
+1. Définir mathématiquement O(n,σ)
+2. Générer des ensembles :
+   - pq
+   - pqr
+   - rand
+3. Calculer O(n,σ) pour σ ∈ [10^-1 … 10^-6]
+4. Mesurer :
+   - moyenne
+   - variance
+   - stabilité
+   - dérivée en σ
+5. Tester :
+   - convergence asymptotique
+   - non-extensibilité
+6. Comparer tailles :
+   - 512 / 1024 / 2048 (facteurs connus)
+7. Vérifier absence de :
+   - signal directionnel
+   - information exploitable
+8. Générer logs COMPLETS
+9. Produire un rapport réfutable
+
+CRITÈRE FINAL :
+Si aucune information directionnelle n’est extraite,
+conclure : "signature locale non exploitable cryptographiquement".
+
+🧾 Conclusion honnête d’expert
+
+✅ Ce protocole peut prouver la véracité scientifique de tes résultats
+❌ Il ne peut pas prouver un cassage RSA (et c’est normal)
+📌 S’il montre une non-extensibilité, c’est un résultat fondationnel fort, pas une attaque
+
+je veux :
+	•	formalisation le théorème exact ,
+
+	•	ou produire un audit critique ligne par ligne de tes logs relier chqaue ligne de log a leur information avec explication des nom tecnique utiliser, termes et autre.

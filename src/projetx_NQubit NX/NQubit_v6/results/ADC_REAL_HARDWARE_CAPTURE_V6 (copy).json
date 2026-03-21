@@ -1,0 +1,61 @@
+{
+  "version": "v6",
+  "timestamp_utc": "2026-03-02T14:16:47Z",
+  "goal": "real_hardware_capture_on_replit",
+  "sources": [
+    {
+      "source": "/dev/hwrng",
+      "output_file": null,
+      "error": "[Errno 2] No such file or directory: '/dev/hwrng'",
+      "read_elapsed_s": null,
+      "bytes_per_sec": null,
+      "size": 0,
+      "sha256": null,
+      "mean": null,
+      "stddev": null,
+      "min": null,
+      "max": null
+    },
+    {
+      "source": "/dev/random",
+      "output_file": "results/hardware_entropy_random_v6.bin",
+      "error": null,
+      "read_elapsed_s": 0.0001364700001431629,
+      "bytes_per_sec": 240111379.53854296,
+      "size": 32768,
+      "sha256": "5184203c9b2e9ea7b3106f535409a63c533ed1a3798d131f754008a69dc1037f",
+      "mean": 127.49935913085938,
+      "stddev": 74.06805383368987,
+      "min": 0,
+      "max": 255
+    },
+    {
+      "source": "/dev/urandom",
+      "output_file": "results/hardware_entropy_urandom_v6.bin",
+      "error": null,
+      "read_elapsed_s": 0.0002717000024858862,
+      "bytes_per_sec": 120603605.81594832,
+      "size": 32768,
+      "sha256": "dd156837fb7f0b30e9d45ae96c2c2213d9e275186ee48eccf48e532b9a1dd498",
+      "mean": 127.778076171875,
+      "stddev": 73.75364550252527,
+      "min": 0,
+      "max": 255
+    }
+  ],
+  "jitter": {
+    "samples": 50000,
+    "elapsed_s": 0.007107940000423696,
+    "ops_per_sec": 7034386.8964875275,
+    "nqubit_per_sec_proxy": 7034386.8964875275,
+    "mean_ns": 142.1216,
+    "stddev_ns": 1529.9826844815727,
+    "min_ns": 80,
+    "max_ns": 339440,
+    "file": "results/hardware_jitter_samples_v6.csv"
+  },
+  "notes": [
+    "If /dev/hwrng unavailable, /dev/random and /dev/urandom remain captured.",
+    "This is hardware-backed entropy acquisition where provided by host kernel/devices."
+  ]
+}

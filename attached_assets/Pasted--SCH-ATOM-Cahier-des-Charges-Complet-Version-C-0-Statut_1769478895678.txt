@@ -1,0 +1,189 @@
+# SCH-ATOM — Cahier des Charges Complet (Version C)
+
+## 0. Statut et périmètre
+
+**Projet :** System Cerebral Human (SCH)
+
+**Branche :** C — SCH-ATOM (Reconstruction atomistique)
+
+**Statut :** Cahier des charges fondateur — prêt à implémentation
+
+**Principe cardinal :** Reconstruction la plus fidèle possible du neurone biologique *au niveau atomistique*, sans objectif de performance, d’optimisation ni de convergence algorithmique.
+
+**Règle absolue :** Aucun correcteur abstrait, aucun stabilisateur numérique non justifié biologiquement, aucune homogénéisation.
+
+---
+
+## 1. Objectif scientifique explicite
+
+L’objectif de SCH-ATOM n’est **pas** de simuler un cerveau, ni même un neurone fonctionnel performant.
+
+L’objectif est de **mesurer ce qui apparaît, ce qui disparaît et ce qui diverge** lorsque l’on pousse la modélisation jusqu’au niveau où les abstractions mathématiques usuelles cessent d’être valides.
+
+**Question centrale :**
+
+> Quelles propriétés émergentes du neurone sont détruites, déformées ou artificiellement créées par les abstractions mathématiques usuelles ?
+
+SCH-ATOM est un **instrument de falsification**, pas un moteur d’optimisation.
+
+---
+
+## 2. Positionnement par rapport à A et B
+
+| Branche          | Nature                    | Finalité                          |
+| ---------------- | ------------------------- | --------------------------------- |
+| SCH-BIO (A)      | Biophysique locale        | Fidélité cellulaire fonctionnelle |
+| SCH-NEUROX (B)   | Neuromorphique assisté    | Performance computationnelle      |
+| **SCH-ATOM (C)** | **Atomistique explicite** | **Test des limites ontologiques** |
+
+Les trois branches sont **simultanées, indépendantes et non hiérarchiques**.
+
+---
+
+## 3. Périmètre de reconstruction (obligatoire)
+
+### 3.1 Échelle spatiale
+
+* Atomes individuels (C, H, O, N, Na⁺, K⁺, Ca²⁺, Cl⁻)
+* Résolution sub-nanométrique
+* Aucun regroupement prématuré en « compartiments idéaux »
+
+### 3.2 Structures biologiques reconstruites
+
+#### Membrane neuronale
+
+* Bicouche lipidique explicite
+* Fluctuations thermiques
+* Diffusion latérale des lipides
+
+#### Canaux ioniques
+
+* États conformationnels explicites
+* Transitions stochastiques
+* Sensibilité au champ électrique local
+
+#### Cytosquelette
+
+* Microtubules dynamiques
+* Actine polymérisable
+* Contraintes mécaniques locales
+
+#### Mitochondries
+
+* Production d’ATP atomiquement contrainte
+* Échecs énergétiques possibles
+
+---
+
+## 4. Dynamique physico-chimique
+
+### 4.1 Lois autorisées
+
+* Électromagnétisme local
+* Thermodynamique hors équilibre
+* Stochastique thermique
+
+### 4.2 Lois interdites
+
+* Moyennes globales
+* Énergies implicites infinies
+* Conservation artificielle
+
+---
+
+## 5. Temps et multi-horloges
+
+| Processus                | Échelle temporelle |
+| ------------------------ | ------------------ |
+| Vibrations atomiques     | femtosecondes      |
+| Conformations protéiques | microsecondes      |
+| Flux ioniques            | millisecondes      |
+| Énergie cellulaire       | secondes           |
+
+Aucune synchronisation globale n’est autorisée.
+
+---
+
+## 6. Bruit et instabilité
+
+Le bruit thermique n’est pas un paramètre réglable.
+
+Il est **constitutif** du système.
+
+Toute divergence est **un résultat**, jamais une erreur.
+
+---
+
+## 7. Pathologies atomistiques
+
+SCH-ATOM doit pouvoir produire :
+
+* Blocage de canaux
+* Effondrement mitochondrial
+* Désorganisation cytosquelettique
+
+Sans correction automatique.
+
+---
+
+## 8. Instrumentation et logs (forensic)
+
+Chaque événement doit produire :
+
+* Horodatage haute précision
+* Identifiant atomique
+* État énergétique local
+* Checksum d’intégrité
+
+Aucune sortie uniquement qualitative n’est acceptée.
+
+---
+
+## 9. Protocoles expérimentaux C
+
+### C-1 : Divergence spontanée
+
+Mesurer l’instabilité sans stimulation.
+
+### C-2 : Comparaison A/B/C
+
+Comparer la même stimulation appliquée aux trois branches.
+
+### C-3 : Limite mathématique
+
+Identifier les points où les équations deviennent inopérantes.
+
+---
+
+## 10. Résultats attendus (non négociables)
+
+* Explosion combinatoire
+* Perte de prédictibilité
+* Incompatibilité avec modèles fermés
+
+Ces résultats sont **le succès du projet**.
+
+---
+
+## 11. Critères de validation
+
+SCH-ATOM est validé si :
+
+* le système diverge naturellement,
+* aucune stabilisation artificielle n’est nécessaire,
+* des différences irréductibles avec A et B sont observées.
+
+---
+
+## 12. Portée scientifique
+
+SCH-ATOM n’est pas une promesse clinique directe.
+
+C’est une **révélation de structure** :
+
+> Le neurone réel n’est pas une fonction.
+> C’est un processus physique instable.
+
+---
+
+**FIN DU CAHIER DES CHARGES — VERSION C (SCH-ATOM)**

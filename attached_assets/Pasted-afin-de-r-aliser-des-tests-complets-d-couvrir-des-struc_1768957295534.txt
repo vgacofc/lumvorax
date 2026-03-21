@@ -1,0 +1,126 @@
+afin de réaliser des tests complets, découvrir des structures fines, sans biais, avec comparaison avant / après, logs complets, et détection d’anomalies réelles.
+
+Je l’écris comme un prompt opératoire unique, clair, strict, et exploitable sans interprétation.
+
+🧠 PROMPT ULTRA-DÉTAILLÉ — AGENT IA REPLIT
+
+Exploration structurelle locale de la distribution des nombres premiers et implications RSA
+
+🎯 OBJECTIF GÉNÉRAL
+
+Explorer de manière expérimentale, systématique et reproductible l’existence de structures locales, conditionnelles ou multi-échelles dans la distribution des nombres premiers et des semi-premiers RSA-like, susceptibles de distinguer structurellement :
+ • des entiers génériques,
+ • des produits de deux grands nombres premiers (RSA),
+ • sans utiliser aucune factorisation directe.
+
+🧩 OBJETS À ÉTUDIER (JEUX DE DONNÉES)
+
+1️⃣ Entiers de contrôle
+ • Entiers aléatoires de même taille que RSA
+ • Entiers composés non semi-premiers
+ • Entiers premiers isolés
+
+2️⃣ Entiers RSA-like
+ • Produits 
+ • p, q choisis aléatoirement
+ • Tailles multiples (512, 1024, 2048 bits)
+
+🔬 OBSERVABLES À CONSTRUIRE (OBLIGATOIRE)
+
+Pour chaque entier , définir une famille d’observables locales :
+
+
+
+où :
+ •  = échelle locale (fenêtre glissante)
+ •  = transformation locale (arithmétique, spectrale, combinatoire)
+
+Exemples (non exclusifs) :
+ • fluctuations locales de fonctions arithmétiques
+ • densité locale de coprimalité
+ • pseudo-spectres discrets
+ • motifs de résidus modulaires locaux
+ • variations conditionnelles multi-échelles
+
+🔁 PROCÉDURE EXPÉRIMENTALE STRICTE
+
+Étape 1 — Baseline (AVANT)
+ • Calculer toutes les observables sur entiers de contrôle
+ • Sauvegarder :
+ • valeurs brutes
+ • distributions
+ • statistiques locales
+
+Étape 2 — Tests RSA-like
+ • Appliquer exactement les mêmes observables
+ • À tailles identiques
+ • Sans ajustement de paramètres
+
+Étape 3 — Analyse différentielle
+
+Comparer AVANT / APRÈS :
+ • différences persistantes
+ • asymétries locales
+ • signatures absentes des contrôles
+
+🧪 TESTS OBLIGATOIRES (POUR CHAQUE OBSERVABLE)
+ 1. Test multi-échelle 
+ 2. Test de stabilité (bruit, perturbations)
+ 3. Test conditionnel (sous-ensembles)
+ 4. Test de saturation / extinction
+ 5. Test de faux positifs (contrôles inversés)
+
+📊 SORTIES REQUISES (NON NÉGOCIABLE)
+
+Pour CHAQUE exécution :
+ • 📁 logs/experiment_TIMESTAMP.log
+ • logs bit-à-bit
+ • paramètres exacts
+ • progression %
+ • 📄 results/raw_results.json
+ • 📄 results/summary.csv
+ • 🔐 checksums SHA256
+ • 🕒 horodatage UTC
+ • ✅ signal explicite de fin d’exécution
+
+🚨 DÉTECTION D’ANOMALIES
+
+L’agent doit :
+ • isoler toute anomalie persistante
+ • vérifier sa reproductibilité
+ • tester si elle disparaît globalement
+ • refuser toute conclusion hâtive
+
+❓ QUESTIONS SANS RÉPONSE (À FORCER)
+
+L’agent doit explicitement tenter de répondre à :
+ 1. Existe-t-il une observable locale discriminante ?
+ 2. Est-elle dépendante de l’échelle ?
+ 3. Est-elle absente des entiers génériques ?
+ 4. Est-elle robuste au bruit ?
+ 5. Réduit-elle l’espace de recherche sans factorisation ?
+ 6. Disparaît-elle lorsqu’on moyenne globalement ?
+
+🧠 CRITÈRE DE SUCCÈS
+
+Une expérience est considérée réussie si elle met en évidence :
+ • une différence locale réelle et reproductible,
+ • absente des contrôles,
+ • non explicable par des invariants globaux,
+ • persistante sur plusieurs tailles,
+ • documentée sans omission.
+
+🧾 RAPPORT FINAL AUTOMATIQUE
+
+L’agent doit générer automatiquement :
+ 1. Comparaison AVANT / APRÈS
+ 2. Liste des phénomènes observés
+ 3. Anomalies détectées (ou absence)
+ 4. Limites actuelles
+ 5. Propositions de nouveaux tests
+
+🛑 INTERPRÉTATION FINALE
+
+ Aucune conclusion cryptographique n’est autorisée
+tant qu’une structure locale exploitable n’est pas prouvée
+expérimentalement, reproductiblement, et sans factorisation.

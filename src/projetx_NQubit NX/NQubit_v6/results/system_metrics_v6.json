@@ -1,0 +1,135 @@
+{
+  "version": "v6",
+  "timestamp_utc": "2026-03-02T14:16:45Z",
+  "system": {
+    "platform": "Linux-6.14.11-x86_64-with-glibc2.40",
+    "python": "3.12.11",
+    "cpu_count": 8,
+    "uname": {
+      "cmd": "uname -a",
+      "rc": 0,
+      "stdout": "Linux 581288da6ee4 6.14.11 #1-NixOS SMP PREEMPT_DYNAMIC Tue Jan  1 00:00:00 UTC 1980 x86_64 GNU/Linux",
+      "stderr": ""
+    },
+    "lscpu": {
+      "cmd": "lscpu",
+      "rc": 0,
+      "stdout": "Architecture:                            x86_64\nCPU op-mode(s):                          32-bit, 64-bit\nAddress sizes:                           52 bits physical, 57 bits virtual\nByte Order:                              Little Endian\nCPU(s):                                  8\nOn-line CPU(s) list:                     0-7\nVendor ID:                               AuthenticAMD\nModel name:                              AMD EPYC 9B14\nCPU family:                              25\nModel:                                   17\nThread(s) per core:                      2\nCore(s) per socket:                      4\nSocket(s):                               1\nStepping:                                1\nBogoMIPS:                                5199.99\nFlags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext ssbd ibrs ibpb stibp vmmcall fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves avx512_bf16 clzero xsaveerptr wbnoinvd arat avx512vbmi umip avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid fsrm\nHypervisor vendor:                       KVM\nVirtualization type:                     full\nL1d cache:                               128 KiB (4 instances)\nL1i cache:                               128 KiB (4 instances)\nL2 cache:                                4 MiB (4 instances)\nL3 cache:                                32 MiB (1 instance)\nNUMA node(s):                            1\nNUMA node0 CPU(s):                       0-7\nVulnerability Gather data sampling:      Not affected\nVulnerability Ghostwrite:                Not affected\nVulnerability Indirect target selection: Not affected\nVulnerability Itlb multihit:             Not affected\nVulnerability L1tf:                      Not affected\nVulnerability Mds:                       Not affected\nVulnerability Meltdown:                  Not affected\nVulnerability Mmio stale data:           Not affected\nVulnerability Reg file data sampling:    Not affected\nVulnerability Retbleed:                  Not affected\nVulnerability Spec rstack overflow:      Mitigation; Safe RET\nVulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl\nVulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:                Mitigation; Retpolines; IBPB conditional; IBRS_FW; STIBP always-on; RSB filling; PBRSB-eIBRS Not affected; BHI Not affected\nVulnerability Srbds:                     Not affected\nVulnerability Tsa:                       Mitigation; Clear CPU buffers\nVulnerability Tsx async abort:           Not affected\nVulnerability Vmscape:                   Not affected",
+      "stderr": ""
+    },
+    "lsblk": {
+      "cmd": "lsblk",
+      "rc": 0,
+      "stdout": "NAME        MAJ:MIN  RM  SIZE RO TYPE MOUNTPOINTS\nnbd0         43:0     0   32G  0 disk \nnbd1         43:32    0  256G  0 disk \nnbd2         43:64    0   32G  0 disk \nnbd3         43:96    0   32G  0 disk \nnbd4         43:128   0  256G  0 disk \nnbd5         43:160   0   32G  0 disk \nnbd6         43:192   0  256G  0 disk \nnbd7         43:224   0   32G  0 disk \nnvme0n1     259:0     0   75G  0 disk \n\u2514\u2500nvme0n1p1 259:1     0   75G  0 part /etc/hostname\n                                      /etc/resolv.conf\n                                      /etc/hosts\n                                      /replit/cafs\n                                      /etc/gitconfig\n                                      /etc/nix\n                                      /etc/localtime\n                                      /etc/replit\n                                      /etc/zoneinfo\n                                      /etc/.gitignore\n                                      /nix\n                                      /pid2\nnvme0n2     259:2     0  1.8T  1 disk \nnvme0n3     259:3     0   21G  1 disk /etc/nixmodules\n                                      /mnt/nixmodules\nnbd8         43:256   0  256G  0 disk \nnbd9         43:288   0   32G  0 disk \nnbd10        43:320   0   32G  0 disk \nnbd11        43:352   0   32G  0 disk \nnbd12        43:384   0  256G  0 disk \nnbd13        43:416   0  256G  0 disk \nnbd14        43:448   0  256G  0 disk \nnbd15        43:480   0   32G  0 disk \nnbd16        43:512   0   32G  0 disk \nnbd17        43:544   0   32G  0 disk \nnbd18        43:576   0  256G  0 disk \nnbd19        43:608   0  256G  0 disk \nnbd20        43:640   0  256G  0 disk \nnbd21        43:672   0  256G  0 disk \nnbd22        43:704   0   32G  0 disk \nnbd23        43:736   0   32G  0 disk \nnbd24        43:768   0   32G  0 disk \nnbd25        43:800   0  256G  0 disk \nnbd26        43:832   0   32G  0 disk \nnbd27        43:864   0  256G  0 disk \nnbd28        43:896   0  256G  0 disk \nnbd29        43:928   0   32G  0 disk \nnbd30        43:960   0  256G  0 disk /nix/var\n                                      /mnt/nix\n                                      /home/runner/workspace\nnbd31        43:992   0  256G  0 disk \nnbd32        43:1024  0   32G  0 disk \nnbd33        43:1056  0   32G  0 disk \nnbd34        43:1088  0   32G  0 disk \nnbd35        43:1120  0   32G  0 disk \nnbd36        43:1152  0   32G  0 disk \nnbd37        43:1184  0   32G  0 disk \nnbd38        43:1216  0  256G  0 disk \nnbd39        43:1248  0  256G  0 disk \nnbd40        43:1280  0   32G  0 disk \nnbd41        43:1312  0  256G  0 disk \nnbd42        43:1344  0  256G  0 disk \nnbd43        43:1376  0  256G  0 disk \nnbd44        43:1408  0  256G  0 disk \nnbd45        43:1440  0  256G  0 disk \nnbd46        43:1472  0  256G  0 disk \nnbd47        43:1504  0  256G  0 disk \nnbd48        43:1536  0   32G  0 disk \nnbd49        43:1568  0  256G  0 disk \nnbd50        43:1600  0   32G  0 disk \nnbd51        43:1632  0   32G  0 disk \nnbd52        43:1664  0  256G  0 disk \nnbd53        43:1696  0  256G  0 disk \nnbd54        43:1728  0  256G  0 disk \nnbd55        43:1760  0  256G  0 disk \nnbd56        43:1792  0  256G  0 disk \nnbd57        43:1824  0   32G  0 disk \nnbd58        43:1856  0  256G  0 disk \nnbd59        43:1888  0  256G  0 disk \nnbd60        43:1920  0  256G  0 disk \nnbd61        43:1952  0   32G  0 disk \nnbd62        43:1984  0   32G  0 disk \nnbd63        43:2016  0  256G  0 disk \nnbd64        43:2048  0   32G  0 disk \nnbd65        43:2080  0   32G  0 disk \nnbd66        43:2112  0  256G  0 disk \nnbd67        43:2144  0   32G  0 disk \nnbd68        43:2176  0  256G  0 disk \nnbd69        43:2208  0  256G  0 disk \nnbd70        43:2240  0  256G  0 disk \nnbd71        43:2272  0   32G  0 disk \nnbd72        43:2304  0  256G  0 disk \nnbd73        43:2336  0  256G  0 disk \nnbd74        43:2368  0  256G  0 disk \nnbd75        43:2400  0  256G  0 disk \nnbd76        43:2432  0  256G  0 disk \nnbd77        43:2464  0  256G  0 disk \nnbd78        43:2496  0   32G  0 disk \nnbd79        43:2528  0  256G  0 disk \nnbd80        43:2560  0   32G  0 disk \nnbd81        43:2592  0  256G  0 disk \nnbd82        43:2624  0   32G  0 disk \nnbd83        43:2656  0  256G  0 disk \nnbd84        43:2688  0   32G  0 disk /run/replit/socks\n                                      /run\n                                      /tmp\n                                      /mnt/scratch\n                                      /repl\nnbd85        43:2720  0  256G  0 disk \nnbd86        43:2752  0  256G  0 disk \nnbd87        43:2784  0  256G  0 disk \nnbd88        43:2816  0  256G  0 disk \nnbd89        43:2848  0   32G  0 disk \nnbd90        43:2880  0  256G  0 disk \nnbd91        43:2912  0  256G  0 disk \nnbd92        43:2944  0  256G  0 disk \nnbd93        43:2976  0   32G  0 disk \nnbd94        43:3008  0   32G  0 disk \nnbd95        43:3040  0    0B  0 disk \nnbd96        43:3072  0  256G  0 disk \nnbd97        43:3104  0  256G  0 disk \nnbd98        43:3136  0   32G  0 disk \nnbd99        43:3168  0  256G  0 disk \nnbd100       43:3200  0  256G  0 disk \nnbd101       43:3232  0  256G  0 disk \nnbd102       43:3264  0  256G  0 disk \nnbd103       43:3296  0  256G  0 disk \nnbd104       43:3328  0   32G  0 disk \nnbd105       43:3360  0   32G  0 disk \nnbd106       43:3392  0   32G  0 disk \nnbd107       43:3424  0   32G  0 disk \nnbd108       43:3456  0   32G  0 disk \nnbd109       43:3488  0   32G  0 disk \nnbd110       43:3520  0   32G  0 disk \nnbd111       43:3552  0    0B  0 disk \nnbd112       43:3584  0    0B  0 disk \nnbd113       43:3616  0    0B  0 disk \nnbd114       43:3648  0   32G  0 disk \nnbd115       43:3680  0   32G  0 disk \nnbd116       43:3712  0    0B  0 disk \nnbd117       43:3744  0    0B  0 disk \nnbd118       43:3776  0    0B  0 disk \nnbd119       43:3808  0    0B  0 disk \nnbd120       43:3840  0   32G  0 disk \nnbd121       43:3872  0    0B  0 disk \nnbd122       43:3904  0    0B  0 disk \nnbd123       43:3936  0    0B  0 disk \nnbd124       43:3968  0    0B  0 disk \nnbd125       43:4000  0   32G  0 disk \nnbd126       43:4032  0    0B  0 disk \nnbd127       43:4064  0    0B  0 disk \nnbd128       43:4096  0    0B  0 disk \nnbd129       43:4128  0    0B  0 disk \nnbd130       43:4160  0    0B  0 disk",
+      "stderr": ""
+    }
+  },
+  "memory": {
+    "MemTotal": "65849796 kB",
+    "MemFree": "5730440 kB",
+    "MemAvailable": "17692664 kB",
+    "Buffers": "666512 kB",
+    "Cached": "11097172 kB",
+    "SwapCached": "0 kB",
+    "Active": "35218368 kB",
+    "Inactive": "21559564 kB",
+    "Active(anon)": "34349424 kB",
+    "Inactive(anon)": "11131412 kB",
+    "Active(file)": "868944 kB",
+    "Inactive(file)": "10428152 kB",
+    "Unevictable": "0 kB",
+    "Mlocked": "0 kB",
+    "SwapTotal": "0 kB",
+    "SwapFree": "0 kB",
+    "Zswap": "0 kB",
+    "Zswapped": "0 kB",
+    "Dirty": "2472 kB",
+    "Writeback": "0 kB",
+    "AnonPages": "45014364 kB",
+    "Mapped": "2101828 kB",
+    "Shmem": "467440 kB",
+    "KReclaimable": "1391928 kB",
+    "Slab": "2150236 kB",
+    "SReclaimable": "1391928 kB",
+    "SUnreclaim": "758308 kB",
+    "KernelStack": "126176 kB",
+    "PageTables": "664952 kB",
+    "SecPageTables": "0 kB",
+    "NFS_Unstable": "0 kB",
+    "Bounce": "0 kB",
+    "WritebackTmp": "0 kB",
+    "CommitLimit": "32924896 kB",
+    "Committed_AS": "81230352 kB",
+    "VmallocTotal": "34359738367 kB",
+    "VmallocUsed": "171192 kB",
+    "VmallocChunk": "0 kB",
+    "Percpu": "44096 kB",
+    "HardwareCorrupted": "0 kB",
+    "AnonHugePages": "28672 kB",
+    "ShmemHugePages": "0 kB",
+    "ShmemPmdMapped": "0 kB",
+    "FileHugePages": "0 kB",
+    "FilePmdMapped": "0 kB",
+    "CmaTotal": "0 kB",
+    "CmaFree": "0 kB",
+    "Unaccepted": "0 kB",
+    "HugePages_Total": "0",
+    "HugePages_Free": "0",
+    "HugePages_Rsvd": "0",
+    "HugePages_Surp": "0",
+    "Hugepagesize": "2048 kB",
+    "Hugetlb": "0 kB",
+    "DirectMap4k": "174036 kB",
+    "DirectMap2M": "14505984 kB",
+    "DirectMap1G": "54525952 kB"
+  },
+  "cpu_stat": {
+    "cpu_total_ticks": 35308843,
+    "cpu_idle_ticks": 31190206
+  },
+  "disk_root": {
+    "total_bytes": 79144566784,
+    "used_bytes": 39186444288,
+    "free_bytes": 36603936768
+  },
+  "loadavg": {
+    "load_1m": 1.64697265625,
+    "load_5m": 1.15625,
+    "load_15m": 1.02734375
+  },
+  "network": {
+    "lo": {
+      "rx_bytes": 10468,
+      "rx_packets": 167,
+      "tx_bytes": 10468,
+      "tx_packets": 167
+    },
+    "eth0": {
+      "rx_bytes": 170148,
+      "rx_packets": 2369,
+      "tx_bytes": 818088,
+      "tx_packets": 2369
+    }
+  },
+  "commands": {
+    "free_h": {
+      "cmd": "free -h",
+      "rc": 0,
+      "stdout": "total        used        free      shared  buff/cache   available\nMem:            62Gi        45Gi       5.5Gi       456Mi        12Gi        16Gi\nSwap:             0B          0B          0B",
+      "stderr": ""
+    },
+    "vmstat": {
+      "cmd": "vmstat",
+      "rc": 0,
+      "stdout": "procs -----------memory---------- ---swap-- -----io---- -system-- -------cpu-------\n r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st gu\n 0  1      0 5727888 666512 12493044    0    0  1013  2372 23510   49  6  6 88  1  0  0",
+      "stderr": ""
+    },
+    "df_h": {
+      "cmd": "df -h",
+      "rc": 0,
+      "stdout": "Filesystem                                            Size  Used Avail Use% Mounted on\noverlay                                                74G   37G   35G  52% /\ntmpfs                                                  64M     0   64M   0% /dev\nshm                                                    64M     0   64M   0% /dev/shm\ntmpfs                                                  16G  115M   16G   1% /io\n/dev/disk/by-label/nixos                               74G   37G   35G  52% /pid2\noverlay                                                32G  6.1M   32G   1% /nix\n/dev/nbd84                                             32G  6.1M   32G   1% /tmp\n/dev/disk/by-id/google-nixmodules-a3a6925-us-east1-d   21G   21G     0 100% /mnt/nixmodules\noverlay                                                74G   37G   35G  52% /mnt/cacache/nix\noverlay                                                74G   37G   35G  52% /mnt/cacache/nix/store\ndevtmpfs                                              3.2G     0  3.2G   0% /dev/tty\ntmpfs                                                  32G     0   32G   0% /proc/acpi\ntmpfs                                                  32G     0   32G   0% /proc/scsi\ntmpfs                                                  32G     0   32G   0% /sys/firmware\noverlay                                                32G  6.1M   32G   1% /home/runner\n/dev/nbd30                                            256G  3.7G  251G   2% /home/runner/workspace\n/dev/nbd30                                            256G  3.7G  251G   2% /mnt/nix\noverlay                                               256G  3.7G  251G   2% /nix/store",
+      "stderr": ""
+    }
+  },
+  "collection_elapsed_s": 1.0497104280002532
+}

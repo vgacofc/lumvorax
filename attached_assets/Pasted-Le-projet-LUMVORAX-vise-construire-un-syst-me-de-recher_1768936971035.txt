@@ -1,0 +1,194 @@
+Le projet LUMVORAX vise à construire un système de recherche computationnelle avancée, capable de :
+
+orchestrer plusieurs modules spécialisés,
+
+explorer des problèmes mathématiques ouverts,
+
+générer du code, des tests, des logs et des analyses,
+
+documenter rigoureusement les succès, échecs et limites,
+
+sans jamais prétendre résoudre un problème non résolu.
+
+👉 Objectif : compréhension, exploration, traçabilité, pas “solution miracle”.
+
+2. Exigence de vérité et d’authenticité
+
+Toute information produite doit être classée explicitement comme :
+
+Calcul réel exécuté (logs + métriques)
+
+Résultat théorique
+
+Résultat issu de la littérature
+
+Hypothèse exploratoire
+
+Échec documenté
+
+❌ Interdiction absolue :
+
+d’affirmer une exécution non prouvée
+
+d’inventer des métriques
+
+de masquer une anomalie
+
+3. Fichiers .md à produire (NOUVEAUX, sans toucher aux anciens)
+3.1 Fichiers de vérité et d’audit
+
+analysis_verite_absolue_20260120.md
+Contenu :
+
+Ce qui a été réellement exécuté
+
+Ce qui ne l’a pas été
+
+Preuves attendues mais absentes
+
+Pourquoi elles sont absentes
+
+Conditions pour les obtenir réellement
+
+audit_execution_capabilities.md
+
+Limites du système
+
+Limites hardware
+
+Limites IA
+
+Limites mathématiques
+
+3.2 Fichiers par problème mathématique (×10)
+
+Pour CHAQUE problème :
+
+analysis.md
+
+questions_reponses.md
+
+autocritique.md
+
+anomalies.md
+
+optimisations.md
+
+results.md
+
+Chaque fichier doit contenir :
+
+définitions précises des termes
+
+explications longues et pédagogiques
+
+comparaison avec la littérature existante
+
+ce que les résultats signifient
+
+ce qu’ils ne signifient pas
+
+4. Logs et métriques (spécification, pas invention)
+4.1 Logs attendus (si exécution réelle)
+
+Chaque log devrait contenir :
+
+timestamp (ns)
+
+module
+
+opération
+
+hypothèse testée
+
+résultat brut
+
+incertitude
+
+erreur ou anomalie
+
+👉 Sans ces logs : aucun résultat n’est considéré comme réel.
+
+4.2 Métriques de performance attendues
+
+CPU (%)
+
+RAM (MB)
+
+Latence moyenne
+
+P50 / P99
+
+opérations par seconde
+
+stabilité
+
+taux d’erreur
+
+💡 Ces métriques ne peuvent exister que si un run réel a eu lieu.
+
+5. Optimisation : avant / après (méthode correcte)
+
+Pour chaque optimisation :
+
+État initial documenté
+
+Hypothèse d’optimisation
+
+Modification proposée
+
+Nouveau test
+
+Comparaison avant / après
+
+Gains réels
+
+Effets secondaires
+
+Limites
+
+👉 Sans mesure réelle : optimisation = hypothèse, pas fait.
+
+6. Suivi d’avancement
+
+Un état d’avancement doit être calculé comme :
+
+% de modules réellement exécutés
+
+% de problèmes explorés
+
+% de tests passés
+
+% de données vérifiées
+
+❌ Pas de pourcentage arbitraire.
+
+7. Question clé finale (fondamentale)
+
+Qu’est-ce que la technologie LUMVORAX peut réellement faire que les technologies actuelles ne peuvent pas ?
+
+Cette question ne peut être répondue que si :
+
+des benchmarks réels existent
+
+une comparaison honnête est faite
+
+les limites sont explicites
+
+Sans cela, la seule réponse honnête est :
+
+“Nous ne savons pas encore.”
+
+8. Expertise appliquée (transparente)
+
+Les expertises mobilisées dans ce cadre sont :
+
+architecture systèmes
+
+recherche mathématique
+
+méthodologie scientifique
+
+audit de performance
+
+épistémologie (science de la vérité)

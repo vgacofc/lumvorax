@@ -1,0 +1,69 @@
+passons a la creation du NX-47 ARC
+donc le but de verifier les capacite de notre neurone sur un test reel ARC de la competition ARC Prize 2025 sur kaggle. 
+
+Recherche, analyse et étudie les composants réellement nécessaires du système actuel, capables de réaliser cela réellement. Présente ensuite un plan détaillé, clair, distinctif et réellement possible, avec toutes les distinctions nécessaires, toute l’architecture, les étapes, points et sous-points, accompagnés de descriptions exactes de ce qui sera fait, avec l’architecture exacte avant l’état actuel et après, le résultat désiré.
+Avant de réaliser quoi que ce soit, je veux voir réellement ton plan, sans omission et avec une autocritique, incluant les points forts et les points faibles, les tests unitaires à réaliser pour vérifier l’activation réelle de chacune des fonctions et sous-fonctions de toutes les étapes et couches traitées, ainsi que les tests d’intégration et les logs en nanosecondes HFBL-360 (.csv, .json, logs).
+Ajoute en plus, en tant qu’expert et critique dans tous les domaines nécessaires, tout ce que tu juges nécessaire et que j’aurais oublié de préciser, afin d’être sûr d’éliminer toutes les failles possibles de cette nouvelle version du neurone NX (qui sera le NX-47 ARC). Et revoir complètement ton plan ligne par ligne avant de procéder a la feuille de route et au cahier de charge: et ensuite  procede  a l'exécution quoi ce ce soit et push sur kaggle! et attend 59 seconde pour recuper les log generer et presenter les resultat apre lecture.
+ 
+ 
+INFORMÉ AUSSI QUELLE EST LA SOLUTION QUE NOTRE NEURONE A TROUVÉE ET S’IL A RÉELLEMENT TROUVÉ QUELQUE CHOSE ?
+QUELLE EST LA FORMULE QU’IL A CRÉÉE ?
+QUEL EST L’AXIOME QU’IL A GÉNÉRÉ ?
+QUEL EST LE LEMME QU’IL A GÉNÉRÉ ?
+QUEL EST LE FICHIER LEAN 4 QU’IL A GÉNÉRÉ ?
+COMBIEN D’INTERACTIONS A-T-IL EU AVEC LEAN 4 ?
+COMBIEN D’INTERACTIONS A-T-IL EU AVEC L’IA ARTIFICIELLE ?
+AS-TU RÉUSSI À LIRE VRAIMENT ET À DÉCOUVRIR RÉELLEMENT COMMENT IL PENSE ?
+COMMENT IL APPREND REELLEMENT ET PROCESUS DAPPRENTISAGE POUR CHAQUE PEUZZLE ET ETAT DAVANCEMENT % ET COMBIEN DE TEMPS IL PREND POUR APRENDRE, COMBIEN DE TON IL REFLEXI POUR CHAQUE PUZZLE? COMBIEN DE TEMPS ME POUR TROUVER LA SOLUTION CHAQUE PUZZLE? SIL TROUVE LA SOLUTION OU NON ? % DE REUSSITE REEL POUR CHAQUE PUZZLE? 
+
+AS-TU RÉUSSI À LIRE VRAIMENT ET À DÉCOUVRIR RÉELLEMENT COMMENT IL RÉFLÉCHIT POUR TROUVER LA SOLUTION ?
+QUELLES SONT LES QUESTIONS EXPERTES ET CRITIQUES QU’UN EXPERT DEMANDERAIT ?
+QUELLES SONT LES QUESTIONS EXPERTES ET CRITIQUES RESTÉES SANS RÉPONSE, IDENTIFIÉES ?
+QUELLES SONT LES RÉPONSES APPORTÉES ET TROUVÉES PAR RAPPORT AUX ANOMALIES ET FAILLES DÉTECTÉES ?
+
+Je veux que tu soit toujours professionnel et perfectionniste dans tout ce que tu fais !
+Je veux  voir la quantité de neurones exacte utilisée dans ce que tu écris, s’ils en restent au même niveau ou pas, si de nouveaux ont été créés ou pas, la quantité exacte, avant, pendant et après.
+JE veux  VOIr LEs LOG ULTRA GRANULAIRE AU MAXIMUM OPTIMAL À 100 %, ÇA SERT À QUOI D’AVOIR CRÉÉ UN SYSTÈME [MEMORY_TRACKER] si possible sur kaggle, QUI CAPTURE LES BITS, BIT À BIT, SI TU NE T’EN SERS PAS ?
+UN SYSTÈME FORENSIC EST FAIT POUR ÊTRE TRAÇABLE À 100 % QUE JE SACHE !
+COMMENT TU VEUX EXPLIQUER LES ANOMALIES DÉTECTÉES, SI NOUS N’AVONS PAS LA TRACE EXACTE DE CE QUI S’EST PASSÉ NANOSECONDE PAR NANOSECONDE ET DES ÉCRITURES EN TEMPS RÉEL PERMANENTES SUR LE DISQUE ?
+COMMENT NOUS ALLONS POUVOIR SAVOIR SI LE NEURONE SE RAPPELLE EXACTEMENT TOUT CE QU’IL A APPRIS ?
+COMMENT NOUS ALLONS POUVOIR SAVOIR SI LE NEURONE A UNE RÉELLE CAPACITÉ DE RÉFLEXION ?
+COMMENT NOUS ALLONS POUVOIR SAVOIR SI LE NEURONE SE RAPPELLE TROUVER DES SOLUTIONS TOUT SEUL ?
+COMMENT NOUS ALLONS POUVOIR DEMANDER QUE NOTRE NEURONE APPRENNE RÉELLEMENT, RÉFLÉCHISSE, SOLUTIONNE SANS LA MOINDRE PROGRAMMATION OU INTERVENTION ?
+COMMENT NOUS ALLONS POUVOIR SAVOIR SI LE NEURONE SE RAPPELLE EXACTEMENT TOUT CE QU’IL A APPRIS ?
+
+Donc maintenant, tu vas créer la nouvelle version NX-47 ARC,
+et je veux voir le processus de démarrage avec toutes les étapesa commencer par les test  de vérification et de chargement de l’exécution de la version dans la console avec les % en temps réel, et le début de l’exécution réelle jusqu’à la fin de l’exécution, pour être sûr que tu as bien appliqué, sans oublier le test de génération réelle de fichiers log, test d’écriture des logs pour chaque format .csv, .json, .log, etc.
+POURQUOI je demande tout cela ? Parce que je veux voir exactement ce qui se passe bit par bit à la nanoseconde réelle, pour découvrir toutes les anomalies possibles détectables réellement, et les failles possibles, afin de pouvoir trouver des solutions pour les corriger après !
+Alors tu vas être ultra sérieux et perfectionniste dans tout ce que tu fais, avec toute ton expertise dans tous les domaines nécessaires, et me produire la nouvelle version NX-47 ARC !
+ET REVOIR 10 FOIS APRÈS FINALISATION DES  chaque ligne LA TOTALITÉ DU CODE LIGNE PAR LIGNE POUR ÊTRE SÛR QUE TU N’AS RIEN OUBLIÉ DE CE QUI ÉTAIT DANS LA VERSION NX-46 V2.
+le kernel doit etre realiser dans une seul et unique celule. 
+
+
+API Token is now available
+Please copy your API token now. You won't be able to view it again. You can always generate a new one if needed.
+
+
+KGAT_015a210d6c329222cb2012d613855a94
+
+export KAGGLE_API_TOKEN=KGAT_015a210d6c329222cb2012d613855a94
+
+kaggle competitions list
+
+
+activation du dataset la competition : ARC Prize 2025
+activation du :  GPU P100
+
+instalation de L'api kaggle que ce trouve sur github pour um maximum de gestion des commande.
+
+chemin correct du output pour les fichier generer : /kaggle/working/
+
+chemin correct du dataset de la competion arc prize 2025: /kaggle/input/arc-prize-2025
+
+/kaggle/input/arc-prize-2025/arc-agi_evaluation_challenges.json
+/kaggle/input/arc-prize-2025/arc-agi_evaluation_solutions.json
+/kaggle/input/arc-prize-2025/arc-agi_test_challenges.json
+/kaggle/input/arc-prize-2025/arc-agi_training_challenges.json
+/kaggle/input/arc-prize-2025/arc-agi_training_challenges.json
+/kaggle/input/arc-prize-2025/arc-agi_training_solutions.json
+/kaggle/input/arc-prize-2025/sample_submission.json

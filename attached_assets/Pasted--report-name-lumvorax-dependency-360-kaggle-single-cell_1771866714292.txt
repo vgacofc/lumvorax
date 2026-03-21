@@ -1,0 +1,107 @@
+	
+report_name	"lumvorax_dependency_360_kaggle_single_cell_v6_binary"
+timestamp_ns	1771866603065012723JS:1771866603065012700
+runtime	
+python	"3.12.12 (main, Oct 10 2025, 08:52:57) [GCC 11.4.0]"
+platform	"Linux-6.6.113+-x86_64-with-glibc2.35"
+cwd	"/kaggle/working"
+is_kaggle	true
+policy	
+strict_no_fallback	true
+require_dataset	true
+require_so_presence	true
+enforce_so_load	false
+skip_roundtrip	false
+source_header_validation_enabled	false
+c_syntax_smoke_enabled	false
+dataset_expected	
+native_lib	"liblumvorax.so"
+wheels	
+0	"imagecodecs-2026.1.14-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
+1	"imageio-2.37.2-py3-none-any.whl"
+2	"lazy_loader-0.4-py3-none-any.whl"
+3	"networkx-3.6.1-py3-none-any.whl"
+4	"numpy-2.4.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
+5	"opencv_python-4.13.0.92-cp37-abi3-manylinux_2_17_x86_64.whl"
+6	"packaging-26.0-py3-none-any.whl"
+7	"pillow-12.1.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
+8	"scikit_image-0.26.0-cp312-cp312-manylinux_2_17_x86_64.whl"
+9	"scipy-1.17.0-cp312-cp312-manylinux_2_17_x86_64.whl"
+10	"tifffile-2026.2.16-py3-none-any.whl"
+events	
+0	
+ts_ns	1771866603068919157JS:1771866603068919000
+step	"dataset_root_selected"
+root	"/kaggle/input/nx47-dependencies"
+1	
+ts_ns	1771866603613213565JS:1771866603613213400
+step	"dependency_install_attempt"
+package	"imagecodecs"
+root	"/kaggle/input/nx47-dependencies"
+cmd	
+0	"/usr/bin/python3"
+1	"-m"
+2	"pip"
+3	"install"
+4	"--disable-pip-version-check"
+5	"--no-index"
+6	"--find-links=/kaggle/input/nx47-dependencies"
+7	"imagecodecs"
+2	
+ts_ns	1771866609636391604JS:1771866609636391700
+step	"dataset_artifacts_checked"
+status	"fail"
+missing_wheels	6
+native_found	true
+3	
+ts_ns	1771866609636414924JS:1771866609636415000
+step	"fatal_error"
+error_type	"RuntimeError"
+error	"dataset_artifacts_incomplete"
+warnings	[]
+dataset_root	"/kaggle/input/nx47-dependencies"
+install_report	
+0	
+package	"numpy"
+status	"already_installed"
+1	
+package	"tifffile"
+status	"already_installed"
+2	
+package	"imagecodecs"
+status	"installed"
+method	"find_links"
+root	"/kaggle/input/nx47-dependencies"
+imports	
+numpy	true
+tifffile	true
+imagecodecs	true
+pyarrow	true
+dataset_artifacts	
+status	"fail"
+dataset_root	"/kaggle/input/nx47-dependencies"
+expected_native_lib	"liblumvorax.so"
+resolved_native_lib_name	"liblumvorax.so"
+native_lib	"/kaggle/input/nx47-dependencies/liblumvorax.so"
+native_lib_sha256	"e0ed2460b237e40ad10f5c37746c53ad20f7ef238bfa31268edae88f9e406cb7"
+native_lib_size	192096
+expected_wheel_count	11
+present_wheels_count	5
+missing_wheels	
+0	"imagecodecs-2026.1.14-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
+1	"numpy-2.4.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
+2	"opencv_python-4.13.0.92-cp37-abi3-manylinux_2_17_x86_64.whl"
+3	"pillow-12.1.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
+4	"scikit_image-0.26.0-cp312-cp312-manylinux_2_17_x86_64.whl"
+5	"scipy-1.17.0-cp312-cp312-manylinux_2_17_x86_64.whl"
+present_wheels	
+0	"imageio-2.37.2-py3-none-any.whl"
+1	"lazy_loader-0.4-py3-none-any.whl"
+2	"networkx-3.6.1-py3-none-any.whl"
+3	"packaging-26.0-py3-none-any.whl"
+4	"tifffile-2026.2.16-py3-none-any.whl"
+status	"fail"
+error_type	"RuntimeError"
+error	"dataset_artifacts_incomplete"
+elapsed_ns	6571405164
+elapsed_s	6.571405164

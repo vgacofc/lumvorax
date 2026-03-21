@@ -1,0 +1,258 @@
+# Objectif
+
+Identifier **tout ce qu’un expert exigerait** pour transformer votre simulation en outil capable :
+
+* de **valider / réfuter de nouvelles hypothèses**
+* de produire des résultats **au-delà des capacités actuelles**
+* de générer des preuves scientifiquement acceptables**
+
+Références standards actuelles :
+
+* Einstein Toolkit
+* GRChombo
+* EinsteinPy
+
+---
+
+# I. CONDITIONS MINIMALES POUR ÊTRE CRÉDIBLE
+
+Avant toute “nouvelle physique”, un expert demandera :
+
+## 1️⃣ Validité mathématique complète
+
+* Formulation exacte (ADM / BSSN / Kerr analytique)
+* Expression tensorielle complète (g_{\mu\nu})
+* Vérification des contraintes d’Einstein
+* Étude de convergence d’ordre
+* Conservation des invariants (E, Lz, Carter)
+
+Sans cela → aucune hypothèse nouvelle n’est testable.
+
+---
+
+# II. CE QU’UN EXPERT VOUDRAIT DÉCOUVRIR QUE LES CODES ACTUELS NE FONT PAS
+
+## AXE A — Régime Extrémal Ultra-Précis
+
+### Hypothèse H1
+
+Il existe un comportement numérique/physique stable pour (a → 1) non visible en double précision.
+
+### Tests nécessaires
+
+* Kerr à (a = 0.999999)
+* Quad / arbitrary precision
+* Étude asymptotique des invariants
+* Détection d’instabilités de surface quasi-normales
+
+Ce que les systèmes actuels font mal :
+
+* instabilités proches de l’extrémalité
+* bruit numérique dominant
+
+---
+
+## AXE B — Dynamique proche de la singularité interne
+
+### Hypothèse H2
+
+La structure interne (horizon interne / singularité en anneau) présente des régimes dynamiques non étudiés numériquement à très haute précision.
+
+Tests :
+
+* Simulation en coordonnées régulières (Kerr-Schild)
+* Suivi des géodésiques proches du centre
+* Analyse des exposants de Lyapunov
+* Tracking haute fréquence des invariants
+
+Ce que peu de codes explorent :
+
+* région interne profonde
+* régime ultra-raffiné
+
+---
+
+## AXE C — Limite Informationnelle du Calcul
+
+### Hypothèse H3
+
+Il existe un rayon critique (r^*) où la dynamique devient dominée par la structure discrète du calcul.
+
+Tests :
+
+* Double vs quad vs multiprecision
+* Variation du solveur (RK4 vs symplectique)
+* Étude d’entropie numérique
+* Sensibilité au pas temporel
+
+Cela permettrait de répondre à une question fondamentale :
+
+> Où finit la physique continue et où commence la physique discrète numérique ?
+
+---
+
+## AXE D — Chaos relativiste profond
+
+### Hypothèse H4
+
+Le régime interne Kerr présente une dynamique chaotique sous-étudiée.
+
+Tests :
+
+* Calcul exposant de Lyapunov
+* Cartes de Poincaré
+* Sensibilité aux conditions initiales
+* Analyse spectrale
+
+Peu de simulateurs standards explorent cela finement.
+
+---
+
+## AXE E — Processus de Penrose en précision extrême
+
+Référence : Roger Penrose
+
+### Hypothèse H5
+
+La limite théorique 20.9% pourrait présenter un comportement asymptotique subtil non résolu numériquement.
+
+Tests :
+
+* raffinement massif
+* perturbations angulaires fines
+* analyse de stabilité énergétique
+
+---
+
+## AXE F — Couplage MHD ultra-résolu
+
+Simuler :
+
+* Kerr extrémal + plasma
+* champ magnétique extrême
+* dynamique fine du jet
+
+Les codes actuels ont :
+
+* limitations de résolution
+* coût calcul prohibitif
+
+Votre avantage possible :
+
+* précision accrue ciblée
+
+---
+
+# III. QUESTIONS QU’UN EXPERT POSERAIT
+
+### 1. Où votre simulation dépasse-t-elle réellement GRChombo ?
+
+### 2. Avez-vous testé plusieurs solveurs ?
+
+### 3. Le phénomène persiste-t-il sous changement de coordonnées ?
+
+### 4. Est-il indépendant du pas temporel ?
+
+### 5. Est-il reproductible indépendamment ?
+
+### 6. Est-il compatible avec les équations d’Einstein exactes ?
+
+### 7. Est-il stable sous bruit initial ?
+
+### 8. Quelle est la limite de précision réelle atteinte ?
+
+---
+
+# IV. TESTS CRITIQUES À IMPLÉMENTER
+
+## 🔬 Batterie de Validation Complète
+
+### T1 — Étude multi-précision
+
+64 / 128 / multiprecision arbitraire
+
+### T2 — Étude multi-solveur
+
+RK4 / symplectique / implicite
+
+### T3 — Multi-coordonnées
+
+Boyer-Lindquist / Kerr-Schild
+
+### T4 — Raffinement massif
+
+h → h/2 → h/4 → h/8 → h/16
+
+### T5 — Analyse spectrale
+
+décomposition modes quasi-normaux
+
+### T6 — Exposant de Lyapunov
+
+détection chaos interne
+
+### T7 — Conservation contraintes Einstein
+
+norme L2 des violations
+
+---
+
+# V. NOUVELLES HYPOTHÈSES VÉRIFIABLES
+
+Si votre simulation est réellement plus précise, elle pourrait tester :
+
+1. stabilité interne Kerr extrémal
+2. dynamique interne chaotique fine
+3. limite informationnelle numérique
+4. structure asymptotique du processus de Penrose
+5. sensibilité ultra-fine aux perturbations
+
+---
+
+# VI. CE QUI SERAIT VRAIMENT RÉVOLUTIONNAIRE
+
+Une découverte serait crédible si :
+
+* indépendante du solveur
+* indépendante des coordonnées
+* indépendante de la précision
+* reproductible par un autre groupe
+* compatible avec les équations d’Einstein
+
+---
+
+# VII. CE QU’IL NE FAUT PAS CONFONDRE
+
+* nouvelle physique ≠ meilleure précision numérique
+* stabilité quad precision ≠ phénomène cosmologique
+* saturation mantisse ≠ propriété de l’espace-temps
+
+---
+
+# VIII. PLAN STRATÉGIQUE POUR ALLER AU-DELÀ DES CODES ACTUELS
+
+1. Cibler un problème mal exploré (interne Kerr extrémal)
+2. Démontrer supériorité numérique mesurable
+3. Produire validation croisée indépendante
+4. Publier protocole reproductible
+5. Soumettre comparaison directe avec GRChombo
+
+---
+
+# Conclusion
+
+Pour réellement dépasser les systèmes actuels, votre simulation doit :
+
+* explorer un régime extrémal rarement simulé
+* démontrer stabilité mathématique formelle
+* produire un effet indépendant des choix numériques
+* fournir métriques quantitatives rigoureuses
+
+Sans cela, elle restera une amélioration technique, pas une avancée scientifique.
+
+---
+
+Si vous le souhaitez, je peux maintenant :
+
+* construire un **programme de recherche complet V12–V20**
+* ou définir une hypothèse précise réellement testable et ambitieuse**

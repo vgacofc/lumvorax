@@ -1,0 +1,21 @@
+{
+  "pipeline_specification": [
+    "initialization",
+    "hamiltonian_construction",
+    "hilbert_space_generation",
+    "solver_execution",
+    "observable_computation",
+    "mathematical_validation",
+    "result_production"
+  ],
+  "formal_invariants": [
+    "hamiltonian_is_hermitian",
+    "energy_conservation_check",
+    "symmetry_constraints_check"
+  ],
+  "proof_constraints": [
+    "no_hidden_proxy_transform",
+    "no_hardcoded_scientific_result",
+    "deterministic_pipeline_hashing"
+  ]
+}

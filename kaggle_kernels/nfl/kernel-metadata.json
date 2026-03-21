@@ -1,0 +1,13 @@
+{
+  "id": "gabrielchavesreinann/nx47-nfl",
+  "title": "NX-47 NFL",
+  "code_file": "script.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": "true",
+  "enable_gpu": "true",
+  "enable_internet": "true",
+  "dataset_sources": ["kaggle/nfl-big-data-bowl-2026-analytics"],
+  "competition_sources": [],
+  "kernel_sources": []
+}

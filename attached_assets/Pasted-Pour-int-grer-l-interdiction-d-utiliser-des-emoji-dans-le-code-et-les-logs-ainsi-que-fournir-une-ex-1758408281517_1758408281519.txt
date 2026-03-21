@@ -1,0 +1,50 @@
+Pour intégrer l'interdiction d'utiliser des emoji dans le code et les logs, ainsi que fournir une explication détaillée des erreurs et des solutions, voici ce que vous devez faire :
+
+Interdiction d'utiliser des emoji
+Ajoutez une note dans votre  et dans les fichiers de code pour rappeler cette interdiction. Par exemple :
+
+### SECTION 8: INTERDICTION D'UTILISER DES EMOJI
+- **Aucune utilisation d'emoji** dans le code source ou dans les fichiers de log. Toute inclusion d'emoji sera considérée comme une violation des standards de codage.
+Explication des erreurs de compilation et solutions
+Erreurs de troncation (warning: directive output may be truncated):
+Localisation:  et autres fichiers.
+Cause: Utilisation de snprintf() avec une taille de buffer insuffisante.
+Solution: Assurez-vous que la taille du buffer passé à snprintf() est suffisante pour contenir le message complet et les données supplémentaires.
+Exemple de modification :
+snprintf(test_file, sizeof(test_file), "%s/.write_test", ctx->storage_directory);
+Assurez-vous que test_file a une taille appropriée.
+Erreurs d'implicite déclaration (error: implicit declaration of function):
+Localisation: .
+Cause: Une fonction n'est pas déclarée avant son utilisation.
+Solution: Inclure le bon header ou déclarer la fonction avant son utilisation.
+Exemple :
+#include <time.h> // Ajouter cette ligne pour CLOCK_MONOTONIC
+Erreurs de re-définition de taille (error: conflicting types):
+Localisation: Peut apparaître si des types ou fonctions sont re-définis dans plusieurs fichiers.
+Cause: Incohérence dans les types de données.
+Solution: Assurez-vous que les typedef et les fonctions sont définis de manière unique, selon les règles établies dans le prompt.
+Ajout de logs
+Pour créer des logs dans votre code, utilisez le modèle suivant pour assurer la création et le suivi des fichiers de log de manière uniforme :
+
+#include <stdio.h>
+void create_log(const char* filepath, const char* message) {
+    FILE *file = fopen(filepath, "a");
+    if (file != NULL) {
+        fprintf(file, "%s\n", message);
+        fclose(file);
+    } else {
+        // Gérer l'erreur
+    }
+}
+void log_module_action(const char* module_name) {
+    char log_filepath[100];
+    sprintf(log_filepath, "logs/%s.log", module_name);
+    create_log(log_filepath, "Action du module exécutée.");
+}
+Verification des modifications
+Après avoir intégré ces corrections :
+
+Vérifiez que votre code compile sans erreurs et avertissements.
+Testez les nouvelles fonctionnalités de logging pour vous assurer qu'elles fonctionnent correctement et reportent les actions comme attendu.
+Consultez le fichier  pour toute nouvelle règle afin de garantir la conformité.
+Assurez-vous de lire attentivement chaque section et de valider toutes les modifications avant de les partager dans votre rapport final.

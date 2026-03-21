@@ -1,0 +1,207 @@
+## Problème réel
+
+Le push est encore **bloqué** car le fichier original **297 MB** est **toujours présent dans l’historique Git du commit**.
+
+GitHub le détecte encore :
+
+```
+lumvorax_hubbard_hts_advanced_parallel_1773679826.csv is 297.13 MB
+```
+
+Même si tu l’as supprimé du dossier, **il est toujours dans un commit précédent**.
+
+---
+
+# Solution correcte
+
+Il faut **retirer ce fichier de l’index Git puis réécrire le commit**.
+
+---
+
+# 1. Supprimer le fichier de l’index Git
+
+Dans ton dossier actuel :
+
+```bash
+git rm --cached lumvorax_hubbard_hts_advanced_parallel_1773679826.csv
+```
+
+---
+
+# 2. Vérifier qu’il n’est plus suivi
+
+```bash
+git status
+```
+
+Tu dois voir quelque chose comme :
+
+```
+deleted: lumvorax_hubbard_hts_advanced_parallel_1773679826.csv
+```
+
+---
+
+# 3. Ajouter les morceaux découpés
+
+```bash
+git add lumvorax_part_*
+```
+
+---
+
+# 4. Réécrire le dernier commit
+
+```bash
+git commit --amend
+```
+
+Ou :
+
+```bash
+git commit -m "replace large CSV with split chunks"
+```
+
+---
+
+# 5. Forcer le push (obligatoire car historique modifié)
+
+```bash
+git push origin main --force
+```
+
+---
+
+# Pourquoi c’est nécessaire
+
+GitHub analyse **tout le commit pack** envoyé.
+
+Ton pack contient encore :
+
+```
+lumvorax_hubbard_hts_advanced_parallel_1773679826.csv
+297 MB
+```
+
+Donc il bloque le push.
+
+---
+
+# Vérification avant push
+
+Pour vérifier qu’il n’existe plus dans Git :
+
+```bash
+git ls-files | grep lumvorax_hubbard
+```
+
+Tu dois seulement voir :
+
+```
+lumvorax_part_aa
+lumvorax_part_ab
+lumvorax_part_ac
+lumvorax_part_ad
+```
+
+---
+
+# Les warnings 50MB
+
+```
+recommended maximum file size 50MB
+```
+
+Ce sont **juste des warnings**, pas bloquants.
+
+La seule limite réelle sur GitHub est :
+
+```
+100 MB par fichier
+```
+
+---
+
+## Si tu veux
+
+Je peux aussi te montrer une commande **qui supprime automatiquement tous les fichiers >100MB de l’historique Git**, très utile pour les dépôts scientifiques comme ton projet **Hubbard / Lumvorax**.
+
+
+Le message clé est :
+
+```
+You need to run this command from the toplevel of the working tree
+```
+
+Tu as lancé `git filter-branch` **dans le dossier `logs`**, pas à la **racine du dépôt Git**.
+Donc **l’historique n’a pas été réécrit**, et le fichier de **297 MB est toujours dans les commits**.
+
+---
+
+# Commande unique correcte
+
+Remonte à la racine du repo puis exécute le nettoyage + push.
+
+```bash
+cd ~/workspace && \
+git filter-branch --force --index-filter \
+'git rm --cached --ignore-unmatch src/advanced_calculations/quantum_problem_hubbard_hts/results/research_20260316T165026Z_2530/logs/lumvorax_hubbard_hts_advanced_parallel_1773679826.csv' \
+--prune-empty --tag-name-filter cat -- --all && \
+git push origin main --force
+```
+
+---
+
+# Ce que cette commande fait
+
+1. Va à la **racine du repo**
+2. Supprime le fichier **297 MB de tout l’historique Git**
+3. Réécrit les commits
+4. Force le push vers GitHub.
+
+Les fichiers découpés :
+
+```
+lumvorax_part_aa
+lumvorax_part_ab
+lumvorax_part_ac
+lumvorax_part_ad
+```
+
+resteront dans le dépôt.
+
+---
+
+# Vérification après nettoyage
+
+```bash
+git ls-files | grep lumvorax_hubbard
+```
+
+La commande **ne doit plus afficher** :
+
+```
+lumvorax_hubbard_hts_advanced_parallel_1773679826.csv
+```
+
+---
+
+# Pourquoi GitHub bloque toujours
+
+Git analyse **tout l’historique envoyé dans le push**.
+
+Même si le fichier est supprimé dans le dossier actuel, **il existe encore dans un commit précédent**, donc GitHub refuse le push.
+
+---
+
+✅ Une fois exécuté **à la racine**, le push passera.
+
+---
+
+Si tu veux, je peux aussi te montrer **une méthode beaucoup plus propre pour ton projet HPC (Hubbard / Lumvorax)** qui permet de :
+
+* stocker **des résultats de plusieurs GB dans GitHub**
+* **sans découper les CSV**
+* **sans limite 100 MB**
+  tout en gardant Git rapide.
+a

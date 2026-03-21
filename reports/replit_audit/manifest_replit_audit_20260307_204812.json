@@ -1,0 +1,3157 @@
+{
+  "generated_at_utc": "2026-03-07T20:48:12.189753+00:00",
+  "base": "RAPPORT-VESUVIUS/validation_lumvorax",
+  "count": 525,
+  "artifacts": [
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/CERTIFICATION_LUMVORAX_V5_TOTAL_GO/RAPPORT_CERTIFICATION_V5.md",
+      "size": 643,
+      "sha256": "1dfc984ea452788eac17669b735ed2cac13adfec252aefc8f3e533e4817c3d09",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/CERTIFICATION_LUMVORAX_V5_TOTAL_GO/RAPPORT_CERTIFICATION_V5_DEFINITIF.md",
+      "size": 1693,
+      "sha256": "905d27d28192be8ddb4246e9fa626221d59143ff156dec6756172d585d270b29",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/CERTIFICATION_V6_FINALE_100_REEL.md",
+      "size": 1316,
+      "sha256": "84ce4c0d7b936ed3f192f0ee61e73811b38383dad7a009380c506e60988fc0ee",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_9_CERTIFIED_FULL_GO/CERTIFICATION_SYNTHESE_V4_9.md",
+      "size": 356,
+      "sha256": "3df8136009c5dcd79ec4615029829b614b99ec40920e7f8e42a06b18e81547ed",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_20260221_173312/CERTIFICATION_RAPPORT.md",
+      "size": 10981,
+      "sha256": "bf7edc74db051bf3a049e050c83d008d7fcd3d04a8c7efa03f66452c8946de6f",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_20260221_173312/lumvorax_360_validation_report_v3_complete.json",
+      "size": 4919,
+      "sha256": "a2cba675de947681afec901553dab15d6d8b9e8599da2e947f5db98b5693c9fa",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/CERTIFICATION_SYNTHESE_DEFINITIVE.md",
+      "size": 293424,
+      "sha256": "c53acc02f2c964705fe09741787459e08ae3fde0f0519dd46e374d955e862d86",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/CERTIFICATION_SYNTHESE_DEFINITIVE_V4_8.md",
+      "size": 293401,
+      "sha256": "5dcddd575de5581574508ed01899453a0ae6ac53e52833d05c629ec9d78842a6",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/lumvorax_360_validation_report_v3_complete.json",
+      "size": 293033,
+      "sha256": "a55ccc2004e7f2b246d5a42e9055394301318cde1b1dba583b4da3f720aa9bcb",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/debug/enhanced_logging.h",
+      "size": 633,
+      "sha256": "1879e797b1f45a96dba1c61f5988c4121bfd0f48206212a99330fad8ced2b438",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/debug/forensic_logger.h",
+      "size": 1523,
+      "sha256": "675990edd88849f9d04b256d0264ab602eaf9e498e43f405bf26f28764af5f27",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/debug/log_manager.h",
+      "size": 1727,
+      "sha256": "3da50d58438d047d1b429b116b57ca4e4e3d9289b73060ef599cf5e498d5d016",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/debug/logging_system.h",
+      "size": 1026,
+      "sha256": "bb2ffde7b85da80a31b4d30c9d6ebf50c240e710c6db899c430e74a2e2c0af50",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/debug/lum_core.h",
+      "size": 10299,
+      "sha256": "1ccc3f1728faaa26c46d31710efd560289304f6deabef695bd053b239dcb5bea",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/debug/lum_logger.h",
+      "size": 7586,
+      "sha256": "030e467f538158b6569f78bd29d1633add6f56396cc29ac22fd9d0ab1ff0899e",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/debug/lum_native_file_handler.h",
+      "size": 13856,
+      "sha256": "c5c729e2bc53c397b4c1e22fb46e587b459d04bc6c31c7e836027dd895637414",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/debug/lum_native_universal_format.h",
+      "size": 15138,
+      "sha256": "e8b37f396f82e6933009c5cd71ab7f0d724853301808cd95de4cf47bfe2a56fa",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/debug/lum_optimized_variants.h",
+      "size": 5362,
+      "sha256": "1d809f2a597188d61e5a2fc77fa1b6507e71515d9d08c280df6193cb588334d2",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/debug/lum_secure_serialization.h",
+      "size": 2155,
+      "sha256": "4923817636b4966902282c187418c5bf3071548123a5c5982e1d3efc75a946b3",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/debug/memory_tracker.h",
+      "size": 2756,
+      "sha256": "bdf671fd76dd52b8c7642e864d8e144797f0f0906649b026f2a6f776b7b0425b",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/debug/ultra_forensic_logger.h",
+      "size": 2605,
+      "sha256": "1216a4fc0adcbf5602ad16440fbf1decf1e98017d67f308d19bd348bed30285b",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/debug/vorax_3d_volume.h",
+      "size": 503,
+      "sha256": "070eee21ad084c5151a97abc26f624cf8ef812910ede2448a2eb4a77d5001c4c",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/debug/vorax_operations.h",
+      "size": 2910,
+      "sha256": "a999fd6cf5defaf70e0560b177aa09b0f7ae8dae228aeb6c7b58b05593f0911b",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/file_formats/enhanced_logging.h",
+      "size": 633,
+      "sha256": "1879e797b1f45a96dba1c61f5988c4121bfd0f48206212a99330fad8ced2b438",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/file_formats/forensic_logger.h",
+      "size": 1523,
+      "sha256": "675990edd88849f9d04b256d0264ab602eaf9e498e43f405bf26f28764af5f27",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/file_formats/log_manager.h",
+      "size": 1727,
+      "sha256": "3da50d58438d047d1b429b116b57ca4e4e3d9289b73060ef599cf5e498d5d016",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/file_formats/logging_system.h",
+      "size": 1026,
+      "sha256": "bb2ffde7b85da80a31b4d30c9d6ebf50c240e710c6db899c430e74a2e2c0af50",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/file_formats/lum_core.h",
+      "size": 10299,
+      "sha256": "1ccc3f1728faaa26c46d31710efd560289304f6deabef695bd053b239dcb5bea",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/file_formats/lum_logger.h",
+      "size": 7586,
+      "sha256": "030e467f538158b6569f78bd29d1633add6f56396cc29ac22fd9d0ab1ff0899e",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/file_formats/lum_native_file_handler.h",
+      "size": 13856,
+      "sha256": "c5c729e2bc53c397b4c1e22fb46e587b459d04bc6c31c7e836027dd895637414",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/file_formats/lum_native_universal_format.h",
+      "size": 15138,
+      "sha256": "e8b37f396f82e6933009c5cd71ab7f0d724853301808cd95de4cf47bfe2a56fa",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/file_formats/lum_optimized_variants.h",
+      "size": 5362,
+      "sha256": "1d809f2a597188d61e5a2fc77fa1b6507e71515d9d08c280df6193cb588334d2",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/file_formats/lum_secure_serialization.h",
+      "size": 2155,
+      "sha256": "4923817636b4966902282c187418c5bf3071548123a5c5982e1d3efc75a946b3",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/file_formats/memory_tracker.h",
+      "size": 2756,
+      "sha256": "bdf671fd76dd52b8c7642e864d8e144797f0f0906649b026f2a6f776b7b0425b",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/file_formats/ultra_forensic_logger.h",
+      "size": 2605,
+      "sha256": "1216a4fc0adcbf5602ad16440fbf1decf1e98017d67f308d19bd348bed30285b",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/file_formats/vorax_3d_volume.h",
+      "size": 503,
+      "sha256": "070eee21ad084c5151a97abc26f624cf8ef812910ede2448a2eb4a77d5001c4c",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/file_formats/vorax_operations.h",
+      "size": 2910,
+      "sha256": "a999fd6cf5defaf70e0560b177aa09b0f7ae8dae228aeb6c7b58b05593f0911b",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/logger/enhanced_logging.h",
+      "size": 633,
+      "sha256": "1879e797b1f45a96dba1c61f5988c4121bfd0f48206212a99330fad8ced2b438",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/logger/forensic_logger.h",
+      "size": 1523,
+      "sha256": "675990edd88849f9d04b256d0264ab602eaf9e498e43f405bf26f28764af5f27",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/logger/log_manager.h",
+      "size": 1727,
+      "sha256": "3da50d58438d047d1b429b116b57ca4e4e3d9289b73060ef599cf5e498d5d016",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/logger/logging_system.h",
+      "size": 1026,
+      "sha256": "bb2ffde7b85da80a31b4d30c9d6ebf50c240e710c6db899c430e74a2e2c0af50",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/logger/lum_core.h",
+      "size": 10299,
+      "sha256": "1ccc3f1728faaa26c46d31710efd560289304f6deabef695bd053b239dcb5bea",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/logger/lum_logger.h",
+      "size": 7586,
+      "sha256": "030e467f538158b6569f78bd29d1633add6f56396cc29ac22fd9d0ab1ff0899e",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/logger/lum_native_file_handler.h",
+      "size": 13856,
+      "sha256": "c5c729e2bc53c397b4c1e22fb46e587b459d04bc6c31c7e836027dd895637414",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/logger/lum_native_universal_format.h",
+      "size": 15138,
+      "sha256": "e8b37f396f82e6933009c5cd71ab7f0d724853301808cd95de4cf47bfe2a56fa",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/logger/lum_optimized_variants.h",
+      "size": 5362,
+      "sha256": "1d809f2a597188d61e5a2fc77fa1b6507e71515d9d08c280df6193cb588334d2",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/logger/lum_secure_serialization.h",
+      "size": 2155,
+      "sha256": "4923817636b4966902282c187418c5bf3071548123a5c5982e1d3efc75a946b3",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/logger/memory_tracker.h",
+      "size": 2756,
+      "sha256": "bdf671fd76dd52b8c7642e864d8e144797f0f0906649b026f2a6f776b7b0425b",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/logger/ultra_forensic_logger.h",
+      "size": 2605,
+      "sha256": "1216a4fc0adcbf5602ad16440fbf1decf1e98017d67f308d19bd348bed30285b",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/logger/vorax_3d_volume.h",
+      "size": 503,
+      "sha256": "070eee21ad084c5151a97abc26f624cf8ef812910ede2448a2eb4a77d5001c4c",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/logger/vorax_operations.h",
+      "size": 2910,
+      "sha256": "a999fd6cf5defaf70e0560b177aa09b0f7ae8dae228aeb6c7b58b05593f0911b",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/lum/enhanced_logging.h",
+      "size": 633,
+      "sha256": "1879e797b1f45a96dba1c61f5988c4121bfd0f48206212a99330fad8ced2b438",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/lum/forensic_logger.h",
+      "size": 1523,
+      "sha256": "675990edd88849f9d04b256d0264ab602eaf9e498e43f405bf26f28764af5f27",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/lum/log_manager.h",
+      "size": 1727,
+      "sha256": "3da50d58438d047d1b429b116b57ca4e4e3d9289b73060ef599cf5e498d5d016",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/lum/logging_system.h",
+      "size": 1026,
+      "sha256": "bb2ffde7b85da80a31b4d30c9d6ebf50c240e710c6db899c430e74a2e2c0af50",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/lum/lum_core.h",
+      "size": 10299,
+      "sha256": "1ccc3f1728faaa26c46d31710efd560289304f6deabef695bd053b239dcb5bea",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/lum/lum_logger.h",
+      "size": 7586,
+      "sha256": "030e467f538158b6569f78bd29d1633add6f56396cc29ac22fd9d0ab1ff0899e",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/lum/lum_native_file_handler.h",
+      "size": 13856,
+      "sha256": "c5c729e2bc53c397b4c1e22fb46e587b459d04bc6c31c7e836027dd895637414",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/lum/lum_native_universal_format.h",
+      "size": 15138,
+      "sha256": "e8b37f396f82e6933009c5cd71ab7f0d724853301808cd95de4cf47bfe2a56fa",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/lum/lum_optimized_variants.h",
+      "size": 5362,
+      "sha256": "1d809f2a597188d61e5a2fc77fa1b6507e71515d9d08c280df6193cb588334d2",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/lum/lum_secure_serialization.h",
+      "size": 2155,
+      "sha256": "4923817636b4966902282c187418c5bf3071548123a5c5982e1d3efc75a946b3",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/lum/memory_tracker.h",
+      "size": 2756,
+      "sha256": "bdf671fd76dd52b8c7642e864d8e144797f0f0906649b026f2a6f776b7b0425b",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/lum/ultra_forensic_logger.h",
+      "size": 2605,
+      "sha256": "1216a4fc0adcbf5602ad16440fbf1decf1e98017d67f308d19bd348bed30285b",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/lum/vorax_3d_volume.h",
+      "size": 503,
+      "sha256": "070eee21ad084c5151a97abc26f624cf8ef812910ede2448a2eb4a77d5001c4c",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/lum/vorax_operations.h",
+      "size": 2910,
+      "sha256": "a999fd6cf5defaf70e0560b177aa09b0f7ae8dae228aeb6c7b58b05593f0911b",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/vorax/enhanced_logging.h",
+      "size": 633,
+      "sha256": "1879e797b1f45a96dba1c61f5988c4121bfd0f48206212a99330fad8ced2b438",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/vorax/forensic_logger.h",
+      "size": 1523,
+      "sha256": "675990edd88849f9d04b256d0264ab602eaf9e498e43f405bf26f28764af5f27",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/vorax/log_manager.h",
+      "size": 1727,
+      "sha256": "3da50d58438d047d1b429b116b57ca4e4e3d9289b73060ef599cf5e498d5d016",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/vorax/logging_system.h",
+      "size": 1026,
+      "sha256": "bb2ffde7b85da80a31b4d30c9d6ebf50c240e710c6db899c430e74a2e2c0af50",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/vorax/lum_core.h",
+      "size": 10299,
+      "sha256": "1ccc3f1728faaa26c46d31710efd560289304f6deabef695bd053b239dcb5bea",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/vorax/lum_logger.h",
+      "size": 7586,
+      "sha256": "030e467f538158b6569f78bd29d1633add6f56396cc29ac22fd9d0ab1ff0899e",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/vorax/lum_native_file_handler.h",
+      "size": 13856,
+      "sha256": "c5c729e2bc53c397b4c1e22fb46e587b459d04bc6c31c7e836027dd895637414",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/vorax/lum_native_universal_format.h",
+      "size": 15138,
+      "sha256": "e8b37f396f82e6933009c5cd71ab7f0d724853301808cd95de4cf47bfe2a56fa",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/vorax/lum_optimized_variants.h",
+      "size": 5362,
+      "sha256": "1d809f2a597188d61e5a2fc77fa1b6507e71515d9d08c280df6193cb588334d2",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/vorax/lum_secure_serialization.h",
+      "size": 2155,
+      "sha256": "4923817636b4966902282c187418c5bf3071548123a5c5982e1d3efc75a946b3",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/vorax/memory_tracker.h",
+      "size": 2756,
+      "sha256": "bdf671fd76dd52b8c7642e864d8e144797f0f0906649b026f2a6f776b7b0425b",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/vorax/ultra_forensic_logger.h",
+      "size": 2605,
+      "sha256": "1216a4fc0adcbf5602ad16440fbf1decf1e98017d67f308d19bd348bed30285b",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/vorax/vorax_3d_volume.h",
+      "size": 503,
+      "sha256": "070eee21ad084c5151a97abc26f624cf8ef812910ede2448a2eb4a77d5001c4c",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FINAL_GO/src/vorax/vorax_operations.h",
+      "size": 2910,
+      "sha256": "a999fd6cf5defaf70e0560b177aa09b0f7ae8dae228aeb6c7b58b05593f0911b",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FULL_GO/CERTIFICATION_GENERALE.md",
+      "size": 5238,
+      "sha256": "e3e831b971c7b610563d526c207657bb842fe620a4c416c0732f67ee804d8f35",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_FULL_GO/lumvorax_360_validation_report_v3_complete.json",
+      "size": 4919,
+      "sha256": "0d6326310b800b413aec69c668586ad93218b2b24471fa8a1196ca5c1a168ff2",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_CERTIFIED_TOTAL_GO/CERTIFICATION_SYNTHESE_FINALE_GO.md",
+      "size": 412,
+      "sha256": "11377484515e19012029511878e2fc09081056b16335c099d569dce99f095acd",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_TOTAL_CERTIFIED_20260221_173430/CERTIFICATION_DEFINITIVE.md",
+      "size": 5897,
+      "sha256": "2cf0ab398f788f09fd36c5f324c72b9415339c64203dd1e0c0609f9dbe302a82",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_TOTAL_CERTIFIED_20260221_173430/lumvorax_360_validation_report_v3_complete.json",
+      "size": 4919,
+      "sha256": "3191d1dabdac626f504622d7029150596012af88c91040dde705e95bf7e44b7d",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_TOTAL_CERTIFIED_FINAL/CERTIFICATION_DEFINITIVE.md",
+      "size": 5273,
+      "sha256": "35e55d0a50bccb9d5ce044e40515a00b67e3d2ffb80490138735f1de99d0a729",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/LUMVORAX_V4_TOTAL_CERTIFIED_FINAL/lumvorax_360_validation_report_v3_complete.json",
+      "size": 4919,
+      "sha256": "ac6447681b4443c7cf78aeb9a58a7761561e4c83ba25bef43f9f62f04da63018",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/MODULES_LUMVORAX_INVENTAIRE_TOTAL_V13.md",
+      "size": 2432,
+      "sha256": "1b4cd64d032454b54336a9a3dc89077b183303ae78e929e9757a16a03f168a39",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/PLAN_CONFIRMATION_RUNTIME_MULTI_VERSIONS_V3_20260219.md",
+      "size": 2175,
+      "sha256": "e32cb097feca34181a34dae2006599dd5bf2bed3a4bf3b0ff3ed775645fc91bf",
+      "inferred_date": "2026-02-19"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/PROMPT_AGENT_DATASET_DEPENDENCIES_V3.md",
+      "size": 3486,
+      "sha256": "63ced638012a4b33d3ee13e95324fbd5ac496124c093aa489ace0457133bca87",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/PROMPT_AGENT_REPLIT_VALIDATION_LUMVORAX.md",
+      "size": 7157,
+      "sha256": "c4e4254bf26300ec2dd65779bd72296d10c87d8227ada8107d2748e6b7410706",
+      "inferred_date": "2026-02-19"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/RAPPORT_AGENT_REPLIT_POST_TESTS.md",
+      "size": 4525,
+      "sha256": "6c11b005a88df4510b408ccebb4b0eb4b9d1cfcfde8d91d05485c49521423b39",
+      "inferred_date": "2026-02-19"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/RAPPORT_AGENT_REPLIT_PUSH_DATASET.md",
+      "size": 1204,
+      "sha256": "e29c20b7e6548c407161969b9199315ac7244265573b1138a23d7c04243b44f2",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/RAPPORT_ANALYSE_ANOMALIES_REPLIT_ET_STRATEGIE_KAGGLE_V5_20260221.md",
+      "size": 3551,
+      "sha256": "d65d885445a686c29815580e943b187c7454286e70d0598ba5b8e3f4be8fbc2b",
+      "inferred_date": "2026-02-21"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/RAPPORT_ANALYSE_ECHECS_V3_BUILD_V4_ET_CORRECTIONS_20260221.md",
+      "size": 3064,
+      "sha256": "cac117a21432f457516ddc78b323aa0ba2052a7cc7680112ca528d36918d8ecd",
+      "inferred_date": "2026-02-21"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/RAPPORT_AUDIT_360_PROFOND_NX47_DEPENDENCIES_V6_20260221.md",
+      "size": 4572,
+      "sha256": "68d5770aa9b7ab2ce01686fff22ddc653faa5b43be9451ae4d991dc6be3f2d15",
+      "inferred_date": "2026-02-21"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/RAPPORT_COMPARATIF_PEDAGOGIQUE_V1442_V614_V76_20260219.md",
+      "size": 5856,
+      "sha256": "ea616308e03df9c37ce45cb6ad1f663bdf5c3f8ef629dda844b227cb98357e64",
+      "inferred_date": "2026-02-19"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/RAPPORT_DEPENDENCIES_DATASET_V3_CONFIRMATION_PENDING_20260219.md",
+      "size": 3087,
+      "sha256": "edaa8c4f58c584f949e560eee905416579a1e298bbd23aad4a9103e6ce1261a1",
+      "inferred_date": "2026-02-19"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/RAPPORT_FINAL_EXPERTISE_V6.md",
+      "size": 1778,
+      "sha256": "270581f07bd36b91f290116f05f49d048f6963fd828f99197d10e5909314ad73",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/RAPPORT_FINAL_SYNCHRONISATION_V6.md",
+      "size": 1862,
+      "sha256": "6fc6a99653f4b19d21c7fc50c894a277085b80b845fae32a85a52f41ac872766",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/RAPPORT_INVENTAIRE_MODULES_FONCTIONS_LUMVORAX_20260220.md",
+      "size": 18184,
+      "sha256": "3c4387f8361aaf302a556e88c802814478b288797f0c474fc58226b6249229c5",
+      "inferred_date": "2026-02-20"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/RAPPORT_MAJ_EXPERT_V6_20260221.md",
+      "size": 1765,
+      "sha256": "f054c43284d4b4da0f0d22ed59a9cd3256247a119c14f99006dfb31d36e757b0",
+      "inferred_date": "2026-02-21"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/RAPPORT_PEDAGOGIQUE_PROBLEME_GLIBC_V6_20260221.md",
+      "size": 2419,
+      "sha256": "f8d06297dfc9c4562d8d8eb5a45403f436ab754dbc41f1d6c0d949e19a9321fd",
+      "inferred_date": "2026-02-21"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/RAPPORT_RELEASE_V7_6_V61_4_V144_2_ET_FIX_V2_4_20260219.md",
+      "size": 1788,
+      "sha256": "9e528e96e30b9b45e5731ac15ce5278e54060c2c5453647071793210bdae402a",
+      "inferred_date": "2026-02-19"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/RAPPORT_REVIEW_COMPLET_VALIDATION_LUMVORAX_V4_20260221.md",
+      "size": 1972,
+      "sha256": "0942aee58160f47a8572e9fe9929bedf65f42950e46281dfe8f37bf2cf36800a",
+      "inferred_date": "2026-02-21"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/RAPPORT_REVIEW_GENERAL_AVANT_PUSH_V4_NX47_DEPENDENCIES_20260221.md",
+      "size": 2764,
+      "sha256": "e3afee773ef86d257bc3b80eacdba76d8c7e96e0abc2f5cd9c3c0e87fcbf2004",
+      "inferred_date": "2026-02-21"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/RAPPORT_STRICT_DEPENDENCY_POLICY_V140_20260219.md",
+      "size": 852,
+      "sha256": "28b0ed8fc521b823f64045ba7c3f77acba0b97319920d89a3e9fc322cd12463a",
+      "inferred_date": "2026-02-19"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/RESULTATS_V4_REEL_FINAL_20260221_173028/RAPPORT_SYNTHESE_V4_COMPLETE.md",
+      "size": 1291,
+      "sha256": "44b19cd0a580ed24a2dce2394cd937c03768cff7cd5266b9a8f971643e1abdf0",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/RESULTATS_V4_REEL_FINAL_SUCCESS_20260221_173140/RAPPORT_SYNTHESE_V4_COMPLETE.md",
+      "size": 1118,
+      "sha256": "dad22537777c1d87edd373250342cf87db9e414a7d0c0644853ab76a7126eda3",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/RESULTATS_V4_REEL_FINAL_SUCCESS_20260221_173140/RAPPORT_SYNTHESE_V4_DEFINITIF.md",
+      "size": 7770,
+      "sha256": "4d3651b3ffc03850c475fae77422d76d542da84617e945d90da7e215de15fb80",
+      "inferred_date": "2026-02-21"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/RESULTATS_V4_REEL_FINAL_SUCCESS_20260221_173140/lumvorax_360_validation_report_v3_complete.json",
+      "size": 4919,
+      "sha256": "feb8db992cc21bd7ebc1a848b3ce7b71578b2696f7418546df7a4695a200f533",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/STRATEGIE_EXPERT_TRANSITION_V6.md",
+      "size": 1967,
+      "sha256": "33d71a76e69176246da603d7780382b7cb8da4d0523ef52b09bc9b15eebe49c3",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/VALIDATION_LUMVORAX_SYSTEME_COMPLET_20260219.md",
+      "size": 2880,
+      "sha256": "ae48b4035f0b32a23c9a1f6407e9990a8bb9e8d2aff09e5a1955bb67ee865d4d",
+      "inferred_date": "2026-02-19"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/build_lumvorax_module_inventory.py",
+      "size": 2870,
+      "sha256": "473679432186cb365347c9cc2b6018e47f592b513b97ab8db3c9e8a78cc9f0c1",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/convert_competitor_tiff_to_lum.py",
+      "size": 3218,
+      "sha256": "2c15ab6fb0cf085e36ecf9b4b91361e08540b350db69468aa7e719c44731ed76",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/PROMPT_AGENT_CORRECTION_ECHECS_V3_V4_ET_PUSH_20260221.md",
+      "size": 4230,
+      "sha256": "b5414f45d3a6a2eb54b0500deb02a5a596a41dbe077e74b6888a8e66ca8c26dd",
+      "inferred_date": "2026-02-21"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/PROMPT_AGENT_FIX_KAGGLE_V5_RUNTIME_NATIVE_SPLIT_20260221.md",
+      "size": 3557,
+      "sha256": "1adc15042025c4060f402610b9055923216c4946c495b6b9cbbed1b43787cf38",
+      "inferred_date": "2026-02-21"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/PROMPT_AGENT_PUSH_DATASET_V4_NX47_DEPENDENCIES_20260221.md",
+      "size": 5145,
+      "sha256": "fc3cf48609b872ad3325f9acd3e695c99f5480ce7ee03f815cbe6c70702fff99",
+      "inferred_date": "2026-02-21"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/PROMPT_AGENT_PUSH_ONLY_DATASET_V4_READY_20260221.md",
+      "size": 2395,
+      "sha256": "417f912c66fab1abfa5c3bf0978c4ec98fbc0a832fe2929b0ccbb19504d082ec",
+      "inferred_date": "2026-02-21"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/PROMPT_EXPERT_LUMVORAX_V6.md",
+      "size": 1061,
+      "sha256": "8f2665b0d344fa3f38a877eab5c2be122de24fbe910d52ed5efd7c4f428b946b",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/RAPPORT_AGENT_FINAL_V4_SUCCESS.md",
+      "size": 5535,
+      "sha256": "376165d2be2d867ecccca2b4708800e2d413d09571080d7775cf3771714bfa8b",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/RAPPORT_AGENT_PUSH_DATASET_V4_EXECUTION.md",
+      "size": 2863,
+      "sha256": "4739e89f2062dc18bf711f416edba26dc8f15c34471cdaebc07a2ed5fd6d5c9e",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/RAPPORT_MAJ_PROMPT_KERNEL_TEST360_59S_20260221.md",
+      "size": 823,
+      "sha256": "0d293bf6597758677047429034aabbe7ce8cfdcc6499fb7456a141f07a8df2cf",
+      "inferred_date": "2026-02-21"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/RAPPORT_PREPARATION_V4_LOCAL_20260221.md",
+      "size": 1411,
+      "sha256": "4b9b06de0e77a72bc7d19474f616278ccf89d79dbe6628fe50dcd74bd0d453e6",
+      "inferred_date": "2026-02-21"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/RAPPORT_PRODUCTION_EFFECTIVE_V4_LOCAL_20260221.md",
+      "size": 2178,
+      "sha256": "a7f5115e86bdbeb3710c8826dac81e8eb345dac8a367de69a305a390aa20f218",
+      "inferred_date": "2026-02-21"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/README_DATASET_V4.md",
+      "size": 1600,
+      "sha256": "c53293b82321f81e649d790d54a28bb5e1ebfbe0395f8228aad1a1531cd7472b",
+      "inferred_date": "2026-02-21"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/build_dataset_v4_bundle.py",
+      "size": 10508,
+      "sha256": "8982f2c0194ea7a35ab4defe5839ceda9b8d634493b6c976a0969c705fd0562b",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/competitor_teacher_1407735.tif",
+      "size": 32821210,
+      "sha256": "4135090f39acbf3f0be3af3999af1a8d7685e43e471cf1d13007fda2282f9a3d",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/dataset-metadata.json",
+      "size": 117,
+      "sha256": "9abaabd4d10cbd49f882a33f210a9daef986a3cdcbbde9c759defe2a469db5c6",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/dataset_v4_build_report.json",
+      "size": 15532,
+      "sha256": "4bcdbc158ea07cd13b8d5d05328fda13eb0e06b79a5ce23a4e3dcdc001f0197c",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/imagecodecs-2026.1.14-cp311-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "size": 24716561,
+      "sha256": "8a78451926905459f42e827c207d80e1601abf68eaf0e38fd65ddd3c346d1f47",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/imageio-2.37.2-py3-none-any.whl",
+      "size": 317646,
+      "sha256": "ad9adfb20335d718c03de457358ed69f141021a333c40a53e57273d8a5bd0b9b",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/lazy_loader-0.4-py3-none-any.whl",
+      "size": 12097,
+      "sha256": "342aa8e14d543a154047afb4ba8ef17f5563baad3fc610d7b15b213b0f119efc",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/lum_vorax_complete",
+      "size": 1106720,
+      "sha256": "89b17005ae2ab13c36af1c2bea90e8d3a25749220c2d3b11942be4e4a59116f0",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/networkx-3.6.1-py3-none-any.whl",
+      "size": 2068504,
+      "sha256": "d47fbf302e7d9cbbb9e2555a0d267983d2aa476bac30e90dfbe5669bd57f3762",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/numpy-2.4.2-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "size": 16899477,
+      "sha256": "c02ef4401a506fb60b411467ad501e1429a3487abca4664871d9ae0b46c8ba32",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/opencv_python-4.13.0.92-cp37-abi3-manylinux_2_28_x86_64.whl",
+      "size": 72927042,
+      "sha256": "620d602b8f7d8b8dab5f4b99c6eb353e78d3fb8b0f53db1bd258bb1aa001c1d5",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/packaging-26.0-py3-none-any.whl",
+      "size": 74366,
+      "sha256": "b36f1fef9334a5588b4166f8bcd26a14e521f2b55e6b9de3aaa80d3ff7a37529",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/pillow-12.1.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "size": 7034590,
+      "sha256": "597bd9c8419bc7c6af5604e55847789b69123bbe25d65cc6ad3012b4f3c98d8b",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/scikit_image-0.26.0-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl",
+      "size": 13711217,
+      "sha256": "74aa5518ccea28121f57a95374581d3b979839adc25bb03f289b1bc9b99c58af",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/scipy-1.17.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "size": 35112380,
+      "sha256": "dac97a27520d66c12a34fd90a4fe65f43766c18c0d6e1c0a80f114d2260080e4",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/RAPPORT_360_FINAL_V20.md",
+      "size": 2103,
+      "sha256": "fc7c13c2cac9ceafaaaa259bb6d6c70788e6cc1f47078c70578e60a35f05cadd",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/RAPPORT_AUDIT_FINAL_V11.md",
+      "size": 1797,
+      "sha256": "5a3cb1bbe8b2f674eb4b7d1c8fca7863c5b8cc57a36e9053c7e6b454ee914288",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/RAPPORT_EXPERTISE_V27.md",
+      "size": 2048,
+      "sha256": "34297a65e70a2c27f767138791a01949dd526214dc30f6e923e2962f659cfa95",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/RAPPORT_FINAL_V15.md",
+      "size": 1298,
+      "sha256": "42d96729745ab07e4cb5a5ad3fcd40b65223546adc7a2c741ed6ce599e0bdde9",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/RAPPORT_V13_V14.md",
+      "size": 1056,
+      "sha256": "94786392edb9eacec394761f3841aeb869ad51af22cd6b0c0d7fcdcd67e68719",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/ROADMAP_VALIDATION.md",
+      "size": 2194,
+      "sha256": "301378a5d2faa63d008f198863c1f32d9a7abffc54864ffbd55a0176985273dc",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/advanced_calculations/audio_processor.c",
+      "size": 19258,
+      "sha256": "00a862601fddfadb2727af32dc64e260f377ce198678f2356dd5478031aeb0c8",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/advanced_calculations/audio_processor.h",
+      "size": 2428,
+      "sha256": "6034b8b98429ea020ba2545ddf097e11ad700336bb01bd66b58ab9d62472f470",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/advanced_calculations/golden_score_optimizer.c",
+      "size": 23321,
+      "sha256": "c2df0a74c9cb67dae726f208a96acae48e7ea89db50eab8e9f15cb74b1922143",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/advanced_calculations/golden_score_optimizer.h",
+      "size": 4759,
+      "sha256": "4a366d29922ea6b1d93e3eef959144bb78904f83b110b35e5057496006693231",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/advanced_calculations/golden_score_optimizer.h.backup",
+      "size": 5570,
+      "sha256": "71dfd3321dd540f3f72bd47550420eeb94a74f10bfb745e3976da6e66359495c",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/advanced_calculations/image_processor.c",
+      "size": 16022,
+      "sha256": "61ce93efeb1d895ab9f6c2ee76dda8acd65c2ec2a79f3a0cd4c0fa3c28178835",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/advanced_calculations/image_processor.h",
+      "size": 2245,
+      "sha256": "4e906c1d0081eab9bc54a9d0f24a29bc27574517acecf2c9c505f98b80767230",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/advanced_calculations/matrix_calculator.c",
+      "size": 23744,
+      "sha256": "9b2cd94c869dbe9dbe4a4fac0e7c9647fa155c7c7c344bb3e8ab93b682657435",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/advanced_calculations/matrix_calculator.h",
+      "size": 6133,
+      "sha256": "20bf2335da5906f238d232131a212e352b03faeeb5cd05e52fbe1d6808a74303",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/advanced_calculations/neural_advanced_optimizers.c",
+      "size": 15318,
+      "sha256": "fd7402cef60f268afb7eaeec7a2eaac65b9567f162900dcc4d30f318f2943496",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/advanced_calculations/neural_advanced_optimizers.h",
+      "size": 5560,
+      "sha256": "2da37bda6b9b478bbe8f9358d54fe2611782b25da773b9d3e039a91908a72462",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/advanced_calculations/neural_network_processor.c",
+      "size": 25931,
+      "sha256": "a02ee2322d869ba42f885b96f4c5703a26f97e466448e579fead589dda86efa3",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/advanced_calculations/neural_network_processor.h",
+      "size": 7168,
+      "sha256": "15d139950e225b291afcad35227eb7d919e28599cf3bd09067b72e6ee4df70c7",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/advanced_calculations/neural_ultra_precision_architecture.c",
+      "size": 5861,
+      "sha256": "2a120c5a3ec398cfeb849bbaf65fcf40b442057454a261d4b0694f70422dced9",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/advanced_calculations/neural_ultra_precision_architecture.h",
+      "size": 3417,
+      "sha256": "eb98426457f3df575d5586c41c143d6966c8cb6d87018157b17c13fe6ec77c39",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/advanced_calculations/quantum_simulator.c",
+      "size": 11686,
+      "sha256": "aec17b119fd6d3779b4851b57d500d665d10f8df1bbdd99928f0c9aa2e6f3de7",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/advanced_calculations/quantum_simulator.h",
+      "size": 6509,
+      "sha256": "11300632077763fc9488f46762e488ade31ed18f0fd0faaa7cc2fd215ecdce87",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/advanced_calculations/tsp_optimizer.c",
+      "size": 14152,
+      "sha256": "262cfd510161bd21f71c6c2a7ff64125218e56d07b8631af01879516ef8d6b0b",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/advanced_calculations/tsp_optimizer.h",
+      "size": 3705,
+      "sha256": "37d83f66138e8d388dbb7837ba6f9879c0da57c61420f6af0950df68a7797358",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/advanced_calculations/video_processor.c",
+      "size": 19569,
+      "sha256": "ee76cfef76672a5f2367369f600d410886a80084b3292d66102ef30b6de4e29d",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/advanced_calculations/video_processor.h",
+      "size": 2070,
+      "sha256": "345b46b3b561f74133e785f75fef91e446947d41741f41aad6defe376df9e75e",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/audit_scientific_v11.c",
+      "size": 2509,
+      "sha256": "928c4c7dd149b8b3cb2d1dcdd8ab7de90f322500a87628e6faae8b9a7f048128",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/benchmark_comprehensive.c",
+      "size": 9221,
+      "sha256": "b2218fd8a706efa5dbe42474d45ed7f8cf2503fa2f4970fdd41b41ec49a9f765",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/binary/binary_lum_converter.c",
+      "size": 15868,
+      "sha256": "6fd8b666eff2bc6c5e9c171547480c20e4f2680c9c33109538d5e87d79d68a52",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/binary/binary_lum_converter.h",
+      "size": 2542,
+      "sha256": "91a6d0b5ee05d047d699384c78e23ef3d766a716d108e684a8a38aca8677a9f8",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/cicd/benchmark_runner.c",
+      "size": 9722,
+      "sha256": "e602beddf3ed68856782ebe81ca184e49224f69994f882a2c43d94edb51de5a8",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/cicd/benchmark_runner.h",
+      "size": 2602,
+      "sha256": "2684077b70cfe63c68f1fdc85506fdf350d8840844a02da9bddf9a13767e95c0",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/cicd/regression_detector.c",
+      "size": 9776,
+      "sha256": "cba2b06824ef5d37f235fa1a2ec5acb42f21aad01410b4344db05281ed485278",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/cicd/regression_detector.h",
+      "size": 2551,
+      "sha256": "8f164d94ca6e7978d5fdcf77985ec8ef83e95289dbd2c38226c219c79e509abf",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/common/common_types.h",
+      "size": 9286,
+      "sha256": "37bbb2edb9df6b9ab9476a24704769ba9a40d956e784daf3506d351be1bb88b4",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/common/debug_macros.h",
+      "size": 593,
+      "sha256": "8c1420525f65c1727e3945284cea0c618ccc9fc8d3c1a4fa1a6b521e37324231",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/common/float_utils.h",
+      "size": 1124,
+      "sha256": "b4b5e9177ba0b4ba5a86a1412b206ca122be5089047ea69999cb37c8d605028f",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/common/magic_numbers.h",
+      "size": 1945,
+      "sha256": "bfceba7ba58f174491bcd06ad5d81e3da960fcc3af7f52058379c47b2cf07174",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/common/module_dependency_manager.h",
+      "size": 1650,
+      "sha256": "c92e6146deaac27c82f17fc1689949954e79dbd2e84098851858b2b082f8fcbf",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/common/safe_arithmetic.h",
+      "size": 911,
+      "sha256": "ee8d1bdfd19289a75e27e6421ca13561efe59c90a75cd6b3b2907dd30efdbbba",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/common/safe_string.h",
+      "size": 1796,
+      "sha256": "499c3f4b82afd85c8410ae1e22b0a86a4ed44ed93c3444e8dceb4d0075fc6e42",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/common/time_ns.c",
+      "size": 740,
+      "sha256": "d37bb21d2f0caf2f716361e19be2f5099e78d09b45ac2ffdf767434887c7ac79",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/common/time_ns.h",
+      "size": 142,
+      "sha256": "e0acb10bfc81dbcd14b7c6deeb5b39a1c30dd3e25a0f5731fd8c56895fee692d",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/complex_modules/ai_dynamic_config_manager.c",
+      "size": 20268,
+      "sha256": "cd334f02751bb692d5ec9bcf332e7ff90937dc635ce4bd41c65382330409c056",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/complex_modules/ai_dynamic_config_manager.h",
+      "size": 7952,
+      "sha256": "3165418b16516669aab64d8e5519199b18f33650e74c2a5b8337c6d8087b65ff",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/complex_modules/ai_optimization.c",
+      "size": 21186,
+      "sha256": "e124e0de37bfc479b38df75b49fbd021c3a17c35f968f7e9c69ebfb0d11b97e4",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/complex_modules/ai_optimization.h",
+      "size": 9000,
+      "sha256": "a874e75231cd4a6381a9bfcf3187ebed9aac803aaef82048db15eefce0dc8dcc",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/complex_modules/distributed_computing.c",
+      "size": 13193,
+      "sha256": "f2cd7f966a21e712f6d0dd030b4db010495f87469d1d7c09f51ed095e28e4b50",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/complex_modules/distributed_computing.h",
+      "size": 7891,
+      "sha256": "25f7213496d1d19d4cd6312774ab3a632828e75e8d45eb166869975661f1db77",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/complex_modules/realtime_analytics.c",
+      "size": 17367,
+      "sha256": "d0cac1517f45d61bfa9da2ce1f4f9b65016dd26806d73b7061f77efcccf5228e",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/complex_modules/realtime_analytics.h",
+      "size": 6749,
+      "sha256": "9b2412467f4a8908b0cb936661a437d9422ac50cb20d7e07140aea170328cf5c",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/conservation_test.c",
+      "size": 6865,
+      "sha256": "6bc6235852d6b1809039beca65444ac19d2087875a6ad087df73ab5c2978a5e1",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/core/hw_counters.c",
+      "size": 639,
+      "sha256": "6ea19ead0eee8235d98815da64cd5eec15a1f056f9e4773908b0fa48f5be8a18",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/core/time_ns.c",
+      "size": 740,
+      "sha256": "d37bb21d2f0caf2f716361e19be2f5099e78d09b45ac2ffdf767434887c7ac79",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/core/time_ns.h",
+      "size": 142,
+      "sha256": "e0acb10bfc81dbcd14b7c6deeb5b39a1c30dd3e25a0f5731fd8c56895fee692d",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/crypto/crypto_validator.c",
+      "size": 11572,
+      "sha256": "8e29ec8e591ae3c890f1d0eb3316c6910e04116a0aaf2d77d02c7c862f5130f2",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/crypto/crypto_validator.h",
+      "size": 5316,
+      "sha256": "f586cd660b8f036934f45a01b245e05a4773d2eb41157d6c6217866523f545a7",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/crypto/rsa_structure_analyzer.c",
+      "size": 3129,
+      "sha256": "c17f09d2931d2c167885bf7d9dec6780956578aba6f6b6a17b52f515e38abe8f",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/crypto/rsa_structure_analyzer.h",
+      "size": 1049,
+      "sha256": "a42b001c214deea43b286df6564fbc169ebf2955aa5521f0055c615dfb12f430",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/crypto/sha256_test_vectors.h",
+      "size": 961,
+      "sha256": "7a32d822c321d564329c3ce64684fbd8e6f07d2e498a642680fe46cdecc6eab1",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/crypto/shf/cryo_test.c",
+      "size": 2651,
+      "sha256": "13d0817b7350a43689bddef71c89487bcb51f37190bd0d19c8f0c87aef410fc2",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/crypto/shf/millennium_solver.c",
+      "size": 693,
+      "sha256": "ab23dec89869a92099c8ea42a4cc1ab609a6708179608c417d20c2931adcd071",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/crypto/shf/millennium_solver.h",
+      "size": 333,
+      "sha256": "985224d9ac073e3e59c7f1195ee95e841e6a5264553e7141190575a02a31ae94",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/crypto/shf/shf_core.c",
+      "size": 1158,
+      "sha256": "dcd17083b8a6310952a0f6eb2201558e5c6e2f354ddfbe6401ee829eca1e3a75",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/crypto/shf/shf_core.h",
+      "size": 420,
+      "sha256": "46918eeb1ec7bd84443a3fb27d0a45dd7b3f8d5d6927a6fab317e97dcfd573c9",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/crypto/shf/shf_v2.c",
+      "size": 1259,
+      "sha256": "b02db07f23c0d17205d6a6566c48452117f30f8df1dae15ee88cb1d93ebed175",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/crypto/shf/shf_v2.h",
+      "size": 448,
+      "sha256": "3f0858e866a53621d6b6e356876ee266375ed793879be50e8493d09722a1ec0c",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/crypto/shf/shf_v3.c",
+      "size": 912,
+      "sha256": "7e043e440f82ad43d0e44fee06d93c1f22d8d27107ac9333577263e3b2f11d20",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/crypto/shf/shf_v3.h",
+      "size": 454,
+      "sha256": "309bc6f23844c700069507fb05dfa3a113b050f58b4b21b3ac8cfd36092eeb76",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/debug/enhanced_logging.c",
+      "size": 2298,
+      "sha256": "74a2bf524fd0c003a6db2be9b9a295681a7b98cb610cef56c0068f62a82d0edc",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/debug/enhanced_logging.h",
+      "size": 633,
+      "sha256": "1879e797b1f45a96dba1c61f5988c4121bfd0f48206212a99330fad8ced2b438",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/debug/forensic_logger.c",
+      "size": 6510,
+      "sha256": "e27adac781a685019e2e29f6bec315957c45de185a035171600d3d369458b6ca",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/debug/forensic_logger.h",
+      "size": 1523,
+      "sha256": "675990edd88849f9d04b256d0264ab602eaf9e498e43f405bf26f28764af5f27",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/debug/logging_system.c",
+      "size": 2193,
+      "sha256": "059350a18a398750815da11df0f737af069e3960609ee858185a0ab767445755",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/debug/logging_system.h",
+      "size": 1026,
+      "sha256": "bb2ffde7b85da80a31b4d30c9d6ebf50c240e710c6db899c430e74a2e2c0af50",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/debug/memory_tracker.c",
+      "size": 17312,
+      "sha256": "55f67b3f907d0f0e793b9715db02ac2928f4b1d49c4c4c0b7a724cd8d56882fe",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/debug/memory_tracker.h",
+      "size": 2756,
+      "sha256": "bdf671fd76dd52b8c7642e864d8e144797f0f0906649b026f2a6f776b7b0425b",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/debug/ultra_forensic_logger.c",
+      "size": 12865,
+      "sha256": "7ccb07dd30be5f3dc51975d3596486007b171b3dbaf33b900804d53b796710ad",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/debug/ultra_forensic_logger.h",
+      "size": 2605,
+      "sha256": "1216a4fc0adcbf5602ad16440fbf1decf1e98017d67f308d19bd348bed30285b",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/distributed/distributed_node.c",
+      "size": 8695,
+      "sha256": "e92750ff8c0653e0f54af6a78fb6cb87ea8b498ebedf290b7d09174081148168",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/distributed/distributed_node.h",
+      "size": 2672,
+      "sha256": "6f7617b8dd86eb61de7ce75f838cf919c59d4dec72336af9f86e2fe43cf17c7c",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/file_formats/lum_native_file_handler.c",
+      "size": 26637,
+      "sha256": "a4ff70551a536c38c1f73719892fb72cba8a3f701dc9fb2ad086136083ed0d1f",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/file_formats/lum_native_file_handler.h",
+      "size": 13856,
+      "sha256": "c5c729e2bc53c397b4c1e22fb46e587b459d04bc6c31c7e836027dd895637414",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/file_formats/lum_native_universal_format.c",
+      "size": 29272,
+      "sha256": "c367923c18db1ca0433338e4b71d9966770d13fc7bbee5bf73bc35b0bfe66ae7",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/file_formats/lum_native_universal_format.h",
+      "size": 15138,
+      "sha256": "e8b37f396f82e6933009c5cd71ab7f0d724853301808cd95de4cf47bfe2a56fa",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/file_formats/lum_secure_serialization.c",
+      "size": 23486,
+      "sha256": "ca62a642d8d622f115fc5d420d87b78645b3e6c78e65d91bbacae07df3679688",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/file_formats/lum_secure_serialization.h",
+      "size": 2155,
+      "sha256": "4923817636b4966902282c187418c5bf3071548123a5c5982e1d3efc75a946b3",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/kaggle_demo/aimo-3-submission-demo.ipynb",
+      "size": 2871,
+      "sha256": "19463676486e6b776afe203a582c2baf08d8455db595795e417292861f7e46af",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/kaggle_sync/aimo3-shf-resonance-v3.py",
+      "size": 7479,
+      "sha256": "42d6fdb456604fd2cf711d4257764590d6ef5e0ca26a88a7dbcd7f591ad9847b",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/kaggle_sync/kernel-metadata.json",
+      "size": 359,
+      "sha256": "9ceb03b029587391bbb6dbcf9138c247a6c0aaabb911571cc1a3d6a4570e9b8d",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/logger/log_manager.c",
+      "size": 8005,
+      "sha256": "8fdc948b7039c5c7767244e40061d1dc65f64f29879ad32d62e0d0ea7b62f581",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/logger/log_manager.h",
+      "size": 1727,
+      "sha256": "3da50d58438d047d1b429b116b57ca4e4e3d9289b73060ef599cf5e498d5d016",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/logger/lum_logger.c",
+      "size": 18631,
+      "sha256": "3b3ec371ae675f1feda57163b8c04222619ebd49be60d2ccc9d1d1437eccac67",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/logger/lum_logger.h",
+      "size": 7586,
+      "sha256": "030e467f538158b6569f78bd29d1633add6f56396cc29ac22fd9d0ab1ff0899e",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/logger/lum_logger.h.backup",
+      "size": 6766,
+      "sha256": "4c647503e08656f41498552b1c80749d2672f67154f49acf2c94f32463c39355",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/logging/log_writer.c",
+      "size": 2064,
+      "sha256": "a0fda900407ee67b62e728f2cee92a6a2bad7d657a186d001e07fb4c7ab260c4",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/logging/log_writer.h",
+      "size": 253,
+      "sha256": "4097d8d28d95260cada6331fdca12541a6c8202b018abf920530df1e1e1a3f34",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/lum/lum_core.c",
+      "size": 42341,
+      "sha256": "88f3308cec10b353941dd90ded6f25a73567c0f3dd4d8314d03efe2d9c5c29da",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/lum/lum_core.h",
+      "size": 10299,
+      "sha256": "1ccc3f1728faaa26c46d31710efd560289304f6deabef695bd053b239dcb5bea",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/lum/lum_core.h.gch",
+      "size": 328752,
+      "sha256": "e321b18fc5e7ffeb90bcf474d80619bd0d01b9543faa3c7b7e11b72ca1dc7f72",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/lum/lum_optimized_variants.h",
+      "size": 5362,
+      "sha256": "1d809f2a597188d61e5a2fc77fa1b6507e71515d9d08c280df6193cb588334d2",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/main.c",
+      "size": 1970,
+      "sha256": "d76fcf7a038027d7ae84665f14e2c4caf145f86523b19bcd3d28cd2aca2982fb",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/main_blocked_backup.c",
+      "size": 15512,
+      "sha256": "0e64333bbaa57895d458f9488cada0c15579773c46f3fd7a61599f46d3fc6c74",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/main_complete_backup.c",
+      "size": 12342,
+      "sha256": "8426702a6c36eebf9407f918cb2abf00bd2f09050478d5895a4278d60e7ae93a",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/main_debug_temp.c",
+      "size": 5510,
+      "sha256": "76b05ee019380b251318349b56cbe2d18af89e0b8077babb5c75c86478fa3ab8",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/main_simple.c",
+      "size": 12368,
+      "sha256": "e697b8b9ab349361bff01a71b533554ef298a0615a9ae20a3964ebe485341fbc",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/main_working_backup.c",
+      "size": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/metrics/performance_metrics.c",
+      "size": 14845,
+      "sha256": "7f3e16a623c16dc3da730e2c080d8760af84d23716c7e471431e302c19ed0874",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/metrics/performance_metrics.h",
+      "size": 6601,
+      "sha256": "993d121ac9118c7ba8f32037fd5a851ed90d61ab4feb69f596b0191b592605da",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/monitoring/monitoring_alerting.c",
+      "size": 364,
+      "sha256": "691f874fc971e688cda7c041006e18b1773d6ce469079c41d858e9b240244dc3",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/monitoring/monitoring_alerting.h",
+      "size": 306,
+      "sha256": "3895d21cdd51531c95e13f98754b1cadf87a9671d41972ab617db76674104153",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/network/hostinger_resource_limiter.c",
+      "size": 5345,
+      "sha256": "67a11527bc35d77661716f6f790bbf56d24b72f499776f559e5ab71d2a9c5fe1",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/network/hostinger_resource_limiter.h",
+      "size": 1431,
+      "sha256": "52d43af2c8f4137d6ece310d85ef719431a1fd3c8ece7151246851e68a811eac",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/NX-39_CAHIER_CHARGES_TG.md",
+      "size": 2220,
+      "sha256": "039034f2601138ee2dd2c937dce42ca0adff170f00d1fc2131d221e145e94147",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/lumvorax_v32_engine.cpp",
+      "size": 2915,
+      "sha256": "606328dd4a9db276ed58dbef5e3bc5e7b89867efe1ea37d8427537f361db6039",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/lumvorax_v4_kerr_engine.cpp",
+      "size": 2669,
+      "sha256": "cf1bcf150d9b10f1474649681b0351c99701e9928c2f959569768637afe6d7c3",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx11_logger_engine.py",
+      "size": 8634,
+      "sha256": "cb5825b26d94cb2776a83721f482a727df689d5b9f45763d71825bf7257ca9dc",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx21_engine.cpp",
+      "size": 2236,
+      "sha256": "6ba31fbc203b9394492e10a5eca39031b296df2ad94f2df9f94836faa2904af7",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx22_torture_engine.cpp",
+      "size": 4580,
+      "sha256": "049bf866acccddc58c0960b7ec3a88d94ff0103e43fd7bbba393b449c39d2f79",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx23_exploration_engine.cpp",
+      "size": 4892,
+      "sha256": "d3dea40c50b13ff9521fb9c0aadb5cc8780751b1b86eef267a5b539879bd8b8b",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx24_falsification_engine.cpp",
+      "size": 5049,
+      "sha256": "7e7f945815f5cbe17c37d6046aeb051591ad78116ca1315754fb539cb5c213f4",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx25_heritage_engine.cpp",
+      "size": 5182,
+      "sha256": "fc9b286e66c4efd12be020895877e5547605cbd4777c95a11b34c4cddcfa4e77",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx26_production_engine.cpp",
+      "size": 5087,
+      "sha256": "061f4ba0ade857cff09fde5fec40eca9882b8352879b4f43f4f739fb63de8cb5",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx27_iq_engine.cpp",
+      "size": 5644,
+      "sha256": "48095578b31ebe867cbf4c977736dd9a330c5582ce6c69517ad4f412c49de22f",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx28_app_engine.cpp",
+      "size": 3987,
+      "sha256": "4de0a40b99f019030908ccff10ffd0143f855be13a1977628d150058850c01d0",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx29_bridge_engine.cpp",
+      "size": 4945,
+      "sha256": "bb38952b67ae4c3df07a393aecc71cf6659550f53c60227e348dbc6e1e72f281",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx30_dialogue_engine.cpp",
+      "size": 4275,
+      "sha256": "43e10825881ac26861f03662eb71f259f37b3b5501ab53802359da3cb9651b93",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx31_forensic_engine.cpp",
+      "size": 2110,
+      "sha256": "7051b233f0c93b52a78309f42adb948834f2aa3f2fb65996f81c5d9959acc547",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx31_grand_conjectures_engine.cpp",
+      "size": 2099,
+      "sha256": "c6d6680980ae85c7d0d6e5129cde48fbf2daa7fe72482ce0d6d8811ecc600ed6",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx31_iamo3_solver.cpp",
+      "size": 4111,
+      "sha256": "7aebecee05ab25d34c324259a9b891d863a979da232230d610356fcfcc939ed6",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx32_bit_by_bit_logger.cpp",
+      "size": 643,
+      "sha256": "e8552c68f63d85a047273030efde3d155985c63bb035e0644b06dd036e5829ca",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx32_fixed_logger.cpp",
+      "size": 1336,
+      "sha256": "ff18b32931d2c543aa4e40fe8e4832dedc663108f3880b8bacf1609e2a7db4c3",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx32_ultimate_engine.cpp",
+      "size": 4293,
+      "sha256": "3ba43f5939711c009f8d5d96a3ea34a990595e2840e45149ecae5c63264faf40",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx33_aristotle_friendly.lean",
+      "size": 1133,
+      "sha256": "877afbceabb1899a0368ed9443c6f393b9fe59d4e6b0e1b502fc7d8b67d905c7",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx33_aristotle_friendly_aristotle.lean",
+      "size": 1817,
+      "sha256": "bff3c4530b203caa00cd57b2f3a5f3ff9ebdd9479fbc17187dbbf6921ce794d3",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx33_aristotle_pure_core.lean",
+      "size": 2003,
+      "sha256": "ea8a6ffdbfeaa698225a9bbfec00928ffe4a6a8181cdc8db9fd2d2b0af5b8cff",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx33_aristotle_pure_core_aristotle.lean",
+      "size": 2380,
+      "sha256": "307c3133e7a120803958c8455b6191da2037453fe89fcd9bc0850228f27256c2",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx33_aristotle_v2.lean",
+      "size": 1676,
+      "sha256": "367215a72f1a55f7eb67f35028dcec8ed29c1ef56a6750b2d6aa867ab64549cf",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx33_aristotle_v3.lean",
+      "size": 1481,
+      "sha256": "d89c68b65f9da586b3bd1f11614910811a7b2a94f0b4e9f4d28a52a7aad36681",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx33_aristotle_v3_aristotle.lean",
+      "size": 1840,
+      "sha256": "0c0ae9f1f2cb5543b9c121dc33772bd7923a0aaee60eda55d9f392654a719c68",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx33_final_honest.lean",
+      "size": 2207,
+      "sha256": "2ac0f7cd7e57081309005bdf869c0acbb5d92976a9b211588ad66602ec5a79df",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx33_install_verification.cpp",
+      "size": 1032,
+      "sha256": "72ec66e52330fa1702b651d0dfb9613dafb5295cb0a375b8316ca1919a241b9c",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx33_option1_descent (copy).lean",
+      "size": 1725,
+      "sha256": "ec829dd8d92677c714c41ad7e58c2d1b567a9fce6531db8eaab2feba8b43ed66",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx33_option1_descent.lean",
+      "size": 1351,
+      "sha256": "8701e5230814d6547e4db81655a47b1235d0faafdcf465e4be0e339790cb025f",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx33_option2_eventual (copy).lean",
+      "size": 1470,
+      "sha256": "b09c3ba7eaa45e362e3169ebbfb99049bfd5921d1d34e2b67daedeedc333805a",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx33_option2_eventual.lean",
+      "size": 592,
+      "sha256": "dd87f8ebc0605ddb4cfd71c1a052e43810285d529194d9f7bdabfe8594ee9436",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx35_constructive_collatz.lean",
+      "size": 4533,
+      "sha256": "d9da8120df0a4f3682c946a794afc1deeb29afe17b0b1a80f4b8d849aa399cc6",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx35_constructive_collatz_v2.lean",
+      "size": 3729,
+      "sha256": "3539645ccff38080774a4d983957fdb5209fe1f0c325a6f2255300a06f9f9c7f",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx35_constructive_collatz_v2_aristotle.lean",
+      "size": 6264,
+      "sha256": "6502cc0fdd5b7e9e180c7924067d46991bf7122a2d00de1965f467d7fea7d872",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx35_constructive_collatz_v3.lean",
+      "size": 3746,
+      "sha256": "9978c1621ed2c09f112a67565a7c727018ace738710eb19232eff81720e82200",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx35_constructive_collatz_v4.lean",
+      "size": 3698,
+      "sha256": "4a0d4c2da27c1ac7e96fa4948c2cb48107f87e335aef58e73972892e2dd4cfb3",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx35_native_collatz_exact.lean",
+      "size": 3846,
+      "sha256": "88f49a4c2f4b8a3cf113370e79c27264c8e5de6f47e3feba9ae13b3d4c532b47",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx35_native_collatz_exact_aristotle.lean",
+      "size": 4229,
+      "sha256": "328b3e6f4123901c97f7870376b17d8d0246ec2eab30ff777ea99b8458502508",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx35_native_proof.lean",
+      "size": 1290,
+      "sha256": "757bdb63a54a48756c891189afa66e046208abe81dd3d22c574469347099fac8",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx35_universal_engine.cpp",
+      "size": 3765,
+      "sha256": "91148055146e983f32102de156404d9e68222d9cc38c008f5fc22d0f90b9c435",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx35_v2_extreme_engine.cpp",
+      "size": 3069,
+      "sha256": "089392b4681d1e134c9096599e669446458424feb5ab0f1b255f91a78d6db288",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx35_v2_infinity_engine.cpp",
+      "size": 2970,
+      "sha256": "792ae660df38eba8cb29b741d9a1b5ce26f0a0800acbfc494301be131e1c5e1c",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx35_v2_odd_engine.cpp",
+      "size": 1747,
+      "sha256": "5fcb0523e1fa2ccfdd0fc1e0e963b1510163df34935c006b3728a1055cee9ace",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx35_v2_pure_engine.cpp",
+      "size": 2403,
+      "sha256": "958588f05606fc5e3af1e6a7b4a7e2d9d62b79bc542c8e468d37670d046e2c3d",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx37_maitrise_10ns.lean",
+      "size": 1921,
+      "sha256": "71bdce2a70dcfda8d39810688d170661b441e13f284e53d0c55a8838332f3b99",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx38_pure_core_ultra.lean",
+      "size": 1126,
+      "sha256": "99b6ee8ec00d3eca35b93769fe345147dfb7195c44a24700550d1805502ff026",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx38_pure_core_ultra_aristotle.lean",
+      "size": 1931,
+      "sha256": "45a729748703e15e393da38da9fa28c767c2f5a0f62117e333f08981ccb7b1af",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx38_pure_core_ultra_v2.lean",
+      "size": 1391,
+      "sha256": "474fb5ed1a245aa851953f9798f470dcd1f014e464e5b757bab9d684761a3737",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx39_theoreme_gouffre.lean",
+      "size": 2845,
+      "sha256": "660c8a8f822ead7321022c32150631611419d2605e1e81e103e52cbcf22ed2b2",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx41_lebesgue_engine.cpp",
+      "size": 1943,
+      "sha256": "ba491f920f8e5f8f0d45b596b7817b81b0705723525cd6ddb027b45b5d51d1e5",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx46_v1_engine.cpp",
+      "size": 2862,
+      "sha256": "473530ea7b46be3851e8a6614d8347e181bd3a9c4e21c210b9164e80d4774c99",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx46_v2_engine.cpp",
+      "size": 4084,
+      "sha256": "6399e9332a33e4c24d699de89474f9c908fe5175cd06ebf8e9f8b68fb09a40cc",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx47_arc_kernel.py",
+      "size": 2603,
+      "sha256": "31427c6202765a359eb134e69fadedb53af07cf2b580ed22fe740951ce3184c2",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx_44/ANALYSE_V44_PROOF_RESULTS_20260126.md",
+      "size": 2772,
+      "sha256": "0f76e662a45495b9a83e220613f3124b071ec2647e5bf0442fc51967f9af056d",
+      "inferred_date": "2026-01-26"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx_44/v44_full_execution.log.sha512",
+      "size": 157,
+      "sha256": "33ac325e58dbdbe6d73245970a3fd29a520f7a5ab33b6a8dbe4fa523a8c6b2a9",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/nx_44/v44_raw_full.log.sha512",
+      "size": 151,
+      "sha256": "44228e15bde95435ce666bffc0aeed83339141c3db299154fbc666c39281cf8f",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/reconstruct_nx_history.py",
+      "size": 1082,
+      "sha256": "02ac90872650207f7e3ac0a4f28cf90135fb8c4a3db9cc8a63dc7927b621fea4",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/run_nx12_execution.py",
+      "size": 1693,
+      "sha256": "23085f095579bfd4ef889ecaa5a538361a2561772515aa4569435bc96f06dffc",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/run_nx13_execution.py",
+      "size": 1898,
+      "sha256": "4c3a10708891982fab7db77d95fad34f1c2a7b6128cc4b93d5390d22413c9865",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/run_nx14_execution.py",
+      "size": 1191,
+      "sha256": "5e4956ab40126a26f75610d0d4328bc082bc491d19b73aa3d31fd32a2c07eb21",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/run_nx15_execution.py",
+      "size": 1450,
+      "sha256": "37de9ff49713416b85925d5bbb0d3d866f32cb1e3601732b47d634c29700d88e",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/run_nx16_execution.py",
+      "size": 1605,
+      "sha256": "2ddda2c8e4a0c6d9b377b0e5bb289e1c99e41335be76df7e092f84ac247d9abb",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/run_nx17_execution.py",
+      "size": 1550,
+      "sha256": "9d32f9b27ef7305ea231cfaa048241fb416d742000212de0a7622c38c19df153",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/run_nx18_execution.py",
+      "size": 1914,
+      "sha256": "d7dc063af380e78133a2cf4b635050ccea65cfd9b08a5389cf063096407e4c19",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/run_nx19_execution.py",
+      "size": 2165,
+      "sha256": "7a7b79bad9edbde9be635111d43f311077d47569b4acb9b8eb637ab3ba9fc56f",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/nx_versions/run_nx20_execution.py",
+      "size": 2337,
+      "sha256": "ab816b6f03c942d1f0126b6eb7c9e8240339cdd4aca8b56e7a820bcac7f20676",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/optimization/async_logging/async_logger.c",
+      "size": 6339,
+      "sha256": "f465f9a1a35bd6bb875a21710b28501ba813647609dc3e97766eef5fd6858d3b",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/optimization/async_logging/async_logger.h",
+      "size": 2302,
+      "sha256": "4c6286693d84dae65dc5450172f94ccb98a63ee317bcb326a0465d682679d211",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/optimization/formal_kernel_v40.c",
+      "size": 1020,
+      "sha256": "9625d7847486c1ed9e348317f524d0b4372aae0189d484e058c416ecb4258391",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/optimization/formal_kernel_v40.h",
+      "size": 840,
+      "sha256": "68724d907a6f6258ef7415eee7db755f27dde39eee2b0bf940b5644ebbb818f4",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/optimization/lockfree/lockfree_queue.c",
+      "size": 7362,
+      "sha256": "5b4fa08ffcb04ad80aa82e884061cce311112829d9e285b8c85ffb0f756a938c",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/optimization/lockfree/lockfree_queue.h",
+      "size": 2281,
+      "sha256": "4eef7b2ed74dfb4cefc2700ee679dbb19faf704782cb647905a8ccfb6ba93385",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/optimization/lz4_compression/lz4_compressor.c",
+      "size": 8236,
+      "sha256": "bd15001c89c80894809d1fd18c3fb67c4ade1a1150701b442abc38ae320b6edd",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/optimization/lz4_compression/lz4_compressor.h",
+      "size": 1861,
+      "sha256": "b61623a9633052cfb8ed22de46ec146a7f4b0e9025cda81ad22f0515c3f5a181",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/optimization/memory_optimizer.c",
+      "size": 20613,
+      "sha256": "06a5c54b36fa8b0e615b776765e0be6f5bbf452c3fc611f98c1f2c007b29b231",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/optimization/memory_optimizer.h",
+      "size": 2854,
+      "sha256": "46d51f0372c1ffebdf1edd8e731c7bb80863593212145500359ff984a52d20d8",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/optimization/mmap_io/mmap_persistence.c",
+      "size": 7031,
+      "sha256": "bb9153a6f90dbf67f4fd00909a3fc8559c3921e37f29636d32bb9a2972952f37",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/optimization/mmap_io/mmap_persistence.h",
+      "size": 1936,
+      "sha256": "f2b6c8e07c25f80b3fe8fe16be432faae126cee26c1d798f61b38b3809ae8481",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/optimization/pareto_inverse_optimizer.c",
+      "size": 14748,
+      "sha256": "dd0d20e0c05cd15d00592a03b214493c3193124371a8ec1a7b97a2fa30f07c7c",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/optimization/pareto_inverse_optimizer.h",
+      "size": 3519,
+      "sha256": "5e0bb06d933418684fcb7eeccfda6bb61de58c305c1b7eb865fe36dc702e6db2",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/optimization/pareto_metrics_documentation.h",
+      "size": 922,
+      "sha256": "7659c54f2fe2ec403f8934ba1a61e2de774a23111a1589717578ab2b58a1cc52",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/optimization/pareto_optimizer.c",
+      "size": 28173,
+      "sha256": "62ee89086a8b0d3c38d0e27f1fc355dd2ca197322741da147627ce21f1759b34",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/optimization/pareto_optimizer.h",
+      "size": 2966,
+      "sha256": "9109474347a042aa9d443a31b08b7a1ed265a6f09469f8b611ba7e955bc1786b",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/optimization/reasoning_path_tracker.c",
+      "size": 2193,
+      "sha256": "768ed927ed8086f1575f4c5dda38caf68bdfc7bd37a80d2fa8a2ea3e01d57bf2",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/optimization/reasoning_path_tracker.h",
+      "size": 891,
+      "sha256": "4390ddfdd00be957af3023612da37e1cf1f115470c295f994ac67a708c30b1e6",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/optimization/simd_batch/simd_batch_processor.c",
+      "size": 8236,
+      "sha256": "b5f9cb20ed4e0bacacb92cc99bc2acfd7d0c93195b6a17d60fba9cc806084c35",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/optimization/simd_batch/simd_batch_processor.h",
+      "size": 2331,
+      "sha256": "a784fd6886e168c50949342c67599133cc2f8fced5b05fbde5ba5f99f888d386",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/optimization/simd_optimizer.c",
+      "size": 20976,
+      "sha256": "8d178903e79e427ed6610115f4e973537e2dbf0d53b2a5c2333b39a24490ff95",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/optimization/simd_optimizer.h",
+      "size": 4089,
+      "sha256": "c8581a00b9d01c60ddf6fcacd8dd9d2e7b02a98c307a38c0fb2c73aa732f32aa",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/optimization/slab_allocator/slab_allocator.c",
+      "size": 8766,
+      "sha256": "9e10919915d252826920bcae20ef05b3943232d17d3d3fe7befb97241e51657d",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/optimization/slab_allocator/slab_allocator.h",
+      "size": 1912,
+      "sha256": "cb264d05432c3458ba017629c9aefef8cfbdfac8779a23fadc43034ebebe5379",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/optimization/thermal_regulator.c",
+      "size": 212,
+      "sha256": "bc941f3efbc7692df55bf40ef2268eb699eb6d7a6c859cfac860bee9475e3a0e",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/optimization/zero_copy_allocator.c",
+      "size": 23798,
+      "sha256": "411e0e22d81fc0d292fa8180ae5f80fb9487f516f4a19d739ff9c64095a97d4b",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/optimization/zero_copy_allocator.h",
+      "size": 2059,
+      "sha256": "239d6b0c515e5ceade2f1e7354a95fb801f9d1e90d45e917f4212b2217299920",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/parallel/parallel_processor.c",
+      "size": 14007,
+      "sha256": "600fea8aa075868750e762aeac51677877cbccaa03a6b7637d1f010caeb81207",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/parallel/parallel_processor.h",
+      "size": 3836,
+      "sha256": "b8f4968fed6297a43e553431bf5291da2590ffd3598cd66e817f4ed549240d79",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/parser/vorax_parser.c",
+      "size": 19758,
+      "sha256": "31764a8ed6c00061f2a3195beb13eeb43babe5cec67e20fe105c2a18e6ee3bc7",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/parser/vorax_parser.h",
+      "size": 5408,
+      "sha256": "416b6cc5663fa0b1d761158d78a10daf1568596a62b6c1c5be138157c1a97096",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/performance_test.c",
+      "size": 5198,
+      "sha256": "5c3c169df536273064e9ff10332580c0a63287e06df25c2a24f4fd17d8e74d5c",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/persistence/async_io_manager.c",
+      "size": 1521,
+      "sha256": "831af9df2658b1b80a96d443fd3d0d99110056bb2dcc11289928e3d486a3be07",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/persistence/async_io_manager.h",
+      "size": 589,
+      "sha256": "dac08d8af29e5f74b9e28f53e65055aacf23dac1d41e2d8491d00cf6c37989ab",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/persistence/data_persistence.c",
+      "size": 28077,
+      "sha256": "1592246f57971af39b573f85636202f051dda01512e75f97611c759b13a26edd",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/persistence/data_persistence.h",
+      "size": 8645,
+      "sha256": "d66369eff1fdbc7322ac846006b9a59a030a08ba0c8c0454f3e0b51efc78b6e7",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/persistence/mmap_wal.c",
+      "size": 435,
+      "sha256": "fb5f241cb432fa7d88b0a5f7cc4629f1a4d68635d945598a5d6fc094f827bcf3",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/persistence/recovery_manager_extension.c",
+      "size": 16322,
+      "sha256": "33262e24568e828e5159f955e290bee3d4419c78d911ec707f26eb6b45fe1d29",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/persistence/recovery_manager_extension.h",
+      "size": 3162,
+      "sha256": "53bdeac5ea6050b922e72ead68c715f0f3a4c9ba25c980a3cb6e12a7d1691cd4",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/persistence/storage_backend.h",
+      "size": 576,
+      "sha256": "3f86b697632d35ffe178fac5dca51b46ac7c9415b43116fa501a8cd7493d27c5",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/persistence/transaction_wal_extension.c",
+      "size": 23561,
+      "sha256": "8b50dd0e0b2180cd8bf4280c6d02900652d58ea513d97584770cf5336e9f060b",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/persistence/transaction_wal_extension.h",
+      "size": 3091,
+      "sha256": "6d4279dbe4f10dad5449e34a63c57df12f3d3df363f4617c975caefaeb129a2e",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/phase1_richardson.c",
+      "size": 3206,
+      "sha256": "1abd2e0448319b12df428cf94fa04d458c0c72ce7d2caebd09a2de67edb16b53",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/phase2_quad.c",
+      "size": 683,
+      "sha256": "6bf0ecd934fd73385705e1f2b7c2e02b6c3da69dc28b717c9c4f0a6d3025a95d",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/physics/kerr_metric.c",
+      "size": 2723,
+      "sha256": "8490b09fdcbdbdd88625dffe74618f8c9efae06a9632bf459ec3cab216018ac5",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/physics/kerr_metric.h",
+      "size": 1055,
+      "sha256": "7a29621b173c8b53c871e14bfcb3bdd6ac65a8fdc1ab62188fb66f94f3d79303",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/proofs/collatz_v42.lean",
+      "size": 2454,
+      "sha256": "afe3eee07d556c92915b96baa42b6a192f07acaa0c5557d5da1ccf3f2eabfac0",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/proofs/collatz_v43_unified.lean",
+      "size": 1675,
+      "sha256": "b2f33e4b9c99a3648d48c0eb6bf2a63eb91b206a7267eb2527b9c7bbf2cfc98f",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/proofs/collatz_v44_certified.lean",
+      "size": 943,
+      "sha256": "03e2cff20302ef06b820ff3e83cd0036f896daba5955855adc19a1154c138449",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/proofs/collatz_v45_pure_core.lean",
+      "size": 1870,
+      "sha256": "786b8c6dcc744fdff6d28823ec53716dc1baf5fe1e02a62fa3c3f95d9c0fa28a",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/proofs/collatz_v46_final.lean",
+      "size": 712,
+      "sha256": "5e051978cbf486bbe7300c6f526e3a1bfe8b1bc6c4881e3d99add5f638685d52",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/quantum/v_kernel_quantum.c",
+      "size": 992,
+      "sha256": "88658c4b49d89915ec4bd79f3b84acae461c2318d239f3c8b6e1c4075b8d09ff",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/quantum/v_kernel_quantum.py",
+      "size": 2329,
+      "sha256": "ee00f78aff71e135702a606f824bb12e4921cbf655b76bc28db7b6865d8733de",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/quantum/v_kernel_quantum_bin",
+      "size": 16096,
+      "sha256": "bee4a66c5641fe52dd150a5c0319964531dc3fb800e8b64ae6b381b638b8da83",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/sch/atom/sch_atom_main.c",
+      "size": 4692,
+      "sha256": "7e06cf897bf7c047c98274e01f633cac5a21d23b2e1ac592a4067df13a9411af",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/sch/atom/sch_atom_v5.c",
+      "size": 3807,
+      "sha256": "1bce6d4cffbc17e8fb8c46c237f366d7db6c78c9530f9700aee9bfdcf707e467",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/sch/bio/sch_bio_core.c",
+      "size": 1015,
+      "sha256": "3a06231b92162d41c47f6966d216f038c52974e305da877c8cf8ce13dd4bc263",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/sch/bio/sch_bio_v2.c",
+      "size": 1836,
+      "sha256": "f6978f928d86e2c987a7680e71095acef7d9fd8c02276c035b225910c6670166",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/sch/bio/sch_bio_v3.c",
+      "size": 2530,
+      "sha256": "b0b6e2a860ef285d065926aadb1efa32dc0738e747ad810e6cafd5e5d18b31bb",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/sch/bio/sch_bio_v4.c",
+      "size": 2333,
+      "sha256": "175423b7a632700888089225e06ef6719bfee18b5def8ea41d7a466e288c8df5",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/sch/neuron_core.c",
+      "size": 1155,
+      "sha256": "05d319f039e3cfbfca783529072da0d29c711359fddf9a67d185dac9fd883dcd",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/sch/neurox/sch_neurox_core.c",
+      "size": 834,
+      "sha256": "13ff00e5641c8a7f0b3d777a2a070182f3145032ff8c797a0f3371d187fa4b00",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/sch/neurox/test_b1.c",
+      "size": 711,
+      "sha256": "972a6a2c1072ac0b007a14ae270a240a54ffd352f35947cc590663e08caad087",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/sch/neurox/test_b2.c",
+      "size": 801,
+      "sha256": "48eec2a0bbcaa1ce222807cc0df0c8b0c2b36a702ce4584d45ac429c7f5dce9f",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/sch/neurox/test_b3.c",
+      "size": 572,
+      "sha256": "1f9d396005c96ff8fda0d8d745be4eedb57563a1a05853eb9df179c3253d3eb7",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/sch/nx/sch_nx_final.c",
+      "size": 2628,
+      "sha256": "12018565d9c7af2ab04153e2f93c9d03dec68b9871e530bc69c0b682ff9df353",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/sch/nx/sch_nx_v10.c",
+      "size": 3670,
+      "sha256": "12d63740882b0498e66a76573dbe44e51ed1c960ba984fd124d61d0c5592f2a1",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/sch/nx/sch_nx_v11.c",
+      "size": 3667,
+      "sha256": "a87be7e2eb458be73761cc733fb989525cf052246880f9c0b362cdb7062b5249",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/sch/nx/sch_nx_v11_canonical.c",
+      "size": 3492,
+      "sha256": "ec5173dbf822990cb195ab95d75de4e4941bb6e8b5edb7ce85c28f4e6608b6f8",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/sch/nx/sch_nx_v11_canonical_final.c",
+      "size": 4061,
+      "sha256": "329d26bf5dece2bbe1c396993c5ccc96a4a6e7bcc911ae812fd66b65334166ae",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/sch/nx/sch_nx_v11_refined.c",
+      "size": 3604,
+      "sha256": "de2b3e5dfd678fd706f7de4a3190bd5540e4bce08c3fef13f50d7a4b7385b4b4",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/sch/nx/sch_nx_v11_strict.c",
+      "size": 4184,
+      "sha256": "85a8f8a48812d408bfd4fe1b3226a8c434f5297d4d3d20eb1fd405475ab82c75",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/sch/nx/sch_nx_v6.c",
+      "size": 2546,
+      "sha256": "e2069d1b6148305ba82cf2cb9afee59587987b8e676960cd338367c2d8f39c47",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/sch/nx/sch_nx_v7.c",
+      "size": 2550,
+      "sha256": "d0e42f5dfae04e3ebd05b610fd799c0a6a6d461f6094fe13fce11bc122090893",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/sch/nx/sch_nx_v8.c",
+      "size": 2433,
+      "sha256": "e9cad15d6d262869aac1bcd6121de5cdf4c6769c0c828aeb1389411ba5815097",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/sch/nx/sch_nx_v9.c",
+      "size": 2799,
+      "sha256": "1c01f781417b349fddfee1c5bc5ab51298b6d993ef4bc67fdca5b2cad3f50018",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/sch/sch_optimizer.c",
+      "size": 403,
+      "sha256": "7297f6a53fed5e2160809bf91f34a7723da168e9e52f911610d7a9ee1ae81db4",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/sch/sch_system_full.c",
+      "size": 3017,
+      "sha256": "fefa66e92b70b1649946b6aca3e53616df4f7ebae46667518088eb78a85861c4",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/sch/unit_tests_sch.c",
+      "size": 1267,
+      "sha256": "f553ddbc41365d0eb491138fa054972caa91ce06414cadca0044c8a780440646",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/security/audit_hardening.c",
+      "size": 398,
+      "sha256": "e7f722c02d43a24edfb0382bd475e69a0087263008b3f1936539bfc4d2de9d03",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/security/audit_hardening.h",
+      "size": 339,
+      "sha256": "6b18844b8d30a4cbf6cdffc2d4470cd179c5137b598769031fd42c76d1e42a10",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/spatial/lum_instant_displacement.c",
+      "size": 11905,
+      "sha256": "695e904ceff4cb16cc572c89a6c19a3c6d08554b79a3c94c939a1daccf6c4c8a",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/spatial/lum_instant_displacement.h",
+      "size": 1860,
+      "sha256": "7f0a8ae067425cdb65b3f9e9b3a2ffe9fe1bcf591d6208a5856aac96ebc1c9b6",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/test_all_modules_authentic.c",
+      "size": 11109,
+      "sha256": "50c6be4ef77ab91124cf4032b13f41ffa17c024a125167df11ffbcedf0615c46",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/test_double_free_protection.c",
+      "size": 1268,
+      "sha256": "4aca06e6fbce2ce39341d27c3bf6f7564309d3cc0fabae46b4485d94e31cb2d3",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/test_interoperabilite_complete.c",
+      "size": 10652,
+      "sha256": "3174f7145bf57e1616e3406da1d0bc42a9883ba18c52e0c4075cf330667490a4",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/test_memory_corruption_scenarios.c",
+      "size": 2632,
+      "sha256": "a849ce1f2b4c6b5a1f92d22d6989354d9b954c64176b76b4ea984ca28e01ca75",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/test_parser_corruption.c",
+      "size": 1851,
+      "sha256": "e7f52522c8d129bbac91754c0561d810a7f911aa5749e87770ce2b62c03e585c",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/test_persistence_complete_extensions.c",
+      "size": 5175,
+      "sha256": "b82c36534f759162bef3c667ddc049a09eaaee7732fff62944ee5358bd7c2c70",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/test_reel_execution.c",
+      "size": 4018,
+      "sha256": "9ad976f18f3cb2c355b2dcb76b1ab7c833b3db014ebed8cddb411ba708d3f652",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/test_simd_only.c",
+      "size": 3809,
+      "sha256": "ef9fe8bf23461519afb1debf51828b6a7aa07c05b829c7d0eaec1d1be7df95d5",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/test_simple.c",
+      "size": 74,
+      "sha256": "a0ec09bac04f6d84517def1c2b2ba412ecaf38cc75dcea159acfa355d68755fd",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/test_size.c",
+      "size": 122,
+      "sha256": "7a4890e9d58e83bf5d8c7f7ab07d0f67070034fac7f877dc963f9a8605b22434",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/test_v44_78_modules_complete.c",
+      "size": 1005,
+      "sha256": "9653e3929bf990ef7bd6fdbf671f8b5780de53504593d40e967c6b4f8b77c067",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/test_v44_standalone_proof.c",
+      "size": 2063,
+      "sha256": "db66b5d416f092035dbf095d70b7da400ad10587dca1c046e15565d401fb112c",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/individual/test_ai_dynamic_config_manager_individual.c",
+      "size": 4415,
+      "sha256": "2c6a08e1776fe4593de61ef439321ce49548772eacf6e59d0e4c58472063f91c",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/individual/test_ai_optimization_individual.c",
+      "size": 4172,
+      "sha256": "fec97c7bc50595656dd3152cd023c7acfafdcb144a0199d35ed1943134fa025b",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/individual/test_audio_processor_individual.c",
+      "size": 6499,
+      "sha256": "65645fe1391f8501836883bcf22cf199d062418b5f87b42b67da9e7d909efe3a",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/individual/test_binary_lum_converter_individual.c",
+      "size": 5332,
+      "sha256": "9e709a07845a9864be2cab0600bd7f723c90a05f20850330430dd46f621ee61f",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/individual/test_crypto_validator_individual.c",
+      "size": 6073,
+      "sha256": "e587ec48256c5a27448dd8012cc2ae2d7762d0b12f4913d52c06cde260367621",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/individual/test_data_persistence_individual.c",
+      "size": 5675,
+      "sha256": "9ab7af1af2fe24b80530b2ce19a35fa9cfb33ee11133f27858686d569f09e0d7",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/individual/test_distributed_computing_individual.c",
+      "size": 4220,
+      "sha256": "182405b472f7947affc20d735eae88bc2a9ae01b39610e1c0735f7255b3699d8",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/individual/test_enhanced_logging_individual.c",
+      "size": 4548,
+      "sha256": "eeccc0037a10db815f93c4717f6e22359642775ac70c205614e7392126ab8d27",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/individual/test_forensic_logger_individual.c",
+      "size": 4915,
+      "sha256": "080af921bb0920391b19942d8a321b2d7a6217b82e4aa5a9e8a5a772b0afe598",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/individual/test_golden_score_optimizer_individual.c",
+      "size": 4319,
+      "sha256": "4244ebf59fcb8b9bbd8f96f473e77e2cfb8c96a9570de4fe259c3c881b655abe",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/individual/test_hostinger_resource_limiter_individual.c",
+      "size": 3967,
+      "sha256": "032b223f0762d0c9f6a8a6f5f2a28d84dd646f944616030283a24340162b4c14",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/individual/test_image_processor_individual.c",
+      "size": 4319,
+      "sha256": "b451c4bda58076587520bb176d9588c76be47cafdaba57395f26396a0fc680d6",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/individual/test_log_manager_individual.c",
+      "size": 3615,
+      "sha256": "db9a72363c6edae7e53b8ef069ce0f5347b62ca9813789ddc3526f5b8a4ccbe5",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/individual/test_logging_system_individual.c",
+      "size": 3359,
+      "sha256": "c1c63cc96395c5b16cb16f52017b89f3421ce1336b07c5468d195b3fc852e11d",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/individual/test_lum_core_individual.c",
+      "size": 11832,
+      "sha256": "c7344a76781e94831acd60451b49f8f8be181f886fbb99bfaa777b8b87b183ec",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/individual/test_lum_instant_displacement_individual.c",
+      "size": 3858,
+      "sha256": "b5c09c80996ad0e7bb41e8bc6902bdbea80aa915f87335aae06402733435e3a0",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/individual/test_lum_logger_individual.c",
+      "size": 3433,
+      "sha256": "5111ee4dbb64a63b02e72227ca813c3c960ff050620ec572c4eb10e4df29950a",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/individual/test_lum_native_file_handler_individual.c",
+      "size": 2623,
+      "sha256": "8a9719ccfa860fe3dd1b2ff616ad1d1b10011e544e984641d13801df8dd4346d",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/individual/test_lum_native_universal_format_individual.c",
+      "size": 2651,
+      "sha256": "3731e6dcd8742ac3d69b889a91fb13d0b9d53ca4e45ba11c2261b5fc5d1f682a",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/individual/test_lum_secure_serialization_individual.c",
+      "size": 2630,
+      "sha256": "8165b2f09bb45c821faec40655ca9ec510db73296675071330535f61d714b5a6",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/individual/test_matrix_calculator_individual.c",
+      "size": 14276,
+      "sha256": "63f3629ddb9d6eed9d848e4990981003ea9652cfa8222e727ed1a67927049c45",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/individual/test_memory_optimizer_individual.c",
+      "size": 3572,
+      "sha256": "d392103b88fe2b8802f316da3ffce58e9f9c6370107109e7f3135426bd5436ac",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/individual/test_memory_tracker_individual.c",
+      "size": 3120,
+      "sha256": "35cc99e3c394c95ed5d4c44e51eba0d12e5b5a3f73496b9ead155401580fac69",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/individual/test_neural_advanced_optimizers_individual.c",
+      "size": 2644,
+      "sha256": "60d7ce418b000edff0db314e6f5223e4d347f84ae8c2bd10c39eb4792c45cef6",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/individual/test_neural_network_processor_individual.c",
+      "size": 18468,
+      "sha256": "831bcc770e51e3d1df0fb314c9b3839bd2b04d4c6261d97c9fcc903234c77c8e",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/individual/test_neural_ultra_precision_architecture_individual.c",
+      "size": 2707,
+      "sha256": "9d4cc21d55a88de5aa67a568207edfbcc2df61d4ffe2a3d7b54b6c2035bb7fae",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/individual/test_parallel_processor_individual.c",
+      "size": 3644,
+      "sha256": "c4ae46398aa143977a340d0da1fade797f74a830ad0b390713f4234a4773709b",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/individual/test_pareto_inverse_optimizer_individual.c",
+      "size": 2630,
+      "sha256": "77a653db35df25317f59e781f5ed37a2700260104d88aa2780b74f72ebd046ee",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/individual/test_pareto_optimizer_individual.c",
+      "size": 2574,
+      "sha256": "619e153cfe160e98f74c9ced1254eeedb8699ce5b3351ddb8a713c3da275f06a",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/individual/test_performance_metrics_individual.c",
+      "size": 3354,
+      "sha256": "074fe4194e78d9b669ad9f51f0b36011b1ebdbe6380cb376bd58f1f722a9e58e",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/individual/test_realtime_analytics_individual.c",
+      "size": 2588,
+      "sha256": "a42e0f6781e20cf1b81752632828b439e56653d3d6a04e6aa8ff334b9e384b2b",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/individual/test_recovery_manager_extension_individual.c",
+      "size": 2644,
+      "sha256": "de9b095142b5d5bf227d3c2a4326b553d83cd7480acd7f4deef4ff8524452bc5",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/individual/test_simd_optimizer_individual.c",
+      "size": 15252,
+      "sha256": "009d4df5965631a0240e47034d7e54116f099f38c21971103aa8219c7dfb0658",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/individual/test_transaction_wal_extension_individual.c",
+      "size": 2637,
+      "sha256": "b80d345eae1d14f41792c252b8da31fcaaf2f71e0a40dbed05797e634589c6a2",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/individual/test_tsp_optimizer_individual.c",
+      "size": 2553,
+      "sha256": "074faf9ef35ad0dbb823ec5a18d310755ffaba470afe69cb940843d0cc36573a",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/individual/test_ultra_forensic_logger_individual.c",
+      "size": 3263,
+      "sha256": "ea92f61ab7d29bf54dd46ae6c90ead434ab3b4bdfa727f719a9dc5199daf716c",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/individual/test_vorax_operations_individual.c",
+      "size": 2574,
+      "sha256": "bd7282644868f76d18a6cceaf03e6321478f22069a45b50769e511a7455042fd",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/individual/test_vorax_parser_individual.c",
+      "size": 2546,
+      "sha256": "7b2ee65259e5668e2fdb7d6364584d7730874b86a7e3ad9fb6d1417963125cd0",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/individual/test_zero_copy_allocator_individual.c",
+      "size": 3621,
+      "sha256": "8618ac58e2deeef4155defabaec62fb4a3d46a0d303672830d347287c1cd7249",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/nx35_ia30_baseline.c",
+      "size": 341,
+      "sha256": "dcc43ed2c4ed65fcdf10f7c1638d2770ad392d14c39d632352182f49ec47c6da",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/nx42_30_problems_execution.c",
+      "size": 1624,
+      "sha256": "ffc9182776589bf4de96ccf2379434a130de014d508446f81ab6d4a7fc1929d7",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/nx42_lebesgue_proof.c",
+      "size": 830,
+      "sha256": "d505a55cc354025af66511bb345e7b9b0dc9f43de78933c65010e5b65576e6d8",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/test_advanced_stats.c",
+      "size": 2226,
+      "sha256": "d01e27c19c88317b062bf3a63c6955707affa4256f00dc7f525ca167e4342d4b",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/test_forensic_complete_system.c",
+      "size": 18001,
+      "sha256": "7b3051afd9923f2c73d4e23255057d9c27594163295cfc6eb15b55ee5e714045",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/test_integration_complete_39_modules.c",
+      "size": 6074,
+      "sha256": "0108f4d5d2ce402fb83cc725cedb07672c9d7ebd60353fe13910234713f2023f",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/test_integration_complete_45_modules.c",
+      "size": 13961,
+      "sha256": "369d7469c8f0d84063808a4279bbda36088bc14d830ab2ea73ebdf3c52938a74",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/test_nx47_v132_continuity.py",
+      "size": 1173,
+      "sha256": "2324c6d7b9b32d6557d3f43bf5221ca51b8c53f97c3502b67f5fcba73371493b",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/test_nx47_v132_strict.py",
+      "size": 1957,
+      "sha256": "14605f155a62156da3c7124acb1279c5527d149224795ec6f887fb09bd121180",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/test_nx47_v133_continuity.py",
+      "size": 1081,
+      "sha256": "6961a81a1d3880646f175765d13b9ca6d25d5f293420f31ddef77cde251139d3",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/test_nx47_v134_learning_audit.py",
+      "size": 1269,
+      "sha256": "cb4001707b349d8c78c45cc52a2df6ffe78ee28cfac55d3033e0bf9fe5a5cf26",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/test_nx47_v135_dataset_adaptive.py",
+      "size": 1337,
+      "sha256": "785286d7b709076bb24323b036c964fa758a807af6d6ae0c6cf78951f0d6c3c3",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/test_nx47_v136_policies.py",
+      "size": 1443,
+      "sha256": "524dfddbb8defe8764f75c082cfc31ba7fb8a7c5b205944915960c6e0ec945d4",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/test_nx47_v137_rules_validation.py",
+      "size": 1724,
+      "sha256": "93241bef9225772fcfad7b89efb9b22bc805c34a3254103a1f647848f389b528",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/test_nx47_v137_unbounded_training.py",
+      "size": 1241,
+      "sha256": "5e4a82f6d794a77811cc325368c03adfcf487c452e105698052a4dbcd4fed20d",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/test_precision.c",
+      "size": 862,
+      "sha256": "1b44bd50318eb065cdd30fe42a258f5d47c1234f1e4b0c1658ba0244cbc2e276",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/test_quantum_simulator_complete.c",
+      "size": 1451,
+      "sha256": "f186b6d0bdd94d56f48bee0241eb4379b0ff5b5bb3072935e054c00e6d754378",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/test_scientific_full.c",
+      "size": 1878,
+      "sha256": "3b3256847cf142518a28ca45f616bdd467b9282d16ea2f2e1a4f47b235b62aff",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/test_scientific_v21_v27.c",
+      "size": 1811,
+      "sha256": "23abe97d9c0ae0892047829c0ba075b5a19a0d5d385d8f8f772666af399e454e",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/test_unit_all_47_modules.c",
+      "size": 30757,
+      "sha256": "b55476639c53e4d533b0c2a245c13e2e0098897794b7a693dc12c5e89696fc42",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/test_unit_v32_all_modules.c",
+      "size": 21622,
+      "sha256": "9e07a75abdc05bf8bb49cf85b7767c97a52fe0df4857617104fdb7571795d5fb",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/test_v20.c",
+      "size": 1685,
+      "sha256": "b1e3c76f620d1a1bf302e6e2a28ff0a1dc4129d68a5621438e7cb81af91564eb",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/v44_final_proof.c",
+      "size": 1001,
+      "sha256": "ea498416a1748785074974b5cb2d334b8275f4c5b7c27a7d4198d7fb7de35c55",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/tests/v44_real_execution.c",
+      "size": 1707,
+      "sha256": "a43abf3a950776ccff463ef3f884c45db7d00d9c4a927bdb5f1d684ade0fec95",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/versioning/api_contract.c",
+      "size": 6027,
+      "sha256": "c0c1068835273ab66411455054e297766a720c62d333a702020c0078d70821d0",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/versioning/api_contract.h",
+      "size": 1945,
+      "sha256": "98d114a61baff87e41dd83bf1c4418224ebf434736fa62d36e17624e4eff3950",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/versioning/version_manager.c",
+      "size": 6964,
+      "sha256": "44c40125f50bec74af60d8eed49232364ccb7d40616a5592db24750eb7e56f4c",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/versioning/version_manager.h",
+      "size": 1777,
+      "sha256": "ae08d34c5669ca052a20d5a7c3056151bea91b483ae77df18e06dcd5a4e8b9b0",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/vorax/vorax_3d_volume.c",
+      "size": 1377,
+      "sha256": "ce6920feecc50b8619452789f814f9f41ee75665ebac3d9d25e9564dace1d298",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/vorax/vorax_3d_volume.h",
+      "size": 503,
+      "sha256": "070eee21ad084c5151a97abc26f624cf8ef812910ede2448a2eb4a77d5001c4c",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/vorax/vorax_operations.c",
+      "size": 19920,
+      "sha256": "6fef89e8803b10f5f7c8679bc6cfc3c8f61af61af9ab67033ef5ea5063ea9574",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/vorax/vorax_operations.h",
+      "size": 2910,
+      "sha256": "a999fd6cf5defaf70e0560b177aa09b0f7ae8dae228aeb6c7b58b05593f0911b",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/wasm/wasm_export.c",
+      "size": 9530,
+      "sha256": "2485469dcdfa0f337963aba21df0ea035c70b9db7f387a8d0a7bb2f2d27ac1d4",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/src/wasm/wasm_export.h",
+      "size": 2341,
+      "sha256": "92eabe7b8f66eb90130a476a2931535541213c0908127853d0368bb4a38bd35b",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/tifffile-2026.1.28-py3-none-any.whl",
+      "size": 233011,
+      "sha256": "45b08a19cf603dd99952eff54a61519626a1912e4e2a4d355f05938fe4a6e9fd",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/bundle/tifffile-2026.2.16-py3-none-any.whl",
+      "size": 233550,
+      "sha256": "ea76cb4d8aa290f7f164840dfe4e244d104bd90c84d5ee1e6de6d84fd4745a48",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/produce_wheels_v4.py",
+      "size": 1919,
+      "sha256": "e75b5cda5e718936d78712d43069375f7b0d6cbf91170d4c07d615237c9809ab",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/verify_dataset_v4_bundle.py",
+      "size": 2194,
+      "sha256": "7a6d1fdd4498e4f9a2e14909e128a510f38e94d9842dff82ec38bf39d1e6d35d",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/wheelhouse_v4/imagecodecs-2026.1.14-cp311-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "size": 24716561,
+      "sha256": "8a78451926905459f42e827c207d80e1601abf68eaf0e38fd65ddd3c346d1f47",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/wheelhouse_v4/imageio-2.37.2-py3-none-any.whl",
+      "size": 317646,
+      "sha256": "ad9adfb20335d718c03de457358ed69f141021a333c40a53e57273d8a5bd0b9b",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/wheelhouse_v4/lazy_loader-0.4-py3-none-any.whl",
+      "size": 12097,
+      "sha256": "342aa8e14d543a154047afb4ba8ef17f5563baad3fc610d7b15b213b0f119efc",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/wheelhouse_v4/networkx-3.6.1-py3-none-any.whl",
+      "size": 2068504,
+      "sha256": "d47fbf302e7d9cbbb9e2555a0d267983d2aa476bac30e90dfbe5669bd57f3762",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/wheelhouse_v4/numpy-2.4.2-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "size": 16899477,
+      "sha256": "c02ef4401a506fb60b411467ad501e1429a3487abca4664871d9ae0b46c8ba32",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/wheelhouse_v4/opencv_python-4.13.0.92-cp37-abi3-manylinux_2_28_x86_64.whl",
+      "size": 72927042,
+      "sha256": "620d602b8f7d8b8dab5f4b99c6eb353e78d3fb8b0f53db1bd258bb1aa001c1d5",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/wheelhouse_v4/packaging-26.0-py3-none-any.whl",
+      "size": 74366,
+      "sha256": "b36f1fef9334a5588b4166f8bcd26a14e521f2b55e6b9de3aaa80d3ff7a37529",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/wheelhouse_v4/pillow-12.1.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "size": 7034590,
+      "sha256": "597bd9c8419bc7c6af5604e55847789b69123bbe25d65cc6ad3012b4f3c98d8b",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/wheelhouse_v4/scikit_image-0.26.0-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl",
+      "size": 13711217,
+      "sha256": "74aa5518ccea28121f57a95374581d3b979839adc25bb03f289b1bc9b99c58af",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/wheelhouse_v4/scipy-1.17.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "size": 35112380,
+      "sha256": "dac97a27520d66c12a34fd90a4fe65f43766c18c0d6e1c0a80f114d2260080e4",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/wheelhouse_v4/tifffile-2026.1.28-py3-none-any.whl",
+      "size": 233011,
+      "sha256": "45b08a19cf603dd99952eff54a61519626a1912e4e2a4d355f05938fe4a6e9fd",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/wheelhouse_v4/tifffile-2026.2.16-py3-none-any.whl",
+      "size": 233550,
+      "sha256": "ea76cb4d8aa290f7f164840dfe4e244d104bd90c84d5ee1e6de6d84fd4745a48",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/dataset_v4_nx47_dependencies/wheelhouse_v4_report.json",
+      "size": 5991,
+      "sha256": "86e43155adaae2c415103b5e5a730d2d8c8f27675b57c22bfbf5f4abf34b816e",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/lumvorax_module_inventory_20260220.json",
+      "size": 34823,
+      "sha256": "b18dd50e9cce8bac533ef468423b6c4d0c2109bc177ed929fd6f35ead2f91153",
+      "inferred_date": "2026-02-20"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/notebook_validation_lumvorax_dependances_360_20260220.ipynb",
+      "size": 2952,
+      "sha256": "d52ebbbfa3e877b5e29901d9fd35817f5f5f7d9f07f0f11b7c816464ec25e370",
+      "inferred_date": "2026-02-20"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/notebook_validation_lumvorax_dependances_360_20260220.py",
+      "size": 2038,
+      "sha256": "ff3c90210ba4ec36a178b3e7a65090b1da19f35f26707383f9105f027ba53daa",
+      "inferred_date": "2026-02-20"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/notebook_validation_lumvorax_dependances_360_kaggle_single_cell_V1_20260220.py",
+      "size": 11163,
+      "sha256": "ad2c331c325ec34b08b24e6e7f62d283d0b91c140c048916c12bbadd4ecad0fc",
+      "inferred_date": "2026-02-20"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/notebook_validation_lumvorax_dependances_360_kaggle_single_cell_V2_STRICT_20260221.py",
+      "size": 13115,
+      "sha256": "87b0120e943d50ad9ceef48b46c4ab6a3beb9aa98f3064134c983c62b4ff1658",
+      "inferred_date": "2026-02-21"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/notebook_validation_lumvorax_dependances_360_kaggle_single_cell_V3_COMPLETE_20260221.py",
+      "size": 14570,
+      "sha256": "b4d51e59a58721f7e80000fd101ab344008e02ec358fa77d4661530bd550c3f2",
+      "inferred_date": "2026-02-21"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/notebook_validation_lumvorax_dependances_360_kaggle_single_cell_V4_COMPLETE_20260221.ipynb",
+      "size": 19647,
+      "sha256": "ee68a545a917db9b629e920b2f32ee10e2ec8481d75254f1812a7eb1f29a9cdf",
+      "inferred_date": "2026-02-21"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/notebook_validation_lumvorax_dependances_360_kaggle_single_cell_V6_BINARY_20260221.ipynb",
+      "size": 23483,
+      "sha256": "8185af743781a6f096d4a0d590977b3865480014e666099ac2c4a040bf42a26c",
+      "inferred_date": "2026-02-21"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/notebook_validation_lumvorax_dependances_360_kaggle_single_cell_V6_BINARY_20260221.py",
+      "size": 17346,
+      "sha256": "8d6bb6a28ed36521f31d91449c627f24e38127c69f9afc81eb29a43937be8dd7",
+      "inferred_date": "2026-02-21"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/notebook_validation_lumvorax_dependances_360_kaggle_single_cell_v2_20260220.py",
+      "size": 9716,
+      "sha256": "745f7ff883b3edf54eb2f8d0d655e71e2609ee2b268870eceb4607e80c6fb201",
+      "inferred_date": "2026-02-20"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/notebook_validation_lumvorax_dependances_360_unified_kaggle_cell_20260220.py",
+      "size": 11786,
+      "sha256": "46ed0b561b3e061a243e38ed580432b90773a15bfe0874bbc146982cb6cfda6f",
+      "inferred_date": "2026-02-20"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/run_lumvorax_validation.py",
+      "size": 8703,
+      "sha256": "7c44f569eaa16772ee565887aa5f993446e5789fbc4f51e6483387d22758a7de",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/test_vorax_3d_volume_ctypes.py",
+      "size": 2185,
+      "sha256": "7050aa4670ed1558b83a13f0167cff5094f5983bcbffbb602a9357e7c7fce37b",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/validation_results.json",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/validation_results_dataset_v3_pending_20260219.json",
+      "size": 1720,
+      "sha256": "1587edce194e995e2c186fd3451db16ffae9c4ef85972cff7b60ac55cc728897",
+      "inferred_date": "2026-02-19"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/verify_dependency_bundle_v3.py",
+      "size": 1698,
+      "sha256": "a413cf150efcdf5c01809680134f14dad031841994a5c218d1594cbfaeb357df",
+      "inferred_date": "unknown"
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/validation_lumvorax/verify_nx47_source_integrity.py",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "inferred_date": "unknown"
+    }
+  ]
+}

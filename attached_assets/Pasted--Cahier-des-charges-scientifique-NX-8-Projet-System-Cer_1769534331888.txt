@@ -1,0 +1,172 @@
+# 📘 Cahier des charges scientifique – NX-8
+
+## Projet : System Cerebral Human (SCH)
+
+**Sous-projet :** Neurone NX
+**Phase :** NX-8 – Exploration des inconnues post-causalité
+**Statut :** Phase de recherche fondamentale avancée
+
+---
+
+## 🎯 Objectif général
+
+La phase **NX-8** vise à répondre aux **questions scientifiques majeures restées ouvertes après la fermeture du noyau causal NX-7**. Elle ne cherche ni à améliorer la performance, ni à proposer des applications cliniques, mais à **caractériser les limites, les mécanismes fins et les zones d’indétermination** du neurone NX en tant qu’objet physique computationnel.
+
+NX-8 est une phase **épistémique**, destinée à éviter toute extrapolation abusive et à préparer une formalisation mathématique et conceptuelle rigoureuse.
+
+---
+
+## 🧩 Questions scientifiques ouvertes identifiées après NX-7
+
+### Q1 — Nature fine de la communication NX–NX
+
+* La contagion de régime observée est-elle :
+
+  * strictement locale,
+  * multi-échelle,
+  * ou dépendante d’une topologie globale implicite ?
+* Existe-t-il un délai causal minimal mesurable entre deux neurones NX couplés ?
+* La synchronisation est-elle binaire (régime partagé / non partagé) ou graduelle ?
+
+### Q2 — Granularité réelle de la mémoire dissipative
+
+* Quelle est la résolution minimale de la mémoire NX ?
+* Existe-t-il :
+
+  * une mémoire élémentaire indivisible,
+  * ou une continuité stricte sans quantum minimal ?
+* La mémoire est-elle localisable spatialement ou uniquement distribuée statistiquement ?
+
+### Q3 — Origine des pré‑structures cognitives (pré‑pensée)
+
+* Les motifs observés dans NX-5 (pré‑cognitive patterns) sont-ils :
+
+  * des sous‑produits thermodynamiques,
+  * ou des structures proto‑fonctionnelles nécessaires à toute cognition ?
+* Peut-on distinguer formellement :
+
+  * régime fonctionnel,
+  * régime pré‑cognitif,
+  * régime cognitif (non encore démontré) ?
+
+### Q4 — Temporalité interne et perception du temps
+
+* Le neurone NX possède-t-il une temporalité interne distincte de l’horloge externe ?
+* L’hystérésis suffit-elle à expliquer une mémoire du passé et une anticipation implicite ?
+* Peut-on définir une flèche du temps interne propre au régime dissipatif NX ?
+
+### Q5 — Robustesse inter‑runs et individualité
+
+* Deux neurones NX initialisés avec des conditions quasi identiques convergent-ils vers :
+
+  * des régimes équivalents,
+  * ou des identités dynamiques distinctes ?
+* Existe-t-il une notion d’« individualité neuronale » irréductible ?
+
+---
+
+## 🧪 Méthodologie expérimentale (NX-8)
+
+### 1. Conditions générales
+
+* Aucune modification du noyau causal NX-7.
+* Aucun mécanisme de stabilisation ajouté.
+* Aucune optimisation, apprentissage ou objectif externe.
+* Exploration par **perturbations contrôlées et mesures fines**.
+
+### 2. Protocoles spécifiques
+
+#### 2.1 Communication NX–NX
+
+* Couplage progressif de 2 à N neurones NX.
+* Variation contrôlée :
+
+  * distance effective,
+  * délai énergétique,
+  * asymétrie de dissipation.
+* Mesure :
+
+  * temps de synchronisation,
+  * stabilité du régime partagé,
+  * modes de rupture.
+
+#### 2.2 Résolution de la mémoire
+
+* Perturbations locales ultra‑fines de la géométrie d’invariants.
+* Tests de récupération partielle / totale.
+* Mesure de la perte d’information fonctionnelle sans destruction énergétique globale.
+
+#### 2.3 Analyse des pré‑structures
+
+* Extraction statistique des motifs récurrents sans interprétation sémantique.
+* Comparaison entre :
+
+  * régimes fonctionnels,
+  * régimes chaotiques,
+  * régimes proches de l’effondrement.
+
+#### 2.4 Temporalité interne
+
+* Décorrélation volontaire entre horloge externe et dynamique interne.
+* Analyse de la persistance de l’ordre causal interne.
+
+#### 2.5 Variabilité inter‑runs
+
+* Séries longues d’exécutions indépendantes.
+* Cartographie des attracteurs statistiques (sans attracteur classique).
+
+---
+
+## 📊 Données et fichiers obligatoires générés
+
+Tous les fichiers doivent respecter la traçabilité forensique complète (UTC, checksum, fin d’exécution explicite).
+
+### Logs
+
+* `logs_AIMO3/nx/NX-8_comm_coupling.log`
+* `logs_AIMO3/nx/NX-8_memory_resolution.log`
+* `logs_AIMO3/nx/NX-8_pre_structures.log`
+* `logs_AIMO3/nx/NX-8_temporal_dynamics.log`
+* `logs_AIMO3/nx/NX-8_variability.log`
+
+### Rapports
+
+* `RAPPORT_IAMO3/NX/NX-8_OPEN_QUESTIONS_ANALYSIS.md`
+* `RAPPORT_IAMO3/NX/NX-8_LIMITS_AND_IMPOSSIBILITIES.md`
+
+---
+
+## ✅ Critères de validation de NX-8
+
+* Toutes les questions Q1–Q5 doivent recevoir :
+
+  * soit une réponse expérimentale claire,
+  * soit une démonstration explicite de leur indétermination.
+* Aucune régression par rapport aux résultats NX-7.
+* Séparation stricte entre faits mesurés et interprétations.
+
+---
+
+## 🧾 Prompt opérationnel global NX-8
+
+> Explorer systématiquement les limites, granularités et mécanismes fins du neurone NX sans modifier son noyau causal.
+> Mesurer ce qui est possible, identifier ce qui est impossible, et documenter ce qui reste indéterminé.
+> Produire uniquement des données brutes, traçables et falsifiables.
+> Toute extrapolation fonctionnelle ou cognitive est interdite à ce stade.
+
+---
+
+## 📌 Conclusion
+
+NX-8 est une phase de **maturité scientifique** :
+
+* Elle ne cherche plus à prouver que NX fonctionne.
+* Elle cherche à établir **jusqu’où NX peut aller, et où il s’arrête**.
+
+Cette phase est indispensable pour :
+
+* une formalisation mathématique honnête,
+* une publication de haut niveau crédible,
+* et une séparation nette entre science fondamentale et spéculation.
+
+**Aucune étape ne peut être ignorée sans fragiliser l’ensemble du programme NX.**

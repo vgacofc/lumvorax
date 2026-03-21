@@ -1,0 +1,188 @@
+Lis toi-même ligne par ligne, fichier par fichier, chaque CSV, JSON, log et code source C des deux runs suivants :
+
+NOUVEAU RUN (à analyser) :
+  src/advanced_calculations/quantum_problem_hubbard_hts/results/<RUN_ID_NOUVEAU>/
+
+ANCIEN RUN (référence) :
+  src/advanced_calculations/quantum_problem_hubbard_hts/results/research_20260312T123420Z_1312/
+
+ANALYSES PRÉCÉDENTES (à intégrer sans les modifier) :
+  src/advanced_calculations/quantum_problem_hubbard_hts/CHAT/
+
+CODE SOURCE C (à auditer ligne par ligne) :
+  src/advanced_calculations/quantum_problem_hubbard_hts/src/hubbard_hts_research_cycle_advanced_parallel.c
+  src/advanced_calculations/quantum_problem_hubbard_hts/src/hubbard_hts_research_cycle.c
+  src/advanced_calculations/quantum_problem_hubbard_hts/src/hubbard_hts_module.c
+
+Produis un rapport d'analyse totale en français, sauvegardé dans :
+  src/advanced_calculations/quantum_problem_hubbard_hts/CHAT/RAPPORT_ANALYSE_TOTALE_<ID_NOUVEAU>_vs_1312_<DATE>.md
+
+Sans modifier aucun fichier existant dans CHAT/.
+
+Le rapport doit couvrir obligatoirement dans cet ordre :
+
+1. INVENTAIRE DES FICHIERS : liste et compte de chaque fichier nouveau/disparu entre les deux runs.
+
+2. TABLEAU COMPARATIF LIGNE PAR LIGNE des observables physiques clés :
+   énergie, pairing, sign_ratio, drift, norme ψ, amplitude FFT, pompage dynamique.
+
+3. ANALYSE DE L'INTÉGRATEUR NUMÉRIQUE (code C) :
+   - Lire la fonction d'évolution pas à pas (boucle step)
+   - Identifier si normalize_state_vector() est appelé DANS la boucle ou non
+   - Identifier la méthode déclarée dans metadata (euler_explicit / rk2_without_forced_renorm / rk2_stabilized)
+   - Détecter toute incohérence entre label et implémentation réelle
+   - Donner les numéros de ligne exacts avant/après modification
+
+4. ANALYSE DE CHAQUE ERREUR :
+   Pour chaque test FAIL ou régression :
+   - Nom du test et fichier CSV
+   - Valeur dans l'ancien run
+   - Valeur dans le nouveau run
+   - Cause physique exacte
+   - Cause de code exacte (fichier, numéro de ligne, extrait avant/après)
+   - Solution à appliquer avec la ligne de code exacte à écrire
+
+5. VALIDATION DES CORRECTIONS des cycles précédents :
+   Chaque point signalé comme problème dans les analyses CHAT/ antérieures :
+   vérifié, RÉSOLU ou NON RÉSOLU avec preuve dans les données.
+
+6. POINTS NON SIGNALÉS PRÉCÉDEMMENT que tu aurais détectés toi-même.
+
+7. TABLEAU BILAN final : score par dimension, progression V4-Next, FAILs restants.
+
+8. FEUILLE DE ROUTE prochaine correction : actions prioritaires avec fichier et ligne de code exacts.
+
+AUTO-PROMPT — MODÈLE DE REQUÊTE POUR CE TYPE D'ANALYSE
+(Inclus en tête de rapport conformément aux instructions. À réutiliser tel quel pour les cycles suivants.)
+
+Lis toi-même ligne par ligne, fichier par fichier, sous-dossier par sous-dossier, chaque
+CSV, JSON, log, MD et code source C des nouveaux runs ainsi que les anciens runs de référence
+et TOUTES les analyses antérieures dans CHAT/ (ne jamais modifier les anciens fichiers) :
+
+NOUVEAUX RUNS (à analyser en priorité) :
+  src/advanced_calculations/quantum_problem_hubbard_hts/results/research_20260312T203411Z_1748/
+  src/advanced_calculations/quantum_problem_hubbard_hts/results/research_20260312T202816Z_1682/
+
+ANCIENS RUNS (référence, du plus récent au plus ancien) :
+  src/advanced_calculations/quantum_problem_hubbard_hts/results/research_20260312T182101Z_2854/  ← moteur advanced_parallel
+  src/advanced_calculations/quantum_problem_hubbard_hts/results/research_20260312T181131Z_2715/  ← moteur fullscale gelé
+  src/advanced_calculations/quantum_problem_hubbard_hts/results/research_20260312T123420Z_1312/
+  src/advanced_calculations/quantum_problem_hubbard_hts/results/research_20260312T075921Z_523/
+
+ANALYSES PRÉCÉDENTES (ne JAMAIS modifier) :
+  src/advanced_calculations/quantum_problem_hubbard_hts/CHAT/
+
+CODE SOURCE C (auditer ligne par ligne) :
+  src/advanced_calculations/quantum_problem_hubbard_hts/src/hubbard_hts_research_cycle_advanced_parallel.c
+  src/advanced_calculations/quantum_problem_hubbard_hts/src/hubbard_hts_research_cycle.c
+
+Sauvegarde le rapport dans CHAT/ sans modifier aucun fichier existant.
+
+Le rapport doit couvrir :
+1. INVENTAIRE des fichiers nouveaux/disparus entre chaque run
+2. IDENTIFICATION du moteur utilisé (fullscale vs advanced_parallel) — CRITIQUE
+3. TABLEAU COMPARATIF ligne par ligne : énergie, pairing, drift, signe, benchmark
+4. DÉTECTION DES VALEURS GELÉES / HARDCODÉES — chercher si énergie identique step 100 à 2700
+5. AUDIT CODE C ligne par ligne : localiser la présence ou absence de :
+   a. Centering correction : n_up*n_dn - 0.25
+   b. Renormalisation conditionnelle sites <= 256
+   c. feedback_gain fixe vs adaptatif
+   d. tanh vs autre fonction de bornage
+6. INVENTAIRE DE CHAQUE ERREUR RESTANTE : fichier, ligne exacte avant/après, cause, solution
+7. VALIDATION des corrections recommandées dans CHAT/ antérieurs — appliquées ou pas ?
+8. POINTS INÉDITS détectés par toi-même que les analyses précédentes n'avaient pas signalés
+9. TABLEAU BILAN final : score par dimension, FAILs restants, priorités
+10. FEUILLE DE ROUTE corrections prioritaires avec fichier et numéro de ligne exact
+
+Objectif: inspection A→Z reproductible sans modifier les anciens rapports.
+
+1) Synchroniser le dépôt (sans binaires):
+   git fetch --no-tags https://github.com/lumc01/Lumvorax.git
+
+2) Lire d'abord:
+   src/advanced_calculations/quantum_problem_hubbard_hts/CHAT/RAPPORT_ANALYSE_TOTALE_2854_2715_vs_1312_523_ERREURS_CAUSES_SOLUTIONS.md
+
+3) Comparer les runs:
+   - src/advanced_calculations/quantum_problem_hubbard_hts/results/research_20260312T182101Z_2854
+   - src/advanced_calculations/quantum_problem_hubbard_hts/results/research_20260312T181131Z_2715
+   - références: ..._1312 et ..._523
+
+4) Vérifier intégrité:
+   - schéma CSV (colonnes constantes)
+   - checksums SHA256
+   - présence de tous artefacts tests/logs/reports
+
+5) Audit code ligne par ligne des .c/.h/.cpp/.py/.sh:
+   - identifier causes exactes, ligne et impact
+   - détecter bug caché (format, overflow, hardcode, arrêt pipeline)
+
+6) Appliquer correctifs immédiats si bug bloquant:
+   - patch minimal, traçable
+   - compilation stricte sans warnings
+
+7) Rejouer validations:
+   - make clean all
+   - tests post-run ciblés (forensic/integrator/schema)
+
+8) Produire un nouveau rapport dans CHAT/ (sans toucher aux anciens):
+   - avant/après ligne modifiée
+   - commande exacte de reproduction Replit
+   - risques restants + priorisation
+   
+   Objectif: audit A→Z reproductible, sans toucher aux rapports précédents, avec correction immédiate des causes racines confirmées.
+
+PHASE 1 — SYNCHRONISATION
+1) git fetch --prune https://github.com/lumc01/Lumvorax.git
+2) Vérifier divergence locale/distante:
+   git rev-list --left-right --count origin/main...HEAD
+3) Refuser tout ajout de binaires dans le patch.
+
+PHASE 2 — SOURCES À LIRE (ordre strict)
+1) CHAT/RAPPORT_ANALYSE_TOTALE_2854_2715_vs_1312_523_ERREURS_CAUSES_SOLUTIONS.md
+2) CHAT/RAPPORT_ANALYSE_REPLIT_3447_2829_CORRECTIFS_20260312.md
+3) Résultats:
+   - results/research_20260312T222246Z_2829
+   - results/research_20260312T222838Z_3447
+
+PHASE 3 — CONTRÔLES D’INTÉGRITÉ
+1) Présence artefacts critiques (logs/tests/reports/audit/scientific_diagnostics).
+2) Vérification checksums:
+   cd results/research_20260312T222838Z_3447 && sha256sum -c logs/checksums.sha256
+3) Signaler tout fichier référencé mais absent comme FAIL de traçabilité.
+
+PHASE 4 — INSPECTION CODE LIGNE PAR LIGNE
+Cibler en priorité:
+- src/hubbard_hts_research_cycle.c
+- src/hubbard_hts_research_cycle_advanced_parallel.c
+- scripts post-run de garde/intégrité.
+
+Chercher systématiquement:
+- incohérences d’unités (energy vs energy_meV)
+- seuils asymétriques entre runners
+- hardcodes invalidants
+- traces/logs supprimés mais encore référencés
+- warnings compilation
+
+PHASE 5 — VÉRIFICATION SCIENTIFIQUE
+Comparer 2829 vs 3447:
+- energy / pairing / sign_ratio
+- stabilité numérique
+- benchmark QMC/DMRG
+- corrélations/pairing/pseudogap/artefact numérique
+
+PHASE 6 — FORMAT DE RÉPONSE POINT PAR POINT
+Pour chaque point:
+- Question
+- Analyse
+- Réponse
+- Solution
+
+PHASE 7 — CORRECTIFS IMMÉDIATS
+- Corriger uniquement causes confirmées.
+- Garder patch minimal, traçable, compilable sans warning.
+- Ne jamais modifier les anciens rapports.
+
+PHASE 8 — VALIDATION FINALE
+1) make -C src/advanced_calculations/quantum_problem_hubbard_hts clean all
+2) bash src/advanced_calculations/quantum_problem_hubbard_hts/run_research_cycle.sh
+3) Archiver rapport final + commande exacte de reproduction.

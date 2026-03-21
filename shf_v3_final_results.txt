@@ -1,0 +1,4 @@
+--- DÉBUT TESTS SHF v3.0 (Montgomery + EKF + AVX-512) ---
+[SUCCESS] problem_1 | p: 104729 | q: 1299709 | Rate: 462.72 M/s | CPU: 0.000571s
+[SUCCESS] problem_8 | p: 999999929 | q: 999999937 | Rate: 0.60 M/s | CPU: 0.000010s
+[SUCCESS] problem_10 | p: 1234567891 | q: 1234567897 | Rate: 0.50 M/s | CPU: 0.000008s

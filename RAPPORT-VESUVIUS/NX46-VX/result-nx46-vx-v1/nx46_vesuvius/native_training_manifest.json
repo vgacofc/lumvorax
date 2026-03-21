@@ -1,0 +1,16 @@
+{
+  "material_classes": {
+    "0": "background",
+    "1": "fiber_proxy",
+    "2": "ink_proxy",
+    "3": "artifact_proxy"
+  },
+  "files": {
+    "1407735.tif": {
+      "0": 35617,
+      "1": 42109,
+      "2": 14433,
+      "3": 10241
+    }
+  }
+}

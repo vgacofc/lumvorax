@@ -1,0 +1,157 @@
+--- competitor_new_latest
+
++++ ours_current
+
+@@ -12,4 +12,14 @@
+
+ import os
+ 
++# protobuf compatibility shim (protobuf>=5 removed MessageFactory.GetPrototype used by some deps)
++try:
++    from google.protobuf import message_factory as _pb_message_factory
++    if not hasattr(_pb_message_factory.MessageFactory, "GetPrototype"):
++        def _compat_get_prototype(self, descriptor):
++            return _pb_message_factory.GetMessageClass(descriptor)
++        _pb_message_factory.MessageFactory.GetPrototype = _compat_get_prototype
++except Exception:
++    pass
++
+ # protobuf stability (common Kaggle container mismatch)
+ os.environ.setdefault("PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION", "python")
+@@ -29,17 +39,4 @@
+
+   --find-links "$var"
+ clear_output()
+-
+-# --- Protobuf compatibility patch (MessageFactory.GetPrototype) ---
+-try:
+-    from google.protobuf import message_factory as _message_factory
+-    if not hasattr(_message_factory.MessageFactory, "GetPrototype"):
+-        from google.protobuf.message_factory import GetMessageClass
+-        def _GetPrototype(self, descriptor):
+-            return GetMessageClass(descriptor)
+-        _message_factory.MessageFactory.GetPrototype = _GetPrototype
+-        print("Patched protobuf: added MessageFactory.GetPrototype")
+-except Exception as e:
+-    print("Could not patch protobuf MessageFactory:", e)
+-
+ 
+ import time, zipfile
+@@ -87,4 +84,17 @@
+
+     # warmup
+     DO_WARMUP=True,
++
++)
++
++# SHF/RSR overlay isolated from competitor baseline config
++# Baseline-safe defaults: disabled unless explicitly enabled
++LUM_CFG = dict(
++    # synchronized with competitor baseline parameters
++    USE_LUM_RESONANCE=True,
++    LUM_BLEND_ALPHA=CFG["overlap_base"],
++    LUM_SPECTRAL_GAMMA=CFG["overlap_hi"],
++    LUM_PRIOR_WEIGHT=CFG["overlap_public"],
++    LUM_SMOOTH_STEPS=CFG["z_radius"],
++    LUM_PRIOR_THRESHOLD=CFG["T_low"],
+ )
+ 
+@@ -141,4 +151,41 @@
+
+     else:
+         raise ValueError(f"Unknown INK_MODE={mode}")
++
++# ----------------------------
++# LUM/VORAX SHF-RSR helpers
++# ----------------------------
++def shf_spectral_signature(prob):
++    p = np.asarray(prob, dtype=np.float32)
++    fft_mag = np.abs(np.fft.rfftn(p)).astype(np.float32, copy=False)
++    hi = float(np.percentile(fft_mag, 92.0))
++    lo = float(np.percentile(fft_mag, 60.0))
++    score = hi / (lo + 1e-6)
++    return float(np.clip(score, 0.0, 8.0))
++
++def rsr_recursive_prior(pub_fg_bool, smooth_steps=2):
++    prior = pub_fg_bool.astype(np.float32, copy=False)
++    for _ in range(max(0, int(smooth_steps))):
++        prior = ndi.gaussian_filter(prior, sigma=(0.0, 1.2, 1.2))
++        prior = np.clip(prior, 0.0, 1.0)
++    return prior
++
++def lum_resonance_blend(prob, pub_fg_bool, lum_cfg):
++    spectral = shf_spectral_signature(prob)
++    spectral_gain = np.clip((spectral - 1.0) * lum_cfg["LUM_SPECTRAL_GAMMA"], 0.0, 1.0)
++
++    prior = rsr_recursive_prior(pub_fg_bool, smooth_steps=lum_cfg["LUM_SMOOTH_STEPS"])
++    prior_gate = (prior >= lum_cfg["LUM_PRIOR_THRESHOLD"]).astype(np.float32)
++
++    alpha = float(lum_cfg["LUM_BLEND_ALPHA"])
++    w_prior = float(lum_cfg["LUM_PRIOR_WEIGHT"])
++    blended = prob * (1.0 - alpha) + alpha * ((1.0 - w_prior) * prob + w_prior * prior_gate)
++    boosted = np.clip(blended + spectral_gain * prior * 0.08, 0.0, 1.0).astype(np.float32, copy=False)
++
++    return boosted, {
++        "lum_spectral_score": float(spectral),
++        "lum_spectral_gain": float(spectral_gain),
++        "lum_prior_mean": float(prior.mean()),
++        "lum_prior_gate_rate": float(prior_gate.mean()),
++    }
+ 
+ # ----------------------------
+@@ -305,7 +352,9 @@
+
+       f"overlap_public={CFG['overlap_public']}, overlap_base={CFG['overlap_base']}, overlap_hi={CFG['overlap_hi']},",
+       f"INK_MODE={CFG['INK_MODE']}, T_low={CFG['T_low']}, T_high={CFG['T_high']},",
+-      f"OV06_MAIN_ONLY={CFG['OV06_MAIN_ONLY']}")
++      f"OV06_MAIN_ONLY={CFG['OV06_MAIN_ONLY']},",
++      f"USE_LUM_RESONANCE={LUM_CFG['USE_LUM_RESONANCE']}")
+ 
+ t_global0 = time.perf_counter()
++run_rows = []
+ 
+ with zipfile.ZipFile(zip_path, "w", compression=zipfile.ZIP_DEFLATED) as zf:
+@@ -326,7 +375,17 @@
+
+         pub_fg = (pub_labels != 0)
+ 
++        lum_metrics = {
++            "lum_spectral_score": 0.0,
++            "lum_spectral_gain": 0.0,
++            "lum_prior_mean": 0.0,
++            "lum_prior_gate_rate": 0.0,
++        }
++        prob_for_output = prob
++        if LUM_CFG["USE_LUM_RESONANCE"]:
++            prob_for_output, lum_metrics = lum_resonance_blend(prob, pub_fg, LUM_CFG)
++
+         # single final path
+         output = seeded_hysteresis_with_topology(
+-            prob,
++            prob_for_output,
+             pub_fg_bool=pub_fg,
+             T_low=CFG["T_low"],
+@@ -344,5 +403,21 @@
+
+         dt = time.perf_counter() - t0
+         elapsed = time.perf_counter() - t_global0
+-        print(f"[{i+1}/{len(ids)}] id={image_id} | {dt/60:.2f} min | elapsed {elapsed/3600:.2f} h | positives={int(output.sum())}")
++        run_rows.append({
++            "id": image_id,
++            "positives": int(output.sum()),
++            **lum_metrics,
++            "minutes": float(dt / 60.0),
++        })
++        print(f"[{i+1}/{len(ids)}] id={image_id} | {dt/60:.2f} min | elapsed {elapsed/3600:.2f} h | positives={int(output.sum())} | lum_score={lum_metrics['lum_spectral_score']:.3f}")
++
++if run_rows:
++    run_df = pd.DataFrame(run_rows)
++    print("\nLUM resonance summary:")
++    print(run_df[["id", "positives", "lum_spectral_score", "lum_spectral_gain", "lum_prior_mean", "lum_prior_gate_rate", "minutes"]].to_string(index=False))
+ 
+ print("Submission ZIP:", zip_path)
++
++
++
++
++

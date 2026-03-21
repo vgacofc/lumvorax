@@ -1,0 +1,372 @@
+Rapport N°1 — Diagnostic global et liste des anomalies (non-exhaustif, mais prioritaire)
+
+Chaque point contient : (A) l’anomalie, (B) l’explication simple (pour que tu comprennes), (C) l’impact réel, (D) la solution proposée (conceptuelle — **je n’applique rien tant que tu n’ordonnes pas**).
+
+## 1. Gestion de la propriété / ownership et double-free
+
+**A. Anomalie :**
+
+* `fuse_groups` retourne un `t_group *new_group` qui **réutilise les pointeurs `lums`** de `g1` et `g2` (pas de duplication des `t_lum`), puis les fonctions `free_group(g1)` et `free_group(g2)` sont appelées dans les tests. Cela provoque très probablement des **double-free** (libération deux fois de la même `t_lum`) ou des accès à de la mémoire libérée.
+
+**B. Explication simple :**
+
+* Si tu copies des pointeurs de A dans B mais que tu continues ensuite à libérer A, les pointeurs de B pointent sur de la mémoire qui a déjà été libérée — ça casse le programme.
+
+**C. Impact réel :**
+
+* Plantage, corruption mémoire, vulnérabilité (exécutions non fiables — pas acceptable pour validation forensique).
+
+**D. Solution conceptuelle :**
+
+* Définir clairement la *propriété* : soit `fuse_groups` **déplace** la propriété (les anciens groupes ne doivent plus être libérés), soit il **duplique** les LUMs (allocation de nouvelles `t_lum`) et donc les deux peuvent être libérés indépendamment.
+* On doit ajouter des règles de propriété dans `STANDARD_NAMES.md` (ex : `NAME: LUM_OWNERSHIP_MOVE`), et des fonctions `take_ownership()` / `copy_group()` explicites.
+
+---
+
+## 2. split\_group retourne des structures qui partagent des LUMs (ownership ambiguë)
+
+**A. Anomalie :**
+
+* `split_group` construit plusieurs `t_group` qui réutilisent des pointeurs `group->lums[index++]`. Or le groupe original n'est pas invalidé ni libéré correctement.
+
+**B. Explication simple :**
+
+* On sépare un groupe en sous-groupes mais on laisse l'ancien groupe inchangé ; qui est responsable des `t_lum` ensuite ?
+
+**C. Impact réel :**
+
+* Même classe d’erreur : double free, fuites mémoire, incohérences d’état.
+
+**D. Solution conceptuelle :**
+
+* Décider si `split_group` **consomme** le groupe original (il devient invalide) ou **copie** les LUMs. Documenter cela dans `STANDARD_NAMES.md`.
+
+---
+
+## 3. free\_group libère les LUMs sans vérifier la propriété
+
+**A. Anomalie :**
+
+* `free_group` boucle et `free_lum` pour chaque lum — mais si d’autres groupes partagent ces `lums` (après fuse/split), on provoquera des frees en double.
+
+**B. Explication simple :**
+
+* Tu détruis les éléments d’un groupe, mais d’autres groupes peuvent encore les utiliser.
+
+**C. Impact réel :**
+
+* Crash ou comportement indéterminé.
+
+**D. Solution conceptuelle :**
+
+* Introduire un compteur de références (`refcount`) pour `t_lum` ou adopter une propriété unique (ownership unique). Documenter la règle dans `STANDARD_NAMES.md`. Implémenter `retain_lum()` / `release_lum()`.
+
+---
+
+## 4. tests.c utilise et libère des objets dans un ordre incorrect
+
+**A. Anomalie :**
+
+* Exemple : `g3 = fuse_groups(g1, g2);` puis on appelle plus tard `free_group(g1); free_group(g2); free_group(g3);` — ce qui crée la condition d’erreur décrite.
+
+**B. Explication simple :**
+
+* Les tests ne respectent pas la politique de propriété. Ils libèrent des ressources qui sont encore utilisées.
+
+**C. Impact réel :**
+
+* Les tests rapporteront des erreurs ou des plantages, rendant les résultats invalides — critique pour validation.
+
+**D. Solution conceptuelle :**
+
+* Corriger la logique des tests : soit on ne libère que `g3` si `fuse` a transféré la propriété, soit on duplique les LUMs lors du fuse. Mettre la règle dans `STANDARD_NAMES.md`.
+
+---
+
+## 5. parser minimal / pas d’exécution réelle
+
+**A. Anomalie :**
+
+* `parser` se contente de `log_message("Parse: ...")` ; il ne crée ni n’appelle d’opérations effectives sur les structures.
+
+**B. Explication simple :**
+
+* Le parser ne traduit pas les commandes en actions réelles : il n’y a pas d’exécution testable via entrée textuelle.
+
+**C. Impact réel :**
+
+* Impossible d’utiliser le DSL VORAX-L pour exécuter des scénarios réels — réduit l’auditabilité.
+
+**D. Solution conceptuelle :**
+
+* Écrire un parseur complet (tokenizer -> AST -> exécuteur) et une API d’exécution atomique. Documenter dans `STANDARD_NAMES.md` les noms de commandes / fonctions.
+
+---
+
+## 6. gestes.compress / gestures.expand sont des placeholders
+
+**A. Anomalie :**
+
+* `compress()` et `expand()` sont des stubs : `(void)group; log_message("Compress executed.");` — pas d’algorithme réel.
+
+**B. Explication simple :**
+
+* Tu veux des opérations non-conservatives justifiées — aujourd’hui il n’y a aucune preuve codée.
+
+**C. Impact réel :**
+
+* Non-respect de ta demande : **interdiction de placeholders** et d’algorithmes non-réels. Cela invalide la validation.
+
+**D. Solution conceptuelle :**
+
+* Définir précisément ce que `compress` / `expand` font (algorithmique : p.ex. condensations en structure `Ω`, métadonnées énergétiques, coût). Implémenter réellement et fournir métriques (temps, mémoire, invariants).
+
+---
+
+## 7. scheduler : zones non enregistrées dans all\_zones
+
+**A. Anomalie :**
+
+* `all_zones` est alloué mais il n’existe aucune fonction exposée pour *enregistrer* une zone nouvellement créée. `create_zone` ne met pas la zone dans `all_zones` et `zone_count` n’est jamais incrémenté. Donc scheduler ne parcourt rien (sauf si on l’a fait manuellement), incohérence.
+
+**B. Explication simple :**
+
+* Tu as un tableau global de zones mais aucun mécanisme pour y placer les zones créées.
+
+**C. Impact réel :**
+
+* Le scheduler ne gère pas réellement les zones — fausse exécution.
+
+**D. Solution conceptuelle :**
+
+* Ajouter `register_zone(t_zone *)` et `unregister_zone()` et s’assurer qu’elles sont appelées lors de la création/libération. Documenter nom et fonctionnement dans `STANDARD_NAMES.md`.
+
+---
+
+## 8. gestion des tailles fixes (MAX\_GROUPS) peu sûre
+
+**A. Anomalie :**
+
+* `MAX_GROUPS` fixe à 128 sans contrôle des débordements. Ajout de groupe n’effectue pas de vérification.
+
+**B. Explication simple :**
+
+* On peut dépasser le nombre d’éléments alloués : écriture hors-bande.
+
+**C. Impact réel :**
+
+* Corruption mémoire, crash.
+
+**D. Solution conceptuelle :**
+
+* Utiliser allocation dynamique ré-allouable (realloc) et vérifier les erreurs. Documenter la politique de capacité dans le STANDARD\_NAMES.
+
+---
+
+## 9. log : pas de rotation ni de sécurité d’accès
+
+**A. Anomalie :**
+
+* Fichier log ouvert en `a` append-only sans rotation, sans contrôle de concurrence (si exécuté multi-process / threads). Pas de gestion d’erreur avancée.
+
+**B. Explication simple :**
+
+* Les logs peuvent grandir indéfiniment, être corrompus dans un contexte multi-thread/process.
+
+**C. Impact réel :**
+
+* Difficulté d’analyse forensique historique ; logs non sûrs.
+
+**D. Solution conceptuelle :**
+
+* Implémenter rotation par date/taille et verrouillage fcntl pour accès exclusif ; ajouter métadonnées de version et de hash de session dans chaque run.
+
+---
+
+## 10. manquement aux métadonnées et timestamps de version (STANDARD\_NAMES)
+
+**A. Anomalie :**
+
+* Tu m’as demandé de préfixer tous les noms dans STANDARD\_NAMES par date pour traçabilité ; il n’y a pas de STANDARD\_NAMES.md actuellement.
+
+**B. Explication simple :**
+
+* Sans fichier standardisé, on risque conflits de noms et doublons.
+
+**C. Impact réel :**
+
+* Risque d’erreurs futures, impossibilité d’assurer traçabilité des noms et des modifications.
+
+**D. Solution conceptuelle :**
+
+* Créer `STANDARD_NAMES.md` avec format strict : `YYYY-MM-DD - NAME_IDENTIFIER - description - type (fn/var/const) - owner/module`. A chaque nouvelle création, append une nouvelle ligne datée.
+
+---
+
+## 11. tests : insuffisance de validations forensiques
+
+**A. Anomalie :**
+
+* Les tests actuels sont superficiels : ils ne mesurent pas (temps CPU, mémoire), n’utilisent pas des outils de vérification (valgrind, AddressSanitizer), pas de comparaisons d’attendus en CSV/JSON, pas d’attestation de non-simulation.
+
+**B. Explication simple :**
+
+* Tests doivent prouver que le code fait des calculs réels et non des valeurs hardcodées.
+
+**C. Impact réel :**
+
+* On ne peut pas prouver l’authenticité des résultats.
+
+**D. Solution conceptuelle :**
+
+* Ajouter batteries de tests forensiques :
+
+  * exécution instrumentée avec `/usr/bin/time -v`, valgrind, ASAN,
+  * génération d’un `report.json` horodaté (états tick par tick, checksums),
+  * signatures (SHA256) des logs et des binaires,
+  * comparaisons des invariants (p.ex. total LUM pré/post).
+
+---
+
+## 12. Makefile & build : inexistants/placeholder
+
+**A. Anomalie :**
+
+* Le ZIP contient des placeholders Makefile/README (générés automatiquement) — pas de règles de build réelles, ni de flags de compilation (ASAN, optimization, Norminette compliance checks).
+
+**B. Explication simple :**
+
+* Sans Makefile complet, on ne peut reproduire une build vérifiable.
+
+**C. Impact réel :**
+
+* Blocage pour exécution reproductible.
+
+**D. Solution conceptuelle :**
+
+* Fournir un Makefile complet avec cibles : `all`, `test`, `forensic-report`, `clean`, et flags `-Wall -Wextra -Werror -fsanitize=address,undefined -O2`.
+
+---
+
+### 3) Rapport MD numéroté complet (format que je livrerai)
+
+Je te fournis ici le plan du rapport MD numéroté (je peux le remplir automatiquement après ta validation du `STANDARD_NAMES.md`) — il contiendra :
+
+1. Titre et métadonnées (date, commit-id, version Lum/Vorax)
+2. Sommaire
+3. Liste complète des fichiers sources (checksum SHA256 pour chaque fichier)
+4. STANDARD\_NAMES.md (version lue + date)
+5. Politique de nommage (extraits)
+6. Audit ligne-par-ligne :
+
+   * fichier X.c : lignes 1..N — anomalies notées, priorité, proposition de correction
+7. Liste des fonctions placeholders détectées (et raison pour laquelle elles sont invalides)
+8. Tests effectués (commande exacte + sortie compressée)
+9. Résultats métriques (temps CPU, mémoire, IO) — format CSV/JSON
+10. Attestation forensique (hashes, logs horodatés)
+11. Recommandations (ordre prioritaire d’intervention)
+12. Checklist avant corrections (conditions à remplir)
+13. Demande d’autorisation (ton OK) pour lancer les corrections automatiques
+14. Annexes : logs bruts, diffs proposés, nommages nouveaux (datés)
+
+---
+
+### 4) Métriques réelles à collecter — exactement comment les obtenir
+
+Quand tu me donnes l’ordre d’exécuter les tests, voici la suite d’outils et commandes que je lancerai pour produire des métriques vérifiables :
+
+* Compilation (avec infos) :
+
+  ```sh
+  gcc -Wall -Wextra -Werror -fsanitize=address,undefined -O2 -g -o lumvorax main.c src/*.c
+  ```
+* Exécution instrumentée (mesures de temps / mémoire) :
+
+  ```sh
+  /usr/bin/time -v ./lumvorax > out.log 2> time.log
+  ```
+
+  * `time.log` contient Peak RSS, User time, Sys time, Major/Minor faults.
+* Vérification mémoire (valgrind) :
+
+  ```sh
+  valgrind --leak-check=full --show-leak-kinds=all --log-file=valgrind.log ./lumvorax
+  ```
+* Sanitizers (détecter UB) : déjà inclus au build via `-fsanitize`.
+* Mesures CPU/IO (perf) :
+
+  ```sh
+  perf stat -e cycles,instructions,cache-references,cache-misses -o perf.log ./lumvorax
+  ```
+* Checksums et signatures (preuve non falsifiée) :
+
+  ```sh
+  sha256sum main.c src/*.c > checksums.sha256
+  gpg --detach-sign --armor checksums.sha256   # si clé disponible
+  ```
+* Export des états tick-by-tick : produire `trace.csv` avec colonnes : `tick,A,B,C,D,buf,checksum_state` (checksum permet prouver l’immutabilité d’une run).
+
+Je générerai ensuite un `report.json` agrégé contenant les métriques, les logs et les checksums.
+
+---
+
+### 5) Prompt pour l’agent expert forensic (celui que tu m’as demandé)
+
+Voici un **prompt complet** prêt à être donné à un agent (Replit / autre) qui doit **inspecter automatiquement** le code *ligne par ligne*, vérifier logs, JSON, et détecter falsifications — **NE PAS** inclure de fichiers `.md` dans les résultats d'exécution (pour éviter d’injecter de fausses données). Le prompt est en français pour être direct.
+
+```
+AGENT_NAME: ExpertForensicLumVorax
+
+Mission:
+Tu es un agent expert en analyse forensique de code C. Ta mission est d'inspecter la totalité du dépôt LumVorax (racine fournie) et d'exécuter les actions suivantes, sans modifier aucun fichier initial sauf quand l'ordre explicite est donné :
+
+1) Vérification initiale :
+   - Calculer SHA256 de chaque fichier source (.c/.h/.md/.sh/Makefile).
+   - Lister les fichiers, tailles, droits, et date de modification.
+
+2) STANDARD_NAMES :
+   - Rechercher STANDARD_NAMES.md. Si absent, report explicite (ne pas créer automatiquement).
+   - Si présent, lire intégralement et valider que chaque nom utilisé dans le code existe dans STANDARD_NAMES.md.
+   - Produire un rapport 'standard_names_check.json' listant toutes les utilisations non référencées.
+
+3) Analyse statique :
+   - Pour chaque fichier .c/.h, faire une analyse ligne-par-ligne :
+     - Relever les fonctions placeholder (corps vide ou `(void)x; log("...")`).
+     - Relever tous les patterns suspects : double free, accès hors bornes, utilisation de pointeurs après free, conditions non vérifiées pour allocations, magic constants non commentées.
+   - Produire un fichier `static_analysis.json` listant chaque anomalie avec : fichier, ligne, description, sévérité (critical/high/medium/low).
+
+4) Analyse dynamique :
+   - Compiler avec : `gcc -Wall -Wextra -Werror -fsanitize=address,undefined -O2 -g -o lumvorax main.c src/*.c`.
+   - Exécuter /usr/bin/time -v et valgrind (si disponible), collecter les logs.
+   - Produire `runtime_report.json` : temps user/sys, peak_RSS, major/minor faults, leaks report.
+
+5) Tests d'authenticité :
+   - Exécuter les tests unitaires fournis (script `make test` si existe).
+   - Pour chaque test, sauvegarder output stdout/stderr, et produire un hash du résultat.
+   - Vérifier qu’aucune valeur testée n’est hardcodée : pour cela, exécuter tests deux fois après modification non-fonctionnelle de l’environnement (p.ex. seed différent) et vérifier variance attendue.
+
+6) Comparaison invariants :
+   - Pour chaque opération LUM (fuse/split/move/store/retrieve), vérifier l’invariant attendu (p.ex. conservation du total LUM sauf pour compress/expand marqués).
+   - Si invariant violé, documenter tick et état.
+
+7) Preuves et artefacts :
+   - Produire un bundle `forensic_bundle.zip` contenant : checksums, static_analysis.json, runtime_report.json, trace.csv (tick states), valgrind.log, perf.log (si disponible).
+
+8) Rapport final :
+   - Générer `forensic_report.md` structuré : résumé exécutif (non-technique), liste d’anomalies critiques, preuves, recommandations ordonnées, et checklist avant correction.
+   - Ne pas modifier les fichiers source.
+   - Ne pas modifier les .md originaux — les rapports doivent être des artefacts séparés.
+
+Livrables :
+- forensic_bundle.zip
+- forensic_report.md
+- static_analysis.json
+- runtime_report.json
+- standard_names_check.json
+
+Contrainte : aucune action destructive. Toutes les sorties doivent être datées et horodatées. Fournir les commandes exactes exécutées pour la reproductibilité.
+```
+
+---
+
+### 6) Checklist avant d’ordonner les corrections automatiques (ce que je vais faire quand tu dis GO)

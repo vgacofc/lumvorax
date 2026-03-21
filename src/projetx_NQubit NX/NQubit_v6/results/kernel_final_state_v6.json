@@ -1,0 +1,70 @@
+{
+  "environment": {
+    "python": "3.10.19",
+    "platform": "Linux-6.12.47-x86_64-with-glibc2.39",
+    "cpu_count": 3,
+    "cwd": "/workspace/Lumvorax/src/projetx_NQubit NX/NQubit_v6",
+    "kaggle": false,
+    "replit": false,
+    "colab": false,
+    "cuda_visible_devices": null,
+    "gpu": {
+      "backend": null,
+      "available": false,
+      "name": null,
+      "count": 0
+    },
+    "compute_mode": "cpu",
+    "root": "/workspace/Lumvorax/src/projetx_NQubit NX/NQubit_v6"
+  },
+  "pipeline": {
+    "version": "v6-kernel-single-cell",
+    "elapsed_s": 12.239466125000035,
+    "steps": [
+      {
+        "step": "collect_metrics",
+        "rc": 0,
+        "elapsed_s": 0.09707325999988825,
+        "stdout": "/workspace/Lumvorax/src/projetx_NQubit NX/NQubit_v6/results/system_metrics_v6.json",
+        "stderr": ""
+      },
+      {
+        "step": "acquire_hardware",
+        "rc": 0,
+        "elapsed_s": 0.21668183399970076,
+        "stdout": "/workspace/Lumvorax/src/projetx_NQubit NX/NQubit_v6/results/ADC_REAL_HARDWARE_CAPTURE_V6.json",
+        "stderr": ""
+      },
+      {
+        "step": "stress",
+        "rc": 0,
+        "elapsed_s": 11.909496911000133,
+        "stdout": "/workspace/Lumvorax/src/projetx_NQubit NX/NQubit_v6/results/stress_telemetry_v6.log",
+        "stderr": ""
+      },
+      {
+        "step": "build_manifest",
+        "rc": 0,
+        "elapsed_s": 0.009992972999953054,
+        "stdout": "/workspace/Lumvorax/src/projetx_NQubit NX/NQubit_v6/results/manifest_forensic_v6.json",
+        "stderr": ""
+      },
+      {
+        "step": "verify_manifest",
+        "rc": 0,
+        "elapsed_s": 0.0,
+        "stdout": "{\"artifact_count\": 9, \"missing\": 0, \"mismatches\": 0, \"ok\": true, \"missing_items\": [], \"mismatch_items\": []}",
+        "stderr": ""
+      },
+      {
+        "step": "report",
+        "rc": 0,
+        "elapsed_s": 0.0,
+        "stdout": "/workspace/Lumvorax/src/projetx_NQubit NX/NQubit_v6/RAPPORT_REPLIT_EXECUTION_V6_FINAL.md",
+        "stderr": ""
+      }
+    ],
+    "ok": true
+  },
+  "timestamp_utc": "2026-03-01T14:34:54Z"
+}

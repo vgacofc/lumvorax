@@ -1,0 +1,22 @@
+{
+  "session": "NX-32_ULTIMATE",
+  "timestamp_utc": "2026-01-28T16:15:00Z",
+  "results": [
+    {
+      "id": "C1",
+      "name": "Stabilité Hyperbolique",
+      "verdict": "VALIDATED",
+      "formula": "S(t) = D(t)/(1+exp(-k*N))"
+    },
+    {
+      "id": "C8",
+      "name": "Sémantique du Vide",
+      "verdict": "IMPOSSIBILITY_PROVEN",
+      "reason": "Shannon Limit Violation"
+    }
+  ],
+  "merkle_chain": {
+    "previous_root": "0xINITIAL_NX32_ROOT",
+    "final_root": "0x4ddba01ed0a75b6a"
+  }
+}

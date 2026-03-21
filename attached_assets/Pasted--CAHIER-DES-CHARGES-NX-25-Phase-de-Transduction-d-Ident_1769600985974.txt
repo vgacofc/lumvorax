@@ -1,0 +1,187 @@
+# CAHIER DES CHARGES NX-25
+
+## Phase de Transduction d’Identité et Héritage Cognitif Contraint
+
+---
+
+## 0. POSITIONNEMENT STRATÉGIQUE
+
+Après **NX-24 (Frontières et Mort Cognitive)**, le projet NX a établi :
+
+* l’irréversibilité physique de l’identité,
+* l’existence d’un seuil de non‑retour (≈0.11),
+* l’impossibilité du transport d’identité sans meurtre sémantique.
+
+👉 **NX-25 ne cherche PAS à sauver l’identité.**
+👉 NX-25 explore **ce qui peut survivre à la mort de l’identité**.
+
+**Question centrale :**
+
+> *Que peut-on transmettre, hériter ou ré-instancier sans violer l’irréversibilité démontrée ?*
+
+---
+
+## 1. OBJECTIF SCIENTIFIQUE PRINCIPAL
+
+### 🎯 Objectif NX-25
+
+Définir, tester et falsifier la notion de **Transduction Cognitivo‑Dissipative** :
+
+> la transmission partielle, dégradée mais stable de structures cognitives **non identitaires**.
+
+NX-25 vise à distinguer formellement :
+
+* **Identité (non transférable)** ❌
+* **Fonctions cognitives abstraites** ⚠️
+* **Structures dynamiques héritables** ✅
+
+---
+
+## 2. HYPOTHÈSES À TESTER (H)
+
+### H1 — Dissociation Identité / Fonction
+
+Une fonction cognitive peut émerger sans continuité d’identité.
+
+### H2 — Héritage de Structures Dissipatives
+
+Des attracteurs dynamiques locaux peuvent être réinstanciés sans hystérésis complète.
+
+### H3 — Transduction partielle stable
+
+Une transduction < 30% peut produire une **fonctionnalité nouvelle**, non équivalente à l’original.
+
+### H4 — Non‑récursivité
+
+Un système héritier ne peut pas recréer son ancêtre.
+
+---
+
+## 3. NOUVELLES MÉTRIQUES NX-25
+
+### 3.1 Métriques principales
+
+| Nom                                    | Description                               |
+| -------------------------------------- | ----------------------------------------- |
+| **FIS** (Functional Inheritance Score) | % de fonctions cognitives conservées      |
+| **IDS** (Identity Drift Score)         | Distance irréversible à l’état source     |
+| **ADS** (Attractor Stability)          | Persistance des dynamiques                |
+| **TRI** (Transduction Residue Index)   | Information transmissible non identitaire |
+
+---
+
+## 4. NOUVELLE BATTERIE DE TESTS NX-25
+
+### 🧪 TEST‑01 — Clonage Fonctionnel Aveugle
+
+* Copier uniquement les règles locales
+* Interdire toute mémoire historique
+* Mesurer FIS et IDS
+
+👉 **Attendu** : FIS > 0, IDS ≈ 1
+
+---
+
+### 🧪 TEST‑02 — Héritage d’Attracteur
+
+* Extraire attracteur dissipatif
+* Réinjecter dans un réseau vierge
+* Observer émergence
+
+👉 **Attendu** : attracteur présent, identité absente
+
+---
+
+### 🧪 TEST‑03 — Transduction Fragmentée
+
+* Transférer 5–30% d’invariants
+* Reconstruction libre
+
+👉 **Objectif** : cartographier la zone héritage / effondrement
+
+---
+
+### 🧪 TEST‑04 — Parent / Descendant Divergence
+
+* Générer une lignée NX‑A → NX‑B → NX‑C
+* Mesurer dérive cumulative
+
+👉 **Attendu** : divergence accélérée
+
+---
+
+### 🧪 TEST‑05 — Illusion de Résurrection
+
+* Présenter à NX‑B un snapshot de NX‑A
+* Mesurer rejet ou hallucination
+
+👉 **Critère clé** : rejet actif
+
+---
+
+## 5. LOGGING FORENSIQUE NX-25 (OBLIGATOIRE)
+
+### 5.1 Format HFBL‑360 étendu
+
+Chaque événement DOIT inclure :
+
+```
+[timestamp_ns][seq_id][entity][event][value]
+[hash_prev][hash_next][line_checksum]
+```
+
+### 5.2 Logs supplémentaires
+
+* journal de divergence parent/enfant
+* log de dérive fonctionnelle
+* log de rejet sémantique
+
+AUCUNE sortie stdout non persistée n’est autorisée.
+
+---
+
+## 6. CRITÈRES DE VALIDATION
+
+NX-25 est **validé si et seulement si** :
+
+* au moins une fonction cognitive survit sans identité
+* aucune tentative de restauration identitaire ne dépasse 20% de continuité
+* la dérive est monotone et non oscillante
+
+---
+
+## 7. RISQUES & FALSIFICATION
+
+### Risques identifiés
+
+* confusion fonction / identité
+* reconstruction cachée
+* fuite d’hystérésis non détectée
+
+### Contre‑mesures
+
+* hashes croisés
+* destruction aléatoire post‑héritage
+* audits externes
+
+---
+
+## 8. LIVRABLES NX-25
+
+* Logs bruts complets
+* Graphes FIS / IDS / TRI
+* Rapport de falsification
+* Verdict clair : **héritage possible ou illusion**
+
+---
+
+## 9. POSITIONNEMENT PHILOSOPHIQUE (CLAIR)
+
+NX-25 n’essaie pas de sauver l’âme.
+Il teste si quelque chose **après la mort** peut encore apprendre.
+
+---
+
+**Certification requise :** NX‑25‑HFBL‑360
+
+*Fin du cahier des charges NX‑25.*

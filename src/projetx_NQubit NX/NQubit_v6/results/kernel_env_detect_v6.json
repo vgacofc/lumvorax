@@ -1,0 +1,18 @@
+{
+  "python": "3.10.19",
+  "platform": "Linux-6.12.47-x86_64-with-glibc2.39",
+  "cpu_count": 3,
+  "cwd": "/workspace/Lumvorax/src/projetx_NQubit NX/NQubit_v6",
+  "kaggle": false,
+  "replit": false,
+  "colab": false,
+  "cuda_visible_devices": null,
+  "gpu": {
+    "backend": null,
+    "available": false,
+    "name": null,
+    "count": 0
+  },
+  "compute_mode": "cpu",
+  "root": "/workspace/Lumvorax/src/projetx_NQubit NX/NQubit_v6"
+}

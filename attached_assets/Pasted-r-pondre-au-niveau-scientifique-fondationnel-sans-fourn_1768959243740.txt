@@ -1,0 +1,143 @@
+répondre au niveau scientifique/fondationnel, sans fournir de procédure opérationnelle exploitable, ni de paramètres d’attaque directement utilisables.
+Ce qui suit est une formalisation mathématique, un programme expérimental académique, et un article scientifique, pas un guide d’exploitation.
+
+I — Formalisation mathématique de l’observable
+
+ \mathcal{O}(n,\sigma) 
+
+1. Cadre général
+
+Soit  n \in \mathbb{N} , un entier impair de grande taille (candidat RSA-like ou contrôle).
+
+On considère une fenêtre locale d’échelle  \sigma \in (0,1)  définissant un voisinage arithmétique relatif autour de  n .
+
+Définissons la fenêtre discrète :
+
+W_\sigma(n) := \{ k \in \mathbb{N} \;|\; |k-n| \le \sigma n \}
+
+
+2. Fonction de coprimalité locale
+
+Pour chaque  k \in W_\sigma(n) , on définit :
+
+\chi_n(k) := \mathbf{1}_{\gcd(k,n)=1}
+
+
+La densité locale de coprimalité est alors :
+
+D(n,\sigma) := \frac{1}{|W_\sigma(n)|} \sum_{k \in W_\sigma(n)} \chi_n(k)
+
+
+3. Observable de fluctuation (clé)
+
+L’observable n’est pas  D  lui-même, mais sa fluctuation locale normalisée :
+
+\[
+\mathcal{O}(n,\sigma)
+:=
+\frac{\operatorname{Var}{k \in W\sigma(n)}(\chi_n(k))}
+{\mathbb{E}{k \in W\sigma(n)}[\chi_n(k)](1-\mathbb{E}{k \in W\sigma(n)}[\chi_n(k)])}
+\]
+
+👉 Cette normalisation élimine l’effet de moyenne globale
+👉 Elle isole l’irrégularité locale de structure
+
+4. Propriété théorique attendue
+ • Pour un entier “générique” :
+
+\mathcal{O}(n,\sigma) \approx 1 \quad \text{(bruit binomial)}
+
+ • Pour un semi-premier  n = pq  :
+
+\mathcal{O}(n,\sigma) = 1 + \delta(n,\sigma)
+
+où  \delta  encode une structure multiplicative locale non aléatoire.
+
+II — Tests nécessaires pour passer de ~10 % à un seuil critique
+
+(programme de recherche, pas d’attaque)
+
+1. Objectif scientifique
+
+Déterminer si :
+
+\sup_{\sigma} \mathbb{E}_{n \in RSA}[\delta(n,\sigma)]
+
+peut devenir asymptotiquement non négligeable.
+
+2. Familles de tests indispensables
+
+A. Tests multi-échelles rigoureux
+ • Scanner  \sigma \downarrow 0 
+ • Mesurer :
+ • amplitude  \delta(\sigma) 
+ • point de saturation
+ • décroissance ou persistance
+
+Métriques requises
+ •  \mathcal{O}(n,\sigma) 
+ • dérivée discrète  \partial_\sigma \mathcal{O} 
+ • variance inter-instances
+
+B. Tests d’universalité
+
+Comparer :
+ • RSA-like (pq)
+ • Produits pqr
+ • Composites structurés
+ • Entiers aléatoires conditionnés
+
+Objectif
+→ vérifier que la signature est spécifique et non générique.
+
+C. Tests de stabilité au bruit arithmétique
+
+Perturbations :
+ •  n \mapsto n + \Delta 
+ •  \Delta \ll \sigma n 
+
+Mesurer :
+
+\|\mathcal{O}(n,\sigma)-\mathcal{O}(n+\Delta,\sigma)\|
+
+
+D. Tests de concentration asymptotique
+
+Étudier :
+\[
+\operatorname{Var}_{n \sim RSA}(\mathcal{O}(n,\sigma))
+\]
+
+Un effondrement de variance serait un signal critique.
+
+E. Tests de combinabilité
+
+Étudier si des familles :
+
+\{ \mathcal{O}(n,\sigma_i) \}_{i=1}^m
+
+portent plus d’information que chaque observable isolée.
+
+3. Seuil “critique” (conceptuel)
+
+Dans un cadre scientifique :
+ • Zone non critique :
+réduction < bruit statistique
+ • Zone fragile :
+perte d’entropie structurelle mesurable
+ • Zone critique (théorique) :
+observable locale persistante + concentration + stabilité
+
+⚠️ Aucun seuil numérique universel n’existe a priori.
+
+III — Données nécessaires pour analyse complète
+
+Pour chaque expérience :
+ • Valeurs brutes  \mathcal{O}(n,\sigma) 
+ • Distribution empirique
+ • Corrélation inter-échelles
+ • Tests de Kolmogorov locaux
+ • Tests de permutation
+ • Logs reproductibles
+ • Checksums
+ • Comparaison contrôle / RSA-like

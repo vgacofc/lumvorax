@@ -1,0 +1,112 @@
+{
+  "generated_at_utc": "2026-03-10T22:03:56.172362+00:00",
+  "remote_url": "https://github.com/lumc01/Lumvorax.git",
+  "head": "e6975276d34fecf7fd1231efb098829968c42bc0",
+  "fetch_head": "e6975276d34fecf7fd1231efb098829968c42bc0",
+  "fetch_status": "ok",
+  "fetch_details": "",
+  "run": "research_20260310T215445Z_720",
+  "integrated_modules": [
+    "bosonic_multimode_systems",
+    "correlated_fermions_non_hubbard",
+    "dense_nuclear_proxy",
+    "far_from_equilibrium_kinetic_lattices",
+    "hubbard_hts_core",
+    "multi_correlated_fermion_boson_networks",
+    "multi_state_excited_chemistry",
+    "multiscale_nonlinear_field_models",
+    "qcd_lattice_proxy",
+    "quantum_chemistry_proxy",
+    "quantum_field_noneq",
+    "spin_liquid_exotic",
+    "topological_correlated_materials"
+  ],
+  "control_tests": [
+    "magnetic_quench",
+    "phase_control_step800",
+    "resonance_pump"
+  ],
+  "questions_complete": {
+    "complete": 11,
+    "total": 19,
+    "pct": 57.89473684210526
+  },
+  "unresolved_cpu_ram_modules": [
+    {
+      "module": "spin_liquid_exotic",
+      "domain": "Matière condensée",
+      "observables": "énergie, pairing, densité locale, corrélations courte/moyenne portée",
+      "constraints": "réseaux 1D/2D petits-moyens; coût RAM élevé en 2D dense",
+      "status": "INTÉGRÉ"
+    },
+    {
+      "module": "topological_correlated_materials",
+      "domain": "Matière condensée",
+      "observables": "énergie, pairing, corrélateurs topologiques, estimateurs Chern approchés",
+      "constraints": "invariants sur petites grilles; pas de grande taille réaliste",
+      "status": "INTÉGRÉ"
+    },
+    {
+      "module": "correlated_fermions_non_hubbard",
+      "domain": "Condensée / chimie",
+      "observables": "énergie, pairing, densité locale, corrélateurs simples",
+      "constraints": "Hamiltoniens complexes limités à espaces réduits",
+      "status": "INTÉGRÉ"
+    },
+    {
+      "module": "multi_state_excited_chemistry",
+      "domain": "Chimie quantique",
+      "observables": "énergie par état, densité électronique locale, gap excité, pairing proxy",
+      "constraints": "petites molécules et bases réduites",
+      "status": "INTÉGRÉ"
+    },
+    {
+      "module": "bosonic_multimode_systems",
+      "domain": "Physique quantique",
+      "observables": "occupation de modes, énergie, corrélations mode-à-mode",
+      "constraints": "troncature de Fock nécessaire sur CPU",
+      "status": "INTÉGRÉ"
+    },
+    {
+      "module": "multiscale_nonlinear_field_models",
+      "domain": "Théorie des champs",
+      "observables": "énergie, pseudo-spectres locaux, extrema spatiaux/temps",
+      "constraints": "pas de QCD full-scale; schémas explicites bornés par stabilité",
+      "status": "INTÉGRÉ"
+    },
+    {
+      "module": "far_from_equilibrium_kinetic_lattices",
+      "domain": "Théorie des champs / noneq",
+      "observables": "énergie, pairing, spectre k, charge locale",
+      "constraints": "forte sensibilité au pas de temps",
+      "status": "INTÉGRÉ"
+    },
+    {
+      "module": "multi_correlated_fermion_boson_networks",
+      "domain": "Statistique / condensée",
+      "observables": "énergie, pairing, densité locale, corrélations moyenne portée",
+      "constraints": "montée combinatoire des interactions",
+      "status": "INTÉGRÉ"
+    }
+  ],
+  "toy_rows_current_run": 1,
+  "toy_empty_runs": [
+    "research_20260307T150327Z_6250",
+    "research_20260307T155616Z_2622",
+    "research_20260307T195557Z_3530",
+    "research_20260309T091948Z_2155",
+    "research_20260309T202843Z_8249",
+    "research_20260309T203732Z_505",
+    "research_20260310T002544Z_447",
+    "research_20260310T002823Z_616",
+    "research_20260310T011223Z_814"
+  ],
+  "checksums": {
+    "results/research_20260310T215445Z_720/tests/new_tests_results.csv": "552eefe75655d7cfd9d442cd1a6c5dd8bd06268b0d38772553be7c6aee85a7f4",
+    "results/research_20260310T215445Z_720/tests/expert_questions_matrix.csv": "e71d09bd9a24b35950c5ea6adb75d6cbaf71a6e5d192a1446a15911d57258e72",
+    "results/research_20260310T215445Z_720/tests/module_physics_metadata.csv": "5eb13a7d8e09e6597cf8dbb656f2fa6773aca2e5577ef58b0aab8ef284f43826",
+    "results/research_20260310T215445Z_720/tests/toy_model_validation.csv": "3c4ee02a9c5544ca9294877e3a0fbb1bc61c9dded5b13b702904345ea27390c7",
+    "results/research_20260310T215445Z_720/logs/baseline_reanalysis_metrics.csv": "8bf45017f86f244da72f7491743c27a5bf0d32b69de894bd9bd181352eb342fb"
+  },
+  "report": "RAPPORT/RAPPORT_ANALYSE_INDEPENDANTE_DEPOT_DISTANT_20260310T220356Z.md"
+}

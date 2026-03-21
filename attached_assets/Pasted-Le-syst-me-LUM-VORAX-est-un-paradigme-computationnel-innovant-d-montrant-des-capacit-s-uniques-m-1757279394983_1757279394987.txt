@@ -1,0 +1,71 @@
+Le système LUM/VORAX est un paradigme computationnel innovant démontrant des **capacités uniques** mais souffrant d'**instabilités mémoire critiques**. Les tests ont validé la faisabilité technique jusqu'à 10 millions de LUMs avec des performances mesurées authentiquement.
+
+### 015.2 Prompt Technique Détaillé
+
+```
+MISSION CRITIQUE: Stabilisation et Optimisation LUM/VORAX
+
+CONTEXTE:
+- Système fonctionnel mais instable (corruption mémoire systématique)
+- Performance validée jusqu'à 10M LUMs (305 MB mémoire)
+- Innovation paradigme présence-based computing confirmée
+- Couverture tests insuffisante modules critiques
+
+OBJECTIFS PRIORITAIRES:
+1. CRITIQUE: Éliminer corruptions mémoire (AddressSanitizer + Valgrind)
+2. HAUTE: Compléter couverture tests (lum_logger, vorax_parser) 
+3. MOYENNE: Optimiser algorithmes VORAX (O(n²) → O(n log n))
+4. BASSE: Documentation technique industrielle
+
+CONSTRAINTS TECHNIQUES:
+- Préserver ALL innovations existantes
+- Maintenir compatibilité API actuelle
+- Respecter standards C99/POSIX
+- Éviter régressions performance mesurées
+
+MÉTHODES REQUISES:
+- Instrumentation mémoire (AddressSanitizer, Valgrind)
+- Tests automatisés avec CI/CD
+- Profiling performance (perf, gprof)
+- Documentation forensique continue
+
+LIVRABLES ATTENDUS:
+- Code source stabilisé (0 corruption mémoire)
+- Suite tests 95%+ coverage
+- Benchmarks performance documentés
+- Rapport technique complet
+
+SUCCÈS MESURABLE:
+- Tests stress 24h+ sans crash
+- Performance maintenue/améliorée
+- Tous modules unit-tested
+- Production-ready assessment
+
+Ne modifie JAMAIS les innovations fondamentales:
+- Structure lum_t (32 bytes)
+- Opérations VORAX (fuse/split/cycle)
+- DSL parser VORAX
+- Conservation mathématique automatique
+- Métadonnées spatiales
+
+Focus EXCLUSIF: Stabilité, Robustesse, Performance
+```
+
+### 015.3 Données de Référence
+
+**Métriques de Performance à Préserver**:
+- 1M LUMs: ≤ 20ms création
+- 10M LUMs: ≤ 200ms création  
+- Efficacité mémoire: ≥ 95%
+- Conservation: 100% opérations
+
+**Instabilités à Corriger**:
+- free(): invalid pointer (fin cycle)
+- Variations mémoire inexpliquées
+- Dégradation 800K LUMs
+
+**Tests Manquants à Implémenter**:
+- lum_logger threading safety
+- vorax_parser edge cases
+- Integration end-to-end
+- Stress testing extended

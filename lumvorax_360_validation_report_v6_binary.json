@@ -1,0 +1,60 @@
+{
+  "report_name": "lumvorax_dependency_360_kaggle_single_cell_v6_binary",
+  "timestamp_ns": 1771865194504327638,
+  "runtime": {
+    "python": "3.12.12 (main, Oct 10 2025, 08:52:57) [GCC 11.4.0]",
+    "platform": "Linux-6.6.113+-x86_64-with-glibc2.35",
+    "cwd": "/kaggle/working",
+    "is_kaggle": true
+  },
+  "policy": {
+    "strict_no_fallback": true,
+    "require_dataset": true,
+    "require_so_presence": true,
+    "enforce_so_load": false,
+    "skip_roundtrip": false,
+    "source_header_validation_enabled": false,
+    "c_syntax_smoke_enabled": false
+  },
+  "dataset_expected": {
+    "native_lib": "liblumvorax.so",
+    "wheels": [
+      "imagecodecs-2026.1.14-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "imageio-2.37.2-py3-none-any.whl",
+      "lazy_loader-0.4-py3-none-any.whl",
+      "networkx-3.6.1-py3-none-any.whl",
+      "numpy-2.4.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "opencv_python-4.13.0.92-cp37-abi3-manylinux_2_17_x86_64.whl",
+      "packaging-26.0-py3-none-any.whl",
+      "pillow-12.1.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "scikit_image-0.26.0-cp312-cp312-manylinux_2_17_x86_64.whl",
+      "scipy-1.17.0-cp312-cp312-manylinux_2_17_x86_64.whl",
+      "tifffile-2026.2.16-py3-none-any.whl"
+    ]
+  },
+  "events": [
+    {
+      "ts_ns": 1771865194512868220,
+      "step": "dataset_root_missing",
+      "tried": [
+        "/kaggle/input/datasets/ndarray2000/nx47-dependencies",
+        "/kaggle/input/nx47-dependencies",
+        "/kaggle/input/lum-vorax-dependencies",
+        "/kaggle/input/lumvorax-dependencies"
+      ]
+    },
+    {
+      "ts_ns": 1771865194512877931,
+      "step": "fatal_error",
+      "error_type": "RuntimeError",
+      "error": "dataset_root_required_but_not_found"
+    }
+  ],
+  "warnings": [],
+  "dataset_root": null,
+  "status": "fail",
+  "error_type": "RuntimeError",
+  "error": "dataset_root_required_but_not_found",
+  "elapsed_ns": 8552453,
+  "elapsed_s": 0.008552453
+}

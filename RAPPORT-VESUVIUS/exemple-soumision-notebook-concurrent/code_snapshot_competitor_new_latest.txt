@@ -1,0 +1,348 @@
+0001: # ============================================================
+0002: # Vesuvius — SINGLE-PATH DROP-IN (public-anchored + private-seeded hysteresis)
+0003: # Goal: beat/at least match public 0.55 using ONE safe upgrade:
+0004: #   strong = (private_prob >= 0.90)
+0005: #   weak   = (private_prob >= 0.50) OR (public_argmax != 0)
+0006: #   mask   = binary_propagation(strong within weak) + closing + dust
+0007: #
+0008: # Writes: /kaggle/working/submission.zip
+0009: # ============================================================
+0010: 
+0011: from IPython.display import clear_output
+0012: import os
+0013: 
+0014: # protobuf stability (common Kaggle container mismatch)
+0015: os.environ.setdefault("PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION", "python")
+0016: os.environ["KERAS_BACKEND"] = "jax"
+0017: os.environ.setdefault("OMP_NUM_THREADS", "4")
+0018: os.environ.setdefault("MKL_NUM_THREADS", "4")
+0019: os.environ.setdefault("OPENBLAS_NUM_THREADS", "4")
+0020: os.environ.setdefault("NUMEXPR_NUM_THREADS", "4")
+0021: 
+0022: var="/kaggle/input/vsdetection-packages-offline-installer-only/whls"
+0023: !pip install \
+0024:   "$var"/keras_nightly-*.whl \
+0025:   "$var"/tifffile-*.whl \
+0026:   "$var"/imagecodecs-*.whl \
+0027:   "$var"/medicai-*.whl \
+0028:   --no-index \
+0029:   --find-links "$var"
+0030: clear_output()
+0031: 
+0032: # --- Protobuf compatibility patch (MessageFactory.GetPrototype) ---
+0033: try:
+0034:     from google.protobuf import message_factory as _message_factory
+0035:     if not hasattr(_message_factory.MessageFactory, "GetPrototype"):
+0036:         from google.protobuf.message_factory import GetMessageClass
+0037:         def _GetPrototype(self, descriptor):
+0038:             return GetMessageClass(descriptor)
+0039:         _message_factory.MessageFactory.GetPrototype = _GetPrototype
+0040:         print("Patched protobuf: added MessageFactory.GetPrototype")
+0041: except Exception as e:
+0042:     print("Could not patch protobuf MessageFactory:", e)
+0043: 
+0044: 
+0045: import time, zipfile
+0046: import numpy as np
+0047: import pandas as pd
+0048: import tifffile
+0049: import scipy.ndimage as ndi
+0050: from skimage.morphology import remove_small_objects
+0051: import keras
+0052: from medicai.transforms import Compose, NormalizeIntensity
+0053: from medicai.models import TransUNet
+0054: from medicai.utils.inference import SlidingWindowInference
+0055: 
+0056: print("Keras backend:", keras.config.backend(), "Keras version:", keras.version())
+0057: 
+0058: # ----------------------------
+0059: # CONFIG (minimal, safe)
+0060: # ----------------------------
+0061: CFG = dict(
+0062:     # model
+0063:     kaggle_model_path="/kaggle/input/vsd-model/keras/",
+0064:     weights_relpath="transunet/3/transunet.seresnext50.160px.comboloss.weights.h5",
+0065: 
+0066:     # SWI overlaps
+0067:     overlap_public=0.42,  # EXACT public 0.55
+0068:     overlap_base=0.43,    # EXACT private 0.55 (important!)
+0069:     overlap_hi=0.60,      # OV06
+0070:     OV06_MAIN_ONLY=True,
+0071: 
+0072:     # TTA
+0073:     USE_TTA=True,
+0074: 
+0075:     # binary logit definition (match your private 0.55)
+0076:     INK_MODE="fg12",
+0077: 
+0078:     # thresholds (match your private 0.55)
+0079:     T_low=0.50,
+0080:     T_high=0.90,
+0081: 
+0082:     # topology (match both notebooks' common setting)
+0083:     z_radius=3,
+0084:     xy_radius=2,
+0085:     dust_min_size=100,
+0086: 
+0087:     # warmup
+0088:     DO_WARMUP=True,
+0089: )
+0090: 
+0091: root_dir = "/kaggle/input/vesuvius-challenge-surface-detection"
+0092: test_dir = f"{root_dir}/test_images"
+0093: output_dir = "/kaggle/working/submission_masks"
+0094: zip_path = "/kaggle/working/submission.zip"
+0095: os.makedirs(output_dir, exist_ok=True)
+0096: 
+0097: test_df = pd.read_csv(f"{root_dir}/test.csv")
+0098: ids = test_df["id"].tolist()
+0099: print("Num test volumes:", len(ids))
+0100: 
+0101: ROI = (160, 160, 160)
+0102: 
+0103: # ----------------------------
+0104: # Transform (same style)
+0105: # ----------------------------
+0106: _val_pipeline = Compose([
+0107:     NormalizeIntensity(keys=["image"], nonzero=True, channel_wise=False),
+0108: ])
+0109: def val_transformation(image):
+0110:     return _val_pipeline({"image": image})["image"]
+0111: 
+0112: def load_volume(path):
+0113:     vol = tifffile.imread(path).astype(np.float32)
+0114:     return vol[None, ..., None]  # (1, D, H, W, 1)
+0115: 
+0116: # ----------------------------
+0117: # Numerics
+0118: # ----------------------------
+0119: def sigmoid_stable(x):
+0120:     x = np.asarray(x, dtype=np.float32)
+0121:     out = np.empty_like(x, dtype=np.float32)
+0122:     pos = x >= 0
+0123:     out[pos] = 1.0 / (1.0 + np.exp(-x[pos]))
+0124:     ex = np.exp(x[~pos])
+0125:     out[~pos] = ex / (1.0 + ex)
+0126:     return out
+0127: 
+0128: def logsumexp2(a, b):
+0129:     a = np.asarray(a, dtype=np.float32)
+0130:     b = np.asarray(b, dtype=np.float32)
+0131:     m = np.maximum(a, b)
+0132:     return m + np.log(np.exp(a - m) + np.exp(b - m) + 1e-12)
+0133: 
+0134: def binary_logit_from_multiclass_logits(logits_5d, mode="fg12"):
+0135:     x = np.asarray(logits_5d, dtype=np.float32)[0]  # (D,H,W,3)
+0136:     L0, L1, L2 = x[...,0], x[...,1], x[...,2]
+0137:     if mode == "fg12":
+0138:         return (logsumexp2(L1, L2) - L0).astype(np.float32, copy=False)
+0139:     elif mode == "class1":
+0140:         return (L1 - logsumexp2(L0, L2)).astype(np.float32, copy=False)
+0141:     else:
+0142:         raise ValueError(f"Unknown INK_MODE={mode}")
+0143: 
+0144: # ----------------------------
+0145: # Topology helpers
+0146: # ----------------------------
+0147: def build_anisotropic_struct(z_radius: int, xy_radius: int):
+0148:     z, r = int(z_radius), int(xy_radius)
+0149:     if z == 0 and r == 0:
+0150:         return None
+0151:     if z == 0 and r > 0:
+0152:         size = 2*r + 1
+0153:         struct = np.zeros((1, size, size), dtype=bool)
+0154:         cy = cx = r
+0155:         for dy in range(-r, r+1):
+0156:             for dx in range(-r, r+1):
+0157:                 if dy*dy + dx*dx <= r*r:
+0158:                     struct[0, cy+dy, cx+dx] = True
+0159:         return struct
+0160:     if z > 0 and r == 0:
+0161:         struct = np.zeros((2*z+1, 1, 1), dtype=bool)
+0162:         struct[:, 0, 0] = True
+0163:         return struct
+0164:     depth = 2*z + 1
+0165:     size  = 2*r + 1
+0166:     struct = np.zeros((depth, size, size), dtype=bool)
+0167:     cz = z; cy = cx = r
+0168:     for dz in range(-z, z+1):
+0169:         for dy in range(-r, r+1):
+0170:             for dx in range(-r, r+1):
+0171:                 if dy*dy + dx*dx <= r*r:
+0172:                     struct[cz+dz, cy+dy, cx+dx] = True
+0173:     return struct
+0174: 
+0175: def seeded_hysteresis_with_topology(
+0176:     prob, pub_fg_bool,
+0177:     T_low=0.50, T_high=0.90,
+0178:     z_radius=3, xy_radius=2, dust_min_size=100
+0179: ):
+0180:     prob = np.asarray(prob, dtype=np.float32)
+0181:     strong = prob >= float(T_high)
+0182: 
+0183:     # SAFE expansion: weak includes private weak OR public foreground
+0184:     weak = (prob >= float(T_low)) | pub_fg_bool
+0185: 
+0186:     if not strong.any():
+0187:         return np.zeros_like(prob, dtype=np.uint8)
+0188: 
+0189:     struct_hyst = ndi.generate_binary_structure(3, 3)
+0190:     mask = ndi.binary_propagation(strong, mask=weak, structure=struct_hyst)
+0191: 
+0192:     if not mask.any():
+0193:         return np.zeros_like(prob, dtype=np.uint8)
+0194: 
+0195:     struct_close = build_anisotropic_struct(z_radius, xy_radius)
+0196:     if struct_close is not None:
+0197:         mask = ndi.binary_closing(mask, structure=struct_close)
+0198: 
+0199:     if int(dust_min_size) > 0:
+0200:         mask = remove_small_objects(mask.astype(bool), min_size=int(dust_min_size))
+0201: 
+0202:     return mask.astype(np.uint8)
+0203: 
+0204: # ----------------------------
+0205: # Model + SWI (logits)
+0206: # ----------------------------
+0207: weights_path = f"{CFG['kaggle_model_path']}/{CFG['weights_relpath']}"
+0208: 
+0209: model = TransUNet(
+0210:     input_shape=(160, 160, 160, 1),
+0211:     encoder_name="seresnext50",
+0212:     classifier_activation=None,  # TRUE logits
+0213:     num_classes=3,
+0214: )
+0215: model.load_weights(weights_path)
+0216: print("Model params (M):", model.count_params() / 1e6)
+0217: 
+0218: def build_swi(overlap):
+0219:     return SlidingWindowInference(
+0220:         model,
+0221:         num_classes=3,
+0222:         roi_size=ROI,
+0223:         sw_batch_size=1,
+0224:         mode="gaussian",
+0225:         overlap=float(overlap),
+0226:     )
+0227: 
+0228: swi_public = build_swi(CFG["overlap_public"])  # public 0.55
+0229: swi_base   = build_swi(CFG["overlap_base"])    # private base 0.55
+0230: swi_hi     = build_swi(CFG["overlap_hi"])      # OV06
+0231: 
+0232: # ----------------------------
+0233: # TTA (same set)
+0234: # ----------------------------
+0235: def iter_tta(volume):
+0236:     yield volume, (lambda y: y)
+0237:     for axis in [1, 2, 3]:
+0238:         v = np.flip(volume, axis=axis)
+0239:         inv = (lambda y, axis=axis: np.flip(y, axis=axis))
+0240:         yield v, inv
+0241:     for k in [1, 2, 3]:
+0242:         v = np.rot90(volume, k=k, axes=(2, 3))
+0243:         inv = (lambda y, k=k: np.rot90(y, k=-k, axes=(2, 3)))
+0244:         yield v, inv
+0245: 
+0246: # ----------------------------
+0247: # Predict BOTH streams in one loop (single final path)
+0248: # - Public: mean multiclass logits -> argmax labels
+0249: # - Private: OV06 main-only + mean binary logits -> prob
+0250: # ----------------------------
+0251: def predict_pub_labels_and_private_prob(volume):
+0252:     mode = CFG["INK_MODE"]
+0253: 
+0254:     if not CFG["USE_TTA"]:
+0255:         l_pub = np.asarray(swi_public(volume))
+0256:         pub_labels = l_pub.argmax(-1).astype(np.uint8).squeeze()
+0257: 
+0258:         l_prv = np.asarray(swi_hi(volume))
+0259:         s = binary_logit_from_multiclass_logits(l_prv, mode=mode)
+0260:         prob = sigmoid_stable(s)
+0261:         return pub_labels, prob
+0262: 
+0263:     logits_sum = None
+0264:     s_sum = None
+0265:     n = 0
+0266: 
+0267:     for t, (v, inv) in enumerate(iter_tta(volume)):
+0268:         # public stream
+0269:         l_pub = np.asarray(swi_public(v))
+0270:         l_pub = inv(l_pub)
+0271:         logits_sum = l_pub.astype(np.float32) if logits_sum is None else (logits_sum + l_pub.astype(np.float32))
+0272: 
+0273:         # private stream (OV06 main-only)
+0274:         if CFG["OV06_MAIN_ONLY"]:
+0275:             swi_use = swi_hi if (t == 0) else swi_base
+0276:         else:
+0277:             swi_use = swi_hi
+0278: 
+0279:         l_prv = np.asarray(swi_use(v))
+0280:         l_prv = inv(l_prv)
+0281:         s = binary_logit_from_multiclass_logits(l_prv, mode=mode)
+0282:         s_sum = s.astype(np.float32) if s_sum is None else (s_sum + s.astype(np.float32))
+0283: 
+0284:         n += 1
+0285: 
+0286:     mean_logits = logits_sum / float(n)
+0287:     pub_labels = mean_logits.argmax(-1).astype(np.uint8).squeeze()
+0288: 
+0289:     s_mean = (s_sum / float(n)).astype(np.float32, copy=False)
+0290:     prob = sigmoid_stable(s_mean)
+0291:     return pub_labels, prob
+0292: 
+0293: # ----------------------------
+0294: # Warmup (compile once)
+0295: # ----------------------------
+0296: def warmup(volume):
+0297:     _ = np.asarray(swi_public(volume))
+0298:     _ = np.asarray(swi_base(volume))
+0299:     _ = np.asarray(swi_hi(volume))
+0300: 
+0301: # ----------------------------
+0302: # Run + zip
+0303: # ----------------------------
+0304: print("CFG:",
+0305:       f"overlap_public={CFG['overlap_public']}, overlap_base={CFG['overlap_base']}, overlap_hi={CFG['overlap_hi']},",
+0306:       f"INK_MODE={CFG['INK_MODE']}, T_low={CFG['T_low']}, T_high={CFG['T_high']},",
+0307:       f"OV06_MAIN_ONLY={CFG['OV06_MAIN_ONLY']}")
+0308: 
+0309: t_global0 = time.perf_counter()
+0310: 
+0311: with zipfile.ZipFile(zip_path, "w", compression=zipfile.ZIP_DEFLATED) as zf:
+0312:     for i, image_id in enumerate(ids):
+0313:         t0 = time.perf_counter()
+0314: 
+0315:         tif_path = f"{test_dir}/{image_id}.tif"
+0316:         volume = load_volume(tif_path)
+0317:         volume = val_transformation(volume)
+0318: 
+0319:         if i == 0 and CFG["DO_WARMUP"]:
+0320:             print("Warming up JAX (compile once)...")
+0321:             warmup(volume)
+0322: 
+0323:         pub_labels, prob = predict_pub_labels_and_private_prob(volume)
+0324: 
+0325:         # public fg anchor (no topology here; used only as weak region expansion)
+0326:         pub_fg = (pub_labels != 0)
+0327: 
+0328:         # single final path
+0329:         output = seeded_hysteresis_with_topology(
+0330:             prob,
+0331:             pub_fg_bool=pub_fg,
+0332:             T_low=CFG["T_low"],
+0333:             T_high=CFG["T_high"],
+0334:             z_radius=CFG["z_radius"],
+0335:             xy_radius=CFG["xy_radius"],
+0336:             dust_min_size=CFG["dust_min_size"],
+0337:         )
+0338: 
+0339:         out_path = f"{output_dir}/{image_id}.tif"
+0340:         tifffile.imwrite(out_path, output.astype(np.uint8))
+0341:         zf.write(out_path, arcname=f"{image_id}.tif")
+0342:         os.remove(out_path)
+0343: 
+0344:         dt = time.perf_counter() - t0
+0345:         elapsed = time.perf_counter() - t_global0
+0346:         print(f"[{i+1}/{len(ids)}] id={image_id} | {dt/60:.2f} min | elapsed {elapsed/3600:.2f} h | positives={int(output.sum())}")
+0347: 
+0348: print("Submission ZIP:", zip_path)

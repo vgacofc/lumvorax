@@ -1,0 +1,27 @@
+Ne pas faire référence au nom des anciens projets que du nouveau projet actuel ! 
+voici tout ce qui a été fais pour que tu puise continue a partir de la ce quil reste a faire src/advanced_calculations/quantum_problem_hubbard_hts/CHAT/analysechatgpt23.2.md!
+
+produite lauto prompt pour reponde a tout ces question et posser selle que jaurais oublier que des expert poserais en analises les dernier resultat et code!
+
+ Procede aux réalisations du src/advanced_calculations/quantum_problem_hubbard_hts/CHAT/analysechatgpt20.md, 21.md, 22.md 23.md et explications des problèmes et solution et voici ce qui a déjà été fait par l’agent précédent et doit continué d’où ça c’est arrêté :
+
+
+Le sistem lum vorax fonctionne vraiment ? Quel sont les analyse croisé des log? Combien de lignes de log? Quesque il a réussi à capturer réellement ? Manque til des affichages ? Quel nouveau problème, bug cacher en profondeur découverte? Anomalie ? Nouvelles découvertes non repertorier dans la littérature a ce jour? Nouvelles questions expert ? nouvelle question critique expert et autor-eponse? signification des resultat et possibiliter nouvelle possible a integrer? tout les metriques system et hardware standard scientifique complete recuperer?  combien de qubit simulé reellement? comde particule, atome ou autre chose que je ne sais pas le nom avant nous reussi a simulé? quesque nous avons reussi a simulé reellement ? % de et diference de tout cela avec les donner standard des concurrent disponible en ligne de leur benchmark?  ajoute tout ce dans j'aurais oublier de preciser pour combler le lacune...
+
+
+
+Quel est la diference et comparaison exacte du Tempering Monte Carlo  avec nos deux version version fullscale et avanced? 
+
+quelque l'un a que les autre on  et vise versa?
+
+nos version utilise quoi excatement pour fonctionner et leur fonctionnment et camparaison de diference ?
+
+
+et je te demande la granulariter maximal, je voulais dire 100% ! c'esta dire steps par steps et ( analise et inspection des possibiliter de granulariter a linterieur meme du steps, un espesse de phractal staps encore plus profond...)
+
+inspection en profondeur du vienne reellement le input, sont til valider a 100% ?
+procesus de calcul en arriere plan calcule par calcule, qui calcule quoi a quel moment exacte pour suivre le flux et savoir quil fais quoi, qui influence quoi et til reellement?
+
+quel sont le information que nous avons qui expliquerais eactement pourquoi le MC Standard piégé dans minima locaux? je te rappel que tu a accex au code sources complet, au log, au code de test? de code de shell!! donc tu dois invertiguer tout cela encore plus en profondeur pour trouver le explication reel, integrer les nouveau test necesaire pour valider ou invalider , les question necesaire manquante?
+
+scan, diagnostic,  audit code,  log, md et analyse profonde croisée profonde! analyse profonde, analyse et inspection de analyse toi meme des analyse chatgpt src/advanced_calculations/quantum_problem_hubbard_hts/CHAT/analysechatgpt23.1.md pour verifier cela toi meme enprofondeur, audit de  tout les rapport du   src/advanced_calculations/quantum_problem_hubbard_hts/CHAT et du backups 

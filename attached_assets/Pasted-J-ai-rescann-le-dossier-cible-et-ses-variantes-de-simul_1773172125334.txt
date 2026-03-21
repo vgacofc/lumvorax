@@ -1,0 +1,102 @@
+J’ai rescanné le dossier cible et ses variantes de simulation :
+
+Dossier actif : src/advanced_calculations/quantum_problem_hubbard_hts/src/ + include/.
+
+Snapshots backup de simulation (ex. research_cycle_20260304T030955Z) avec les mêmes noyaux.
+
+Détection des fichiers simulation (.c/.h/.py/Makefile) dans ce sous-arbre : 422 fichiers détectés.
+
+Les dépendances de compilation du noyau C actif sont essentiellement standards libc + header local hubbard_hts_module.h (pas de dépendance solver externe dans src/ via include direct).
+
+3) Diagnostic consolidé (objectif: énergie physique réelle dès la 1ère équation)
+A. Anomalies critiques confirmées
+Variables physiques sans unité explicite (energy, pairing, t, u, mu) dans structures et solveurs.
+➜ Risque de mélange d’unités inter-modules.
+
+Intégration explicite type Euler (d[i] += ...) dans le cœur proxy principal et indépendant.
+➜ Sensible à la dérive numérique. 
+
+Injection artificielle dans l’énergie physique (+ burn * 1e-*) au lieu d’une métrique séparée.
+➜ Contamine la mesure d’énergie. 
+
+Paramètres “proxy” non physiques dans les campagnes (t=1.0, u=8.0, etc.) au lieu de valeurs physiques explicites par module. 
+
+Métadonnée explicite “euler_explicit” déjà inscrite dans les exports.
+➜ Confirme que le schéma actuel n’est pas celui demandé (Crank-Nicolson/symplectique selon domaine).
+
+Backup ancien (20260304T030955Z) cumule energy += sans normalisation locale dans la boucle (exactement ton point).
+
+4) Plan / Roadmap A→Z (sans exécution de correction pour l’instant)
+Phase 1 — Contrat d’unités global (bloquant)
+Introduire un header d’unités internes (units.h) : m, ns, kg, eV, K.
+
+Pour chaque module:
+
+Hubbard sortie: *_meV
+
+QCD sortie: *_GeV
+
+Nucléaire sortie: *_MeV
+
+Renommer variables critiques: energy_eV_internal, energy_meV_output, time_ns, etc.
+
+Phase 2 — Solveur: énergie physique dès première équation
+Convertir les constantes du Hamiltonien avant la boucle solveur (pas après export).
+
+Remplacer schéma explicite instable par schéma conforme (proxy stable documenté ou CN/symplectique selon la nature du solveur).
+
+Isoler/supprimer burn de la variable d’énergie physique.
+
+Phase 3 — Normalisation & observables
+Normalisation cohérente par site (N_sites) pour énergie et observables concernées.
+
+Empêcher double-normalisation spatio-temporelle ambiguë dans les traces.
+
+Phase 4 — Tests scientifiques automatiques
+Drift énergie relatif strict.
+
+Invariant norme d’état (là où état quantique explicite est utilisé).
+
+Check dimensionnel H*t/ħ.
+
+Phase 5 — Logging/traçabilité
+CSV/JSON persistants: % progression, UTC, checksum état, seed/module/version.
+
+Colonnes standardisées demandées:
+step, energy_meV, energy_per_site_meV, temperature_K, magnetization, pairing, sign, drift_energy.
+
+5) Tableau “avant / après” (lignes exactes à modifier)
+Fichier	Ligne	Avant	Après (proposé)	Raison
+.../include/hubbard_hts_module.h	37	double energy;	double energy_eV_internal; (+ sortie dédiée energy_meV)	Unité explicite obligatoire
+.../include/hubbard_hts_module.h	38	double pairing;	double pairing_norm;	Observable explicite
+.../src/hubbard_hts_module.c	198	step_energy += pb->interaction_u * ...	step_energy_eV += interaction_u_eV * ... (ou meV direct Hubbard)	Énergie physique dès l’équation source
+.../src/hubbard_hts_module.c	210	out.energy = step_energy + burn * 1e-8;	out.energy_eV_internal = step_energy_eV; (burn_metric séparé)	Éliminer injection artificielle
+.../src/hubbard_hts_module.c	246-250	problèmes en t=1.0,u=8.0...	paramètres physiques explicites par module	Fin des unités naturelles/proxy
+.../src/hubbard_hts_research_cycle.c	22	double t, u, mu, temp;	double t_eV, u_eV, mu_eV, temp_K;	Anti-contamination unités
+.../src/hubbard_hts_research_cycle.c	166	d[i] += dt_scale * (...)	schéma stable remplaçant Euler explicite	Stabilité numérique
+.../src/hubbard_hts_research_cycle.c	198	r.energy = step_energy + burn * 1e-10;	r.energy_eV = step_energy_eV; + burn_metric	Mesure énergétique propre
+.../src/hubbard_hts_research_cycle.c	293	d[i] += 0.017L * ...	même schéma stable + prise en compte cohérente dt	Cohérence solveur indépendant
+.../src/hubbard_hts_research_cycle.c	610	...,euler_explicit,...	...,<nouveau_schema>,...	Métadonnée alignée implémentation
+.../src/hubbard_hts_research_cycle.c	633	energy_norm = rr.energy / (volume * steps + EPS);	séparer energy_per_site et moyenne temporelle	Éviter normalisation ambiguë
+.../backups/...030955Z/src/hubbard_hts_module.c	117	out.energy += ...;	out.energy += (...)/N_sites;	Fix backlog historique
+.../backups/...030955Z/src/hubbard_hts_module.c	124	out.energy += burn * 1e-8;	burn séparé ou /N_sites selon stratégie	Stabiliser historique
+.../backups/...030955Z/src/hubbard_hts_research_cycle.c	119	r.energy += local_energy;	r.energy += local_energy / N_sites;	Ton anomalie identifiée
+.../backups/...030955Z/src/hubbard_hts_research_cycle.c	129	r.energy += burn * 1e-8;	séparer métrique ou normaliser strictement	Énergie non polluée
+Références de lignes. 
+
+6) Checklist de validation (avant feu vert correction)
+ Unités internes SI documentées et imposées.
+
+ Conversion module explicite (Hubbard meV / QCD GeV / nucléaire MeV).
+
+ Énergie physique calculée dès la première équation du solveur.
+
+ Aucune injection burn dans énergie physique.
+
+ Intégrateur stable remplaçant Euler explicite.
+
+ Normalisation observables homogène par site.
+
+ Tests auto: drift énergie, dimensionless, invariants.
+
+ Logs complets: UTC + checksum + progression + seed/version.

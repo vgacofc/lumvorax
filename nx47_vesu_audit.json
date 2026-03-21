@@ -1,0 +1,32 @@
+[
+    {
+        "timestamp_ns": 1770157264665587816,
+        "event": "INFERENCE_START",
+        "details": "Starting global inference",
+        "signature": "dd3cd87d51ce4d8d3c804ec9d34f8a9e861d04f2f0e21d40a67f8d6c398d13bcb4e5a39609a3e907b25fad5af9edd7ab6bb73dcfc56fe95c4f64a01f1040fa31"
+    },
+    {
+        "timestamp_ns": 1770157264666113856,
+        "event": "PROCESSING_FRAGMENT",
+        "details": "a",
+        "signature": "312f6d94a3a5fbac80f51804b354f1bd680aad02a92317e2f0f8e6478812d0305a9e2fa0cbe700dad0bc58a826a7e7edd7ac8a90696b990fca4824fbdc58c58d"
+    },
+    {
+        "timestamp_ns": 1770157264666128786,
+        "event": "LOAD_START",
+        "details": "Loading fragment a",
+        "signature": "d75844365eb3d2c4a3262fb521cb9ede952118aab77fe4acd2e27337332d10bf68cf1c9d8596c1063fd6bad94d285e8b439142a6bc1f801bb9da5b4b5183e60f"
+    },
+    {
+        "timestamp_ns": 1770157264666663676,
+        "event": "LOAD_END",
+        "details": "Found 0 layers for a",
+        "signature": "13d200da9f6954e357742dc73b2c6a08f8a15f1aeaf2068211e20635326ffea948d00f9a8a1db7d5991a5a379e0513983c4518cea11029e7eaa18cba8a8afc04"
+    },
+    {
+        "timestamp_ns": 1770157264742536265,
+        "event": "SUBMISSION_GENERATED",
+        "details": "submission.csv saved with 1 entries",
+        "signature": "9fd87a82b87fa4249abe92da6ce909dd2dec701bc8859c2a846032a2369b7c488ba47cbd5810c777f06aeaf01b04e0151e78855ebb3504ae6d48cbe191e5cf75"
+    }
+]

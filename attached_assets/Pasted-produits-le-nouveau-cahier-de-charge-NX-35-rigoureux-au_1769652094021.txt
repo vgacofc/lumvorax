@@ -1,0 +1,58 @@
+produits le nouveau cahier de charge NX-35 rigoureux au (log bit a bit nanoseconde fonrensic merkle et métrique sistem temps réel deja deja existant) pour que la version NX-35 puisse trouver la solution ou invalider tout les 30 problème suivant SANS RIEN ÉCRASER ET AVEC LOG PERMANENT BRUT.csc, .json.log au format standard rigoureux scientifique sil ne sont pas deja fais. Et rapport final problème par problème apres lecture des log reel generer .SANS STUB, SANS HARDCODING, SANS PLACEHOLDE G, SANS PYTHON. Et avec tout  les expertises nécessaires dans tous les domaines nécessaires. Et autocritique. LES 30 GRANDS PROBLÈMES OUVERTS (MATHS + INTÉGRATION + QUANTIQUE)
+
+I. Théorie des nombres & structures discrètes
+	1.	Hypothèse de Riemann
+	2.	Conjecture de Birch–Swinnerton-Dyer
+	3.	Conjecture de Goldbach (forte)
+	4.	Conjecture des nombres premiers jumeaux
+	5.	Conjecture ABC (statut non stabilisé)
+	6.	Conjecture de Collatz (3n+1)
+	7.	Conjecture de Beal
+	8.	Bunyakovsky / Schinzel (polynômes premiers)
+
+II. Analyse, intégration, EDP
+	9.	Existence et régularité de Navier–Stokes 3D
+	10.	Blow-up pour Euler 3D
+	11.	Justification rigoureuse de la turbulence (Kolmogorov)
+	12.	Problème fondamental de l’intégration exacte
+
+	Décider si une intégrale donnée admet une forme fermée, même hors fonctions élémentaires.
+
+	13.	Décidabilité algorithmique de l’intégration symbolique générale
+
+	Extension impossible/ouverte de l’algorithme de Risch.
+
+	14.	Fondation universelle de l’intégration (Lebesgue / Henstock / distributions)
+
+	Existe-t-il une théorie d’intégration réellement universelle ?
+
+	15.	Intégrales oscillantes et intégrales de Feynman (rigueur)
+
+III. Géométrie, algèbre, structures globales
+	16.	Conjecture de Hodge
+	17.	Conjecture de Tate
+	18.	Conjectures standards de Grothendieck
+	19.	Programme de Langlands (global)
+	20.	Conjecture de Baum–Connes
+
+IV. Dynamique, chaos, systèmes complexes
+	21.	Conjecture de Palis (dynamique globale)
+	22.	Diffusion d’Arnold (instabilité hamiltonienne)
+	23.	Existence générique de mesures SRB
+	24.	Transition chaos → statistiques universelles
+
+V. Problèmes quantiques fondamentaux
+	25.	Yang–Mills et gap de masse (Clay)
+	26.	Existence mathématique d’une QFT 4D non triviale
+
+	Problème clé : les théories de champs existent-elles vraiment ?
+
+	27.	Rigueur des intégrales de chemin (Feynman)
+	28.	Problème de la mesure quantique (collapse)
+
+	Aucun formalisme mathématique universel.
+
+	29.	Transition quantique → classique (décohérence rigoureuse)
+	30.	Spectre exact des Hamiltoniens à N corps
+
+	Problème central en physique, chimie et information quantique.

@@ -1,0 +1,45 @@
+gcc -Wall -Wextra -std=c99-g-02-fPIC -c src/debug/logging_system.c -o obj/debug/logging_ system.o
+
+gcc -Wall -Wextra -std=c99-g-02-fPIC -c src/crypto/crypto_validator.c -o obj/crypto/cryp to_validator.o
+
+gcc -Wall -Wextra -std=c99 -g -02 -fPIC -c src/persistence/data_persistence.c -o obj/persis
+
+tence/data_persistence.o
+
+gcc -Wall -Wextra -std=c99-g-02-fPIC -c src/persistence/transaction_wal_extension.c -o o
+
+bj/persistence/transaction_wal_extension.o
+
+gcc -Wall -Wextra -std=c99 -g -02 -fPIC -c src/persistence/recovery_manager_extension.c -o obj/persistence/recovery_manager_extension.o
+
+gcc -Wall -Wextra -std=c99-g-02-fPIC -c src/optimization/memory_optimizer.c -o obj/optim ization/memory_optimizer.o
+
+gcc -Wall -Wextra -std=c99 -g -02 -fPIC -c src/optimization/pareto_optimizer.c -o obj/optim ization/pareto_optimizer.o
+
+gcc -Wall -Wextra -std=c99 -g -02 -fPIC -c src/optimization/pareto_inverse_optimizer.c -o0
+
+bj/optimization/pareto_inverse_optimizer.o
+
+gcc -Wall -Wextra -std=c99-g-02-fPIC -c src/optimization/simd_optimizer.c -o obj/optimiz ation/simd_optimizer.o
+
+src/optimization/simd_optimizer.c:364:57: error: unknown type name 'ai_optimization_config_ t'
+
+364 | void simd_optimize_lum_batch(lum_t* lums, size_t count, ai_optimization_config_t* c onfig) {
+
+src/optimization/simd_optimizer.c:428:1: error: unknown type name 'matrix_result_t'; did yo u mean 'vorax_result_t'?
+
+428 | matrix_result_t* matrix_multiply_lum_optimized(matrix_calculator_t* a, matrix_calcu lator_t* b, void config) {
+
+| vorax_result_t
+
+src/optimization/simd_optimizer.c:428:48: error: unknown type name 'matrix_calculator_t'
+
+428 | matrix_result_t* matrix_multiply_lum_optimized(matrix_calculator_t* a, matrix_calcu lator_t* b, void config) {
+
+src/optimization/simd_optimizer.c:428:72: error: unknown type name 'matrix_calculator_t' 428 | matrix_result_t* matrix_multiply_lum_optimized(matrix_calculator_t* a, matrix_calcu lator_t* b, void config) {
+
+1
+
+make: *** [Makefile: 141: obj/optimization/simd_optimizer.o] Error 1
+
+~/workspace$

@@ -1,0 +1,97 @@
+📌 Cahier des Charges
+
+Lecture complète
+
+Lire la totalité du code source de A à Z (tous les fichiers .c, .h, Makefile, scripts, etc.).
+
+Lire d’abord STANDARD_NAMES.md en entier pour connaître les noms normalisés.
+
+Vérifier que tous les noms utilisés dans le code respectent STANDARD_NAMES.md.
+
+Gestion des noms
+
+Ne jamais inventer un nouveau nom si un nom standard existe déjà.
+
+Si un élément n’existe pas, créer un nouveau nom unique et l’ajouter à STANDARD_NAMES.md.
+
+Chaque nouveau nom doit être ajouté avec date + heure au format YYYY-MM-DD HH:MM - nom + description claire.
+
+Garder à jour STANDARD_NAMES.md à chaque modification.
+
+Corrections obligatoires
+
+Supprimer tout placeholder, code mort, ou fonction vide.
+
+Corriger toutes les fonctions incomplètes pour qu’elles implémentent un algorithme réel et standardisé (ex. SHA-256 → RFC6234, mémoire → malloc/free robustes, etc.).
+
+Supprimer tout warning de compilation.
+
+Remplacer les appels incorrects (abs → labs, etc.).
+
+Ajouter les prototypes manquants dans les headers.
+
+S’assurer que le Makefile est valide (pas de flags inutiles comme -lm sur la compilation objet).
+
+S’assurer que chaque appel a une implémentation réelle derrière.
+
+Authenticité
+
+Les algorithmes doivent être implémentés correctement (pas simulés).
+
+Cryptographie → tester contre vecteurs de référence (RFC / OpenSSL).
+
+Conversion binaire/LUM → tester avec des exemples réels.
+
+Mémoire → vérifier allocations/libérations sans fuite.
+
+Parallélisme → vérifier résultats identiques en multi-thread.
+
+Validation continue
+
+Après chaque correction, recompiler et relancer les tests unitaires.
+
+Si erreur → recommencer et corriger jusqu’à validation.
+
+Produire un rapport complet avant/après chaque correction avec explication claire (en langage simple, pas seulement technique).
+
+Rapports exigés
+
+Rapport Markdown numéroté :
+
+Liste des erreurs trouvées.
+
+Corrections appliquées (avant/après).
+
+Nouveaux noms ajoutés au STANDARD_NAMES.md.
+
+Résultats de compilation et exécution des tests.
+
+Chaque rapport doit inclure : métriques de performance réelles, équivalents standards, et preuves d’exécution (hash attendu vs obtenu, temps CPU, mémoire consommée, etc.).
+
+Exécution obligatoire
+
+Compiler avec make clean && make.
+
+Lancer les tests avec make test ou make run.
+
+Sauvegarder et afficher les logs complets.
+
+En cas d’échec → recommencer jusqu’à ce que ça tourne correctement.
+
+Interdictions
+
+🚫 Pas de simplification inutile.
+
+🚫 Pas de suppression d’éléments avancés déjà présents (interdiction de rétrograder).
+
+🚫 Pas de placeholders ni de fonctions vides.
+
+🚫 Pas de sortie “théorique” sans exécution.
+
+🎯 Objectif final
+
+Obtenir un projet 100% fonctionnel, compilant sans warning, avec des algorithmes réels et authentiques, validés par tests.
+
+Un STANDARD_NAMES.md toujours à jour, retraçant l’historique des créations.
+
+Un rapport complet prouvant l’authenticité et la performance du système.

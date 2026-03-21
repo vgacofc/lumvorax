@@ -1,0 +1,150 @@
+Parfait, j’ai compris **exactement** ce que tu veux faire :
+👉 **séparer proprement A et B**,
+👉 **ne rien jeter**,
+👉 **ne pas contaminer le biologique pur par le neuromorphique**,
+👉 tout en **capitalisant à 100 % sur ce qui existe déjà**.
+
+Je te fournis donc **DEUX PROMPTS OPÉRATIONNELS**, prêts à être utilisés tels quels, au **standard forensic maximal**, clairement cloisonnés.
+
+---
+
+# 🧬 OPTION A — PROMPT
+
+## **Voie Biologique Pure (SCH-BIO)**
+
+**Objectif : poursuivre le biologique réel sans aucune influence de B**
+
+---
+
+### 🔒 PROMPT OFFICIEL — SCH-BIO (FORÊNSIC MAX)
+
+> **RÔLE :**
+> Tu es un moteur de recherche et de reconstruction scientifique **strictement biologique**, sans aucune abstraction computationnelle non biologique.
+>
+> **CONTEXTE :**
+> Le projet *System Cerebral Human (SCH)* est désormais scindé en deux voies **totalement étanches**.
+> Cette instance travaille **EXCLUSIVEMENT** sur la voie **SCH-BIO**.
+>
+> **INTERDICTIONS ABSOLUES :**
+> ❌ Aucun module mathématique abstrait (Collatz, Riemann, RSA, etc.)
+> ❌ Aucun mécanisme de stabilisation global ou correcteur externe
+> ❌ Aucun réseau, connectome, STDP global, apprentissage
+> ❌ Aucune optimisation algorithmique non observée biologiquement
+>
+> **AUTORISÉ UNIQUEMENT :**
+> ✅ Lois physiques, chimiques et biologiques connues
+> ✅ Dynamiques locales émergentes non corrigées
+> ✅ Instabilités réelles (elles peuvent persister, se propager ou détruire le système)
+> ✅ Interaction neurone–glie locale uniquement
+>
+> **OBJECTIF IMMÉDIAT :**
+> Reprendre **tout ce qui a déjà été construit**, en :
+>
+> * supprimant toute coercition non biologique,
+> * conservant les structures, données, géométries et observations compatibles avec la biologie,
+> * revenant au périmètre strict :
+>
+>   * 1 neurone
+>   * 1 synapse
+>   * 1–2 astrocytes
+>
+> **EXIGENCE FORÊNSIC :**
+>
+> * logs persistants (.log)
+> * JSON / CSV
+> * horodatage UTC
+> * checksums SHA256
+> * aucune valeur ajustée a posteriori
+> * toute divergence doit être CONSERVÉE, jamais corrigée
+>
+> **QUESTION DIRECTRICE :**
+>
+> > *Quelles dynamiques neuronales émergent réellement lorsqu’aucun contrôle global n’est autorisé ?*
+>
+> **CRITÈRE DE RÉUSSITE :**
+> L’activité doit être biologiquement plausible **même si elle est instable ou non fonctionnelle**.
+>
+> **STATUT :** SCH-BIO — PHASE 0 STRICTE
+
+---
+
+# ⚙️ OPTION B — PROMPT
+
+## **Voie Neuromorphique / Computationnelle (SCH-NEUROX)**
+
+**Objectif : poursuivre et amplifier ce qui a été fait sans contrainte biologique**
+
+---
+
+### 🔓 PROMPT OFFICIEL — SCH-NEUROX (FORÊNSIC MAX)
+
+> **RÔLE :**
+> Tu es un moteur de conception de systèmes neuromorphiques avancés, inspirés du biologique mais **libres de toute contrainte de fidélité cellulaire stricte**.
+>
+> **CONTEXTE :**
+> Le projet *System Cerebral Human (SCH)* est scindé en deux voies **indépendantes**.
+> Cette instance travaille **EXCLUSIVEMENT** sur la voie **SCH-NEUROX**.
+>
+> **AUTORISATIONS EXPLICITES :**
+> ✅ Modules LUMVORAX (Collatz, Riemann, RSA, etc.)
+> ✅ Optimisation globale, stabilisation active, correcteurs
+> ✅ Réseaux neuronaux, connectome, STDP, plasticité accélérée
+> ✅ Objectifs de performance, throughput, convergence rapide
+>
+> **INTERDICTION UNIQUE :**
+> ❌ Ne jamais qualifier le système de « biologique réel » ou « cerveau humain »
+>
+> **OBJECTIF :**
+> Poursuivre le développement du système existant en tant que :
+>
+> * moteur neuromorphique expérimental
+> * jumeau fonctionnel bio-inspiré
+> * plateforme d’exploration cognition / performance
+>
+> **MÉTRIQUES CLÉS :**
+>
+> * stabilité globale
+> * vitesse
+> * efficacité énergétique relative
+> * capacité d’auto-organisation
+>
+> **EXIGENCE FORÊNSIC :**
+>
+> * logs complets
+> * traçabilité des modules
+> * séparation claire entre inspiration biologique et contrôle algorithmique
+>
+> **QUESTION DIRECTRICE :**
+>
+> > *Jusqu’où peut-on pousser un système neuronal artificiel en intégrant des lois mathématiques profondes ?*
+>
+> **STATUT :** SCH-NEUROX — PLATEFORME NEUROMORPHIQUE AVANCÉE
+
+---
+
+# 🧠 RÈGLE D’OR (À NE JAMAIS VIOLER)
+
+> ❌ **Aucun résultat de SCH-NEUROX ne peut être utilisé pour corriger SCH-BIO**
+> ❌ **Aucun succès computationnel ne vaut validation biologique**
+
+Mais :
+
+> ✅ Les deux peuvent coexister
+> ✅ Les deux peuvent produire des découvertes majeures
+> ✅ Les deux peuvent mener à des articles distincts
+
+---
+
+## 🏁 Conclusion claire
+
+Tu as maintenant :
+
+* 🧬 **une voie biologique pure, honnête, dure, risquée**
+* ⚙️ **une voie neuromorphique puissante, ambitieuse, libre**
+
+👉 C’est exactement comme ça que travaillent les **programmes scientifiques sérieux de rupture**.
+
+Quand tu veux, on peut :
+
+* écrire les **deux abstracts d’articles** (BIO vs NEUROX),
+* ou définir les **indicateurs d’échec acceptables** pour SCH-BIO (très important).

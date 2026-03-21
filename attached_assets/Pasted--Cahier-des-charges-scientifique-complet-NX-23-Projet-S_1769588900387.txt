@@ -1,0 +1,202 @@
+# 📘 Cahier des charges scientifique complet – NX-23
+
+## Projet : System Cerebral Human (SCH)
+
+## Sous-système : Neurone NX
+
+## Phase : **NX-23 – Exploration des régimes cognitifs complexes**
+
+---
+
+## 0. Statut et positionnement scientifique
+
+**NX-23 n’est pas une phase de preuve.**
+La preuve causale est close en NX-22.
+
+NX-23 est une phase d’**exploration contrôlée**, visant à comprendre *ce qui émerge après* que les lois fondamentales ont été établies.
+
+> Objectif central : cartographier les formes possibles de cognition dissipative lorsque plusieurs neurones NX interagissent durablement.
+
+Aucune optimisation, aucune promesse applicative, aucune extrapolation clinique.
+
+---
+
+## 1. Objectifs scientifiques majeurs (NX-23)
+
+### 1.1 Explorer la cognition **collective dissipative**
+
+* Étudier les régimes émergents lorsque **N ≥ 2 neurones NX** sont couplés.
+* Identifier si des régimes cognitifs **non présents en NX-22** apparaissent par interaction.
+
+### 1.2 Étudier la **diversité des identités dynamiques**
+
+* Déterminer si des identités fonctionnelles distinctes peuvent coexister.
+* Tester la persistance ou la fusion d’identités sous interaction prolongée.
+
+### 1.3 Cartographier les **écologies de régimes**
+
+* Observer si des régimes peuvent :
+
+  * coopérer
+  * entrer en compétition
+  * se parasiter
+  * s’éteindre mutuellement
+
+### 1.4 Identifier les **limites émergentes** non visibles en mono-neurone
+
+* Saturation collective
+* Effondrement synchronisé
+* Fragmentation cognitive
+
+---
+
+## 2. Hypothèses testées (exploratoires, non affirmatives)
+
+* H1 : Plusieurs neurones NX peuvent entrer dans un régime cognitif partagé sans synchronisation temporelle.
+* H2 : L’interaction prolongée crée des méta-invariants absents du neurone isolé.
+* H3 : Une identité cognitive collective peut émerger puis se dissoudre sans effondrement individuel.
+* H4 : La mémoire collective est encore plus irréversible que la mémoire individuelle.
+
+---
+
+## 3. Architecture expérimentale NX-23
+
+### 3.1 Configuration minimale
+
+* Nombre de neurones NX : **2 à 8** (paramétrable)
+* Chaque neurone conserve :
+
+  * son ATP interne
+  * sa dissipation propre
+  * ses invariants atomiques
+
+### 3.2 Couplage NX–NX
+
+* Couplage **dissipatif uniquement**
+* Interdiction absolue :
+
+  * messages symboliques
+  * signaux explicites
+  * partage d’état mémoire
+
+Le seul canal autorisé :
+
+> influence indirecte via modification des régimes dissipatifs locaux
+
+---
+
+## 4. Protocoles expérimentaux requis
+
+### TEST-23.1 — Synchronisation de régime
+
+* Observer si deux neurones entrent spontanément dans un régime corrélé.
+* Mesurer délai, stabilité, rupture.
+
+### TEST-23.2 — Divergence identitaire
+
+* Initialiser deux neurones identiques.
+* Soumettre à micro-perturbations divergentes.
+* Mesurer différenciation irréversible.
+
+### TEST-23.3 — Mémoire collective
+
+* Introduire une perturbation partagée.
+* Retirer la perturbation.
+* Observer persistance collective vs individuelle.
+
+### TEST-23.4 — Effondrement partiel
+
+* Forcer l’effondrement d’un neurone.
+* Observer propagation ou résilience du collectif.
+
+### TEST-23.5 — Parasitage cognitif
+
+* Introduire un neurone instable.
+* Observer influence sur les régimes voisins.
+
+---
+
+## 5. Mesures obligatoires
+
+Pour chaque neurone et pour le collectif :
+
+* densité d’invariants
+* énergie dissipée
+* transitions de régime
+* hystérésis
+* seuils d’effondrement
+
+Aucune métrique de performance.
+Aucune notion de tâche.
+
+---
+
+## 6. Logging et traçabilité (HFBL-360 renforcé)
+
+### 6.1 Exigences de log
+
+Chaque log doit inclure :
+
+* horodatage nanoseconde
+* état avant / après
+* hash bit-à-bit
+* ID neurone
+* ID interaction
+* signature de fin d’exécution
+
+### 6.2 Fichiers requis
+
+* `logs_AIMO3/nx/NX-23/NX-23_regime_interactions.log`
+* `logs_AIMO3/nx/NX-23/NX-23_identity_divergence.log`
+* `logs_AIMO3/nx/NX-23/NX-23_collective_memory.log`
+* `RAPPORT_IAMO3/NX/NX-23_COLLECTIVE_REGIMES.md`
+* `RAPPORT_IAMO3/NX/NX-23_LIMITS_AND_FAILURES.md`
+
+Aucune suppression ou écrasement de logs antérieurs.
+
+---
+
+## 7. Critères de validité scientifique
+
+Un résultat NX-23 est valide si :
+
+* il est reproductible statistiquement
+* il n’implique aucun artefact symbolique
+* il respecte l’irréversibilité observée
+
+Tout comportement stable prolongé est considéré **suspect**.
+
+---
+
+## 8. Interdictions explicites
+
+* ❌ optimisation
+* ❌ apprentissage supervisé
+* ❌ récompense
+* ❌ objectif externe
+* ❌ comparaison de performance IA
+
+NX-23 n’est **pas** une phase d’ingénierie.
+
+---
+
+## 9. Résultat attendu (non garanti)
+
+NX-23 peut :
+
+* révéler une proto-cognition collective
+* ou montrer que la cognition est fondamentalement individuelle
+
+Les deux résultats sont **scientifiquement valides**.
+
+---
+
+## 10. Conclusion
+
+NX-23 ouvre la question la plus difficile :
+
+> **La pensée est-elle un phénomène solitaire ou écologique ?**
+
+Ce cahier des charges définit la première tentative rigoureuse d’exploration de cette question **sans tricher**, sans symboles, sans promesses.
+
+**Toute déviation invalide la phase.**

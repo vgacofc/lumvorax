@@ -1,0 +1,166 @@
+{
+  "source_notebook": "RAPPORT-VESUVIUS/exemple-soumision-notebook-concurrent/vesuvius-0-552.ipynb",
+  "cfg_params": {
+    "kaggle_model_path": "\"/kaggle/input/vsd-model/keras/\"",
+    "weights_relpath": "\"transunet/3/transunet.seresnext50.160px.comboloss.weights.h5\"",
+    "overlap_public": "0.42",
+    "overlap_base": "0.43",
+    "overlap_hi": "0.60",
+    "OV06_MAIN_ONLY": "True",
+    "USE_TTA": "True",
+    "INK_MODE": "\"fg12\"",
+    "T_low": "0.50",
+    "T_high": "0.90",
+    "z_radius": "3",
+    "xy_radius": "2",
+    "dust_min_size": "100",
+    "DO_WARMUP": "True"
+  },
+  "cfg_block_lines": [
+    {
+      "cell": 0,
+      "line_in_cell": 48,
+      "text": "CFG = dict("
+    },
+    {
+      "cell": 0,
+      "line_in_cell": 49,
+      "text": "    # model"
+    },
+    {
+      "cell": 0,
+      "line_in_cell": 50,
+      "text": "    kaggle_model_path=\"/kaggle/input/vsd-model/keras/\","
+    },
+    {
+      "cell": 0,
+      "line_in_cell": 51,
+      "text": "    weights_relpath=\"transunet/3/transunet.seresnext50.160px.comboloss.weights.h5\","
+    },
+    {
+      "cell": 0,
+      "line_in_cell": 52,
+      "text": ""
+    },
+    {
+      "cell": 0,
+      "line_in_cell": 53,
+      "text": "    # SWI overlaps"
+    },
+    {
+      "cell": 0,
+      "line_in_cell": 54,
+      "text": "    overlap_public=0.42,  # EXACT public 0.55"
+    },
+    {
+      "cell": 0,
+      "line_in_cell": 55,
+      "text": "    overlap_base=0.43,    # EXACT private 0.55 (important!)"
+    },
+    {
+      "cell": 0,
+      "line_in_cell": 56,
+      "text": "    overlap_hi=0.60,      # OV06"
+    },
+    {
+      "cell": 0,
+      "line_in_cell": 57,
+      "text": "    OV06_MAIN_ONLY=True,"
+    },
+    {
+      "cell": 0,
+      "line_in_cell": 58,
+      "text": ""
+    },
+    {
+      "cell": 0,
+      "line_in_cell": 59,
+      "text": "    # TTA"
+    },
+    {
+      "cell": 0,
+      "line_in_cell": 60,
+      "text": "    USE_TTA=True,"
+    },
+    {
+      "cell": 0,
+      "line_in_cell": 61,
+      "text": ""
+    },
+    {
+      "cell": 0,
+      "line_in_cell": 62,
+      "text": "    # binary logit definition (match your private 0.55)"
+    },
+    {
+      "cell": 0,
+      "line_in_cell": 63,
+      "text": "    INK_MODE=\"fg12\","
+    },
+    {
+      "cell": 0,
+      "line_in_cell": 64,
+      "text": ""
+    },
+    {
+      "cell": 0,
+      "line_in_cell": 65,
+      "text": "    # thresholds (match your private 0.55)"
+    },
+    {
+      "cell": 0,
+      "line_in_cell": 66,
+      "text": "    T_low=0.50,"
+    },
+    {
+      "cell": 0,
+      "line_in_cell": 67,
+      "text": "    T_high=0.90,"
+    },
+    {
+      "cell": 0,
+      "line_in_cell": 68,
+      "text": ""
+    },
+    {
+      "cell": 0,
+      "line_in_cell": 69,
+      "text": "    # topology (match both notebooks' common setting)"
+    },
+    {
+      "cell": 0,
+      "line_in_cell": 70,
+      "text": "    z_radius=3,"
+    },
+    {
+      "cell": 0,
+      "line_in_cell": 71,
+      "text": "    xy_radius=2,"
+    },
+    {
+      "cell": 0,
+      "line_in_cell": 72,
+      "text": "    dust_min_size=100,"
+    },
+    {
+      "cell": 0,
+      "line_in_cell": 73,
+      "text": ""
+    },
+    {
+      "cell": 0,
+      "line_in_cell": 74,
+      "text": "    # warmup"
+    },
+    {
+      "cell": 0,
+      "line_in_cell": 75,
+      "text": "    DO_WARMUP=True,"
+    },
+    {
+      "cell": 0,
+      "line_in_cell": 76,
+      "text": ")"
+    }
+  ]
+}

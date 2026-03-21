@@ -1,0 +1,46 @@
+{
+  "report_version": "dataset_v3_pending_20260219",
+  "dataset": "ndarray2000/nx47-dependencies",
+  "status": "pending_runtime_confirmation",
+  "inventory_validation": {
+    "state": "declared_ok",
+    "required_artifacts_count": 13,
+    "required_artifacts": [
+      "imagecodecs-2026.1.14-cp311-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "imageio-2.37.2-py3-none-any.whl",
+      "lazy_loader-0.4-py3-none-any.whl",
+      "liblumvorax_replit.so",
+      "networkx-3.6.1-py3-none-any.whl",
+      "numpy-2.4.2-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "opencv_python-4.13.0.92-cp37-abi3-manylinux_2_28_x86_64.whl",
+      "packaging-26.0-py3-none-any.whl",
+      "pillow-12.1.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "scikit_image-0.26.0-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl",
+      "scipy-1.17.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "tifffile-2026.1.28-py3-none-any.whl",
+      "tifffile-2026.2.16-py3-none-any.whl"
+    ]
+  },
+  "runtime_confirmation": {
+    "state": "pending",
+    "kernels_to_validate": [
+      "nx47_vesu_kernel_v2.py",
+      "nx47_vesu_kernel_v2.1.py",
+      "nx47_vesu_kernel_v2.2.py",
+      "nx47_vesu_kernel_v2.3.py",
+      "nx47_vesu_kernel_v2.4.py"
+    ],
+    "required_outputs": [
+      "submission.parquet",
+      "submission.zip"
+    ],
+    "blocking_errors": [
+      "OFFLINE_DEPENDENCY_MISSING",
+      "ValueError: <COMPRESSION.LZW: 5> requires the 'imagecodecs' package"
+    ]
+  },
+  "notes": [
+    "Append-only reporting respected: new files created, old reports untouched.",
+    "Final GO decision deferred until real Kaggle runtime matrix is executed."
+  ]
+}

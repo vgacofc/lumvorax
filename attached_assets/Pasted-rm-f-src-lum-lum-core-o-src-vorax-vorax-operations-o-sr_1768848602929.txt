@@ -1,0 +1,42 @@
+rm -f src/lum/lum_core.o src/vorax/vorax_operations.o src/binary/binary_lum_converter.o src/parser/vorax_parser.o src/logger/lum_logger.o src/logger/log_manager.o src/debug/memory_tracker.o src/debug/forensic_logger.o src/debug/ultra_forensic_logger.o src/debug/enhanced_logging.o src/debug/logging_system.o src/crypto/crypto_validator.o src/persistence/data_persistence.o src/persistence/transaction_wal_extension.o src/persistence/recovery_manager_extension.o src/optimization/memory_optimizer.o src/optimization/pareto_optimizer.o src/optimization/pareto_inverse_optimizer.o src/optimization/simd_optimizer.o src/optimization/zero_copy_allocator.o src/parallel/parallel_processor.o src/metrics/performance_metrics.o src/advanced_calculations/audio_processor.o src/advanced_calculations/image_processor.o src/advanced_calculations/golden_score_optimizer.o src/advanced_calculations/tsp_optimizer.o src/advanced_calculations/neural_advanced_optimizers.o src/advanced_calculations/neural_ultra_precision_architecture.o src/advanced_calculations/matrix_calculator.o src/advanced_calculations/neural_network_processor.o src/complex_modules/realtime_analytics.o src/complex_modules/distributed_computing.o src/complex_modules/ai_optimization.o src/complex_modules/ai_dynamic_config_manager.o src/file_formats/lum_secure_serialization.o src/file_formats/lum_native_file_handler.o src/file_formats/lum_native_universal_format.o src/spatial/lum_instant_displacement.o src/network/hostinger_resource_limiter.o
+rm -f bin/lum_vorax_complete bin/test_forensic_complete_system bin/test_integration_complete_39_modules
+rm -rf bin
+find . -name "*.o" -type f -delete
+mkdir -p bin logs/forensic logs/execution logs/tests logs/console
+gcc -Wall -Wextra -std=c99 -g -O3 -march=native -fPIC -D_GNU_SOURCE -D_POSIX_C_SOURCE=200809L -I./src/common -I./src/debug -DDEBUG_MODE -g3 -c src/lum/lum_core.c -o src/lum/lum_core.o
+gcc -Wall -Wextra -std=c99 -g -O3 -march=native -fPIC -D_GNU_SOURCE -D_POSIX_C_SOURCE=200809L -I./src/common -I./src/debug -DDEBUG_MODE -g3 -c src/vorax/vorax_operations.c -o src/vorax/vorax_operations.o
+gcc -Wall -Wextra -std=c99 -g -O3 -march=native -fPIC -D_GNU_SOURCE -D_POSIX_C_SOURCE=200809L -I./src/common -I./src/debug -DDEBUG_MODE -g3 -c src/binary/binary_lum_converter.c -o src/binary/binary_lum_converter.o
+gcc -Wall -Wextra -std=c99 -g -O3 -march=native -fPIC -D_GNU_SOURCE -D_POSIX_C_SOURCE=200809L -I./src/common -I./src/debug -DDEBUG_MODE -g3 -c src/parser/vorax_parser.c -o src/parser/vorax_parser.o
+gcc -Wall -Wextra -std=c99 -g -O3 -march=native -fPIC -D_GNU_SOURCE -D_POSIX_C_SOURCE=200809L -I./src/common -I./src/debug -DDEBUG_MODE -g3 -c src/logger/lum_logger.c -o src/logger/lum_logger.o
+gcc -Wall -Wextra -std=c99 -g -O3 -march=native -fPIC -D_GNU_SOURCE -D_POSIX_C_SOURCE=200809L -I./src/common -I./src/debug -DDEBUG_MODE -g3 -c src/logger/log_manager.c -o src/logger/log_manager.o
+gcc -Wall -Wextra -std=c99 -g -O3 -march=native -fPIC -D_GNU_SOURCE -D_POSIX_C_SOURCE=200809L -I./src/common -I./src/debug -DDEBUG_MODE -g3 -c src/debug/memory_tracker.c -o src/debug/memory_tracker.o
+gcc -Wall -Wextra -std=c99 -g -O3 -march=native -fPIC -D_GNU_SOURCE -D_POSIX_C_SOURCE=200809L -I./src/common -I./src/debug -DDEBUG_MODE -g3 -c src/debug/forensic_logger.c -o src/debug/forensic_logger.o
+gcc -Wall -Wextra -std=c99 -g -O3 -march=native -fPIC -D_GNU_SOURCE -D_POSIX_C_SOURCE=200809L -I./src/common -I./src/debug -DDEBUG_MODE -g3 -c src/debug/ultra_forensic_logger.c -o src/debug/ultra_forensic_logger.o
+gcc -Wall -Wextra -std=c99 -g -O3 -march=native -fPIC -D_GNU_SOURCE -D_POSIX_C_SOURCE=200809L -I./src/common -I./src/debug -DDEBUG_MODE -g3 -c src/debug/enhanced_logging.c -o src/debug/enhanced_logging.o
+gcc -Wall -Wextra -std=c99 -g -O3 -march=native -fPIC -D_GNU_SOURCE -D_POSIX_C_SOURCE=200809L -I./src/common -I./src/debug -DDEBUG_MODE -g3 -c src/debug/logging_system.c -o src/debug/logging_system.o
+...
+[MEMORY_TRACKER] FREE: 0x378d6a10 (40 bytes) at src/advanced_calculations/neural_network_processor.c:252 in neural_layer_destroy_processor() - originally allocated at src/advanced_calculations/neural_network_processor.c:194
+[MEMORY_TRACKER] FREE: 0x378d6980 (40 bytes) at src/advanced_calculations/neural_network_processor.c:253 in neural_layer_destroy_processor() - originally allocated at src/advanced_calculations/neural_network_processor.c:201
+[MEMORY_TRACKER] FREE: 0x378d6950 (40 bytes) at src/advanced_calculations/neural_network_processor.c:254 in neural_layer_destroy_processor() - originally allocated at src/advanced_calculations/neural_network_processor.c:209
+[MEMORY_TRACKER] FREE: 0x378d68c0 (80 bytes) at src/advanced_calculations/neural_network_processor.c:264 in neural_layer_destroy_processor() - originally allocated at src/advanced_calculations/neural_network_processor.c:175
+[MEMORY_TRACKER] FREE: 0x378d6920 (40 bytes) at src/advanced_calculations/neural_network_processor.c:251 in neural_layer_destroy_processor() - originally allocated at src/advanced_calculations/neural_network_processor.c:188
+[MEMORY_TRACKER] FREE: 0x378d6860 (8 bytes) at src/advanced_calculations/neural_network_processor.c:252 in neural_layer_destroy_processor() - originally allocated at src/advanced_calculations/neural_network_processor.c:194
+[MEMORY_TRACKER] FREE: 0x378d6aa0 (8 bytes) at src/advanced_calculations/neural_network_processor.c:253 in neural_layer_destroy_processor() - originally allocated at src/advanced_calculations/neural_network_processor.c:201
+[MEMORY_TRACKER] FREE: 0x378de2c0 (8 bytes) at src/advanced_calculations/neural_network_processor.c:254 in neural_layer_destroy_processor() - originally allocated at src/advanced_calculations/neural_network_processor.c:209
+[MEMORY_TRACKER] FREE: 0x378d67d0 (80 bytes) at src/advanced_calculations/neural_network_processor.c:264 in neural_layer_destroy_processor() - originally allocated at src/advanced_calculations/neural_network_processor.c:175
+[MEMORY_TRACKER] FREE: 0x378db2a0 (24 bytes) at src/advanced_calculations/neural_network_processor.c:615 in neural_network_destroy() - originally allocated at src/advanced_calculations/neural_network_processor.c:555
+[MEMORY_TRACKER] FREE: 0x378d6740 (104 bytes) at src/advanced_calculations/neural_network_processor.c:625 in neural_network_destroy() - originally allocated at src/advanced_calculations/neural_network_processor.c:550
+[MEMORY_TRACKER] FREE: 0x378dc6f0 (6904 bytes) at src/metrics/performance_metrics.c:81 in performance_metrics_destroy() - originally allocated at src/metrics/performance_metrics.c:47
+[MEMORY_TRACKER] FREE: 0x378dc5d0 (272 bytes) at src/optimization/simd_optimizer.c:81 in simd_capabilities_destroy() - originally allocated at src/optimization/simd_optimizer.c:27
+[MEMORY_TRACKER] FREE: 0x378da270 (4136 bytes) at src/persistence/data_persistence.c:97 in persistence_context_destroy() - originally allocated at src/persistence/data_persistence.c:24
+[MEMORY_TRACKER] FREE: 0x378d67b0 (1 bytes) at src/binary/binary_lum_converter.c:338 in lum_binary_result_destroy() - originally allocated at src/binary/binary_lum_converter.c:128
+[MEMORY_TRACKER] FREE: 0x378da140 (288 bytes) at src/binary/binary_lum_converter.c:340 in lum_binary_result_destroy() - originally allocated at src/binary/binary_lum_converter.c:324
+[DEBUG] lum_group_destroy: freeing lums array at 0x378d7f40 (1 elements) method=1
+[DEBUG] lum_group_destroy: freeing group structure at 0x378d6700
+[MEMORY_TRACKER] FREE: 0x378d6700 (48 bytes) at src/lum/lum_core.c:411 in lum_group_destroy() - originally allocated at src/lum/lum_core.c:241
+[MEMORY_TRACKER] FREE: 0x378d66b0 (64 bytes) at src/lum/lum_core.c:189 in lum_destroy() - originally allocated at src/lum/lum_core.c:133
+✅ PASS (9.926 ms)
+
+📊 === RÉSULTATS INTÉGRATION ===
+Tests réussis: 5/6 (83.3%)
+❌ ÉCHECS D'INTÉGRATION DÉTECTÉS

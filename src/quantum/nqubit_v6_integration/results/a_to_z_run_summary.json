@@ -1,0 +1,48 @@
+{
+  "pipeline": "nqubit_v6_integration_a_to_z",
+  "ok": true,
+  "phases": [
+    {
+      "phase": "A_collect_metrics",
+      "rc": 0,
+      "cmd": "/nix/store/h097imm3w6dpx10qynrd2sz9fks2wbq8-python3-3.12.11/bin/python tools/collect_system_metrics_v6.py",
+      "stdout": "metrics_written=results/system_metrics_v6.json",
+      "stderr": ""
+    },
+    {
+      "phase": "B_acquire_hardware",
+      "rc": 0,
+      "cmd": "/nix/store/h097imm3w6dpx10qynrd2sz9fks2wbq8-python3-3.12.11/bin/python tools/acquire_real_hardware_v6.py --output-dir results --bytes 32768 --jitter-samples 50000",
+      "stdout": "report_written=results/ADC_REAL_HARDWARE_CAPTURE_V6.json\nsource=/dev/hwrng size=0 error=[Errno 2] No such file or directory: '/dev/hwrng' bytes_per_sec=None\nsource=/dev/random size=32768 error=None bytes_per_sec=309980129.4550869\nsource=/dev/urandom size=32768 error=None bytes_per_sec=400831820.20440465\njitter_ops_per_sec=7498106.731201067",
+      "stderr": ""
+    },
+    {
+      "phase": "C_stress",
+      "rc": 0,
+      "cmd": "/nix/store/h097imm3w6dpx10qynrd2sz9fks2wbq8-python3-3.12.11/bin/python tools/stress_harness_v6.py --seconds 4 --workers 64 --target 99 --output results/stress_telemetry_v6.log",
+      "stdout": "# V6 STRESS TELEMETRY\nworkers=64\nduration_s=4\ncpu_pressure_estimated_pct=100.00\nmemory_peak_pct=69.92\ntarget_pct=99.00\nstatus=TARGET_REACHED",
+      "stderr": ""
+    },
+    {
+      "phase": "D_build_manifest",
+      "rc": 0,
+      "cmd": "/nix/store/h097imm3w6dpx10qynrd2sz9fks2wbq8-python3-3.12.11/bin/python tools/build_manifest_v6.py --input-dir results --output results/manifest_forensic_v6.json --exclude manifest_forensic_v6.json manifest_forensic_v6.json.sig",
+      "stdout": "manifest_written=results/manifest_forensic_v6.json\nartifacts=11",
+      "stderr": ""
+    },
+    {
+      "phase": "E_verify_manifest",
+      "rc": 0,
+      "cmd": "/nix/store/h097imm3w6dpx10qynrd2sz9fks2wbq8-python3-3.12.11/bin/python tools/verify_manifest_v6.py --manifest results/manifest_forensic_v6.json",
+      "stdout": "artifact_count=11\nmissing=0\nmismatches=0",
+      "stderr": ""
+    },
+    {
+      "phase": "F_generate_report",
+      "rc": 0,
+      "cmd": "/nix/store/h097imm3w6dpx10qynrd2sz9fks2wbq8-python3-3.12.11/bin/python tools/generate_v6_post_run_report.py --manifest results/manifest_forensic_v6.json --adc-report results/ADC_REAL_HARDWARE_CAPTURE_V6.json --stress-log results/stress_telemetry_v6.log --system-metrics results/system_metrics_v6.json --output RAPPORT_REPLIT_EXECUTION_V6_FINAL.md",
+      "stdout": "report_written=RAPPORT_REPLIT_EXECUTION_V6_FINAL.md",
+      "stderr": ""
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "status": "ok",
+  "expected_test_files": 1,
+  "submission_tif_files": 1,
+  "missing": [],
+  "unexpected": []
+}

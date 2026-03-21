@@ -1,0 +1,318 @@
+Ci-dessous un prompt d’orchestration complet pour un agent de correction automatique.
+Il impose :
+	•	scan intégral du dépôt
+	•	détection systématique des normalisations cachées
+	•	correction des sorties scientifiques
+	•	format unique proxy ↔ benchmarks
+	•	audit scientifique complet
+
+Le texte est structuré pour être exécuté directement par un agent autonome.
+
+Prompt Agent — Audit et Correction Globale des Normalisations
+
+Mission
+
+Analyser l’intégralité du dépôt scientifique, détecter toutes les normalisations implicites ou artificielles, puis corriger les modules afin que :
+	•	les sorties proxy
+	•	les benchmarks externes
+
+soient exprimés dans les mêmes unités physiques et le même format numérique.
+
+Aucune correction par facteur arbitraire (ex: 1e6) ne doit subsister.
+
+1. Scan complet du dépôt
+
+Scanner récursivement tous les fichiers du repository.
+
+Extensions à analyser
+
+.c
+.cpp
+.h
+.py
+.f90
+.ipynb
+.json
+.csv
+.yaml
+.toml
+
+Répertoires critiques
+
+Identifier et analyser particulièrement :
+
+src/
+engines/
+modules/
+advanced_calculations/
+physics/
+quantum_problem_hubbard_hts/
+qcd_lattice_proxy/
+dense_nuclear_proxy/
+quantum_chemistry_proxy/
+tools/
+benchmarks/
+tests/
+
+Produire un inventaire :
+
+logs/repo_scan_inventory.json
+
+contenant :
+	•	nombre de fichiers
+	•	modules détectés
+	•	moteurs physiques présents
+
+2. Détection automatique des normalisations suspectes
+
+Scanner le code pour identifier :
+
+Multiplicateurs fixes
+
+* 1e6
+* 1e5
+* SCALE_FACTOR
+* NORMALIZATION
+* ENERGY_SCALE
+
+Divisions implicites
+
+/ N
+/ lattice
+/ volume
+
+Rescaling dissimulé
+
+energy *=
+value *=
+result *=
+
+Transformations logarithmiques
+
+log()
+log10()
+exp()
+
+lorsqu’elles modifient des grandeurs physiques.
+
+Générer un rapport d’anomalies
+
+Créer :
+
+logs/normalization_forensic_report.json
+
+Chaque entrée doit contenir :
+
+file
+line
+variable
+operation
+suspected_unit_mismatch
+
+3. Détection des sorties scientifiques incohérentes
+
+Identifier toutes les sorties contenant :
+
+energy
+density
+correlation
+observable
+spectral
+
+Comparer leur format :
+	•	proxy
+	•	benchmark
+	•	logs
+
+Repérer les divergences :
+
+ordre de grandeur
+unités
+normalisation par site vs totale
+
+Produire :
+
+logs/output_inconsistency_report.json
+
+4. Correction automatique des modules physiques
+
+Appliquer les corrections suivantes.
+
+4.1 Hubbard HTS
+
+Fichiers typiques :
+
+hubbard_hts_core/
+hubbard_hts_research_cycle.c
+
+Correction obligatoire :
+
+energy_total = compute_energy(state)
+energy_per_site = energy_total / lattice_size
+
+Supprimer tout facteur constant.
+
+4.2 QCD lattice proxy
+
+Vérifier normalisation :
+
+action / volume
+plaquette averages
+
+Sorties requises :
+
+action_total
+action_per_site
+
+4.3 Dense nuclear proxy
+
+Contrôler :
+
+energy density
+baryon density
+pressure
+
+Sorties standardisées :
+
+energy_total
+energy_per_particle
+energy_density
+
+4.4 Quantum chemistry proxy
+
+Vérifier conversion entre :
+
+Hartree
+eV
+kJ/mol
+
+Sortie obligatoire :
+
+energy_hartree
+energy_ev
+energy_kjmol
+
+5. Format universel des sorties
+
+Tous les modules doivent produire le même schéma JSON.
+
+Exemple :
+
+{
+  "module": "hubbard_hts",
+  "lattice_size": 4096,
+  "parameters": {
+    "U": 8.0,
+    "t": 1.0
+  },
+  "energy_total": -10324.554382919,
+  "energy_per_site": -2.520641384912,
+  "benchmark_energy_per_site": -2.519800000000,
+  "relative_error": 0.000333,
+  "within_error_bar": true
+}
+
+6. Format numérique obligatoire
+
+Toutes les sorties doivent utiliser :
+
+%.12f
+
+Exemple :
+
+-2.520641384912
+
+Interdits :
+
+≈
+~
+1e6
+1e-3
+
+Les valeurs doivent être complètes et explicites.
+
+7. Harmonisation proxy ↔ benchmark
+
+Créer un adaptateur benchmark.
+
+Sources possibles :
+
+QMC
+DMRG
+ARPES
+lattice QCD references
+
+Convertir automatiquement leurs sorties vers le format JSON universel.
+
+8. Ajout de tests de validation scientifique
+
+Ajouter dans :
+
+tests/
+
+les vérifications suivantes :
+
+cohérence dimensionnelle
+
+units_consistency_test
+
+conservation énergétique
+
+energy_conservation_test
+
+alignement benchmark
+
+relative_error < 1%
+
+9. Logs scientifiques obligatoires
+
+Chaque simulation doit produire :
+
+logs/simulation_trace.log
+logs/energy_series.csv
+logs/benchmark_alignment.json
+logs/normalization_check.json
+
+Chaque log doit inclure :
+
+timestamp UTC
+module
+parameters
+units
+checksums
+
+10. Validation finale du pipeline
+
+Le pipeline doit produire :
+
+numerical_stability : PASS
+unit_consistency : PASS
+benchmark_alignment : PASS
+scientific_integrity : PASS
+
+11. Rapport final
+
+Produire :
+
+reports/global_physics_validation.md
+
+contenant :
+	•	modules corrigés
+	•	normalisations supprimées
+	•	conversions d’unités appliquées
+	•	alignement final avec benchmarks
+
+Résultat attendu
+
+Après exécution de cet agent :
+	•	aucune normalisation artificielle
+	•	unités physiques cohérentes
+	•	sorties proxy et benchmarks identiques en format
+	•	comparaisons scientifiques directes
+
+Si tu veux, je peux aussi te générer un prompt encore plus radical (niveau audit CERN / Fermilab) qui va :
+	•	reconstruire toutes les unités physiques automatiquement
+	•	détecter les bugs d’Hamiltonien
+	•	vérifier les erreurs de conservation dans les intégrateurs.
+
+Ce genre d’audit trouve souvent les vrais bugs cachés dans les moteurs de simulation.

@@ -1,0 +1,70 @@
+~/workspace$ ./run_44_modules_test.sh
+=== SCRIPT EXÉCUTION COMPLÈTE 44 MODULES LUM/VORAX ===
+Conformité standards forensiques ISO/IEC 27037
+
+Phase 1: Nettoyage et préparation
+rm -rf obj bin logs
+mkdir -p obj bin logs
+
+Phase 2: Compilation système complet
+gcc -Wall -Wextra -std=c99 -g -O2 -fPIC -c src/lum/lum_core.c -o obj/lum/lum_core.o
+gcc -Wall -Wextra -std=c99 -g -O2 -fPIC -c src/vorax/vorax_operations.c -o obj/vorax/vorax_operations.o
+gcc -Wall -Wextra -std=c99 -g -O2 -fPIC -c src/binary/binary_lum_converter.c -o obj/binary/binary_lum_converter.o
+gcc -Wall -Wextra -std=c99 -g -O2 -fPIC -c src/parser/vorax_parser.c -o obj/parser/vorax_parser.o
+gcc -Wall -Wextra -std=c99 -g -O2 -fPIC -c src/logger/lum_logger.c -o obj/logger/lum_logger.o
+gcc -Wall -Wextra -std=c99 -g -O2 -fPIC -c src/logger/log_manager.c -o obj/logger/log_manager.o
+gcc -Wall -Wextra -std=c99 -g -O2 -fPIC -c src/debug/memory_tracker.c -o obj/debug/memory_tracker.o
+gcc -Wall -Wextra -std=c99 -g -O2 -fPIC -c src/debug/forensic_logger.c -o obj/debug/forensic_logger.o
+gcc -Wall -Wextra -std=c99 -g -O2 -fPIC -c src/debug/ultra_forensic_logger.c -o obj/debug/ultra_forensic_logger.o
+gcc -Wall -Wextra -std=c99 -g -O2 -fPIC -c src/crypto/crypto_validator.c -o obj/crypto/crypto_validator.o
+gcc -Wall -Wextra -std=c99 -g -O2 -fPIC -c src/persistence/data_persistence.c -o obj/persistence/data_persistence.o
+gcc -Wall -Wextra -std=c99 -g -O2 -fPIC -c src/persistence/transaction_wal_extension.c -o obj/persistence/transaction_wal_extension.o
+src/persistence/transaction_wal_extension.c: In function ‘wal_extension_begin_transaction’:
+src/persistence/transaction_wal_extension.c:248:19: error: implicit declaration of function ‘fileno’; did you mean ‘d_fileno’? [-Wimplicit-function-declaration]
+  248 |             fsync(fileno(ctx->wal_extension_file));
+      |                   ^~~~~~
+      |                   d_fileno
+make: *** [Makefile:138: obj/persistence/transaction_wal_extension.o] Error 1
+make: *** Waiting for unfinished jobs....
+src/persistence/data_persistence.c: In function ‘persistence_start_transaction_log’:
+src/persistence/data_persistence.c:682:45: warning: ‘/transactions.log’ directive output may be truncated writing 17 bytes into a region of size between 1 and 512 [-Wformat-truncation=]
+  682 |     snprintf(log_path, sizeof(log_path), "%s/transactions.log", ctx->storage_directory);
+      |                                             ^~~~~~~~~~~~~~~~~
+src/persistence/data_persistence.c:682:5: note: ‘snprintf’ output between 18 and 529 bytes into a destination of size 512
+  682 |     snprintf(log_path, sizeof(log_path), "%s/transactions.log", ctx->storage_directory);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/persistence/data_persistence.c: In function ‘persistence_save_lum’:
+src/persistence/data_persistence.c:297:50: warning: ‘snprintf’ output may be truncated before the last format character [-Wformat-truncation=]
+  297 |     snprintf(full_path, sizeof(full_path), "%s/%s", ctx->storage_directory, filename);
+      |                                                  ^
+src/persistence/data_persistence.c:297:5: note: ‘snprintf’ output 2 or more bytes (assuming 513) into a destination of size 512
+  297 |     snprintf(full_path, sizeof(full_path), "%s/%s", ctx->storage_directory, filename);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/persistence/data_persistence.c: In function ‘persistence_load_lum’:
+src/persistence/data_persistence.c:365:50: warning: ‘snprintf’ output may be truncated before the last format character [-Wformat-truncation=]
+  365 |     snprintf(full_path, sizeof(full_path), "%s/%s", ctx->storage_directory, filename);
+      |                                                  ^
+src/persistence/data_persistence.c:365:5: note: ‘snprintf’ output 2 or more bytes (assuming 513) into a destination of size 512
+  365 |     snprintf(full_path, sizeof(full_path), "%s/%s", ctx->storage_directory, filename);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/persistence/data_persistence.c: In function ‘persistence_save_group’:
+src/persistence/data_persistence.c:451:50: warning: ‘snprintf’ output may be truncated before the last format character [-Wformat-truncation=]
+  451 |     snprintf(full_path, sizeof(full_path), "%s/%s", ctx->storage_directory, filename);
+      |                                                  ^
+src/persistence/data_persistence.c:451:5: note: ‘snprintf’ output 2 or more bytes (assuming 513) into a destination of size 512
+  451 |     snprintf(full_path, sizeof(full_path), "%s/%s", ctx->storage_directory, filename);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/persistence/data_persistence.c: In function ‘persistence_load_group’:
+src/persistence/data_persistence.c:539:50: warning: ‘snprintf’ output may be truncated before the last format character [-Wformat-truncation=]
+  539 |     snprintf(full_path, sizeof(full_path), "%s/%s", ctx->storage_directory, filename);
+      |                                                  ^
+src/persistence/data_persistence.c:539:5: note: ‘snprintf’ output 2 or more bytes (assuming 513) into a destination of size 512
+  539 |     snprintf(full_path, sizeof(full_path), "%s/%s", ctx->storage_directory, filename);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/lum/lum_core.c: In function ‘lum_group_process_batch_50m_optimized’:
+src/lum/lum_core.c:672:5: warning: enumeration value ‘LUM_BATCH_SORT_BY_ID’ not handled in switch [-Wswitch]
+  672 |     switch (operation) {
+      |     ^~~~~~
+src/lum/lum_core.c:672:5: warning: enumeration value ‘LUM_BATCH_DEFRAGMENT’ not handled in switch [-Wswitch]
+❌ Échec compilation - arrêt du processus
+~/workspace$ 

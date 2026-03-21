@@ -1,0 +1,231 @@
+{
+  "report_name": "lumvorax_dependency_360_kaggle_single_cell_v13_strict",
+  "timestamp_ns": 1771873145829009444,
+  "runtime": {
+    "python": "3.12.12 (main, Oct 10 2025, 08:52:57) [GCC 11.4.0]",
+    "platform": "Linux-6.6.113+-x86_64-with-glibc2.35",
+    "cwd": "/kaggle/working",
+    "is_kaggle": true
+  },
+  "policy": {
+    "strict_no_fallback": true,
+    "require_dataset": true,
+    "require_so_presence": true,
+    "enforce_so_load": true,
+    "skip_roundtrip": false,
+    "source_header_validation_enabled": false,
+    "c_syntax_smoke_enabled": false
+  },
+  "dataset_expected": {
+    "native_lib": "liblumvorax.so",
+    "required_packages": [
+      "imagecodecs",
+      "imageio",
+      "lazy-loader",
+      "networkx",
+      "numpy",
+      "opencv-python",
+      "packaging",
+      "pillow",
+      "scikit-image",
+      "scipy",
+      "tifffile"
+    ]
+  },
+  "events": [
+    {
+      "ts_ns": 1771873145831663716,
+      "step": "dataset_root_selected",
+      "root": "/kaggle/input/nx47-dependencies"
+    },
+    {
+      "ts_ns": 1771873146296420333,
+      "step": "wheel_install_attempt",
+      "wheel": "/kaggle/input/nx47-dependencies/imagecodecs-2026.1.14-cp311-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "reason": "best_compatible_imagecodecs",
+      "cmd": [
+        "/usr/bin/python3",
+        "-m",
+        "pip",
+        "install",
+        "--disable-pip-version-check",
+        "--no-index",
+        "/kaggle/input/nx47-dependencies/imagecodecs-2026.1.14-cp311-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl"
+      ]
+    },
+    {
+      "ts_ns": 1771873153555858964,
+      "step": "dataset_artifacts_checked",
+      "status": "ok",
+      "missing_packages": 0,
+      "incompatible_packages": 0,
+      "native_found": true
+    },
+    {
+      "ts_ns": 1771873153594617917,
+      "step": "so_symbols_scanned",
+      "total": 47,
+      "lum_related": 0,
+      "undefined": 38
+    },
+    {
+      "ts_ns": 1771873153596049349,
+      "step": "native_load_check",
+      "status": "fail",
+      "lib": "/kaggle/input/nx47-dependencies/liblumvorax.so",
+      "error": "/kaggle/input/nx47-dependencies/liblumvorax.so: undefined symbol: ai_agent_learn_from_experience",
+      "required_glibc": null,
+      "runtime_glibc": "2.35",
+      "blocking": true
+    },
+    {
+      "ts_ns": 1771873153596058495,
+      "step": "fatal_error",
+      "error_type": "RuntimeError",
+      "error": "native_so_load_enforced_failed: /kaggle/input/nx47-dependencies/liblumvorax.so: undefined symbol: ai_agent_learn_from_experience"
+    }
+  ],
+  "warnings": [],
+  "dataset_root": "/kaggle/input/nx47-dependencies",
+  "install_report": [
+    {
+      "package": "numpy",
+      "status": "already_installed"
+    },
+    {
+      "package": "tifffile",
+      "status": "already_installed"
+    },
+    {
+      "package": "imagecodecs",
+      "status": "installed",
+      "method": "best_compatible_wheel",
+      "wheel": "imagecodecs-2026.1.14-cp311-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl"
+    }
+  ],
+  "imports": {
+    "numpy": true,
+    "tifffile": true,
+    "imagecodecs": true,
+    "pyarrow": true
+  },
+  "dataset_artifacts": {
+    "status": "ok",
+    "dataset_root": "/kaggle/input/nx47-dependencies",
+    "expected_native_lib": "liblumvorax.so",
+    "resolved_native_lib_name": "liblumvorax.so",
+    "native_lib": "/kaggle/input/nx47-dependencies/liblumvorax.so",
+    "native_lib_sha256": "7da4bcde69f741ae0e4d7562c7e9553d311b88ac9b20ae7ea299e007369d0601",
+    "native_lib_size": 54064,
+    "required_packages": [
+      "imagecodecs",
+      "imageio",
+      "lazy-loader",
+      "networkx",
+      "numpy",
+      "opencv-python",
+      "packaging",
+      "pillow",
+      "scikit-image",
+      "scipy",
+      "tifffile"
+    ],
+    "missing_required_packages": [],
+    "incompatible_required_packages": [],
+    "selected_compatible_wheels": {
+      "imagecodecs": "pre-installed",
+      "imageio": "pre-installed",
+      "lazy-loader": "lazy_loader-0.4-py3-none-any.whl",
+      "networkx": "pre-installed",
+      "numpy": "pre-installed",
+      "opencv-python": "pre-installed",
+      "packaging": "pre-installed",
+      "pillow": "pre-installed",
+      "scikit-image": "pre-installed",
+      "scipy": "pre-installed",
+      "tifffile": "pre-installed"
+    },
+    "wheel_compatibility": {
+      "runtime_tag_head": [
+        "cp312-cp312-manylinux_2_35_x86_64",
+        "cp312-cp312-manylinux_2_34_x86_64",
+        "cp312-cp312-manylinux_2_33_x86_64",
+        "cp312-cp312-manylinux_2_32_x86_64",
+        "cp312-cp312-manylinux_2_31_x86_64",
+        "cp312-cp312-manylinux_2_30_x86_64",
+        "cp312-cp312-manylinux_2_29_x86_64",
+        "cp312-cp312-manylinux_2_28_x86_64",
+        "cp312-cp312-manylinux_2_27_x86_64",
+        "cp312-cp312-manylinux_2_26_x86_64",
+        "cp312-cp312-manylinux_2_25_x86_64",
+        "cp312-cp312-manylinux_2_24_x86_64",
+        "cp312-cp312-manylinux_2_23_x86_64",
+        "cp312-cp312-manylinux_2_22_x86_64",
+        "cp312-cp312-manylinux_2_21_x86_64",
+        "cp312-cp312-manylinux_2_20_x86_64",
+        "cp312-cp312-manylinux_2_19_x86_64",
+        "cp312-cp312-manylinux_2_18_x86_64",
+        "cp312-cp312-manylinux_2_17_x86_64",
+        "cp312-cp312-manylinux2014_x86_64",
+        "cp312-cp312-manylinux_2_16_x86_64",
+        "cp312-cp312-manylinux_2_15_x86_64",
+        "cp312-cp312-manylinux_2_14_x86_64",
+        "cp312-cp312-manylinux_2_13_x86_64"
+      ],
+      "wheel_inventory_count": 12,
+      "parse_errors": []
+    }
+  },
+  "so_symbol_inventory": {
+    "status": "ok",
+    "symbol_count_total": 47,
+    "symbol_count_lum_related": 0,
+    "undefined_symbol_count": 38,
+    "undefined_symbol_head": [
+      "abort@GLIBC_2.2.5",
+      "ai_agent_create",
+      "ai_agent_destroy",
+      "ai_agent_learn_from_experience",
+      "ai_agent_make_decision",
+      "calloc@GLIBC_2.2.5",
+      "clock_gettime@GLIBC_2.17",
+      "exp",
+      "fclose@GLIBC_2.2.5",
+      "fopen@GLIBC_2.2.5",
+      "fprintf@GLIBC_2.2.5",
+      "fputc@GLIBC_2.2.5",
+      "free@GLIBC_2.2.5",
+      "fwrite@GLIBC_2.2.5",
+      "lum_get_global_logger",
+      "lum_group_create",
+      "lum_group_destroy",
+      "lum_logf",
+      "lum_log_message",
+      "malloc@GLIBC_2.2.5",
+      "memcpy@GLIBC_2.14",
+      "memset@GLIBC_2.2.5",
+      "printf@GLIBC_2.2.5",
+      "pthread_mutex_lock@GLIBC_2.2.5",
+      "pthread_mutex_unlock@GLIBC_2.2.5",
+      "puts@GLIBC_2.2.5",
+      "rand@GLIBC_2.2.5",
+      "realloc@GLIBC_2.2.5",
+      "snprintf@GLIBC_2.2.5",
+      "sqrt",
+      "stderr@GLIBC_2.2.5",
+      "strdup@GLIBC_2.2.5",
+      "strlen@GLIBC_2.2.5",
+      "strncpy@GLIBC_2.2.5",
+      "strndup@GLIBC_2.2.5",
+      "strnlen@GLIBC_2.2.5",
+      "tanh",
+      "time@GLIBC_2.2.5"
+    ],
+    "lum_related_head": []
+  },
+  "status": "fail",
+  "error_type": "RuntimeError",
+  "error": "native_so_load_enforced_failed: /kaggle/input/nx47-dependencies/liblumvorax.so: undefined symbol: ai_agent_learn_from_experience",
+  "elapsed_ns": 7767052144,
+  "elapsed_s": 7.767052144
+}

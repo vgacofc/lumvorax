@@ -1,0 +1,1527 @@
+# Plan complet de corrections d’authenticité (Lumvorax / NX)
+
+> **Objectif** : éliminer les faux positifs d’authenticité (placeholders, mocks, fallback “dummy”), rendre les résultats reproductibles avec données réelles, et fournir une stratégie de tests unitaires “360°” + intégration, sans modifier les anciens fichiers `.md`.
+
+---
+
+## 0) Périmètre et méthode
+
+- **Périmètre** : kernels NX‑47 (ARC/RNA/FINA/NFL/IAMO3/VESU), sous-système cryptographique/forensic (SHA‑256 “mock”), SIMD/optimisations, logging, exécution tests authentiques.
+- **Méthode** : remplacement des chemins de fallback par des chemins explicites (erreur/fail‑fast), implémentations réelles pour les parties “mock”, et garde‑fous de configuration.
+- **Règle** : *si un environnement ne fournit pas les données réelles, l’exécution doit échouer proprement (pas de faux résultats).*
+
+---
+
+## 1) Corrections par module (avec domaines d’expertise requis)
+
+### 1.1 Kernels AIMO3/NX‑47 (ARC, RNA, FINA, NFL, IAMO3)
+**Domaines** : MLOps/Kaggle, ingénierie données, robustesse d’exécution, audit/forensic.
+
+**Avant** (extraits) :
+- Déclarations “aucun stub/placeholder” mais fallback “Using mock data” si le dataset manque.【F:nx47-arc-kernel.py†L1-L17】【F:nx47-arc-kernel.py†L1539-L1556】
+- Fallback identique dans les modules `modules/*` (RNA/FINA/NFL/IAMO3).【F:modules/rna/nx47-rna.py†L1541-L1556】【F:modules/fina/nx47-fina.py†L1541-L1556】【F:modules/nfl/nx-47-nfl.py†L1541-L1556】【F:modules/iamo3/nx-47-iamo3.py†L1541-L1556】
+
+**Après (plan)** :
+1) **Fail‑fast** si `test.csv` n’existe pas : lever une erreur bloquante et journaliser un statut “AUTHENTICITY_BLOCKED”.
+2) **Config stricte** : ajouter un flag d’environnement `NX_REQUIRE_REAL_DATA=1` (par défaut activé) interdisant tout fallback.
+3) **Audit** : log structuré de la provenance des données (chemin, checksum SHA‑256), enregistré dans un artefact unique.
+
+**Tests unitaires 360° (exemples)** :
+- `test_requires_real_data_when_flag_set()` : vérifie que l’absence du dataset provoque l’échec.
+- `test_dataset_checksum_logged()` : vérifie le hash d’entrée.
+- `test_no_mock_data_path()` : vérifie qu’aucun chemin “mock” n’est pris.
+
+---
+
+### 1.2 VESU Kernel (nx47_vesu_kernel.py / nx47_vesu_kernel_v2.py)
+**Domaines** : vision/IA, pipeline Kaggle, qualité des données, MLOps.
+
+**Avant** :
+- Création d’un dataset local “dummy” si Kaggle absent (images factices).【F:nx47_vesu_kernel.py†L132-L141】
+- Génération de 100 entrées `dummy_*` si aucun fragment n’est trouvé.【F:nx47_vesu_kernel_v2.py†L50-L59】
+
+**Après (plan)** :
+1) **Retirer la génération de données factices** : remplacer par `raise FileNotFoundError` + log “NO_REAL_DATA”.
+2) **Validation stricte** : vérifier structure et intégrité (ex. nombre de tuiles, checksums).
+3) **Séparer mode demo** : un mode explicitement “demo” qui **ne peut pas** être confondu avec un mode réel (noms de fichiers, outputs séparés).
+
+**Tests unitaires 360°** :
+- `test_vesu_fails_without_real_tiles()`.
+- `test_vesu_rejects_empty_fragment_list()`.
+- `test_demo_mode_marked_non_authentic()`.
+
+---
+
+### 1.3 Forensic/Hashing (NX‑25, NX‑11 strict/canonical)
+**Domaines** : cryptographie appliquée, intégrité forensique, systèmes temps réel.
+
+**Avant** :
+- Usage de `sha256_mock` dans NX‑25 et NX‑11 (hash non authentique).【F:src/nx_versions/nx25_heritage_engine.cpp†L15-L22】【F:src/sch/nx/sch_nx_v11_strict.c†L30-L43】【F:src/sch/nx/sch_nx_v11_canonical_final.c†L29-L36】
+- Index `INITIAL_STUB_SHA256` dans NX‑11 strict.【F:src/sch/nx/sch_nx_v11_strict.c†L111-L118】
+
+**Après (plan)** :
+1) **Remplacer `sha256_mock`** par une implémentation SHA‑256 réelle (lib ou implémentation locale auditée).
+2) **Tag d’intégrité** : forcer un champ `HASH_IMPL=SHA256_REAL` dans logs.
+3) **Migration de compatibilité** : fournir un convertisseur pour les anciens logs (marqués “legacy”).
+
+**Tests unitaires 360°** :
+- `test_sha256_known_vectors()` (vecteurs officiels).
+- `test_log_hash_chain_integrity()`.
+- `test_legacy_log_flagging()`.
+
+---
+
+### 1.4 SIMD Optimizer
+**Domaines** : C bas niveau, SIMD, performance/HPC.
+
+**Avant** :
+- `matrix_multiply_lum_optimized` retourne `NULL` comme placeholder.【F:src/optimization/simd_optimizer.c†L432-L456】
+
+**Après (plan)** :
+1) **Implémenter un chemin réel** (scalar fallback correct + SIMD optionnel).
+2) **Validation dimensionnelle stricte** (assertions, erreurs formelles).
+3) **Benchmarks reproductibles** (fixer graine, tailles).
+
+**Tests unitaires 360°** :
+- `test_simd_matrix_multiply_matches_scalar()`.
+- `test_matrix_multiply_handles_invalid_dims()`.
+
+---
+
+### 1.5 Logger / Analyse logs
+**Domaines** : observabilité, analyse forensique, C/IO.
+
+**Avant** :
+- `lum_log_analyze` est un placeholder (valeurs fixes).【F:src/logger/lum_logger.c†L423-L433】
+
+**Après (plan)** :
+1) **Parse réel** des logs et statistiques complètes (opérations, erreurs, distribution).
+2) **Traçabilité** : versionner le format de log.
+
+**Tests unitaires 360°** :
+- `test_log_parser_counts_operations()`.
+- `test_log_parser_handles_corrupt_lines()`.
+
+---
+
+### 1.6 Core LUM (stubs commentés)
+**Domaines** : core systems, mémoire, logging C.
+
+**Avant** :
+- Notes de placeholders pour `memory_tracker_cleanup` et `lum_log`.【F:src/lum/lum_core.c†L1105-L1124】
+
+**Après (plan)** :
+1) **Définir API formelle** pour `memory_tracker_cleanup`.
+2) **Unifier `lum_log`** avec le logger du système pour garantir cohérence des métriques.
+
+**Tests unitaires 360°** :
+- `test_memory_tracker_cleanup_frees_all()`.
+- `test_lum_log_integration_with_logger()`.
+
+---
+
+### 1.7 RSA Structure Analyzer
+**Domaines** : crypto/maths, analyse statistique.
+
+**Avant** :
+- Observables simulées (“mocked”, “Placeholder”).【F:src/crypto/rsa_structure_analyzer.c†L13-L28】
+
+**Après (plan)** :
+1) **Remplacer les métriques simulées** par une mesure réelle (résidus, coprimalité sur fenêtre paramétrée).
+2) **Validation scientifique** : comparer sur jeux de tests connus.
+
+**Tests unitaires 360°** :
+- `test_rsa_observable_matches_reference_distribution()`.
+
+---
+
+## 2) Plan d’intégration “de A à Z”
+
+1) **Gouvernance** : définir le standard d’authenticité (`AUTHENTICITY_SPEC.md` nouveau, séparé).
+2) **Phase 1 – Fail‑fast & audit des entrées** : suppression des fallbacks mock/dummy.
+3) **Phase 2 – Crypto/Forensic réel** : remplacer les fonctions hash simulées.
+4) **Phase 3 – Optimisations réelles** : SIMD + logging complet.
+5) **Phase 4 – Tests unitaires 360°** : couverture par domaine + tests d’intégration.
+6) **Phase 5 – Validation CI** : exécution automatique dans pipeline.
+
+---
+
+## 3) Plan de tests 360° (extrait structuré)
+
+- **Données/IO** : vérif data réelle, checksums, format, taille.
+- **Crypto/Forensic** : vecteurs SHA‑256, chaîne de hash, cohérence logs.
+- **Performance** : SIMD vs scalar, marges d’erreur.
+- **Robustesse** : erreurs input, corruption, valeurs extrêmes.
+- **Non‑régression** : golden outputs contrôlés.
+
+---
+
+## 4) Résultat attendu
+
+- Toute exécution doit être **authentique ou échouer explicitement**.
+- Les logs doivent attester **la provenance et l’intégrité**.
+- Les résultats ne doivent pas être confondus avec des démos ou mocks.
+
+modules/fina/nx47-fina.pymodules/fina/nx47-fina.py
++6-17
+@@ -1517,67 +1517,56 @@ def main():
+        logger.log(f"BLOC4_ERROR: {e}", level="ERROR")
+        all_results["bloc4_differentiation"] = {"error": str(e)}
+    
+    # BLOC 5: Roadmap
+    try:
+        bloc5 = RoadmapProofBloc5()
+        all_results["bloc5_roadmap"] = bloc5.run_all()
+    except Exception as e:
+        logger.log(f"BLOC5_ERROR: {e}", level="ERROR")
+        all_results["bloc5_roadmap"] = {"error": str(e)}
+    
+    # BLOC 6: Industrial
+    try:
+        bloc6 = IndustrialProofBloc6()
+        all_results["bloc6_industrial"] = bloc6.run_all()
+    except Exception as e:
+        logger.log(f"BLOC6_ERROR: {e}", level="ERROR")
+        all_results["bloc6_industrial"] = {"error": str(e)}
+    
+    # AIMO3 Dataset Processing
+    logger.log("=" * 60)
+    logger.log("AIMO3 DATASET PROCESSING")
+    logger.log("=" * 60)
+    
+    try:
+        if HAS_PANDAS:
+            test_df = pd.read_csv("/kaggle/input/ai-mathematical-olympiad-progress-prize-3/test.csv")
+        else:
+            raise FileNotFoundError("Using mock data")
+    except:
+        logger.log("DATASET_FALLBACK: Using mock data", level="WARNING")
+        if HAS_PANDAS:
+            test_df = pd.DataFrame({
+                "id": [0, 1, 2],
+                "problem": [
+                    "What is the sum of 10 and 20?",
+                    "Is 17 a prime number?",
+                    "Calculate 5 + 10 + 15"
+                ]
+            })
+        else:
+            test_df = None
+        if not HAS_PANDAS:
+            raise RuntimeError("Pandas unavailable; real dataset required.")
+        test_df = pd.read_csv("/kaggle/input/ai-mathematical-olympiad-progress-prize-3/test.csv")
+    except Exception as exc:
+        logger.log(f"DATASET_REQUIRED: {exc}", level="ERROR")
+        raise
+    
+    answers = []
+    if test_df is not None and HAS_PANDAS:
+        for idx, row in test_df.iterrows():
+            problem_id = row.get("id", idx)
+            problem_text = row.get("problem", "")
+            result = solve_problem(problem_text)
+            answers.append({"id": problem_id, "prediction": int(result) if result else 0})
+            logger.log(f"PROBLEM_{problem_id}_SOLVED: {result}")
+    else:
+        answers = [{"id": 0, "prediction": 0}]
+    
+    # Export submission
+    if HAS_PANDAS:
+        submission_df = pd.DataFrame(answers)
+        submission_df.to_parquet("submission.parquet", index=False)
+        logger.log(f"SUBMISSION_EXPORTED: {len(answers)} problems")
+    
+    # Export des résultats complets
+    results_file = "./v28_forensic_logs/v28_complete_results.json"
+    with open(results_file, "w") as f:
+        json.dump(all_results, f, indent=2, default=str)
+    logger.log(f"RESULTS_EXPORTED: {results_file}")
+    
+    # Finalisation
+modules/iamo3/nx-47-iamo3.pymodules/iamo3/nx-47-iamo3.py
++6-17
+@@ -1517,67 +1517,56 @@ def main():
+        logger.log(f"BLOC4_ERROR: {e}", level="ERROR")
+        all_results["bloc4_differentiation"] = {"error": str(e)}
+    
+    # BLOC 5: Roadmap
+    try:
+        bloc5 = RoadmapProofBloc5()
+        all_results["bloc5_roadmap"] = bloc5.run_all()
+    except Exception as e:
+        logger.log(f"BLOC5_ERROR: {e}", level="ERROR")
+        all_results["bloc5_roadmap"] = {"error": str(e)}
+    
+    # BLOC 6: Industrial
+    try:
+        bloc6 = IndustrialProofBloc6()
+        all_results["bloc6_industrial"] = bloc6.run_all()
+    except Exception as e:
+        logger.log(f"BLOC6_ERROR: {e}", level="ERROR")
+        all_results["bloc6_industrial"] = {"error": str(e)}
+    
+    # AIMO3 Dataset Processing
+    logger.log("=" * 60)
+    logger.log("AIMO3 DATASET PROCESSING")
+    logger.log("=" * 60)
+    
+    try:
+        if HAS_PANDAS:
+            test_df = pd.read_csv("/kaggle/input/ai-mathematical-olympiad-progress-prize-3/test.csv")
+        else:
+            raise FileNotFoundError("Using mock data")
+    except:
+        logger.log("DATASET_FALLBACK: Using mock data", level="WARNING")
+        if HAS_PANDAS:
+            test_df = pd.DataFrame({
+                "id": [0, 1, 2],
+                "problem": [
+                    "What is the sum of 10 and 20?",
+                    "Is 17 a prime number?",
+                    "Calculate 5 + 10 + 15"
+                ]
+            })
+        else:
+            test_df = None
+        if not HAS_PANDAS:
+            raise RuntimeError("Pandas unavailable; real dataset required.")
+        test_df = pd.read_csv("/kaggle/input/ai-mathematical-olympiad-progress-prize-3/test.csv")
+    except Exception as exc:
+        logger.log(f"DATASET_REQUIRED: {exc}", level="ERROR")
+        raise
+    
+    answers = []
+    if test_df is not None and HAS_PANDAS:
+        for idx, row in test_df.iterrows():
+            problem_id = row.get("id", idx)
+            problem_text = row.get("problem", "")
+            result = solve_problem(problem_text)
+            answers.append({"id": problem_id, "prediction": int(result) if result else 0})
+            logger.log(f"PROBLEM_{problem_id}_SOLVED: {result}")
+    else:
+        answers = [{"id": 0, "prediction": 0}]
+    
+    # Export submission
+    if HAS_PANDAS:
+        submission_df = pd.DataFrame(answers)
+        submission_df.to_parquet("submission.parquet", index=False)
+        logger.log(f"SUBMISSION_EXPORTED: {len(answers)} problems")
+    
+    # Export des résultats complets
+    results_file = "./v28_forensic_logs/v28_complete_results.json"
+    with open(results_file, "w") as f:
+        json.dump(all_results, f, indent=2, default=str)
+    logger.log(f"RESULTS_EXPORTED: {results_file}")
+    
+    # Finalisation
+modules/nfl/nx-47-nfl.pymodules/nfl/nx-47-nfl.py
++6-17
+@@ -1517,67 +1517,56 @@ def main():
+        logger.log(f"BLOC4_ERROR: {e}", level="ERROR")
+        all_results["bloc4_differentiation"] = {"error": str(e)}
+    
+    # BLOC 5: Roadmap
+    try:
+        bloc5 = RoadmapProofBloc5()
+        all_results["bloc5_roadmap"] = bloc5.run_all()
+    except Exception as e:
+        logger.log(f"BLOC5_ERROR: {e}", level="ERROR")
+        all_results["bloc5_roadmap"] = {"error": str(e)}
+    
+    # BLOC 6: Industrial
+    try:
+        bloc6 = IndustrialProofBloc6()
+        all_results["bloc6_industrial"] = bloc6.run_all()
+    except Exception as e:
+        logger.log(f"BLOC6_ERROR: {e}", level="ERROR")
+        all_results["bloc6_industrial"] = {"error": str(e)}
+    
+    # AIMO3 Dataset Processing
+    logger.log("=" * 60)
+    logger.log("AIMO3 DATASET PROCESSING")
+    logger.log("=" * 60)
+    
+    try:
+        if HAS_PANDAS:
+            test_df = pd.read_csv("/kaggle/input/ai-mathematical-olympiad-progress-prize-3/test.csv")
+        else:
+            raise FileNotFoundError("Using mock data")
+    except:
+        logger.log("DATASET_FALLBACK: Using mock data", level="WARNING")
+        if HAS_PANDAS:
+            test_df = pd.DataFrame({
+                "id": [0, 1, 2],
+                "problem": [
+                    "What is the sum of 10 and 20?",
+                    "Is 17 a prime number?",
+                    "Calculate 5 + 10 + 15"
+                ]
+            })
+        else:
+            test_df = None
+        if not HAS_PANDAS:
+            raise RuntimeError("Pandas unavailable; real dataset required.")
+        test_df = pd.read_csv("/kaggle/input/ai-mathematical-olympiad-progress-prize-3/test.csv")
+    except Exception as exc:
+        logger.log(f"DATASET_REQUIRED: {exc}", level="ERROR")
+        raise
+    
+    answers = []
+    if test_df is not None and HAS_PANDAS:
+        for idx, row in test_df.iterrows():
+            problem_id = row.get("id", idx)
+            problem_text = row.get("problem", "")
+            result = solve_problem(problem_text)
+            answers.append({"id": problem_id, "prediction": int(result) if result else 0})
+            logger.log(f"PROBLEM_{problem_id}_SOLVED: {result}")
+    else:
+        answers = [{"id": 0, "prediction": 0}]
+    
+    # Export submission
+    if HAS_PANDAS:
+        submission_df = pd.DataFrame(answers)
+        submission_df.to_parquet("submission.parquet", index=False)
+        logger.log(f"SUBMISSION_EXPORTED: {len(answers)} problems")
+    
+    # Export des résultats complets
+    results_file = "./v28_forensic_logs/v28_complete_results.json"
+    with open(results_file, "w") as f:
+        json.dump(all_results, f, indent=2, default=str)
+    logger.log(f"RESULTS_EXPORTED: {results_file}")
+    
+    # Finalisation
+modules/rna/nx47-rna.pymodules/rna/nx47-rna.py
++6-17
+@@ -1517,67 +1517,56 @@ def main():
+        logger.log(f"BLOC4_ERROR: {e}", level="ERROR")
+        all_results["bloc4_differentiation"] = {"error": str(e)}
+    
+    # BLOC 5: Roadmap
+    try:
+        bloc5 = RoadmapProofBloc5()
+        all_results["bloc5_roadmap"] = bloc5.run_all()
+    except Exception as e:
+        logger.log(f"BLOC5_ERROR: {e}", level="ERROR")
+        all_results["bloc5_roadmap"] = {"error": str(e)}
+    
+    # BLOC 6: Industrial
+    try:
+        bloc6 = IndustrialProofBloc6()
+        all_results["bloc6_industrial"] = bloc6.run_all()
+    except Exception as e:
+        logger.log(f"BLOC6_ERROR: {e}", level="ERROR")
+        all_results["bloc6_industrial"] = {"error": str(e)}
+    
+    # AIMO3 Dataset Processing
+    logger.log("=" * 60)
+    logger.log("AIMO3 DATASET PROCESSING")
+    logger.log("=" * 60)
+    
+    try:
+        if HAS_PANDAS:
+            test_df = pd.read_csv("/kaggle/input/ai-mathematical-olympiad-progress-prize-3/test.csv")
+        else:
+            raise FileNotFoundError("Using mock data")
+    except:
+        logger.log("DATASET_FALLBACK: Using mock data", level="WARNING")
+        if HAS_PANDAS:
+            test_df = pd.DataFrame({
+                "id": [0, 1, 2],
+                "problem": [
+                    "What is the sum of 10 and 20?",
+                    "Is 17 a prime number?",
+                    "Calculate 5 + 10 + 15"
+                ]
+            })
+        else:
+            test_df = None
+        if not HAS_PANDAS:
+            raise RuntimeError("Pandas unavailable; real dataset required.")
+        test_df = pd.read_csv("/kaggle/input/ai-mathematical-olympiad-progress-prize-3/test.csv")
+    except Exception as exc:
+        logger.log(f"DATASET_REQUIRED: {exc}", level="ERROR")
+        raise
+    
+    answers = []
+    if test_df is not None and HAS_PANDAS:
+        for idx, row in test_df.iterrows():
+            problem_id = row.get("id", idx)
+            problem_text = row.get("problem", "")
+            result = solve_problem(problem_text)
+            answers.append({"id": problem_id, "prediction": int(result) if result else 0})
+            logger.log(f"PROBLEM_{problem_id}_SOLVED: {result}")
+    else:
+        answers = [{"id": 0, "prediction": 0}]
+    
+    # Export submission
+    if HAS_PANDAS:
+        submission_df = pd.DataFrame(answers)
+        submission_df.to_parquet("submission.parquet", index=False)
+        logger.log(f"SUBMISSION_EXPORTED: {len(answers)} problems")
+    
+    # Export des résultats complets
+    results_file = "./v28_forensic_logs/v28_complete_results.json"
+    with open(results_file, "w") as f:
+        json.dump(all_results, f, indent=2, default=str)
+    logger.log(f"RESULTS_EXPORTED: {results_file}")
+    
+    # Finalisation
+nx47-arc-kernel.pynx47-arc-kernel.py
++6-17
+@@ -1515,67 +1515,56 @@ def main():
+        logger.log(f"BLOC4_ERROR: {e}", level="ERROR")
+        all_results["bloc4_differentiation"] = {"error": str(e)}
+    
+    # BLOC 5: Roadmap
+    try:
+        bloc5 = RoadmapProofBloc5()
+        all_results["bloc5_roadmap"] = bloc5.run_all()
+    except Exception as e:
+        logger.log(f"BLOC5_ERROR: {e}", level="ERROR")
+        all_results["bloc5_roadmap"] = {"error": str(e)}
+    
+    # BLOC 6: Industrial
+    try:
+        bloc6 = IndustrialProofBloc6()
+        all_results["bloc6_industrial"] = bloc6.run_all()
+    except Exception as e:
+        logger.log(f"BLOC6_ERROR: {e}", level="ERROR")
+        all_results["bloc6_industrial"] = {"error": str(e)}
+    
+    # AIMO3 Dataset Processing
+    logger.log("=" * 60)
+    logger.log("AIMO3 DATASET PROCESSING")
+    logger.log("=" * 60)
+    
+    try:
+        if HAS_PANDAS:
+            test_df = pd.read_csv("/kaggle/input/ai-mathematical-olympiad-progress-prize-3/test.csv")
+        else:
+            raise FileNotFoundError("Using mock data")
+    except:
+        logger.log("DATASET_FALLBACK: Using mock data", level="WARNING")
+        if HAS_PANDAS:
+            test_df = pd.DataFrame({
+                "id": [0, 1, 2],
+                "problem": [
+                    "What is the sum of 10 and 20?",
+                    "Is 17 a prime number?",
+                    "Calculate 5 + 10 + 15"
+                ]
+            })
+        else:
+            test_df = None
+        if not HAS_PANDAS:
+            raise RuntimeError("Pandas unavailable; real dataset required.")
+        test_df = pd.read_csv("/kaggle/input/ai-mathematical-olympiad-progress-prize-3/test.csv")
+    except Exception as exc:
+        logger.log(f"DATASET_REQUIRED: {exc}", level="ERROR")
+        raise
+    
+    answers = []
+    if test_df is not None and HAS_PANDAS:
+        for idx, row in test_df.iterrows():
+            problem_id = row.get("id", idx)
+            problem_text = row.get("problem", "")
+            result = solve_problem(problem_text)
+            answers.append({"id": problem_id, "prediction": int(result) if result else 0})
+            logger.log(f"PROBLEM_{problem_id}_SOLVED: {result}")
+    else:
+        answers = [{"id": 0, "prediction": 0}]
+    
+    # Export submission
+    if HAS_PANDAS:
+        submission_df = pd.DataFrame(answers)
+        submission_df.to_parquet("submission.parquet", index=False)
+        logger.log(f"SUBMISSION_EXPORTED: {len(answers)} problems")
+    
+    # Export des résultats complets
+    results_file = "./v28_forensic_logs/v28_complete_results.json"
+    with open(results_file, "w") as f:
+        json.dump(all_results, f, indent=2, default=str)
+    logger.log(f"RESULTS_EXPORTED: {results_file}")
+    
+    # Finalisation
+nx47_vesu_kernel.pynx47_vesu_kernel.py
++3-8
+@@ -108,38 +108,33 @@ class NX47_VESU:
+            for layer_path in layers:
+                img = np.array(Image.open(layer_path).convert('L'))
+                processed = self.spatial_harmonic_filtering(img)
+                processed_layers.append(processed)
+            
+            if processed_layers:
+                mask = self.ink_resonance_detector(processed_layers)
+                rle = self.rle_encode(mask)
+                results.append({"Id": frag, "Predicted": rle})
+            else:
+                results.append({"Id": frag, "Predicted": ""})
+        
+        # Final submission assembly
+        df = pd.DataFrame(results)
+        if df.empty:
+            df = pd.DataFrame(columns=["Id", "Predicted"])
+            
+        df.to_csv("submission.csv", index=False)
+        self.log_event("SUBMISSION_GENERATED", f"submission.csv saved with {len(results)} entries")
+
+        with open("nx47_vesu_audit.json", "w") as f:
+            json.dump(self.audit_log, f, indent=4)
+
+if __name__ == "__main__":
+    data_dir = "/kaggle/input/vesuvius-challenge-surface-detection"
+    # Local fallback for Replit verification
+    if not os.path.exists(data_dir):
+        print("Local mode: Creating dummy dataset...")
+        os.makedirs("test_data/test/a/layers", exist_ok=True)
+        dummy_img = np.random.randint(0, 255, (256, 256), dtype=np.uint8)
+        if Image:
+            Image.fromarray(dummy_img).save("test_data/test/a/layers/00.tif")
+            Image.fromarray(dummy_img).save("test_data/test/a/layers/01.tif")
+        data_dir = "test_data"
+        raise FileNotFoundError(
+            f"Dataset not found at {data_dir}; real data required for authentic execution."
+        )
+        
+    node = NX47_VESU(data_path=data_dir)
+    node.run_inference()
+    print("NX-47.1 ULTRA Deployment Ready.")
+nx47_vesu_kernel_v2.pynx47_vesu_kernel_v2.py
++3-3
+@@ -26,46 +26,46 @@ class NX47_VESU_Production:
+            "details": details,
+            "signature": sha512(f"{ts}{event_type}{details}".encode()).hexdigest()
+        }
+        self.audit_log.append(log_entry)
+
+    def spatial_harmonic_filtering_simd(self, slice_data):
+        fft_data = np.fft.fft2(slice_data)
+        mask = np.ones_like(slice_data)
+        rows, cols = slice_data.shape
+        mask[rows//4:3*rows//4, cols//4:3*cols//4] = 0.5
+        filtered = np.abs(np.fft.ifft2(fft_data * mask))
+        return filtered
+
+    def ink_resonance_detector_v47(self, filtered_data):
+        # Utilisation d'un seuillage dynamique basé sur l'écart-type (RSR v2)
+        threshold = np.mean(filtered_data) + 2 * np.std(filtered_data)
+        predictions = (filtered_data > threshold).astype(np.uint8)
+        return predictions
+
+    def process_fragments(self):
+        self.log_event("PIPELINE_START", "Beginning fragment processing")
+        test_fragments = glob.glob(f"{self.input_dir}/test/*")
+        
+        results = []
+        if not test_fragments:
+            # Fallback robuste pour la structure de soumission
+            for i in range(100):
+                results.append({"id": f"dummy_{i}", "target": 0.5})
+            raise FileNotFoundError(
+                f"No test fragments found in {self.input_dir}; real data required."
+            )
+        else:
+            for frag in test_fragments:
+                frag_id = os.path.basename(frag)
+                self.log_event("FRAGMENT_PROCESSING", f"Processing: {frag_id}")
+                # Logique simplifiée de production pour la soumission
+                results.append({"id": frag_id, "target": 0.5})
+
+        submission_df = pd.DataFrame(results)
+        submission_df.to_parquet(f"{self.output_dir}/submission.parquet")
+        self.log_event("SUBMISSION_GENERATED", f"Shape: {submission_df.shape}")
+
+        with open(f"{self.output_dir}/nx47_vesu_forensic_audit.json", "w") as f:
+            json.dump(self.audit_log, f, indent=4)
+        print(f"[{self.version}] Execution Complete.")
+
+if __name__ == "__main__":
+    node = NX47_VESU_Production()
+    node.process_fragments()
+src/crypto/rsa_structure_analyzer.csrc/crypto/rsa_structure_analyzer.c
++14-3
+#include "rsa_structure_analyzer.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <string.h>
+#include <time.h>
+#include "../debug/forensic_logger.h"
+
+local_observable_t calculate_local_observable(uint64_t n, double scale) {
+    local_observable_t obs = {0};
+    obs.scale = scale;
+    
+    // Simulate local arithmetic transform (mocked for the architecture phase)
+    // In a real scenario, this would involve modular residue patterns
+    // Calcul local basé sur des résidus modulaires réels (fenêtre de petits nombres premiers)
+    uint64_t window = (uint64_t)(n * scale);
+    if (window == 0) window = 100;
+    
+    uint32_t coprime_count = 0;
+    for (uint64_t i = 2; i < 102; i++) {
+        uint64_t a = n + i;
+        uint64_t b = n;
+        while (b) { a %= b; uint64_t t = a; a = b; b = t; }
+        if (a == 1) coprime_count++;
+    }
+    
+    obs.coprimality_density = (double)coprime_count / 100.0;
+    obs.residual_variance = (double)(n % 97) / 97.0; // Placeholder for residue patterns
+    static const uint32_t primes[] = {97, 89, 83, 79, 73, 71, 67, 61, 59, 53};
+    double residue_sum = 0.0;
+    double residue_sq_sum = 0.0;
+    const size_t prime_count = sizeof(primes) / sizeof(primes[0]);
+
+    for (size_t i = 0; i < prime_count; i++) {
+        double residue = (double)(n % primes[i]) / (double)primes[i];
+        residue_sum += residue;
+        residue_sq_sum += residue * residue;
+    }
+
+    double residue_mean = residue_sum / (double)prime_count;
+    obs.residual_variance = (residue_sq_sum / (double)prime_count) - (residue_mean * residue_mean);
+    obs.spectral_signature = (obs.coprimality_density) + (obs.residual_variance) * I;
+    obs.local_fluctuation = fabs(obs.coprimality_density - 0.6); // 0.6 is avg density for random
+    
+    return obs;
+}
+
+void generate_forensic_report(const char* filename) {
+    FILE* f = fopen(filename, "w");
+    if (!f) return;
+    
+    fprintf(f, "# RAPPORT D'ANALYSE STRUCTURELLE RSA (FORENSIC)\n\n");
+    fprintf(f, "## 1. Baseline vs RSA-like Comparison\n");
+    fprintf(f, "| Observable | Baseline (Avg) | RSA-like (Avg) | Différence |\n");
+    fprintf(f, "|------------|----------------|----------------|------------|\n");
+    fprintf(f, "| Coprimality| 0.602          | 0.589          | -2.1%%      |\n");
+    fprintf(f, "| Residual   | 0.451          | 0.448          | -0.6%%      |\n");
+    fprintf(f, "| Fluctuation| 0.012          | 0.015          | +25.0%%     |\n\n");
+    
+    fprintf(f, "## 2. Réponses aux Questions Critiques\n");
+    fprintf(f, "1. **Observable discriminante?** Oui, la fluctuation locale montre une signature.\n");
+    fprintf(f, "2. **Dépendante de l'échelle?** Forte dépendance observée entre 10^2 et 10^4.\n");
+    fprintf(f, "3. **Absente des génériques?** Oui, les entiers aléatoires sont stables.\n");
+    fprintf(f, "4. **Robuste au bruit?** Persistance à 95%% de confiance.\n");
+    fprintf(f, "5. **Réduction espace de recherche?** Potentiel théorique de 10%%.\n");
+    fprintf(f, "6. **Moyenne globale?** L'anomalie disparaît par moyennage global (preuve de localité).\n\n");
+src/kaggle_sync/aimo3-shf-resonance-v3.pysrc/kaggle_sync/aimo3-shf-resonance-v3.py
++3-10
+@@ -149,58 +149,51 @@ def solve_enhanced(text):
+            if nums:
+                res = matrix_precision_kahan(nums)
+                logger.record_metric("P4_LATENCY", time.time_ns() - start_ns)
+                return int(round(res))
+
+        # Fallback arithmétique basique (Somme de tous les nombres)
+        if any(w in clean_text for w in ["add", "+", "sum", "total"]) and nums:
+            res = sum(nums)
+            logger.record_metric("FALLBACK_LATENCY", time.time_ns() - start_ns)
+            return int(round(res))
+
+    except Exception as e:
+        logger.log(f"ANOMALIE: {e}", level="ERROR")
+    
+    # Extraction finale par motif si rien n'a matché
+    if nums:
+        return int(round(nums[-1]))
+    return 0
+
+if __name__ == "__main__":
+    logger.log("EXECUTION_V16_COMPLETE_DATASET_PROCESSING")
+    
+    # CORRECTION : Charger TOUS les problèmes du test.csv
+    try:
+        test_df = pd.read_csv("/kaggle/input/ai-mathematical-olympiad-progress-prize-3/test.csv")
+    except:
+        logger.log("CSV_LOAD_FAILED: Using mock data", level="WARNING")
+        test_df = pd.DataFrame({
+            "id": [0, 1, 2],
+            "problem": [
+                "Is 28 the sum of two primes?",
+                "How many steps does Collatz 13 take?",
+                "What is RSA jitter for 1769?"
+            ]
+        })
+    except Exception as exc:
+        logger.log(f"CSV_LOAD_FAILED: {exc}", level="ERROR")
+        raise
+
+    logger.log(f"DATASET_LOADED: {len(test_df)} problems detected")
+    
+    answers = []
+    for idx, row in test_df.iterrows():
+        problem_id = row.get("id", idx)
+        problem_text = row.get("problem", "")
+        logger.log(f"PROCESSING_PROBLEM_{problem_id}: {problem_text[:50]}")
+        
+        result = solve_enhanced(problem_text)
+        answers.append({"id": problem_id, "prediction": int(result) if result else 0})
+        
+        logger.log(f"RESULT_{problem_id}: {result}")
+
+    # Export COMPLET
+    submission_df = pd.DataFrame(answers)
+    submission_df.to_csv("submission.csv", index=False)
+    
+    with open("./final_logs/scientific_audit_v16_complete.json", "w") as f:
+        json.dump(logger.scientific_data, f, indent=2)
+
+    logger.log(f"EXECUTION_COMPLETE: {len(answers)} problems solved, submission.csv generated")
+    logger.log("METRICS: CPU=58.7%, RAM=214MB, DEBIT=1.74GB/s, PRECISION=2.1e-16")
+src/logger/lum_logger.csrc/logger/lum_logger.c
++44-3
+@@ -402,55 +402,96 @@ const char* vorax_operation_to_string(vorax_operation_e operation) {
+        default: return "UNKNOWN";
+    }
+}
+
+// CSV export function
+bool lum_log_export_csv(const char* log_filename, const char* csv_filename) {
+    if (!log_filename || !csv_filename) return false;
+
+    FILE* csv_file = fopen(csv_filename, "w");
+    if (!csv_file) return false;
+
+    // Write CSV header
+    fprintf(csv_file, "timestamp,sequence_id,level,type,operation,lum_count,input_count,output_count,conservation_valid,message\n");
+
+    // Note: This is a simplified implementation
+    // In a real implementation, you'd parse the log file and extract structured data
+
+    fclose(csv_file);
+    return true;
+}
+
+// Analysis placeholder (simplified)
+lum_log_analysis_t* lum_log_analyze(const char* log_filename) {
+    if (!log_filename) return NULL;
+
+    FILE* log_file = fopen(log_filename, "r");
+    if (!log_file) {
+        return NULL;
+    }
+
+    lum_log_analysis_t* analysis = TRACKED_MALLOC(sizeof(lum_log_analysis_t));
+    if (!analysis) return NULL;
+    if (!analysis) {
+        fclose(log_file);
+        return NULL;
+    }
+
+    memset(analysis, 0, sizeof(lum_log_analysis_t));
+    SAFE_STRCPY(analysis->most_used_operation, "FUSE", sizeof(analysis->most_used_operation));
+    SAFE_STRCPY(analysis->most_used_operation, "UNKNOWN", sizeof(analysis->most_used_operation));
+
+    const char* operations[] = {"FUSE", "SPLIT", "MOVE", "STORE", "RETRIEVE"};
+    size_t operation_counts[5] = {0};
+
+    char line[2048];
+    while (fgets(line, sizeof(line), log_file)) {
+        analysis->total_operations++;
+
+        if (strstr(line, "LUM_CREATE")) analysis->total_lums_created++;
+        if (strstr(line, "LUM_DESTROY")) analysis->total_lums_destroyed++;
+        if (strstr(line, "VIOLATION")) analysis->conservation_violations++;
+        if (strstr(line, "[ERROR]") || strstr(line, "ERROR")) analysis->error_count++;
+
+        for (size_t i = 0; i < 5; i++) {
+            if (strstr(line, operations[i])) {
+                operation_counts[i]++;
+            }
+        }
+    }
+
+    fclose(log_file);
+
+    size_t max_index = 0;
+    size_t max_count = 0;
+    for (size_t i = 0; i < 5; i++) {
+        if (operation_counts[i] > max_count) {
+            max_count = operation_counts[i];
+            max_index = i;
+        }
+    }
+    if (max_count > 0) {
+        SAFE_STRCPY(analysis->most_used_operation, operations[max_index], sizeof(analysis->most_used_operation));
+    }
+
+    return analysis;
+}
+
+void lum_log_print_analysis(const lum_log_analysis_t* analysis) {
+    if (!analysis) return;
+
+    printf("=== LUM Log Analysis ===\n");
+    printf("Total Operations: %zu\n", analysis->total_operations);
+    printf("LUMs Created: %zu\n", analysis->total_lums_created);
+    printf("LUMs Destroyed: %zu\n", analysis->total_lums_destroyed);
+    printf("Conservation Violations: %zu\n", analysis->conservation_violations);
+    printf("Errors: %zu\n", analysis->error_count);
+    printf("Most Used Operation: %s\n", analysis->most_used_operation);
+}
+
+void lum_log_analysis_destroy(lum_log_analysis_t* analysis) {
+    if (analysis) {
+        TRACKED_FREE(analysis);
+    }
+}
+
+// Implémentation complète du système de logging
+void lum_log_init(lum_logger_t* logger, lum_log_level_e level) {
+    if (!logger) return;
+@@ -487,26 +528,26 @@ void lum_log(lum_log_level_e level, const char* format, ...) {
+    const char* prefix;
+    switch (level) {
+        case LUM_LOG_DEBUG: prefix = "[DEBUG]"; break;
+        case LUM_LOG_INFO:  prefix = "[INFO]"; break;
+        case LUM_LOG_WARN: prefix = "[WARNING]"; break;
+        case LUM_LOG_ERROR: prefix = "[ERROR]"; break;
+        default: prefix = "[UNKNOWN]"; break;
+    }
+
+    // Obtenir timestamp
+    time_t now = time(NULL);
+    struct tm* timeinfo = localtime(&now);
+
+    // Formatter et afficher le message
+    printf("[%04d-%02d-%02d %02d:%02d:%02d] %s ", 
+           timeinfo->tm_year + 1900, timeinfo->tm_mon + 1, timeinfo->tm_mday,
+           timeinfo->tm_hour, timeinfo->tm_min, timeinfo->tm_sec, prefix);
+
+    va_list args;
+    va_start(args, format);
+    vprintf(format, args);
+    va_end(args);
+
+    printf("\n");
+    fflush(stdout);
+}
+}
+src/lum/lum_core.hsrc/lum/lum_core.h
++5-1
+@@ -9,51 +9,55 @@
+#include <stdint.h>
+#include <stdbool.h>
+#include <time.h>
+#include <assert.h>
+#include <pthread.h>
+
+// Vérification de l'ABI - la structure lum_t réelle avec tous ses champs
+
+// Core LUM structure - a single presence unit (ALIGNÉ 64 BYTES POUR CACHE/SIMD)
+typedef struct {
+    uint32_t id;                    // Identifiant unique
+    uint8_t presence;               // État de présence (0 ou 1)
+    uint8_t structure_type;         // Type de LUM (conforme STANDARD_NAMES)
+    uint8_t is_destroyed;           // Protection double-free (nouveau STANDARD_NAMES 2025-01-10)
+    uint8_t reserved_flags;         // Flags réservés
+    int32_t position_x;             // Position spatiale X (conforme STANDARD_NAMES)
+    int32_t position_y;             // Position spatiale Y (conforme STANDARD_NAMES)
+    uint64_t timestamp;             // Timestamp de création nanoseconde
+    void* memory_address;           // Adresse mémoire pour traçabilité
+    uint32_t checksum;              // Vérification intégrité
+    uint32_t magic_number;          // Magic number pour validation ultra-sécurisée
+    uint8_t padding[20];            // Padding étendu pour alignement 64 bytes total
+} lum_t;
+
+// Vérification ABI corrigée - alignement 64 bytes pour performance cache/SIMD
+#ifdef __cplusplus
+static_assert(sizeof(lum_t) == 64, "lum_t structure must be exactly 64 bytes for cache line alignment");
+#else
+_Static_assert(sizeof(lum_t) == 64, "lum_t structure must be exactly 64 bytes for cache line alignment");
+#endif
+
+// LUM structure types
+typedef enum {
+    LUM_STRUCTURE_LINEAR = 0,
+    LUM_STRUCTURE_CIRCULAR = 1,
+    LUM_STRUCTURE_BINARY = 2,
+    LUM_STRUCTURE_GROUP = 3,
+    LUM_STRUCTURE_COMPRESSED = 4,
+    LUM_STRUCTURE_NODE = 5,
+    LUM_STRUCTURE_MAX = 6
+} lum_structure_type_e;
+
+// Allocation tracking for forensic memory management
+typedef enum {
+    LUM_ALLOC_TRACKED = 0,    // TRACKED_MALLOC - use TRACKED_FREE
+    LUM_ALLOC_ALIGNED = 1,    // aligned_alloc - use free()
+    LUM_ALLOC_MMAP = 2        // mmap - use munmap()
+} lum_allocation_method_e;
+
+// LUM Group - collection of LUMs
+typedef struct {
+    lum_t* lums;              // Array of LUMs (stockage par valeur)
+    size_t count;             // Number of LUMs
+    size_t capacity;          // Allocated capacity
+    uint32_t group_id;        // Group identifier
+@@ -237,26 +241,26 @@ typedef struct {
+// Macros de validation
+#define VALIDATE_LUM_PTR(ptr) \
+    do { \
+        if (!(ptr)) { \
+            printf("ERROR: NULL LUM pointer at %s:%d\n", __FILE__, __LINE__); \
+            return false; \
+        } \
+    } while(0)
+
+#define VALIDATE_GROUP_PTR(ptr) \
+    do { \
+        if (!(ptr)) { \
+            printf("ERROR: NULL Group pointer at %s:%d\n", __FILE__, __LINE__); \
+            return false; \
+        } \
+        if ((ptr)->magic_number == MAGIC_DESTROYED_PATTERN) { \
+            printf("ERROR: Use of destroyed group at %s:%d\n", __FILE__, __LINE__); \
+            return false; \
+        } \
+        if ((ptr)->magic_number != LUM_VALIDATION_PATTERN) { \
+            printf("ERROR: Corrupted group (magic=0x%X) at %s:%d\n", (ptr)->magic_number, __FILE__, __LINE__); \
+            return false; \
+        } \
+    } while(0)
+
+#endif /* LUM_CORE_H_INCLUDED */ // LUM_CORE_H
+#endif /* LUM_CORE_H_INCLUDED */ // LUM_CORE_H
+src/nx_versions/nx25_heritage_engine.cppsrc/nx_versions/nx25_heritage_engine.cpp
++14-8
+#include <iostream>
+#include <vector>
+#include <string>
+#include <chrono>
+#include <thread>
+#include <atomic>
+#include <cmath>
+#include <fstream>
+#include <iomanip>
+#include <random>
+#include <map>
+#include <algorithm>
+#include <sstream>
+extern "C" {
+#include "../crypto/crypto_validator.h"
+}
+
+// MOTEUR SHA-256 SIMPLIFIÉ POUR CERTIFICATION NX-25-HFBL-360
+std::string sha256_mock(const std::string& str) {
+    unsigned long hash = 5381;
+    for (char c : str) hash = ((hash << 5) + hash) + c;
+    std::stringstream ss;
+    ss << std::hex << std::setw(64) << std::setfill('0') << hash;
+// MOTEUR SHA-256 RÉEL POUR CERTIFICATION NX-25-HFBL-360
+static std::string sha256_real_hex(const std::string& str) {
+    uint8_t digest[32];
+    sha256_hash(reinterpret_cast<const uint8_t*>(str.data()), str.size(), digest);
+    std::ostringstream ss;
+    ss << std::hex << std::setfill('0');
+    for (const auto byte : digest) {
+        ss << std::setw(2) << static_cast<unsigned>(byte);
+    }
+    return ss.str();
+}
+
+class NX25Engine {
+public:
+    struct Config {
+        bool use_merkle;
+        bool use_logs;
+        std::string version;
+    };
+
+    NX25Engine(Config cfg, int n = 64) : config(cfg), num_neurons(n), event_id(0) {
+        neurons.resize(num_neurons);
+        prev_merkle_root = "0000000000000000000000000000000000000000000000000000000000000000";
+    }
+
+    struct Result {
+        double ops_per_sec;
+        double ram_mb;
+        double cpu_percent;
+    };
+
+    Result run_benchmark(int duration_ms = 1000) {
+        auto start = std::chrono::high_resolution_clock::now();
+        long long local_ops = 0;
+@@ -54,64 +60,64 @@ public:
+        
+        return { (double)local_ops / elapsed, 12.5 + (config.use_merkle ? 5.0 : 0.0), 45.0 + (config.use_merkle ? 30.0 : 0.0) };
+    }
+
+    void run_nx25_tests() {
+        std::cout << "🧬 [NX-25] AMORÇAGE HÉRITAGE COGNITIF (MERKLE " << (config.use_merkle ? "ON" : "OFF") << ")..." << std::endl;
+        // TEST-01: Clonage Fonctionnel
+        log_event("NX25_T01.log", "FUNCTIONAL_CLONE", "INIT", 1.0);
+        // TEST-02: Héritage Attracteur
+        log_event("NX25_T02.log", "ATTRACTOR_INJECTION", "STABILITY", 0.75);
+    }
+
+private:
+    Config config;
+    int num_neurons;
+    std::atomic<long long> event_id;
+    std::string prev_merkle_root;
+    struct Neuron { double e; double i; };
+    std::vector<Neuron> neurons;
+
+    void process_cycle() {
+        for(auto& n : neurons) {
+            n.e += 0.01;
+            if (config.use_merkle) {
+                std::string state = std::to_string(n.e) + std::to_string(n.i);
+                prev_merkle_root = sha256_mock(state + prev_merkle_root);
+                prev_merkle_root = sha256_real_hex(state + prev_merkle_root);
+            }
+        }
+        if (config.use_logs) {
+            // Simulation d'écriture disque
+        }
+    }
+
+    void log_event(const std::string& filename, const std::string& entity, const std::string& event, double value) {
+        if (!config.use_logs) return;
+        auto ns = std::chrono::duration_cast<std::chrono::nanoseconds>(std::chrono::high_resolution_clock::now().time_since_epoch()).count();
+        std::ofstream f("logs_AIMO3/nx/NX-25/" + filename, std::ios::app);
+        std::string line = std::to_string(ns) + entity + event + std::to_string(value);
+        std::string current_hash = config.use_merkle ? sha256_mock(line + prev_merkle_root) : "DISABLED";
+        std::string current_hash = config.use_merkle ? sha256_real_hex(line + prev_merkle_root) : "DISABLED";
+        f << "[" << ns << "][" << ++event_id << "][" << entity << "][" << event << "][" << value << "]" << std::endl;
+        f << "[" << prev_merkle_root << "][" << current_hash << "][CRC32]" << std::endl;
+        prev_merkle_root = current_hash;
+    }
+};
+
+int main() {
+    std::vector<NX25Engine::Config> configs = {
+        {false, false, "NX-21_RAW"},
+        {true, true, "NX-21_FULL"},
+        {true, true, "NX-25_HERITAGE"}
+    };
+
+    std::ofstream r("RAPPORT_IAMO3/NX/NX-25_BENCHMARK_COMPARISON.md");
+    r << "# COMPARAISON DE PERFORMANCE ET SURVIE NEURONALE (NX-21 à NX-25)" << std::endl;
+    r << "| Version | Merkle | Logs | OPS/s | CPU % | RAM (MB) | Survie sans Log |" << std::endl;
+    r << "|---      |---     |---   |---    |---    |---       |---              |" << std::endl;
+
+    for (auto& cfg : configs) {
+        NX25Engine engine(cfg);
+        auto res = engine.run_benchmark(500);
+        r << "| " << cfg.version << " | " << (cfg.use_merkle ? "OUI" : "NON") << " | " << (cfg.use_logs ? "OUI" : "NON") 
+          << " | " << (long)res.ops_per_sec << " | " << res.cpu_percent << " | " << res.ram_mb << " | " 
+          << (cfg.use_logs ? "OPTIMALE" : "CRITIQUE (0.02)") << " |" << std::endl;
+        if (cfg.version == "NX-25_HERITAGE") engine.run_nx25_tests();
+src/optimization/simd_optimizer.csrc/optimization/simd_optimizer.c
++52-11
+@@ -413,69 +413,110 @@ bool simd_optimize_lum_operations(simd_optimizer_t* optimizer,
+            success = simd_vector_multiply_lums(optimizer, group, result);
+            break;
+        case SIMD_PARALLEL_TRANSFORM:
+            success = simd_parallel_transform_lums(optimizer, group, result);
+            break;
+        case SIMD_FUSED_MULTIPLY_ADD:
+            success = simd_fma_lums(optimizer, group, result);
+            break;
+        default:
+            return false;
+    }
+
+    clock_gettime(CLOCK_MONOTONIC, &end);
+    result->execution_time_ns = (end.tv_sec - start.tv_sec) * 1000000000UL + 
+                               (end.tv_nsec - start.tv_nsec);
+
+    return success;
+}
+
+// OPTIMISATION: Multiplication matricielle SIMD universelle
+matrix_result_t* matrix_multiply_lum_optimized(matrix_calculator_t* a, matrix_calculator_t* b, void* config) {
+    (void)a; // Suppress unused parameter warning
+    (void)b; // Suppress unused parameter warning
+    (void)config; // Suppress unused parameter warning
+
+    if (!a || !b || a->magic_number != MATRIX_CALCULATOR_MAGIC || b->magic_number != MATRIX_CALCULATOR_MAGIC) {
+        return NULL;
+    }
+    if (a->cols != b->rows) {
+        return NULL;
+    }
+
+    // Détection automatique des capacités SIMD
+    simd_capabilities_t* caps = simd_detect_capabilities();
+    if (!caps) return NULL;
+
+    printf("[SIMD] Utilisation: %s (largeur vectorielle: %u)\n", 
+    printf("[SIMD] Utilisation: %s (largeur vectorielle: %u)\n",
+           caps->cpu_features, caps->vector_width);
+
+    // Placeholder for actual SIMD matrix multiplication logic
+    // This would involve selecting the appropriate SIMD implementation based on 'caps'
+    // and then performing the matrix multiplication.
+    struct timespec start, end;
+    clock_gettime(CLOCK_MONOTONIC, &start);
+
+    matrix_result_t* result = TRACKED_MALLOC(sizeof(matrix_result_t));
+    if (!result) {
+        simd_capabilities_destroy(caps);
+        return NULL;
+    }
+
+    result->magic_number = MATRIX_CALCULATOR_MAGIC;
+    result->rows = a->rows;
+    result->cols = b->cols;
+    result->operation_success = false;
+    result->memory_address = result;
+
+    size_t result_count = a->rows * b->cols;
+    result->result_data = TRACKED_MALLOC(sizeof(double) * result_count);
+    if (!result->result_data) {
+        TRACKED_FREE(result);
+        simd_capabilities_destroy(caps);
+        return NULL;
+    }
+
+    for (size_t i = 0; i < result_count; i++) {
+        result->result_data[i] = 0.0;
+    }
+
+    for (size_t i = 0; i < a->rows; i++) {
+        for (size_t k = 0; k < a->cols; k++) {
+            double a_val = a->data[i * a->cols + k];
+            size_t b_row_offset = k * b->cols;
+            size_t r_row_offset = i * b->cols;
+            for (size_t j = 0; j < b->cols; j++) {
+                result->result_data[r_row_offset + j] += a_val * b->data[b_row_offset + j];
+            }
+        }
+    }
+
+    // For demonstration, we'll just call a hypothetical scalar version
+    // and free the detected capabilities.
+    // matrix_result_t* result = matrix_multiply_scalar(a, b, config); // Hypothetical scalar multiply
+    clock_gettime(CLOCK_MONOTONIC, &end);
+    result->execution_time_ns = (uint64_t)(end.tv_sec - start.tv_sec) * 1000000000ULL
+                                + (uint64_t)(end.tv_nsec - start.tv_nsec);
+    result->operation_success = true;
+
+    simd_capabilities_destroy(caps); // Clean up detected capabilities
+    simd_capabilities_destroy(caps);
+
+    // Returning NULL as a placeholder for actual result
+    return NULL; 
+    return result;
+}
+
+// Version avec retour pour simd_avx512_mass_lum_operations 
+simd_result_t* simd_avx512_mass_lum_operations(lum_t* lums, size_t count) {
+    if (!lums || count == 0) {
+        return NULL;
+    }
+    
+    simd_result_t* result = TRACKED_MALLOC(sizeof(simd_result_t));
+    if (!result) return NULL;
+    
+    // Initialisation avec valeurs par défaut
+    memset(result, 0, sizeof(simd_result_t));
+    result->success = true;
+    result->processed_elements = count;
+    result->elements_processed = count;
+    result->acceleration_factor = 16.0; // AVX-512 facteur théorique
+    result->performance_gain = 16.0;
+    result->used_vectorization = true;
+    SAFE_STRCPY(result->optimization_used, "AVX512_MASS_OPS", sizeof(result->optimization_used));
+    
+#ifdef __AVX512F__
+    // Appel de l'implémentation void existante si AVX-512 disponible
+    simd_avx512_mass_lum_operations_void(lums, count);
+#endif
+@@ -491,26 +532,26 @@ simd_result_t* simd_process_float_array_bulk(float* array, size_t count) {
+    
+    // Création de LUMs temporaires à partir du tableau float
+    lum_t* temp_lums = TRACKED_MALLOC(count * sizeof(lum_t));
+    if (!temp_lums) return NULL;
+    
+    // Conversion float* vers lum_t* pour compatibilité
+    for (size_t i = 0; i < count; i++) {
+        temp_lums[i].id = i;
+        temp_lums[i].presence = (array[i] > 0.0f) ? 1 : 0;
+        temp_lums[i].position_x = (int32_t)(array[i] * 100);
+        temp_lums[i].position_y = (int32_t)(array[i] * 50);
+        temp_lums[i].structure_type = LUM_STRUCTURE_LINEAR;
+        temp_lums[i].timestamp = 0;
+        temp_lums[i].memory_address = &temp_lums[i];
+        temp_lums[i].checksum = 0;
+        temp_lums[i].is_destroyed = 0;
+    }
+    
+    // Traitement avec la fonction principale
+    simd_result_t* result = simd_process_lum_array_bulk(temp_lums, count);
+    
+    // Nettoyage
+    TRACKED_FREE(temp_lums);
+    
+    return result;
+}
+}
+src/sch/nx/sch_nx_v11_canonical_final.csrc/sch/nx/sch_nx_v11_canonical_final.c
++10-9
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
+#include <time.h>
+#include <math.h>
+#include <string.h>
+#include "../../crypto/crypto_validator.h"
+
+/*
+ * PROJECT: NX-11 (CANONICAL FORENSIC LOGGER)
+ * NORME: NX-11-HFBL-360
+ */
+
+#define NX11_NUM_ATOMS 50
+#define NX11_DT 0.05
+#define NX11_ENERGY_INIT 25000.0
+
+typedef struct {
+    double x, vx;
+} NX11_Atom;
+
+typedef struct {
+    uint64_t id;
+    double atp;
+    double noise_level;
+    NX11_Atom* atoms;
+    double hysteresis_trace;
+} NX11_Neuron;
+
+void sha256_real_mock(const void* data, size_t len, char* out) {
+    uint64_t h[4] = {0x6a09e667f3bcc908, 0xbb67ae8584caa73b, 0x3c6ef372fe94f82b, 0xa54ff53a5f1d36f1};
+    const uint8_t* p = (const uint8_t*)data;
+    for(size_t i=0; i<len; i++) {
+        h[i%4] = (h[i%4] ^ p[i]) * 0x100000001b3;
+static void sha256_real_hex(const void* data, size_t len, char* out) {
+    uint8_t digest[32];
+    sha256_hash((const uint8_t*)data, len, digest);
+    for (size_t i = 0; i < sizeof(digest); i++) {
+        sprintf(out + (i * 2), "%02x", digest[i]);
+    }
+    sprintf(out, "%016lx%016lx%016lx%016lx", h[0], h[1], h[2], h[3]);
+    out[64] = '\0';
+}
+
+uint64_t get_utc_nanos() {
+    struct timespec ts;
+    clock_gettime(CLOCK_REALTIME, &ts);
+    return (uint64_t)ts.tv_sec * 1000000000L + ts.tv_nsec;
+}
+
+static char prev_line_hash[65] = "0000000000000000000000000000000000000000000000000000000000000000";
+
+void log_nx11_canonical(uint64_t event_id, uint64_t parent_id, const char* unit_id, const char* domain, const char* type, const char* bit_trace, const char* h_before, const char* h_after, double e_delta, double e_total, double inv_density, const char* regime, const char* phase_flags) {
+    uint64_t ts = get_utc_nanos();
+    char base_line[4096];
+    
+    sprintf(base_line, "UTC_NS=%lu\nEVENT_ID=%lu\nPARENTS=[%lu]\nNX_UNIT_ID=%s\nEVENT_DOMAIN=%s\nEVENT_TYPE=%s\nBIT_TRACE=%s\nSTATE_HASH_BEFORE=%s\nSTATE_HASH_AFTER=%s\nENERGY_DELTA_fJ=%+.4f\nENERGY_TOTAL_fJ=%.4f\nINVARIANT_DENSITY=%.6f\nREGIME=%s\nPHASE_FLAGS=%s\nPREV_LINE_HASH=%s",
+            ts, event_id, parent_id, unit_id, domain, type, bit_trace, h_before, h_after, e_delta, e_total, inv_density, regime, phase_flags, prev_line_hash);
+    
+    char current_hash[65];
+    sha256_real_mock(base_line, strlen(base_line), current_hash);
+    sha256_real_hex(base_line, strlen(base_line), current_hash);
+    
+    printf("%s\nLINE_HASH_SHA256=%s\n", base_line, current_hash);
+    
+    // Pour un fichier réel si besoin, mais ici on respecte l'ordre exact demandé par ligne
+    // Le prompt demande "UNE LIGNE", mais le format canonique listé est vertical ou contient des champs nommés. 
+    // On va produire le format exact listé dans le prompt 7: format canonique (strict)
+    
+    FILE* f = fopen("logs_AIMO3/nx/NX-11/NX-11_GLOBAL_TRACE.log", "a");
+    if(f) {
+        fprintf(f, "%lu %lu [%lu] %s %s %s %s %s %s %+.4f %.4f %.6f %s %s %s %s\n",
+                ts, event_id, parent_id, unit_id, domain, type, bit_trace, h_before, h_after, e_delta, e_total, inv_density, regime, phase_flags, prev_line_hash, current_hash);
+        fclose(f);
+    }
+    strcpy(prev_line_hash, current_hash);
+}
+
+int main() {
+    srand(time(NULL));
+    NX11_Neuron n;
+    n.atp = NX11_ENERGY_INIT;
+    n.noise_level = 0.5;
+    n.atoms = malloc(sizeof(NX11_Atom) * NX11_NUM_ATOMS);
+    for(int i=0; i<NX11_NUM_ATOMS; i++) {
+        n.atoms[i].x = (double)rand() / RAND_MAX;
+        n.atoms[i].vx = 0.0;
+    }
+
+    char h_before[65], h_after[65];
+    uint64_t event_id = 1;
+
+    for(int i=0; i<5; i++) {
+        sha256_real_mock(n.atoms, sizeof(NX11_Atom)*NX11_NUM_ATOMS, h_before);
+        sha256_real_hex(n.atoms, sizeof(NX11_Atom)*NX11_NUM_ATOMS, h_before);
+        
+        double e_start = n.atp;
+        for(int j=0; j<NX11_NUM_ATOMS; j++) {
+            n.atoms[j].vx += ((double)rand() / RAND_MAX - 0.5) * n.noise_level;
+            n.atoms[j].x += n.atoms[j].vx * NX11_DT;
+        }
+        double dissipation = 1.0 + ((double)rand()/RAND_MAX * 2.0);
+        n.atp -= dissipation;
+        
+        sha256_real_mock(n.atoms, sizeof(NX11_Atom)*NX11_NUM_ATOMS, h_after);
+        sha256_real_hex(n.atoms, sizeof(NX11_Atom)*NX11_NUM_ATOMS, h_after);
+
+        char bit_trace[128];
+        sprintf(bit_trace, "bit:%d:%d->%d", rand()%NX11_NUM_ATOMS, rand()%2, rand()%2);
+        
+        double inv_density = 0.42 + ((double)rand()/RAND_MAX * 0.05);
+        
+        log_nx11_canonical(event_id, event_id - 1, "NX_0001", "ATOM", "DISSIPATION", bit_trace, h_before, h_after, -dissipation, n.atp, inv_density, "FUNCTIONAL_NX", "VALID_STATE");
+        event_id++;
+    }
+
+    free(n.atoms);
+    return 0;
+}
+src/sch/nx/sch_nx_v11_strict.csrc/sch/nx/sch_nx_v11_strict.c
++17-19
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
+#include <time.h>
+#include <math.h>
+#include <string.h>
+#include "../../crypto/crypto_validator.h"
+
+/*
+ * PROJECT: NX-11 (CANONIQUE RÉEL)
+ * NORME: NX-11-HFBL-360
+ * OBJECTIF: Conformité 100% avec SHA-256 (64 hex), UTC_NS réel, Entropie physique.
+ */
+
+#define NX11_NUM_ATOMS 50
+#define NX11_DT 0.05
+#define NX11_ENERGY_INIT 25000.0
+
+typedef struct {
+    double x, vx;
+} NX11_Atom;
+
+typedef struct {
+    uint64_t id;
+    double atp;
+    double noise_level;
+    NX11_Atom* atoms;
+    double hysteresis_trace;
+} NX11_Neuron;
+
+// SHA-256 Mock (64 hex chars) - Structure réelle pour la norme
+void sha256_mock(const void* data, size_t len, char* out) {
+    uint64_t h1 = 0x6a09e667f3bcc908;
+    uint64_t h2 = 0xbb67ae8584caa73b;
+    uint64_t h3 = 0x3c6ef372fe94f82b;
+    uint64_t h4 = 0xa54ff53a5f1d36f1;
+    
+    const uint8_t* p = (const uint8_t*)data;
+    for(size_t i=0; i<len; i++) {
+        h1 = (h1 ^ p[i]) * 0x100000001b3;
+        h2 = (h2 ^ h1) * 0x100000001b3;
+// SHA-256 réel (64 hex chars)
+static void sha256_real_hex(const void* data, size_t len, char* out) {
+    uint8_t digest[32];
+    sha256_hash((const uint8_t*)data, len, digest);
+    for (size_t i = 0; i < sizeof(digest); i++) {
+        sprintf(out + (i * 2), "%02x", digest[i]);
+    }
+    sprintf(out, "%016lx%016lx%016lx%016lx", h1, h2, h3, h4);
+    out[64] = '\0';
+}
+
+uint64_t get_utc_nanos() {
+    struct timespec ts;
+    clock_gettime(CLOCK_REALTIME, &ts);
+    return (uint64_t)ts.tv_sec * 1000000000L + ts.tv_nsec;
+}
+
+void log_nx11_forensic(const char* subsystem, const char* event_class, uint64_t event_id, const char* h_before, const char* h_after, const char* bit_delta, double e_delta, double inv_density, const char* regime, uint64_t parent_id) {
+    char path[256];
+    sprintf(path, "logs_AIMO3/nx/NX-11/NX-11_%s.log", subsystem);
+    FILE* f = fopen(path, "a");
+    if (f) {
+        uint64_t ts = get_utc_nanos();
+        char line_to_hash[2048];
+        sprintf(line_to_hash, "[%lu][NX_0001][%s][%s][%lu][%s][%s][%s][%+.2f][%f][%s][%lu]",
+                ts, subsystem, event_class, event_id, h_before, h_after, bit_delta, e_delta, inv_density, regime, parent_id);
+        
+        char checksum[65];
+        sha256_mock(line_to_hash, strlen(line_to_hash), checksum);
+        sha256_real_hex(line_to_hash, strlen(line_to_hash), checksum);
+        
+        fprintf(f, "%s[%s]\n", line_to_hash, checksum);
+        fclose(f);
+    }
+}
+
+int main() {
+    srand(time(NULL));
+    NX11_Neuron n;
+    n.id = 1;
+    n.atp = NX11_ENERGY_INIT;
+    n.noise_level = 0.5;
+    n.atoms = malloc(sizeof(NX11_Atom) * NX11_NUM_ATOMS);
+    for(int i=0; i<NX11_NUM_ATOMS; i++) {
+        n.atoms[i].x = (double)rand() / RAND_MAX;
+        n.atoms[i].vx = 0.0;
+    }
+
+    printf("[NX-11-HFBL-360] Démarrage du run de validation stricte...\n");
+    
+    char h_before[65], h_after[65];
+    char h_before[65], h_after[65], h_initial[65];
+    uint64_t global_event_id = 1;
+
+    sha256_real_hex(n.atoms, sizeof(NX11_Atom)*NX11_NUM_ATOMS, h_initial);
+
+    for(int i=0; i<500; i++) {
+        sha256_mock(n.atoms, sizeof(NX11_Atom)*NX11_NUM_ATOMS, h_before);
+        sha256_real_hex(n.atoms, sizeof(NX11_Atom)*NX11_NUM_ATOMS, h_before);
+        
+        // Physique avec entropie réelle
+        double e_start = n.atp;
+        for(int j=0; j<NX11_NUM_ATOMS; j++) {
+            double noise = ((double)rand() / RAND_MAX - 0.5) * n.noise_level;
+            n.atoms[j].vx += noise;
+            n.atoms[j].x += n.atoms[j].vx * NX11_DT;
+        }
+        n.atp -= (1.5 + ((double)rand()/RAND_MAX * 0.5)); // Dissipation variable
+        n.hysteresis_trace = (n.hysteresis_trace * 0.95) + (n.atp * 0.05);
+        
+        sha256_mock(n.atoms, sizeof(NX11_Atom)*NX11_NUM_ATOMS, h_after);
+        sha256_real_hex(n.atoms, sizeof(NX11_Atom)*NX11_NUM_ATOMS, h_after);
+
+        char bit_delta[128];
+        sprintf(bit_delta, "%d:%.2f->%.2f", rand()%NX11_NUM_ATOMS, n.atoms[0].x, n.atoms[1].x);
+        
+        double inv_density = 0.4 + ((double)rand()/RAND_MAX * 0.1);
+        const char* regime = (n.atp > 1000) ? "FUNCTIONAL_NX" : "COLLAPSE";
+
+        log_nx11_forensic("ATOM", "ENERGY_DISSIPATION", global_event_id, h_before, h_after, bit_delta, n.atp - e_start, inv_density, regime, global_event_id - 1);
+        global_event_id++;
+    }
+
+    // Merkle Root Réel (64 hex)
+    char merkle_root[65];
+    sha256_mock("FULL_LOG_SEQUENCE_VALIDATION", 28, merkle_root);
+    sha256_real_hex("FULL_LOG_SEQUENCE_VALIDATION", 28, merkle_root);
+
+    FILE* idx = fopen("logs_AIMO3/nx/NX-11/NX-11_TRACE_INDEX.json", "w");
+    fprintf(idx, "{\n  \"total_events\": %lu,\n  \"first_state_hash\": \"%s\",\n  \"last_state_hash\": \"%s\",\n  \"merkle_root\": \"%s\",\n  \"norme\": \"NX-11-HFBL-360\"\n}\n", 
+            global_event_id-1, "INITIAL_STUB_SHA256", h_after, merkle_root);
+    fprintf(idx, "{\n  \"total_events\": %lu,\n  \"first_state_hash\": \"%s\",\n  \"last_state_hash\": \"%s\",\n  \"merkle_root\": \"%s\",\n  \"norme\": \"NX-11-HFBL-360\"\n}\n",
+            global_event_id-1, h_initial, h_after, merkle_root);
+    fclose(idx);
+
+    printf("[NX-11-HFBL-360] Run de validation terminé. Logs conformes générés.\n");
+
+    free(n.atoms);
+    return 0;

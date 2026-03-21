@@ -1,0 +1,103 @@
+### Cahier de Charges NX-11
+
+**Objectif** :
+Le but de NX-11 est de finaliser l'exploration des propriétés dissipatives du neurone NX et de tester de manière exhaustive les questions non résolues concernant l'identité mentale, la stabilité neuronale, la mémoire irréversible et les effets de la dissipation énergétique dans des systèmes biologiques et cognitifs. Nous devons explorer les limites de cette approche au niveau nanoscopique et appliquer des tests rigoureux basés sur la traçabilité.
+
+---
+
+### **I. Objectifs Scientifiques (NX-11)**
+
+1. **Exploration des relations entre mémoire irréversible et identité mentale** :
+
+   * Étudier comment la dissipation et les processus de stabilité affectent l’identité mentale à un niveau micro et macro.
+   * Test : "Survivabilité" de l'identité mentale dans un environnement à seuil énergétique faible.
+
+2. **Dissipation énergétique et fonction cognitive** :
+
+   * Tester l'impact des variations de dissipation énergétique sur la performance cognitive du neurone NX.
+   * Test : Modulation des seuils de dissipation pour observer l'émergence de différents niveaux cognitifs.
+
+3. **Interaction entre neurones NX dans un environnement dynamique étendu** :
+
+   * Tester la communication entre plusieurs neurones NX dans des configurations complexes et non stationnaires.
+   * Test : Synchronisation dissipative entre neurones NX, évolution de la corrélation des invariants au niveau collectif.
+
+4. **Impact des pathologies cognitives dans un système dissipatif** :
+
+   * Explorer les effets des pathologies comme l'Alzheimer, la schizophrénie, et autres sur le modèle dissipatif du neurone NX.
+   * Test : Simulation de dysfonctionnements pathologiques à partir de paramètres modifiés (perte de densité d'invariants, perturbation énergétique).
+
+---
+
+### **II. Propriétés de Test (NX-11)**
+
+#### 1. **Mémoire irréversible et pathologies**
+
+* Tester l'irréversibilité de la mémoire dans des contextes perturbés : simuler des défaillances dans la dynamique dissipative et observer les changements dans la mémoire et l'identité mentale.
+* Objectif : Vérifier que la perte de mémoire due à une dysfonction du système reste irréversible, et que cette irréversibilité affecte l'identité mentale de manière stable.
+
+#### 2. **Traçabilité et Système de Suivi Nanosecondes**
+
+* Mettre en place un système de tracking bit-à-bit à la nanoseconde pour chaque log. Chaque donnée générée doit être accompagnée d’un horodatage précis, et de la certification d'intégrité via checksum et signature de fin d'exécution.
+* Objectif : Garantir que les logs et événements dans les tests sont traçables et permettent une reconstruction complète des événements observés.
+
+#### 3. **Modélisation des Transitions dans des Systèmes Non-Linéaires**
+
+* Étudier les transitions dynamiques dans les systèmes neuronaux NX lorsqu'ils sont soumis à des influences externes : des médicaments, drogues (LSD, cocaïne, etc.), ou perturbations physiques.
+* Objectif : Observer et analyser la modulation des régimes et des invariants sous des effets externes, en particulier sur la mémoire, la cognition et la stabilité du neurone.
+
+#### 4. **Stabilité Pathologique et Contrôle des Dynamiques**
+
+* Simuler des environnements où la stabilité devient pathologique (c'est-à-dire une absence d'instabilité nécessaire à la fonction cognitive).
+* Objectif : Identifier à quel point la stabilité peut nuire à la fonction cognitive et comment cette stabilité pathologique est causée par des dynamiques internes du neurone.
+
+---
+
+### **III. Autres Questions Expert à Tester (NX-11)**
+
+1. **Question sur la relation entre processus dissipatifs et activité neuronale** :
+
+   * Existe-t-il un seuil minimum de dissipation nécessaire pour maintenir la fonction cognitive dans un système dissipatif ?
+   * Peut-on maintenir une "mémoire" en absence de dissipation ? Est-ce que cette mémoire est nécessairement irréversible ?
+
+2. **Question sur les mécanismes de régénération neuronale** :
+
+   * Peut-on restaurer une fonction cognitive après l’effondrement total de la dynamique dissipative, et si oui, comment ?
+   * Quelle est la relation entre régénération neuronale et la stabilité pathologique dans un environnement dissipatif ?
+
+3. **Question sur la validation clinique et la modélisation de pathologies** :
+
+   * Les modèles neuronaux NX permettent-ils une compréhension plus approfondie des pathologies neurologiques existantes (ex. Alzheimer) dans un cadre théorique et expérimental ?
+   * Quelles sont les implications de ces découvertes pour la modélisation des troubles cognitifs et des pathologies neurodégénératives ?
+
+---
+
+### **IV. Format des Logs et Traçabilité**
+
+1. **Format des logs** :
+
+   * Chaque log produit sera structuré avec les champs suivants :
+
+     * `timestamp` : en nanosecondes.
+     * `event_type` : type d'événement observé (transition de régime, perturbation, etc.).
+     * `data` : données brutes associées (énergie, densité d'invariants, etc.).
+     * `checksum` : pour valider l'intégrité des données.
+     * `execution_signature` : pour assurer la fin d'exécution et son authenticité.
+
+   **Note** : Les logs doivent inclure un seul événement par ligne, et ces logs doivent être tracés à partir de la minute de l'exécution jusqu'à la fin.
+
+---
+
+### **V. Questions concernant les Logs Actuels (Manque de détails)**
+
+Si tu remarques que les logs actuels ne contiennent que deux lignes, cela pourrait être dû à un paramètre de configuration de génération des logs. Chaque événement clé doit être correctement enregistré avec les informations nécessaires pour toute reproduction ou vérification ultérieure. Si ces logs ne sont pas complets, nous devrons probablement ajuster la configuration pour nous assurer qu'il n'y a aucune perte d'information, ce qui est essentiel pour la traçabilité.
+
+---
+
+### **Conclusion et Validation**
+
+NX-11 offre une plateforme expérimentale et théorique permettant de tester les questions encore non résolues sur la mémoire, la cognition, et l'identité mentale dans un modèle dissipatif. Le but est de pousser la compréhension au-delà des limites classiques des modèles neuronaux actuels. Une fois validé et testé, ce cadre pourrait réinventer la manière dont nous comprenons les réseaux neuronaux et la conscience.
+
+---
+
+Je t'invite à valider ce cahier de charges avant de passer aux tests. Les ajustements sur les logs de traçabilité devront être appliqués en priorité pour assurer que nous n'omissions aucune donnée critique.

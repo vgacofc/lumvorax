@@ -1,0 +1,182 @@
+# 📘 Cahier des charges scientifique complet – Extension NX-4
+
+## Projet : Neurone NX (System Cerebral Human)
+
+**Phase :** NX-4 – Extensions analytiques avancées
+**Statut :** Extension post-validation (non bloquante)
+
+---
+
+## 🎯 Objectif général de NX-4
+
+NX-4 vise à **compléter et verrouiller scientifiquement** les résultats des phases NX-2 et NX-3 en fournissant une **quantification fine**, une **cartographie statistique**, et une **représentation géométrique explicite** des régimes neuronaux NX.
+
+> NX-4 n’introduit **aucune nouvelle dynamique**, **aucune optimisation**, **aucune correction**.
+> Il s’agit exclusivement d’une **phase d’observation, de mesure et de formalisation**.
+
+---
+
+# 🧩 AXE 1 — STATISTIQUES DE TEMPS DE RÉSIDENCE PAR RÉGIME
+
+## 1. Objectif scientifique
+
+Mesurer quantitativement **combien de temps** le neurone NX reste dans chacun des régimes identifiés (INERTE, FONCTIONNEL_NX, CHAOTIQUE, EFFONDREMENT), et caractériser la **stabilité statistique** (ou l’instabilité) de ces régimes.
+
+---
+
+## 2. Hypothèses testées
+
+* H1 : Les temps de résidence diffèrent fortement selon le régime.
+* H2 : Le régime FONCTIONNEL_NX maximise le temps de résidence *sans* être stable.
+* H3 : Les transitions ne suivent pas une loi markovienne simple.
+
+---
+
+## 3. Méthodologie imposée
+
+### 3.1 Détection des régimes
+
+* Utilisation exclusive des critères définis en NX-2.
+* Aucun lissage temporel supplémentaire.
+* Aucune fusion artificielle de régimes.
+
+### 3.2 Mesure
+
+Pour chaque run :
+
+* horodatage d’entrée et de sortie de chaque régime
+* durée brute (Δt)
+* nombre total de passages
+
+### 3.3 Agrégation statistique
+
+* moyenne
+* médiane
+* variance
+* distributions complètes (histogrammes)
+
+---
+
+## 4. Fichiers obligatoires générés (Axe 1)
+
+* `logs_AIMO3/nx/NX-4_residence_times.log`
+* `RAPPORT_IAMO3/NX/NX-4_RESIDENCE_STATS.md`
+* `RAPPORT_IAMO3/NX/NX-4_RESIDENCE_DISTRIBUTIONS.csv`
+
+Chaque fichier doit inclure :
+
+* horodatage UTC
+* checksum d’intégrité
+* signature explicite de fin d’exécution
+
+---
+
+# 🧩 AXE 2 — DISTRIBUTION DES INVARIANTS PAR RÉGIME
+
+## 1. Objectif scientifique
+
+Établir la **signature atomique propre à chaque régime**, en analysant la densité, la nature et la diversité des invariants détectés.
+
+---
+
+## 2. Hypothèses testées
+
+* H4 : Chaque régime possède une distribution d’invariants distincte.
+* H5 : Le régime FONCTIONNEL_NX correspond à une densité critique spécifique.
+* H6 : Le chaos n’est pas une absence d’invariants mais une **désorganisation de leur structure**.
+
+---
+
+## 3. Méthodologie imposée
+
+### 3.1 Attribution régime → invariant
+
+Chaque invariant détecté doit être annoté avec :
+
+* régime actif au moment de sa détection
+* énergie locale
+* durée de cohérence
+
+### 3.2 Mesures
+
+* densité d’invariants par unité de temps
+* diversité typologique
+* corrélation invariant ↔ transition de régime
+
+---
+
+## 4. Fichiers obligatoires générés (Axe 2)
+
+* `logs_AIMO3/nx/NX-4_invariants_by_regime.log`
+* `RAPPORT_IAMO3/NX/NX-4_INVARIANT_DISTRIBUTIONS.md`
+* `RAPPORT_IAMO3/NX/NX-4_INVARIANT_STATS.json`
+
+---
+
+# 🧩 AXE 3 — DIAGRAMME DE PHASE (ÉNERGIE vs DENSITÉ D’INVARIANTS)
+
+## 1. Objectif scientifique
+
+Construire le **premier diagramme de phase explicite** d’un neurone réel simulé, reliant :
+
+> énergie interne disponible ↔ densité d’invariants ↔ régime dynamique
+
+---
+
+## 2. Hypothèses testées
+
+* H7 : Les régimes occupent des régions disjointes de l’espace des phases.
+* H8 : Les transitions présentent des zones d’hystérésis mesurables.
+* H9 : Le régime fonctionnel correspond à une bande étroite, non ponctuelle.
+
+---
+
+## 3. Méthodologie imposée
+
+### 3.1 Variables
+
+* Axe X : énergie interne normalisée (ATP ou proxy)
+* Axe Y : densité d’invariants atomiques
+
+### 3.2 Construction
+
+* échantillonnage continu sur plusieurs runs
+* aucune interpolation artificielle
+* conservation des trajectoires brutes
+
+---
+
+## 4. Fichiers obligatoires générés (Axe 3)
+
+* `RAPPORT_IAMO3/NX/NX-4_PHASE_DIAGRAM_RAW.csv`
+* `RAPPORT_IAMO3/NX/NX-4_PHASE_DIAGRAM_FIGURE.png`
+* `RAPPORT_IAMO3/NX/NX-4_PHASE_DIAGRAM_ANALYSIS.md`
+
+---
+
+# 🛡️ CONTRAINTES FORMIELLES GLOBALES
+
+* Aucun paramètre de NX-1/2/3 ne doit être modifié
+* Aucun mécanisme de stabilisation ajouté
+* Aucun apprentissage ou optimisation
+* Aucune suppression d’événements
+* Logs append-only (non écrasables)
+
+---
+
+# 🧾 PROMPT OPÉRATIONNEL NX-4
+
+> Exécuter le neurone NX dans ses conditions nominales.
+> Observer et mesurer sans corriger.
+> Quantifier les régimes, les invariants et leurs relations énergétiques.
+> Générer des statistiques brutes, des distributions et un diagramme de phase.
+> Toute modification dynamique invalide l’exécution.
+
+---
+
+## 📌 Conclusion
+
+NX-4 ne cherche pas à rendre NX meilleur.
+Il cherche à le rendre **mathématiquement, statistiquement et physiquement indiscutable**.
+
+Cette phase clôt définitivement la caractérisation scientifique du neurone NX comme **objet dissipatif multi-régime fondamental**, sans équivalent dans les modèles neuronaux existants.

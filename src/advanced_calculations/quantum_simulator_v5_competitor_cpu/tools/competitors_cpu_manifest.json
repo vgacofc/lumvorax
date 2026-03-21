@@ -1,0 +1,36 @@
+{
+  "version": "v5-cpu-1",
+  "description": "CPU-first competitor integration set for immediate local/Replit execution (Replit-fully-supported=5).",
+  "competitors": [
+    {
+      "name": "Qiskit Aer",
+      "repo": "https://github.com/Qiskit/qiskit-aer.git",
+      "pip_package": "qiskit-aer",
+      "import_name": "qiskit_aer"
+    },
+    {
+      "name": "quimb",
+      "repo": "https://github.com/jcmgray/quimb.git",
+      "pip_package": "quimb",
+      "import_name": "quimb"
+    },
+    {
+      "name": "Qulacs",
+      "repo": "https://github.com/qulacs/qulacs.git",
+      "pip_package": "qulacs",
+      "import_name": "qulacs"
+    },
+    {
+      "name": "MQT DDSIM",
+      "repo": "https://github.com/cda-tum/mqt-ddsim.git",
+      "pip_package": "mqt.ddsim",
+      "import_name": "mqt.ddsim"
+    },
+    {
+      "name": "QuTiP",
+      "repo": "https://github.com/qutip/qutip.git",
+      "pip_package": "qutip",
+      "import_name": "qutip"
+    }
+  ]
+}

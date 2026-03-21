@@ -1,0 +1,124 @@
+{
+  "run_id": "20260302_172657",
+  "paths": {
+    "run_dir": "/workspace/Lumvorax/src/quantum/results_vkernel_compare/20260302_172657",
+    "nx_log": "/workspace/Lumvorax/src/quantum/results_vkernel_compare/20260302_172657/nqubit_forensic_ns.jsonl",
+    "legacy_metrics_log": "logs_AIMO3/v46/hardware_metrics.log"
+  },
+  "commands": {
+    "compile_baseline": {
+      "cmd": "gcc /workspace/Lumvorax/src/quantum/v_kernel_quantum.c -O2 -o /workspace/Lumvorax/src/quantum/v_kernel_quantum_bin",
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "compile_nx": {
+      "cmd": "gcc /workspace/Lumvorax/src/quantum/v_kernel_quantum_nx.c -O2 -lm -o /workspace/Lumvorax/src/quantum/v_kernel_quantum_nx_bin",
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "run_baseline": {
+      "cmd": "/workspace/Lumvorax/src/quantum/v_kernel_quantum_bin",
+      "rc": 0,
+      "stdout": "[V46] Initialisation du Kernel Quantique en C...\n[V46] Simulation termin\u00e9e. M\u00e9triques enregistr\u00e9es.\n",
+      "stderr": ""
+    },
+    "run_nx": {
+      "cmd": "/workspace/Lumvorax/src/quantum/v_kernel_quantum_nx_bin /workspace/Lumvorax/src/quantum/results_vkernel_compare/20260302_172657/nqubit_forensic_ns.jsonl",
+      "rc": 0,
+      "stdout": "nqubit_avg_score=0.960970600\nbaseline_qubit_avg_score=0.940176696\nnqubit_win_rate=0.652777778\nnqubits_simulated=504000\n",
+      "stderr": ""
+    }
+  },
+  "system_metrics": {
+    "timestamp_utc": "2026-03-02T17:26:58Z",
+    "platform": "Linux-6.12.47-x86_64-with-glibc2.39",
+    "python": "3.10.19",
+    "cpu_count": 3,
+    "loadavg": [
+      0.0732421875,
+      0.04736328125,
+      0.0126953125
+    ],
+    "meminfo": {
+      "MemTotal": "18801884 kB",
+      "MemFree": "13794780 kB",
+      "MemAvailable": "18175648 kB",
+      "Buffers": "48716 kB",
+      "Cached": "4364424 kB",
+      "SwapCached": "0 kB",
+      "Active": "216268 kB",
+      "Inactive": "4262828 kB",
+      "Active(anon)": "56 kB",
+      "Inactive(anon)": "70996 kB",
+      "Active(file)": "216212 kB",
+      "Inactive(file)": "4191832 kB",
+      "Unevictable": "0 kB",
+      "Mlocked": "0 kB",
+      "SwapTotal": "0 kB",
+      "SwapFree": "0 kB",
+      "Dirty": "72 kB",
+      "Writeback": "0 kB",
+      "AnonPages": "65920 kB",
+      "Mapped": "53612 kB",
+      "Shmem": "5132 kB",
+      "KReclaimable": "181048 kB",
+      "Slab": "217452 kB",
+      "SReclaimable": "181048 kB",
+      "SUnreclaim": "36404 kB",
+      "KernelStack": "2312 kB",
+      "PageTables": "1360 kB",
+      "SecPageTables": "0 kB",
+      "NFS_Unstable": "0 kB",
+      "Bounce": "0 kB",
+      "WritebackTmp": "0 kB",
+      "CommitLimit": "9400940 kB",
+      "Committed_AS": "121636 kB",
+      "VmallocTotal": "34359738367 kB",
+      "VmallocUsed": "3164 kB",
+      "VmallocChunk": "0 kB",
+      "Percpu": "15360 kB",
+      "HugePages_Total": "0",
+      "HugePages_Free": "0",
+      "HugePages_Rsvd": "0",
+      "HugePages_Surp": "0",
+      "Hugepagesize": "2048 kB",
+      "Hugetlb": "0 kB",
+      "DirectMap4k": "26624 kB",
+      "DirectMap2M": "1284096 kB",
+      "DirectMap1G": "19922944 kB"
+    }
+  },
+  "hardware_entropy": [
+    {
+      "path": "/dev/hwrng",
+      "ok": false,
+      "size": 0,
+      "bytes_per_sec": null,
+      "error": "[Errno 2] No such file or directory: '/dev/hwrng'"
+    },
+    {
+      "path": "/dev/random",
+      "ok": true,
+      "size": 4096,
+      "bytes_per_sec": 113390362.22554955,
+      "error": null
+    },
+    {
+      "path": "/dev/urandom",
+      "ok": true,
+      "size": 4096,
+      "bytes_per_sec": 181810107.4644325,
+      "error": null
+    }
+  ],
+  "comparison_metrics": {
+    "baseline_qubits_simulated": 4.0,
+    "nqubits_simulated": 504000.0,
+    "nqubit_avg_score": 0.9609706,
+    "baseline_qubit_avg_score": 0.940176696,
+    "nqubit_win_rate": 0.652777778,
+    "simulated_scale_ratio_nqubit_vs_qubit": 126000.0
+  }
+}

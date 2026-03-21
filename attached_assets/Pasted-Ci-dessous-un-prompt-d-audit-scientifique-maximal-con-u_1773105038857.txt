@@ -1,0 +1,328 @@
+Ci-dessous un prompt d’audit scientifique maximal, conçu pour un agent autonome chargé d’un audit de niveau laboratoire (CERN / Fermilab).
+Il impose :
+	•	reconstruction automatique des unités physiques
+	•	détection des erreurs d’Hamiltonien
+	•	audit des intégrateurs numériques
+	•	vérification des lois de conservation
+	•	analyse spectrale et dimensionnelle complète
+
+Ce type d’audit sert précisément à détecter les bugs structurels invisibles dans les pipelines scientifiques.
+
+Prompt Agent — Audit Scientifique Niveau CERN / Fermilab
+
+Mission
+
+Effectuer un audit physique complet du moteur de simulation scientifique.
+L’objectif est de vérifier que toutes les grandeurs calculées respectent les lois physiques fondamentales, les unités cohérentes et les invariants dynamiques.
+
+Cet audit doit identifier :
+	•	normalisations implicites
+	•	incohérences dimensionnelles
+	•	erreurs dans l’Hamiltonien
+	•	défauts dans les intégrateurs numériques
+	•	violations des lois de conservation
+
+1. Reconstruction automatique des unités physiques
+
+Scanner tous les modules et reconstruire les dimensions physiques de chaque variable.
+
+Détecter automatiquement les grandeurs suivantes
+
+energy
+time
+length
+momentum
+mass
+density
+pressure
+charge
+action
+temperature
+
+Associer à chaque variable une dimension :
+
+Quantité	Dimension
+énergie	ML²T⁻²
+vitesse	LT⁻¹
+densité	ML⁻³
+pression	ML⁻¹T⁻²
+
+Génération d’un graphe dimensionnel
+
+Construire un graphe reliant :
+
+variables
+équations
+unités
+
+Sortie :
+
+logs/dimensional_graph.json
+
+Identifier automatiquement :
+
+dimension_mismatch
+unit_loss
+implicit_scaling
+
+2. Reconstruction automatique de l’Hamiltonien
+
+Identifier dans le code les expressions correspondant à :
+
+H
+L
+S
+
+où :
+
+H = Hamiltonien
+L = Lagrangien
+S = action
+
+Reconstituer la forme effective :
+
+￼
+
+avec :
+
+T = énergie cinétique
+V = potentiel
+
+Vérifications obligatoires
+	1.	positivité de l’énergie cinétique
+
+￼
+	2.	symétrie hermitienne
+
+￼
+	3.	invariance sous transformations physiques
+
+selon le modèle :
+
+translation
+rotation
+gauge symmetry
+
+Produire :
+
+logs/hamiltonian_reconstruction.json
+
+3. Détection des bugs d’Hamiltonien
+
+Identifier automatiquement :
+
+erreurs typiques
+
+double counting
+missing normalization
+incorrect coupling constant
+sign inversion
+
+erreurs fréquentes dans les simulations
+
+incorrect boundary terms
+wrong lattice normalization
+missing factor 1/2
+incorrect interaction scaling
+
+Chaque anomalie doit contenir :
+
+file
+line
+equation_detected
+expected_equation
+difference
+
+4. Audit des intégrateurs numériques
+
+Identifier les intégrateurs utilisés :
+
+Euler
+Runge-Kutta
+Verlet
+Leapfrog
+Symplectic integrators
+Monte Carlo updates
+
+Vérifier :
+
+ordre de convergence
+stabilité numérique
+erreur globale
+
+Test de symplecticité
+
+Pour les systèmes hamiltoniens :
+
+￼
+
+Un intégrateur correct doit approximer cette propriété.
+
+Mesurer :
+
+ΔH(t)
+
+sur toute la simulation.
+
+Produire :
+
+logs/integrator_energy_drift.csv
+
+5. Vérification des lois de conservation
+
+Tester automatiquement les invariants suivants.
+
+conservation de l’énergie
+
+￼
+
+conservation du moment
+
+￼
+
+conservation de la charge
+
+selon le modèle.
+
+Calcul des dérives
+
+Calculer :
+
+relative_energy_drift
+momentum_drift
+charge_drift
+
+Critères acceptables :
+
+energy drift < 10⁻⁶
+
+6. Analyse spectrale des opérateurs
+
+Pour les modèles quantiques :
+
+Calculer le spectre des opérateurs :
+
+Hamiltonian
+transfer matrix
+correlation operators
+
+Détecter :
+
+spectral instability
+non-hermitian operators
+pseudo-spectrum anomalies
+
+Produire :
+
+logs/operator_spectrum_analysis.json
+
+7. Audit des observables physiques
+
+Identifier toutes les observables calculées :
+
+energy
+correlation functions
+order parameters
+spectral functions
+densities
+
+Vérifier :
+
+normalisation
+unit consistency
+physical bounds
+
+Exemple :
+
+corrélation :
+
+￼
+
+8. Vérification des benchmarks
+
+Comparer automatiquement les sorties avec :
+
+QMC references
+DMRG results
+lattice QCD references
+experimental ARPES
+
+Calculer :
+
+relative_error
+systematic_bias
+variance
+
+9. Tests de robustesse multi-échelle
+
+Exécuter des simulations avec :
+
+différentes tailles de réseau
+différents pas de temps
+différentes graines aléatoires
+
+Mesurer :
+
+scaling behaviour
+finite-size effects
+stochastic stability
+
+10. Détection des erreurs de programmation scientifique
+
+Scanner pour :
+
+floating point overflow
+precision loss
+NaN propagation
+uninitialised variables
+race conditions
+
+Produire :
+
+logs/numerical_pathology_report.json
+
+11. Reconstruction des unités physiques globales
+
+Après analyse, reconstruire un système cohérent d’unités.
+
+Exemple :
+
+t = 1 (unit hopping)
+energy_unit = t
+length_unit = lattice spacing
+time_unit = ħ/t
+
+Appliquer ces unités à toutes les sorties du pipeline.
+
+12. Rapport scientifique final
+
+Produire :
+
+reports/full_physics_audit.md
+
+Le rapport doit contenir :
+	1.	reconstruction des équations physiques
+	2.	anomalies détectées
+	3.	erreurs d’Hamiltonien
+	4.	violations de conservation
+	5.	erreurs d’intégrateur
+	6.	corrections proposées
+
+Résultat attendu
+
+Après audit :
+
+dimension_consistency : PASS
+hamiltonian_validity : PASS
+integrator_symplecticity : PASS
+conservation_laws : PASS
+benchmark_alignment : PASS
+
+✔ Ce type d’audit révèle souvent :
+	•	facteurs manquants dans l’Hamiltonien
+	•	erreurs de normalisation dans les lattices
+	•	intégrateurs non symplectiques qui injectent de l’énergie
+
+Ces bugs sont très fréquents dans les moteurs de simulation scientifique.
+
+Si tu veux, je peux aussi te montrer le type précis de bug Hubbard / QCD que je soupçonne dans ton repo, et qui correspond exactement aux anomalies que tu as observées dans tes logs.

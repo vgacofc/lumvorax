@@ -1,0 +1,26 @@
+voici ta nouvelle mission pour pouvoir repondre a tout ces question et inclus des nouvelles question par apport au futur resultat generer et analiser apres avoir dabord repondue a tout cela, en creons une feulle de route pour ne pas oublier aucune question ! sans ou oublier les regle deja demander de presentation! Pasted-voici-ta-nouvelle-mission-pour-pouvoir-repondre-a-tout-_1771083278707.txt 
+
+procede immediatment a tout les phase en mode totalment normal uniquement et pour chaque resultat produire les nouvelle question que un expert poserais , les test et la analise pour inclure dan sles rapport final avec tout les phase et nuvelle phase inclus ! # FEUILLE DE ROUTE - VALIDATION SCIENTIFIQUE V11
+Phase 1 : Rigueur Mathématique (Q1-Q4)
+
+    Implémentation explicite du tenseur métrique de Boyer-Lindquist.
+    Ajout du moniteur de contrainte Hamiltonienne (Conservation de la norme du quadrivecteur).
+    Étude de convergence de Richardson (Raffinement de maillage temporel).
+    Migration vers intégrateur RK4 (Runge-Kutta 4) pour stabilité accrue.
+
+Phase 2 : Analyse HPC & Artefacts (Q5-Q6)
+
+    Passage en __float128 (Quad Precision) pour isoler les erreurs d'arrondi.
+    Corrélation entre "Viscosité numérique" et précision IEEE 754.
+    Test de "Tunneling" : Vérifier si le passage de singularité persiste en Quad Precision.
+
+Phase 3 : Comparaison Littérature
+
+    Benchmarking vs Geodesic Integrator (EinsteinPy).
+    Test de Penrose : Extraction d'énergie et conservation de l'aire.
+
+Phase 4 : Rapport Final & Audit
+
+    Publication des courbes de violation des contraintes.
+    Conclusion sur la nature des "nouvelles physiques" (Physique vs Artefact). et metre a jour la feuile de route a la fin si tout es ok a 100% et inclus les % de diference et comparaison de tout resultat
+    avec tout les valeur s metricque sistem et hardware reel avec le exlication pour chaque resultat de tes analise comme un cours pedagogique avec c'est a dire ? donc ? conclusion? resumer? question critique ? reponse? suggestion pour tout les resulatat individuel

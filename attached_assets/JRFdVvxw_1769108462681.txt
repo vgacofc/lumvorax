@@ -1,0 +1,15 @@
+18.7s 1 [SHF_CHRONOS_AUDIT] Quantum State Initiation | T0: 1769103911924504526
+18.7s 2 [SHF_CHRONOS_AUDIT] Scalar Field Collapse: 2 | Δt: 183183ns
+18.7s 3 [SHF_CHRONOS_AUDIT] Quantum State Initiation | T0: 1769103911924898173
+18.7s 4 [SHF_CHRONOS_AUDIT] Scalar Field Collapse: 0 | Δt: 48627ns
+18.7s 5 [SHF_CHRONOS_AUDIT] Quantum State Initiation | T0: 1769103911925081051
+18.7s 6 [SHF_CHRONOS_AUDIT] Scalar Field Collapse: 8 | Δt: 39698ns
+18.7s 7 [COMPETITION KERNEL READY] Run: 451370d4ab77238c
+22.3s 8 /usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+22.3s 9 cells[i][c] = re.sub('\\\\\|', '|', cell)
+22.5s 10 /usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+22.5s 11 text = re.sub(r'_', '\_', text) # Escape underscores in display text
+23.3s 12 /usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=["nbconvert.preprocessors.ExtractOutputPreprocessor"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.
+23.3s 13 warn(
+23.3s 14 [NbConvertApp] Converting notebook __script__.ipynb to html
+24.5s 15 [NbConvertApp] Writing 303717 bytes to __results__.html

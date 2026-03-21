@@ -1,0 +1,14 @@
+{
+  "paths": [
+    "/kaggle/input/datasets/ndarray2000/nx47-dependencies",
+    "/kaggle/input/nx47-dependencies",
+    "/kaggle/input/lum-vorax-dependencies",
+    "/kaggle/input/lumvorax-dependencies"
+  ],
+  "packages": {
+    "numpy": true,
+    "tifffile": true,
+    "imagecodecs": true,
+    "imageio": true
+  }
+}

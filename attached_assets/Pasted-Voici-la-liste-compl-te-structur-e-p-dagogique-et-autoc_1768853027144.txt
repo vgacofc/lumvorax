@@ -1,0 +1,280 @@
+Voici **la liste complète, structurée, pédagogique et autocritique** des **questions + métriques de performance** que l’agent REPLIT devra recueillir pour produire un **rapport `.md` ultra-détaillé** pour ton benchmark de **LUM/VORAX** — ceci couvrira **toutes les dimensions pertinentes** (CPU, mémoire, I/O, réseau, scalabilité, résilience, forensic, etc.), avec les définitions, les raisons de mesurer chaque point, et les prompts adaptés.
+
+---
+
+# 📊 Checklist de Questions & Métriques de Performance — Benchmark Ultra-Détaillé
+
+Chaque point ci-dessous doit être **mesuré, expliqué, interprété**, et **comparé** avec les technologies de référence.
+
+---
+
+## 🧠 1) MÉTRIQUES GLOBALES DU SYSTÈME
+
+### **1.1 Temps d’exécution**
+
+* **Question à poser** : *Quel est le temps total d’exécution pour chaque scénario de benchmark ?*
+* **Pourquoi c’est important** : Permet de comparer des algos ou implémentations sur la même charge.
+* **Mesures à collecter** :
+
+  * Temps total réel (wall-clock)
+  * Temps CPU par thread
+  * Temps utilisateur vs système (sys/user)
+
+---
+
+### **1.2 Instructions par cycle (IPC)**
+
+* **Question** : *Quel est l’IPC moyen pour chaque workload ?*
+* **Pourquoi** : Plus l’IPC est haut, plus le CPU est utilisé efficacement. ([Fiveable][1])
+
+---
+
+### **1.3 Cycles par instruction (CPI)**
+
+* **Question** : *Quel est le CPI moyen ?*
+* **Pourquoi** : Permet d’évaluer l’efficacité par instruction. ([Fiveable][1])
+
+---
+
+## 🧮 2) MÉTRIQUES CPU / CALCUL
+
+### **2.1 Utilisation CPU (%)**
+
+* **Question** : *Quel pourcentage du CPU est utilisé par LUM/VORAX ?*
+* Mesurer par cœur, par thread.
+
+---
+
+### **2.2 Scalabilité multi-threads**
+
+* **Question** : *Comment les performances se comportent-elles quand on augmente les threads ?*
+* Mesurer gains, saturation, contention.
+
+---
+
+### **2.3 Saturation et contention**
+
+* **Question** : *Y a-t-il des locks, goulots, ou contention système ?*
+* Analyse de contention mémoire.
+
+---
+
+## 🧠 3) MÉTRIQUES MÉMOIRE (CRUCIALES)
+
+### **3.1 Bande passante mémoire réelle**
+
+* **Question** : *Quel est le débit mémoire (GB/s) observé ?,* exécuter avec tests STREAM ou similaires. ([Dell][2])
+
+---
+
+### **3.2 Latence mémoire & cache**
+
+* **Question** : *Quelles sont les latences par niveau de cache et mémoire principale (L1/L2/L3/RAM) ?*
+* Benchmarks micro-mesure (éventuellement via counters performance). ([eci.intel.com][3])
+
+---
+
+### **3.3 Cache hit / miss ratios**
+
+* **Question** : *Quels sont les taux de hit/miss dans les caches ?*
+* Très important pour systèmes alignés optimisés comme LUM.
+
+---
+
+### **3.4 Utilisation mémoire totale**
+
+* **Question** : *Quelle mémoire est allouée à LUM/VORAX ?* (RSS, VmSize, heap, etc.).
+* Permet de voir overhead.
+
+---
+
+### **3.5 Fragmentation & footprint**
+
+* **Question** : *Quelle fraction de la mémoire totale est réellement utilisée vs occupée ?*
+
+---
+
+## 🧮 4) MÉTRIQUES I/O (FICHIER, DISQUE, PERSISTENCE)
+
+### **4.1 IOPS (ops/sec)**
+
+* **Question** : *Combien d’opérations I/O par seconde sont réalisées ?*
+* Important pour logs forensic et persistance. ([Wikipédia][4])
+
+---
+
+### **4.2 Débit I/O (MB/s)**
+
+* **Question** : *Quel est le throughput du disque (séquentiel et aléatoire)?*
+
+---
+
+### **4.3 Latence I/O**
+
+* **Question** : *Quelle est la latence pour les opérations d’écriture / lecture ?*
+* Mesure distribution p50, p95, p99. ([Ayi Nedjimi Consultants][5])
+
+---
+
+## 🔍 5) MÉTRIQUES RÉSEAU (si applicable)
+
+*(Si LUM/VORAX est distribué ou communique entre noeuds)*
+
+### **5.1 Throughput réseau**
+
+* **Question** : *Quel est le débit réseau (Gbps) lors des utilisateurs intensifs ?*
+
+---
+
+### **5.2 Latence et jitter réseau**
+
+* **Question** : *Quelle est la latence moyenne et la variation (jitter) ?*
+
+---
+
+## 🧠 6) MÉTRIQUES DE SCALABILITÉ
+
+### **6.1 Scalabilité horizontale**
+
+* **Question** : *Comment LUM/VORAX scale-t-il avec plus de machines / nodes ?*
+
+---
+
+### **6.2 Efficiency per nœud**
+
+* **Question** : *Le gain est-il linéaire, sub-linéaire ou saturé ?*
+
+---
+
+## 🧠 7) MÉTRIQUES DE ROBUSTESSE / FAULT
+
+### **7.1 Résilience aux erreurs**
+
+* **Question** : *Comment le système réagit-il à des erreurs mémoire ou I/O ?*
+* Vérifier récupération d’erreur.
+
+---
+
+### **7.2 Consistency & forensic validity**
+
+* **Question** : *La journalisation répond-elle aux contraintes de cohérence ?*
+
+---
+
+## 📈 8) MÉTRIQUES STRUCTURELLES & COMPORTEMENTALES
+
+### **8.1 Profil d’utilisation des instructions**
+
+* **Question** : *Quelle proportion d’instructions sont SIMD, scalaires, loads/stores ?*
+
+---
+
+### **8.2 Branch misprediction rates**
+
+* **Question** : *Combien de mauvaises prédictions de branche ?*
+
+---
+
+### **8.3 Temps bloqué vs utile**
+
+* **Question** : *Quel pourcentage du temps d’exécution est passé en waiting / blocking ?*
+
+---
+
+## 📊 9) MÉTRIQUES DE RAPPORT QUANTITATIF
+
+Pour chaque métrique ci-dessus tu dois récupérer **au moins** :
+
+✔ Valeur brute
+✔ P50, P95, P99 (distribution) *pour latences*
+✔ Différence moyenne vs écart-type
+✔ Courbes d’évolution selon la charge (scaling)
+
+---
+
+## 📋 10) MÉTRIQUES COMPARATIVES
+
+Une fois mesurées, **pour chaque métrique** il faut poser :
+
+* *Quelle est la valeur de référence pour une technologie comparable ?*
+* *Quel est l’écart (en %) avec ces technologies standards ?*
+* *Est-ce que l’écart est significatif (≈10%, 20%, >50%) ?*
+
+---
+
+# 🗂 Format de Rapport `.md` Recommandé
+
+Chaque section doit être présentée comme suit :
+
+### 📌 Section Title (e.g., CPU Performance)
+
+```
+## 🧠 CPU Performance Overview
+
+### Questions posées:
+- Quel est le temps d’exécution total ?
+- Quelle est l’utilisation moyenne du CPU (%) ?
+
+### Données récoltées:
+| Metric | Value | P50 | P95 | P99 | Unit |
+|--------|-------|-----|------|------|------|
+| CPU usage | 87.2 | – | – | – | % |
+| CPU time | 1423 | – | – | – | ms |
+
+### Analyse:
+- Analyse descriptive de ce que les chiffres impliquent
+- Comparaison avec standards industriels (référence)
+- Hypothèses / taux d’écart
+
+### Graphs:
+*(intégrer plots / histogrammes)*
+```
+
+---
+
+# 📌 Prompts à inclure dans l’agent REPLIT pour recueillir chaque métrique
+
+Pour **chaque métrique ci-dessous**, l’agent doit demander *au moins* :
+
+```
+# Mesure X
+Veuillez fournir :
+1) Valeur brute
+2) Méthode de mesure
+3) Contexte matériel (CPU, RAM, noyau, etc.)
+4) Version du compilateur / flags d’optimisation
+5) Systèmes comparés (si disponibles)
+6) Distribution des résultats (p50, p95, p99)
+```
+
+---
+
+# 🎯 Résumé des Questions à poser (Checklist finale)
+
+1. Temps d’exécution global
+2. IPC / CPI
+3. CPU usage par thread
+4. CPU scalability multi-threads
+5. Memory throughput (GB/s)
+6. Memory latency (L1/L2/L3/RAM)
+7. Cache hit/miss ratios
+8. IOPS & latency I/O
+9. Throughput I/O (MB/s)
+10. Network throughput & latency
+11. Scalability horizontale
+12. Resilience to faults
+13. Logging overhead latency
+14. Branch mispredictions
+15. SIMD utilization
+
+*(…et les valeurs p50, p95, p99 pour latences)*
+
+---
+
+Si tu veux, je peux **générer un JSON template** qui contient *tous ces champs structurés* pour l’agent REPLIT — prêt à être rempli automatiquement — ainsi qu’un **template `.md` complet** final prêt à publier après exécution des tests. Veux-tu ces fichiers templates (oui/non) ?
+
+[1]: https://fiveable.me/advanced-computer-architecture/unit-14?utm_source=chatgpt.com "Performance Analysis & Benchmarking | Advanced Computer Architecture Class Notes"
+[2]: https://www.dell.com/support/kbdoc/fr-be/000133009/hpc-synth-eacute-tique-benchmark-performance-using-second-generation-intel-xeon-scalable-processors-stream-hpl-and-hpcg?utm_source=chatgpt.com "Synthèse des performances de référence HPC avec les processeurs Intel Xeon évolutifs de 2e génération – STREAM, HPL et HPCG | Dell Belgique"
+[3]: https://eci.intel.com/docs/3.1/development/performance/benchmarks.html?utm_source=chatgpt.com "Benchmarks & Performance Characterization — ECI documentation"
+[4]: https://en.wikipedia.org/wiki/Iometer?utm_source=chatgpt.com "Iometer"
+[5]: https://www.ayinedjimi-consultants.fr/ia-benchmarks-performance-bases-vectorielles.html?utm_source=chatgpt.com "Benchmarks de Performance : Quel Système Vectoriel"

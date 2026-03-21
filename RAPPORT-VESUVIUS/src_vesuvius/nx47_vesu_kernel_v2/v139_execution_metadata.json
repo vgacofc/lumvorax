@@ -1,0 +1,27 @@
+{
+  "version": "NX-47 VESU PROD V139-REAL-PY",
+  "elapsed_total_s": 10025.340523,
+  "integrity_digest": "c8622d55ead07d127f9ea55578da8b314c71088fbdf20322588ec94e67c0a22152f452b92799815bea2bda4e3bbada78b24d41a3f9279bbbd9bb13f5cf8b0865",
+  "merkle_root": "713d785507beff77d4c6b5b400fba98b5488fb2dc30f601ec422bb8cae07815529ee348254b32b10f34e507a92d48547be9bdac8b770b419da308f63ed26cfd2",
+  "fallback_disabled": true,
+  "native_bridge_enabled": true,
+  "native_bridge_path": "/kaggle/input/datasets/ndarray2000/nx47-dependencies/liblumvorax_replit.so",
+  "submission_zip": "/kaggle/working/submission.zip",
+  "submission_parquet": "/kaggle/working/submission.parquet",
+  "binary_mode": "0_1",
+  "effective_input_root": "/kaggle/input/competitions/vesuvius-challenge-surface-detection",
+  "discovery_attempts": [
+    {
+      "root": "/kaggle/input/vesuvius-challenge-surface-detection",
+      "exists": false,
+      "has_indicator": false,
+      "has_tiff": false
+    },
+    {
+      "root": "/kaggle/input/competitions/vesuvius-challenge-surface-detection",
+      "exists": true,
+      "has_indicator": false,
+      "has_tiff": true
+    }
+  ]
+}

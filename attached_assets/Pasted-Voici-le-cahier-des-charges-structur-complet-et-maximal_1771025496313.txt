@@ -1,0 +1,176 @@
+Voici le cahier des charges structuré, complet et maximaliste pour concevoir une simulation réaliste d’un trou noir inspiré du phénomène tel qu’il est représenté (et expliqué scientifiquement) dans Interstellar, avec traçabilité nanoseconde par nanoseconde, bit par bit, logs persistants exhaustifs et audit complet, en respectant toutes tes contraintes techniques et scientifiques.
+
+Ce cahier des charges est rédigé en niveaux d’exigence complets, prêts pour une implémentation en C, et inclut toutes les questions d’experts nécessaires avant de commencer le développement.
+
+	Remarque scientifique importante
+La simulation réaliste d’un trou noir (notamment d’un trou noir en rotation comme Gargantua de Interstellar) nécessite l’intégration des équations de la relativité générale (Kerr métrique), la prise en compte du rayonnement et du disque d’accrétion avec effets relativistes (lentille gravitationnelle, décalage Doppler, redshift), et du transport radiatif pour la lumière. Les images produites par les équipes de Double Negative ont été générées avec un code spécialisé (DNGR), basé sur des équations analytiques de la relativité générale.
+
+📄 TROUNOIRDOCUMENTATIONGLOBAL.md
+
+Cahier des charges — Simulation numérique réaliste d’un trou noir
+
+0) Objectif
+
+Produire un module de simulation autonome, indépendant des systèmes existants, capable de :
+	•	Simuler un trou noir astrophysique en rotation (modèle de Kerr) avec disque d’accrétion ;
+	•	Intégrer les effets relativistes réels (lentille gravitationnelle, Doppler, redshift) ;
+	•	Exécuter des calculs numériques avec finesse temporelle à la nanoseconde ;
+	•	Tracer chaque calcul, accès mémoire et événement hardware bit par bit dans des logs persistants ;
+
+Le module doit être utilisable comme base scientifique ou technique pour des projets avancés.
+
+1) Contraintes de développement
+
+1.1 Langage
+	•	C standard (ISO C17 ou supérieur)
+	•	Pas de hardcoding, stubs, placeholders, mocks ou simplifications inacceptables.
+	•	Tout code doit être explicable, vérifiable et portable.
+
+1.2 Compilation
+	•	Options minimales :
+
+-std=c17 -O0 -g3 -fno-omit-frame-pointer -Wall -Wextra
+
+
+	•	Les optimisations agressives (-O2, vectorisation automatique) ne doivent être utilisées qu’après validation du logging.
+
+1.3 Indépendance du système existant
+	•	Le module doit être placé dans un répertoire isolé, sans dépendance directe avec le système opérationnel.
+	•	Toute interaction externe doit se faire via interfaces clairement définies.
+
+2) Architecture logicielle (niveau expert)
+
++---------------------------+
+| Interface Orchestrateur   |
++---------------------------+
+| Module Temps Haute Préc.  |
++---------------------------+
+| Physique Relativiste      |
+| ├ Kerr Metric Solver      |
+| ├ Accretion Disk Dynamics |
+| └ Ray/Bundles Tracer      |
++---------------------------+
+| Radiation + Doppler Shift |
++---------------------------+
+| Traceur Forensique 360    |
++---------------------------+
+| Logs Persistants          |
++---------------------------+
+
+3) Modèle physique à implémenter
+
+3.1 Relativité générale
+	•	Implémenter l’intégration numérique des géodésiques (trajectoires de photons) dans un champ gravitationnel de Kerr.
+	•	Calculer la lentille gravitationnelle, y compris les effets autour de l’horizon des événements.
+	•	Formulation nécessaire : équations de la métrique de Kerr pour photons et matière libre.
+
+Les publications scientifiques associées (p. ex. DNGR) fournissent des équations précises pour le mapping lumière → caméra.
+
+3.2 Disque d’accrétion
+	•	Modèle réaliste du point de vue thermodynamique, vitesse, densité et température.
+	•	Inclure hydrodynamique / magnétohydrodynamique (MHD) selon besoin avancé.
+
+3.3 Effets relativistes supplémentaires
+	•	Doppler shift réel du rayonnement selon la vitesse locale du disque.
+	•	Redshift gravitationnel.
+	•	Courbure extrême des rayons lumineux (gravitational lensing).
+
+4) Logging et traçabilité (niveau 360)
+
+4.1 Échelle temporelle
+	•	Temps de simulation absolu : nanosecondes réelles mesurées sur horloge haute précision.
+	•	Chaque événement doit inclure :
+	•	timestamp (ns),
+	•	thread et core CPU,
+	•	compteur de cycles,
+	•	valeur binaire précise des registres et mémoire.
+
+4.2 Logs persistants
+	•	Format structuré : binaire plus index JSON/textuel
+	•	Architecture de répertoire :
+
+logs/
+  raw_data.bin
+  index.json
+  timeline.csv
+  checksum.sha256
+
+4.3 Profondeur du niveau de trace
+	•	CPU : instruction par instruction
+	•	Mémoire : lecture/écriture, adresse, cache line
+	•	Temps réel : phase, sous-phase, progrès
+	•	Radiation et résultats physiques : valeurs numériques et vecteurs calculés
+
+5) Progression et métriques d’exécution
+
+5.1 Barre de progression globale
+
+Un indicateur 0 → 100 % doit être généré automatiquement au cours de l’exécution, avec logs périodiques.
+
+5.2 Tick journaling
+
+Chaque étape physique (par exemple intégration des géodésiques) doit produire des ticks loggés.
+
+6) Vérification post-exécution
+
+6.1 Validité des logs
+	•	Tous les fichiers logs doivent être vérifiés :
+	•	Présence
+	•	Continuité temporelle
+	•	Checksums valides
+
+6.2 Relecture complète
+	•	Un outil lecteur de logs doit être livré pour permettre une inspection ligne par ligne de l’intégralité du journal.
+
+7) Tests unitaires (préalables)
+
+Catégories essentielles
+
+Domaine	Test obligatoire
+Temps	Résolution ns
+CPU	Registre, flags
+Mémoire	Lecture/sauvegarde
+Physique	Visualisation rayons, géodésiques
+MHD	Vitesse et densité cohérentes
+Log	Continuité, checksum
+
+8) Analyse des résultats
+
+Chaque sortie (quantité, vecteur, physique) doit être interprétée selon :
+	•	C’est-à-dire ?
+	•	Donc ?
+	•	Conclusion scientifique
+	•	Autocritique
+	•	Suggestion d’amélioration
+	•	Anomalies détectées
+
+9) Livrables scientifiques
+	•	Code source complet
+	•	Fichiers logs
+	•	Outils de lecture / analyse
+	•	Documentation technique détaillée
+	•	Scripts de tests
+	•	Données physiques de simulation
+
+10) Questions experts bloquantes (réponse requise avant implémentation)
+	1.	Quelle métrique physique doit être prioritaire ?
+(Je veux Kerr complet)
+	2.	Volumétrie estimée des logs ? ( je veux illimité)
+	3.	Accès à compteurs matériels ? (Oui, tout les metrique hardware replit)
+	4.	Simulation temps réel ou offline ? ( oui, Simulation temps réel)
+	5.	GPU impliqué ou uniquement CPU ? ( les deux , avec detection de cest qui est disponible) 
+	6.	Intégration de radiative transport ? ( oui, mais explique cela)
+
+11) Contraintes scientifiques avancées
+	•	Intégrer la vision relativiste correcte du disque d’accrétion, incluant asymétrie de luminosité due au Doppler et potentiellement relevé des effets thermiques.
+	•	Ne pas simplifier vers des visualisations approximatives; la simulation doit être physiquement interprétable.
+
+12) Feuille de route (codage)
+	1.	Moteur de temps & traceur bas niveau
+	2.	Physique de Kerr → intégrateur ODE
+	3.	Accrétion disk dynamics
+	4.	Ray tracer relativiste
+	5.	Logging forensique
+	6.	Tests unitaires
+	7.	Lecteur de logs
+	8.	Documentation intégrale

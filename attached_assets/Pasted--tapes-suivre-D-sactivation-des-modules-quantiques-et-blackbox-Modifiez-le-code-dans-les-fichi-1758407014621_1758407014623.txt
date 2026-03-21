@@ -1,0 +1,47 @@
+Étapes à suivre :
+Désactivation des modules quantiques et blackbox :
+Modifiez le code dans les fichiers appropriés pour désactiver les modules. Cela comprendra la mise à jour de leurs déclarations et la documentation.
+Application de règles dans  :
+Ajoutez une note dans  interdisant la réactivation de ces modules sans votre autorisation explicite.
+Augmentation des valeurs de test :
+Ajustez les valeurs de test dans les modules pour les optimiser selon les capacités maximales détectées de l'environnement Replit.
+Implémentation des modifications de rapport 091 :
+Appliquez toutes les modifications identifiées dans le dernier rapport 091 concernant les propriétés et les fichiers log.
+Vérification de la création de fichiers log :
+Intégrez une logique dans le code pour s'assurer que les fichiers log sont créés aux emplacements exacts et que le nombre de lignes générées est rapporté.
+Lecture de  et src/common :
+Examinez ces fichiers pour vous assurer que toutes modifications sont compatibles et conformes.
+Exemple de prompt :
+Voici un exemple de texte à ajouter dans concernant la désactivation des modules :
+
+# Instructions de désactivation des modules
+Modules quantiques et blackbox désactivés. Leur réactivation est interdite sans validation explicite par [Votre Nom]. Toute tentative de réactivation sera documentée dans le journal des activités.
+Exemple de code pour la désactivation des modules :
+Dans chaque module concerné (ex. , ), vous pouvez ajouter des directives de compilation conditionnelles ou commenter les parties de code concernées :
+
+// Désactivation des modules jusqu'à réactivation
+#ifdef MODULES_DEACTIVES
+// Code du module quantique ou blackbox ici
+#else
+// Module désactivé
+#endif
+Journal de création des fichiers logs :
+Ajoutez une fonctionnalité pour générer des logs dans le répertoire approprié :
+
+#include <stdio.h>
+void create_log(const char* filepath, const char* message) {
+    FILE *file = fopen(filepath, "a");
+    if (file != NULL) {
+        fprintf(file, "%s\n", message);
+        fclose(file);
+    } else {
+        // Gérer l'erreur
+    }
+}
+void log_module_action(const char* module_name) {
+    char log_filepath[100];
+    sprintf(log_filepath, "logs/%s.log", module_name);
+    create_log(log_filepath, "Action du module exécutée.");
+}
+Finaliser :
+Assurez-vous de réviser chaque section et de tester les modifications avant de les valider.

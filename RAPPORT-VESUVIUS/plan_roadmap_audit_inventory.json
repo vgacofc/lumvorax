@@ -1,0 +1,120 @@
+{
+  "count": 6,
+  "plans": [
+    {
+      "path": "RAPPORT-VESUVIUS/FEUILLE_DE_ROUTE_V5_NX46_VESUVIUS.md",
+      "size": 1898,
+      "line_count": 52,
+      "mentions_progress": false,
+      "mentions_pending": true,
+      "mentions_done": false
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/PLAN_CAHIER_DE_CHANCE_FEUILLE_DE_ROUTE_AZ.md",
+      "size": 21477,
+      "line_count": 418,
+      "mentions_progress": false,
+      "mentions_pending": false,
+      "mentions_done": true
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/notebook-version-NX47-V61.2/PLAN_V61_2_FEUILLE_DE_ROUTE_COMPLETE.md",
+      "size": 2578,
+      "line_count": 57,
+      "mentions_progress": true,
+      "mentions_pending": true,
+      "mentions_done": false
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/notebook-version-NX47-V61.3/output_logs_vesuvius/v4-outlput-logs--nx46-vesuvius-core-kaggle-ready/PLAN_FEUILLE_DE_ROUTE_V4_REPONSES_EXPERTES.md",
+      "size": 20155,
+      "line_count": 569,
+      "mentions_progress": false,
+      "mentions_pending": false,
+      "mentions_done": true
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/src_vesuvius/v7.4/PLAN_V7_4_FEUILLE_DE_ROUTE_COMPLETE.md",
+      "size": 2329,
+      "line_count": 57,
+      "mentions_progress": true,
+      "mentions_pending": true,
+      "mentions_done": false
+    },
+    {
+      "path": "RAPPORT-VESUVIUS/src_vesuvius/v7.5/PLAN_V7_5_CAMPAGNE_10_RUNS.md",
+      "size": 821,
+      "line_count": 20,
+      "mentions_progress": false,
+      "mentions_pending": false,
+      "mentions_done": false
+    }
+  ],
+  "directory_coverage": [
+    {
+      "dir": "RAPPORT-VESUVIUS/notebook-version-NX47-V102",
+      "has_plan_or_roadmap": false,
+      "md_count": 0
+    },
+    {
+      "dir": "RAPPORT-VESUVIUS/notebook-version-NX47-V107",
+      "has_plan_or_roadmap": false,
+      "md_count": 0
+    },
+    {
+      "dir": "RAPPORT-VESUVIUS/notebook-version-NX47-V140",
+      "has_plan_or_roadmap": false,
+      "md_count": 0
+    },
+    {
+      "dir": "RAPPORT-VESUVIUS/notebook-version-NX47-V140.1",
+      "has_plan_or_roadmap": false,
+      "md_count": 0
+    },
+    {
+      "dir": "RAPPORT-VESUVIUS/notebook-version-NX47-V144",
+      "has_plan_or_roadmap": false,
+      "md_count": 0
+    },
+    {
+      "dir": "RAPPORT-VESUVIUS/notebook-version-NX47-V144.1",
+      "has_plan_or_roadmap": false,
+      "md_count": 0
+    },
+    {
+      "dir": "RAPPORT-VESUVIUS/notebook-version-NX47-V61.1",
+      "has_plan_or_roadmap": false,
+      "md_count": 0
+    },
+    {
+      "dir": "RAPPORT-VESUVIUS/notebook-version-NX47-V61.2",
+      "has_plan_or_roadmap": true,
+      "md_count": 1
+    },
+    {
+      "dir": "RAPPORT-VESUVIUS/notebook-version-NX47-V61.3",
+      "has_plan_or_roadmap": true,
+      "md_count": 4
+    },
+    {
+      "dir": "RAPPORT-VESUVIUS/notebook-version-NX47-score-0.387-V61",
+      "has_plan_or_roadmap": false,
+      "md_count": 0
+    },
+    {
+      "dir": "RAPPORT-VESUVIUS/src_vesuvius",
+      "has_plan_or_roadmap": true,
+      "md_count": 2
+    }
+  ],
+  "missing_plan_dirs": [
+    "RAPPORT-VESUVIUS/notebook-version-NX47-V102",
+    "RAPPORT-VESUVIUS/notebook-version-NX47-V107",
+    "RAPPORT-VESUVIUS/notebook-version-NX47-V140",
+    "RAPPORT-VESUVIUS/notebook-version-NX47-V140.1",
+    "RAPPORT-VESUVIUS/notebook-version-NX47-V144",
+    "RAPPORT-VESUVIUS/notebook-version-NX47-V144.1",
+    "RAPPORT-VESUVIUS/notebook-version-NX47-V61.1",
+    "RAPPORT-VESUVIUS/notebook-version-NX47-score-0.387-V61"
+  ]
+}

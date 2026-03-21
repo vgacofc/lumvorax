@@ -1,0 +1,43 @@
+Running for 33.9s
+Accelerator
+
+GPU P100
+Environment
+
+Latest Container Image
+Output
+
+0 B
+Time
+	
+#
+	
+Log Message
+4.0s	0	Processing /kaggle/input/nx47-dependencies/imagecodecs-2026.1.14-cp311-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl
+4.4s	1	Requirement already satisfied: numpy in /usr/local/lib/python3.12/dist-packages (from imagecodecs==2026.1.14) (2.0.2)
+6.4s	2	Installing collected packages: imagecodecs
+6.9s	3	Successfully installed imagecodecs-2026.1.14
+8.6s	4	{
+8.6s	5	  "status": "fail",
+8.6s	6	  "error_type": "RuntimeError",
+8.6s	7	  "error": "native_so_load_enforced_failed: /kaggle/input/nx47-dependencies/liblumvorax.so: undefined symbol: ai_agent_learn_from_experience",
+8.6s	8	  "report": "/kaggle/working/lumvorax_360_validation_report_v13_strict.json",
+8.6s	9	  "dataset_root": "/kaggle/input/nx47-dependencies",
+8.6s	10	  "native_lib": "/kaggle/input/nx47-dependencies/liblumvorax.so",
+8.6s	11	  "missing_required_packages": [],
+8.6s	12	  "incompatible_required_packages": [],
+8.6s	13	  "so_load_status": null,
+8.6s	14	  "so_symbol_count": 0,
+8.6s	15	  "roundtrip_status": null,
+8.6s	16	  "warnings_count": 0,
+8.6s	17	  "events_count": 6,
+8.6s	18	  "elapsed_ns": 7767052144
+8.6s	19	}
+10.6s	20	/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+10.6s	21	  cells[i][c] = re.sub('\\\\\|', '|', cell)
+10.8s	22	/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+10.8s	23	  text = re.sub(r'_', '\_', text) # Escape underscores in display text
+11.4s	24	/usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=["nbconvert.preprocessors.ExtractOutputPreprocessor"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.
+11.4s	25	  warn(
+11.4s	26	[NbConvertApp] Converting notebook __script__.ipynb to html
+12.7s	27	[NbConvertApp] Writing 369726 bytes to __results__.html

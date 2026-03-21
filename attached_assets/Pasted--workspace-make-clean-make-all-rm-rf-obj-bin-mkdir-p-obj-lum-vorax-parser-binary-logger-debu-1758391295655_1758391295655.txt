@@ -1,0 +1,37 @@
+~/workspace$ make clean && make all
+rm -rf obj bin
+mkdir -p obj/{lum,vorax,parser,binary,logger,debug,persistence,crypto,optimization,parallel,metrics,advanced_calculations,complex_modules,file_formats,spatial,network} bin logs/{compilation,execution,tests,stress_tests,modules_tests,performance,diagnostics}
+clang -Wall -Wextra -std=c99 -O3 -march=native -ffast-math -funroll-loops -g -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -I./src/debug -I./src -mavx512f -mfma -c src/main.c -o obj/main.o
+In file included from src/main.c:48:
+src/advanced_calculations/neural_blackbox_computer.h:117:3: error: typedef redefinition with different types ('struct neural_architecture_config_t' vs 'struct neural_architecture_config_t')
+  117 | } neural_architecture_config_t;
+      |   ^
+src/advanced_calculations/neural_ultra_precision_architecture.h:30:3: note: previous definition is here
+   30 | } neural_architecture_config_t;
+      |   ^
+In file included from src/main.c:48:
+src/advanced_calculations/neural_blackbox_computer.h:317:16: error: redefinition of 'neural_ultra_precision_config_t'
+  317 | typedef struct neural_ultra_precision_config_t {
+      |                ^
+src/advanced_calculations/neural_ultra_precision_architecture.h:32:16: note: previous definition is here
+   32 | typedef struct neural_ultra_precision_config_t {
+      |                ^
+In file included from src/main.c:48:
+src/advanced_calculations/neural_blackbox_computer.h:330:3: error: typedef redefinition with different types ('struct (unnamed struct at src/advanced_calculations/neural_blackbox_computer.h:317:16)' vs 'struct neural_ultra_precision_config_t')
+  330 | } neural_ultra_precision_config_t;
+      |   ^
+src/advanced_calculations/neural_ultra_precision_architecture.h:45:3: note: previous definition is here
+   45 | } neural_ultra_precision_config_t;
+      |   ^
+src/main.c:311:88: warning: format specifies type 'unsigned long long' but the argument has type 'uint64_t' (aka 'unsigned long') [-Wformat]
+  311 |                 printf("✅ Collatz Analyzer: Nombre %llu analysé, %zu séquences\n", test_num, result->sequence_count);
+      |                                                     ~~~~                            ^~~~~~~~
+      |                                                     %lu
+src/main.c:314:76: warning: format specifies type 'unsigned long long' but the argument has type 'uint64_t' (aka 'unsigned long') [-Wformat]
+  314 |                 printf("❌ Collatz Analyzer: Échec analyse pour %llu\n", test_num);
+      |                                                                 ~~~~     ^~~~~~~~
+      |                                                                 %lu
+2 warnings and 3 errors generated.
+make: *** [Makefile:65: obj/main.o] Error 1
+~/workspace$ 
+

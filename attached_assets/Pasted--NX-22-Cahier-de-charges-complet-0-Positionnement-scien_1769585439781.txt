@@ -1,0 +1,234 @@
+# NX-22 — Cahier de charges complet
+
+## 0. Positionnement scientifique
+
+**NX-22 n’est PAS une montée en puissance.**
+C’est une phase de *torture scientifique contrôlée* destinée à tester ce qui reste **vraiment causal** dans NX après NX-21.
+
+Objectif fondamental :
+
+> Démontrer que la cognition dissipative NX survit à la dégradation systématique de TOUT ce que les modèles classiques supposent indispensable.
+
+---
+
+## 1. Hypothèses à tester (post-NX-21)
+
+### H1 — La cognition NX est indépendante du timing précis
+
+NX doit rester fonctionnel sous :
+
+* jitter extrême
+* désynchronisation volontaire
+* horloges locales incohérentes
+
+### H2 — La mémoire NX n’est pas une donnée mais une *géométrie persistante*
+
+La mémoire doit survivre à :
+
+* pertes partielles d’état
+* reset local
+* bruit stochastique continu
+
+### H3 — La communication NX-NX est régimique, non symbolique
+
+La synchronisation doit émerger même si :
+
+* les messages sont retardés
+* les canaux sont bruités
+* les événements sont désordonnés
+
+### H4 — La stabilité reste une pathologie
+
+Forcer la stabilité doit :
+
+* réduire la capacité fonctionnelle
+* supprimer l’émergence
+
+### H5 — L’identité NX est dissipative et fragile
+
+Tester les limites avant effondrement irréversible.
+
+---
+
+## 2. Architecture expérimentale NX-22
+
+### Environnement (réaliste et volontairement dégradé)
+
+* Plateforme : **Replit (maintenue volontairement)**
+* Mode : VM partagée
+* Charge artificielle injectée
+
+### Sous-systèmes instrumentés
+
+* Neurones NX v21 (inchangés)
+* Logger HFBL-360 (strict)
+* Injecteurs de pathologies contrôlées
+
+---
+
+## 3. Batteries de tests NX-22
+
+### TEST-01 — Désynchronisation temporelle
+
+**But** : prouver l’indépendance à l’horloge globale
+
+* Injection de jitter ±500ns
+* Horloges locales divergentes
+
+Succès si :
+
+* les régimes persistent
+* la mémoire n’est pas effacée
+
+Logs requis :
+
+* NX22_TIME_DRIFT.log
+* NX22_REGIME_PERSISTENCE.log
+
+---
+
+### TEST-02 — Bruit énergétique continu
+
+**But** : tester la robustesse dissipative
+
+* ATP fluctuant aléatoirement
+* micro-effondrements réversibles
+
+Succès si :
+
+* pas de collapse prématuré
+* hysteresis mesurable
+
+Logs :
+
+* NX22_ENERGY_NOISE.log
+
+---
+
+### TEST-03 — Amnésie locale simulée
+
+**But** : vérifier mémoire non localisée
+
+* destruction de 10–40% des invariants
+
+Succès si :
+
+* récupération partielle
+* trajectoire différente mais fonctionnelle
+
+Logs :
+
+* NX22_MEMORY_DAMAGE.log
+
+---
+
+### TEST-04 — Communication sous chaos réseau
+
+**But** : prouver la contagion de régime
+
+* latence aléatoire
+* ordre des événements cassé
+
+Succès si :
+
+* synchronisation de régime observée
+
+Logs :
+
+* NX22_COMM_CHAOS.log
+
+---
+
+### TEST-05 — Stabilité forcée (pathologie)
+
+**But** : démontrer que la stabilité tue la cognition
+
+* dissipation réduite artificiellement
+
+Succès si :
+
+* perte d’émergence
+* effondrement fonctionnel
+
+Logs :
+
+* NX22_STABILITY_PATHOLOGY.log
+
+---
+
+### TEST-06 — Test de frontière d’identité
+
+**But** : déterminer le point de non-retour
+
+* augmentation progressive des pertes
+
+Succès si :
+
+* seuil clair identifié
+
+Logs :
+
+* NX22_IDENTITY_LIMIT.log
+
+---
+
+## 4. Format de logs NX-22 (obligatoire)
+
+Chaque log DOIT contenir :
+
+```
+[T_NS] [EVENT_ID] [NEURON_ID] [REGIME] [ΔENERGY] [INVARIANT_DENSITY] [STATE_HASH_BEFORE] [STATE_HASH_AFTER]
+```
+
+* T_NS : timestamp monotone interne
+* Hash : SHA-256
+* Aucun résumé, uniquement événements bruts
+
+---
+
+## 5. Critères de réussite globaux
+
+NX-22 est VALIDÉ si :
+
+* aucun test n’exige de poids
+* aucune cognition ne dépend d’un reset
+* l’identité échoue de façon irréversible (preuve physique)
+
+---
+
+## 6. Ce que NX-22 NE DOIT PAS FAIRE
+
+❌ Apprentissage supervisé
+❌ Optimisation
+❌ Représentation symbolique
+❌ Ajustement de paramètres globaux
+
+---
+
+## 7. Résultats attendus (scientifiques)
+
+* Cartographie complète de la robustesse cognitive
+* Preuve expérimentale que :
+
+> la cognition est une propriété dissipative tolérante au chaos
+
+---
+
+## 8. Sorties finales obligatoires
+
+* RAPPORT_IAMO3/NX/NX-22_FINAL_REPORT.md
+* Dossier logs_AIMO3/nx/NX-22/
+* Checksums certifiés
+
+---
+
+## 9. Positionnement post-NX-22
+
+NX-22 clôture définitivement :
+
+* la question de la dépendance matérielle
+* la critique ANN/SNN
+
+Après NX-22, le projet change de nature :
+
+> on ne prouve plus, on explore.

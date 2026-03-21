@@ -1,0 +1,13 @@
+Recherche, analyse et étudie les composants réellement nécessaires du des tout le version NX-47, capables de réaliser cela réellement la nouvelle version NX-47 VESU pour participer a la competition  suivante sur kaggle https://www.kaggle.com/competitions/vesuvius-challenge-surface-detection/overview. Présente ensuite un plan détaillé, clair, distinctif et réellement possible, avec toutes les distinctions nécessaires, toute l’architecture, les étapes, points et sous-points, accompagnés de descriptions exactes de ce qui sera fait, avec l’architecture exacte avant l’état actuel et après, le résultat désiré.
+
+je veux voir réellement ton plan, sans omission et avec une autocritique, incluant les points forts et les points faibles, les tests unitaires à réaliser pour vérifier l’activation réelle de chacune des fonctions et sous-fonctions de toutes les étapes et couches traitées, ainsi que les tests d’intégration et les logs en nanosecondes HFBL-360 (.csv, .json, logs). et tout les solution trouver de toutes version NX-47 deja executer sur kaggle. 
+
+Ajoute en plus, en tant qu’expert et critique dans tous les domaines nécessaires, tout ce que tu juges nécessaire et que j’aurais oublié de préciser, afin d’être sûr d’éliminer toutes les failles possibles de cette nouvelle version du neurone NX (qui sera le NX-47 VESU). Et revoir complètement ton plan ligne par ligne avant de procéder a la feuille de route et au cahier de charge: et ensuite procede a la realiser du kernel et pour le kernek sur kaggle et attend 59 seconde pour recuperer les nouveau log generer et presenter tout les detailler clairement des decouverte exact realiser, si vraiment reel, sans mentir! Voici la clé api ia aristotle et installe son api qui ce trouve sur github, procéde au test de vérification reel de connexion :
+
+arstl_zXWzfQbWsS9uOAS0Du8GcXZ-OwDsD32SedLmhAqf0g8
+
+Voici la clé apis Kaggle et installe aussi sont api que ce trouve sur github, procéde au test de vérification reel de connexion : KGAT_4d6a071100ae21ada8b79b20cce4b90d
+
+export KAGGLE_API_TOKEN=KGAT_4d6a071100ae21ada8b79b20cce4b90d
+
+kaggle competitions list

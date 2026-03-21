@@ -1,0 +1,94 @@
+# CAHIER DES CHARGES : NX-32 - COMPLÉTITION ET VALIDATION INTÉGRALE
+
+## Objectif Général
+
+Fournir toutes les informations manquantes et preuves complémentaires pour que les résultats NX-31 deviennent **100% validés physiquement, topologiquement, thermodynamiquement et numériquement**, tout en respectant strictement les logs existants bit par bit à la nanoseconde, avec chaîne Merkle 360°.
+
+---
+
+## 1. Exigences de Base
+
+1. **Conservation totale des logs NX-31** :
+
+   * Aucun log existant ne doit être modifié ou supprimé.
+   * Chaque nouveau calcul doit produire un log bit à bit, horodaté à la nanoseconde UTC.
+   * Les logs doivent être intégrés dans la chaîne Merkle existante pour continuité complète.
+
+2. **Validation physique et numérique** :
+
+   * Chaque problème doit avoir une validation multi-niveaux : physique, topologique, algorithmique.
+   * Les résultats invalidés (C8, C9) doivent être re-testés avec variantes conditionnelles pour vérifier impossibilité ou limites exactes.
+
+3. **Documentation complète et formatée** :
+
+   * Pour chaque problème C1–C13 :
+
+     * Enoncé précis
+     * Formules et preuves formelles (Lean 4 / Coq / Isabelle/HOL si applicable)
+     * Résultats numériques détaillés avec checksums et hashes
+     * Analyse multi-échelle des invariants locaux et spectres
+     * Capture d'écran ou export graphique du comportement de l'attracteur
+   * Pour les conjectures : simulations physiques + visualisation des trajectoires + état des invariants Merkle.
+
+4. **Certification NX-32** :
+
+   * Intégration de tous les tests dans NX-32 Engine (C++ / multi-threaded)
+   * Affichage clair de progression (%) et signal de fin explicite
+   * Export JSON/CSV de tous les résultats et logs forensiques
+
+---
+
+## 2. Compléments à Fournir pour Validation Totale
+
+| Catégorie           | Exigences                                 | Détails supplémentaires                                                                                                                                                                                   |
+| ------------------- | ----------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| C1–C7, C10–C13      | Validation physique et numérique complète | Logs bit par bit, pseudo-spectres locaux, invariants multi-échelle, vérification stability via V(x) et Ω(n)                                                                                               |
+| C8, C9              | Vérification de l’impossibilité           | Tests conditionnels, seuils exacts d’échec, analyse topologique et énergétique, démonstration d’incohérence persistante                                                                                   |
+| Grandes Conjectures | Validation 100% physique et numérique     | Trajectoires de Collatz (≥10¹² points), simulation ligne critique Riemann, vérification P≠NP par dissipation énergétique, TSP quasi-optimal multi-échelle, Snapback et chaos quantique détecté et analysé |
+| Logs et Merkle      | Intégrité absolue                         | Chaque log horodaté à la nanoseconde, checksums distincts par échelle et par état, validation cryptographique Merkle 360°                                                                                 |
+| Visualisation       | Graphiques et infographies                | Schéma attracteurs, spectres Koopman, flux d’information, auto-prédiction, superposition d’attracteurs, multiplexage                                                                                      |
+| Documentation       | Preuves formelles et pédagogiques         | Lean 4, Coq, Isabelle/HOL, théorèmes numériques, explication pédagogique intégrée                                                                                                                         |
+
+---
+
+## 3. Standards et Protocoles de Déploiement NX-32
+
+1. **Environnement** : multi-threaded, support GPU/CPU, horodatage UTC précis.
+2. **Langage** : C++ pour moteur principal + scripts Python pour analyses complémentaires.
+3. **Logs** :
+
+   * Format binaire + JSON/CSV pour l’export.
+   * Checksums SHA-512 par log.
+   * Horodatage à la nanoseconde, Merkle 360°.
+4. **Validation** :
+
+   * Tous les résultats doivent passer les tests unitaires et d’intégration.
+   * Chaque preuve physique doit être reproduite sur au moins 3 instances indépendantes.
+5. **Auditabilité** :
+
+   * Interface de visualisation et extraction de logs.
+   * Fonction de recalcul exact bit par bit pour certifier l’intégrité.
+
+---
+
+## 4. Livrables
+
+1. Ensemble complet de logs NX-32 pour tous les problèmes et conjectures.
+2. Visualisations pédagogiques de chaque attracteur et trajectoire.
+3. Fichiers JSON/CSV des résultats et invariants multi-échelle.
+4. Preuves formelles pour tous les problèmes, intégrées à Lean 4/Coq.
+5. Rapport final de certification NX-32 Engine, indiquant VALIDATION 100% pour tous les problèmes et conjectures.
+
+---
+
+## 5. Critères de Succès
+
+* Tous les problèmes et conjectures ont un état **VALIDÉ** ou une impossibilité formellement prouvée.
+* Intégrité totale de la chaîne Merkle existante et des logs antérieurs.
+* Traçabilité complète et auditable à la nanoseconde.
+* Preuves pédagogiques claires et vérifiables par un expert externe.
+* Export de données structuré, reproduisible et indépendant de la plateforme.
+
+---
+
+**Note finale** : Ce cahier des charges NX-32 constitue le standard ultime pour la validation scientifique complète de NX-31 et ses extensions. Toute omission ou modification des logs existants est strictement interdite.

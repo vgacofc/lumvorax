@@ -1,0 +1,399 @@
+{
+  "meta": {
+    "NX47_V61": {
+      "results_zip": "RAPPORT-VESUVIUS/notebook-version-NX47-score-0.387-V61/results.zip",
+      "submission_member": "submission.zip",
+      "tif_member": "1407735.tif",
+      "shape": [
+        320,
+        320,
+        320
+      ],
+      "dtype": "uint8",
+      "min": 0,
+      "max": 255,
+      "unique_values": [
+        0,
+        255
+      ],
+      "unique_counts": [
+        28751805,
+        4016195
+      ],
+      "nonzero_ratio": 0.12256454467773438,
+      "compression_tag": 5,
+      "pages": 320,
+      "binary_hash_sha256": "9c21c579f09b9f39c826b87976d9f671865380857021f232a88fd13397aadfd9",
+      "results_zip_sha256": "d80ada593bab5ca9567248c92f2513fc29b3c93089bb8a79024ca88e9843f6d6",
+      "results_zip_size": 2352592
+    },
+    "NX47_V61_1": {
+      "results_zip": "RAPPORT-VESUVIUS/notebook-version-NX47-V61.1/results.zip",
+      "submission_member": "nx47_vesuvius/submission.zip",
+      "tif_member": "1407735.tif",
+      "shape": [
+        320,
+        320,
+        320
+      ],
+      "dtype": "uint8",
+      "min": 0,
+      "max": 1,
+      "unique_values": [
+        0,
+        1
+      ],
+      "unique_counts": [
+        28751805,
+        4016195
+      ],
+      "nonzero_ratio": 0.12256454467773438,
+      "compression_tag": 5,
+      "pages": 320,
+      "binary_hash_sha256": "9c21c579f09b9f39c826b87976d9f671865380857021f232a88fd13397aadfd9",
+      "results_zip_sha256": "86ac8a9cc01a761f0ac099e49e5cf96354b1e55e7acd43e125b795a21920db77",
+      "results_zip_size": 4703290
+    },
+    "NX47_V61_2": {
+      "results_zip": "RAPPORT-VESUVIUS/notebook-version-NX47-V61.2/results.zip",
+      "submission_member": "nx47_vesuvius/submission.zip",
+      "tif_member": "1407735.tif",
+      "shape": [
+        320,
+        320,
+        320
+      ],
+      "dtype": "uint8",
+      "min": 0,
+      "max": 1,
+      "unique_values": [
+        0,
+        1
+      ],
+      "unique_counts": [
+        28751805,
+        4016195
+      ],
+      "nonzero_ratio": 0.12256454467773438,
+      "compression_tag": 5,
+      "pages": 320,
+      "binary_hash_sha256": "9c21c579f09b9f39c826b87976d9f671865380857021f232a88fd13397aadfd9",
+      "results_zip_sha256": "b86111a7ea0c741494482d99f557945b096a7fef7c52c18486f2f2377c986c0b",
+      "results_zip_size": 4703302
+    },
+    "NX47_V102": {
+      "results_zip": "RAPPORT-VESUVIUS/notebook-version-NX47-V102/results.zip",
+      "submission_member": "submission.zip",
+      "tif_member": "1407735.tif",
+      "shape": [
+        320,
+        320,
+        320
+      ],
+      "dtype": "uint8",
+      "min": 0,
+      "max": 255,
+      "unique_values": [
+        0,
+        255
+      ],
+      "unique_counts": [
+        28378177,
+        4389823
+      ],
+      "nonzero_ratio": 0.13396676635742188,
+      "compression_tag": 5,
+      "pages": 320,
+      "binary_hash_sha256": "5279fa41a34072576a9a8bf1cd5b0857f809495ad9f50a7ece68d6db4db06322",
+      "results_zip_sha256": "4e64c1f0b56e293271c300a03f55aa74ddb0421a1edc3a4da6fa8c480e81d5a9",
+      "results_zip_size": 25964994
+    },
+    "NX47_V107": {
+      "results_zip": "RAPPORT-VESUVIUS/notebook-version-NX47-V107/results.zip",
+      "submission_member": "submission.zip",
+      "tif_member": "1407735.tif",
+      "shape": [
+        320,
+        320,
+        320
+      ],
+      "dtype": "uint8",
+      "min": 0,
+      "max": 255,
+      "unique_values": [
+        0,
+        255
+      ],
+      "unique_counts": [
+        28378177,
+        4389823
+      ],
+      "nonzero_ratio": 0.13396676635742188,
+      "compression_tag": 5,
+      "pages": 320,
+      "binary_hash_sha256": "5279fa41a34072576a9a8bf1cd5b0857f809495ad9f50a7ece68d6db4db06322",
+      "results_zip_sha256": "4e64c1f0b56e293271c300a03f55aa74ddb0421a1edc3a4da6fa8c480e81d5a9",
+      "results_zip_size": 25964994
+    },
+    "NX46_V7_3": {
+      "results_zip": "RAPPORT-VESUVIUS/output_logs_vesuvius/v7.3-outlput-logs--nx46-vesuvius-core-kaggle-ready/results.zip",
+      "submission_member": "nx46_vesuvius/submission.zip",
+      "tif_member": "1407735.tif",
+      "shape": [
+        320,
+        320,
+        320
+      ],
+      "dtype": "uint8",
+      "min": 0,
+      "max": 255,
+      "unique_values": [
+        0,
+        255
+      ],
+      "unique_counts": [
+        32000640,
+        767360
+      ],
+      "nonzero_ratio": 0.02341796875,
+      "compression_tag": 5,
+      "pages": 320,
+      "binary_hash_sha256": "6e12f91cb025fc47778dda7f3075e7fb5f31ca58eeb8ad8b14754e4dd5809a19",
+      "results_zip_sha256": "c195ce75e08d50ca9b7738e2643d84d46978a1a81adb8fafbdbc758a79209da5",
+      "results_zip_size": 345156
+    },
+    "NX46_V7_4": {
+      "results_zip": "RAPPORT-VESUVIUS/output_logs_vesuvius/v7.4-outlput-logs--nx46-vesuvius-core-kaggle-ready/results.zip",
+      "submission_member": "nx46_vesuvius/submission.zip",
+      "tif_member": "1407735.tif",
+      "shape": [
+        320,
+        320,
+        320
+      ],
+      "dtype": "uint8",
+      "min": 0,
+      "max": 1,
+      "unique_values": [
+        0,
+        1
+      ],
+      "unique_counts": [
+        32000640,
+        767360
+      ],
+      "nonzero_ratio": 0.02341796875,
+      "compression_tag": 5,
+      "pages": 320,
+      "binary_hash_sha256": "6e12f91cb025fc47778dda7f3075e7fb5f31ca58eeb8ad8b14754e4dd5809a19",
+      "results_zip_sha256": "8aa2181abc5ffcf95f22b4fb762c61da6726d519418b7ae74878973e1521d30a",
+      "results_zip_size": 345193
+    },
+    "CONCURRENT_0552": {
+      "results_zip": "RAPPORT-VESUVIUS/exemple-soumision-notebook-concurrent/results.zip",
+      "submission_member": "submission.zip",
+      "tif_member": "1407735.tif",
+      "shape": [
+        320,
+        320,
+        320
+      ],
+      "dtype": "uint8",
+      "min": 0,
+      "max": 1,
+      "unique_values": [
+        0,
+        1
+      ],
+      "unique_counts": [
+        29683824,
+        3084176
+      ],
+      "nonzero_ratio": 0.09412158203125,
+      "compression_tag": 1,
+      "pages": 320,
+      "binary_hash_sha256": "aa312d1a916520d9cae8b2de5e6f4024186e1d4a96a9cc5b68bf501a110820eb",
+      "results_zip_sha256": "b65db0420c726cc9b5c3ab38b9b000d4ca4555ca58f48ab7b7120c294ae3267c",
+      "results_zip_size": 696534
+    }
+  },
+  "pairs": {
+    "NX47_V61__NX47_V61_1": {
+      "iou": 1.0,
+      "dice": 1.0,
+      "xor_ratio": 0.0,
+      "identical": true
+    },
+    "NX47_V61__NX47_V61_2": {
+      "iou": 1.0,
+      "dice": 1.0,
+      "xor_ratio": 0.0,
+      "identical": true
+    },
+    "NX47_V61__NX47_V102": {
+      "iou": 0.8273423833615245,
+      "dice": 0.9055143588795551,
+      "xor_ratio": 0.024238525390625,
+      "identical": false
+    },
+    "NX47_V61__NX47_V107": {
+      "iou": 0.8273423833615245,
+      "dice": 0.9055143588795551,
+      "xor_ratio": 0.024238525390625,
+      "identical": false
+    },
+    "NX47_V61__NX46_V7_3": {
+      "iou": 0.0647107908372045,
+      "dice": 0.12155562129002384,
+      "xor_ratio": 0.1282375183105469,
+      "identical": false
+    },
+    "NX47_V61__NX46_V7_4": {
+      "iou": 0.0647107908372045,
+      "dice": 0.12155562129002384,
+      "xor_ratio": 0.1282375183105469,
+      "identical": false
+    },
+    "NX47_V61__CONCURRENT_0552": {
+      "iou": 0.1640488684806628,
+      "dice": 0.2818590746877874,
+      "xor_ratio": 0.15561117553710938,
+      "identical": false
+    },
+    "NX47_V61_1__NX47_V61_2": {
+      "iou": 1.0,
+      "dice": 1.0,
+      "xor_ratio": 0.0,
+      "identical": true
+    },
+    "NX47_V61_1__NX47_V102": {
+      "iou": 0.8273423833615245,
+      "dice": 0.9055143588795551,
+      "xor_ratio": 0.024238525390625,
+      "identical": false
+    },
+    "NX47_V61_1__NX47_V107": {
+      "iou": 0.8273423833615245,
+      "dice": 0.9055143588795551,
+      "xor_ratio": 0.024238525390625,
+      "identical": false
+    },
+    "NX47_V61_1__NX46_V7_3": {
+      "iou": 0.0647107908372045,
+      "dice": 0.12155562129002384,
+      "xor_ratio": 0.1282375183105469,
+      "identical": false
+    },
+    "NX47_V61_1__NX46_V7_4": {
+      "iou": 0.0647107908372045,
+      "dice": 0.12155562129002384,
+      "xor_ratio": 0.1282375183105469,
+      "identical": false
+    },
+    "NX47_V61_1__CONCURRENT_0552": {
+      "iou": 0.1640488684806628,
+      "dice": 0.2818590746877874,
+      "xor_ratio": 0.15561117553710938,
+      "identical": false
+    },
+    "NX47_V61_2__NX47_V102": {
+      "iou": 0.8273423833615245,
+      "dice": 0.9055143588795551,
+      "xor_ratio": 0.024238525390625,
+      "identical": false
+    },
+    "NX47_V61_2__NX47_V107": {
+      "iou": 0.8273423833615245,
+      "dice": 0.9055143588795551,
+      "xor_ratio": 0.024238525390625,
+      "identical": false
+    },
+    "NX47_V61_2__NX46_V7_3": {
+      "iou": 0.0647107908372045,
+      "dice": 0.12155562129002384,
+      "xor_ratio": 0.1282375183105469,
+      "identical": false
+    },
+    "NX47_V61_2__NX46_V7_4": {
+      "iou": 0.0647107908372045,
+      "dice": 0.12155562129002384,
+      "xor_ratio": 0.1282375183105469,
+      "identical": false
+    },
+    "NX47_V61_2__CONCURRENT_0552": {
+      "iou": 0.1640488684806628,
+      "dice": 0.2818590746877874,
+      "xor_ratio": 0.15561117553710938,
+      "identical": false
+    },
+    "NX47_V102__NX47_V107": {
+      "iou": 1.0,
+      "dice": 1.0,
+      "xor_ratio": 0.0,
+      "identical": true
+    },
+    "NX47_V102__NX46_V7_3": {
+      "iou": 0.06021834747901276,
+      "dice": 0.11359612408557153,
+      "xor_ratio": 0.13950643920898437,
+      "identical": false
+    },
+    "NX47_V102__NX46_V7_4": {
+      "iou": 0.06021834747901276,
+      "dice": 0.11359612408557153,
+      "xor_ratio": 0.13950643920898437,
+      "identical": false
+    },
+    "NX47_V102__CONCURRENT_0552": {
+      "iou": 0.15694949188796256,
+      "dice": 0.27131606520150725,
+      "xor_ratio": 0.16620431518554687,
+      "identical": false
+    },
+    "NX47_V107__NX46_V7_3": {
+      "iou": 0.06021834747901276,
+      "dice": 0.11359612408557153,
+      "xor_ratio": 0.13950643920898437,
+      "identical": false
+    },
+    "NX47_V107__NX46_V7_4": {
+      "iou": 0.06021834747901276,
+      "dice": 0.11359612408557153,
+      "xor_ratio": 0.13950643920898437,
+      "identical": false
+    },
+    "NX47_V107__CONCURRENT_0552": {
+      "iou": 0.15694949188796256,
+      "dice": 0.27131606520150725,
+      "xor_ratio": 0.16620431518554687,
+      "identical": false
+    },
+    "NX46_V7_3__NX46_V7_4": {
+      "iou": 1.0,
+      "dice": 1.0,
+      "xor_ratio": 0.0,
+      "identical": true
+    },
+    "NX46_V7_3__CONCURRENT_0552": {
+      "iou": 0.03851068470959317,
+      "dice": 0.07416521616310999,
+      "xor_ratio": 0.10882220458984375,
+      "identical": false
+    },
+    "NX46_V7_4__CONCURRENT_0552": {
+      "iou": 0.03851068470959317,
+      "dice": 0.07416521616310999,
+      "xor_ratio": 0.10882220458984375,
+      "identical": false
+    }
+  },
+  "observed_public_scores": {
+    "NX47_V61_1": 0.387,
+    "NX46_V7_3": 0.303
+  },
+  "new_observed_scores": {
+    "NX47_V61_2": 0.387,
+    "NX46_V7_4": 0.303
+  },
+  "remote_recheck_status": "updated_remote_artifacts_distinct_between_v61_2_and_v7_4"
+}

@@ -1,0 +1,57 @@
+gcc -Wall -Wextra -std=c99-g-02-fPIC -c src/crypto/crypto_validator.c -o obj/crypto/cryp to_validator.o
+
+gcc -Wall -Wextra -std=c99-g-02-fPIC -c src/persistence/data_persistence.c -o obj/persis tence/data_persistence.o
+
+gcc -Wall -Wextra -std=c99-g-02-fPIC -c src/persistence/transaction_wal_extension.c -o o
+
+bj/persistence/transaction_wal_extension.o
+
+gcc -Wall -Wextra -std=c99-g-02-fPIC -c src/persistence/recovery_manager_extension.c -0
+
+obj/persistence/recovery_manager_extension.o
+
+gcc -Wall -Wextra -std=c99-g-02-fPIC -c src/optimization/memory_optimizer.c -o obj/optim ization/memory_optimizer.o
+
+gcc -Wall -Wextra -std=c99-g-02-fPIC -c src/optimization/pareto_optimizer.c -o obj/optim ization/pareto_optimizer.o
+
+gcc -Wall -Wextra -std=c99-g-02-fPIC -c src/optimization/pareto_inverse_optimizer.c-00 bj/optimization/pareto_inverse_optimizer.o
+
+gcc -Wall -Wextra -std=c99-g-02-fPIC -c src/optimization/simd_optimizer.c -o obj/optimiz ation/simd_optimizer.o
+
+gcc -Wall -Wextra -std=c99-g-02-fPIC -c src/optimization/zero_copy_allocator.c -o obj/op
+
+timization/zero_copy_allocator.o
+
+src/optimization/zero_copy_allocator.c: In function 'zero_copy_prefault_pages':
+
+src/optimization/zero_copy_allocator.c:312:24: error: implicit declaration of function 'get pagesize' [-Wimplicit-function-declaration]
+
+312 |
+
+size_t page_size = getpagesize();
+
+src/optimization/zero_copy_allocator.c: In function 'zero_copy_advise_sequential':
+
+src/optimization/zero_copy_allocator.c:330:9: error: implicit declaration of function 'madv
+
+ise' [-Wimplicit-function-declaration]
+
+330 |
+
+if (madvise(pool->memory_region, pool->total_size, MADV_SEQUENTIAL) == 0) {
+
+i
+
+src/optimization/zero_copy_allocator.c:330:56: error: 'MADV_SEQUENTIAL' undeclared (first u se in this function); did you mean 'POSIX_MADV_SEQUENTIAL'?
+
+330 | if
+
+(madvise (pool->memory_region, pool->total_size, MADV_SEQUENTIAL) == 0) {
+
+POSIX_MADV_SEQUENTIAL
+
+src/optimization/zero_copy_allocator.c:330:56: note: each undeclared identifier is reported only once for each function it appears in
+
+make: *** [Makefile: 141: obj/optimization/zero_copy_allocator.o] Error 1
+
+~/workspace$

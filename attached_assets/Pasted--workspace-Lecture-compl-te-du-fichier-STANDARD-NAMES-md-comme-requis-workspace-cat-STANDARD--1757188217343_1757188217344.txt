@@ -1,0 +1,161 @@
+~/workspace$ # Lecture complète du fichier STANDARD_NAMES.md comme requis
+~/workspace$ cat STANDARD_NAMES.md
+# FICHIER DES NOMS STANDARDISÉS - SYSTÈME LUM/VORAX
+
+## Historique des noms normalisés
+
+2025-01-06 15:26 - memory_optimizer_t + Optimiseur de mémoire avec pools dédiés pour LUM, groupes et zones
+2025-01-07 15:30 - performance_metrics_validator_t + Validateur de cohérence des métriques de performance réalistes
+2025-01-07 16:15 - bytes_to_hex_string + Fonction de conversion bytes vers chaîne hexadécimale
+2025-01-07 16:16 - memory_footprint_impl_t + Structure interne d'implémentation pour empreinte mémoire étendue
+2025-01-07 16:17 - memory_footprint_update + Fonction de mise à jour des métriques mémoire système
+2025-01-27 20:30 - LUM_STRUCTURE_GROUP + Type de structure pour les groupes de LUMs
+2025-01-27 20:31 - LUM_STRUCTURE_MAX + Valeur maximale pour validation des types de structure
+
+## STRUCTURES DE DONNÉES
+
+### Types de base LUM
+- `lum_t` : Structure principale LUM (presence, position_x, position_y, structure_type)
+- `lum_group_t` : Groupe de LUMs (lums[], count, capacity)
+- `lum_zone_t` : Zone spatiale contenant des LUMs
+- `lum_memory_t` : Mémoire pour stockage LUMs
+- `lum_structure_e` : Énumération des types de structure (LINEAR, CIRCULAR, BINARY, GROUP)
+
+### Types VORAX Operations
+- `vorax_operation_e` : Types d'opérations (FUSE, SPLIT, CYCLE, MOVE, etc.)
+- `vorax_result_t` : Résultat d'opération VORAX
+- `vorax_ast_node_t` : Nœud AST du parser
+- `vorax_execution_context_t` : Contexte d'exécution
+
+### Types Conversion Binaire
+- `binary_lum_result_t` : Résultat de conversion binaire
+- `conversion_config_t` : Configuration de conversion
+
+### Types Logging
+- `lum_logger_t` : Logger principal
+- `lum_log_level_e` : Niveaux de log (DEBUG, INFO, WARNING, ERROR)
+
+### Types Processing Parallèle
+- `parallel_processor_t` : Processeur parallèle principal
+- `parallel_task_t` : Tâche parallèle
+- `parallel_task_type_e` : Types de tâches parallèles
+- `task_queue_t` : Queue de tâches
+- `worker_thread_t` : Information thread worker
+- `thread_pool_t` : Pool de threads (compatibilité)
+- `parallel_process_result_t` : Résultat de traitement parallèle
+- `work_distribution_t` : Distribution de travail
+
+### Types Modules Avancés
+- `memory_pool_t` : Pool mémoire optimisé
+- `memory_stats_t` : Statistiques mémoire
+- `metrics_collector_t` : Collecteur de métriques
+- `perf_timer_t` : Timer de performance
+- `memory_usage_t` : Usage mémoire
+- `cpu_stats_t` : Statistiques CPU
+- `throughput_stats_t` : Statistiques débit
+- `performance_profile_t` : Profil de performance
+- `hash_calculator_t` : Calculateur de hash
+- `hash_result_t` : Résultat de hash
+- `integrity_result_t` : Résultat intégrité
+- `signature_result_t` : Résultat signature
+- `storage_backend_t` : Backend de stockage
+- `serialized_data_t` : Données sérialisées
+- `transaction_t` : Transaction de données
+
+### Types Crypto et Validation
+- `crypto_context_t` : Contexte cryptographique
+- `sha256_context_t` : Contexte SHA-256
+- `test_vector_t` : Vecteur de test crypto
+- `validation_result_t` : Résultat de validation
+- `crypto_operation_e` : Types d'opérations crypto (HASH, SIGN, VERIFY)
+
+### Types Métriques de Performance
+- `performance_counter_t` : Compteur de performance
+- `benchmark_result_t` : Résultat de benchmark
+- `execution_stats_t` : Statistiques d'exécution
+- `memory_footprint_t` : Empreinte mémoire
+- `latency_measurement_t` : Mesure de latence
+
+### Types Persistance de Données
+- `persistence_config_t` : Configuration de persistance
+- `storage_format_e` : Format de stockage (BINARY, JSON, CSV)
+- `data_stream_t` : Flux de données
+- `checkpoint_t` : Point de sauvegarde
+
+## CONSTANTES ET ENUMS
+
+### Constantes système
+- `MAX_WORKER_THREADS` : 16
+- `DEFAULT_WORKER_COUNT` : 4
+- `LUM_MAX_GROUPS` : 1024
+- `VORAX_MAX_ZONES` : 256
+- `VORAX_MAX_MEMORIES` : 128
+
+### Constantes Crypto
+- `SHA256_BLOCK_SIZE` : 64
+- `SHA256_DIGEST_SIZE` : 32
+- `MAX_TEST_VECTORS` : 256
+- `CRYPTO_BUFFER_SIZE` : 4096
+
+### Constantes Performance
+- `BENCHMARK_ITERATIONS` : 1000
+- `PERFORMANCE_SAMPLE_SIZE` : 100
+- `METRICS_HISTORY_SIZE` : 1024
+- `PROFILER_MAX_ENTRIES` : 512
+
+### Types de hachage
+- `HASH_SHA256` : Algorithme SHA-256
+- `HASH_SHA512` : Algorithme SHA-512
+- `HASH_MD5` : Algorithme MD5 (legacy)
+
+## FONCTIONS PRINCIPALES
+
+### LUM Core
+- `lum_create()`, `lum_destroy()`, `lum_print()`
+- `lum_group_*()` : Gestion groupes
+- `lum_zone_*()` : Gestion zones
+- `lum_memory_*()` : Gestion mémoire
+
+### VORAX Operations
+- `vorax_fuse()`, `vorax_split()`, `vorax_cycle()`
+- `vorax_move()`, `vorax_store()`, `vorax_retrieve()`
+- `vorax_compress()`, `vorax_expand()`
+
+### Processing Parallèle
+- `parallel_processor_*()` : Gestion processeur
+- `thread_pool_*()` : Gestion pool threads
+- `parallel_process_lums()` : Traitement haut niveau
+
+### Modules Avancés
+- `memory_pool_*()` : Optimisation mémoire
+- `metrics_collector_*()` : Collecte métriques
+- `hash_calculator_*()` : Validation crypto
+- `storage_backend_*()` : Persistance données
+
+### Crypto et Validation
+- `crypto_validate_*()` : Validation cryptographique
+- `sha256_*()` : Fonctions SHA-256
+- `bytes_to_hex_string()` : Conversion bytes vers hexadécimal
+- `test_vector_*()` : Tests vectoriels
+- `crypto_benchmark_*()` : Benchmarks crypto
+
+### Performance et Métriques
+- `performance_*()` : Mesures de performance
+- `benchmark_*()` : Tests de performance
+- `metrics_*()` : Collecte et analyse métriques
+- `memory_footprint_update()` : Mise à jour métriques mémoire
+- `profiler_*()` : Profilage système
+
+### Persistance et I/O
+- `persistence_*()` : Sauvegarde/chargement
+- `data_stream_*()` : Gestion flux données
+- `checkpoint_*()` : Points de sauvegarde
+- `export_*()` : Exportation données
+
+## CONVENTIONS DE NOMMAGE
+
+- Structures : `nom_t`
+- Énumérations : `nom_e`  
+- Fonctions : `module_action()`
+- Constantes : `MODULE_CONSTANT`
+~/workspace$ 

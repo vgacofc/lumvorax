@@ -1,0 +1,15 @@
+{
+  "id": "gabrielchavesreinann/vsd-v5-notebook",
+  "title": "vsd-v5-notebook",
+  "code_file": "nx46-vx-unified-kaggle-v6.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": "true",
+  "enable_gpu": "true",
+  "enable_tpu": "false",
+  "enable_internet": "true",
+  "dataset_sources": ["gabrielchavesreinann/vsd-dataset-v5"],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": []
+}

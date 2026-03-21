@@ -1,0 +1,7 @@
+   18 ./tests/test_manifest_integration.py
+   45 ./tests/test_manifest_tools.py
+   57 ./tools/build_manifest_v5.py
+   93 ./tools/generate_v5_post_run_report.py
+   73 ./tools/stress_harness_v5.py
+   48 ./tools/verify_manifest_v5.py
+  334 total

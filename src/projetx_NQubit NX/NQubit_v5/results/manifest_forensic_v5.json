@@ -1,0 +1,73 @@
+{
+  "version": "v5",
+  "generated_at_utc": "2026-02-28T20:50:01.210891+00:00",
+  "source_of_truth": "manifest_forensic_v5.json (signed)",
+  "hash_algo": "sha256",
+  "artifacts": [
+    {
+      "file": "/workspace/Lumvorax/src/projetx_NQubit NX/NQubit_v4/results/hardware_noise_forensic_v4.log",
+      "sha256": "967ae97633a055ef253148075cdebeb4a1c12df7fd775e3386b66625f95c0837",
+      "bytes": 202
+    },
+    {
+      "file": "/workspace/Lumvorax/src/projetx_NQubit NX/NQubit_v4/results/hardware_noise_samples_v4.csv",
+      "sha256": "75659f36604aa62eaa943bd67c682a04da57f1ecb6521b6d7c3826add39a5f25",
+      "bytes": 418938
+    },
+    {
+      "file": "/workspace/Lumvorax/src/projetx_NQubit NX/NQubit_v4/results/manifest_forensic_v3.json",
+      "sha256": "7e365406258d951732f39af9ec1083d29b95be6baf70c9183cf1b2502079eb4a",
+      "bytes": 1614
+    },
+    {
+      "file": "/workspace/Lumvorax/src/projetx_NQubit NX/NQubit_v4/results/manifest_forensic_v4.json",
+      "sha256": "f314bee72e00f37b33e21d4567deafbbff2de23ada014363cfba28fc2cd499a0",
+      "bytes": 2224
+    },
+    {
+      "file": "/workspace/Lumvorax/src/projetx_NQubit NX/NQubit_v4/results/nqbit_benchmark.csv",
+      "sha256": "c92365749035b6e61ebe2ade16f8ff541a1f7d257713409a23f70e78025aecde",
+      "bytes": 35547
+    },
+    {
+      "file": "/workspace/Lumvorax/src/projetx_NQubit NX/NQubit_v4/results/nqbit_forensic_ns.log",
+      "sha256": "a857765dd270614913993b723a071df046e3c398260066cb2f2ed981d5416d02",
+      "bytes": 163706
+    },
+    {
+      "file": "/workspace/Lumvorax/src/projetx_NQubit NX/NQubit_v4/results/nqbit_stats_v2.csv",
+      "sha256": "423322642a41c6cb2a9086eb0ed84afa6a91d73010530b28620473397ab32fde",
+      "bytes": 347
+    },
+    {
+      "file": "/workspace/Lumvorax/src/projetx_NQubit NX/NQubit_v4/results/phase_p0_p1_forensic.log",
+      "sha256": "036ffd05533d2dc01c9e8de2eaa37ba17ab9e8e715cef38472268149cba036cd",
+      "bytes": 1491
+    },
+    {
+      "file": "/workspace/Lumvorax/src/projetx_NQubit NX/NQubit_v4/results/phase_p0_p1_metrics.csv",
+      "sha256": "1a078f05525e53b313b6ccaf43676a0930a59e1f3b3121616ca3b5a7039cdf55",
+      "bytes": 1037
+    },
+    {
+      "file": "/workspace/Lumvorax/src/projetx_NQubit NX/NQubit_v4/results/rapport_final.md",
+      "sha256": "ff60646cdfae81969e6c4439262df4bf49b8d49afe1db36a8367de83d44a78d5",
+      "bytes": 780
+    },
+    {
+      "file": "/workspace/Lumvorax/src/projetx_NQubit NX/NQubit_v4/results/replit_env_info.txt",
+      "sha256": "b9424b6f4c4b3c116978336293a77d4b8702d50ee53b7b957659d0bc061f9de2",
+      "bytes": 5271
+    },
+    {
+      "file": "/workspace/Lumvorax/src/projetx_NQubit NX/NQubit_v4/results/sha256_replit_v4.txt",
+      "sha256": "2bc1e3ba63326527de6f1123d52dd741f61efbb34a35c26331819e0f7823589b",
+      "bytes": 1081
+    },
+    {
+      "file": "/workspace/Lumvorax/src/projetx_NQubit NX/NQubit_v4/results/test_extended_forensic.log",
+      "sha256": "e7174fb404781b8887f203a2b151b98539d35f0d8c05048884647c4bf39a983b",
+      "bytes": 269
+    }
+  ]
+}

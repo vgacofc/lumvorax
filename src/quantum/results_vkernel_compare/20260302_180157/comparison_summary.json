@@ -1,0 +1,135 @@
+{
+  "run_id": "20260302_180157",
+  "paths": {
+    "run_dir": "/home/runner/workspace/src/quantum/results_vkernel_compare/20260302_180157",
+    "nx_log": "/home/runner/workspace/src/quantum/results_vkernel_compare/20260302_180157/nqubit_forensic_ns.jsonl",
+    "legacy_metrics_log": "logs_AIMO3/v46/hardware_metrics.log"
+  },
+  "commands": {
+    "compile_baseline": {
+      "cmd": "gcc /home/runner/workspace/src/quantum/v_kernel_quantum.c -O2 -o /home/runner/workspace/src/quantum/v_kernel_quantum_bin",
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "compile_nx": {
+      "cmd": "gcc /home/runner/workspace/src/quantum/v_kernel_quantum_nx.c -O2 -lm -o /home/runner/workspace/src/quantum/v_kernel_quantum_nx_bin",
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "run_baseline": {
+      "cmd": "/home/runner/workspace/src/quantum/v_kernel_quantum_bin",
+      "rc": 0,
+      "stdout": "[V46] Initialisation du Kernel Quantique en C...\n[V46] Simulation termin\u00e9e. M\u00e9triques enregistr\u00e9es.\n",
+      "stderr": ""
+    },
+    "run_nx": {
+      "cmd": "/home/runner/workspace/src/quantum/v_kernel_quantum_nx_bin /home/runner/workspace/src/quantum/results_vkernel_compare/20260302_180157/nqubit_forensic_ns.jsonl",
+      "rc": 0,
+      "stdout": "nqubit_avg_score=0.960970600\nbaseline_qubit_avg_score=0.940176696\nnqubit_win_rate=0.652777778\nnqubits_simulated=504000\n",
+      "stderr": ""
+    }
+  },
+  "system_metrics": {
+    "timestamp_utc": "2026-03-02T18:02:00Z",
+    "platform": "Linux-6.14.11-x86_64-with-glibc2.40",
+    "python": "3.12.11",
+    "cpu_count": 8,
+    "loadavg": [
+      1.517578125,
+      1.087890625,
+      1.0078125
+    ],
+    "meminfo": {
+      "MemTotal": "65849792 kB",
+      "MemFree": "10339968 kB",
+      "MemAvailable": "25137104 kB",
+      "Buffers": "1302240 kB",
+      "Cached": "13398052 kB",
+      "SwapCached": "0 kB",
+      "Active": "35509076 kB",
+      "Inactive": "17159636 kB",
+      "Active(anon)": "34026968 kB",
+      "Inactive(anon)": "4215512 kB",
+      "Active(file)": "1482108 kB",
+      "Inactive(file)": "12944124 kB",
+      "Unevictable": "0 kB",
+      "Mlocked": "0 kB",
+      "SwapTotal": "0 kB",
+      "SwapFree": "0 kB",
+      "Zswap": "0 kB",
+      "Zswapped": "0 kB",
+      "Dirty": "3244 kB",
+      "Writeback": "0 kB",
+      "AnonPages": "37968848 kB",
+      "Mapped": "1649900 kB",
+      "Shmem": "274880 kB",
+      "KReclaimable": "1097704 kB",
+      "Slab": "1807544 kB",
+      "SReclaimable": "1097704 kB",
+      "SUnreclaim": "709840 kB",
+      "KernelStack": "110016 kB",
+      "PageTables": "497348 kB",
+      "SecPageTables": "0 kB",
+      "NFS_Unstable": "0 kB",
+      "Bounce": "0 kB",
+      "WritebackTmp": "0 kB",
+      "CommitLimit": "32924896 kB",
+      "Committed_AS": "64002776 kB",
+      "VmallocTotal": "34359738367 kB",
+      "VmallocUsed": "156772 kB",
+      "VmallocChunk": "0 kB",
+      "Percpu": "46592 kB",
+      "HardwareCorrupted": "0 kB",
+      "AnonHugePages": "16384 kB",
+      "ShmemHugePages": "0 kB",
+      "ShmemPmdMapped": "0 kB",
+      "FileHugePages": "0 kB",
+      "FilePmdMapped": "0 kB",
+      "CmaTotal": "0 kB",
+      "CmaFree": "0 kB",
+      "Unaccepted": "0 kB",
+      "HugePages_Total": "0",
+      "HugePages_Free": "0",
+      "HugePages_Rsvd": "0",
+      "HugePages_Surp": "0",
+      "Hugepagesize": "2048 kB",
+      "Hugetlb": "0 kB",
+      "DirectMap4k": "180176 kB",
+      "DirectMap2M": "10305536 kB",
+      "DirectMap1G": "58720256 kB"
+    }
+  },
+  "hardware_entropy": [
+    {
+      "path": "/dev/hwrng",
+      "ok": false,
+      "size": 0,
+      "bytes_per_sec": null,
+      "error": "[Errno 2] No such file or directory: '/dev/hwrng'"
+    },
+    {
+      "path": "/dev/random",
+      "ok": true,
+      "size": 4096,
+      "bytes_per_sec": 162346450.2723833,
+      "error": null
+    },
+    {
+      "path": "/dev/urandom",
+      "ok": true,
+      "size": 4096,
+      "bytes_per_sec": 204800005.1736833,
+      "error": null
+    }
+  ],
+  "comparison_metrics": {
+    "baseline_qubits_simulated": 4.0,
+    "nqubits_simulated": 504000.0,
+    "nqubit_avg_score": 0.9609706,
+    "baseline_qubit_avg_score": 0.940176696,
+    "nqubit_win_rate": 0.652777778,
+    "simulated_scale_ratio_nqubit_vs_qubit": 126000.0
+  }
+}

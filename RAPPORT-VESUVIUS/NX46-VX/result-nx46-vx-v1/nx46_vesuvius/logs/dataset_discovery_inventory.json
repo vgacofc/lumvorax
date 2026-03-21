@@ -1,0 +1,27 @@
+{
+  "attempts": [
+    {
+      "root": "/kaggle/input/competitions/vesuvius-challenge-surface-detection",
+      "mode": "competition_test_images",
+      "train": 786,
+      "test": 1
+    }
+  ],
+  "inventory": {
+    "root": "/kaggle/input/competitions/vesuvius-challenge-surface-detection",
+    "exists": true,
+    "total_assets": 1615,
+    "folders": [
+      ".",
+      "deprecated_train_images",
+      "deprecated_train_labels",
+      "test_images",
+      "train_images",
+      "train_labels"
+    ],
+    "suffix_stats": {
+      ".csv": 2,
+      ".tif": 1613
+    }
+  }
+}

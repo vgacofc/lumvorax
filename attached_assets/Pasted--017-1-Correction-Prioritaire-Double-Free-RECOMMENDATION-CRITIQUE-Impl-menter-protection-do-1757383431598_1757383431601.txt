@@ -1,0 +1,75 @@
+### 017.1 Correction Prioritaire Double-Free
+
+**RECOMMENDATION CRITIQUE**:
+Implémenter protection double-free systématique dans tous les modules de destruction :
+
+```c
+// Pattern recommandé
+void safe_destroy(void** ptr) {
+    if (ptr && *ptr) {
+        actual_destroy(*ptr);
+        *ptr = NULL;  // Protection double-free
+    }
+}
+```
+
+### 017.2 Optimisation Memory Tracking
+
+**SUGGESTION PERFORMANCE**:
+- Activation/désactivation runtime du tracking
+- Mode release sans overhead tracking  
+- Statistiques mémoire export JSON
+
+### 017.3 Extension SIMD Optimizations
+
+**SUGGESTION TECHNIQUE**:
+- Tests runtime CPU capabilities réels
+- Fallback gracieux si SIMD indisponible
+- Benchmarks comparatifs SIMD vs scalar
+
+### 017.4 Robustesse Parser VORAX
+
+**SUGGESTION FONCTIONNELLE**:
+- Gestion erreurs syntaxiques robuste
+- Messages erreur contextualisés
+- Recovery automatique parsing partiel
+
+---
+
+## 018. PROMPT POUR PROCHAIN AGENT REPLIT
+
+### 018.1 Mission Prioritaire
+
+**AGENT EXPERT SYSTÈME** - Mission critique corruption mémoire:
+
+> "Analyser et corriger la corruption mémoire double-free détectée en fin d'exécution. Priorités absolues :
+> 
+> 1. **DIAGNOSTIC PRÉCIS**: Identifier source exacte double-free avec valgrind/gdb
+> 2. **PROTECTION VORAX_RESULT**: Implémenter destruction sécurisée pour tous vorax_result_t
+> 3. **SAFETY GROUPS**: Vérifier destruction atomique lum_group_t  
+> 4. **MEMORY OWNERSHIP**: Clarifier ownership chains entre modules
+> 5. **TESTS REGRESSION**: Valider correction avec tests stress prolongés
+>
+> **CONTRAINTES ABSOLUES**:
+> - Conserver 100% fonctionnalités existantes
+> - Maintenir performance Pareto optimisée  
+> - Respecter nomenclature STANDARD_NAMES.md
+> - Générer rapport 1500+ lignes avec preuves réelles
+> - Tests minimum 1M LUMs sans corruption"
+
+### 018.2 Contexte Technique Fourni
+
+**ÉTAT SYSTÈME ACTUEL**:
+- ✅ Compilation: 100% réussie (16 modules)
+- ✅ Fonctionnalités: Parser + Pareto + SIMD opérationnels
+- ✅ Performance: Gains ×3 à ×266 démontrés
+- ❌ Stabilité: Double-free en fin exécution
+- ⚠️ Protection: Timeout préventif activé
+
+### 018.3 Ressources Disponibles
+
+**OUTILS DEBUGGING**:
+- Memory tracker intégré actif
+- Logs détaillés horodatés
+- Compilation debug symbols (-g)
+- Framework tests stress existant

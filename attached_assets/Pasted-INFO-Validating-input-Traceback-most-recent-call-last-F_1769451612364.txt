@@ -1,0 +1,27 @@
+INFO - Validating input...
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/bin/aristotle", line 10, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.12/site-packages/aristotlelib/cli/controller.py", line 42, in main
+    return args.func(args)
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.12/site-packages/aristotlelib/cli/api_action.py", line 82, in run
+    asyncio.run(self.run_action(args))
+  File "/nix/store/h097imm3w6dpx10qynrd2sz9fks2wbq8-python3-3.12.11/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/nix/store/h097imm3w6dpx10qynrd2sz9fks2wbq8-python3-3.12.11/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/h097imm3w6dpx10qynrd2sz9fks2wbq8-python3-3.12.11/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.12/site-packages/aristotlelib/cli/prove_from_file.py", line 114, in run_action
+    await Project.prove_from_file(input_file_path=args.input_file, **kwargs)
+  File "/home/runner/workspace/.pythonlibs/lib/python3.12/site-packages/aristotlelib/project.py", line 429, in prove_from_file
+    project_root = local_file_utils.find_lean_project_root(input_file_path)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.12/site-packages/aristotlelib/local_file_utils.py", line 76, in find_lean_project_root
+    raise LeanProjectError(
+aristotlelib.local_file_utils.LeanProjectError: No Lean project found. Could not find any of ['lakefile.lean', 'lakefile.toml', 'lean-toolchain'] in the directory tree starting from proofs/lean/collatz_proof.lean. Please ensure you're running this from within a Lean project.

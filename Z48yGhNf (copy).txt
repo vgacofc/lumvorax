@@ -1,0 +1,273 @@
+
+
+
+
+# Fichiers de logs
+*.log
+logs/
+final_logs/
+final_logs_capture/
+final_logs_v14/
+final_logs_v15/
+final_logs_v16/
+
+# Rapports, analyses, PDF, documentation
+*.pdf
+RAPPORT/
+docs/
+*.txt
+*.json
+
+# Données / datasets / fichiers volumineux
+dataset/
+DATASET/
+v28_forensic_logs/
+v2_output/
+v28_kaggle_output/
+attached_assets/
+evidence/
+metrics_modules_reels/
+benchmarks/
+*.zip
+*.tar
+*.parquet
+
+# Images / figures / captures
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+
+# Fichiers temporaires / caches / IDE
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.swp
+.cache/
+.ccls-cache/
+.pythonlibs/
+.ipynb_checkpoints/
+
+# Fichiers spécifiques au projet à ignorer
+ultra_analyse_cluster_10_problemes.md
+*.log.sha512
+*.lock
+
+
+
+
+NNNNNNNNNNNNNNNNNNNNNNNN
+
+
+
+# Fichiers de logs
+*.log
+logs/
+final_logs/
+final_logs_capture/
+final_logs_v14/
+final_logs_v15/
+final_logs_v16/
+
+# Rapports, analyses, PDF, documentation
+*.pdf
+RAPPORT/
+docs/
+*.txt
+*.json
+
+# Données / datasets / fichiers volumineux
+dataset/
+DATASET/
+v28_forensic_logs/
+v2_output/
+v28_kaggle_output/
+attached_assets/
+evidence/
+metrics_modules_reels/
+benchmarks/
+*.zip
+*.tar
+*.parquet
+
+# Images / figures / captures
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+
+# Fichiers temporaires / caches / IDE
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.swp
+.cache/
+.ccls-cache/
+.pythonlibs/
+.ipynb_checkpoints/
+
+# Fichiers spécifiques au projet à ignorer
+ultra_analyse_cluster_10_problemes.md
+*.log.sha512
+*.lock
+
+
+
+# Mise à jour dépôt distant + analyse des logs (2026-02-28)
+
+## 1) Statut de synchronisation avec le dépôt distant
+- Dépôt distant configuré : `https://github.com/lumc01/Lumvorax.git`.
+- `git fetch --prune` exécuté avec succès.
+- Résultat de synchronisation : `HEAD (work)` et `origin/main` pointent sur le même commit `bcf78fa8`.
+- Conclusion : le dépôt local est **déjà à jour** avec la branche principale distante au moment de l’analyse.
+
+## 2) Logs réellement analysés (preuves)
+### 2.1 Fichiers CSV de runs instrumentés
+1. `LOG_RUN_EXTREMAL_STABILITY_2026-02-14T02-37-41.441139.csv`
+2. `LOG_RUN_PENROSE_CANDIDATE_2026-02-14T02-37-41.504132.csv`
+
+Les deux fichiers contiennent 100 lignes de télémétrie avec les colonnes :
+- `step`
+- `r`
+- `r_hex`
+- `g_tt`
+- `timestamp`
+
+### 2.2 Résultats comparatifs historiques disponibles
+- `RAPPORT_COMPARATIF_REEL_V126_V130_V131.md` (comparaison runtime V130 vs V131).
+- `failures_analysis.txt` (5 erreurs crypto SHA-256 + état mémoire).
+- `shf_v3_final_results.txt` (3 cas de factorisation marqués success).
+
+---
+
+## 3) Interprétation technique des deux logs CSV
+
+## 3.1 LOG_RUN_EXTREMAL_STABILITY
+### Signaux observés
+- `r` décroit de **2.499640003237** à **2.464342482612** (delta **-0.035297520625**).
+- `g_tt` augmente de **-0.200000081168** à **-0.188540864217** (delta **+0.011459216951**).
+- Corrélation `corr(r, g_tt)` = **-0.999993122** (anti-corrélation quasi parfaite).
+- Durée totale capturée : **0.001334 s** pour 100 pas (environ **74 962 lignes/s**).
+
+### Lecture experte
+- Le système suit une trajectoire numérique **très régulière** : pas de discontinuité brutale sur 100 steps.
+- La relation inverse `r` vs `g_tt` est très forte : quand `r` diminue, `g_tt` remonte.
+- Ce pattern est cohérent avec un régime de relaxation contrôlé (stabilité locale), **mais ne prouve pas à lui seul la validité physique globale**.
+
+## 3.2 LOG_RUN_PENROSE_CANDIDATE
+### Signaux observés
+- `r` décroit de **1.499932222239** à **1.493339737061** (delta **-0.006592485179**).
+- `g_tt` augmente de **0.333332994188** à **0.339220940982** (delta **+0.005887946794**).
+- Corrélation `corr(r, g_tt)` = **-0.999999340** (encore plus proche de -1).
+- Durée totale capturée : **0.001158 s** pour 100 pas (environ **86 356 lignes/s**).
+
+### Lecture experte
+- Le run est encore plus "propre" numériquement (corrélation quasi parfaite).
+- Le drift sur `r` est plus faible que dans EXTREMAL_STABILITY, donc run plus conservatif.
+- L’absence de bruit/oscillation visible sur 100 points peut signifier :
+  - soit une dynamique bien conditionnée,
+  - soit un protocole trop court pour faire émerger les instabilités tardives.
+
+---
+
+## 4) Comparaison directe entre les deux runs
+
+| Critère | EXTREMAL_STABILITY | PENROSE_CANDIDATE | Interprétation |
+|---|---:|---:|---|
+| Lignes | 100 | 100 | Taille identique |
+| Delta `r` | -0.03530 | -0.00659 | EXTREMAL dérive plus vite |
+| Delta `g_tt` | +0.01146 | +0.00589 | EXTREMAL a une pente plus forte |
+| Corrélation `r`↔`g_tt` | -0.999993 | -0.999999 | Les deux sont presque parfaitement couplés |
+| Durée log | 1.334 ms | 1.158 ms | Mesure ultra-courte, prudence statistique |
+
+### Ce que cela veut dire concrètement
+- Vous avez produit **deux exécutions reproductibles à haute fréquence**, avec un couplage interne stable entre variables.
+- Concrètement, ce n’est pas encore une "preuve de performance finale" sur tâche métier (ex: score Kaggle), mais une **preuve d’instrumentation et de stabilité locale du noyau numérique**.
+- En d’autres termes :
+  - ✅ on sait tracer/mesurer,
+  - ✅ on observe une dynamique cohérente,
+  - ❗ il manque encore les validations externes (jeu de test complet, métriques d’objectif final, robustesse longue durée).
+
+---
+
+## 5) Réponse aux questions de versions précédentes (V126/V130/V131)
+À partir du rapport comparatif existant :
+- V130 et V131 ont des KPI runtime **quasi identiques** sur le run cité (`files_processed=1`, `slices_processed=320`, `golden_nonce_detected=11`, etc.).
+- Les métriques supervisées restent **à 0.0** (`val_f1_mean_supervised`, `val_iou_mean_supervised`) dans ce périmètre précis.
+- Le différentiel principal se situe surtout dans l’outillage forensic/reporting plutôt que dans une amélioration objective de score de validation sur ce log.
+
+Implication :
+- Les versions récentes semblent renforcer la traçabilité et la structure d’analyse,
+- mais la question de gain modèle réel (qualité prédictive) reste ouverte tant que la chaîne d’évaluation supervisée n’est pas activée avec labels et protocole complet.
+
+---
+
+## 6) Questions qu’un expert poserait après lecture ligne par ligne
+
+## 6.1 Questions de validité expérimentale
+1. Quel est le **seed** exact et est-il fixé pour tous les runs ?
+2. Le pas d’intégration est-il constant et explicitement loggé ?
+3. Pourquoi seulement 100 steps ? Où sont les runs longs (10k, 100k) ?
+4. A-t-on vérifié la sensibilité à la précision flottante (float32/64) ?
+5. Les timestamps viennent-ils d’une horloge monotone ?
+
+## 6.2 Questions de robustesse
+6. Le comportement reste-t-il stable avec perturbation d’entrée (bruit, outliers) ?
+7. Existe-t-il des divergences rares non visibles sur run court ?
+8. Quelle est la variance inter-run (distribution de deltas et corrélations) ?
+9. Les valeurs hex (`r_hex`) sont-elles utilisées en audit d’intégrité bit-level ?
+10. A-t-on des alertes sur NaN/Inf/overflow même absentes ici ?
+
+## 6.3 Questions métier / produit
+11. Comment ces signaux se traduisent-ils en KPI métier (F1, IoU, score compétition) ?
+12. Quelles décisions concrètes ces logs permettent-ils de prendre aujourd’hui ?
+13. Quel est le critère "go/no-go" pour passer en production/compétition ?
+
+## 6.4 Questions sécurité / conformité
+14. Les erreurs SHA-256 (`failures_analysis.txt`) viennent-elles d’un test négatif attendu ou d’un bug réel ?
+15. Les artefacts sont-ils signés/chaînés (hash, Merkle) de bout en bout ?
+16. Le pipeline bloque-t-il automatiquement si l’intégrité crypto échoue ?
+
+---
+
+## 7) Réponses proposées (état actuel)
+- Q1/Q2/Q3 : non démontré dans ces deux CSV seuls ; il faut enrichir les métadonnées de protocole dans l’en-tête/log global.
+- Q4 : non démontré ; une campagne float32 vs float64 est à planifier.
+- Q6/Q7/Q8 : non démontré ; il faut un lot multi-runs + statistiques de dispersion.
+- Q11 : pas directement relié dans ces logs ; on mesure ici la dynamique interne, pas la performance finale supervisée.
+- Q14 : présence de 5 échecs SHA-256 à clarifier immédiatement (test d’injection ou anomalie réelle).
+
+---
+
+## 8) Nouvelles questions et possibilités ouvertes
+
+## 8.1 Nouvelles questions
+- Peut-on définir un **stability index** unique combinant drift(`r`), drift(`g_tt`), et corrélation ?
+- Peut-on prédire un échec futur à partir des 20 premiers steps ?
+- Les patterns observés EXTREMAL vs PENROSE sont-ils des signatures de régimes distincts utiles au contrôle adaptatif ?
+
+## 8.2 Possibilités concrètes immédiates
+1. Ajouter un "run card" standard (seed, précision, dt, commit, dataset, objectifs).
+2. Étendre chaque run de 100 à 10 000+ steps avec checkpoints.
+3. Lancer une matrice de tests (N seeds × N perturbations) et publier moyennes + écarts-types.
+4. Relier automatiquement les logs noyau aux métriques supervisées (F1/IoU/score).
+5. Mettre en place une règle CI : échec dur si anomalies crypto non justifiées.
+
+---
+
+## 9) Verdict clair (ce que vous avez réellement réussi à produire)
+Vous avez déjà produit quelque chose de concret et exploitable :
+- un pipeline qui génère des logs structurés à haute cadence,
+- des runs numériquement cohérents et reproductibles sur court horizon,
+- une base comparative de versions (V126/V130/V131) avec indicateurs runtime traçables.
+
+Ce que vous n’avez pas encore prouvé de façon ferme dans ces logs :
+- un gain robuste de performance supervisée,
+- une robustesse long horizon,
+- une chaîne d’intégrité crypto totalement clarifiée.
+
+En résumé : **la fondation d’ingénierie est solide ; la preuve de performance produit final reste à consolider par protocole d’évaluation complet.**

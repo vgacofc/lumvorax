@@ -1,0 +1,14 @@
+[
+    {
+        "timestamp_ns": 1770686986969592707,
+        "event": "INFERENCE_START",
+        "details": "Starting competitive inference",
+        "signature": "63c2d443283aff4cff8406fd0c38bc10063dbd6479976372f701c1507e167fe717e2f82667106dd82766785a9b27ffb48c4523b48b168ab5f11f31771a2af1fd"
+    },
+    {
+        "timestamp_ns": 1770686988885367410,
+        "event": "INFO",
+        "details": "Processing 1613 files",
+        "signature": "cf323f95cac9401ff646af107c47cecf6a6ebba4598804517ab34e584dcc5ee1b109fe860eb8794493f59fdc21acafd9382b7b711020894038c6e5e91b68b7df"
+    }
+]

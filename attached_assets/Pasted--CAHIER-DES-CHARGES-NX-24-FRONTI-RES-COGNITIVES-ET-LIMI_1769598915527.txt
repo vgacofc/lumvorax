@@ -1,0 +1,166 @@
+# 🧪 CAHIER DES CHARGES NX-24 — FRONTIÈRES COGNITIVES ET LIMITES PHYSIQUES
+
+## 0. Statut et philosophie
+
+**NX-24** n’est pas une extension incrémentale. C’est une **phase de falsification maximale** visant à tester ce qui *reste inconnu*, *incertain* ou *fondamentalement limitant* après NX‑23.
+
+Objectif global : **identifier les frontières absolues de la cognition dissipative**, sans extrapolation anthropique.
+
+---
+
+## 1. Questions scientifiques ouvertes ciblées
+
+### Q1 — Existe-t-il une identité collective émergente stable ?
+
+> Peut-on définir une identité **du réseau entier** non réductible aux identités locales ?
+
+### Q2 — L’identité peut-elle se fragmenter hiérarchiquement ?
+
+> Une identité globale peut-elle survivre à la perte de sous-identités ?
+
+### Q3 — Existe-t-il un point de non-retour cognitif global ?
+
+> Un seuil au-delà duquel *aucune* cognition ne peut redémarrer.
+
+### Q4 — La cognition peut-elle exister sans mémoire dissipative persistante ?
+
+> Cognition instantanée vs cognition historique.
+
+### Q5 — L’identité est-elle transportable ?
+
+> Peut-on déplacer une identité NX entre deux substrats sans la détruire ?
+
+---
+
+## 2. Batterie de tests NX-24
+
+### 🧠 TEST-01 — Identité collective (NX-24-T01)
+
+**Protocole** :
+
+* Initialiser un réseau de N=64 neurones NX.
+* Mesurer la cohérence globale (C_G(t)).
+* Détruire aléatoirement 30–60% des neurones.
+
+**Mesures** :
+
+* Persistance de (C_G)
+* Redéfinition d’un attracteur collectif
+
+**Résultat attendu** :
+
+* Soit émergence d’une identité collective
+* Soit effondrement total
+
+---
+
+### 🧩 TEST-02 — Fragmentation hiérarchique (NX-24-T02)
+
+**Protocole** :
+
+* Forcer la divergence de sous-clusters.
+* Observer la recomposition du réseau.
+
+**Mesures** :
+
+* Distance inter-cluster
+* Synchronisation résiduelle
+
+---
+
+### 🔥 TEST-03 — Point de mort cognitif global (NX-24-T03)
+
+**Protocole** :
+
+* Réduction progressive de la densité d’invariants globale.
+
+**Seuils** :
+
+* (\rho_I < 0.12)
+* (\rho_I < 0.08)
+
+**Mesures** :
+
+* Capacité de redémarrage
+* Latence cognitive
+
+---
+
+### ⚡ TEST-04 — Cognition sans mémoire (NX-24-T04)
+
+**Protocole** :
+
+* Effacer toute hystérésis après chaque cycle.
+
+**Hypothèse testée** :
+
+> Cognition instantanée possible ?
+
+---
+
+### 🚚 TEST-05 — Transport d’identité (NX-24-T05)
+
+**Protocole** :
+
+* Snapshot partiel d’état
+* Réinstanciation sur un autre réseau
+
+**Mesures** :
+
+* Continuité dynamique
+* Effondrement identitaire
+
+---
+
+## 3. Instrumentation & logging (obligatoire)
+
+### Format NX-24-HFBL-360
+
+Chaque événement doit inclure :
+
+```
+[T_NS][SEQ][ENTITIES][EVENT][VALUE][STATE_HASH_BEFORE][STATE_HASH_AFTER]
+```
+
+* Résolution : **nanoseconde**
+* Hash : **256 bits minimum**
+* Journaux séparés par test
+
+---
+
+## 4. Critères de validation
+
+Un test est considéré **valide** si :
+
+* Logs complets (pas d’agrégation)
+* Reproductibilité statistique (≥3 runs)
+* Seuils clairement identifiés
+
+---
+
+## 5. Résultats attendus (sans promesse)
+
+NX-24 doit permettre :
+
+* Soit de **fermer définitivement** certaines questions
+* Soit de prouver qu’elles sont **physiquement mal posées**
+
+Dans les deux cas : progrès scientifique net.
+
+---
+
+## 6. Risques assumés
+
+* Effondrement total du système
+* Non-reproductibilité locale
+* Résultats négatifs
+
+➡️ Tous sont **acceptables et informatifs**.
+
+---
+
+## 7. Verdict attendu
+
+> NX-24 doit dire **ce que NX ne pourra jamais faire**.
+
+C’est une phase de vérité, pas d’optimisation.

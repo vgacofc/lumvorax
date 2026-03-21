@@ -1,0 +1,23 @@
+[
+  {
+    "id": 0,
+    "timestamp": "2026-01-22T11:37:15.330287+00:00",
+    "formula_applied": "SHF_RESONANCE_V3",
+    "result": 2,
+    "entropy_check": "VALIDATED"
+  },
+  {
+    "id": 1,
+    "timestamp": "2026-01-22T11:37:15.330585+00:00",
+    "formula_applied": "SHF_RESONANCE_V3",
+    "result": 0,
+    "entropy_check": "VALIDATED"
+  },
+  {
+    "id": 2,
+    "timestamp": "2026-01-22T11:37:15.330777+00:00",
+    "formula_applied": "SHF_RESONANCE_V3",
+    "result": 8,
+    "entropy_check": "VALIDATED"
+  }
+]

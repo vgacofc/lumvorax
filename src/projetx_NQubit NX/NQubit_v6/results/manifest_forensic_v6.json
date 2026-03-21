@@ -1,0 +1,48 @@
+{
+  "version": "v6",
+  "generated_at_utc": "2026-03-02T14:16:47.666337+00:00",
+  "source_of_truth": "manifest_forensic_v6.json (signed)",
+  "hash_algo": "sha256",
+  "artifacts": [
+    {
+      "file": "/home/runner/workspace/src/projetx_NQubit NX/NQubit_v5/results/ADC_REAL_VALIDATION_V5.json",
+      "sha256": "164d1047023a51ec64df5ae6f5599659b305e36356067f3fbe370e17fce328a1",
+      "bytes": 301
+    },
+    {
+      "file": "/home/runner/workspace/src/projetx_NQubit NX/NQubit_v5/results/ADC_REAL_VALIDATION_V5_1772319442.json",
+      "sha256": "45220e831e7055ab8b9948ba4c1fad8792cb9d660a8cc3004d20f5b5953fba68",
+      "bytes": 301
+    },
+    {
+      "file": "/home/runner/workspace/src/projetx_NQubit NX/NQubit_v5/results/manifest_forensic_v5.json",
+      "sha256": "c7aea847ae37aac79dc81dffba421145281b762285a8e75acff0f0839132522c",
+      "bytes": 3016
+    },
+    {
+      "file": "/home/runner/workspace/src/projetx_NQubit NX/NQubit_v5/results/manifest_forensic_v5.json.sig",
+      "sha256": "3f43fac518f42d394435110f9ad697056a68e8880432f19330fe0dfe03f3d710",
+      "bytes": 256
+    },
+    {
+      "file": "/home/runner/workspace/src/projetx_NQubit NX/NQubit_v5/results/manifest_forensic_v5_1772319442.json",
+      "sha256": "ac9a39406598cb6b1e202af2b9620736f8d8ab7b53eee0c4ce5f17e7e7171d17",
+      "bytes": 3055
+    },
+    {
+      "file": "/home/runner/workspace/src/projetx_NQubit NX/NQubit_v5/results/replit_env_info_v5.txt",
+      "sha256": "2181a5e48099de33d761f9a6132e1e958ed81ef9a11fbfdd7934e934e82e201e",
+      "bytes": 1689
+    },
+    {
+      "file": "/home/runner/workspace/src/projetx_NQubit NX/NQubit_v5/results/stress_telemetry_v5.log",
+      "sha256": "afc6e253f0e3f9ead3bc46af228a4b3d30a3c3e09223d47f962528a0d5ec0ced",
+      "bytes": 140
+    },
+    {
+      "file": "/home/runner/workspace/src/projetx_NQubit NX/NQubit_v5/results/v5_line_counts.txt",
+      "sha256": "59e395cad99c17f9195fb786e2a02ce7eb70a28fc524a0b61839952eab65ffdd",
+      "bytes": 243
+    }
+  ]
+}

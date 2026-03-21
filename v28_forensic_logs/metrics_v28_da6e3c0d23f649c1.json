@@ -1,0 +1,207 @@
+{
+  "config": {
+    "version": "V28-PROOF",
+    "timestamp_start": 1769287880222181064,
+    "alignment_bytes": 64,
+    "simd_enabled": true,
+    "forensic_mode": "FULL",
+    "cache_line_size": 64,
+    "l1_cache_size": 32768,
+    "l2_cache_size": 262144,
+    "l3_cache_size": 8388608
+  },
+  "summary": {
+    "session_id": "da6e3c0d23f649c1",
+    "total_events": 67,
+    "total_metrics": 23,
+    "duration_ns": 38344160449,
+    "log_file": "./v28_forensic_logs/forensic_v28_da6e3c0d23f649c1.log",
+    "wal_file": "./v28_forensic_logs/wal_v28_da6e3c0d23f649c1.bin"
+  },
+  "metrics": [
+    {
+      "name": "B1_CREATE_DESTROY_OPS_SEC",
+      "value": 1177841.0409287983,
+      "unit": "ops/s",
+      "category": "BLOC1",
+      "timestamp_ns": 1769287880241132825,
+      "metadata": {}
+    },
+    {
+      "name": "B1_CREATE_DESTROY_MEAN",
+      "value": 849.011,
+      "unit": "ns",
+      "category": "BLOC1",
+      "timestamp_ns": 1769287880241729995,
+      "metadata": {}
+    },
+    {
+      "name": "B1_MOVE_THROUGHPUT",
+      "value": 3.062970363368789,
+      "unit": "GB/s",
+      "category": "BLOC1",
+      "timestamp_ns": 1769287880245907145,
+      "metadata": {}
+    },
+    {
+      "name": "B1_FUSE_ELEM_SEC",
+      "value": 1658626.9700175973,
+      "unit": "elem/s",
+      "category": "BLOC1",
+      "timestamp_ns": 1769287880336260977,
+      "metadata": {}
+    },
+    {
+      "name": "B1_SPLIT_PER_SEC",
+      "value": 4209640.075773521,
+      "unit": "splits/s",
+      "category": "BLOC1",
+      "timestamp_ns": 1769287880343030057,
+      "metadata": {}
+    },
+    {
+      "name": "B1_ALIGN_SPEEDUP",
+      "value": 1.9901728659849942,
+      "unit": "x",
+      "category": "BLOC1",
+      "timestamp_ns": 1769287880635476695,
+      "metadata": {}
+    },
+    {
+      "name": "B1_SCALING_2T_EFF",
+      "value": 40.30939942005204,
+      "unit": "%",
+      "category": "BLOC1",
+      "timestamp_ns": 1769287880644969165,
+      "metadata": {}
+    },
+    {
+      "name": "B2_L1_SEQ_RAND_RATIO",
+      "value": 0.4612100198206942,
+      "unit": "x",
+      "category": "BLOC2",
+      "timestamp_ns": 1769287880979864103,
+      "metadata": {}
+    },
+    {
+      "name": "B2_LOCALITY_256W",
+      "value": 44.089017275390624,
+      "unit": "ns/access",
+      "category": "BLOC2",
+      "timestamp_ns": 1769287917359900069,
+      "metadata": {}
+    },
+    {
+      "name": "B2_CACHELINE_RATIO",
+      "value": 0.9772272165686764,
+      "unit": "x",
+      "category": "BLOC2",
+      "timestamp_ns": 1769287918074605669,
+      "metadata": {}
+    },
+    {
+      "name": "B2_SATURATION_MB",
+      "value": 0,
+      "unit": "MB",
+      "category": "BLOC2",
+      "timestamp_ns": 1769287918183578212,
+      "metadata": {}
+    },
+    {
+      "name": "B3_REPLAY_SUCCESS",
+      "value": 100.0,
+      "unit": "%",
+      "category": "BLOC3",
+      "timestamp_ns": 1769287918190538662,
+      "metadata": {}
+    },
+    {
+      "name": "B3_FAULT_DETECT",
+      "value": 1,
+      "unit": "bool",
+      "category": "BLOC3",
+      "timestamp_ns": 1769287918191862032,
+      "metadata": {}
+    },
+    {
+      "name": "B3_LOG_COMPLETE",
+      "value": 100.0,
+      "unit": "%",
+      "category": "BLOC3",
+      "timestamp_ns": 1769287918193314472,
+      "metadata": {}
+    },
+    {
+      "name": "B3_LOG_OVERHEAD",
+      "value": 60.007942421490554,
+      "unit": "%",
+      "category": "BLOC3",
+      "timestamp_ns": 1769287918199855762,
+      "metadata": {}
+    },
+    {
+      "name": "B4_LUM_OVERHEAD_AVG",
+      "value": 577.1074770279018,
+      "unit": "%",
+      "category": "BLOC4",
+      "timestamp_ns": 1769287918212249683,
+      "metadata": {}
+    },
+    {
+      "name": "B4_DIFFERENTIATION",
+      "value": 60.0,
+      "unit": "%",
+      "category": "BLOC4",
+      "timestamp_ns": 1769287918213751933,
+      "metadata": {}
+    },
+    {
+      "name": "B4_IMPL_LOC",
+      "value": 1250,
+      "unit": "lines",
+      "category": "BLOC4",
+      "timestamp_ns": 1769287918215183853,
+      "metadata": {}
+    },
+    {
+      "name": "B5_WAL_ROTATION_COUNT",
+      "value": 0,
+      "unit": "rotations",
+      "category": "BLOC5",
+      "timestamp_ns": 1769287918517051391,
+      "metadata": {}
+    },
+    {
+      "name": "B6_SPEC_COMPLETE",
+      "value": 1,
+      "unit": "bool",
+      "category": "BLOC6",
+      "timestamp_ns": 1769287918554337622,
+      "metadata": {}
+    },
+    {
+      "name": "B6_TERM_STABILITY",
+      "value": 100.0,
+      "unit": "%",
+      "category": "BLOC6",
+      "timestamp_ns": 1769287918556677982,
+      "metadata": {}
+    },
+    {
+      "name": "B6_IMPLEMENT_SCORE",
+      "value": 80.0,
+      "unit": "%",
+      "category": "BLOC6",
+      "timestamp_ns": 1769287918558625383,
+      "metadata": {}
+    },
+    {
+      "name": "B6_AUDIT_READY",
+      "value": 1,
+      "unit": "bool",
+      "category": "BLOC6",
+      "timestamp_ns": 1769287918560293253,
+      "metadata": {}
+    }
+  ]
+}

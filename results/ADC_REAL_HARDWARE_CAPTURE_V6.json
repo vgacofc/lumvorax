@@ -1,0 +1,57 @@
+{
+  "version": "v6",
+  "timestamp_utc": "2026-03-02T16:48:04Z",
+  "goal": "real_hardware_capture_on_replit",
+  "sources": [
+    {
+      "source": "/dev/hwrng",
+      "output_file": null,
+      "error": "[Errno 2] No such file or directory: '/dev/hwrng'",
+      "read_elapsed_s": null,
+      "bytes_per_sec": null,
+      "size": 0,
+      "sha256": null,
+      "mean": null,
+      "stddev": null,
+      "min": null,
+      "max": null
+    },
+    {
+      "source": "/dev/random",
+      "output_file": "/home/runner/workspace/results/hardware_entropy_random_v6.bin",
+      "error": null,
+      "read_elapsed_s": 0.00022811000235378742,
+      "bytes_per_sec": 143649991.94195107,
+      "size": 32768,
+      "sha256": "bfc5a8ec0e95f2144f74cbeae4e8ae3e9fdd62e691a6954f1c31c9a5f982465d",
+      "mean": 128.39480590820312,
+      "stddev": 73.85148344849205,
+      "min": 0,
+      "max": 255
+    },
+    {
+      "source": "/dev/urandom",
+      "output_file": "/home/runner/workspace/results/hardware_entropy_urandom_v6.bin",
+      "error": null,
+      "read_elapsed_s": 0.00017776999447960407,
+      "bytes_per_sec": 184328070.07686296,
+      "size": 32768,
+      "sha256": "caab85b665a0ddb33e7a8ae88b2f993ea2b53395a6b8c79d312f936076d7b4e5",
+      "mean": 127.20693969726562,
+      "stddev": 73.87160999079157,
+      "min": 0,
+      "max": 255
+    }
+  ],
+  "jitter": {
+    "samples": 50000,
+    "elapsed_s": 0.009928650004439987,
+    "ops_per_sec": 5035931.36807527,
+    "nqubit_per_sec_proxy": 5035931.36807527,
+    "mean_ns": 198.5574,
+    "stddev_ns": 1680.5428578007882,
+    "min_ns": 110,
+    "max_ns": 346000,
+    "file": "/home/runner/workspace/results/hardware_jitter_samples_v6.csv"
+  }
+}

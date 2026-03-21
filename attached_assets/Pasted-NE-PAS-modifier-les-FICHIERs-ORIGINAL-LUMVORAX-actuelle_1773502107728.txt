@@ -1,0 +1,35 @@
+NE PAS modifier les FICHIERs ORIGINAL LUMVORAX actuelle DU src/, toujour travailler avec des appel ou des copy ou un nouveau module dedier au projetc traiter pour ne pas casé la version stable qui est utiliser par tout les module src/ existant.
+donc tu cree une nouvelle branche pour la version du checkpooint suivant  (19f892b3bd3d704283923a2f1e489a6d9230223d) avant la modifier actuelle pour sauver les version d'origine avant modification  et  tu recupere tout les fichier des  version d'origine du checkpoint suivant qui on été modifier avant  ce check point pour garder les deux version dans le main origine avant et apres modification  et travailler uniquement sur la version modifier pour ne pas toucher a la version dorigine et caser les autre module qui depende de la version dorigine stable   : Target checkpoint
+Add comprehensive analysis of quantum simulation results and system performance
+Creates a detailed analysis report (`analysechatgpt22.md`) of quantum simulation runs, including LumVorax system validation, hardware metrics, bug identification, and performance comparisons.
+3 hours ago
+•
+19f892b3 (19f892b3bd3d704283923a2f1e489a6d9230223d)
+What will be impacted
+Files
+All files in your app will be restored to the state they were in at the time of this checkpoint.
+Agent memory
+The Agent's memory will reset to what it knew about your app at the time of this checkpoint.
+Tasks
+All in-progress tasks will finish but will require review
+Additional rollback options
+Database
+Your development database will be restored to the time of this checkpoint.
+
+explique moi d'abord si tu a compris ce que jai demander pour ne pas faire de nouvelle erreur, pour que je valider te que tu puise lancer le procesus. 
+
+et TOUJOUR ECRIRE COMPLETEMENT EN FRANCAIS DANS TON CHAN DE REFLEXION de limage fourni queje ne cest pas commen tu lappele ici.
+
+voici lerreur actuelle des modifcation que tu a faite  a corriger apre ma validation: [2026-03-14T14:15:15.417145198Z] run_research_cycle start stamp=20260314T141515Z
+make: Entering directory '/home/runner/workspace/src/advanced_calculations/quantum_problem_hubbard_hts'
+Makefile:23: *** missing separator (did you mean TAB instead of 8 spaces?).  Stop.
+make: Leaving directory '/home/runner/workspace/src/advanced_calculations/quantum_problem_hubbard_hts'
+
+ voici ce qui a été demander avant que tu commence le modification actuelle: procede immediatement a tout ce qui ce trouve dans les src/advanced_calculations/quantum_problem_hubbard_hts/CHAT/analysechatgpt22.md DE ÇA PREMIER A LA DERNIER LIGNE A INCLURE DE CE QUIL RESTE A FAIRE SANS EXEPTION! ( voici inclusion a ajoute en plus : Inclure et renforcer encore davantage notre LUM Vorax avec un niveau de granularité plus fin afin d’assurer un tracking maximal et de détecter les causes exactes de tous ces problèmes, ainsi que d’éventuels problèmes futurs encore non identifiés.
+Étudier l’intégration d'un nouveaux algorithmes parmi les plus précis existants, que Monte Carlo, en parallèle.
+Ne pas imposer de restriction de ressources hardware pour verifier jusque les consequence au bord de 99 % de resourceS RAM et CPU simultanment( dynamique).
+Augmenter au maximum la granularité de capture au niveau de la nanoseconde, en enregistrant nanoseconde par nanoseconde toutes les couches possibles.
+Mettre en place la conversion de tout le code .py en .c en mode shadow afin de valider que rien n’a été cassé, avant de basculer totalement vers du C pur, et corriger les problèmes du stop à l’étape 7 du BC-LV04.
+Détection de comportements non programmés ou non notifiés ?) AJOUTE CE QUI EST NECESAIRE QUE J'AURAIS OUBLIER DE PRECISER...
+
+voici tout ce que l'ancien agent a realiser avant que je te parle a toi : src/advanced_calculations/quantum_problem_hubbard_hts/CHAT/analysechatgpt22.1.md

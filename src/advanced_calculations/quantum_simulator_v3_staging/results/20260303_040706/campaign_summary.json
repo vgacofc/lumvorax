@@ -1,0 +1,49 @@
+{
+  "run_id": "20260303_040706",
+  "campaign": {
+    "runs_per_mode": 30,
+    "scenarios": 360,
+    "steps": 1400
+  },
+  "official_smoke": {
+    "rc": 0,
+    "stdout": "[TEST] D\u00e9marrage test unitaire Quantum Simulator...\n[MEMORY_TRACKER] Initialized - tracking enabled\n[MEMORY_TRACKER] ALLOC: 0x28dad2b0 (56 bytes) at src/advanced_calculations/quantum_simulator_v3_staging/quantum_simulator.c:262 in quantum_config_create_default()\n[OK] Configuration par d\u00e9faut cr\u00e9\u00e9e\n[OK] LUM Quantique cr\u00e9\u00e9e (2 \u00e9tats)\n[DEBUG] Amplitude[0] = 1.000000 + 0.000000i\n[OK] Porte Hadamard appliqu\u00e9e avec succ\u00e8s\n[DEBUG] Post-Hadamard Amplitude[0] = 0.707107 + 0.000000i\n[MEMORY_TRACKER] ALLOC: 0x28dad3e0 (328 bytes) at src/advanced_calculations/quantum_simulator_v3_staging/quantum_simulator.c:195 in quantum_measure()\n[MEMORY_TRACKER] ALLOC: 0x28dad530 (16 bytes) at src/advanced_calculations/quantum_simulator_v3_staging/quantum_simulator.c:203 in quantum_measure()\n[OK] Mesure quantique effectu\u00e9e (Collapse)\n[MEMORY_TRACKER] FREE: 0x28dad530 (16 bytes) at src/advanced_calculations/quantum_simulator_v3_staging/quantum_simulator.c:288 in quantum_result_destroy() - originally allocated at src/advanced_calculations/quantum_simulator_v3_staging/quantum_simulator.c:203\n[MEMORY_TRACKER] FREE: 0x28dad3e0 (328 bytes) at src/advanced_calculations/quantum_simulator_v3_staging/quantum_simulator.c:290 in quantum_result_destroy() - originally allocated at src/advanced_calculations/quantum_simulator_v3_staging/quantum_simulator.c:195\n[MEMORY_TRACKER] FREE: 0x28dad2b0 (56 bytes) at src/advanced_calculations/quantum_simulator_v3_staging/quantum_simulator.c:279 in quantum_config_destroy() - originally allocated at src/advanced_calculations/quantum_simulator_v3_staging/quantum_simulator.c:262\n[SUCCESS] Test unitaire Quantum Simulator termin\u00e9 avec succ\u00e8s\n",
+    "stderr": ""
+  },
+  "modes": {
+    "hardware_preferred": {
+      "count": 30,
+      "win_rate_mean": 0.6603703703703999,
+      "win_rate_std": 0.024584335963333537,
+      "throughput_mean": 7590451.746233333,
+      "latency_p95_mean_ns": 232914.66666666666,
+      "latency_p99_mean_ns": 401691.9666666667
+    },
+    "deterministic_seeded": {
+      "count": 30,
+      "win_rate_mean": 0.6562962962962666,
+      "win_rate_std": 0.024023451048330945,
+      "throughput_mean": 6317728.186266666,
+      "latency_p95_mean_ns": 262895.6,
+      "latency_p99_mean_ns": 843326.0
+    }
+  },
+  "fusion_gate": {
+    "min_win_rate_mean": 0.6,
+    "max_win_rate_std": 0.05,
+    "integrity_required": true,
+    "integrity_ok": true,
+    "pass": true
+  },
+  "manifest": {
+    "build_rc": 0,
+    "sign_rc": 0,
+    "verify_rc": 0,
+    "manifest_path": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v3_staging/results/20260303_040706/manifest_forensic_v3.json",
+    "signature_path": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v3_staging/results/20260303_040706/manifest_forensic_v3.json.sig"
+  },
+  "notes": {
+    "baseline_bias_hypothesis": "baseline uses sigma*0.7 and linear drift 0.03; this may simplify baseline dynamics and bias margin distribution.",
+    "fragility_explanation": "losses vary by seed/context because noise realization changes trajectory crossing around target in stochastic regime."
+  }
+}

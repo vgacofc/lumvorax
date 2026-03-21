@@ -1,0 +1,34 @@
+Alors passe au correction immédiatement des bug! Et pourquoi la granularité STEPS PAR STEPS A DISPARU DES LOG ? Je ne veux pas 10 steps par 10 steps ou plus! Je veux steps par steps peut importe la consommation de ram ou CPU! Et tu identifie en profondeur ce Bug caché pour identifier les cause exact et explications et solutions et correction !passe directement. Au implication des tout les ligne de ton rapport 27 
+
+Le rapport est complet (573 lignes, 13 sections). L'indexation SQLite a parcouru les anciens cycles — le run 4444 sera indexé lors du prochain appel avec le bon chemin. Je vérifie vite ce détail et valide le rapport final.
+Le run 4444 est correctement indexé dans SQLite : Tc=72.0K, chi_peak=1.23×10⁻⁵, bench=1.0.
+
+Rapport analysechatgpt27.md — Cycle 21 — Livré
+Voici le bilan complet du cycle :
+
+Ce qui s'est passé lors du run
+Deux runs ont été lancés :
+* Run 3468 (08:52 UTC) → FAILED : une anomalie sign_ratio_extreme=-1.0 a interrompu le script avant la phase advanced parallel. Seuls les fichiers fullscale ont été produits.
+* Run 4444 (08:58 UTC) → SUCCESS : le script a redémarré automatiquement. 36 lignes de log forensique, tous les fichiers produits en 17.5 secondes CPU.
+
+Résultats définitifs du run 4444
+Indicateur	Valeur	Vs Cycle 20
+Tc méthode 1 (dP/dT)	72.0 K	Identique
+Tc méthode 2 (χ_sc)	95.0 K	Identique
+E_∞ (limite thermo.)	1.999986 eV (6.8 ppm)	Identique
+Benchmark QMC/DMRG	15/15 PASS	Stable
+Modules E_cold < 0	13/13	Stable
+Score global	iso=100, trace=94, repr=100, robust=97, phys=91, expert=76 (~87%)	Plateau
+χ_sc (12/13 modules)	≈ 0	BUG-CACHÉ-02 toujours actif
+Diagnostic clé du plateau
+Le score est bloqué à ~87% depuis 3 cycles (C19, C20, C21) car trois corrections critiques ne sont pas encore implémentées dans le code source :
+1. BUG-CACHÉ-02 : utiliser ⟨P⟩ au lieu de P_final comme pairing observable → χ_sc est nul artificiellement pour 12/13 modules
+2. BUG-CACHÉ-03 : recalculer l'énergie après clipping ±1 → biais à fort couplage U
+3. BUG-CACHÉ-04 (nouveau) : le logger forensique traite sign_ratio=-1.0 comme erreur fatale → run abort
+
+Plan Cycle 22
+Le rapport inclut 8 corrections numérotées C22-01 à C22-08, avec critères de succès mesurables :
+* σ_jack < 0.01 sur pairing (jackknife)
+* χ_sc > 0 pour ≥5/13 modules
+* Pic C_v(T) discriminant BKT vs BCS
+* Score cible ≥ 93%

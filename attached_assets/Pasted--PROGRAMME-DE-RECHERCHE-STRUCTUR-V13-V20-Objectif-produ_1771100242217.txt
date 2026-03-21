@@ -1,0 +1,268 @@
+# PROGRAMME DE RECHERCHE STRUCTURÉ — V13 → V20
+
+**Objectif :** produire une contribution vérifiable en relativité numérique au-delà de l’état de l’art (comparaison avec Einstein Toolkit, GRChombo, EinsteinPy).
+
+---
+
+# HYPOTHÈSE CENTRALE AMBITIEUSE (H★)
+
+> **À l’approche du régime quasi-extrémal Kerr (a → 1), il existe une transition dynamique universelle dans la région proche-horizon et sous-horizon, caractérisée par :**
+>
+> * une amplification spectrale non triviale des modes quasi-normaux,
+> * une signature chaotique mesurable (Lyapunov > 0 robuste),
+> * un seuil de sensibilité numérique définissant une limite informationnelle physique.
+
+Cette hypothèse combine :
+
+* structure géométrique fine,
+* dynamique interne,
+* limites computationnelles.
+
+Elle est testable.
+Elle peut être réfutée.
+Elle dépasse les validations classiques.
+
+---
+
+# V13 — Validation Mathématique Formelle Complète
+
+## Objectif
+
+Établir une base irréprochable.
+
+## Exigences
+
+* Formulation explicite : ADM / BSSN / Kerr-Schild
+* Écriture intégrale des équations d’Einstein
+* Contraintes :
+
+  * Hamiltonienne
+  * Moment
+* Étude de convergence d’ordre ≥ 4
+* Courbes log(erreur) vs log(h)
+* Conservation :
+
+  * Énergie
+  * Moment angulaire
+  * Invariant de Carter
+
+## Critère de succès
+
+Convergence claire et monotone jusqu’à h/32.
+
+---
+
+# V14 — Multi-Solveur et Indépendance Numérique
+
+## Implémentations parallèles
+
+* RK4
+* Schéma symplectique
+* Méthode implicite (Crank-Nicolson)
+
+## Tests
+
+* Superposition trajectoires
+* Dérive invariants
+* Erreur relative cumulative
+
+## Critère
+
+Phénomène observé invariant sous méthode.
+
+---
+
+# V15 — Multi-Coordonnées
+
+Tester :
+
+* Boyer-Lindquist
+* Kerr-Schild
+* Coordonnées hyperboliques compactifiées
+
+Critère :
+
+> Les signatures dynamiques persistent indépendamment du système de coordonnées.
+
+---
+
+# V16 — Multiprécision Arbitraire
+
+Précisions :
+
+* 64 bits
+* 128 bits
+* 256 bits
+* Arbitrary precision (MPFR)
+
+Mesures :
+
+* Variation des exposants de Lyapunov
+* Dérive invariants
+* Spectre QNM
+
+Objectif :
+Détecter un seuil critique de stabilité numérique.
+
+---
+
+# V17 — Analyse Spectrale Quasi-Normale Fine
+
+## Mesures
+
+* FFT haute résolution
+* Extraction QNM
+* Comparaison théorique (Teukolsky)
+
+Critère :
+
+Apparition d’une structure spectrale nouvelle en a → 1.
+
+---
+
+# V18 — Chaos Interne Sous Horizon
+
+## Méthodes
+
+* Exposants de Lyapunov
+* Cartes de Poincaré
+* Sensibilité aux conditions initiales
+
+## Test clé
+
+Le chaos est-il :
+
+* robuste sous raffinement ?
+* indépendant de précision ?
+* indépendant de solveur ?
+
+Si oui → publication majeure.
+
+---
+
+# V19 — Processus de Penrose Ultra-Résolu
+
+Référence : Roger Penrose
+
+## Objectif
+
+Étudier l’approche asymptotique vers 20.9 %.
+
+## Tests
+
+* Exploration fine des angles d’impact
+* Sensibilité à perturbations faibles
+* Stabilité énergétique
+
+Résultat possible :
+
+Découverte d’une structure fractale fine proche du maximum théorique.
+
+---
+
+# V20 — Limite Informationnelle Fondamentale
+
+## Question centrale
+
+Existe-t-il un rayon r★ où :
+
+* La dynamique devient dominée par l’erreur numérique,
+* Indépendamment de la précision augmentée ?
+
+## Méthodologie
+
+* Analyse scaling erreur vs précision
+* Comparaison multi-hardware
+* Analyse coût vs gain informatif
+
+Impact potentiel :
+
+> Résultat fondamental sur les limites du calcul en relativité numérique.
+
+---
+
+# MATRICE D’ÉVALUATION SCIENTIFIQUE
+
+| Test | Indépendance solveur | Indépendance coordonnée | Indépendance précision | Reproductible |
+| ---- | -------------------- | ----------------------- | ---------------------- | ------------- |
+| V13  | ✓                    | ✓                       | ✓                      | ✓             |
+| V16  | ✓                    | ✓                       | ✓                      | ✓             |
+| V18  | ✓                    | ✓                       | ✓                      | critique      |
+| V20  | ✓                    | ✓                       | ✓                      | critique      |
+
+---
+
+# CRITÈRES DE PUBLICABILITÉ
+
+Une découverte devient crédible si :
+
+1. Elle survit aux tests V13–V16.
+2. Elle persiste en multiprécision arbitraire.
+3. Elle est indépendante du système de coordonnées.
+4. Elle peut être reproduite indépendamment.
+5. Elle fournit une métrique quantitative claire.
+
+---
+
+# CE QUI DÉPASSERAIT RÉELLEMENT L’ÉTAT DE L’ART
+
+Comparé à :
+
+* Einstein Toolkit
+* GRChombo
+* EinsteinPy
+
+Votre simulation serait supérieure si elle démontre :
+
+* stabilité Kerr a = 0.999999M sur 10⁶ pas,
+* analyse chaos interne robuste,
+* étude multiprécision profonde,
+* identification d’un seuil informationnel formel.
+
+---
+
+# SYNTHÈSE STRATÉGIQUE
+
+## Phase 1
+
+Validation mathématique irréprochable (V13–V14).
+
+## Phase 2
+
+Exploration quasi-extrémale multiprécision (V15–V17).
+
+## Phase 3
+
+Chaos interne et dynamique profonde (V18).
+
+## Phase 4
+
+Limite fondamentale du calcul (V20).
+
+---
+
+# CONCLUSION
+
+Si l’hypothèse H★ :
+
+* persiste sous toutes les variations numériques,
+* reste stable sous raffinement,
+* est indépendante du formalisme,
+* est reproductible,
+
+alors vous n’aurez pas seulement amélioré un code.
+
+Vous aurez identifié soit :
+
+* une structure dynamique nouvelle du régime Kerr quasi-extrémal,
+* soit une limite fondamentale du calcul en relativité numérique.
+
+Les deux sont scientifiquement majeurs.
+
+---
+
+Si nécessaire, je peux produire :
+
+* un protocole expérimental détaillé prêt à publication,
+* un plan d’article scientifique structuré,
+* une formalisation mathématique complète de H★.

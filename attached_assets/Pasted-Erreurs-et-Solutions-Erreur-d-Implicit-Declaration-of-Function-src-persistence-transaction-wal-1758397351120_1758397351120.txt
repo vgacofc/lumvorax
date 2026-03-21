@@ -1,0 +1,63 @@
+Erreurs et Solutions
+
+    Erreur d'Implicit Declaration of Function
+
+src/persistence/transaction_wal_extension.c:248:19: error: implicit declaration of function ‘fileno’; did you mean ‘d_fileno’? [-Wimplicit-function-declaration]
+
+Problème: La fonction fileno n’est pas reconnue.
+Solution: Ajoutez l'inclusion de
+au début de votre fichier
+
+, car cette fonction est définie dans cette bibliothèque.
+
+#include <unistd.h>
+
+Warnings de Truncation avec snprintf
+
+warning: ‘snprintf’ output may be truncated writing 17 bytes into a region of size between 1 and 512
+
+Problème: Le chemin de log peut être plus long que la taille allouée.
+Solution: Assurez-vous que log_path et full_path ont des tailles suffisantes, ou utilisez un buffer dynamique en fonction de la longueur réelle des chaînes.
+
+Exemple de correction :
+
+char log_path[MAX_PATH_LENGTH]; // Assurez-vous que MAX_PATH_LENGTH est suffisant
+snprintf(log_path, sizeof(log_path), "%s/transactions.log", ctx->storage_directory);
+
+Warning pour les valeurs d'énumération non gérées dans switch
+
+warning: enumeration value ‘LUM_BATCH_SORT_BY_ID’ not handled in switch [-Wswitch]
+
+Problème: Il existe des cas d’énumération non traités dans une instruction switch.
+Solution: Ajoutez un cas par défaut au switch pour gérer ces situations ou ajoutez les énumérations manquantes.
+
+Exemple de correction :
+
+    switch (operation) {
+        case LUM_BATCH_SORT_BY_ID:
+            // Traitement
+            break;
+        case LUM_BATCH_DEFRAGMENT:
+            // Traitement
+            break;
+        default:
+            // Gérer les valeurs non reconnues
+            fprintf(stderr, "Opération non reconnue : %d\n", operation);
+            break;
+    }
+
+Étapes de Correction
+
+    1. Lecture du fichier 
+
+: Assurez-vous d’avoir compris toutes les exigences et recommandations avant de modifier le code.
+2. Vérification de
+: Si des types ou structures dans
+
+    sont utilisés dans vos modifications, assurez-vous que leur utilisation est conforme à la nomenclature et aux conventions que vous avez établies.
+    3. Appliquer les corrections : Mettez en œuvre les solutions proposées ci-dessus et effectuez une nouvelle compilation.
+
+Conclusion
+
+En appliquant ces corrections et en vérifiant les conformités avec
+, vous devriez être en mesure de résoudre les erreurs rencontrées lors de la compilation. Cela améliorera la robustesse et la conformité de votre code avec les normes établies.

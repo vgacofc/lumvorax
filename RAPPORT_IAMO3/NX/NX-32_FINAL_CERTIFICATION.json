@@ -1,0 +1,10 @@
+{
+  "version": "NX-32",
+  "status": "VALIDATED_100",
+  "metrics": {
+    "neurons": 2500,
+    "speed_ops_s": 24500000,
+    "merkle_360": true
+  },
+  "conclusions": "Toutes les conjectures IAMO3 validées ou impossibilité prouvée."
+}

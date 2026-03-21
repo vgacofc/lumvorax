@@ -1,0 +1,305 @@
+{
+  "meta": {
+    "NX47_V61_1": {
+      "results_zip": "RAPPORT-VESUVIUS/notebook-version-NX47-V61.1/results.zip",
+      "embedded_submission_zip": "nx47_vesuvius/submission.zip",
+      "tiff_member": "1407735.tif",
+      "shape": [
+        320,
+        320,
+        320
+      ],
+      "dtype": "uint8",
+      "min": 0,
+      "max": 1,
+      "unique_values": [
+        0,
+        1
+      ],
+      "unique_counts": [
+        28751805,
+        4016195
+      ],
+      "nonzero_ratio": 0.12256454467773438,
+      "ones_ratio_binary": 0.12256454467773438,
+      "slice_nonzero_ratio_min": 0.115712890625,
+      "slice_nonzero_ratio_mean": 0.12256454467773437,
+      "slice_nonzero_ratio_max": 0.12943359375,
+      "slice_nonzero_ratio_std": 0.0037430993075035614
+    },
+    "NX46_V7_3": {
+      "results_zip": "RAPPORT-VESUVIUS/output_logs_vesuvius/v7.3-outlput-logs--nx46-vesuvius-core-kaggle-ready/results.zip",
+      "embedded_submission_zip": "nx46_vesuvius/submission.zip",
+      "tiff_member": "1407735.tif",
+      "shape": [
+        320,
+        320,
+        320
+      ],
+      "dtype": "uint8",
+      "min": 0,
+      "max": 255,
+      "unique_values": [
+        0,
+        255
+      ],
+      "unique_counts": [
+        32000640,
+        767360
+      ],
+      "nonzero_ratio": 0.02341796875,
+      "ones_ratio_binary": 0.02341796875,
+      "slice_nonzero_ratio_min": 0.02341796875,
+      "slice_nonzero_ratio_mean": 0.023417968749999997,
+      "slice_nonzero_ratio_max": 0.02341796875,
+      "slice_nonzero_ratio_std": 3.469446951953614e-18
+    },
+    "NX47_V61": {
+      "results_zip": "RAPPORT-VESUVIUS/notebook-version-NX47-score-0.387-V61/results.zip",
+      "embedded_submission_zip": "submission.zip",
+      "tiff_member": "1407735.tif",
+      "shape": [
+        320,
+        320,
+        320
+      ],
+      "dtype": "uint8",
+      "min": 0,
+      "max": 255,
+      "unique_values": [
+        0,
+        255
+      ],
+      "unique_counts": [
+        28751805,
+        4016195
+      ],
+      "nonzero_ratio": 0.12256454467773438,
+      "ones_ratio_binary": 0.12256454467773438,
+      "slice_nonzero_ratio_min": 0.115712890625,
+      "slice_nonzero_ratio_mean": 0.12256454467773437,
+      "slice_nonzero_ratio_max": 0.12943359375,
+      "slice_nonzero_ratio_std": 0.0037430993075035614
+    },
+    "NX47_V102": {
+      "results_zip": "RAPPORT-VESUVIUS/notebook-version-NX47-V102/results.zip",
+      "embedded_submission_zip": "submission.zip",
+      "tiff_member": "1407735.tif",
+      "shape": [
+        320,
+        320,
+        320
+      ],
+      "dtype": "uint8",
+      "min": 0,
+      "max": 255,
+      "unique_values": [
+        0,
+        255
+      ],
+      "unique_counts": [
+        28378177,
+        4389823
+      ],
+      "nonzero_ratio": 0.13396676635742188,
+      "ones_ratio_binary": 0.13396676635742188,
+      "slice_nonzero_ratio_min": 0.12884765625,
+      "slice_nonzero_ratio_mean": 0.13396676635742186,
+      "slice_nonzero_ratio_max": 0.138525390625,
+      "slice_nonzero_ratio_std": 0.001988345206745926
+    },
+    "NX47_V107": {
+      "results_zip": "RAPPORT-VESUVIUS/notebook-version-NX47-V107/results.zip",
+      "embedded_submission_zip": "submission.zip",
+      "tiff_member": "1407735.tif",
+      "shape": [
+        320,
+        320,
+        320
+      ],
+      "dtype": "uint8",
+      "min": 0,
+      "max": 255,
+      "unique_values": [
+        0,
+        255
+      ],
+      "unique_counts": [
+        28378177,
+        4389823
+      ],
+      "nonzero_ratio": 0.13396676635742188,
+      "ones_ratio_binary": 0.13396676635742188,
+      "slice_nonzero_ratio_min": 0.12884765625,
+      "slice_nonzero_ratio_mean": 0.13396676635742186,
+      "slice_nonzero_ratio_max": 0.138525390625,
+      "slice_nonzero_ratio_std": 0.001988345206745926
+    },
+    "CONCURRENT_0552": {
+      "results_zip": "RAPPORT-VESUVIUS/exemple-soumision-notebook-concurrent/results.zip",
+      "embedded_submission_zip": "submission.zip",
+      "tiff_member": "1407735.tif",
+      "shape": [
+        320,
+        320,
+        320
+      ],
+      "dtype": "uint8",
+      "min": 0,
+      "max": 1,
+      "unique_values": [
+        0,
+        1
+      ],
+      "unique_counts": [
+        29683824,
+        3084176
+      ],
+      "nonzero_ratio": 0.09412158203125,
+      "ones_ratio_binary": 0.09412158203125,
+      "slice_nonzero_ratio_min": 0.0,
+      "slice_nonzero_ratio_mean": 0.09412158203124998,
+      "slice_nonzero_ratio_max": 0.128544921875,
+      "slice_nonzero_ratio_std": 0.021651596697851674
+    }
+  },
+  "pairs": {
+    "NX47_V61_1__NX46_V7_3": {
+      "iou": 0.0647107908372045,
+      "dice": 0.12155562129002384,
+      "xor_ratio": 0.1282375183105469,
+      "a_on_b_recall": 0.07239040933022425,
+      "b_on_a_recall": 0.37887562552126774,
+      "identical": false
+    },
+    "NX47_V61_1__NX47_V61": {
+      "iou": 1.0,
+      "dice": 1.0,
+      "xor_ratio": 0.0,
+      "a_on_b_recall": 1.0,
+      "b_on_a_recall": 1.0,
+      "identical": true
+    },
+    "NX47_V61_1__NX47_V102": {
+      "iou": 0.8273423833615245,
+      "dice": 0.9055143588795551,
+      "xor_ratio": 0.024238525390625,
+      "a_on_b_recall": 0.947634514758372,
+      "b_on_a_recall": 0.8669791469952205,
+      "identical": false
+    },
+    "NX47_V61_1__NX47_V107": {
+      "iou": 0.8273423833615245,
+      "dice": 0.9055143588795551,
+      "xor_ratio": 0.024238525390625,
+      "a_on_b_recall": 0.947634514758372,
+      "b_on_a_recall": 0.8669791469952205,
+      "identical": false
+    },
+    "NX47_V61_1__CONCURRENT_0552": {
+      "iou": 0.1640488684806628,
+      "dice": 0.2818590746877874,
+      "xor_ratio": 0.15561117553710938,
+      "a_on_b_recall": 0.2491542367838215,
+      "b_on_a_recall": 0.3244471132646127,
+      "identical": false
+    },
+    "NX46_V7_3__NX47_V61": {
+      "iou": 0.0647107908372045,
+      "dice": 0.12155562129002384,
+      "xor_ratio": 0.1282375183105469,
+      "a_on_b_recall": 0.37887562552126774,
+      "b_on_a_recall": 0.07239040933022425,
+      "identical": false
+    },
+    "NX46_V7_3__NX47_V102": {
+      "iou": 0.06021834747901276,
+      "dice": 0.11359612408557153,
+      "xor_ratio": 0.13950643920898437,
+      "a_on_b_recall": 0.38172174728940783,
+      "b_on_a_recall": 0.06672660833933396,
+      "identical": false
+    },
+    "NX46_V7_3__NX47_V107": {
+      "iou": 0.06021834747901276,
+      "dice": 0.11359612408557153,
+      "xor_ratio": 0.13950643920898437,
+      "a_on_b_recall": 0.38172174728940783,
+      "b_on_a_recall": 0.06672660833933396,
+      "identical": false
+    },
+    "NX46_V7_3__CONCURRENT_0552": {
+      "iou": 0.03851068470959317,
+      "dice": 0.07416521616310999,
+      "xor_ratio": 0.10882220458984375,
+      "a_on_b_recall": 0.18612515638031693,
+      "b_on_a_recall": 0.04630896550650806,
+      "identical": false
+    },
+    "NX47_V61__NX47_V102": {
+      "iou": 0.8273423833615245,
+      "dice": 0.9055143588795551,
+      "xor_ratio": 0.024238525390625,
+      "a_on_b_recall": 0.947634514758372,
+      "b_on_a_recall": 0.8669791469952205,
+      "identical": false
+    },
+    "NX47_V61__NX47_V107": {
+      "iou": 0.8273423833615245,
+      "dice": 0.9055143588795551,
+      "xor_ratio": 0.024238525390625,
+      "a_on_b_recall": 0.947634514758372,
+      "b_on_a_recall": 0.8669791469952205,
+      "identical": false
+    },
+    "NX47_V61__CONCURRENT_0552": {
+      "iou": 0.1640488684806628,
+      "dice": 0.2818590746877874,
+      "xor_ratio": 0.15561117553710938,
+      "a_on_b_recall": 0.2491542367838215,
+      "b_on_a_recall": 0.3244471132646127,
+      "identical": false
+    },
+    "NX47_V102__NX47_V107": {
+      "iou": 1.0,
+      "dice": 1.0,
+      "xor_ratio": 0.0,
+      "a_on_b_recall": 1.0,
+      "b_on_a_recall": 1.0,
+      "identical": true
+    },
+    "NX47_V102__CONCURRENT_0552": {
+      "iou": 0.15694949188796256,
+      "dice": 0.27131606520150725,
+      "xor_ratio": 0.16620431518554687,
+      "a_on_b_recall": 0.23096785451258514,
+      "b_on_a_recall": 0.32874518185732593,
+      "identical": false
+    },
+    "NX47_V107__CONCURRENT_0552": {
+      "iou": 0.15694949188796256,
+      "dice": 0.27131606520150725,
+      "xor_ratio": 0.16620431518554687,
+      "a_on_b_recall": 0.23096785451258514,
+      "b_on_a_recall": 0.32874518185732593,
+      "identical": false
+    }
+  },
+  "observed_public_scores": {
+    "NX47_V61_1": {
+      "public_score": 0.387,
+      "source": "user-provided Kaggle screenshot in chat",
+      "notes": "Shown as NX47-VESU-KERNEL NEW V61.1 public score 0.387"
+    },
+    "NX46_V7_3": {
+      "public_score": 0.303,
+      "source": "user-provided Kaggle screenshot in chat",
+      "notes": "Shown as nx46_vesuvius_core_kaggle_ready public score 0.303"
+    }
+  },
+  "score_density_bridge": {
+    "score_delta_nx47_minus_nx46": 0.084,
+    "density_delta_nx47_minus_nx46": 0.099146575928,
+    "interpretation": "Higher score for NX47 here coexists with higher density; therefore density alone is not causal."
+  }
+}

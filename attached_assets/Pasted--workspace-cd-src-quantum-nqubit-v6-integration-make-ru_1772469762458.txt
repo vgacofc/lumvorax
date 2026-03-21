@@ -1,0 +1,126 @@
+~/workspace$ cd src/quantum/nqubit_v6_integration && make run_a_to_z compare_line_by_line test_all
+python run_a_to_z_v6_integration.py
+{
+  "pipeline": "nqubit_v6_integration_a_to_z",
+  "ok": true,
+  "phases": [
+    {
+      "phase": "A_collect_metrics",
+      "rc": 0,
+      "cmd": "/nix/store/h097imm3w6dpx10qynrd2sz9fks2wbq8-python3-3.12.11/bin/python tools/collect_system_metrics_v6.py",
+      "stdout": "metrics_written=results/system_metrics_v6.json",
+      "stderr": ""
+    },
+    {
+      "phase": "B_acquire_hardware",
+      "rc": 0,
+      "cmd": "/nix/store/h097imm3w6dpx10qynrd2sz9fks2wbq8-python3-3.12.11/bin/python tools/acquire_real_hardware_v6.py --output-dir results --bytes 32768 --jitter-samples 50000",
+      "stdout": "report_written=results/ADC_REAL_HARDWARE_CAPTURE_V6.json\nsource=/dev/hwrng size=0 error=[Errno 2] No such file or directory: '/dev/hwrng' bytes_per_sec=None\nsource=/dev/random size=32768 error=None bytes_per_sec=309980129.4550869\nsource=/dev/urandom size=32768 error=None bytes_per_sec=400831820.20440465\njitter_ops_per_sec=7498106.731201067",
+      "stderr": ""
+    },
+    {
+      "phase": "C_stress",
+      "rc": 0,
+      "cmd": "/nix/store/h097imm3w6dpx10qynrd2sz9fks2wbq8-python3-3.12.11/bin/python tools/stress_harness_v6.py --seconds 4 --workers 64 --target 99 --output results/stress_telemetry_v6.log",
+      "stdout": "# V6 STRESS TELEMETRY\nworkers=64\nduration_s=4\ncpu_pressure_estimated_pct=100.00\nmemory_peak_pct=69.92\ntarget_pct=99.00\nstatus=TARGET_REACHED",
+      "stderr": ""
+    },
+    {
+      "phase": "D_build_manifest",
+      "rc": 0,
+      "cmd": "/nix/store/h097imm3w6dpx10qynrd2sz9fks2wbq8-python3-3.12.11/bin/python tools/build_manifest_v6.py --input-dir results --output results/manifest_forensic_v6.json --exclude manifest_forensic_v6.json manifest_forensic_v6.json.sig",
+      "stdout": "manifest_written=results/manifest_forensic_v6.json\nartifacts=11",
+      "stderr": ""
+    },
+    {
+      "phase": "E_verify_manifest",
+      "rc": 0,
+      "cmd": "/nix/store/h097imm3w6dpx10qynrd2sz9fks2wbq8-python3-3.12.11/bin/python tools/verify_manifest_v6.py --manifest results/manifest_forensic_v6.json",
+      "stdout": "artifact_count=11\nmissing=0\nmismatches=0",
+      "stderr": ""
+    },
+    {
+      "phase": "F_generate_report",
+      "rc": 0,
+      "cmd": "/nix/store/h097imm3w6dpx10qynrd2sz9fks2wbq8-python3-3.12.11/bin/python tools/generate_v6_post_run_report.py --manifest results/manifest_forensic_v6.json --adc-report results/ADC_REAL_HARDWARE_CAPTURE_V6.json --stress-log results/stress_telemetry_v6.log --system-metrics results/system_metrics_v6.json --output RAPPORT_REPLIT_EXECUTION_V6_FINAL.md",
+      "stdout": "report_written=RAPPORT_REPLIT_EXECUTION_V6_FINAL.md",
+      "stderr": ""
+    }
+  ]
+}
+python tools/compare_line_by_line_with_source_v6.py
+/home/runner/workspace/src/quantum/nqubit_v6_integration/results/line_by_line_comparison_v6.json
+/home/runner/workspace/src/quantum/nqubit_v6_integration/results/line_by_line_comparison_v6.md
+all_identical= False
+python tests/test_manifest_tools_v6.py
+test_build_verify_ok (__main__.TestManifestV6.test_build_verify_ok) ... manifest_written=/tmp/tmp7lq8tmi6/m.json
+artifacts=2
+artifact_count=2
+missing=0
+mismatches=0
+ok
+test_mismatch_detected (__main__.TestManifestV6.test_mismatch_detected) ... manifest_written=/tmp/tmp85y8205k/m.json
+artifacts=1
+artifact_count=1
+missing=0
+mismatches=1
+MISMATCH /tmp/tmp85y8205k/x.bin expected=f6e0a1e2ac41945a9aa7ff8a8aaa0cebc12a3bcc981a929ad5cf810a090e11ae actual=9b871512327c09ce91dd649b3f96a63b7408ef267c8cc5710114e629730cb61f
+ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.285s
+
+OK
+python tests/test_hardware_capture_v6.py
+test_capture_generates_report_and_jitter (__main__.TestHardwareCaptureV6.test_capture_generates_report_and_jitter) ... report_written=/tmp/tmp0qxv132w/ADC_REAL_HARDWARE_CAPTURE_V6.json
+source=/dev/hwrng size=0 error=[Errno 2] No such file or directory: '/dev/hwrng' bytes_per_sec=None
+source=/dev/random size=2048 error=None bytes_per_sec=246153866.14917812
+source=/dev/urandom size=2048 error=None bytes_per_sec=264941812.76846546
+jitter_ops_per_sec=8410428.966780664
+ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.089s
+
+OK
+python tests/test_system_metrics_v6.py
+test_collect_metrics_json (__main__.TestSystemMetricsV6.test_collect_metrics_json) ... metrics_written=results/system_metrics_v6.json
+ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.131s
+
+OK
+python tests/test_kernel_v6.py
+test_kernel_runs_in_current_dir_single_cell_mode (__main__.TestKernelV6.test_kernel_runs_in_current_dir_single_cell_mode) ... compute_mode=cpu gpu_available=False gpu_name=None
+pipeline_ok=True steps=6
+ok
+
+----------------------------------------------------------------------
+Ran 1 test in 4.454s
+
+OK
+python tools/collect_system_metrics_v6.py
+metrics_written=results/system_metrics_v6.json
+python tools/acquire_real_hardware_v6.py --output-dir results --bytes 32768 --jitter-samples 50000
+report_written=results/ADC_REAL_HARDWARE_CAPTURE_V6.json
+source=/dev/hwrng size=0 error=[Errno 2] No such file or directory: '/dev/hwrng' bytes_per_sec=None
+source=/dev/random size=32768 error=None bytes_per_sec=369258499.8597936
+source=/dev/urandom size=32768 error=None bytes_per_sec=392854577.5308636
+jitter_ops_per_sec=7431651.106240295
+python tools/build_manifest_v6.py --input-dir results --output results/manifest_forensic_v6.json --exclude manifest_forensic_v6.json manifest_forensic_v6.json.sig
+manifest_written=results/manifest_forensic_v6.json
+artifacts=11
+python tools/verify_manifest_v6.py --manifest results/manifest_forensic_v6.json
+artifact_count=11
+missing=0
+mismatches=0
+python tools/stress_harness_v6.py --seconds 4 --workers 64 --target 99 --output results/stress_telemetry_v6.log
+# V6 STRESS TELEMETRY
+workers=64
+duration_s=4
+cpu_pressure_estimated_pct=100.00
+memory_peak_pct=70.77
+target_pct=99.00
+status=TARGET_REACHED
+~/.../quantum/nqubit_v6_integration$ 

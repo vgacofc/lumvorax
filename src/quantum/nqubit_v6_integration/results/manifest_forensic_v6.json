@@ -1,0 +1,63 @@
+{
+  "version": "v6",
+  "generated_at_utc": "2026-03-02T16:40:01.443007+00:00",
+  "source_of_truth": "manifest_forensic_v6.json (signed)",
+  "hash_algo": "sha256",
+  "artifacts": [
+    {
+      "file": "/home/runner/workspace/src/quantum/nqubit_v6_integration/results/.gitignore",
+      "sha256": "eef48e8788e8d8c98b1132c9ef3294ae77f759af05b662bccd0f5b27966040dd",
+      "bytes": 24
+    },
+    {
+      "file": "/home/runner/workspace/src/quantum/nqubit_v6_integration/results/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "file": "/home/runner/workspace/src/quantum/nqubit_v6_integration/results/ADC_REAL_HARDWARE_CAPTURE_V6.json",
+      "sha256": "57c2de34157d68cb85bf4896199a1763e6e20ffe0550e2709b37e162b370927a",
+      "bytes": 1801
+    },
+    {
+      "file": "/home/runner/workspace/src/quantum/nqubit_v6_integration/results/a_to_z_run_summary.json",
+      "sha256": "fed26211681a4c41e7adef1332cfaa1f51bc1f90956d713d132a1d3e9a0544de",
+      "bytes": 2643
+    },
+    {
+      "file": "/home/runner/workspace/src/quantum/nqubit_v6_integration/results/hardware_entropy_random_v6.bin",
+      "sha256": "038a60c04fd02c8f6a51a2e4d648da377062ee91dcb5f34db33969bf217267ea",
+      "bytes": 32768
+    },
+    {
+      "file": "/home/runner/workspace/src/quantum/nqubit_v6_integration/results/hardware_entropy_urandom_v6.bin",
+      "sha256": "dae6c7c2cdf579477ca129f3edfcf312afa4ba88ac8cd7f655bcd1531f758292",
+      "bytes": 32768
+    },
+    {
+      "file": "/home/runner/workspace/src/quantum/nqubit_v6_integration/results/hardware_jitter_samples_v6.csv",
+      "sha256": "d72b8d7ccde006dd5e2d2cef50c5272e4023a9dc7c4ead01572bac7a6e4e71ec",
+      "bytes": 488830
+    },
+    {
+      "file": "/home/runner/workspace/src/quantum/nqubit_v6_integration/results/line_by_line_comparison_v6.json",
+      "sha256": "5a8c7ad32df2e2fef77401986547a01cd8a6bb4ab025ed04b1d1852d824806e3",
+      "bytes": 3656
+    },
+    {
+      "file": "/home/runner/workspace/src/quantum/nqubit_v6_integration/results/line_by_line_comparison_v6.md",
+      "sha256": "40c0433b37b29caee98bd80acee1525008a4d489be623716ed69458d8e8c5334",
+      "bytes": 1228
+    },
+    {
+      "file": "/home/runner/workspace/src/quantum/nqubit_v6_integration/results/stress_telemetry_v6.log",
+      "sha256": "29d5d8293e7c1f39e62eb1a445481410b1d271f8540fd374e833d77918f8a4f8",
+      "bytes": 141
+    },
+    {
+      "file": "/home/runner/workspace/src/quantum/nqubit_v6_integration/results/system_metrics_v6.json",
+      "sha256": "906853fe2e6a3bed0886f2a53514921d46330c3d3fdb9a9530191cc5ee99f19e",
+      "bytes": 14934
+    }
+  ]
+}

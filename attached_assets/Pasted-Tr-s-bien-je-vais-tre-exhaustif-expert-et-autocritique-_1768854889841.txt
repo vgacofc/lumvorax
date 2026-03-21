@@ -1,0 +1,297 @@
+Très bien — je vais être **exhaustif, expert et autocritique**, comme demandé.
+Ce qui suit est **la liste complète et structurée de TOUTES les informations encore manquantes**, **POURQUOI elles sont nécessaires**, et **LES QUESTIONS ULTRA-DÉTAILLÉES** que **l’agent Replit doit absolument poser / documenter** dans son **rapport `.md` pédagogique** (prompt inclus), afin que je puisse produire un **benchmark et une analyse forensique *maximale***, sans angles morts.
+
+---
+
+# 🎯 OBJECTIF GLOBAL
+
+👉 Permettre une **analyse ultra-détaillée, reproductible, falsifiable et comparable**
+👉 Éliminer toute ambiguïté sur :
+
+* ce qui est mesuré
+* comment c’est mesuré
+* pourquoi c’est mesuré
+* ce qui **n’est pas** mesuré (zones d’ignorance explicites)
+
+---
+
+# 🧱 CATÉGORIE 1 — CONTEXTE SYSTÈME (ABSOLUMENT CRITIQUE)
+
+### ❌ Informations manquantes
+
+Sans cela, **toute métrique brute est ininterprétable**.
+
+### Questions à poser (obligatoires)
+
+1. **Matériel exact**
+
+   * CPU (modèle précis, micro-architecture, stepping)
+   * Nombre de cœurs / threads
+   * Fréquences (base / turbo / throttling observé)
+   * Cache L1/L2/L3 (taille exacte par cœur / partagé)
+   * NUMA ? (oui/non, topologie)
+
+2. **Mémoire**
+
+   * Taille totale RAM
+   * Type (DDR4 / DDR5)
+   * Fréquence réelle
+   * Canaux actifs
+   * Huge pages activées ? (oui/non)
+
+3. **Stockage**
+
+   * Type (NVMe / SSD / tmpfs / RAMDisk)
+   * FS (ext4, xfs, tmpfs…)
+   * Mode sync / async
+   * Barrières d’écriture activées ?
+
+4. **OS & Kernel**
+
+   * OS exact + version
+   * Kernel version
+   * Gouverneur CPU (performance / powersave)
+   * Paramètres kernel modifiés ?
+
+👉 **Sans ces réponses** :
+⚠️ impossible de comparer à HPC, Kaggle, ou littérature.
+
+---
+
+# 🧱 CATÉGORIE 2 — DÉFINITION PRÉCISE DU WORKLOAD
+
+### ❌ Problème courant
+
+> On mesure *quelque chose*, mais on ne sait pas **quoi exactement**.
+
+### Questions indispensables
+
+5. **Nature du workload**
+
+   * CPU-bound / Memory-bound / I/O-bound ?
+   * Déterministe ou stochastique ?
+   * Calcul dense ou accès aléatoires ?
+
+6. **Taille du problème**
+
+   * Taille d’entrée exacte
+   * Complexité théorique attendue (O(n), O(n log n), etc.)
+   * Taille du working set (en MB / GB)
+
+7. **Warm-up**
+
+   * Y a-t-il une phase de warm-up ?
+   * Les mesures incluent-elles la compilation JIT / cache warm ?
+
+8. **Répétitions**
+
+   * Combien de runs ?
+   * Moyenne / médiane / variance ?
+   * Outliers conservés ou supprimés ?
+
+👉 Sans ça :
+⚠️ impossible d’évaluer stabilité, variance, reproductibilité.
+
+---
+
+# 🧱 CATÉGORIE 3 — MÉTRIQUES MANQUANTES (PERFORMANCE PURE)
+
+### ❌ Actuellement manquant ou partiel
+
+### Questions ultra-détaillées à poser
+
+9. **CPU micro-architectural**
+
+   * Instructions par type (FP, INT, SIMD)
+   * Vectorisation réelle (AVX2 ? AVX-512 ?)
+   * Branch misprediction rate
+   * Pipeline stalls (frontend / backend)
+
+10. **Mémoire**
+
+* Cache misses par niveau (L1/L2/L3)
+* TLB misses
+* Load vs store ratio
+* Accès séquentiels vs aléatoires
+
+11. **Scalabilité**
+
+* Scaling 1 → N threads (table complète)
+* Speedup réel vs théorique
+* Saturation observée ?
+
+12. **Contention**
+
+* Locks utilisés ?
+* Temps bloqué ?
+* Faux-partage détecté ?
+
+👉 Ces métriques sont **standard HPC**
+👉 Sans elles, on reste **qualitatif**, pas scientifique.
+
+---
+
+# 🧱 CATÉGORIE 4 — LOGGING & FORENSIQUE (ZONE CRITIQUE)
+
+### ❌ Manque d’informations sur le coût réel
+
+### Questions indispensables
+
+13. **Coût du logging**
+
+* Overhead % avec logging ON vs OFF
+* Temps CPU consommé par le logging
+* Allocation mémoire due aux logs
+
+14. **Granularité**
+
+* Logs par événement ? par batch ?
+* Taille moyenne d’un log
+* Compression ? (oui/non)
+
+15. **Durabilité**
+
+* Sync fsync ? flush manuel ?
+* Crash simulation testée ?
+* Temps de replay des logs ?
+
+👉 Sans cela :
+⚠️ impossible de juger si la performance est *réelle* ou masquée.
+
+---
+
+# 🧱 CATÉGORIE 5 — VALIDITÉ STATISTIQUE
+
+### ❌ Souvent totalement absente
+
+### Questions critiques
+
+16. **Variance**
+
+* Écart-type des métriques ?
+* P95 / P99 ?
+* Distribution observée ?
+
+17. **Bruit système**
+
+* Autres processus actifs ?
+* Isolation CPU (taskset / cgroups) ?
+* Hyper-threading activé ?
+
+18. **Effet cache OS**
+
+* Drop caches entre runs ?
+* Page cache influent ?
+
+👉 Sans cela :
+⚠️ impossible de distinguer signal / bruit.
+
+---
+
+# 🧱 CATÉGORIE 6 — COMPARABILITÉ & BASELINES
+
+### ❌ Point fondamental encore manquant
+
+### Questions à poser
+
+19. **Baseline**
+
+* Implémentation naïve équivalente ?
+* Version sans optimisations ?
+* Version sans logging ?
+
+20. **Comparaison externe**
+
+* Comparé à quoi ?
+* Même workload sur une autre machine ?
+* Résultats connus dans la littérature ?
+
+👉 Sans baseline :
+⚠️ aucune conclusion relative possible.
+
+---
+
+# 🧱 CATÉGORIE 7 — PROMPT & AGENT (ESSENTIEL POUR IA)
+
+### ❌ Information clé absente
+
+### Questions à documenter mot-pour-mot
+
+21. **Prompt exact**
+
+* Prompt système
+* Prompt utilisateur
+* Instructions cachées ?
+* Règles de refus / sécurité ?
+
+22. **Mode d’inférence**
+
+* Température
+* Top-k / top-p
+* Seed fixé ou non ?
+
+23. **Autonomie de l’agent**
+
+* Peut-il modifier le code ?
+* Peut-il relancer ?
+* Peut-il ignorer des métriques ?
+
+👉 Sans le prompt :
+⚠️ toute analyse IA est invalide.
+
+---
+
+# 🧱 CATÉGORIE 8 — LIMITES & ÉCHECS (OBLIGATOIRE)
+
+### ❌ Toujours manquant, mais essentiel
+
+### Questions clés
+
+24. **Cas d’échec**
+
+* Quand ça échoue ?
+* Pourquoi ?
+* Logs d’erreur complets ?
+
+25. **Limites connues**
+
+* Taille max supportée ?
+* Cas dégénérés ?
+* Instabilités connues ?
+
+👉 Un benchmark **sans échecs documentés = non crédible**.
+
+---
+
+# 🧠 SYNTHÈSE FINALE — CE QU’IL MANQUE ENCORE
+
+Pour une **analyse ultra-détaillée totale**, il manque encore :
+
+✅ Le **contexte matériel exact**
+✅ La **définition mathématique et algorithmique du workload**
+✅ Les **métriques micro-architecturales**
+✅ La **variance statistique complète**
+✅ Les **baselines comparatives**
+✅ Le **prompt exact de l’agent**
+✅ Les **échecs et limites documentés**
+
+---
+
+## 📌 PROCHAINE ÉTAPE RECOMMANDÉE
+
+👉 Je te recommande que l’agent Replit produise **un fichier unique** :
+
+```
+benchmark_report.md
+```
+
+structuré exactement selon **les catégories ci-dessus**, **avec tableaux, chiffres bruts, logs, et prompts inclus**.
+
+Une fois fourni, je pourrai :
+
+* faire une **analyse forensique complète**
+* produire une **comparaison HPC / Kaggle / académique**
+* identifier **ce qui est réellement exceptionnel vs illusion de benchmark**
+* proposer **les optimisations réellement manquantes**
+
+Si tu veux, au prochain message, je peux aussi te fournir **le template `.md` exact à imposer à l’agent Replit**, ligne par ligne.

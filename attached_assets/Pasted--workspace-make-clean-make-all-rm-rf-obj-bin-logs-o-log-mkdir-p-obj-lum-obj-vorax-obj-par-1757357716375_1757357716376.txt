@@ -1,0 +1,24 @@
+~/workspace$ make clean && make all
+rm -rf obj bin logs *.o *.log
+mkdir -p obj/lum obj/vorax obj/parser obj/binary obj/logger obj/optimization obj/parallel obj/metrics obj/crypto obj/persistence obj/debug
+clang -Wall -Wextra -std=c99 -O2 -g -D_GNU_SOURCE -c src/main.c -o obj/main.o
+clang -Wall -Wextra -std=c99 -O2 -g -D_GNU_SOURCE -c src/lum/lum_core.c -o obj/lum/lum_core.o
+clang -Wall -Wextra -std=c99 -O2 -g -D_GNU_SOURCE -c src/vorax/vorax_operations.c -o obj/vorax/vorax_operations.o
+clang -Wall -Wextra -std=c99 -O2 -g -D_GNU_SOURCE -c src/parser/vorax_parser.c -o obj/parser/vorax_parser.o
+clang -Wall -Wextra -std=c99 -O2 -g -D_GNU_SOURCE -c src/binary/binary_lum_converter.c -o obj/binary/binary_lum_converter.o
+clang -Wall -Wextra -std=c99 -O2 -g -D_GNU_SOURCE -c src/logger/lum_logger.c -o obj/logger/lum_logger.o
+clang -Wall -Wextra -std=c99 -O2 -g -D_GNU_SOURCE -c src/optimization/memory_optimizer.c -o obj/optimization/memory_optimizer.o
+clang -Wall -Wextra -std=c99 -O2 -g -D_GNU_SOURCE -c src/optimization/pareto_optimizer.c -o obj/optimization/pareto_optimizer.o
+clang -Wall -Wextra -std=c99 -O2 -g -D_GNU_SOURCE -c src/optimization/pareto_inverse_optimizer.c -o obj/optimization/pareto_inverse_optimizer.o
+clang -Wall -Wextra -std=c99 -O2 -g -D_GNU_SOURCE -c src/optimization/simd_optimizer.c -o obj/optimization/simd_optimizer.o
+clang -Wall -Wextra -std=c99 -O2 -g -D_GNU_SOURCE -c src/optimization/zero_copy_allocator.c -o obj/optimization/zero_copy_allocator.o
+clang -Wall -Wextra -std=c99 -O2 -g -D_GNU_SOURCE -pthread -c src/parallel/parallel_processor.c -o obj/parallel/parallel_processor.o
+clang -Wall -Wextra -std=c99 -O2 -g -D_GNU_SOURCE -c src/metrics/performance_metrics.c -o obj/metrics/performance_metrics.o
+clang -Wall -Wextra -std=c99 -O2 -g -D_GNU_SOURCE -c src/crypto/crypto_validator.c -o obj/crypto/crypto_validator.o
+clang -Wall -Wextra -std=c99 -O2 -g -D_GNU_SOURCE -c src/persistence/data_persistence.c -o obj/persistence/data_persistence.o
+clang -Wall -Wextra -std=c99 -O2 -g -D_GNU_SOURCE  -c src/debug/memory_tracker.c -o obj/debug/memory_tracker.o
+clang obj/main.o obj/lum/lum_core.o obj/vorax/vorax_operations.o obj/parser/vorax_parser.o obj/binary/binary_lum_converter.o obj/logger/lum_logger.o obj/optimization/memory_optimizer.o obj/optimization/pareto_optimizer.o obj/optimization/pareto_inverse_optimizer.o obj/optimization/simd_optimizer.o obj/optimization/zero_copy_allocator.o obj/parallel/parallel_processor.o obj/metrics/performance_metrics.o obj/crypto/crypto_validator.o obj/persistence/data_persistence.o obj/debug/memory_tracker.o -o bin/lum_vorax -lpthread -lm
+/nix/store/x7w0rmkaam7aikclyhwdbn8wmmq29ma6-binutils-2.44/bin/ld: cannot open output file bin/lum_vorax: No such file or directory
+clang-14: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [Makefile:83: bin/lum_vorax] Error 1
+~/workspace$

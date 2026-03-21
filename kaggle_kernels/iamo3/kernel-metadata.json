@@ -1,0 +1,13 @@
+{
+  "id": "gabrielchavesreinann/nx47-iamo3",
+  "title": "NX-47 IAMO3",
+  "code_file": "script.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": "true",
+  "enable_gpu": "true",
+  "enable_internet": "true",
+  "dataset_sources": ["kaggle/ai-mathematical-olympiad-progress-prize-3"],
+  "competition_sources": [],
+  "kernel_sources": []
+}

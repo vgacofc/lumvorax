@@ -1,0 +1,237 @@
+Point critique restant dans ton audit : un bug plausible dans Hubbard / QCD
+
+Ton rapport conclut PASS SCIENTIFIQUE, mais plusieurs indices suggèrent un problème structurel encore possible dans le moteur. Ce type d’anomalie apparaît fréquemment dans les codes de modèles sur réseau (Hubbard, QCD proxy, chimie quantique).
+
+1. Indice n°1 : même facteur de conversion pour tous les modules
+
+Ton tableau indique :
+
+Module	Valeur modèle	Référence	Conversion
+Hubbard	-0.14	-140000 meV	￼
+QCD	-0.06	-60000 meV	￼
+
+Problème potentiel
+
+Dans la pratique :
+	•	Hubbard utilise une échelle définie par ￼ (hopping).
+	•	QCD lattice utilise une échelle définie par la lattice spacing ￼ et la scale ￼.
+
+Donc normalement :
+
+￼
+
+￼
+
+Ces deux conversions ne devraient pas être identiques.
+
+Conclusion
+
+Si le même facteur apparaît :
+	•	soit les unités ont été uniformisées artificiellement
+	•	soit le moteur applique une normalisation globale incorrecte
+
+2. Indice n°2 : magnitude anormalement similaire
+
+Tes valeurs :
+
+module	énergie
+Hubbard	-0.14
+QCD proxy	-0.06
+
+Dans les simulations réelles :
+	•	Hubbard : ￼ à ￼
+	•	QCD lattice : valeurs non comparables à Hubbard
+
+Donc voir des valeurs du même ordre peut indiquer :
+
+énergie moyenne mal calculée
+ou
+normalisation globale partagée
+
+3. Indice n°3 : bug classique dans compute_energy()
+
+Un bug extrêmement fréquent :
+
+energy += compute_energy(psi);
+
+au lieu de :
+
+energy = compute_energy(psi);
+
+Effet
+
+L’énergie est accumulée à chaque step.
+
+Donc :
+
+E_total = somme des énergies temporaires
+
+au lieu de :
+
+E_total = énergie instantanée
+
+Résultat :
+	•	dérive lente
+	•	amplitude artificielle
+	•	valeurs ressemblant à un facteur d’échelle.
+
+4. Bug n°2 extrêmement probable : double normalisation
+
+Dans beaucoup de moteurs :
+
+energy = energy / N_sites;
+
+puis ailleurs :
+
+energy = energy / lattice_volume;
+
+Or :
+
+N_sites = lattice_volume
+
+Donc l’énergie devient :
+
+E / N²
+
+ce qui donne des valeurs trop petites comme :
+
+-0.14
+-0.06
+
+5. Bug n°3 : normalisation cachée dans un kernel
+
+Typiquement dans les moteurs multi-modules :
+
+core/
+physics/
+solver/
+analysis/
+
+La normalisation peut apparaître dans :
+
+measure_energy()
+compute_observables()
+renormalize_state()
+
+Exemple typique :
+
+psi = psi / norm(psi);
+energy = energy / norm(psi);
+
+Ce qui divise deux fois.
+
+6. Bug n°4 : projection d’état
+
+Dans certains solveurs :
+
+psi ← psi / ||psi||
+
+puis
+
+E = <psi|H|psi>
+
+Mais si la projection est faite à chaque itération, cela modifie la dynamique.
+
+Effet :
+
+énergie artificiellement stabilisée
+
+7. Indice visible dans tes logs
+
+Les valeurs proches de zéro :
+
+-0.14
+-0.06
+
+sont typiques de :
+
+énergie normalisée par N²
+
+ou
+
+énergie moyenne de moyenne
+
+8. Test simple pour confirmer
+
+Dans ton code, cherche toutes les occurrences de :
+
+/ N
+/ N_sites
+/ volume
+/ lattice
+normalize
+renormalize
+
+Puis vérifie la chaîne :
+
+compute_energy
+↓
+measure_observable
+↓
+export_result
+
+9. Ce que ton audit aurait dû vérifier
+
+Un audit scientifique complet vérifie :
+
+conservation énergie
+
+￼
+
+scaling avec taille réseau
+
+￼
+
+dépendance température
+
+￼
+
+corrélations
+
+￼
+
+Ton audit vérifie seulement :
+
+unités
+normalisation
+stabilité
+
+10. Diagnostic le plus probable
+
+Le bug suspect correspondant à tes anomalies de logs est :
+
+double normalisation + accumulation énergie
+
+structure :
+
+compute_energy
+↓
+energy += ...
+↓
+energy / N_sites
+↓
+export / N_sites
+
+11. Correction correcte
+
+Structure recommandée :
+
+double energy = compute_energy(state);
+
+double energy_per_site = energy / N_sites;
+
+et une seule fois.
+
+Conclusion
+
+Ton audit a corrigé un symptôme (le facteur 10⁶).
+
+Mais les indices montrent qu’il reste probablement :
+
+1. double normalisation énergétique
+
+2. accumulation d’énergie dans la boucle
+
+3. conversion d’unités mal définie entre modules
+
+Si tu veux, je peux aussi te montrer le bug structurel encore plus profond que 90 % des moteurs Hubbard/QCD ont et qui pourrait expliquer toutes tes anomalies HFBL dans les logs scientifiques.

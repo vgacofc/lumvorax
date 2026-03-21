@@ -1,0 +1,14 @@
+je te demandé d'etre super ultra mega inteligent et logique !!!! donc, si tu a creer des nouveau nom alors quil existait deja, tu utilise et tu modifie les nom pour utiliser les nom d'orige a chaque fois et tu ilimine les nouveau inutil por na pas creer de doublons inutil! tu ne modifie pas les ancien nom, si non, il tu va tout caser a devoir modifier tout les nom dans chaque module des autre projet qui depende et utilise les nom d'origine. donc fai le chose de maniere inteligente et logique !
+
+NON, JE NE VEUX PAS QUE TU REDUISE QUOI QUE CE SOIT  DE CELA du sistem de logging, au contraire tu ajoute encore plus la ou il manque!!( Pour corriger ça, je dois soit réduire la fréquence du logging step-by-step en enregistrant seulement 1 étape sur N, soit désactiver les fflush immédiats en faveur d'un buffering, soit augmenter simplement le timeout du workflow. Je vais maintenant générer le rapport d'analyse.)
+C'EST TOI QUI A UN TIMEOUT, DONC TU DOIS TAJUSTER TOI POUR VERIFIER LE RUN AVANT QUE TON TIME OUT T'ARRETE!
+
+JE MON FU DE LA TAILLE, DU TEMPS QUE ÇA PRENDRA ! TU UTILISE TOUT LES RESOURCE DISPONIBLE DE RAM, CPU, DISK A 99% DE LEUR CPACITER ! LA PIORITER EST LA TOTAL TRAÇABILITER DU PROJET DE A a Z, DU PLUS HAUT NIVEAU, JUSQUAU PLUS BAS NIVEUA DETETCER! A CHAQUE RUNE IDENTIFIER OU INTEGRER LES NOUVEAU LOG POUR CAPTURE LE MAXIMUM D'INFORMATION ET DETECETER TOU LE BUG CACHÉ !
+
+TU FAIS LES LOG CE FAIRE ENREGISTRER EN TEMPS REEL ET TU FAIS EN SORTE QUE UN DEUXIEME RUN SOIT LANCE SI ÇA SARRETE D'UN COUT AUTOMATIQUMENT, A PARTIR DU PROCESUS DU MOMMENT OU LE RUN C'EST SARRETER POUR CONTINUER L'ENREGISTREMENT EN TEMPS REEL DE MEME POINT OU ÇA CEST ARRETER JUSCA FINALISATION a 100%, MAIS TU NE REDUIT AUCUN LOG !! CELA EST EXPLICITEMENT DEMANDER ET EXIGER DANS LES RAPPRT PRECEDENT ET CELA DOIT ETRE AJOUTER DANS L'ENTETE DE RAPPORT POUR QUE TU NE LOUBLIE PLUS!!
+
+
+VOICI CE QUI A ÉTÉ DEMANDER : voici tout ce qui ÉTÉ DEJA FAIS ET DEMANDER : src/advanced_calculations/quantum_problem_hubbard_hts/CHAT/analysechatgpt32.1.md ET VOICI CE LE RAPPORT PRECEDENT DE CE QUI A ÉTÉ DEMANDER DE FAIRE ET TERMINER : src/advanced_calculations/quantum_problem_hubbard_hts/CHAT/analysechatgpt32.md, DONC VERIFIE LES RESULTAT DE LA DERNIER EXECUTION POUR VALIDER OU INVALISER LES CORRECTION ET IMPLEMENTATION APPLIQUER ET REPONDRE TOUJOUR EN FRANCAIS DANS TA ZONE DE TEXTE DE REFLEXION DANS LES CHAT ICI MEME
+
+
+2530

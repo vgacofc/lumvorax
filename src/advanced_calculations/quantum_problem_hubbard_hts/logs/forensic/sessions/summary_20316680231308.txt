@@ -1,0 +1,27 @@
+=== RAPPORT RÉSUMÉ FORENSIQUE ULTRA-STRICT v3.0 ===
+Timestamp: 20316680231308 | Modules: 18
+
+Hardware final: cpu_delta=0.00% mem_used=51.78% rss=7472KB peak=10092KB
+
+  hubbard_hts_fullscale: metrics=0 ops=0 anomalies=0 mem=0
+  simulate_fs: metrics=2136 ops=0 anomalies=0 mem=0
+  benchmark_qmc: metrics=6 ops=0 anomalies=0 mem=0
+  trace:log_path: metrics=1 ops=0 anomalies=0 mem=0
+  trace:raw_csv: metrics=1 ops=0 anomalies=0 mem=0
+  trace:tests_csv: metrics=1 ops=0 anomalies=0 mem=0
+  trace:qa_csv: metrics=1 ops=0 anomalies=0 mem=0
+  trace:provenance: metrics=1 ops=0 anomalies=0 mem=0
+  trace:bench_csv: metrics=1 ops=0 anomalies=0 mem=0
+  trace:bench_csv_modules: metrics=1 ops=0 anomalies=0 mem=0
+  trace:bench_ref: metrics=1 ops=0 anomalies=0 mem=0
+  trace:bench_ref_modules: metrics=1 ops=0 anomalies=0 mem=0
+  trace:module_meta_csv: metrics=1 ops=0 anomalies=0 mem=0
+  trace:detailed_csv: metrics=1 ops=0 anomalies=0 mem=0
+  trace:numeric_stability_csv: metrics=1 ops=0 anomalies=0 mem=0
+  trace:toy_csv: metrics=1 ops=0 anomalies=0 mem=0
+  trace:temporal_csv: metrics=1 ops=0 anomalies=0 mem=0
+  trace:comparison_report: metrics=1 ops=0 anomalies=0 mem=0
+
+Totaux: metrics=2157 ops=0 anomalies=0
+
+=== FIN RAPPORT RÉSUMÉ ===

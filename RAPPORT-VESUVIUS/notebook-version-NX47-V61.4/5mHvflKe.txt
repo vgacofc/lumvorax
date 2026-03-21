@@ -1,0 +1,107 @@
+10.5s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+10.5s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+10.5s 3 0.00s - to python to disable frozen modules.
+10.5s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+11.3s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+11.3s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+11.3s 7 0.00s - to python to disable frozen modules.
+11.3s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+15.4s 9 Looking in links: /kaggle/input/nx47-dependencies
+15.5s 10 Processing /kaggle/input/nx47-dependencies/imagecodecs-2026.1.14-cp311-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl
+15.6s 11 Looking in links: /kaggle/input/nx47-dependencies
+15.6s 12 Processing /kaggle/input/nx47-dependencies/imagecodecs-2026.1.14-cp311-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl
+15.9s 13 Requirement already satisfied: numpy in /usr/local/lib/python3.12/dist-packages (from imagecodecs) (2.0.2)
+16.1s 14 Requirement already satisfied: numpy in /usr/local/lib/python3.12/dist-packages (from imagecodecs) (2.0.2)
+17.8s 15 Installing collected packages: imagecodecs
+18.0s 16 Installing collected packages: imagecodecs
+18.3s 17 Successfully installed imagecodecs-2026.1.14
+18.5s 18 Successfully installed imagecodecs-2026.1.14
+19.4s 19 Looking in links: /kaggle/input/nx47-dependencies
+19.4s 20 Requirement already satisfied: tifffile in /usr/local/lib/python3.12/dist-packages (2025.10.16)
+19.4s 21 Requirement already satisfied: numpy in /usr/local/lib/python3.12/dist-packages (from tifffile) (2.0.2)
+19.6s 22 Looking in links: /kaggle/input/nx47-dependencies
+19.6s 23 Requirement already satisfied: tifffile in /usr/local/lib/python3.12/dist-packages (2025.10.16)
+19.6s 24 Requirement already satisfied: numpy in /usr/local/lib/python3.12/dist-packages (from tifffile) (2.0.2)
+25.5s 25 [1771555675558025920][SEQ:000001] LOGGER_INIT {"gpu": true}
+25.5s 26 [1771555675594099677][SEQ:000001][SYSTEM][6c8f740621977d7e] LOGGER_V28_INIT | DATA: {"session": "dab2cd7005808a37"}
+25.7s 27 [1771555675595113457][SEQ:000002] NX47_OK {}
+25.7s 28 [1771555675615283524][SEQ:000003] AIMO3_OK {}
+25.9s 29 [1771555675837048625][SEQ:000004] FILES_READY {"count": 1, "run_tag": "v61.3-default"}
+29.2s 30 [1771555679309618085][SEQ:000002][INFO][73fe0ba924bea309] BLOC1_START: Performance brute CPU/Mémoire
+29.2s 31 [1771555679310440616][SEQ:000003][INFO][4a319b18b2f5464a] BLOC1_TEST_CREATE_DESTROY: iterations=10000
+29.2s 32 [1771555679328024989][SEQ:000004][METRIC][ebb150e0f2c3a53a] METRIC: B1_CREATE_DESTROY_OPS_SEC=1370220.7727113408ops/s
+29.2s 33 [1771555679328573186][SEQ:000005][METRIC][19ae927c7c63875c] METRIC: B1_CREATE_DESTROY_MEAN=729.8094ns
+29.2s 34 [1771555679329469469][SEQ:000006][INFO][2da979818fea746f] BLOC1_TEST_MOVE: size=1024, iterations=5000
+29.2s 35 [1771555679333502711][SEQ:000007][METRIC][ce4e68d7355165d4] METRIC: B1_MOVE_THROUGHPUT=3.3254462235726074GB/s
+29.2s 36 [1771555679334278904][SEQ:000008][INFO][19f7da2bf8ce2fa5] BLOC1_TEST_FUSE: n_elements=100, iterations=1000
+29.2s 37 [1771555679367403033][SEQ:000009][METRIC][d45d2201158e349e] METRIC: B1_FUSE_ELEM_SEC=9162457.891634144elem/s
+29.2s 38 [1771555679368289073][SEQ:000010][INFO][1a2a5052936d6981] BLOC1_TEST_SPLIT: size=4096, splits=8, iterations=1000
+29.2s 39 [1771555679371689310][SEQ:000011][METRIC][e963ceea6caf6da7] METRIC: B1_SPLIT_PER_SEC=4937671.159741686splits/s
+29.2s 40 [1771555679372263692][SEQ:000012][INFO][2efa4c6b851fd164] BLOC1_TEST_ALIGN_AB: size=8192, iterations=2000
+29.6s 41 [1771555679706298672][SEQ:000013][METRIC][f44806990cd668b9] METRIC: B1_ALIGN_SPEEDUP=0.7423279656507472x
+29.6s 42 [1771555679707359171][SEQ:000014][INFO][e26983c552d1cc9b] BLOC1_TEST_SCALING: base_work=10000, threads=[1, 2, 4]
+29.6s 43 [1771555679711661865][SEQ:000015][METRIC][03b6a0806a8ade31] METRIC: B1_SCALING_2T_EFF=51.889360175984%
+29.6s 44 [1771555679712452968][SEQ:000016][INFO][d03434b5011046bb] BLOC1_COMPLETE | DATA: {"tests": 6}
+29.6s 45 [1771555679713288126 ns][AUDIT] SOLVER_INIT: sum all values
+29.8s 46 [1771555679744986480][SEQ:000005] FUSION_SCORE_GLOBAL {"file": "1407735.tif", "score": 0.0}
+35.2s 47 [1771555685111837366][SEQ:000006] FILE_DONE {"file": "1407735.tif", "checksum": "1ffbed07500aba29", "slices": 320}
+35.3s 48 
+35.3s 49 ===== SLICE SUMMARY (ALL FILES) =====
+35.3s 50 latency_ms                                 fusion_score            \
+35.3s 51 count       mean      min         max        count mean  min
+35.3s 52 file
+35.3s 53 1407735.tif        320  14.654469  8.31673  1147.14812          320  0.0  0.0
+35.3s 54 
+35.3s 55 weight            ...       p_hi             p_lo             \
+35.3s 56 max  count      mean  ...        min        max count       mean
+35.3s 57 file                               ...
+35.3s 58 1407735.tif  0.0    320  0.181828  ...  90.633904  92.407372   320  85.542331
+35.3s 59 
+35.3s 60 w_mean
+35.3s 61 min        max  count      mean       min       max
+35.3s 62 file
+35.3s 63 1407735.tif  84.633904  86.407372    320  0.109108  0.098496  0.120121
+35.3s 64 
+35.3s 65 [1 rows x 24 columns]
+35.3s 66 
+35.3s 67 ===== GLOBAL SLICE MEAN (ALL FILES) =====
+35.3s 68 14.654468971875 ms
+35.3s 69 
+35.3s 70 ===== FILE CHECKSUMS =====
+35.3s 71 file         checksum  slices
+35.3s 72 1407735.tif 1ffbed07500aba29     320
+35.3s 73 [1771555685436617761][SEQ:000007] SUBMISSION_READY {"zip": "/kaggle/working/submission.zip"}
+35.3s 74 [1771555685436682318][SEQ:000008] EXEC_COMPLETE {}
+35.3s 75 READY: /kaggle/working/submission.zip
+35.9s 76 Traceback (most recent call last):
+35.9s 77 File "<string>", line 1, in <module>
+35.9s 78 File "/usr/local/lib/python3.12/dist-packages/papermill/execute.py", line 131, in execute_notebook
+35.9s 79 raise_for_execution_errors(nb, output_path)
+35.9s 80 File "/usr/local/lib/python3.12/dist-packages/papermill/execute.py", line 251, in raise_for_execution_errors
+35.9s 81 raise error
+35.9s 82 papermill.exceptions.PapermillExecutionError:
+35.9s 83 ---------------------------------------------------------------------------
+35.9s 84 Exception encountered at "In [2]":
+35.9s 85 ---------------------------------------------------------------------------
+35.9s 86 NameError                                 Traceback (most recent call last)
+35.9s 87 /tmp/ipykernel_24/2322689662.py in <cell line: 0>()
+35.9s 88 15      "duration": 22.879743,
+35.9s 89 16      "end_time": "2026-02-18T16:15:47.092598",
+35.9s 90 ---> 17      "exception": false,
+35.9s 91 18      "start_time": "2026-02-18T16:15:24.212855",
+35.9s 92 19      "status": "completed"
+35.9s 93 
+35.9s 94 NameError: name 'false' is not defined
+35.9s 95 
+38.0s 96 /usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+38.0s 97 cells[i][c] = re.sub('\\\\\|', '|', cell)
+38.2s 98 /usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+38.2s 99 text = re.sub(r'_', '\_', text) # Escape underscores in display text
+39.0s 100 /usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=["remove_papermill_header.RemovePapermillHeader"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.
+39.0s 101 warn(
+39.0s 102 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+39.3s 103 [NbConvertApp] Writing 49544 bytes to __notebook__.ipynb
+41.8s 104 /usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=["nbconvert.preprocessors.ExtractOutputPreprocessor"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.
+41.8s 105 warn(
+41.8s 106 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+42.7s 107 [NbConvertApp] Writing 415306 bytes to __results__.html

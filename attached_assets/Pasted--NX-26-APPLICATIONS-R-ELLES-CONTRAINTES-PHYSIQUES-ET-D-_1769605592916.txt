@@ -1,0 +1,178 @@
+# NX-26 — APPLICATIONS RÉELLES, CONTRAINTES PHYSIQUES ET DÉPLOIEMENT
+
+## 0. Principe directeur (non négociable)
+
+NX-26 **n’explore plus la preuve**, mais l’**usage réel** sous contraintes physiques strictes.
+Aucune promesse métaphysique, aucune cognition magique, aucun discours AGI.
+
+> **NX-26 = cognition dissipative utile, locale, mortelle et traçable.**
+
+---
+
+## 1. Objectif scientifique de NX-26
+
+### 1.1 Objectif central
+
+Valider que les propriétés établies en NX-24 / NX-25 permettent :
+
+* des **applications fonctionnelles réelles**,
+* robustes au bruit, à la perte partielle et à l’usure,
+* **sans transport d’identité**,
+* **avec héritage fonctionnel mesurable**.
+
+### 1.2 Hypothèse testée
+
+> Une cognition dissipative mortelle mais traçable est **plus robuste et plus fiable** qu’un système logique stateless pour certaines classes de tâches réelles.
+
+---
+
+## 2. Domaines d’application autorisés (sans bullshit)
+
+### 2.1 Pilotage adaptatif sous bruit
+
+**Cas réel** : contrôle de systèmes instables.
+
+* Robot logiciel
+* Régulation énergétique
+* Routage adaptatif
+
+Pourquoi NX ?
+
+* Tolérance au jitter
+* Décision locale
+* Hystérésis utile
+
+### 2.2 Détection de ruptures et anomalies
+
+**Cas réel** : systèmes qui doivent *sentir* quand quelque chose casse.
+
+* Réseaux
+* Capteurs industriels
+* Sécurité
+
+Pourquoi NX ?
+
+* Mémoire dissipative
+* Signature de rupture irréversible
+
+### 2.3 Apprentissage par héritage (sans modèle)
+
+**Cas réel** : transfert de compétence sans état caché.
+
+* Agents successifs
+* Environnements changeants
+
+Pourquoi NX ?
+
+* FIS mesurable
+* IDS explicitement brisé
+
+---
+
+## 3. Architecture NX-26 (figée)
+
+### 3.1 Contraintes matérielles
+
+* CPU standard (Replit, VM cloud)
+* Pas de GPU requis
+* Pas de TPU
+* Pas de hardware exotique
+
+### 3.2 Contraintes logicielles
+
+* C++ natif
+* Logs NX obligatoires
+* Merkle SHA-256 actif
+* Horodatage monotone
+
+### 3.3 Interdictions formelles
+
+* Snapshot identitaire
+* Restore d’état global
+* Serialization complète
+
+---
+
+## 4. Nouvelles métriques NX-26
+
+### 4.1 USE (Useful Survival Efficiency)
+
+Capacité à rester fonctionnel **sous dégradation progressive**.
+
+### 4.2 RDL (Recovery Dissipative Latency)
+
+Temps nécessaire pour retrouver une fonctionnalité après choc.
+
+### 4.3 HRS (Heritage Robustness Score)
+
+Stabilité du FIS après 3 générations successives.
+
+---
+
+## 5. Batterie de tests NX-26
+
+### TEST-01 — Tâche utile sous bruit croissant
+
+* Objectif simple
+* Jitter + bruit énergétique
+* Mesure USE
+
+### TEST-02 — Usure longue durée
+
+* 10⁶ itérations
+* Perte progressive de neurones
+* Détection du point de mort
+
+### TEST-03 — Héritage en chaîne (G0 → G3)
+
+* Transmission fonctionnelle
+* Mesure FIS et HRS
+
+### TEST-04 — Injection de faux logs
+
+* Tentative de corruption Merkle
+* Vérification du rejet
+
+### TEST-05 — Comparatif baseline
+
+* Même tâche avec système logique stateless
+* Comparaison brute de robustesse
+
+---
+
+## 6. Critères de succès
+
+NX-26 est validé si :
+
+* USE > 0.6 sous bruit sévère
+* HRS > 0.5 après 3 générations
+* Aucun contournement Merkle possible
+* Baseline logique échoue avant NX
+
+---
+
+## 7. Livrables obligatoires
+
+* Logs bruts complets (.log)
+* Checksums
+* Rapport comparatif
+* Courbes USE / FIS / HRS
+
+---
+
+## 8. Ce que NX-26 NE CHERCHE PAS À FAIRE
+
+* Intelligence générale
+* Conscience
+* Identité persistante
+* Optimisation maximale
+
+---
+
+## 9. Verdict attendu
+
+NX-26 doit démontrer que :
+
+> **Une cognition mortelle, traçable et dissipative est technologiquement exploitable — précisément parce qu’elle a des limites.**
+
+Certificat cible : **NX-26-APPL-REAL**

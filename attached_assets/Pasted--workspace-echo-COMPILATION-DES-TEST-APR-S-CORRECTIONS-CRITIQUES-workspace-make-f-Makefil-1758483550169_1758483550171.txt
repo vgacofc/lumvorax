@@ -1,0 +1,91 @@
+~/workspace$ echo " COMPILATION DES TEST APRÈS CORRECTIONS CRITIQUES "
+
+~/workspace$ make -f Makefile.simple clean
+
+COMPILATION DES TEST APRÈS CORRECTIONS CRITIQUES
+
+rm -rf obj bin
+
+~/workspace$ make -f Makefile.simple all
+
+mkdir -p obj/lum obj/vorax obj/parser obj/binary obj/logger obj/debug bin
+
+clang-Wall -Wextra-std-c99-02-g-D GNU SOURCE-D_POSIX_C_SOURCE=199309L -I./src/debug -c src/lum/lum_core.c-o obj/lum/lum_core.o
+
+clang-Wall -Wextra-std-c99-02-g-D_GNU SOURCE -D_POSIX_C_SOURCE=199309L -I./src/debug -c src/vorax/vorax_operations.co obj/vorax/vorax_operations.o clang -Wall -Wextra-std=c99-02-g-D_GNU SOURCE -D POSIX_C_SOURCE=199389L -I./src/debug-c src/parser/vorax_parser.co obj/parser/vorax_parser.o
+
+-Wall -Wextra-std-c99-02-g-D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -I./src/debug -c src/binary/binary_lum_converter.c-o obj/binary/binary_lum_converter.o
+
+clang src/binary/binary_lum_converter.c:125:27 : erreur : appel à la fonction non déclarée 'TRACKED CALLOC' ; ISO C99 et versions ultérieures ne prennent pas en charge les déclarations de fonction implicites [-Wimplicit-function-declaration]
+
+125 125 result->binary_data TRACKED CALLOC(byte_count, sizeof(uint8_t));
+
+src/binary/binary_lum_converter.c:125:25: erreur : conversion d'entier en pointeur incompatible lors de l'affectation à 'uint8_t* (alias 'unsigned char *') depuis 'int' [-Wint-conversion]
+
+125 | résultat->données binaires TRACKED CALLOC(byte_count, sizeof(uint8_t));
+
+src/binary/binary_lum_converter.c:166:27: erreur : appel à la fonction non déclarée 'TRACKED MALLOC' ; ISO C99 et versions ultérieures ne prennent pas en charge les déclarations de fonctions implicites [-Wimplicit-function-declaration] 166 résultat->données binaires TRACKED_MALLOC(bit_count + 1); // +1 pour le terminateur nul
+
+src/binary/binary_lum_converter.c:166:25: erreur : conversion d'entier incompatible en pointeur lors de l'affectation à 'uint8_t (alias 'unsigned char *) depuis 'int' [-Wint-conversion] 166 | résultat->données binaires TRACKED MALLOC(nombre de bits + 1) ; // +1 pour le terminateur nul
+
+src/binary/binary_lum_converter.c:301:35: erreur : appel à la fonction non déclarée TRACKED MALLOC ; ISO C99 et versions ultérieures ne prennent pas en charge les déclarations de fonctions implicites [- Wimplicit-function-declaration] 361 binary_lum_result_t* résultat TRACKED MALLOC(sizeof(binary_lum_result_t));
+
+src/binary/binary_lum_converter.c:301:26 : erreur : conversion d'entier en pointeur incompatible lors de l'initialisation de 'binary_lum_result_t avec une expression de type 'int' [-Wint-conversion]
+
+361 binary_lum_result_t* result = TRACKED MALLOC(sizeof(binary_lum_result_t));
+
+1 src/binary/binary_lum_converter.c:316:9 : erreur : appel à la fonction non déclarée 'TRACKED_FREE' ; ISO C99 et versions ultérieures ne prennent pas en charge les déclarations de fonction implicites [-Wimplicit-function-declaration]
+
+316
+
+1
+
+TRACKED FREE(result) ;
+
+src/binary/binary_lum_converter.c:321:35: erreur : appel à la fonction non déclarée « TRACKED_MALLOC » ; ISO C99 et versions ultérieures ne prennent pas en charge les déclarations de fonctions implicites [- Wimplicit-function-declaration] 321 | lum_binary_result_t* résultat = TRACKED MALLOC(sizeof(lum_binary_result_t));
+
+src/binary/binary_lum_converter.c:321:26: erreur : conversion d'entier en pointeur incompatible lors de l'initialisation de « lum_binary_result_t* » avec une expression de type « int » [-Wint-conversion]
+
+321 | lum_binary_result_t* résultat TRACKED_MALLOC(sizeof(lum_binary_result_t));
+
+src/binary/binary_lum_converter.c:335:13 : erreur : appel à la fonction non déclarée « TRACKED_FREE » ; ISO C99 et versions ultérieures ne prennent pas en charge les déclarations de fonctions implicites [-Wimplicit-function-declaration] 335 | TRACKED_FREE(result->binary_data);
+
+src/binary/binary_lum_converter.c:337:9 : erreur : appel à la fonction non déclarée « TRACKED_FREE » ; ISO C99 et versions ultérieures ne prennent pas en charge les déclarations de fonctions implicites [-Wimplicit-function-declaration] 337 TRACKED FREE(result);
+
+src/binary/binary_lum_converter.c:345:20 : erreur : appel à la fonction non déclarée 'TRACKED_MALLOC' ; ISO C99 et versions ultérieures ne prennent pas en charge les déclarations de fonctions implicites [-Wimplicit-function-declaration] 345 char result TRACKED MALLOC(lum_group->count + 1) ;
+
+src/binary/binary_lum_converter.c:345:11 : erreur : conversion d'entier en pointeur incompatible lors de l'initialisation de 'char avec une expression de type 'int' [-Wint-conversion] 345 char result = TRACKED MALLOC(lum_group->count + 1) ;
+
+src/binary/binary_lum_converter.c:366:24 : erreur : appel à la fonction non déclarée 'TRACKED_MALLOC' ; ISO C99 et versions ultérieures ne prennent pas en charge les déclarations de fonctions implicites [-Wimplicit-function-declaration] 366 char hex string = TRACKED MALLOC(hex len);
+
+src/binary/binary_lum_converter.c:366:11 : erreur : conversion d'entier en pointeur incompatible lors de l'initialisation de 'char avec une expression de type 'int' [-Wint-conversion]
+
+366 char hex_string = TRACKED_MALLOC(hex_len);
+
+src/binary/binary_lum_converter.c:373:9 : erreur : appel à la fonction de bibliothèque non déclarée « snprintf » avec le type « int (char *restrict, unsigned long, const char *restrict, ...) » ; ISO C99 et versions ultérieures ne
+
+prennent pas en charge les déclarations de fonctions implicites [-Wimplicit-function-declaration]
+
+373 snprintf(&hex_string[12], 3, "%02X", binary_result->binary_data[i]);
+
+src/binary/binary_lum_converter.c:373:9 : remarque : inclure l'en-tête <stdio.h> ou fournir explicitement une déclaration pour « snprintf »
+
+src/binary/binary_lum_converter.c:415:30 : erreur : appel à la fonction non déclarée 'TRACKED MALLOC' ; ISO C99 et versions ultérieures ne prennent pas en charge les déclarations de fonctions implicites [- Wimplicit-function-declaration] 415 uint8_t* reversed_data = TRACKED_MALLOC(byte_count);
+
+src/binary/binary_lum_converter.c:415:14 : erreur : conversion d'entier en pointeur incompatible lors de l'initialisation de 'uint8_t*' (alias 'unsigned char *') avec une expression de type 'int' [-Wint-conversion]
+
+415 | uint8_t reversed_data = TRACKED_MALLOC(byte_count);
+
+src/binary/binary_lum_converter.c:423:5: erreur : appel à la fonction non déclarée 'TRACKED_FREE' ; ISO C99 et versions ultérieures ne prennent pas en charge les déclarations de fonctions implicites [-Wimplicit-function-declaration] 423 | TRACKED FREE(reversed_data);
+
+1
+
+erreur fatale : trop d'erreurs émises, arrêt immédiat [-ferror-limit=]
+
+20 erreurs générées.
+
+make : *** [Makefile.simple:35: obj/binary/binary_lum_converter.o] Erreur 1
+
+~/workspace$
+
+Générer

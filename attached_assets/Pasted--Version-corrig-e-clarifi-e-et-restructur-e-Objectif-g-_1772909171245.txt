@@ -1,0 +1,216 @@
+## Version corrigée, clarifiée et restructurée
+
+### Objectif général
+
+Après analyse des logs générés suite à l’implémentation des nouvelles questions et à l’exécution des tests associés, je souhaite un processus structuré, rigoureux et traçable permettant :
+
+1. D’expliquer pédagogiquement tous les termes, concepts, phrases techniques et résultats produits (niveau débutant, type cours structuré).
+2. D’identifier les questions qu’un expert du domaine poserait.
+3. D’extraire ce que les résultats révèlent réellement.
+4. De détecter :
+
+   * anomalies,
+   * incohérences,
+   * découvertes potentielles,
+   * points non résolus dans la littérature existante.
+5. De définir et exécuter de nouveaux tests pour répondre à toutes les questions soulevées.
+6. De produire un nouveau rapport complet sans modifier ni supprimer les anciens logs.
+7. De garantir une traçabilité totale (horodatage, numérotation, preuves, valeurs brutes).
+
+---
+
+# Processus attendu (structuré et complet)
+
+## 1. Analyse pédagogique des résultats existants
+
+À partir des derniers logs générés :
+
+* Expliquer chaque terme technique.
+* Définir chaque concept scientifique utilisé.
+* Clarifier chaque métrique, variable, algorithme ou méthode.
+* Présenter les résultats comme dans un cours d’introduction structuré :
+
+  * Contexte
+  * Hypothèses
+  * Méthode
+  * Résultats
+  * Interprétation
+
+---
+
+## 2. Questions qu’un expert poserait
+
+Identifier systématiquement :
+
+* Les questions méthodologiques (validité, robustesse, biais).
+* Les questions numériques (stabilité, convergence, précision).
+* Les questions théoriques (cohérence avec les modèles existants).
+* Les questions expérimentales (reproductibilité, conditions initiales).
+* Les limites connues et inconnues.
+
+Pour chaque question :
+
+* Fournir la réponse issue des résultats.
+* Indiquer si la réponse est complète, partielle ou absente.
+
+---
+
+## 3. Détection d’anomalies et découvertes potentielles
+
+Analyser les logs pour identifier :
+
+* Comportements inattendus.
+* Valeurs extrêmes.
+* Divergences non expliquées.
+* Incohérences internes.
+* Résultats non documentés dans la littérature.
+
+Pour chaque point détecté :
+
+* Formuler une hypothèse explicative.
+* Comparer avec les connaissances actuelles du domaine.
+* Identifier si cela constitue :
+
+  * une simple instabilité numérique,
+  * un artefact,
+  * ou une potentielle découverte.
+
+---
+
+## 4. Comparaison avec la littérature et simulations existantes
+
+Comparer les résultats obtenus avec :
+
+* Les simulations de référence du domaine.
+* Les modèles théoriques publiés.
+* Les résultats disponibles dans la littérature scientifique actuelle.
+
+Objectifs :
+
+* Vérifier la cohérence.
+* Identifier les écarts.
+* Déterminer si les écarts sont justifiés ou problématiques.
+
+---
+
+## 5. Définition de nouveaux tests
+
+Établir une liste exhaustive de :
+
+* Questions ouvertes.
+* Hypothèses à vérifier.
+* Paramètres à faire varier.
+* Tests de robustesse.
+* Tests de convergence.
+* Tests multi-échelles.
+* Tests comparatifs.
+
+Pour chaque test :
+
+* Définir objectif précis.
+* Méthodologie.
+* Variables mesurées.
+* Critères de validation.
+
+---
+
+## 6. Exécution complète et génération de nouveaux logs
+
+Une fois la liste validée :
+
+* Exécuter immédiatement tous les nouveaux tests.
+* Générer de nouveaux logs distincts :
+
+  * horodatés (UTC),
+  * numérotés,
+  * indépendants,
+  * sans modification ni suppression des anciens.
+* Conserver l’historique complet des exécutions.
+
+Aucune donnée ne doit être écrasée.
+
+---
+
+## 7. Nouveau rapport technique (format Markdown)
+
+Produire un nouveau rapport séparé contenant :
+
+* Résumé exécutif.
+* Méthodologie complète.
+* Données brutes.
+* Valeurs numériques exactes.
+* Graphiques et métriques.
+* Analyse détaillée.
+* Réponses aux critiques potentielles.
+* Preuves nécessaires pour audit externe.
+
+Les anciens rapports et logs doivent rester intacts.
+
+---
+
+## 8. Cycle itératif obligatoire
+
+Après chaque nouvelle exécution :
+
+1. Lire les nouveaux logs.
+2. Refaire exactement le même processus :
+
+   * explication pédagogique,
+   * questions d’experts,
+   * analyse critique,
+   * détection d’anomalies,
+   * nouveaux tests.
+3. Générer un nouveau rapport indépendant.
+4. Conserver tout l’historique.
+
+Ce processus doit être répété à chaque nouvelle série de résultats.
+
+---
+
+# Exigences supplémentaires implicites (ajout expert)
+
+En complément de la demande initiale, il est nécessaire d’ajouter :
+
+### Rigueur scientifique
+
+* Tests de reproductibilité.
+* Vérification indépendante des calculs.
+* Analyse d’erreur numérique.
+* Sensibilité aux conditions initiales.
+
+### Traçabilité avancée
+
+* Hash/checksum des fichiers.
+* Versions des algorithmes.
+* Configuration matérielle et logicielle.
+* Paramètres exacts d’exécution.
+
+### Validation croisée
+
+* Comparaison multi-modèles.
+* Simulation avec paramètres extrêmes.
+* Tests limites (stress tests).
+
+### Auditabilité
+
+* Présentation des preuves brutes.
+* Accès aux données intermédiaires.
+* Transparence totale sur les hypothèses.
+
+---
+
+# Résumé final
+
+La demande structurée consiste à :
+
+* Analyser pédagogiquement les résultats existants.
+* Identifier toutes les questions expertes possibles.
+* Extraire anomalies et découvertes potentielles.
+* Comparer à l’état de l’art.
+* Concevoir et exécuter tous les tests nécessaires.
+* Produire un nouveau rapport complet et traçable.
+* Générer de nouveaux logs horodatés sans altérer les anciens.
+* Répéter le cycle après chaque nouvelle exécution.
+* Ajouter toute exigence scientifique ou méthodologique manquante.
+
+Le processus doit être exhaustif, reproductible, auditable et scientifiquement rigoureux.

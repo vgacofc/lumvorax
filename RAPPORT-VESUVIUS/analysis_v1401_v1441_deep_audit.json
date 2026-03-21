@@ -1,0 +1,517 @@
+{
+  "notebook-version-NX47-V140.1": {
+    "exists": true,
+    "files": [
+      {
+        "file": "notebook-version-NX47-V140.1/Yl-2S3gi.txt",
+        "size": 4086299,
+        "lines": 4080,
+        "errors": 0,
+        "warnings": 6,
+        "has_score_0387": true,
+        "has_offline": false,
+        "tail": [
+          "2608.8s 4066 {\"ts_ns\": 1771445077701006987, \"event\": \"GLOBAL_STATS\", \"files_processed\": 1, \"slices_processed\": 320, \"pixels_processed\": 32768000, \"pixels_anchor_detected\": 0, \"pixels_papyrus_without_anchor\": 6144, \"materials_detected\": 933, \"patterns_detected\": 933, \"golden_nonce_detected\": 11, \"unknown_discoveries\": 0, \"anomalies_detected\": 52, \"calc_ops_estimated\": 27852800, \"active_neurons_start_total\": 0, \"active_neurons_mid_total\": 6, \"active_neurons_end_total\": 6, \"meta_neuron_candidates\": 45, \"mutation_events\": 0, \"pruning_events\": 1, \"f1_ratio_curve_best_ratio\": 0.20591836734693877, \"f1_ratio_curve_best_f1\": 0.686275490593166, \"files_supervised_mode\": 1, \"files_autonomous_fallback\": 0, \"val_f1_mean_supervised\": 0.0, \"val_iou_mean_supervised\": 0.0, \"best_threshold_mean_supervised\": 0.35, \"unet_25d_status\": \"ok\", \"unet_25d_best_fbeta\": 0.0, \"forensic_report_generated\": true, \"probability_max_observed\": 0.1458509862422943, \"probability_mean_observed\": 0.09743015468120575, \"probability_std_observed\": 0.035574305802583694, \"learning_percent_real\": 100.0, \"reasoning_trace_events\": 4047, \"train_pair_count_discovered\": 786, \"train_pair_coverage_pct\": 4.071246819338422, \"calc_per_sec_global\": 10750.924617446291, \"elapsed_total_s\": 2590.7353079940003, \"ratio_selected_mean\": 0.205, \"signature\": \"6dd86a2b8e4511c951b654aea50d6e14b1931e172ba07079d7bb41520d5f16acaac73c4d3f4e2e8e974151ff94c642d1259ea5d9a3b44023aae21dace51d5ca7\", \"prev_merkle\": \"f94733c6046495bf940d6ba10ddfbca55deda89a1deb47f1924014bc6d698d5c876da768533341f615bdfa2fa10c4a7076c6fc28d4d5dfb82fd0840784a6f564\", \"merkle\": \"7dd3597e5ff3d42513b074a04c14c54149b5f889827ee9b08dcd0bc91fa88e4b16d63b1ee38b880c6fa36e9c9548ba81ddcb7b40fd9168b17680ad19bd5269f9\"}",
+          "2608.9s 4067 {\"ts_ns\": 1771445077731039307, \"event\": \"EXEC_COMPLETE\", \"submission\": \"/kaggle/working/submission.zip\", \"signature\": \"e78061ee8940bbf03bc30ac09f51d9537829845e8a298455fcc6735cdf55b43b486996bb5553ba9c8942e868086d1b9ff1bf47321db10dabedac9f3cde1f3962\", \"prev_merkle\": \"7dd3597e5ff3d42513b074a04c14c54149b5f889827ee9b08dcd0bc91fa88e4b16d63b1ee38b880c6fa36e9c9548ba81ddcb7b40fd9168b17680ad19bd5269f9\", \"merkle\": \"198d390d551dd45633045dbc52030c80211cad8ad63d7098698f17a3575bacbbbb329c40c476cf5f4d73ded521f5ea81ded3e2eba3ea9032812decc12a90d16f\"}",
+          "2609.0s 4068 READY: /kaggle/working/submission.zip",
+          "2614.0s 4069 /usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'",
+          "2614.0s 4070 cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)",
+          "2614.2s 4071 /usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'",
+          "2614.2s 4072 text = re.sub(r'_', '\\_', text) # Escape underscores in display text",
+          "2614.8s 4073 /usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=[\"remove_papermill_header.RemovePapermillHeader\"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.",
+          "2614.8s 4074 warn(",
+          "2614.9s 4075 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook",
+          "2616.4s 4076 [NbConvertApp] Writing 4440993 bytes to __notebook__.ipynb",
+          "2618.9s 4077 /usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=[\"nbconvert.preprocessors.ExtractOutputPreprocessor\"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.",
+          "2618.9s 4078 warn(",
+          "2618.9s 4079 [NbConvertApp] Converting notebook __notebook__.ipynb to html",
+          "2620.2s 4080 [NbConvertApp] Writing 5817592 bytes to __results__.html"
+        ]
+      },
+      {
+        "file": "notebook-version-NX47-V140.1/nx47-vesu-kernel-new-v140-1.ipynb",
+        "size": 4441025
+      },
+      {
+        "file": "notebook-version-NX47-V140.1/nx47-vesu-kernel-new-v140-1.log",
+        "size": 4086299,
+        "lines": 4080,
+        "errors": 0,
+        "warnings": 6,
+        "has_score_0387": true,
+        "has_offline": false,
+        "tail": [
+          "2608.8s 4066 {\"ts_ns\": 1771445077701006987, \"event\": \"GLOBAL_STATS\", \"files_processed\": 1, \"slices_processed\": 320, \"pixels_processed\": 32768000, \"pixels_anchor_detected\": 0, \"pixels_papyrus_without_anchor\": 6144, \"materials_detected\": 933, \"patterns_detected\": 933, \"golden_nonce_detected\": 11, \"unknown_discoveries\": 0, \"anomalies_detected\": 52, \"calc_ops_estimated\": 27852800, \"active_neurons_start_total\": 0, \"active_neurons_mid_total\": 6, \"active_neurons_end_total\": 6, \"meta_neuron_candidates\": 45, \"mutation_events\": 0, \"pruning_events\": 1, \"f1_ratio_curve_best_ratio\": 0.20591836734693877, \"f1_ratio_curve_best_f1\": 0.686275490593166, \"files_supervised_mode\": 1, \"files_autonomous_fallback\": 0, \"val_f1_mean_supervised\": 0.0, \"val_iou_mean_supervised\": 0.0, \"best_threshold_mean_supervised\": 0.35, \"unet_25d_status\": \"ok\", \"unet_25d_best_fbeta\": 0.0, \"forensic_report_generated\": true, \"probability_max_observed\": 0.1458509862422943, \"probability_mean_observed\": 0.09743015468120575, \"probability_std_observed\": 0.035574305802583694, \"learning_percent_real\": 100.0, \"reasoning_trace_events\": 4047, \"train_pair_count_discovered\": 786, \"train_pair_coverage_pct\": 4.071246819338422, \"calc_per_sec_global\": 10750.924617446291, \"elapsed_total_s\": 2590.7353079940003, \"ratio_selected_mean\": 0.205, \"signature\": \"6dd86a2b8e4511c951b654aea50d6e14b1931e172ba07079d7bb41520d5f16acaac73c4d3f4e2e8e974151ff94c642d1259ea5d9a3b44023aae21dace51d5ca7\", \"prev_merkle\": \"f94733c6046495bf940d6ba10ddfbca55deda89a1deb47f1924014bc6d698d5c876da768533341f615bdfa2fa10c4a7076c6fc28d4d5dfb82fd0840784a6f564\", \"merkle\": \"7dd3597e5ff3d42513b074a04c14c54149b5f889827ee9b08dcd0bc91fa88e4b16d63b1ee38b880c6fa36e9c9548ba81ddcb7b40fd9168b17680ad19bd5269f9\"}",
+          "2608.9s 4067 {\"ts_ns\": 1771445077731039307, \"event\": \"EXEC_COMPLETE\", \"submission\": \"/kaggle/working/submission.zip\", \"signature\": \"e78061ee8940bbf03bc30ac09f51d9537829845e8a298455fcc6735cdf55b43b486996bb5553ba9c8942e868086d1b9ff1bf47321db10dabedac9f3cde1f3962\", \"prev_merkle\": \"7dd3597e5ff3d42513b074a04c14c54149b5f889827ee9b08dcd0bc91fa88e4b16d63b1ee38b880c6fa36e9c9548ba81ddcb7b40fd9168b17680ad19bd5269f9\", \"merkle\": \"198d390d551dd45633045dbc52030c80211cad8ad63d7098698f17a3575bacbbbb329c40c476cf5f4d73ded521f5ea81ded3e2eba3ea9032812decc12a90d16f\"}",
+          "2609.0s 4068 READY: /kaggle/working/submission.zip",
+          "2614.0s 4069 /usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'",
+          "2614.0s 4070 cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)",
+          "2614.2s 4071 /usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'",
+          "2614.2s 4072 text = re.sub(r'_', '\\_', text) # Escape underscores in display text",
+          "2614.8s 4073 /usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=[\"remove_papermill_header.RemovePapermillHeader\"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.",
+          "2614.8s 4074 warn(",
+          "2614.9s 4075 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook",
+          "2616.4s 4076 [NbConvertApp] Writing 4440993 bytes to __notebook__.ipynb",
+          "2618.9s 4077 /usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=[\"nbconvert.preprocessors.ExtractOutputPreprocessor\"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.",
+          "2618.9s 4078 warn(",
+          "2618.9s 4079 [NbConvertApp] Converting notebook __notebook__.ipynb to html",
+          "2620.2s 4080 [NbConvertApp] Writing 5817592 bytes to __results__.html"
+        ]
+      },
+      {
+        "file": "notebook-version-NX47-V140.1/results.zip",
+        "size": 2334752,
+        "zip": {
+          "path": "RAPPORT-VESUVIUS/notebook-version-NX47-V140.1/results.zip",
+          "entries": [
+            {
+              "name": "submission.zip",
+              "size": 21842,
+              "compress_size": 13210
+            },
+            {
+              "name": "v139_execution_logs.json",
+              "size": 3537498,
+              "compress_size": 868945
+            },
+            {
+              "name": "v139_execution_metadata.json",
+              "size": 261992,
+              "compress_size": 85025
+            },
+            {
+              "name": "v139_forensic_analysis_report.json",
+              "size": 1528,
+              "compress_size": 1130
+            },
+            {
+              "name": "v139_memory_tracker.json",
+              "size": 32082,
+              "compress_size": 8168
+            },
+            {
+              "name": "v139_roadmap_realtime.json",
+              "size": 980,
+              "compress_size": 412
+            },
+            {
+              "name": "v139_ultra_authentic_360_merkle.jsonl",
+              "size": 4034114,
+              "compress_size": 1356822
+            }
+          ],
+          "nested": [
+            {
+              "name": "submission.zip",
+              "entries": [
+                {
+                  "name": "1407735.tif",
+                  "size": 1489920,
+                  "compress_size": 21722
+                }
+              ]
+            }
+          ],
+          "tiffs": [
+            {
+              "container": "submission.zip",
+              "name": "1407735.tif",
+              "shape": [
+                320,
+                320,
+                320
+              ],
+              "dtype": "uint8",
+              "min": 0,
+              "max": 255,
+              "mean": 15.3
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "notebook-version-NX47-V144.1": {
+    "exists": true,
+    "files": [
+      {
+        "file": "notebook-version-NX47-V144.1/nx47-vesu-kernel-new-v144-1.ipynb",
+        "size": 4441571
+      },
+      {
+        "file": "notebook-version-NX47-V144.1/nx47-vesu-kernel-new-v144-1.log",
+        "size": 4086850,
+        "lines": 4080,
+        "errors": 0,
+        "warnings": 6,
+        "has_score_0387": true,
+        "has_offline": false,
+        "tail": [
+          "2627.6s 4066 {\"ts_ns\": 1771445290735712237, \"event\": \"GLOBAL_STATS\", \"files_processed\": 1, \"slices_processed\": 320, \"pixels_processed\": 32768000, \"pixels_anchor_detected\": 0, \"pixels_papyrus_without_anchor\": 6144, \"materials_detected\": 933, \"patterns_detected\": 933, \"golden_nonce_detected\": 11, \"unknown_discoveries\": 0, \"anomalies_detected\": 52, \"calc_ops_estimated\": 27852800, \"active_neurons_start_total\": 0, \"active_neurons_mid_total\": 6, \"active_neurons_end_total\": 6, \"meta_neuron_candidates\": 45, \"mutation_events\": 0, \"pruning_events\": 1, \"f1_ratio_curve_best_ratio\": 0.20591836734693877, \"f1_ratio_curve_best_f1\": 0.686275490593166, \"files_supervised_mode\": 1, \"files_autonomous_fallback\": 0, \"val_f1_mean_supervised\": 0.0, \"val_iou_mean_supervised\": 0.0, \"best_threshold_mean_supervised\": 0.35, \"unet_25d_status\": \"ok\", \"unet_25d_best_fbeta\": 0.0, \"forensic_report_generated\": true, \"probability_max_observed\": 0.1458509862422943, \"probability_mean_observed\": 0.09743015468120575, \"probability_std_observed\": 0.035574305802583694, \"learning_percent_real\": 100.0, \"reasoning_trace_events\": 4047, \"train_pair_count_discovered\": 786, \"train_pair_coverage_pct\": 4.071246819338422, \"calc_per_sec_global\": 10676.993625822597, \"elapsed_total_s\": 2608.674405559, \"ratio_selected_mean\": 0.205, \"signature\": \"9b0c60b60049d3f5101121d274593d44bab949edbc9a3e4e37e4ec13d64a598166f0374a9bcef5cb423cbe54d73b23dba3f32e32bbb83ef52596bd2e14b26ca2\", \"prev_merkle\": \"026729c8a30411a13d5410ccc9d7e96a7bb28dc8be52a0288085336dc3950adb6e853a1c968255f4f4eea6aeda8b18f111bb4dce97869f173ff7c6ec821fbbd7\", \"merkle\": \"57fcccb0f9a958054a582c660c19bfb6328fbe38a6975fee632e48d208feae84649d0eab302694c47847af3d58f81b68fdf7ca10fad22c630623110fee5c5505\"}",
+          "2627.7s 4067 {\"ts_ns\": 1771445290768407535, \"event\": \"EXEC_COMPLETE\", \"submission\": \"/kaggle/working/submission.zip\", \"signature\": \"54ed09d8304f6f6a2edb5dc392d372890001d326bc84cb39a6572c4791cfd6bd2a321381fa4861ff8896d6a80cd0217311512059eb8a5d5c7ae3cdfefa662aff\", \"prev_merkle\": \"57fcccb0f9a958054a582c660c19bfb6328fbe38a6975fee632e48d208feae84649d0eab302694c47847af3d58f81b68fdf7ca10fad22c630623110fee5c5505\", \"merkle\": \"83666dfc1416407c09307901367640e99de68e8a96b58dcb5517b4d5b434421c694e220ae79817e59d2fd38f116bb1b71425476c5ebe1e3f2be34e55ba1de0d6\"}",
+          "2627.8s 4068 READY: /kaggle/working/submission.zip",
+          "2632.8s 4069 /usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'",
+          "2632.8s 4070 cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)",
+          "2633.0s 4071 /usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'",
+          "2633.0s 4072 text = re.sub(r'_', '\\_', text) # Escape underscores in display text",
+          "2633.7s 4073 /usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=[\"remove_papermill_header.RemovePapermillHeader\"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.",
+          "2633.7s 4074 warn(",
+          "2633.7s 4075 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook",
+          "2635.2s 4076 [NbConvertApp] Writing 4441539 bytes to __notebook__.ipynb",
+          "2637.8s 4077 /usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=[\"nbconvert.preprocessors.ExtractOutputPreprocessor\"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.",
+          "2637.8s 4078 warn(",
+          "2637.9s 4079 [NbConvertApp] Converting notebook __notebook__.ipynb to html",
+          "2639.2s 4080 [NbConvertApp] Writing 5818138 bytes to __results__.html"
+        ]
+      },
+      {
+        "file": "notebook-version-NX47-V144.1/results.zip",
+        "size": 2334760,
+        "zip": {
+          "path": "RAPPORT-VESUVIUS/notebook-version-NX47-V144.1/results.zip",
+          "entries": [
+            {
+              "name": "submission.zip",
+              "size": 21842,
+              "compress_size": 13210
+            },
+            {
+              "name": "v139_execution_logs.json",
+              "size": 3537498,
+              "compress_size": 868978
+            },
+            {
+              "name": "v139_execution_metadata.json",
+              "size": 261992,
+              "compress_size": 85028
+            },
+            {
+              "name": "v139_forensic_analysis_report.json",
+              "size": 1528,
+              "compress_size": 1130
+            },
+            {
+              "name": "v139_memory_tracker.json",
+              "size": 32082,
+              "compress_size": 8168
+            },
+            {
+              "name": "v139_roadmap_realtime.json",
+              "size": 980,
+              "compress_size": 412
+            },
+            {
+              "name": "v139_ultra_authentic_360_merkle.jsonl",
+              "size": 4034114,
+              "compress_size": 1356794
+            }
+          ],
+          "nested": [
+            {
+              "name": "submission.zip",
+              "entries": [
+                {
+                  "name": "1407735.tif",
+                  "size": 1489920,
+                  "compress_size": 21722
+                }
+              ]
+            }
+          ],
+          "tiffs": [
+            {
+              "container": "submission.zip",
+              "name": "1407735.tif",
+              "shape": [
+                320,
+                320,
+                320
+              ],
+              "dtype": "uint8",
+              "min": 0,
+              "max": 255,
+              "mean": 15.3
+            }
+          ]
+        }
+      },
+      {
+        "file": "notebook-version-NX47-V144.1/s0zulCMY.txt",
+        "size": 4086850,
+        "lines": 4080,
+        "errors": 0,
+        "warnings": 6,
+        "has_score_0387": true,
+        "has_offline": false,
+        "tail": [
+          "2627.6s 4066 {\"ts_ns\": 1771445290735712237, \"event\": \"GLOBAL_STATS\", \"files_processed\": 1, \"slices_processed\": 320, \"pixels_processed\": 32768000, \"pixels_anchor_detected\": 0, \"pixels_papyrus_without_anchor\": 6144, \"materials_detected\": 933, \"patterns_detected\": 933, \"golden_nonce_detected\": 11, \"unknown_discoveries\": 0, \"anomalies_detected\": 52, \"calc_ops_estimated\": 27852800, \"active_neurons_start_total\": 0, \"active_neurons_mid_total\": 6, \"active_neurons_end_total\": 6, \"meta_neuron_candidates\": 45, \"mutation_events\": 0, \"pruning_events\": 1, \"f1_ratio_curve_best_ratio\": 0.20591836734693877, \"f1_ratio_curve_best_f1\": 0.686275490593166, \"files_supervised_mode\": 1, \"files_autonomous_fallback\": 0, \"val_f1_mean_supervised\": 0.0, \"val_iou_mean_supervised\": 0.0, \"best_threshold_mean_supervised\": 0.35, \"unet_25d_status\": \"ok\", \"unet_25d_best_fbeta\": 0.0, \"forensic_report_generated\": true, \"probability_max_observed\": 0.1458509862422943, \"probability_mean_observed\": 0.09743015468120575, \"probability_std_observed\": 0.035574305802583694, \"learning_percent_real\": 100.0, \"reasoning_trace_events\": 4047, \"train_pair_count_discovered\": 786, \"train_pair_coverage_pct\": 4.071246819338422, \"calc_per_sec_global\": 10676.993625822597, \"elapsed_total_s\": 2608.674405559, \"ratio_selected_mean\": 0.205, \"signature\": \"9b0c60b60049d3f5101121d274593d44bab949edbc9a3e4e37e4ec13d64a598166f0374a9bcef5cb423cbe54d73b23dba3f32e32bbb83ef52596bd2e14b26ca2\", \"prev_merkle\": \"026729c8a30411a13d5410ccc9d7e96a7bb28dc8be52a0288085336dc3950adb6e853a1c968255f4f4eea6aeda8b18f111bb4dce97869f173ff7c6ec821fbbd7\", \"merkle\": \"57fcccb0f9a958054a582c660c19bfb6328fbe38a6975fee632e48d208feae84649d0eab302694c47847af3d58f81b68fdf7ca10fad22c630623110fee5c5505\"}",
+          "2627.7s 4067 {\"ts_ns\": 1771445290768407535, \"event\": \"EXEC_COMPLETE\", \"submission\": \"/kaggle/working/submission.zip\", \"signature\": \"54ed09d8304f6f6a2edb5dc392d372890001d326bc84cb39a6572c4791cfd6bd2a321381fa4861ff8896d6a80cd0217311512059eb8a5d5c7ae3cdfefa662aff\", \"prev_merkle\": \"57fcccb0f9a958054a582c660c19bfb6328fbe38a6975fee632e48d208feae84649d0eab302694c47847af3d58f81b68fdf7ca10fad22c630623110fee5c5505\", \"merkle\": \"83666dfc1416407c09307901367640e99de68e8a96b58dcb5517b4d5b434421c694e220ae79817e59d2fd38f116bb1b71425476c5ebe1e3f2be34e55ba1de0d6\"}",
+          "2627.8s 4068 READY: /kaggle/working/submission.zip",
+          "2632.8s 4069 /usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'",
+          "2632.8s 4070 cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)",
+          "2633.0s 4071 /usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'",
+          "2633.0s 4072 text = re.sub(r'_', '\\_', text) # Escape underscores in display text",
+          "2633.7s 4073 /usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=[\"remove_papermill_header.RemovePapermillHeader\"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.",
+          "2633.7s 4074 warn(",
+          "2633.7s 4075 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook",
+          "2635.2s 4076 [NbConvertApp] Writing 4441539 bytes to __notebook__.ipynb",
+          "2637.8s 4077 /usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=[\"nbconvert.preprocessors.ExtractOutputPreprocessor\"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.",
+          "2637.8s 4078 warn(",
+          "2637.9s 4079 [NbConvertApp] Converting notebook __notebook__.ipynb to html",
+          "2639.2s 4080 [NbConvertApp] Writing 5818138 bytes to __results__.html"
+        ]
+      }
+    ]
+  },
+  "notebook-version-NX47-V61.2": {
+    "exists": true,
+    "files": [
+      {
+        "file": "notebook-version-NX47-V61.2/BRzSoZeY.txt",
+        "size": 6984,
+        "lines": 87,
+        "errors": 0,
+        "warnings": 4,
+        "has_score_0387": false,
+        "has_offline": false,
+        "tail": [
+          "27.9s 73 [1771420669286661814][SEQ:000007] SUBMISSION_READY {\"zip\": \"/kaggle/working/submission.zip\"}",
+          "27.9s 74 [1771420669286722745][SEQ:000008] EXEC_COMPLETE {}",
+          "27.9s 75 READY: /kaggle/working/submission.zip",
+          "30.3s 76 /usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'",
+          "30.3s 77 cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)",
+          "30.4s 78 /usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'",
+          "30.4s 79 text = re.sub(r'_', '\\_', text) # Escape underscores in display text",
+          "31.2s 80 /usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=[\"remove_papermill_header.RemovePapermillHeader\"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.",
+          "31.2s 81 warn(",
+          "31.2s 82 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook",
+          "31.6s 83 [NbConvertApp] Writing 18257 bytes to __notebook__.ipynb",
+          "34.0s 84 /usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=[\"nbconvert.preprocessors.ExtractOutputPreprocessor\"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.",
+          "34.0s 85 warn(",
+          "34.0s 86 [NbConvertApp] Converting notebook __notebook__.ipynb to html",
+          "34.8s 87 [NbConvertApp] Writing 323994 bytes to __results__.html"
+        ]
+      },
+      {
+        "file": "notebook-version-NX47-V61.2/PLAN_V61_2_FEUILLE_DE_ROUTE_COMPLETE.md",
+        "size": 2578
+      },
+      {
+        "file": "notebook-version-NX47-V61.2/nx47-vesu-kernel-new-v61-2.ipynb",
+        "size": 18268
+      },
+      {
+        "file": "notebook-version-NX47-V61.2/nx47-vesu-kernel-new-v61-2.log",
+        "size": 6984,
+        "lines": 87,
+        "errors": 0,
+        "warnings": 4,
+        "has_score_0387": false,
+        "has_offline": false,
+        "tail": [
+          "27.9s 73 [1771420669286661814][SEQ:000007] SUBMISSION_READY {\"zip\": \"/kaggle/working/submission.zip\"}",
+          "27.9s 74 [1771420669286722745][SEQ:000008] EXEC_COMPLETE {}",
+          "27.9s 75 READY: /kaggle/working/submission.zip",
+          "30.3s 76 /usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'",
+          "30.3s 77 cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)",
+          "30.4s 78 /usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'",
+          "30.4s 79 text = re.sub(r'_', '\\_', text) # Escape underscores in display text",
+          "31.2s 80 /usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=[\"remove_papermill_header.RemovePapermillHeader\"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.",
+          "31.2s 81 warn(",
+          "31.2s 82 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook",
+          "31.6s 83 [NbConvertApp] Writing 18257 bytes to __notebook__.ipynb",
+          "34.0s 84 /usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=[\"nbconvert.preprocessors.ExtractOutputPreprocessor\"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.",
+          "34.0s 85 warn(",
+          "34.0s 86 [NbConvertApp] Converting notebook __notebook__.ipynb to html",
+          "34.8s 87 [NbConvertApp] Writing 323994 bytes to __results__.html"
+        ]
+      },
+      {
+        "file": "notebook-version-NX47-V61.2/nx47-vesuvius-challenge-surface-detection-v61.2.py",
+        "size": 8949
+      },
+      {
+        "file": "notebook-version-NX47-V61.2/results.zip",
+        "size": 4703302,
+        "zip": {
+          "path": "RAPPORT-VESUVIUS/notebook-version-NX47-V61.2/results.zip",
+          "entries": [
+            {
+              "name": "final_logs/forensic_audit_1771420660.log",
+              "size": 60,
+              "compress_size": 62
+            },
+            {
+              "name": "nx47_vesuvius/submission.zip",
+              "size": 2300099,
+              "compress_size": 2350642
+            },
+            {
+              "name": "submission.zip",
+              "size": 2300099,
+              "compress_size": 2350642
+            },
+            {
+              "name": "v28_forensic_logs/forensic_v28_cdffa7284d7d4c78.log",
+              "size": 1714,
+              "compress_size": 1076
+            },
+            {
+              "name": "v28_forensic_logs/wal_v28_cdffa7284d7d4c78.bin",
+              "size": 56,
+              "compress_size": 40
+            }
+          ],
+          "nested": [
+            {
+              "name": "nx47_vesuvius/submission.zip",
+              "entries": [
+                {
+                  "name": "1407735.tif",
+                  "size": 2299979,
+                  "compress_size": 2299979
+                }
+              ]
+            },
+            {
+              "name": "submission.zip",
+              "entries": [
+                {
+                  "name": "1407735.tif",
+                  "size": 2299979,
+                  "compress_size": 2299979
+                }
+              ]
+            }
+          ],
+          "tiffs": [
+            {
+              "container": "nx47_vesuvius/submission.zip",
+              "name": "1407735.tif",
+              "shape": [
+                320,
+                320,
+                320
+              ],
+              "dtype": "uint8",
+              "min": 0,
+              "max": 1,
+              "mean": 0.12256454467773438
+            },
+            {
+              "container": "submission.zip",
+              "name": "1407735.tif",
+              "shape": [
+                320,
+                320,
+                320
+              ],
+              "dtype": "uint8",
+              "min": 0,
+              "max": 1,
+              "mean": 0.12256454467773438
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "src_vesuvius/v7.4": {
+    "exists": true,
+    "files": [
+      {
+        "file": "src_vesuvius/v7.4/PLAN_V7_4_FEUILLE_DE_ROUTE_COMPLETE.md",
+        "size": 2329
+      },
+      {
+        "file": "src_vesuvius/v7.4/nx46-vesuvius-core-kaggle-ready-v7.4.py",
+        "size": 38945
+      }
+    ]
+  },
+  "src_vesuvius/v7.5": {
+    "exists": true,
+    "files": [
+      {
+        "file": "src_vesuvius/v7.5/PLAN_V7_5_CAMPAGNE_10_RUNS.md",
+        "size": 821
+      },
+      {
+        "file": "src_vesuvius/v7.5/nx46-vesuvius-core-kaggle-ready-v7.5.py",
+        "size": 40127
+      },
+      {
+        "file": "src_vesuvius/v7.5/run_campaigns_v61_3_v7_5.py",
+        "size": 1739
+      }
+    ]
+  },
+  "code_audit": {
+    "notebook-version-NX47-V140/nx47-vesu-kernel-new-v140.py": {
+      "todo": 0,
+      "fixme": 0,
+      "pass_stmt": 4,
+      "placeholder": 0,
+      "stub": 0,
+      "hardcoded_path_kaggle": 9
+    },
+    "notebook-version-NX47-V144/nx47-vesu-kernel-new-v144.py": {
+      "todo": 0,
+      "fixme": 0,
+      "pass_stmt": 4,
+      "placeholder": 0,
+      "stub": 0,
+      "hardcoded_path_kaggle": 9
+    }
+  },
+  "roadmaps": [
+    {
+      "file": "FEUILLE_DE_ROUTE_V5_NX46_VESUVIUS.md",
+      "lines": 52,
+      "checkbox_todo": 0,
+      "checkbox_done": 0,
+      "mentions_go": 4,
+      "mentions_no_go": 2
+    },
+    {
+      "file": "PLAN_CAHIER_DE_CHANCE_FEUILLE_DE_ROUTE_AZ.md",
+      "lines": 418,
+      "checkbox_todo": 0,
+      "checkbox_done": 0,
+      "mentions_go": 0,
+      "mentions_no_go": 0
+    },
+    {
+      "file": "notebook-version-NX47-V61.2/PLAN_V61_2_FEUILLE_DE_ROUTE_COMPLETE.md",
+      "lines": 57,
+      "checkbox_todo": 0,
+      "checkbox_done": 0,
+      "mentions_go": 0,
+      "mentions_no_go": 0
+    },
+    {
+      "file": "notebook-version-NX47-V61.3/output_logs_vesuvius/v4-outlput-logs--nx46-vesuvius-core-kaggle-ready/PLAN_FEUILLE_DE_ROUTE_V4_REPONSES_EXPERTES.md",
+      "lines": 569,
+      "checkbox_todo": 36,
+      "checkbox_done": 0,
+      "mentions_go": 0,
+      "mentions_no_go": 0
+    },
+    {
+      "file": "src_vesuvius/v7.4/PLAN_V7_4_FEUILLE_DE_ROUTE_COMPLETE.md",
+      "lines": 57,
+      "checkbox_todo": 0,
+      "checkbox_done": 0,
+      "mentions_go": 0,
+      "mentions_no_go": 0
+    },
+    {
+      "file": "src_vesuvius/v7.5/PLAN_V7_5_CAMPAGNE_10_RUNS.md",
+      "lines": 20,
+      "checkbox_todo": 0,
+      "checkbox_done": 0,
+      "mentions_go": 0,
+      "mentions_no_go": 0
+    }
+  ]
+}

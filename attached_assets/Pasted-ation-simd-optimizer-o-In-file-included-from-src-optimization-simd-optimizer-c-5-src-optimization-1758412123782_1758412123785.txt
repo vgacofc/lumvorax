@@ -1,0 +1,61 @@
+ation/simd_optimizer.o
+
+In file included from src/optimization/simd_optimizer.c:5:
+
+src/optimization/../debug/memory_tracker.h:5:9: warning: "_POSIX_C_SOURCE" redef ined
+
+5 | #define _POSIX_C_SOURCE 200809L
+
+src/optimization/simd_optimizer.c:1:9: note: this is the location of the previous definitio n
+
+1 | #define _POSIX_C_SOURCE 199309L // Enable POSIX.1b functions including clock_getti me
+
+|
+
+gcc -Wall -Wextra -std=c99 -g -02 -fPIC -c src/optimization/zero_copy_allocator.c -o obj/op timization/zero_copy_allocator.o
+
+src/optimization/zero_copy_allocator.c: In function 'get_timestamp_us':
+
+src/optimization/zero_copy_allocator.c:23:5: error: implicit declaration of function 'clock
+
+_gettime' [-Wimplicit-function-declaration]
+
+23 | clock_gettime (CLOCK_MONOTONIC, &ts);
+
+src/optimization/zero_copy_allocator.c:23:19: error: 'CLOCK_MONOTONIC' undeclared (first us e in this function)
+
+23 | clock_gettime(CLOCK_MONOTONIC, &ts);
+
+src/optimization/zero_copy_allocator.c:23:19: note: each undeclared identifier is reported only once for each function it appears in
+
+src/optimization/zero_copy_allocator.c: In function 'zero_copy_enable_mmap_backing':
+
+src/optimization/zero_copy_allocator.c:269:9: error: implicit declaration of function 'ftru
+
+ncate'; did you mean 'strncat'? [-Wimplicit-function-declaration] 269 | if (ftruncate(fd, pool->total_size) != 0) {
+
+strncat
+
+src/optimization/zero_copy_allocator.c: In function 'zero_copy_prefault_pages':
+
+src/optimization/zero_copy_allocator.c:309:24: error: implicit declaration of function 'get
+
+pagesize' [-Wimplicit-function-declaration]
+
+309 | size_t page_size = getpagesize();
+
+src/optimization/zero_copy_allocator.c: In function 'zero_copy_advise_sequential':
+
+src/optimization/zero_copy_allocator.c:327:9: error: implicit declaration of function 'madv
+
+ise' [-Wimplicit-function-declaration]
+
+327 | if (madvise(pool->memory_region, pool->total_size, MADV_SEQUENTIAL) == 0) {
+
+src/optimization/zero_copy_allocator.c:327:56: error: 'MADV_SEQUENTIAL' undeclared (first u se in this function)
+
+327 | if (madvise(pool->memory_region, pool->total_size, MADV_SEQUENTIAL) == 0) {
+
+make: *** [Makefile: 141: obj/optimization/zero_copy_allocator.o] Error 1
+
+~/workspace$

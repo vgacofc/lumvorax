@@ -1,0 +1,130 @@
+# 📘 Cahier des charges scientifique
+
+## Projet SCH – Neurone NX
+
+## Phase NX-9 : Questions fondamentales (représentation, stockage, stabilité, irréversibilité, identité)
+
+**Objectif général**
+Tester expérimentalement, de manière falsifiable, les cinq questions fondamentales révélées par NX-7/8 :
+
+1. cognition sans représentation,
+2. intelligence sans stockage,
+3. stabilité comme pathologie,
+4. irréversibilité de la mémoire,
+5. identité mentale comme propriété dissipative.
+
+---
+
+## I. Question Q1 — Cognition sans représentation
+
+**Hypothèse H1** : Des comportements cohérents émergent sans variables internes symboliques ni états représentatifs.
+
+**Protocole**
+
+* Désactiver toute structure pouvant être interprétée comme représentation (buffers, états persistants, labels).
+* Stimulations contextuelles continues (non discrètes).
+* Mesurer : persistance de régimes, transitions cohérentes, corrélations à long terme.
+
+**Critère de validation**
+
+* Comportements stables observables sans corrélat représentatif interne.
+
+**Fichiers attendus**
+
+* `logs_AIMO3/nx/NX-9_Q1_regime_only.log`
+* `RAPPORT_IAMO3/NX/NX-9_Q1_NO_REPRESENTATION.md`
+
+---
+
+## II. Question Q2 — Intelligence sans stockage
+
+**Hypothèse H2** : La performance fonctionnelle dépend d’hystérésis dissipative et non de stockage statique.
+
+**Protocole**
+
+* Interdire toute persistance d’état hors invariants dissipatifs.
+* Cycles d’apprentissage/exposition puis retour aux paramètres globaux initiaux.
+* Mesurer : récupération fonctionnelle vs perte.
+
+**Critère de validation**
+
+* Récupération partielle/complète sans stockage explicite.
+
+**Fichiers attendus**
+
+* `logs_AIMO3/nx/NX-9_Q2_no_storage.log`
+* `RAPPORT_IAMO3/NX/NX-9_Q2_INTELLIGENCE_WITHOUT_STORAGE.md`
+
+---
+
+## III. Question Q3 — La stabilité comme pathologie
+
+**Hypothèse H3** : L’augmentation artificielle de stabilité détruit la fonction.
+
+**Protocole**
+
+* Introduire des mécanismes de stabilisation graduels.
+* Comparer fonction, diversité de régimes et dissipation.
+
+**Critère de validation**
+
+* Corrélation négative stabilité ↔ fonction.
+
+**Fichiers attendus**
+
+* `logs_AIMO3/nx/NX-9_Q3_stability_pathology.log`
+* `RAPPORT_IAMO3/NX/NX-9_Q3_STABILITY_PATHOLOGY.md`
+
+---
+
+## IV. Question Q4 — Irréversibilité de la mémoire
+
+**Hypothèse H4** : La mémoire dissipative est irréversible sans intervention externe.
+
+**Protocole**
+
+* Induire apprentissage → effondrement énergétique → restauration partielle.
+* Mesurer : non-retour à l’état antérieur.
+
+**Critère de validation**
+
+* Hystérésis persistante malgré restauration énergétique.
+
+**Fichiers attendus**
+
+* `logs_AIMO3/nx/NX-9_Q4_irreversibility.log`
+* `RAPPORT_IAMO3/NX/NX-9_Q4_MEMORY_IRREVERSIBILITY.md`
+
+---
+
+## V. Question Q5 — Identité mentale dissipative
+
+**Hypothèse H5** : L’identité correspond à une région stable de l’espace des régimes.
+
+**Protocole**
+
+* Longues exécutions multi-contextes.
+* Mesurer : dérive identitaire, seuils de rupture, persistance.
+
+**Critère de validation**
+
+* Existence de signatures dissipatives propres ("empreintes de régime").
+
+**Fichiers attendus**
+
+* `logs_AIMO3/nx/NX-9_Q5_identity.log`
+* `RAPPORT_IAMO3/NX/NX-9_Q5_DISSIPATIVE_IDENTITY.md`
+
+---
+
+## VI. Traçabilité et exigences globales
+
+* Logs forensiques complets (UTC, checksum, fin d’exécution).
+* Aucun correcteur, aucune optimisation.
+* Reproductibilité statistique (≥3 runs).
+
+---
+
+## Conclusion
+
+NX-9 vise à établir, ou réfuter, les fondements mêmes de la cognition telle qu’elle est actuellement conçue. Toute omission invalide la portée épistémologique des résultats.

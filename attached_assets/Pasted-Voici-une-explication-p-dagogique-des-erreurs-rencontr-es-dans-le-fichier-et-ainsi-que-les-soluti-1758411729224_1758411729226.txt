@@ -1,0 +1,50 @@
+Voici une explication pédagogique des erreurs rencontrées dans le fichier  et , ainsi que les solutions suggérées.
+
+Détails des Erreurs
+1. Warnings de Truncation dans 
+Messages d'erreur :
+
+warning: 'strncat' output may be truncated copying between 0 and 255 bytes from a string of length 255
+Analyse :
+Les avertissements sur strncat signalent que la concaténation peut potentiellement tronquer les données. La fonction strncat est utilisée pour ajouter une chaîne à une autre, mais si la taille du contenu de destination n'est pas suffisante pour accueillir la chaîne source, cela peut conduire à des débordements ou à des potions non copiées.
+
+Troubleshooting :
+
+sizeof(result->message) doit être ajusté pour garantir qu’il y a suffisamment d’espace pour improvement_msg ou optimization_msg et le caractère null (\0).
+2. Erreurs de Déclaration Implicite dans 
+Messages d'erreur :
+
+error: implicit declaration of function 'clock_gettime'
+error: 'CLOCK_MONOTONIC' undeclared
+Analyse :
+Ces erreurs indiquent que la fonction clock_gettime n'est pas reconnue par le compilateur, ce qui peut provenir d'un module d'en-tête manquant.
+
+Troubleshooting :
+
+Assurez-vous d'importer  pour utiliser clock_gettime et CLOCK_MONOTONIC.
+Solutions
+Modifications à Apporter
+Voici des modifications suggérées :
+
+Modification dans  pour éviter les truncations :
+#include <string.h> // Ne pas oublier d'inclure cette bibliothèque si ce n'est pas déjà fait
+void pareto_optimize_fuse_operation(result_t *result, const char *improvement_msg) {
+    // S'assurer que la taille totale est suffisante
+    if (strlen(result->message) + strlen(improvement_msg) < sizeof(result->message)) {
+        strncat(result->message, improvement_msg, sizeof(result->message) - strlen(result->message) - 1);
+    } else {
+        // Gérer le cas d'erreur (par exemple, loguer une erreur)
+    }
+}
+Ajout d’en-têtes manquants dans  :
+#include <time.h> // Ajoutez cette ligne pour résoudre l'erreur de declaration implicite
+void simd_optimize_lum_operations() {
+    struct timespec start;
+    clock_gettime(CLOCK_MONOTONIC, &start); // Utilisation correcte de clock_gettime
+}
+Conclusion
+En appliquant ces changements, vous pourrez résoudre les avertissements et les erreurs rencontrés durant le processus de compilation. Assurez-vous de tester les modifications en recompilant votre projet :
+
+make clean
+make all
+Cela devrait éliminer les erreurs et garantir la robustesse de votre code. N'hésitez pas à me faire savoir si d'autres problèmes apparaissent ou si vous avez besoin de clarifications supplémentaires !

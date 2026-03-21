@@ -1,0 +1,162 @@
+1. Questions fondamentales qu’un expert poserait immédiatement
+
+1.1 Validité physique du modèle
+	1.	Quel régime exact de la relativité générale est simulé ?
+	•	Géodésiques test (particules sans rétro-action) ou dynamique complète ?
+	2.	Quelles hypothèses sont figées ?
+	•	Stationnarité, axisymétrie, absence de perturbations quantiques ?
+	3.	Quelle métrique exacte est implémentée ?
+	•	Forme analytique, conventions de signe, unités, normalisation.
+
+Réponses attendues des résultats
+	•	Confirmation que les trajectoires respectent les invariants connus.
+	•	Absence de violation artificielle des contraintes de la métrique.
+
+1.2 Stabilité numérique extrémale
+	1.	Pourquoi le régime  a \to 1  reste-t-il stable numériquement ?
+	2.	Quels termes dominent l’erreur flottante près de l’horizon ?
+	3.	Quelle est la dépendance exacte à la précision (float64, float128) ?
+
+Ce que les résultats doivent révéler
+	•	Évolution contrôlée des erreurs locales.
+	•	Signature claire d’un seuil numérique, pas d’un artefact discret.
+
+1.3 Traçabilité et preuve computationnelle
+	1.	Chaque valeur est-elle reproductible bit-à-bit ?
+	2.	Les logs sont-ils immuables, horodatés et indépendants ?
+	3.	Peut-on rejouer une exécution à l’identique ?
+
+Preuves exigées
+	•	Checksums.
+	•	Valeurs hexadécimales IEEE.
+	•	Séparation stricte des runs.
+
+2. Questions spécifiques aux scénarios V3 annoncés
+
+2.1 EXTREMAL_STABILITY
+
+Questions expertes
+	1.	Quelle quantité diverge classiquement quand  a \to 1  ?
+	2.	Le pas de temps est-il adaptatif ou contraint ?
+	3.	Le critère de stabilité est-il physique ou purement numérique ?
+
+Ce que les résultats doivent montrer
+	•	Continuité des invariants.
+	•	Absence de discontinuité artificielle.
+
+2.2 COUNTER_ROTATION_DRAG
+
+Questions expertes
+	1.	Quelle définition exacte du frame-dragging est utilisée ?
+	2.	Le renversement de moment est-il local ou global ?
+	3.	Existe-t-il un seuil critique mesurable ?
+
+Résultats attendus
+	•	Courbes monotones.
+	•	Transition nette, non bruitée.
+
+2.3 PENROSE_CANDIDATE
+
+Questions expertes
+	1.	L’énergie extraite est-elle mesurée localement ou à l’infini ?
+	2.	Le processus respecte-t-il les bornes théoriques ?
+	3.	L’effet persiste-t-il sous variation de paramètres ?
+
+Ce que les résultats doivent révéler
+	•	Gain d’énergie cohérent.
+	•	Pas de violation de conservation.
+
+3. Questions pédagogiques (niveau débutant, mais incontournables)
+	1.	Qu’est-ce qu’une ergosphère, physiquement ?
+	2.	Pourquoi une particule peut-elle avoir une énergie négative ?
+	3.	Pourquoi l’horizon n’est pas une surface matérielle ?
+	4.	Qu’est-ce qu’une singularité de Cauchy, et pourquoi est-elle instable ?
+
+👉 Ces questions exigent des résultats illustrés, pas seulement des définitions.
+
+4. Anomalies potentielles à investiguer explicitement
+
+4.1 Zone de turbulence numérique (annoncée)
+
+Questions critiques
+	1.	Est-ce une instabilité physique ou une amplification d’erreur ?
+	2.	Est-elle dépendante du schéma d’intégration ?
+	3.	Apparaît-elle dans d’autres codes ?
+
+Tests nécessaires
+	•	Variation du pas de temps.
+	•	Double implémentation indépendante.
+	•	Comparaison croisée.
+
+5. Comparaison avec l’existant (littérature & outils)
+
+5.1 Références de comparaison
+	•	EinsteinPy
+	•	Codes GR classiques (intégrateurs standards).
+
+Questions de comparaison
+	1.	À quel point ces outils divergent-ils près de l’extrémal ?
+	2.	Quels régimes refusent-ils explicitement ?
+	3.	Quels phénomènes ne sont pas documentés ?
+
+Résultats attendus
+	•	Mise en évidence de zones non couvertes par la littérature.
+	•	Identification de lacunes conceptuelles.
+
+6. Découvertes potentielles hors littérature
+
+Les futures exécutions pourraient révéler :
+	1.	Micro-instabilités temporelles proches de l’horizon
+	2.	Seuils non documentés de renversement inertiel
+	3.	Régimes intermédiaires non asymptotiques
+	4.	Limites physiques de la notion classique de trajectoire
+
+👉 Ces points ne sont pas tranchés par la littérature actuelle.
+
+7. Nouveaux tests obligatoires à ajouter
+
+Test	Objectif	Résultat attendu
+Variation de précision	Séparer physique / numérique	Invariance qualitative
+Double intégrateur	Détecter biais de schéma	Concordance
+Perturbations infinitésimales	Tester robustesse	Continuité
+Rejouabilité stricte	Preuve scientifique	Identité bit-exacte
+
+8. Structure exigée du futur rapport MD
+
+Chaque nouvelle exécution réelle devra produire un nouveau fichier, par exemple :
+
+RAPPORT_SCIENTIFIQUE_PEDAGOGIQUE_V4.md
+LOG_RUN_2026-XX-XXTXX-XX-XX.bin
+LOG_RUN_2026-XX-XXTXX-XX-XX.csv
+
+Contenu minimal :
+	1.	Hypothèses
+	2.	Paramètres
+	3.	Résultats bruts
+	4.	Analyse experte
+	5.	Explication pédagogique
+	6.	Limites
+	7.	Questions ouvertes
+
+9. Ce que vous avez implicitement bien exigé (et rarement demandé)
+	•	Traçabilité complète
+	•	Séparation stricte des runs
+	•	Niveau débutant et expert
+	•	Critique anticipée
+	•	Comparabilité externe
+	•	Répétabilité scientifique
+
+👉 C’est exactement ce que les simulations publiées omettent souvent.
+
+Conclusion
+
+À ce stade, la seule action scientifiquement valide est :
+	1.	Implanter cette grille de questions comme contraintes
+	2.	Exécuter ensuite
+	3.	Analyser uniquement à partir de nouveaux logs horodatés
+	4.	Produire un nouveau rapport sans toucher aux anciens
+
+Lorsque vous le déciderez, je pourrai :
+	•	Transformer cette liste en check-list d’exécution automatique
+	•	Ou en cahier des charges expérimental formel
+	•	Ou en structure de peer-review anticipé

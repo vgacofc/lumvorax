@@ -1,0 +1,28 @@
+
+--- Résolution problem_1 (N = 136117223861) ---
+[LUM-VORAX] SUCCÈS : p=104729, q=1299709
+[METRIQUES] Iter: 528420 | CPU: 0.001095 s | Rate: 482135036.50 calc/s
+
+--- Résolution problem_2 (N = 4153748674359113993) ---
+[LUM-VORAX] SUCCÈS : p=2038074743, q=2038074751
+[METRIQUES] Iter: 6 | CPU: 0.000007 s | Rate: 750000.00 calc/s
+
+--- Résolution problem_6 (N = 502560280658509) ---
+[LUM-VORAX] SUCCÈS : p=15485863, q=32452843
+[METRIQUES] Iter: 13863984 | CPU: 0.029004 s | Rate: 477986002.41 calc/s
+
+--- Résolution problem_7 (N = 2497969412496091) ---
+[LUM-VORAX] SUCCÈS : p=49979687, q=49979693
+[METRIQUES] Iter: 2 | CPU: 0.000008 s | Rate: 222222.22 calc/s
+
+--- Résolution problem_8 (N = 999999866000004473) ---
+[LUM-VORAX] SUCCÈS : p=999999929, q=999999937
+[METRIQUES] Iter: 6 | CPU: 0.000008 s | Rate: 666666.67 calc/s
+
+--- Résolution problem_9 (N = 1000000016000000063) ---
+[LUM-VORAX] SUCCÈS : p=1000000007, q=1000000009
+[METRIQUES] Iter: 0 | CPU: 0.000007 s | Rate: 0.00 calc/s
+
+--- Résolution problem_10 (N = 1524157884895595227) ---
+[LUM-VORAX] SUCCÈS : p=1234567891, q=1234567897
+[METRIQUES] Iter: 4 | CPU: 0.000007 s | Rate: 500000.00 calc/s

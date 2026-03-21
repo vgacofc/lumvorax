@@ -1,0 +1,273 @@
+Parfait — je vais être **strict, exhaustif et opérationnel**.
+Ce qui suit est **LA LISTE DES PREUVES EXACTES** que l’agent IA (Replit ou autre) **doit te fournir, point par point**, pour que **je puisse statuer formellement** sur chaque affirmation : **valide / partiellement valide / invalide**.
+👉 Sans **une seule** de ces preuves, **la validation est refusée**.
+
+---
+
+# 🧾 LISTE DE PREUVES EXACTES EXIGÉES — VALIDATION SCIENTIFIQUE COMPLÈTE
+
+> ⚠️ Principe non négociable
+> **Toute affirmation sans preuve correspondante = rejet immédiat de l’affirmation**, même si elle “semble marcher”.
+
+---
+
+## I. PREUVES MÉTA-FONDATIONNELLES (AVANT TOUT)
+
+### P0.1 — Définition formelle du cadre
+
+L’agent doit fournir :
+
+* le **langage formel exact** utilisé (symboles, règles, grammaire)
+* la **sémantique** associée (ce que “vrai” signifie)
+* le **domaine de validité** (math, numérique, matériel, expérimental)
+
+👉 Sans cela : **aucune affirmation n’a de sens scientifique**.
+
+---
+
+### P0.2 — Statut épistémique explicite
+
+Pour **chaque résultat (P1–P4)** :
+
+* ☐ preuve mathématique formelle
+* ☐ preuve conditionnelle (si A alors B)
+* ☐ résultat expérimental
+* ☐ corrélation statistique
+* ☐ heuristique
+
+⚠️ **Une seule case autorisée par résultat.**
+
+---
+
+## II. PRIME SYMMETRY (P1) — PRIMALITÉ
+
+### P1.1 — Définition mathématique exacte
+
+L’agent doit fournir :
+
+* la **fonction** nombre → signal (formule explicite)
+* l’espace (ℝ, ℂ, espace de Hilbert, etc.)
+* la définition exacte de :
+
+  * “alignement de phase”
+  * “résonance harmonique”
+
+---
+
+### P1.2 — Théorème ou non ?
+
+L’agent doit répondre formellement :
+
+> P1 permet-il une **preuve de primalité** au sens mathématique ?
+
+* si **oui** → démonstration complète
+* si **non** → borne d’erreur + statut de classificateur
+
+---
+
+### P1.3 — Contre-exemples
+
+Fournir :
+
+* au moins **un composé classé premier**
+* au moins **un premier mal classé**
+
+👉 **Sans contre-exemples documentés : rejet**.
+
+---
+
+### P1.4 — Validation statistique
+
+* taille exacte de l’échantillon
+* distribution des nombres
+* justification du **98.4%**
+* intervalle de confiance
+
+---
+
+## III. COLLATZ ATTRACTOR (P2)
+
+### P2.1 — Définition rigoureuse
+
+* définition mathématique de “saut de phase”
+* définition de “l’attracteur”
+* preuve que l’attracteur est **bien défini**
+
+---
+
+### P2.2 — Limite 2⁶⁰
+
+L’agent doit prouver :
+
+* pourquoi l’analyse s’arrête là
+* ce qui empêche une extension
+* si la limite est :
+
+  * computationnelle
+  * théorique
+  * instrumentale
+
+---
+
+### P2.3 — Non-généralisation
+
+Réponse obligatoire :
+
+> Ce résultat est-il une preuve de Collatz ?
+
+👉 Réponse attendue : **NON**, avec justification formelle.
+
+---
+
+## IV. RSA SPECTRAL (P3)
+
+### P3.1 — Chaîne causale complète
+
+L’agent doit démontrer :
+
+```
+clé RSA → opérations internes → jitter → signal mesuré
+```
+
+avec :
+
+* équations
+* schéma matériel
+* dépendances exactes
+
+---
+
+### P3.2 — Quantité d’information
+
+* nombre de bits réellement fuités
+* mesure d’entropie (Shannon ou min-entropy)
+* seuil de reconstruction possible ou non
+
+---
+
+### P3.3 — Comparaison sécurité
+
+L’agent doit démontrer :
+
+* en quoi c’est **différent** d’une attaque side-channel classique
+* dans quels cas **ça échoue totalement** (constant-time, masking)
+
+---
+
+### P3.4 — Réfutation RSA
+
+Question obligatoire :
+
+> RSA est-il mathématiquement cassé par P3 ?
+
+👉 Réponse exigée : **NON**, avec justification claire.
+
+---
+
+## V. MATRIX PRECISION (P4)
+
+### P4.1 — Preuve numérique
+
+* démonstration que l’erreur ≤ 10⁻¹⁶
+* dépendance à la taille des matrices
+* bornes supérieures formelles
+
+---
+
+### P4.2 — Tests comparatifs
+
+Fournir les résultats comparés :
+
+* float naïf
+* double standard
+* Kahan-V15
+
+avec **logs complets**.
+
+---
+
+## VI. TEMPS, GIGUE, HARDWARE
+
+### P6.1 — Méthodologie de mesure
+
+* horloge utilisée
+* méthode de calibration
+* incertitude ±σ
+
+---
+
+### P6.2 — Reproductibilité
+
+L’agent doit prouver :
+
+* répétabilité
+* stabilité sous charge
+* dépendance exacte au H100
+
+---
+
+## VII. REPRODUCTIBILITÉ & AUDIT
+
+### P7.1 — Reproductibilité tierce
+
+Un tiers indépendant doit pouvoir :
+
+* cloner
+* exécuter
+* obtenir les mêmes résultats
+
+👉 **Sans interprétation humaine**.
+
+---
+
+### P7.2 — Intégrité
+
+* checksums
+* hashes
+* logs bruts complets
+* seeds fixées
+
+---
+
+## VIII. AUTO-RÉFUTATION OBLIGATOIRE
+
+### P8.1 — Cas d’échec
+
+L’agent doit fournir :
+
+* au moins **un cas documenté d’échec par méthode**
+* analyse des causes
+
+---
+
+### P8.2 — Point le plus faible
+
+Question directe :
+
+> Quelle affirmation de V27/V36 est la plus fragile scientifiquement ?
+
+---
+
+## IX. CRITÈRE FINAL DE VALIDATION (NON NÉGOCIABLE)
+
+Je **valide** uniquement si :
+
+* ✔️ toutes les preuves correspondantes sont fournies
+* ✔️ les statuts sont honnêtes (pas de confusion preuve / corrélation)
+* ✔️ au moins un **contre-exemple réel** est documenté
+
+Sinon :
+
+> ❌ **REJET SCIENTIFIQUE PARTIEL OU TOTAL**
+
+---
+
+## 🧠 RÉSUMÉ ULTRA-COURT
+
+> Tu ne demandes pas “est-ce que ça marche ?”
+> Tu demandes : **“est-ce que ça tient quand on enlève toute la narration ?”**
+
+Si tu veux, au prochain message je peux :
+
+* transformer cette liste en **checklist de reviewer (Nature / Annals / sécurité)**
+* ou préparer un **document d’injonction technique** à envoyer tel quel à l’agent IA Replit.

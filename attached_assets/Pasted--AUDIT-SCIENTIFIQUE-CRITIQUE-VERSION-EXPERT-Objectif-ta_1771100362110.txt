@@ -1,0 +1,288 @@
+# AUDIT SCIENTIFIQUE CRITIQUE — VERSION EXPERT
+
+**Objectif :** établir toutes les questions, preuves, métriques, tests et exigences qu’un comité scientifique international exigerait avant d’accepter vos résultats comme contribution originale en relativité numérique.
+
+Ce document est structuré en :
+
+1. Questions fondamentales d’experts
+2. Preuves quantitatives exigées
+3. Interprétation des résultats C vs Python
+4. Comparaison avec l’état de l’art
+5. Anomalies potentielles et zones inconnues
+6. Nouveaux tests indispensables
+7. Rapport critique synthétique
+8. Ce que vous avez oublié d’inclure
+
+---
+
+# I. QUESTIONS QUE DES EXPERTS POSERONT SYSTÉMATIQUEMENT
+
+## A. Validation mathématique
+
+1. Quelle formulation exacte des équations d’Einstein est utilisée ?
+
+   * ADM ?
+   * BSSN ?
+   * Kerr analytique figée ?
+2. Les contraintes de Hamilton et de moment convergent-elles vers zéro ?
+3. Quelle est la pente exacte de convergence log(erreur) vs log(h) ?
+4. L’ordre 4 est-il démontré numériquement ou supposé ?
+5. L’invariant de Carter est-il conservé à long terme ?
+
+---
+
+## B. Stabilité numérique
+
+1. Quelle est la valeur exacte du critère CFL ?
+2. La stabilité dépend-elle du pas temporel ou du spin ?
+3. L’oscillation près de l’horizon disparaît-elle en Kerr-Schild ?
+4. La dérive de Carter est-elle :
+
+   * linéaire ?
+   * quadratique ?
+   * exponentielle ?
+
+---
+
+## C. Indépendance numérique
+
+1. Les résultats persistent-ils :
+
+   * sous changement de solveur ?
+   * sous changement de précision ?
+   * sous changement de coordonnées ?
+2. Le phénomène est-il reproductible sur autre machine ?
+
+---
+
+## D. Régime quasi-extrémal
+
+1. Avez-vous testé :
+
+   * a = 0.999
+   * a = 0.9999
+   * a = 0.99999
+   * a = 0.999999 ?
+2. La précision nécessaire diverge-t-elle lorsque a → 1 ?
+3. L’erreur suit-elle une loi en (1 − a)⁻ⁿ ?
+
+---
+
+## E. Chaos et dynamique interne
+
+1. Avez-vous calculé des exposants de Lyapunov ?
+2. L’intérieur du trou noir présente-t-il une sensibilité exponentielle ?
+3. Les cartes de Poincaré montrent-elles une structure non triviale ?
+
+---
+
+# II. PREUVES QUANTITATIVES EXIGÉES
+
+Un expert exigera :
+
+| Élément          | Preuve attendue        |
+| ---------------- | ---------------------- |
+| Convergence      | Graphique log-log      |
+| Carter           | Courbe ΔC(t)           |
+| Horizon          | Analyse spectrale      |
+| Multiprécision   | Tableau bits vs erreur |
+| Reproductibilité | Hash des runs          |
+
+---
+
+# III. INTERPRÉTATION DES RÉSULTATS C vs PYTHON
+
+## 1. Différence 10⁻¹⁴ vs 10⁻¹²
+
+Interprétation correcte :
+
+* Le moteur C réduit le bruit d’arrondi.
+* Les deux partagent la même pente d’ordre 4 → cohérence mathématique confirmée.
+* La différence 70× est due aux couches numériques, pas à la physique.
+
+Conclusion : validation V13 réussie.
+
+---
+
+## 2. Micro-dérive Carter
+
+Hypothèses possibles :
+
+* Limite RK4 non symplectique.
+* Accumulation d’erreur machine.
+* Instabilité géométrique réelle.
+
+Test décisif :
+Utiliser un solveur symplectique.
+
+---
+
+## 3. Oscillation près de l’horizon
+
+Deux possibilités :
+
+1. Artefact Boyer-Lindquist.
+2. Structure géométrique liée à la singularité coordonnée.
+
+Le passage en Kerr-Schild (V15) tranchera.
+
+---
+
+# IV. COMPARAISON AVEC L’ÉTAT DE L’ART
+
+## Einstein Toolkit
+
+* Optimisé pour fusion de trous noirs.
+* Peu focalisé sur multiprécision extrême.
+* Analyse interne limitée.
+
+## GRChombo
+
+* AMR puissant.
+* Régime extrémal coûteux.
+* Multiprécision limitée.
+
+## EinsteinPy
+
+* Outil pédagogique.
+* Non destiné à haute précision quasi-extrémale.
+
+Votre niche réelle :
+
+* Multiprécision ultra-fine.
+* Analyse chaos interne.
+* Limite informationnelle.
+
+---
+
+# V. ANOMALIES POSSIBLES & ZONES INEXPLORÉES
+
+## 1. Structure fractale proche horizon ?
+
+Non documentée formellement dans la littérature Kerr classique.
+
+## 2. Seuil informationnel r★
+
+Question ouverte en calcul scientifique :
+Existe-t-il un rayon où augmenter la précision n’apporte plus d’information ?
+
+## 3. Divergence exponentielle quasi-extrémale
+
+Très peu étudiée numériquement au-delà de 0.9999.
+
+---
+
+# VI. NOUVEAUX TESTS ABSOLUMENT NÉCESSAIRES
+
+## T21 — Solveur symplectique haute précision
+
+Objectif : éliminer dérive Carter.
+
+## T22 — Étude scaling en (1 − a)
+
+Tracer :
+log(erreur) vs log(1 − a)
+
+## T23 — FFT horizon
+
+Identifier fréquence dominante de l’oscillation.
+
+## T24 — Exposant de Lyapunov interne
+
+Méthode :
+δ(t) ≈ δ₀ e^{λt}
+
+## T25 — Test bruit blanc
+
+Injecter perturbation contrôlée.
+Mesurer amplification.
+
+## T26 — Cross-hardware
+
+Comparer CPU différents.
+
+---
+
+# VII. RÉPONSES POSSIBLES QUE LES FUTURS RÉSULTATS POURRAIENT RÉVÉLER
+
+### Cas A — Artefact numérique
+
+L’oscillation disparaît en Kerr-Schild.
+→ Conclusion : instabilité coordonnée.
+
+### Cas B — Instabilité physique
+
+Persiste en toutes coordonnées.
+→ Publication majeure.
+
+### Cas C — Chaos interne robuste
+
+Lyapunov > 0 stable sous raffinement.
+→ Découverte dynamique nouvelle.
+
+### Cas D — Seuil informationnel
+
+Erreur ne diminue plus malgré précision accrue.
+→ Résultat fondamental computationnel.
+
+---
+
+# VIII. CE QUE VOUS AVEZ OUBLIÉ
+
+Un comité exigera aussi :
+
+* Diagramme complet d’architecture logicielle.
+* Version compilateur.
+* Flags d’optimisation.
+* Seed aléatoire.
+* Temps CPU exact.
+* Consommation mémoire.
+* Intervalle de confiance statistique.
+* Code source public.
+
+---
+
+# IX. RÉPONSE À LA QUESTION CENTRALE
+
+> QUEL SONT TOUT LES CHOSE, QUESTION ET TEST NECESAIRE QUE UN SCIENTIFIQUE EXPERT VOUDRAIS DECOUVRIR ?
+
+Un expert veut :
+
+1. Robustesse mathématique.
+2. Indépendance numérique.
+3. Reproductibilité externe.
+4. Quantification des incertitudes.
+5. Comparaison explicite à la littérature.
+6. Analyse de sensibilité complète.
+7. Identification claire de ce qui est :
+
+   * physique,
+   * numérique,
+   * artefact coordonné.
+
+---
+
+# X. CONCLUSION CRITIQUE
+
+À ce stade :
+
+✔ Validation mathématique solide.
+✔ Supériorité numérique démontrée.
+⚠ Origine de l’oscillation non tranchée.
+⚠ Dérive Carter à clarifier.
+❗ Chaos interne non encore mesuré.
+
+Vous êtes au seuil entre :
+
+* amélioration technique,
+* et possible découverte scientifique.
+
+La différence dépend uniquement des tests V15–V20.
+
+---
+
+Si vous le souhaitez, je peux produire :
+
+* un protocole d’audit international prêt à soumission,
+* un plan d’article type Physical Review D,
+* une formalisation pédagogique complète des notions (Carter, Kerr-Schild, Lyapunov, etc.).

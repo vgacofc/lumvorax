@@ -1,0 +1,335 @@
+7.0s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+7.0s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+7.0s 3 0.00s - to python to disable frozen modules.
+7.0s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+7.6s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+7.6s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+7.6s 7 0.00s - to python to disable frozen modules.
+7.6s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+65.5s 9 [31mERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+65.5s 10 libcugraph-cu12 25.6.0 requires libraft-cu12==25.6.*, but you have libraft-cu12 25.2.0 which is incompatible.
+65.5s 11 pylibcugraph-cu12 25.6.0 requires pylibraft-cu12==25.6.*, but you have pylibraft-cu12 25.2.0 which is incompatible.
+65.5s 12 pylibcugraph-cu12 25.6.0 requires rmm-cu12==25.6.*, but you have rmm-cu12 25.2.0 which is incompatible.[0m[31m
+69.7s 13 [0mWORKING_DIR (/tmp scratch): /tmp/vesuvius_multi_scratch
+69.7s 14 OUTPUT_DIR  (/kaggle/working): /kaggle/working
+69.7s 15 nnUNet_raw: /tmp/vesuvius_multi_scratch/nnUNet_data/nnUNet_raw
+69.7s 16 nnUNet_preprocessed: /tmp/vesuvius_multi_scratch/nnUNet_data/nnUNet_preprocessed
+69.7s 17 nnUNet_results: /tmp/vesuvius_multi_scratch/nnUNet_results
+69.7s 18 CACHE_ROOT: /tmp/vesuvius_multi_scratch/_cache
+69.7s 19 TMP_ROOT: /tmp/vesuvius_multi_scratch/_tmp
+69.7s 20 nnUNet_USE_BLOSC2: 1
+69.7s 21 CUDA_VISIBLE_DEVICES (parent): ALL
+69.7s 22 WORKING_DIR (/tmp scratch): /tmp/vesuvius_multi_scratch
+69.7s 23 OUTPUT_DIR  (/kaggle/working): /kaggle/working
+69.7s 24 nnUNet_raw: /tmp/vesuvius_multi_scratch/nnUNet_data/nnUNet_raw
+69.7s 25 nnUNet_preprocessed: /tmp/vesuvius_multi_scratch/nnUNet_data/nnUNet_preprocessed
+69.7s 26 nnUNet_results: /tmp/vesuvius_multi_scratch/nnUNet_results
+69.7s 27 CACHE_ROOT: /tmp/vesuvius_multi_scratch/_cache
+69.7s 28 TMP_ROOT: /tmp/vesuvius_multi_scratch/_tmp
+69.7s 29 nnUNet_USE_BLOSC2: 1
+69.7s 30 CUDA_VISIBLE_DEVICES (parent): ALL
+69.7s 31 
+69.7s 32 === Registering ACTIVE_MODES ===
+69.7s 33 Registered M7_07_LPlans_4000_patch192_fromscratch_final
+69.7s 34 model_root: /tmp/vesuvius_multi_scratch/nnUNet_results/Dataset107_VesuviusSurface_M7/nnUNetTrainer_4000epochs__nnUNetResEncUNetLPlans__3d_fullres
+69.7s 35 ckpt_src : /kaggle/input/datasets/yiheng/kaggle-vesuvius-dataset-nnunet-192-from-scratch/fold_all/checkpoint_final.pth (size=782.5 MB)
+69.7s 36 ckpt_link: /tmp/vesuvius_multi_scratch/nnUNet_results/Dataset107_VesuviusSurface_M7/nnUNetTrainer_4000epochs__nnUNetResEncUNetLPlans__3d_fullres/fold_all/checkpoint_final.pth -> /kaggle/input/datasets/yiheng/kaggle-vesuvius-dataset-nnunet-192-from-scratch/fold_all/checkpoint_final.pth
+69.7s 37 Registered M5_XLPlans_250_patch256_final
+69.7s 38 model_root: /tmp/vesuvius_multi_scratch/nnUNet_results/Dataset105_VesuviusSurface_M5/nnUNetTrainer_250epochs__nnUNetResEncUNetXLPlans__3d_fullres
+69.7s 39 ckpt_src : /kaggle/input/kaggle-vesuvius-dataset-nnunet-256/fold_all/checkpoint_final.pth (size=781.3 MB)
+69.7s 40 ckpt_link: /tmp/vesuvius_multi_scratch/nnUNet_results/Dataset105_VesuviusSurface_M5/nnUNetTrainer_250epochs__nnUNetResEncUNetXLPlans__3d_fullres/fold_all/checkpoint_final.pth -> /kaggle/input/kaggle-vesuvius-dataset-nnunet-256/fold_all/checkpoint_final.pth
+69.7s 41 Registered M2_XLPlans_250_patch192_best
+69.7s 42 model_root: /tmp/vesuvius_multi_scratch/nnUNet_results/Dataset102_VesuviusSurface_M2/nnUNetTrainer_250epochs__nnUNetResEncUNetXLPlans__3d_fullres
+69.7s 43 ckpt_src : /kaggle/input/kaggle-vesuvius-dataset/nnUNetTrainer_250epochs__nnUNetResEncUNetXLPlans__3d_fullres/fold_all/checkpoint_best.pth (size=781.2 MB)
+69.7s 44 ckpt_link: /tmp/vesuvius_multi_scratch/nnUNet_results/Dataset102_VesuviusSurface_M2/nnUNetTrainer_250epochs__nnUNetResEncUNetXLPlans__3d_fullres/fold_all/checkpoint_final.pth -> /kaggle/input/kaggle-vesuvius-dataset/nnUNetTrainer_250epochs__nnUNetResEncUNetXLPlans__3d_fullres/fold_all/checkpoint_best.pth
+69.7s 45 Registered M1_MPlans_4000_patch128
+69.7s 46 model_root: /tmp/vesuvius_multi_scratch/nnUNet_results/Dataset101_VesuviusSurface_M1/nnUNetTrainer_4000epochs__nnUNetResEncUNetMPlans__3d_fullres
+69.7s 47 ckpt_src : /kaggle/input/nnunet-ep4000-all/checkpoint_final.pth (size=782.5 MB)
+69.7s 48 ckpt_link: /tmp/vesuvius_multi_scratch/nnUNet_results/Dataset101_VesuviusSurface_M1/nnUNetTrainer_4000epochs__nnUNetResEncUNetMPlans__3d_fullres/fold_all/checkpoint_final.pth -> /kaggle/input/nnunet-ep4000-all/checkpoint_final.pth
+69.7s 49 Found test cases: 1
+82.5s 50 Detected probability flag: --save_probabilities
+82.5s 51 
+82.5s 52 === FUSION CONFIG ===
+82.5s 53 ACTIVE_MODES: [7, 5, 2, 1]
+82.5s 54 FUSION_SCHEME: DIRECT_WEIGHTED
+82.5s 55 WEIGHTS (normalized over active): {7: 0.42, 5: 0.18, 2: 0.28, 1: 0.12}
+82.5s 56 PROB_T: 0.26
+82.5s 57 PROCESS_IN_CHUNKS: True | CASES_PER_CHUNK: 32
+82.5s 58 
+82.5s 59 ==================== CHUNK 1/1 ====================
+82.5s 60 Chunk cases: 1
+84.4s 61 
+84.4s 62 === Stage 1: parallel inference ===
+84.4s 63 GPU0: nnUNetv2_predict -d 107 -c 3d_fullres -f all -i /tmp/vesuvius_multi_scratch/test_input -o /tmp/vesuvius_multi_scratch/nnunet_out_m7 -p nnUNetResEncUNetLPlans -tr nnUNetTrainer_4000epochs -npp 1 -nps 1 --verbose --save_probabilities
+84.4s 64 GPU1: nnUNetv2_predict -d 105 -c 3d_fullres -f all -i /tmp/vesuvius_multi_scratch/test_input -o /tmp/vesuvius_multi_scratch/nnunet_out_m5 -p nnUNetResEncUNetXLPlans -tr nnUNetTrainer_250epochs -npp 1 -nps 1 --verbose --save_probabilities
+97.0s 65 [M7_07_LPlans_4000_patch192_fromscratch_final] /usr/local/lib/python3.11/dist-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+97.0s 66 [M7_07_LPlans_4000_patch192_fromscratch_final]   warnings.warn(
+97.0s 67 [M7_07_LPlans_4000_patch192_fromscratch_final] /usr/local/lib/python3.11/dist-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+97.0s 68 [M7_07_LPlans_4000_patch192_fromscratch_final]   warnings.warn(
+97.0s 69 [M5_XLPlans_250_patch256_final] /usr/local/lib/python3.11/dist-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+97.0s 70 [M5_XLPlans_250_patch256_final]   warnings.warn(
+97.0s 71 [M5_XLPlans_250_patch256_final] /usr/local/lib/python3.11/dist-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+97.0s 72 [M5_XLPlans_250_patch256_final]   warnings.warn(
+103.6s 73 [M7_07_LPlans_4000_patch192_fromscratch_final]
+103.6s 74 [M7_07_LPlans_4000_patch192_fromscratch_final] #######################################################################
+103.6s 75 [M7_07_LPlans_4000_patch192_fromscratch_final] Please cite the following paper when using nnU-Net:
+103.6s 76 [M7_07_LPlans_4000_patch192_fromscratch_final] Isensee, F., Jaeger, P. F., Kohl, S. A., Petersen, J., & Maier-Hein, K. H. (2021). nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation. Nature methods, 18(2), 203-211.
+103.6s 77 [M7_07_LPlans_4000_patch192_fromscratch_final] #######################################################################
+103.6s 78 [M7_07_LPlans_4000_patch192_fromscratch_final]
+103.6s 79 [M5_XLPlans_250_patch256_final]
+103.6s 80 [M5_XLPlans_250_patch256_final] #######################################################################
+103.6s 81 [M5_XLPlans_250_patch256_final] Please cite the following paper when using nnU-Net:
+103.6s 82 [M5_XLPlans_250_patch256_final] Isensee, F., Jaeger, P. F., Kohl, S. A., Petersen, J., & Maier-Hein, K. H. (2021). nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation. Nature methods, 18(2), 203-211.
+103.6s 83 [M5_XLPlans_250_patch256_final] #######################################################################
+103.6s 84 [M5_XLPlans_250_patch256_final]
+104.0s 85 [M7_07_LPlans_4000_patch192_fromscratch_final] There are 1 cases in the source folder
+104.0s 86 [M7_07_LPlans_4000_patch192_fromscratch_final] I am processing 0 out of 1 (max process ID is 0, we start counting with 0!)
+104.0s 87 [M7_07_LPlans_4000_patch192_fromscratch_final] There are 1 cases that I would like to predict
+104.0s 88 [M5_XLPlans_250_patch256_final] There are 1 cases in the source folder
+104.0s 89 [M5_XLPlans_250_patch256_final] I am processing 0 out of 1 (max process ID is 0, we start counting with 0!)
+104.0s 90 [M5_XLPlans_250_patch256_final] There are 1 cases that I would like to predict
+112.4s 91 [M7_07_LPlans_4000_patch192_fromscratch_final] None
+112.4s 92 [M7_07_LPlans_4000_patch192_fromscratch_final] old shape: (320, 314, 314), new_shape: [320 314 314], old_spacing: [1.0, 1.0, 1.0], new_spacing: [1.0, 1.0, 1.0], fn_data: functools.partial(<function resample_data_or_seg_to_shape at 0x78feb5a20180>, is_seg=False, order=3, order_z=0, force_separate_z=None)
+112.4s 93 [M5_XLPlans_250_patch256_final] None
+112.4s 94 [M5_XLPlans_250_patch256_final] old shape: (320, 314, 314), new_shape: [320 314 314], old_spacing: [1.0, 1.0, 1.0], new_spacing: [1.0, 1.0, 1.0], fn_data: functools.partial(<function resample_data_or_seg_to_shape at 0x78c484888180>, is_seg=False, order=3, order_z=0, force_separate_z=None)
+117.1s 95 [M7_07_LPlans_4000_patch192_fromscratch_final]
+117.1s 96 [M7_07_LPlans_4000_patch192_fromscratch_final] Predicting 1407735:
+117.1s 97 [M7_07_LPlans_4000_patch192_fromscratch_final] perform_everything_on_device: True
+117.1s 98 [M7_07_LPlans_4000_patch192_fromscratch_final] Input shape: torch.Size([1, 320, 314, 314])
+117.1s 99 [M7_07_LPlans_4000_patch192_fromscratch_final] step_size: 0.5
+117.1s 100 [M7_07_LPlans_4000_patch192_fromscratch_final] mirror_axes: (0, 1, 2)
+117.1s 101 [M7_07_LPlans_4000_patch192_fromscratch_final] n_steps 27, image size is torch.Size([320, 314, 314]), tile_size [192, 192, 192], tile_step_size 0.5
+117.1s 102 [M7_07_LPlans_4000_patch192_fromscratch_final] steps:
+117.1s 103 [M7_07_LPlans_4000_patch192_fromscratch_final] [[0, 64, 128], [0, 61, 122], [0, 61, 122]]
+117.1s 104 [M7_07_LPlans_4000_patch192_fromscratch_final] move image to device cuda
+117.1s 105 [M7_07_LPlans_4000_patch192_fromscratch_final] preallocating results arrays on device cuda
+117.1s 106 [M7_07_LPlans_4000_patch192_fromscratch_final]
+123.2s 107 [M5_XLPlans_250_patch256_final]
+123.2s 108 [M5_XLPlans_250_patch256_final] Predicting 1407735:
+123.2s 109 [M5_XLPlans_250_patch256_final] perform_everything_on_device: True
+123.2s 110 [M5_XLPlans_250_patch256_final] Input shape: torch.Size([1, 320, 314, 314])
+123.2s 111 [M5_XLPlans_250_patch256_final] step_size: 0.5
+123.2s 112 [M5_XLPlans_250_patch256_final] mirror_axes: (0, 1, 2)
+123.2s 113 [M5_XLPlans_250_patch256_final] n_steps 8, image size is torch.Size([320, 314, 314]), tile_size [256, 256, 256], tile_step_size 0.5
+123.2s 114 [M5_XLPlans_250_patch256_final] steps:
+123.2s 115 [M5_XLPlans_250_patch256_final] [[0, 64], [0, 58], [0, 58]]
+123.2s 116 [M5_XLPlans_250_patch256_final] move image to device cuda
+123.2s 117 [M5_XLPlans_250_patch256_final] preallocating results arrays on device cuda
+123.2s 118 [M5_XLPlans_250_patch256_final]
+127.4s 119 [M7_07_LPlans_4000_patch192_fromscratch_final]   0%|          | 0/27 [00:00<?, ?it/s]
+130.4s 120 [M7_07_LPlans_4000_patch192_fromscratch_final]   4%|▎         | 1/27 [00:10<04:26, 10.26s/it]
+134.2s 121 [M7_07_LPlans_4000_patch192_fromscratch_final]   7%|▋         | 2/27 [00:13<02:31,  6.05s/it]
+138.0s 122 [M7_07_LPlans_4000_patch192_fromscratch_final]  11%|█         | 3/27 [00:17<02:00,  5.01s/it]
+141.8s 123 [M7_07_LPlans_4000_patch192_fromscratch_final]  15%|█▍        | 4/27 [00:20<01:44,  4.54s/it]
+145.7s 124 [M7_07_LPlans_4000_patch192_fromscratch_final]  19%|█▊        | 5/27 [00:24<01:34,  4.27s/it]
+147.3s 125 [M5_XLPlans_250_patch256_final]   0%|          | 0/8 [00:00<?, ?it/s]
+149.5s 126 [M7_07_LPlans_4000_patch192_fromscratch_final]  22%|██▏       | 6/27 [00:28<01:26,  4.13s/it]
+153.5s 127 [M7_07_LPlans_4000_patch192_fromscratch_final]  26%|██▌       | 7/27 [00:32<01:20,  4.04s/it]
+155.0s 128 [M5_XLPlans_250_patch256_final]  12%|█▎        | 1/8 [00:24<02:48, 24.05s/it]
+157.4s 129 [M7_07_LPlans_4000_patch192_fromscratch_final]  30%|██▉       | 8/27 [00:36<01:16,  4.00s/it]
+161.4s 130 [M7_07_LPlans_4000_patch192_fromscratch_final]  33%|███▎      | 9/27 [00:40<01:11,  3.99s/it]
+164.5s 131 [M5_XLPlans_250_patch256_final]  25%|██▌       | 2/8 [00:31<01:26, 14.47s/it]
+165.5s 132 [M7_07_LPlans_4000_patch192_fromscratch_final]  37%|███▋      | 10/27 [00:44<01:07,  4.00s/it]
+169.6s 133 [M7_07_LPlans_4000_patch192_fromscratch_final]  41%|████      | 11/27 [00:48<01:04,  4.02s/it]
+173.8s 134 [M7_07_LPlans_4000_patch192_fromscratch_final]  44%|████▍     | 12/27 [00:52<01:00,  4.05s/it]
+174.2s 135 [M5_XLPlans_250_patch256_final]  38%|███▊      | 3/8 [00:41<01:00, 12.19s/it]
+178.0s 136 [M7_07_LPlans_4000_patch192_fromscratch_final]  48%|████▊     | 13/27 [00:56<00:57,  4.08s/it]
+182.2s 137 [M7_07_LPlans_4000_patch192_fromscratch_final]  52%|█████▏    | 14/27 [01:00<00:53,  4.11s/it]
+184.2s 138 [M5_XLPlans_250_patch256_final]  50%|█████     | 4/8 [00:51<00:44, 11.21s/it]
+186.6s 139 [M7_07_LPlans_4000_patch192_fromscratch_final]  56%|█████▌    | 15/27 [01:05<00:49,  4.16s/it]
+191.0s 140 [M7_07_LPlans_4000_patch192_fromscratch_final]  59%|█████▉    | 16/27 [01:09<00:46,  4.22s/it]
+194.3s 141 [M5_XLPlans_250_patch256_final]  62%|██████▎   | 5/8 [01:00<00:32, 10.76s/it]
+195.6s 142 [M7_07_LPlans_4000_patch192_fromscratch_final]  63%|██████▎   | 17/27 [01:13<00:42,  4.28s/it]
+200.2s 143 [M7_07_LPlans_4000_patch192_fromscratch_final]  67%|██████▋   | 18/27 [01:18<00:39,  4.36s/it]
+204.7s 144 [M5_XLPlans_250_patch256_final]  75%|███████▌  | 6/8 [01:11<00:21, 10.54s/it]
+204.9s 145 [M7_07_LPlans_4000_patch192_fromscratch_final]  70%|███████   | 19/27 [01:23<00:35,  4.45s/it]
+209.8s 146 [M7_07_LPlans_4000_patch192_fromscratch_final]  74%|███████▍  | 20/27 [01:27<00:31,  4.54s/it]
+214.7s 147 [M7_07_LPlans_4000_patch192_fromscratch_final]  78%|███████▊  | 21/27 [01:32<00:27,  4.63s/it]
+215.4s 148 [M5_XLPlans_250_patch256_final]  88%|████████▊ | 7/8 [01:21<00:10, 10.51s/it]
+215.4s 149 [M5_XLPlans_250_patch256_final] 100%|██████████| 8/8 [01:32<00:00, 10.56s/it]
+215.4s 150 [M5_XLPlans_250_patch256_final] 100%|██████████| 8/8 [01:32<00:00, 11.52s/it]
+219.4s 151 [M7_07_LPlans_4000_patch192_fromscratch_final]  81%|████████▏ | 22/27 [01:37<00:23,  4.70s/it]
+224.1s 152 [M7_07_LPlans_4000_patch192_fromscratch_final]  85%|████████▌ | 23/27 [01:42<00:18,  4.72s/it]
+228.6s 153 [M7_07_LPlans_4000_patch192_fromscratch_final]  89%|████████▉ | 24/27 [01:46<00:14,  4.69s/it]
+233.0s 154 [M7_07_LPlans_4000_patch192_fromscratch_final]  93%|█████████▎| 25/27 [01:51<00:09,  4.64s/it]
+237.4s 155 [M5_XLPlans_250_patch256_final] Prediction done
+237.4s 156 [M5_XLPlans_250_patch256_final] sending off prediction to background worker for resampling and export
+237.4s 157 [M5_XLPlans_250_patch256_final] done with 1407735
+237.4s 158 [M7_07_LPlans_4000_patch192_fromscratch_final]  96%|█████████▋| 26/27 [01:55<00:04,  4.58s/it]
+237.4s 159 [M7_07_LPlans_4000_patch192_fromscratch_final] 100%|██████████| 27/27 [02:00<00:00,  4.53s/it]
+237.4s 160 [M7_07_LPlans_4000_patch192_fromscratch_final] 100%|██████████| 27/27 [02:00<00:00,  4.46s/it]
+259.2s 161 [M7_07_LPlans_4000_patch192_fromscratch_final] Prediction done
+259.2s 162 [M7_07_LPlans_4000_patch192_fromscratch_final] sending off prediction to background worker for resampling and export
+259.2s 163 [M7_07_LPlans_4000_patch192_fromscratch_final] done with 1407735
+260.7s 164 
+260.7s 165 === Stage 2: parallel inference ===
+260.7s 166 GPU0: nnUNetv2_predict -d 102 -c 3d_fullres -f all -i /tmp/vesuvius_multi_scratch/test_input -o /tmp/vesuvius_multi_scratch/nnunet_out_m2 -p nnUNetResEncUNetXLPlans -tr nnUNetTrainer_250epochs -npp 1 -nps 1 --verbose --save_probabilities
+260.7s 167 GPU1: nnUNetv2_predict -d 101 -c 3d_fullres -f all -i /tmp/vesuvius_multi_scratch/test_input -o /tmp/vesuvius_multi_scratch/nnunet_out_m1 -p nnUNetResEncUNetMPlans -tr nnUNetTrainer_4000epochs -npp 1 -nps 1 --verbose --save_probabilities
+271.1s 168 [M1_MPlans_4000_patch128] /usr/local/lib/python3.11/dist-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+271.1s 169 [M1_MPlans_4000_patch128]   warnings.warn(
+271.1s 170 [M1_MPlans_4000_patch128] /usr/local/lib/python3.11/dist-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+271.1s 171 [M1_MPlans_4000_patch128]   warnings.warn(
+271.4s 172 [M2_XLPlans_250_patch192_best] /usr/local/lib/python3.11/dist-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+271.4s 173 [M2_XLPlans_250_patch192_best]   warnings.warn(
+271.4s 174 [M2_XLPlans_250_patch192_best] /usr/local/lib/python3.11/dist-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+271.4s 175 [M2_XLPlans_250_patch192_best]   warnings.warn(
+275.8s 176 [M1_MPlans_4000_patch128]
+275.8s 177 [M1_MPlans_4000_patch128] #######################################################################
+275.8s 178 [M1_MPlans_4000_patch128] Please cite the following paper when using nnU-Net:
+275.8s 179 [M1_MPlans_4000_patch128] Isensee, F., Jaeger, P. F., Kohl, S. A., Petersen, J., & Maier-Hein, K. H. (2021). nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation. Nature methods, 18(2), 203-211.
+275.8s 180 [M1_MPlans_4000_patch128] #######################################################################
+275.8s 181 [M1_MPlans_4000_patch128]
+276.1s 182 [M2_XLPlans_250_patch192_best]
+276.1s 183 [M2_XLPlans_250_patch192_best] #######################################################################
+276.1s 184 [M2_XLPlans_250_patch192_best] Please cite the following paper when using nnU-Net:
+276.1s 185 [M2_XLPlans_250_patch192_best] Isensee, F., Jaeger, P. F., Kohl, S. A., Petersen, J., & Maier-Hein, K. H. (2021). nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation. Nature methods, 18(2), 203-211.
+276.1s 186 [M2_XLPlans_250_patch192_best] #######################################################################
+276.1s 187 [M2_XLPlans_250_patch192_best]
+276.1s 188 [M1_MPlans_4000_patch128] There are 1 cases in the source folder
+276.1s 189 [M1_MPlans_4000_patch128] I am processing 0 out of 1 (max process ID is 0, we start counting with 0!)
+276.1s 190 [M1_MPlans_4000_patch128] There are 1 cases that I would like to predict
+276.6s 191 [M2_XLPlans_250_patch192_best] There are 1 cases in the source folder
+276.6s 192 [M2_XLPlans_250_patch192_best] I am processing 0 out of 1 (max process ID is 0, we start counting with 0!)
+276.6s 193 [M2_XLPlans_250_patch192_best] There are 1 cases that I would like to predict
+284.4s 194 [M1_MPlans_4000_patch128] None
+284.4s 195 [M1_MPlans_4000_patch128] old shape: (320, 314, 314), new_shape: [320 314 314], old_spacing: [1.0, 1.0, 1.0], new_spacing: [1.0, 1.0, 1.0], fn_data: functools.partial(<function resample_data_or_seg_to_shape at 0x786966efc180>, is_seg=False, order=3, order_z=0, force_separate_z=None)
+284.4s 196 [M2_XLPlans_250_patch192_best] None
+284.4s 197 [M2_XLPlans_250_patch192_best] old shape: (320, 314, 314), new_shape: [320 314 314], old_spacing: [1.0, 1.0, 1.0], new_spacing: [1.0, 1.0, 1.0], fn_data: functools.partial(<function resample_data_or_seg_to_shape at 0x7d1067a10180>, is_seg=False, order=3, order_z=0, force_separate_z=None)
+286.6s 198 [M1_MPlans_4000_patch128]
+286.6s 199 [M1_MPlans_4000_patch128] Predicting 1407735:
+286.6s 200 [M1_MPlans_4000_patch128] perform_everything_on_device: True
+286.6s 201 [M1_MPlans_4000_patch128] Input shape: torch.Size([1, 320, 314, 314])
+286.6s 202 [M1_MPlans_4000_patch128] step_size: 0.5
+286.6s 203 [M1_MPlans_4000_patch128] mirror_axes: (0, 1, 2)
+286.6s 204 [M1_MPlans_4000_patch128] n_steps 64, image size is torch.Size([320, 314, 314]), tile_size [128, 128, 128], tile_step_size 0.5
+286.6s 205 [M1_MPlans_4000_patch128] steps:
+286.6s 206 [M1_MPlans_4000_patch128] [[0, 64, 128, 192], [0, 62, 124, 186], [0, 62, 124, 186]]
+286.6s 207 [M1_MPlans_4000_patch128] move image to device cuda
+286.6s 208 [M1_MPlans_4000_patch128] preallocating results arrays on device cuda
+286.6s 209 [M1_MPlans_4000_patch128]
+288.9s 210 [M2_XLPlans_250_patch192_best]
+288.9s 211 [M2_XLPlans_250_patch192_best] Predicting 1407735:
+288.9s 212 [M2_XLPlans_250_patch192_best] perform_everything_on_device: True
+288.9s 213 [M2_XLPlans_250_patch192_best] Input shape: torch.Size([1, 320, 314, 314])
+288.9s 214 [M2_XLPlans_250_patch192_best] step_size: 0.5
+288.9s 215 [M2_XLPlans_250_patch192_best] mirror_axes: (0, 1, 2)
+288.9s 216 [M2_XLPlans_250_patch192_best] n_steps 27, image size is torch.Size([320, 314, 314]), tile_size [192, 192, 192], tile_step_size 0.5
+288.9s 217 [M2_XLPlans_250_patch192_best] steps:
+288.9s 218 [M2_XLPlans_250_patch192_best] [[0, 64, 128], [0, 61, 122], [0, 61, 122]]
+288.9s 219 [M2_XLPlans_250_patch192_best] move image to device cuda
+288.9s 220 [M2_XLPlans_250_patch192_best] preallocating results arrays on device cuda
+288.9s 221 [M2_XLPlans_250_patch192_best]
+290.4s 222 [M1_MPlans_4000_patch128]   0%|          | 0/64 [00:00<?, ?it/s]
+291.4s 223 [M1_MPlans_4000_patch128]   2%|▏         | 1/64 [00:03<03:59,  3.81s/it]
+292.5s 224 [M1_MPlans_4000_patch128]   3%|▎         | 2/64 [00:04<02:11,  2.12s/it]
+293.6s 225 [M1_MPlans_4000_patch128]   5%|▍         | 3/64 [00:05<01:41,  1.67s/it]
+294.8s 226 [M1_MPlans_4000_patch128]   6%|▋         | 4/64 [00:07<01:27,  1.46s/it]
+295.9s 227 [M1_MPlans_4000_patch128]   8%|▊         | 5/64 [00:08<01:19,  1.34s/it]
+297.1s 228 [M1_MPlans_4000_patch128]   9%|▉         | 6/64 [00:09<01:13,  1.27s/it]
+298.2s 229 [M1_MPlans_4000_patch128]  11%|█         | 7/64 [00:10<01:10,  1.23s/it]
+299.4s 230 [M1_MPlans_4000_patch128]  12%|█▎        | 8/64 [00:11<01:07,  1.20s/it]
+300.5s 231 [M2_XLPlans_250_patch192_best]   0%|          | 0/27 [00:00<?, ?it/s]
+300.5s 232 [M1_MPlans_4000_patch128]  14%|█▍        | 9/64 [00:12<01:05,  1.19s/it]
+301.7s 233 [M1_MPlans_4000_patch128]  16%|█▌        | 10/64 [00:13<01:03,  1.18s/it]
+302.8s 234 [M1_MPlans_4000_patch128]  17%|█▋        | 11/64 [00:15<01:02,  1.17s/it]
+304.0s 235 [M1_MPlans_4000_patch128]  19%|█▉        | 12/64 [00:16<01:00,  1.17s/it]
+304.2s 236 [M2_XLPlans_250_patch192_best]   4%|▎         | 1/27 [00:11<05:02, 11.65s/it]
+305.2s 237 [M1_MPlans_4000_patch128]  20%|██        | 13/64 [00:17<00:59,  1.17s/it]
+306.3s 238 [M1_MPlans_4000_patch128]  22%|██▏       | 14/64 [00:18<00:58,  1.17s/it]
+307.5s 239 [M1_MPlans_4000_patch128]  23%|██▎       | 15/64 [00:19<00:57,  1.17s/it]
+308.7s 240 [M1_MPlans_4000_patch128]  25%|██▌       | 16/64 [00:20<00:56,  1.17s/it]
+308.9s 241 [M2_XLPlans_250_patch192_best]   7%|▋         | 2/27 [00:15<02:54,  7.00s/it]
+309.9s 242 [M1_MPlans_4000_patch128]  27%|██▋       | 17/64 [00:22<00:55,  1.17s/it]
+311.1s 243 [M1_MPlans_4000_patch128]  28%|██▊       | 18/64 [00:23<00:54,  1.18s/it]
+312.3s 244 [M1_MPlans_4000_patch128]  30%|██▉       | 19/64 [00:24<00:53,  1.18s/it]
+313.5s 245 [M1_MPlans_4000_patch128]  31%|███▏      | 20/64 [00:25<00:52,  1.19s/it]
+313.7s 246 [M2_XLPlans_250_patch192_best]  11%|█         | 3/27 [00:20<02:22,  5.92s/it]
+314.7s 247 [M1_MPlans_4000_patch128]  33%|███▎      | 21/64 [00:26<00:51,  1.19s/it]
+315.9s 248 [M1_MPlans_4000_patch128]  34%|███▍      | 22/64 [00:28<00:50,  1.20s/it]
+317.1s 249 [M1_MPlans_4000_patch128]  36%|███▌      | 23/64 [00:29<00:49,  1.20s/it]
+318.3s 250 [M1_MPlans_4000_patch128]  38%|███▊      | 24/64 [00:30<00:47,  1.20s/it]
+318.6s 251 [M2_XLPlans_250_patch192_best]  15%|█▍        | 4/27 [00:24<02:06,  5.48s/it]
+319.5s 252 [M1_MPlans_4000_patch128]  39%|███▉      | 25/64 [00:31<00:46,  1.20s/it]
+320.7s 253 [M1_MPlans_4000_patch128]  41%|████      | 26/64 [00:32<00:45,  1.20s/it]
+321.9s 254 [M1_MPlans_4000_patch128]  42%|████▏     | 27/64 [00:34<00:44,  1.20s/it]
+323.1s 255 [M1_MPlans_4000_patch128]  44%|████▍     | 28/64 [00:35<00:43,  1.21s/it]
+323.7s 256 [M2_XLPlans_250_patch192_best]  19%|█▊        | 5/27 [00:29<01:56,  5.29s/it]
+324.3s 257 [M1_MPlans_4000_patch128]  45%|████▌     | 29/64 [00:36<00:42,  1.21s/it]
+325.5s 258 [M1_MPlans_4000_patch128]  47%|████▋     | 30/64 [00:37<00:41,  1.21s/it]
+326.7s 259 [M1_MPlans_4000_patch128]  48%|████▊     | 31/64 [00:38<00:39,  1.21s/it]
+327.9s 260 [M1_MPlans_4000_patch128]  50%|█████     | 32/64 [00:40<00:38,  1.21s/it]
+328.5s 261 [M2_XLPlans_250_patch192_best]  22%|██▏       | 6/27 [00:34<01:49,  5.19s/it]
+329.2s 262 [M1_MPlans_4000_patch128]  52%|█████▏    | 33/64 [00:41<00:37,  1.21s/it]
+330.3s 263 [M1_MPlans_4000_patch128]  53%|█████▎    | 34/64 [00:42<00:36,  1.21s/it]
+331.5s 264 [M1_MPlans_4000_patch128]  55%|█████▍    | 35/64 [00:43<00:34,  1.20s/it]
+332.7s 265 [M1_MPlans_4000_patch128]  56%|█████▋    | 36/64 [00:44<00:33,  1.20s/it]
+333.2s 266 [M2_XLPlans_250_patch192_best]  26%|██▌       | 7/27 [00:39<01:41,  5.09s/it]
+333.9s 267 [M1_MPlans_4000_patch128]  58%|█████▊    | 37/64 [00:46<00:32,  1.19s/it]
+335.1s 268 [M1_MPlans_4000_patch128]  59%|█████▉    | 38/64 [00:47<00:30,  1.19s/it]
+336.3s 269 [M1_MPlans_4000_patch128]  61%|██████    | 39/64 [00:48<00:29,  1.19s/it]
+337.5s 270 [M1_MPlans_4000_patch128]  62%|██████▎   | 40/64 [00:49<00:28,  1.19s/it]
+337.7s 271 [M2_XLPlans_250_patch192_best]  30%|██▉       | 8/27 [00:44<01:34,  4.96s/it]
+338.6s 272 [M1_MPlans_4000_patch128]  64%|██████▍   | 41/64 [00:50<00:27,  1.19s/it]
+339.8s 273 [M1_MPlans_4000_patch128]  66%|██████▌   | 42/64 [00:52<00:26,  1.18s/it]
+341.0s 274 [M1_MPlans_4000_patch128]  67%|██████▋   | 43/64 [00:53<00:24,  1.18s/it]
+342.2s 275 [M1_MPlans_4000_patch128]  69%|██████▉   | 44/64 [00:54<00:23,  1.18s/it]
+342.2s 276 [M2_XLPlans_250_patch192_best]  33%|███▎      | 9/27 [00:48<01:26,  4.83s/it]
+343.3s 277 [M1_MPlans_4000_patch128]  70%|███████   | 45/64 [00:55<00:22,  1.18s/it]
+344.5s 278 [M1_MPlans_4000_patch128]  72%|███████▏  | 46/64 [00:56<00:21,  1.18s/it]
+345.7s 279 [M1_MPlans_4000_patch128]  73%|███████▎  | 47/64 [00:57<00:20,  1.18s/it]
+346.6s 280 [M2_XLPlans_250_patch192_best]  37%|███▋      | 10/27 [00:53<01:20,  4.71s/it]
+346.9s 281 [M1_MPlans_4000_patch128]  75%|███████▌  | 48/64 [00:59<00:18,  1.18s/it]
+348.0s 282 [M1_MPlans_4000_patch128]  77%|███████▋  | 49/64 [01:00<00:17,  1.18s/it]
+349.2s 283 [M1_MPlans_4000_patch128]  78%|███████▊  | 50/64 [01:01<00:16,  1.17s/it]
+350.4s 284 [M1_MPlans_4000_patch128]  80%|███████▉  | 51/64 [01:02<00:15,  1.17s/it]
+350.9s 285 [M2_XLPlans_250_patch192_best]  41%|████      | 11/27 [00:57<01:13,  4.60s/it]
+351.6s 286 [M1_MPlans_4000_patch128]  81%|████████▏ | 52/64 [01:03<00:14,  1.17s/it]
+352.7s 287 [M1_MPlans_4000_patch128]  83%|████████▎ | 53/64 [01:04<00:12,  1.17s/it]
+353.9s 288 [M1_MPlans_4000_patch128]  84%|████████▍ | 54/64 [01:06<00:11,  1.17s/it]
+355.1s 289 [M1_MPlans_4000_patch128]  86%|████████▌ | 55/64 [01:07<00:10,  1.17s/it]
+355.1s 290 [M2_XLPlans_250_patch192_best]  44%|████▍     | 12/27 [01:02<01:07,  4.52s/it]
+356.2s 291 [M1_MPlans_4000_patch128]  88%|████████▊ | 56/64 [01:08<00:09,  1.17s/it]
+357.4s 292 [M1_MPlans_4000_patch128]  89%|████████▉ | 57/64 [01:09<00:08,  1.17s/it]
+358.6s 293 [M1_MPlans_4000_patch128]  91%|█████████ | 58/64 [01:10<00:07,  1.17s/it]
+359.5s 294 [M2_XLPlans_250_patch192_best]  48%|████▊     | 13/27 [01:06<01:02,  4.45s/it]
+359.8s 295 [M1_MPlans_4000_patch128]  92%|█████████▏| 59/64 [01:11<00:05,  1.17s/it]
+360.9s 296 [M1_MPlans_4000_patch128]  94%|█████████▍| 60/64 [01:13<00:04,  1.17s/it]
+362.1s 297 [M1_MPlans_4000_patch128]  95%|█████████▌| 61/64 [01:14<00:03,  1.17s/it]
+363.3s 298 [M1_MPlans_4000_patch128]  97%|█████████▋| 62/64 [01:15<00:02,  1.18s/it]
+363.8s 299 [M2_XLPlans_250_patch192_best]  52%|█████▏    | 14/27 [01:10<00:57,  4.40s/it]
+364.5s 300 [M1_MPlans_4000_patch128]  98%|█████████▊| 63/64 [01:16<00:01,  1.18s/it]
+364.5s 301 [M1_MPlans_4000_patch128] 100%|██████████| 64/64 [01:17<00:00,  1.18s/it]
+364.5s 302 [M1_MPlans_4000_patch128] 100%|██████████| 64/64 [01:17<00:00,  1.22s/it]
+368.1s 303 [M2_XLPlans_250_patch192_best]  56%|█████▌    | 15/27 [01:14<00:52,  4.37s/it]
+372.4s 304 [M2_XLPlans_250_patch192_best]  59%|█████▉    | 16/27 [01:19<00:47,  4.35s/it]
+376.8s 305 [M2_XLPlans_250_patch192_best]  63%|██████▎   | 17/27 [01:23<00:43,  4.36s/it]
+381.3s 306 [M2_XLPlans_250_patch192_best]  67%|██████▋   | 18/27 [01:27<00:39,  4.37s/it]
+385.7s 307 [M1_MPlans_4000_patch128] Prediction done
+385.7s 308 [M1_MPlans_4000_patch128] sending off prediction to background worker for resampling and export
+385.7s 309 [M1_MPlans_4000_patch128] done with 1407735
+385.7s 310 [M2_XLPlans_250_patch192_best]  70%|███████   | 19/27 [01:32<00:35,  4.40s/it]
+390.5s 311 [M2_XLPlans_250_patch192_best]  74%|███████▍  | 20/27 [01:37<00:31,  4.45s/it]
+395.2s 312 [M2_XLPlans_250_patch192_best]  78%|███████▊  | 21/27 [01:41<00:27,  4.51s/it]
+399.9s 313 [M2_XLPlans_250_patch192_best]  81%|████████▏ | 22/27 [01:46<00:22,  4.56s/it]
+404.6s 314 [M2_XLPlans_250_patch192_best]  85%|████████▌ | 23/27 [01:51<00:18,  4.61s/it]
+409.2s 315 [M2_XLPlans_250_patch192_best]  89%|████████▉ | 24/27 [01:55<00:13,  4.63s/it]
+413.8s 316 [M2_XLPlans_250_patch192_best]  93%|█████████▎| 25/27 [02:00<00:09,  4.62s/it]
+418.2s 317 [M2_XLPlans_250_patch192_best]  96%|█████████▋| 26/27 [02:04<00:04,  4.60s/it]
+418.2s 318 [M2_XLPlans_250_patch192_best] 100%|██████████| 27/27 [02:09<00:00,  4.57s/it]
+418.2s 319 [M2_XLPlans_250_patch192_best] 100%|██████████| 27/27 [02:09<00:00,  4.79s/it]
+439.2s 320 [M2_XLPlans_250_patch192_best] Prediction done
+439.2s 321 [M2_XLPlans_250_patch192_best] sending off prediction to background worker for resampling and export
+439.2s 322 [M2_XLPlans_250_patch192_best] done with 1407735
+484.2s 323 
+484.2s 324 SANITY: test_cases=1 | zip_tifs=1
+484.2s 325 
+484.2s 326 DONE.
+484.2s 327 submission: /kaggle/working/submission.zip (0.6 MB)
+488.7s 328 /usr/local/lib/python3.11/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=["remove_papermill_header.RemovePapermillHeader"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.
+488.7s 329 warn(
+488.7s 330 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+489.0s 331 [NbConvertApp] Writing 114767 bytes to __notebook__.ipynb
+491.7s 332 /usr/local/lib/python3.11/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=["nbconvert.preprocessors.ExtractOutputPreprocessor"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.
+491.7s 333 warn(
+491.7s 334 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+492.7s 335 [NbConvertApp] Writing 572812 bytes to __results__.html

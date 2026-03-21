@@ -1,0 +1,106 @@
+{
+  "run_id": "20260303_122700",
+  "campaign": {
+    "runs_per_mode": 30,
+    "scenarios": 360,
+    "steps": 1400,
+    "max_qubits_width": 36
+  },
+  "official_smoke": {
+    "rc": 0,
+    "stdout": "[TEST] D\u00e9marrage test unitaire Quantum Simulator...\n[MEMORY_TRACKER] Initialized - tracking enabled\n[MEMORY_TRACKER] ALLOC: 0x2bef82b0 (56 bytes) at src/advanced_calculations/quantum_simulator_v4_staging_next/quantum_simulator.c:262 in quantum_config_create_default()\n[OK] Configuration par d\u00e9faut cr\u00e9\u00e9e\n[OK] LUM Quantique cr\u00e9\u00e9e (2 \u00e9tats)\n[DEBUG] Amplitude[0] = 1.000000 + 0.000000i\n[OK] Porte Hadamard appliqu\u00e9e avec succ\u00e8s\n[DEBUG] Post-Hadamard Amplitude[0] = 0.707107 + 0.000000i\n[MEMORY_TRACKER] ALLOC: 0x2bef83e0 (328 bytes) at src/advanced_calculations/quantum_simulator_v4_staging_next/quantum_simulator.c:195 in quantum_measure()\n[MEMORY_TRACKER] ALLOC: 0x2bef8530 (16 bytes) at src/advanced_calculations/quantum_simulator_v4_staging_next/quantum_simulator.c:203 in quantum_measure()\n[OK] Mesure quantique effectu\u00e9e (Collapse)\n[MEMORY_TRACKER] FREE: 0x2bef8530 (16 bytes) at src/advanced_calculations/quantum_simulator_v4_staging_next/quantum_simulator.c:288 in quantum_result_destroy() - originally allocated at src/advanced_calculations/quantum_simulator_v4_staging_next/quantum_simulator.c:203\n[MEMORY_TRACKER] FREE: 0x2bef83e0 (328 bytes) at src/advanced_calculations/quantum_simulator_v4_staging_next/quantum_simulator.c:290 in quantum_result_destroy() - originally allocated at src/advanced_calculations/quantum_simulator_v4_staging_next/quantum_simulator.c:195\n[MEMORY_TRACKER] FREE: 0x2bef82b0 (56 bytes) at src/advanced_calculations/quantum_simulator_v4_staging_next/quantum_simulator.c:279 in quantum_config_destroy() - originally allocated at src/advanced_calculations/quantum_simulator_v4_staging_next/quantum_simulator.c:262\n[SUCCESS] Test unitaire Quantum Simulator termin\u00e9 avec succ\u00e8s\n",
+    "stderr": ""
+  },
+  "modes": {
+    "hardware_preferred": {
+      "count": 30,
+      "win_rate_mean": 0.6535185185184667,
+      "win_rate_std": 0.02480306521164654,
+      "win_rate_ci95": {
+        "mean": 0.6535185185184667,
+        "lower": 0.6446428556214956,
+        "upper": 0.6623941814154377,
+        "n": 30
+      },
+      "throughput_mean": 8548504.5215,
+      "latency_p95_mean_ns": 200917.0,
+      "latency_p99_mean_ns": 226023.66666666666,
+      "max_qubits_width": 36.0
+    },
+    "deterministic_seeded": {
+      "count": 30,
+      "win_rate_mean": 0.6562962962962666,
+      "win_rate_std": 0.024023451048330945,
+      "win_rate_ci95": {
+        "mean": 0.6562962962962666,
+        "lower": 0.6476996147447158,
+        "upper": 0.6648929778478174,
+        "n": 30
+      },
+      "throughput_mean": 7851255.8087,
+      "latency_p95_mean_ns": 215055.0,
+      "latency_p99_mean_ns": 246516.3,
+      "max_qubits_width": 36.0
+    },
+    "baseline_neutralized": {
+      "count": 30,
+      "win_rate_mean": 0.7742592592593,
+      "win_rate_std": 0.01874308285762137,
+      "win_rate_ci95": {
+        "mean": 0.7742592592593,
+        "lower": 0.7675521331974723,
+        "upper": 0.7809663853211276,
+        "n": 30
+      },
+      "throughput_mean": 7786416.169433334,
+      "latency_p95_mean_ns": 215208.63333333333,
+      "latency_p99_mean_ns": 247477.96666666667,
+      "max_qubits_width": 36.0
+    }
+  },
+  "fusion_gate": {
+    "min_win_rate_mean": 0.6,
+    "max_win_rate_std": 0.05,
+    "max_latency_p95_ns": 300000.0,
+    "max_latency_p99_ns": 900000.0,
+    "integrity_required": true,
+    "integrity_ok": true,
+    "pass": true
+  },
+  "manifest": {
+    "build_rc": 0,
+    "sign_rc": 0,
+    "verify_rc": 0,
+    "manifest_path": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_122700/manifest_forensic_v3.json",
+    "signature_path": "/home/runner/workspace/src/advanced_calculations/quantum_simulator_v4_staging_next/results/20260303_122700/manifest_forensic_v3.json.sig"
+  },
+  "watchlist_scenarios": [
+    74,
+    117,
+    133
+  ],
+  "watchlist_loss_frequency_by_mode": {
+    "hardware_preferred": {
+      "74": 0.3333333333333333,
+      "117": 0.3333333333333333,
+      "133": 0.3333333333333333
+    },
+    "deterministic_seeded": {
+      "74": 0.5333333333333333,
+      "117": 0.5666666666666667,
+      "133": 0.6
+    },
+    "baseline_neutralized": {
+      "74": 0.3333333333333333,
+      "117": 0.36666666666666664,
+      "133": 0.4666666666666667
+    }
+  },
+  "notes": {
+    "baseline_bias_hypothesis": "baseline uses sigma*0.7 and linear drift 0.03; this may simplify baseline dynamics and bias margin distribution.",
+    "fragility_explanation": "losses vary by seed/context because noise realization changes trajectory crossing around target in stochastic regime.",
+    "throughput_gap_hardware_vs_deterministic": 0.08156382336189663,
+    "throughput_reference_mean": 8062058.833211111,
+    "throughput_regression_flag": false
+  }
+}

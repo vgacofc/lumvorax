@@ -1,0 +1,1051 @@
+12.0s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+12.0s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+12.0s 3 0.00s - to python to disable frozen modules.
+12.0s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+12.6s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+12.6s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+12.6s 7 0.00s - to python to disable frozen modules.
+12.6s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+15.9s 9 Found existing installation: keras 3.10.0
+16.2s 10 Uninstalling keras-3.10.0:
+16.8s 11 Successfully uninstalled keras-3.10.0
+16.9s 12 Found existing installation: matplotlib 3.10.0
+17.0s 13 Uninstalling matplotlib-3.10.0:
+48.9s 14 Successfully uninstalled matplotlib-3.10.0
+49.6s 15 Found existing installation: scikit-learn 1.6.1
+49.6s 16 Uninstalling scikit-learn-1.6.1:
+50.9s 17 Successfully uninstalled scikit-learn-1.6.1
+51.1s 18 Found existing installation: tensorflow 2.19.0
+51.5s 19 Uninstalling tensorflow-2.19.0:
+79.1s 20 Successfully uninstalled tensorflow-2.19.0
+79.6s 21 Note: you may need to restart the kernel to use updated packages.
+141.5s 22 Looking in links: /kaggle/tmp/setup/wheels
+141.6s 23 Processing /kaggle/tmp/setup/wheels/unsloth-2025.12.9-py3-none-any.whl
+141.7s 24 Looking in links: /kaggle/tmp/setup/wheels
+141.7s 25 Processing /kaggle/tmp/setup/wheels/unsloth-2025.12.9-py3-none-any.whl
+141.8s 26 Processing /kaggle/tmp/setup/wheels/trl-0.24.0-py3-none-any.whl
+141.8s 27 Processing /kaggle/tmp/setup/wheels/vllm-0.11.2-cp38-abi3-manylinux1_x86_64.whl
+142.0s 28 Processing /kaggle/tmp/setup/wheels/trl-0.24.0-py3-none-any.whl
+142.0s 29 Processing /kaggle/tmp/setup/wheels/vllm-0.11.2-cp38-abi3-manylinux1_x86_64.whl
+142.1s 30 Processing /kaggle/tmp/setup/wheels/openai_harmony-0.0.8-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+142.1s 31 Processing /kaggle/tmp/setup/wheels/unsloth_zoo-2025.12.7-py3-none-any.whl (from unsloth)
+142.1s 32 Requirement already satisfied: wheel>=0.42.0 in /usr/local/lib/python3.12/dist-packages (from unsloth) (0.45.1)
+142.1s 33 Requirement already satisfied: packaging in /usr/local/lib/python3.12/dist-packages (from unsloth) (25.0)
+142.1s 34 Requirement already satisfied: torch>=2.4.0 in /usr/local/lib/python3.12/dist-packages (from unsloth) (2.8.0+cu126)
+142.1s 35 Requirement already satisfied: torchvision in /usr/local/lib/python3.12/dist-packages (from unsloth) (0.23.0+cu126)
+142.1s 36 Requirement already satisfied: numpy in /usr/local/lib/python3.12/dist-packages (from unsloth) (2.0.2)
+142.1s 37 Requirement already satisfied: tqdm in /usr/local/lib/python3.12/dist-packages (from unsloth) (4.67.1)
+142.1s 38 Requirement already satisfied: psutil in /usr/local/lib/python3.12/dist-packages (from unsloth) (5.9.5)
+142.1s 39 Processing /kaggle/tmp/setup/wheels/tyro-1.0.3-py3-none-any.whl (from unsloth)
+142.1s 40 Requirement already satisfied: protobuf in /usr/local/lib/python3.12/dist-packages (from unsloth) (5.29.5)
+142.1s 41 Processing /kaggle/tmp/setup/wheels/xformers-0.0.33.post1-cp39-abi3-manylinux_2_28_x86_64.whl (from unsloth)
+142.3s 42 Processing /kaggle/tmp/setup/wheels/bitsandbytes-0.49.0-py3-none-manylinux_2_24_x86_64.whl (from unsloth)
+142.3s 43 Processing /kaggle/tmp/setup/wheels/openai_harmony-0.0.8-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+142.3s 44 Processing /kaggle/tmp/setup/wheels/unsloth_zoo-2025.12.7-py3-none-any.whl (from unsloth)
+142.3s 45 Requirement already satisfied: wheel>=0.42.0 in /usr/local/lib/python3.12/dist-packages (from unsloth) (0.45.1)
+142.3s 46 Requirement already satisfied: packaging in /usr/local/lib/python3.12/dist-packages (from unsloth) (25.0)
+142.3s 47 Requirement already satisfied: torch>=2.4.0 in /usr/local/lib/python3.12/dist-packages (from unsloth) (2.8.0+cu126)
+142.3s 48 Requirement already satisfied: torchvision in /usr/local/lib/python3.12/dist-packages (from unsloth) (0.23.0+cu126)
+142.3s 49 Requirement already satisfied: numpy in /usr/local/lib/python3.12/dist-packages (from unsloth) (2.0.2)
+142.3s 50 Requirement already satisfied: tqdm in /usr/local/lib/python3.12/dist-packages (from unsloth) (4.67.1)
+142.3s 51 Requirement already satisfied: psutil in /usr/local/lib/python3.12/dist-packages (from unsloth) (5.9.5)
+142.3s 52 Processing /kaggle/tmp/setup/wheels/tyro-1.0.3-py3-none-any.whl (from unsloth)
+142.3s 53 Requirement already satisfied: protobuf in /usr/local/lib/python3.12/dist-packages (from unsloth) (5.29.5)
+142.3s 54 Processing /kaggle/tmp/setup/wheels/xformers-0.0.33.post1-cp39-abi3-manylinux_2_28_x86_64.whl (from unsloth)
+142.3s 55 Processing /kaggle/tmp/setup/wheels/bitsandbytes-0.49.0-py3-none-manylinux_2_24_x86_64.whl (from unsloth)
+142.3s 56 Requirement already satisfied: triton>=3.0.0 in /usr/local/lib/python3.12/dist-packages (from unsloth) (3.4.0)
+142.3s 57 Requirement already satisfied: sentencepiece>=0.2.0 in /usr/local/lib/python3.12/dist-packages (from unsloth) (0.2.1)
+142.3s 58 Processing /kaggle/tmp/setup/wheels/datasets-4.3.0-py3-none-any.whl (from unsloth)
+142.3s 59 Requirement already satisfied: accelerate>=0.34.1 in /usr/local/lib/python3.12/dist-packages (from unsloth) (1.11.0)
+142.3s 60 Requirement already satisfied: peft!=0.11.0,>=0.7.1 in /usr/local/lib/python3.12/dist-packages (from unsloth) (0.17.1)
+142.3s 61 Requirement already satisfied: huggingface_hub>=0.34.0 in /usr/local/lib/python3.12/dist-packages (from unsloth) (0.36.0)
+142.3s 62 Requirement already satisfied: hf_transfer in /usr/local/lib/python3.12/dist-packages (from unsloth) (0.1.9)
+142.3s 63 Requirement already satisfied: diffusers in /usr/local/lib/python3.12/dist-packages (from unsloth) (0.35.2)
+142.3s 64 Requirement already satisfied: transformers!=4.52.0,!=4.52.1,!=4.52.2,!=4.52.3,!=4.53.0,!=4.54.0,!=4.55.0,!=4.55.1,!=4.57.0,<=4.57.3,>=4.51.3 in /usr/local/lib/python3.12/dist-packages (from unsloth) (4.57.1)
+142.4s 65 Requirement already satisfied: regex in /usr/local/lib/python3.12/dist-packages (from vllm) (2025.11.3)
+142.4s 66 Requirement already satisfied: cachetools in /usr/local/lib/python3.12/dist-packages (from vllm) (5.5.2)
+142.4s 67 Requirement already satisfied: requests>=2.26.0 in /usr/local/lib/python3.12/dist-packages (from vllm) (2.32.5)
+142.4s 68 Requirement already satisfied: blake3 in /usr/local/lib/python3.12/dist-packages (from vllm) (1.0.8)
+142.4s 69 Requirement already satisfied: py-cpuinfo in /usr/local/lib/python3.12/dist-packages (from vllm) (9.0.0)
+142.4s 70 Requirement already satisfied: tokenizers>=0.21.1 in /usr/local/lib/python3.12/dist-packages (from vllm) (0.22.1)
+142.4s 71 Requirement already satisfied: fastapi>=0.115.0 in /usr/local/lib/python3.12/dist-packages (from fastapi[standard]>=0.115.0->vllm) (0.119.1)
+142.4s 72 Requirement already satisfied: aiohttp in /usr/local/lib/python3.12/dist-packages (from vllm) (3.13.2)
+142.4s 73 Requirement already satisfied: openai>=1.99.1 in /usr/local/lib/python3.12/dist-packages (from vllm) (1.109.1)
+142.4s 74 Requirement already satisfied: pydantic>=2.12.0 in /usr/local/lib/python3.12/dist-packages (from vllm) (2.12.5)
+142.4s 75 Requirement already satisfied: prometheus_client>=0.18.0 in /usr/local/lib/python3.12/dist-packages (from vllm) (0.23.1)
+142.4s 76 Requirement already satisfied: pillow in /usr/local/lib/python3.12/dist-packages (from vllm) (11.3.0)
+142.4s 77 Processing /kaggle/tmp/setup/wheels/prometheus_fastapi_instrumentator-7.1.0-py3-none-any.whl (from vllm)
+142.4s 78 Requirement already satisfied: tiktoken>=0.6.0 in /usr/local/lib/python3.12/dist-packages (from vllm) (0.12.0)
+142.4s 79 Processing /kaggle/tmp/setup/wheels/lm_format_enforcer-0.11.3-py3-none-any.whl (from vllm)
+142.4s 80 Processing /kaggle/tmp/setup/wheels/llguidance-1.3.0-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (from vllm)
+142.4s 81 Processing /kaggle/tmp/setup/wheels/outlines_core-0.2.11-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (from vllm)
+142.4s 82 Processing /kaggle/tmp/setup/wheels/diskcache-5.6.3-py3-none-any.whl (from vllm)
+142.4s 83 Processing /kaggle/tmp/setup/wheels/lark-1.2.2-py3-none-any.whl (from vllm)
+142.4s 84 Processing /kaggle/tmp/setup/wheels/xgrammar-0.1.25-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (from vllm)
+142.4s 85 Requirement already satisfied: typing_extensions>=4.10 in /usr/local/lib/python3.12/dist-packages (from vllm) (4.15.0)
+142.4s 86 Requirement already satisfied: filelock>=3.16.1 in /usr/local/lib/python3.12/dist-packages (from vllm) (3.20.1)
+142.4s 87 Processing /kaggle/tmp/setup/wheels/partial_json_parser-0.2.1.1.post7-py3-none-any.whl (from vllm)
+142.4s 88 Requirement already satisfied: pyzmq>=25.0.0 in /usr/local/lib/python3.12/dist-packages (from vllm) (26.2.1)
+142.4s 89 Processing /kaggle/tmp/setup/wheels/msgspec-0.20.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (from vllm)
+142.4s 90 Processing /kaggle/tmp/setup/wheels/gguf-0.17.1-py3-none-any.whl (from vllm)
+142.4s 91 Processing /kaggle/tmp/setup/wheels/mistral_common-1.8.8-py3-none-any.whl (from mistral_common[image]>=1.8.5->vllm)
+142.5s 92 Requirement already satisfied: opencv-python-headless>=4.11.0 in /usr/local/lib/python3.12/dist-packages (from vllm) (4.12.0.88)
+142.5s 93 Requirement already satisfied: pyyaml in /usr/local/lib/python3.12/dist-packages (from vllm) (6.0.3)
+142.5s 94 Requirement already satisfied: six>=1.16.0 in /usr/local/lib/python3.12/dist-packages (from vllm) (1.17.0)
+142.5s 95 Processing /kaggle/tmp/setup/wheels/setuptools-80.9.0-py3-none-any.whl (from vllm)
+142.5s 96 Requirement already satisfied: einops in /usr/local/lib/python3.12/dist-packages (from vllm) (0.8.1)
+142.5s 97 Processing /kaggle/tmp/setup/wheels/compressed_tensors-0.12.2-py3-none-any.whl (from vllm)
+142.5s 98 Processing /kaggle/tmp/setup/wheels/depyf-0.20.0-py3-none-any.whl (from vllm)
+142.5s 99 Requirement already satisfied: cloudpickle in /usr/local/lib/python3.12/dist-packages (from vllm) (3.1.1)
+142.5s 100 Processing /kaggle/tmp/setup/wheels/watchfiles-1.1.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (from vllm)
+142.5s 101 Requirement already satisfied: python-json-logger in /usr/local/lib/python3.12/dist-packages (from vllm) (4.0.0)
+142.5s 102 Requirement already satisfied: scipy in /usr/local/lib/python3.12/dist-packages (from vllm) (1.15.3)
+142.5s 103 Requirement already satisfied: ninja in /usr/local/lib/python3.12/dist-packages (from vllm) (1.13.0)
+142.5s 104 Processing /kaggle/tmp/setup/wheels/pybase64-1.4.3-cp312-cp312-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl (from vllm)
+142.5s 105 Processing /kaggle/tmp/setup/wheels/cbor2-5.7.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (from vllm)
+142.5s 106 Requirement already satisfied: triton>=3.0.0 in /usr/local/lib/python3.12/dist-packages (from unsloth) (3.4.0)
+142.5s 107 Requirement already satisfied: sentencepiece>=0.2.0 in /usr/local/lib/python3.12/dist-packages (from unsloth) (0.2.1)
+142.5s 108 Processing /kaggle/tmp/setup/wheels/datasets-4.3.0-py3-none-any.whl (from unsloth)
+142.5s 109 Requirement already satisfied: accelerate>=0.34.1 in /usr/local/lib/python3.12/dist-packages (from unsloth) (1.11.0)
+142.5s 110 Requirement already satisfied: peft!=0.11.0,>=0.7.1 in /usr/local/lib/python3.12/dist-packages (from unsloth) (0.17.1)
+142.5s 111 Requirement already satisfied: huggingface_hub>=0.34.0 in /usr/local/lib/python3.12/dist-packages (from unsloth) (0.36.0)
+142.5s 112 Requirement already satisfied: hf_transfer in /usr/local/lib/python3.12/dist-packages (from unsloth) (0.1.9)
+142.5s 113 Requirement already satisfied: diffusers in /usr/local/lib/python3.12/dist-packages (from unsloth) (0.35.2)
+142.5s 114 Requirement already satisfied: transformers!=4.52.0,!=4.52.1,!=4.52.2,!=4.52.3,!=4.53.0,!=4.54.0,!=4.55.0,!=4.55.1,!=4.57.0,<=4.57.3,>=4.51.3 in /usr/local/lib/python3.12/dist-packages (from unsloth) (4.57.1)
+142.5s 115 Requirement already satisfied: regex in /usr/local/lib/python3.12/dist-packages (from vllm) (2025.11.3)
+142.5s 116 Requirement already satisfied: cachetools in /usr/local/lib/python3.12/dist-packages (from vllm) (5.5.2)
+142.5s 117 Requirement already satisfied: requests>=2.26.0 in /usr/local/lib/python3.12/dist-packages (from vllm) (2.32.5)
+142.5s 118 Requirement already satisfied: blake3 in /usr/local/lib/python3.12/dist-packages (from vllm) (1.0.8)
+142.5s 119 Requirement already satisfied: py-cpuinfo in /usr/local/lib/python3.12/dist-packages (from vllm) (9.0.0)
+142.5s 120 Requirement already satisfied: tokenizers>=0.21.1 in /usr/local/lib/python3.12/dist-packages (from vllm) (0.22.1)
+142.5s 121 Requirement already satisfied: fastapi>=0.115.0 in /usr/local/lib/python3.12/dist-packages (from fastapi[standard]>=0.115.0->vllm) (0.119.1)
+142.5s 122 Requirement already satisfied: aiohttp in /usr/local/lib/python3.12/dist-packages (from vllm) (3.13.2)
+142.5s 123 Requirement already satisfied: openai>=1.99.1 in /usr/local/lib/python3.12/dist-packages (from vllm) (1.109.1)
+142.5s 124 Requirement already satisfied: pydantic>=2.12.0 in /usr/local/lib/python3.12/dist-packages (from vllm) (2.12.5)
+142.5s 125 Requirement already satisfied: prometheus_client>=0.18.0 in /usr/local/lib/python3.12/dist-packages (from vllm) (0.23.1)
+142.5s 126 Requirement already satisfied: pillow in /usr/local/lib/python3.12/dist-packages (from vllm) (11.3.0)
+142.5s 127 Processing /kaggle/tmp/setup/wheels/prometheus_fastapi_instrumentator-7.1.0-py3-none-any.whl (from vllm)
+142.5s 128 Requirement already satisfied: tiktoken>=0.6.0 in /usr/local/lib/python3.12/dist-packages (from vllm) (0.12.0)
+142.5s 129 Processing /kaggle/tmp/setup/wheels/lm_format_enforcer-0.11.3-py3-none-any.whl (from vllm)
+142.5s 130 Processing /kaggle/tmp/setup/wheels/llguidance-1.3.0-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (from vllm)
+142.5s 131 Processing /kaggle/tmp/setup/wheels/outlines_core-0.2.11-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (from vllm)
+142.5s 132 Processing /kaggle/tmp/setup/wheels/diskcache-5.6.3-py3-none-any.whl (from vllm)
+142.5s 133 Processing /kaggle/tmp/setup/wheels/lark-1.2.2-py3-none-any.whl (from vllm)
+142.5s 134 Processing /kaggle/tmp/setup/wheels/xgrammar-0.1.25-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (from vllm)
+142.5s 135 Requirement already satisfied: typing_extensions>=4.10 in /usr/local/lib/python3.12/dist-packages (from vllm) (4.15.0)
+142.5s 136 Requirement already satisfied: filelock>=3.16.1 in /usr/local/lib/python3.12/dist-packages (from vllm) (3.20.1)
+142.5s 137 Processing /kaggle/tmp/setup/wheels/partial_json_parser-0.2.1.1.post7-py3-none-any.whl (from vllm)
+142.5s 138 Requirement already satisfied: pyzmq>=25.0.0 in /usr/local/lib/python3.12/dist-packages (from vllm) (26.2.1)
+142.5s 139 Processing /kaggle/tmp/setup/wheels/msgspec-0.20.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (from vllm)
+142.5s 140 Processing /kaggle/tmp/setup/wheels/gguf-0.17.1-py3-none-any.whl (from vllm)
+142.5s 141 Processing /kaggle/tmp/setup/wheels/mistral_common-1.8.8-py3-none-any.whl (from mistral_common[image]>=1.8.5->vllm)
+142.5s 142 Requirement already satisfied: opencv-python-headless>=4.11.0 in /usr/local/lib/python3.12/dist-packages (from vllm) (4.12.0.88)
+142.5s 143 Requirement already satisfied: pyyaml in /usr/local/lib/python3.12/dist-packages (from vllm) (6.0.3)
+142.5s 144 Requirement already satisfied: six>=1.16.0 in /usr/local/lib/python3.12/dist-packages (from vllm) (1.17.0)
+142.5s 145 Processing /kaggle/tmp/setup/wheels/setuptools-80.9.0-py3-none-any.whl (from vllm)
+142.5s 146 Requirement already satisfied: einops in /usr/local/lib/python3.12/dist-packages (from vllm) (0.8.1)
+142.5s 147 Processing /kaggle/tmp/setup/wheels/compressed_tensors-0.12.2-py3-none-any.whl (from vllm)
+142.5s 148 Processing /kaggle/tmp/setup/wheels/depyf-0.20.0-py3-none-any.whl (from vllm)
+142.5s 149 Requirement already satisfied: cloudpickle in /usr/local/lib/python3.12/dist-packages (from vllm) (3.1.1)
+142.5s 150 Processing /kaggle/tmp/setup/wheels/watchfiles-1.1.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (from vllm)
+142.5s 151 Requirement already satisfied: python-json-logger in /usr/local/lib/python3.12/dist-packages (from vllm) (4.0.0)
+142.5s 152 Requirement already satisfied: scipy in /usr/local/lib/python3.12/dist-packages (from vllm) (1.15.3)
+142.5s 153 Requirement already satisfied: ninja in /usr/local/lib/python3.12/dist-packages (from vllm) (1.13.0)
+142.5s 154 Processing /kaggle/tmp/setup/wheels/pybase64-1.4.3-cp312-cp312-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl (from vllm)
+142.5s 155 Processing /kaggle/tmp/setup/wheels/cbor2-5.7.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (from vllm)
+142.5s 156 Processing /kaggle/tmp/setup/wheels/setproctitle-1.3.7-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (from vllm)
+142.5s 157 Processing /kaggle/tmp/setup/wheels/anthropic-0.71.0-py3-none-any.whl (from vllm)
+142.5s 158 Processing /kaggle/tmp/setup/wheels/model_hosting_container_standards-0.1.12-py3-none-any.whl (from vllm)
+142.5s 159 Processing /kaggle/tmp/setup/wheels/numba-0.61.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (from vllm)
+142.5s 160 Requirement already satisfied: ray>=2.48.0 in /usr/local/lib/python3.12/dist-packages (from ray[cgraph]>=2.48.0->vllm) (2.52.1)
+142.6s 161 Processing /kaggle/tmp/setup/wheels/torch-2.9.0+cu128-cp312-cp312-manylinux_2_28_x86_64.whl (from unsloth)
+142.7s 162 Processing /kaggle/tmp/setup/wheels/setproctitle-1.3.7-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (from vllm)
+142.7s 163 Processing /kaggle/tmp/setup/wheels/anthropic-0.71.0-py3-none-any.whl (from vllm)
+142.7s 164 Processing /kaggle/tmp/setup/wheels/model_hosting_container_standards-0.1.12-py3-none-any.whl (from vllm)
+142.7s 165 Processing /kaggle/tmp/setup/wheels/numba-0.61.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (from vllm)
+142.7s 166 Requirement already satisfied: ray>=2.48.0 in /usr/local/lib/python3.12/dist-packages (from ray[cgraph]>=2.48.0->vllm) (2.52.1)
+142.7s 167 Processing /kaggle/tmp/setup/wheels/torch-2.9.0+cu128-cp312-cp312-manylinux_2_28_x86_64.whl (from unsloth)
+143.3s 168 Processing /kaggle/tmp/setup/wheels/torchaudio-2.9.0+cu128-cp312-cp312-manylinux_2_28_x86_64.whl (from vllm)
+143.3s 169 Processing /kaggle/tmp/setup/wheels/torchvision-0.24.0+cu128-cp312-cp312-manylinux_2_28_x86_64.whl (from unsloth)
+143.4s 170 Processing /kaggle/tmp/setup/wheels/flashinfer_python-0.5.2-py3-none-any.whl (from vllm)
+143.4s 171 Requirement already satisfied: anyio<5,>=3.5.0 in /usr/local/lib/python3.12/dist-packages (from anthropic==0.71.0->vllm) (4.12.0)
+143.4s 172 Requirement already satisfied: distro<2,>=1.7.0 in /usr/local/lib/python3.12/dist-packages (from anthropic==0.71.0->vllm) (1.9.0)
+143.4s 173 Requirement already satisfied: docstring-parser<1,>=0.15 in /usr/local/lib/python3.12/dist-packages (from anthropic==0.71.0->vllm) (0.17.0)
+143.4s 174 Requirement already satisfied: httpx<1,>=0.25.0 in /usr/local/lib/python3.12/dist-packages (from anthropic==0.71.0->vllm) (0.28.1)
+143.4s 175 Requirement already satisfied: jiter<1,>=0.4.0 in /usr/local/lib/python3.12/dist-packages (from anthropic==0.71.0->vllm) (0.11.1)
+143.4s 176 Requirement already satisfied: sniffio in /usr/local/lib/python3.12/dist-packages (from anthropic==0.71.0->vllm) (1.3.1)
+143.4s 177 Processing /kaggle/tmp/setup/wheels/loguru-0.7.3-py3-none-any.whl (from compressed-tensors==0.12.2->vllm)
+143.4s 178 Processing /kaggle/tmp/setup/wheels/astor-0.8.1-py2.py3-none-any.whl (from depyf==0.20.0->vllm)
+143.4s 179 Requirement already satisfied: dill in /usr/local/lib/python3.12/dist-packages (from depyf==0.20.0->vllm) (0.4.0)
+143.4s 180 Processing /kaggle/tmp/setup/wheels/apache_tvm_ffi-0.1.7-cp312-abi3-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (from flashinfer-python==0.5.2->vllm)
+143.4s 181 Requirement already satisfied: click in /usr/local/lib/python3.12/dist-packages (from flashinfer-python==0.5.2->vllm) (8.3.1)
+143.4s 182 Processing /kaggle/tmp/setup/wheels/nvidia_cudnn_frontend-1.17.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (from flashinfer-python==0.5.2->vllm)
+143.4s 183 Processing /kaggle/tmp/setup/wheels/nvidia_cutlass_dsl-4.3.4-cp312-cp312-manylinux_2_28_x86_64.whl (from flashinfer-python==0.5.2->vllm)
+143.5s 184 Requirement already satisfied: nvidia-ml-py in /usr/local/lib/python3.12/dist-packages (from flashinfer-python==0.5.2->vllm) (12.575.51)
+143.5s 185 Requirement already satisfied: tabulate in /usr/local/lib/python3.12/dist-packages (from flashinfer-python==0.5.2->vllm) (0.9.0)
+143.5s 186 Processing /kaggle/tmp/setup/wheels/interegular-0.3.3-py37-none-any.whl (from lm-format-enforcer==0.11.3->vllm)
+143.5s 187 Processing /kaggle/tmp/setup/wheels/llvmlite-0.44.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (from numba==0.61.2->vllm)
+143.5s 188 Requirement already satisfied: sympy>=1.13.3 in /usr/local/lib/python3.12/dist-packages (from torch>=2.4.0->unsloth) (1.13.3)
+143.5s 189 Requirement already satisfied: networkx>=2.5.1 in /usr/local/lib/python3.12/dist-packages (from torch>=2.4.0->unsloth) (3.5)
+143.5s 190 Requirement already satisfied: jinja2 in /usr/local/lib/python3.12/dist-packages (from torch>=2.4.0->unsloth) (3.1.6)
+143.5s 191 Requirement already satisfied: fsspec>=0.8.5 in /usr/local/lib/python3.12/dist-packages (from torch>=2.4.0->unsloth) (2025.10.0)
+143.5s 192 Processing /kaggle/tmp/setup/wheels/torchaudio-2.9.0+cu128-cp312-cp312-manylinux_2_28_x86_64.whl (from vllm)
+143.5s 193 Processing /kaggle/tmp/setup/wheels/torchvision-0.24.0+cu128-cp312-cp312-manylinux_2_28_x86_64.whl (from unsloth)
+143.5s 194 Processing /kaggle/tmp/setup/wheels/flashinfer_python-0.5.2-py3-none-any.whl (from vllm)
+143.5s 195 Requirement already satisfied: anyio<5,>=3.5.0 in /usr/local/lib/python3.12/dist-packages (from anthropic==0.71.0->vllm) (4.12.0)
+143.5s 196 Requirement already satisfied: distro<2,>=1.7.0 in /usr/local/lib/python3.12/dist-packages (from anthropic==0.71.0->vllm) (1.9.0)
+143.5s 197 Requirement already satisfied: docstring-parser<1,>=0.15 in /usr/local/lib/python3.12/dist-packages (from anthropic==0.71.0->vllm) (0.17.0)
+143.5s 198 Requirement already satisfied: httpx<1,>=0.25.0 in /usr/local/lib/python3.12/dist-packages (from anthropic==0.71.0->vllm) (0.28.1)
+143.5s 199 Requirement already satisfied: jiter<1,>=0.4.0 in /usr/local/lib/python3.12/dist-packages (from anthropic==0.71.0->vllm) (0.11.1)
+143.5s 200 Requirement already satisfied: sniffio in /usr/local/lib/python3.12/dist-packages (from anthropic==0.71.0->vllm) (1.3.1)
+143.5s 201 Processing /kaggle/tmp/setup/wheels/loguru-0.7.3-py3-none-any.whl (from compressed-tensors==0.12.2->vllm)
+143.5s 202 Processing /kaggle/tmp/setup/wheels/astor-0.8.1-py2.py3-none-any.whl (from depyf==0.20.0->vllm)
+143.5s 203 Requirement already satisfied: dill in /usr/local/lib/python3.12/dist-packages (from depyf==0.20.0->vllm) (0.4.0)
+143.5s 204 Processing /kaggle/tmp/setup/wheels/apache_tvm_ffi-0.1.7-cp312-abi3-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (from flashinfer-python==0.5.2->vllm)
+143.5s 205 Requirement already satisfied: click in /usr/local/lib/python3.12/dist-packages (from flashinfer-python==0.5.2->vllm) (8.3.1)
+143.5s 206 Processing /kaggle/tmp/setup/wheels/nvidia_cudnn_frontend-1.17.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (from flashinfer-python==0.5.2->vllm)
+143.5s 207 Processing /kaggle/tmp/setup/wheels/nvidia_cutlass_dsl-4.3.4-cp312-cp312-manylinux_2_28_x86_64.whl (from flashinfer-python==0.5.2->vllm)
+143.5s 208 Requirement already satisfied: nvidia-ml-py in /usr/local/lib/python3.12/dist-packages (from flashinfer-python==0.5.2->vllm) (12.575.51)
+143.5s 209 Requirement already satisfied: tabulate in /usr/local/lib/python3.12/dist-packages (from flashinfer-python==0.5.2->vllm) (0.9.0)
+143.5s 210 Processing /kaggle/tmp/setup/wheels/interegular-0.3.3-py37-none-any.whl (from lm-format-enforcer==0.11.3->vllm)
+143.5s 211 Processing /kaggle/tmp/setup/wheels/llvmlite-0.44.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (from numba==0.61.2->vllm)
+143.5s 212 Requirement already satisfied: sympy>=1.13.3 in /usr/local/lib/python3.12/dist-packages (from torch>=2.4.0->unsloth) (1.13.3)
+143.5s 213 Requirement already satisfied: networkx>=2.5.1 in /usr/local/lib/python3.12/dist-packages (from torch>=2.4.0->unsloth) (3.5)
+143.5s 214 Requirement already satisfied: jinja2 in /usr/local/lib/python3.12/dist-packages (from torch>=2.4.0->unsloth) (3.1.6)
+143.5s 215 Requirement already satisfied: fsspec>=0.8.5 in /usr/local/lib/python3.12/dist-packages (from torch>=2.4.0->unsloth) (2025.10.0)
+143.5s 216 Processing /kaggle/tmp/setup/wheels/nvidia_cuda_nvrtc_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (from torch>=2.4.0->unsloth)
+143.6s 217 Processing /kaggle/tmp/setup/wheels/nvidia_cuda_runtime_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (from torch>=2.4.0->unsloth)
+143.6s 218 Processing /kaggle/tmp/setup/wheels/nvidia_cuda_cupti_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (from torch>=2.4.0->unsloth)
+143.6s 219 Requirement already satisfied: nvidia-cudnn-cu12==9.10.2.21 in /usr/local/lib/python3.12/dist-packages (from torch>=2.4.0->unsloth) (9.10.2.21)
+143.6s 220 Processing /kaggle/tmp/setup/wheels/nvidia_cublas_cu12-12.8.4.1-py3-none-manylinux_2_27_x86_64.whl (from torch>=2.4.0->unsloth)
+143.7s 221 Processing /kaggle/tmp/setup/wheels/nvidia_cuda_nvrtc_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (from torch>=2.4.0->unsloth)
+143.7s 222 Processing /kaggle/tmp/setup/wheels/nvidia_cuda_runtime_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (from torch>=2.4.0->unsloth)
+143.7s 223 Processing /kaggle/tmp/setup/wheels/nvidia_cuda_cupti_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (from torch>=2.4.0->unsloth)
+143.7s 224 Requirement already satisfied: nvidia-cudnn-cu12==9.10.2.21 in /usr/local/lib/python3.12/dist-packages (from torch>=2.4.0->unsloth) (9.10.2.21)
+143.7s 225 Processing /kaggle/tmp/setup/wheels/nvidia_cublas_cu12-12.8.4.1-py3-none-manylinux_2_27_x86_64.whl (from torch>=2.4.0->unsloth)
+144.1s 226 Processing /kaggle/tmp/setup/wheels/nvidia_cufft_cu12-11.3.3.83-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (from torch>=2.4.0->unsloth)
+144.3s 227 Processing /kaggle/tmp/setup/wheels/nvidia_curand_cu12-10.3.9.90-py3-none-manylinux_2_27_x86_64.whl (from torch>=2.4.0->unsloth)
+144.3s 228 Processing /kaggle/tmp/setup/wheels/nvidia_cufft_cu12-11.3.3.83-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (from torch>=2.4.0->unsloth)
+144.3s 229 Processing /kaggle/tmp/setup/wheels/nvidia_curand_cu12-10.3.9.90-py3-none-manylinux_2_27_x86_64.whl (from torch>=2.4.0->unsloth)
+144.3s 230 Processing /kaggle/tmp/setup/wheels/nvidia_cusolver_cu12-11.7.3.90-py3-none-manylinux_2_27_x86_64.whl (from torch>=2.4.0->unsloth)
+144.5s 231 Processing /kaggle/tmp/setup/wheels/nvidia_cusolver_cu12-11.7.3.90-py3-none-manylinux_2_27_x86_64.whl (from torch>=2.4.0->unsloth)
+144.5s 232 Processing /kaggle/tmp/setup/wheels/nvidia_cusparse_cu12-12.5.8.93-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (from torch>=2.4.0->unsloth)
+144.7s 233 Processing /kaggle/tmp/setup/wheels/nvidia_cusparse_cu12-12.5.8.93-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (from torch>=2.4.0->unsloth)
+144.8s 234 Requirement already satisfied: nvidia-cusparselt-cu12==0.7.1 in /usr/local/lib/python3.12/dist-packages (from torch>=2.4.0->unsloth) (0.7.1)
+144.8s 235 Processing /kaggle/tmp/setup/wheels/nvidia_nccl_cu12-2.27.5-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (from torch>=2.4.0->unsloth)
+145.0s 236 Requirement already satisfied: nvidia-cusparselt-cu12==0.7.1 in /usr/local/lib/python3.12/dist-packages (from torch>=2.4.0->unsloth) (0.7.1)
+145.0s 237 Processing /kaggle/tmp/setup/wheels/nvidia_nccl_cu12-2.27.5-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (from torch>=2.4.0->unsloth)
+145.0s 238 Processing /kaggle/tmp/setup/wheels/nvidia_nvshmem_cu12-3.3.20-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (from torch>=2.4.0->unsloth)
+145.2s 239 Processing /kaggle/tmp/setup/wheels/nvidia_nvtx_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (from torch>=2.4.0->unsloth)
+145.2s 240 Processing /kaggle/tmp/setup/wheels/nvidia_nvjitlink_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (from torch>=2.4.0->unsloth)
+145.2s 241 Processing /kaggle/tmp/setup/wheels/nvidia_cufile_cu12-1.13.1.3-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (from torch>=2.4.0->unsloth)
+145.2s 242 Processing /kaggle/tmp/setup/wheels/triton-3.5.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (from unsloth)
+145.2s 243 Processing /kaggle/tmp/setup/wheels/nvidia_nvshmem_cu12-3.3.20-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (from torch>=2.4.0->unsloth)
+145.2s 244 Processing /kaggle/tmp/setup/wheels/nvidia_nvtx_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (from torch>=2.4.0->unsloth)
+145.2s 245 Processing /kaggle/tmp/setup/wheels/nvidia_nvjitlink_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (from torch>=2.4.0->unsloth)
+145.2s 246 Processing /kaggle/tmp/setup/wheels/nvidia_cufile_cu12-1.13.1.3-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (from torch>=2.4.0->unsloth)
+145.2s 247 Processing /kaggle/tmp/setup/wheels/triton-3.5.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (from unsloth)
+145.4s 248 Requirement already satisfied: safetensors>=0.4.3 in /usr/local/lib/python3.12/dist-packages (from accelerate>=0.34.1->unsloth) (0.6.2)
+145.4s 249 Requirement already satisfied: pyarrow>=21.0.0 in /usr/local/lib/python3.12/dist-packages (from datasets!=4.0.*,!=4.1.0,<4.4.0,>=3.4.1->unsloth) (22.0.0)
+145.4s 250 Requirement already satisfied: pandas in /usr/local/lib/python3.12/dist-packages (from datasets!=4.0.*,!=4.1.0,<4.4.0,>=3.4.1->unsloth) (2.2.2)
+145.4s 251 Requirement already satisfied: xxhash in /usr/local/lib/python3.12/dist-packages (from datasets!=4.0.*,!=4.1.0,<4.4.0,>=3.4.1->unsloth) (3.6.0)
+145.4s 252 Processing /kaggle/tmp/setup/wheels/multiprocess-0.70.16-py312-none-any.whl (from datasets!=4.0.*,!=4.1.0,<4.4.0,>=3.4.1->unsloth)
+145.4s 253 Processing /kaggle/tmp/setup/wheels/fsspec-2025.9.0-py3-none-any.whl (from torch>=2.4.0->unsloth)
+145.4s 254 Requirement already satisfied: starlette<0.49.0,>=0.40.0 in /usr/local/lib/python3.12/dist-packages (from fastapi>=0.115.0->fastapi[standard]>=0.115.0->vllm) (0.48.0)
+145.5s 255 Processing /kaggle/tmp/setup/wheels/fastapi_cli-0.0.20-py3-none-any.whl (from fastapi-cli[standard]>=0.0.8; extra == "standard"->fastapi[standard]>=0.115.0->vllm)
+145.5s 256 Requirement already satisfied: python-multipart>=0.0.18 in /usr/local/lib/python3.12/dist-packages (from fastapi[standard]>=0.115.0->vllm) (0.0.20)
+145.5s 257 Requirement already satisfied: email-validator>=2.0.0 in /usr/local/lib/python3.12/dist-packages (from fastapi[standard]>=0.115.0->vllm) (2.3.0)
+145.5s 258 Requirement already satisfied: uvicorn>=0.12.0 in /usr/local/lib/python3.12/dist-packages (from uvicorn[standard]>=0.12.0; extra == "standard"->fastapi[standard]>=0.115.0->vllm) (0.38.0)
+145.5s 259 Requirement already satisfied: hf-xet<2.0.0,>=1.1.3 in /usr/local/lib/python3.12/dist-packages (from huggingface_hub>=0.34.0->unsloth) (1.2.1rc0)
+145.5s 260 Requirement already satisfied: jsonschema>=4.21.1 in /usr/local/lib/python3.12/dist-packages (from mistral_common>=1.8.5->mistral_common[image]>=1.8.5->vllm) (4.25.1)
+145.5s 261 Processing /kaggle/tmp/setup/wheels/pydantic_extra_types-2.10.6-py3-none-any.whl (from pydantic-extra-types[pycountry]>=2.10.5->mistral_common>=1.8.5->mistral_common[image]>=1.8.5->vllm)
+145.5s 262 Requirement already satisfied: jmespath in /usr/local/lib/python3.12/dist-packages (from model-hosting-container-standards<1.0.0->vllm) (1.0.1)
+145.5s 263 INFO: pip is looking at multiple versions of model-hosting-container-standards to determine which version is compatible with other requirements. This could take a while.
+145.5s 264 Processing /kaggle/tmp/setup/wheels/fastapi-0.128.0-py3-none-any.whl (from vllm)
+145.5s 265 Processing /kaggle/tmp/setup/wheels/annotated_doc-0.0.4-py3-none-any.whl (from fastapi[standard]>=0.115.0->vllm)
+145.6s 266 Requirement already satisfied: pydantic-settings>=2.0.0 in /usr/local/lib/python3.12/dist-packages (from fastapi[standard]>=0.115.0->vllm) (2.11.0)
+145.6s 267 Processing /kaggle/tmp/setup/wheels/starlette-0.50.0-py3-none-any.whl (from fastapi[standard]>=0.115.0->vllm)
+145.6s 268 Processing /kaggle/tmp/setup/wheels/supervisor-4.3.0-py2.py3-none-any.whl (from model-hosting-container-standards<1.0.0->vllm)
+145.6s 269 Requirement already satisfied: safetensors>=0.4.3 in /usr/local/lib/python3.12/dist-packages (from accelerate>=0.34.1->unsloth) (0.6.2)
+145.6s 270 Requirement already satisfied: pyarrow>=21.0.0 in /usr/local/lib/python3.12/dist-packages (from datasets!=4.0.*,!=4.1.0,<4.4.0,>=3.4.1->unsloth) (22.0.0)
+145.6s 271 Requirement already satisfied: pandas in /usr/local/lib/python3.12/dist-packages (from datasets!=4.0.*,!=4.1.0,<4.4.0,>=3.4.1->unsloth) (2.2.2)
+145.6s 272 Requirement already satisfied: xxhash in /usr/local/lib/python3.12/dist-packages (from datasets!=4.0.*,!=4.1.0,<4.4.0,>=3.4.1->unsloth) (3.6.0)
+145.6s 273 Processing /kaggle/tmp/setup/wheels/multiprocess-0.70.16-py312-none-any.whl (from datasets!=4.0.*,!=4.1.0,<4.4.0,>=3.4.1->unsloth)
+145.6s 274 Processing /kaggle/tmp/setup/wheels/fsspec-2025.9.0-py3-none-any.whl (from torch>=2.4.0->unsloth)
+145.6s 275 Requirement already satisfied: starlette<0.49.0,>=0.40.0 in /usr/local/lib/python3.12/dist-packages (from fastapi>=0.115.0->fastapi[standard]>=0.115.0->vllm) (0.48.0)
+145.6s 276 Processing /kaggle/tmp/setup/wheels/fastapi_cli-0.0.20-py3-none-any.whl (from fastapi-cli[standard]>=0.0.8; extra == "standard"->fastapi[standard]>=0.115.0->vllm)
+145.6s 277 Requirement already satisfied: python-multipart>=0.0.18 in /usr/local/lib/python3.12/dist-packages (from fastapi[standard]>=0.115.0->vllm) (0.0.20)
+145.6s 278 Requirement already satisfied: email-validator>=2.0.0 in /usr/local/lib/python3.12/dist-packages (from fastapi[standard]>=0.115.0->vllm) (2.3.0)
+145.6s 279 Requirement already satisfied: uvicorn>=0.12.0 in /usr/local/lib/python3.12/dist-packages (from uvicorn[standard]>=0.12.0; extra == "standard"->fastapi[standard]>=0.115.0->vllm) (0.38.0)
+145.6s 280 Requirement already satisfied: hf-xet<2.0.0,>=1.1.3 in /usr/local/lib/python3.12/dist-packages (from huggingface_hub>=0.34.0->unsloth) (1.2.1rc0)
+145.6s 281 Requirement already satisfied: jsonschema>=4.21.1 in /usr/local/lib/python3.12/dist-packages (from mistral_common>=1.8.5->mistral_common[image]>=1.8.5->vllm) (4.25.1)
+145.6s 282 Processing /kaggle/tmp/setup/wheels/pydantic_extra_types-2.10.6-py3-none-any.whl (from pydantic-extra-types[pycountry]>=2.10.5->mistral_common>=1.8.5->mistral_common[image]>=1.8.5->vllm)
+145.6s 283 Requirement already satisfied: jmespath in /usr/local/lib/python3.12/dist-packages (from model-hosting-container-standards<1.0.0->vllm) (1.0.1)
+145.6s 284 INFO: pip is looking at multiple versions of model-hosting-container-standards to determine which version is compatible with other requirements. This could take a while.
+145.6s 285 Processing /kaggle/tmp/setup/wheels/fastapi-0.128.0-py3-none-any.whl (from vllm)
+145.6s 286 Processing /kaggle/tmp/setup/wheels/annotated_doc-0.0.4-py3-none-any.whl (from fastapi[standard]>=0.115.0->vllm)
+145.6s 287 Requirement already satisfied: pydantic-settings>=2.0.0 in /usr/local/lib/python3.12/dist-packages (from fastapi[standard]>=0.115.0->vllm) (2.11.0)
+145.6s 288 Processing /kaggle/tmp/setup/wheels/starlette-0.50.0-py3-none-any.whl (from fastapi[standard]>=0.115.0->vllm)
+145.6s 289 Processing /kaggle/tmp/setup/wheels/supervisor-4.3.0-py2.py3-none-any.whl (from model-hosting-container-standards<1.0.0->vllm)
+145.7s 290 Requirement already satisfied: annotated-types>=0.6.0 in /usr/local/lib/python3.12/dist-packages (from pydantic>=2.12.0->vllm) (0.7.0)
+145.7s 291 Requirement already satisfied: pydantic-core==2.41.5 in /usr/local/lib/python3.12/dist-packages (from pydantic>=2.12.0->vllm) (2.41.5)
+145.7s 292 Requirement already satisfied: typing-inspection>=0.4.2 in /usr/local/lib/python3.12/dist-packages (from pydantic>=2.12.0->vllm) (0.4.2)
+145.7s 293 INFO: pip is looking at multiple versions of ray to determine which version is compatible with other requirements. This could take a while.
+145.7s 294 Processing /kaggle/tmp/setup/wheels/ray-2.53.0-cp312-cp312-manylinux2014_x86_64.whl (from ray[cgraph]>=2.48.0->vllm)
+145.8s 295 Requirement already satisfied: msgpack<2.0.0,>=1.0.0 in /usr/local/lib/python3.12/dist-packages (from ray>=2.48.0->ray[cgraph]>=2.48.0->vllm) (1.1.2)
+145.8s 296 INFO: pip is looking at multiple versions of ray[cgraph] to determine which version is compatible with other requirements. This could take a while.
+145.8s 297 Requirement already satisfied: cupy-cuda12x in /usr/local/lib/python3.12/dist-packages (from ray[cgraph]>=2.48.0->vllm) (13.3.0)
+145.9s 298 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.12/dist-packages (from requests>=2.26.0->vllm) (3.4.4)
+145.9s 299 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.12/dist-packages (from requests>=2.26.0->vllm) (3.11)
+145.9s 300 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.12/dist-packages (from requests>=2.26.0->vllm) (2.6.2)
+145.9s 301 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.12/dist-packages (from requests>=2.26.0->vllm) (2025.11.12)
+145.9s 302 Requirement already satisfied: annotated-types>=0.6.0 in /usr/local/lib/python3.12/dist-packages (from pydantic>=2.12.0->vllm) (0.7.0)
+145.9s 303 Requirement already satisfied: pydantic-core==2.41.5 in /usr/local/lib/python3.12/dist-packages (from pydantic>=2.12.0->vllm) (2.41.5)
+145.9s 304 Requirement already satisfied: typing-inspection>=0.4.2 in /usr/local/lib/python3.12/dist-packages (from pydantic>=2.12.0->vllm) (0.4.2)
+145.9s 305 INFO: pip is looking at multiple versions of ray to determine which version is compatible with other requirements. This could take a while.
+145.9s 306 Processing /kaggle/tmp/setup/wheels/ray-2.53.0-cp312-cp312-manylinux2014_x86_64.whl (from ray[cgraph]>=2.48.0->vllm)
+145.9s 307 Requirement already satisfied: msgpack<2.0.0,>=1.0.0 in /usr/local/lib/python3.12/dist-packages (from ray>=2.48.0->ray[cgraph]>=2.48.0->vllm) (1.1.2)
+145.9s 308 INFO: pip is looking at multiple versions of ray[cgraph] to determine which version is compatible with other requirements. This could take a while.
+145.9s 309 Requirement already satisfied: cupy-cuda12x in /usr/local/lib/python3.12/dist-packages (from ray[cgraph]>=2.48.0->vllm) (13.3.0)
+145.9s 310 Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.12/dist-packages (from requests>=2.26.0->vllm) (3.4.4)
+145.9s 311 Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.12/dist-packages (from requests>=2.26.0->vllm) (3.11)
+145.9s 312 Processing /kaggle/tmp/setup/wheels/torchao-0.15.0+cu128-cp310-abi3-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (from unsloth_zoo>=2025.12.7->unsloth)
+145.9s 313 Processing /kaggle/tmp/setup/wheels/cut_cross_entropy-25.1.1-py3-none-any.whl (from unsloth_zoo>=2025.12.7->unsloth)
+146.0s 314 Requirement already satisfied: aiohappyeyeballs>=2.5.0 in /usr/local/lib/python3.12/dist-packages (from aiohttp->vllm) (2.6.1)
+146.0s 315 Requirement already satisfied: aiosignal>=1.4.0 in /usr/local/lib/python3.12/dist-packages (from aiohttp->vllm) (1.4.0)
+146.0s 316 Requirement already satisfied: attrs>=17.3.0 in /usr/local/lib/python3.12/dist-packages (from aiohttp->vllm) (25.4.0)
+146.0s 317 Requirement already satisfied: frozenlist>=1.1.1 in /usr/local/lib/python3.12/dist-packages (from aiohttp->vllm) (1.8.0)
+146.0s 318 Requirement already satisfied: multidict<7.0,>=4.5 in /usr/local/lib/python3.12/dist-packages (from aiohttp->vllm) (6.7.0)
+146.0s 319 Requirement already satisfied: propcache>=0.2.0 in /usr/local/lib/python3.12/dist-packages (from aiohttp->vllm) (0.4.1)
+146.0s 320 Requirement already satisfied: yarl<2.0,>=1.17.0 in /usr/local/lib/python3.12/dist-packages (from aiohttp->vllm) (1.22.0)
+146.0s 321 Requirement already satisfied: importlib_metadata in /usr/local/lib/python3.12/dist-packages (from diffusers->unsloth) (8.7.0)
+146.0s 322 Requirement already satisfied: typeguard>=4.0.0 in /usr/local/lib/python3.12/dist-packages (from tyro->unsloth) (4.4.4)
+146.1s 323 Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.12/dist-packages (from requests>=2.26.0->vllm) (2.6.2)
+146.1s 324 Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.12/dist-packages (from requests>=2.26.0->vllm) (2025.11.12)
+146.1s 325 Processing /kaggle/tmp/setup/wheels/torchao-0.15.0+cu128-cp310-abi3-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (from unsloth_zoo>=2025.12.7->unsloth)
+146.1s 326 Processing /kaggle/tmp/setup/wheels/cut_cross_entropy-25.1.1-py3-none-any.whl (from unsloth_zoo>=2025.12.7->unsloth)
+146.1s 327 Requirement already satisfied: aiohappyeyeballs>=2.5.0 in /usr/local/lib/python3.12/dist-packages (from aiohttp->vllm) (2.6.1)
+146.1s 328 Requirement already satisfied: aiosignal>=1.4.0 in /usr/local/lib/python3.12/dist-packages (from aiohttp->vllm) (1.4.0)
+146.1s 329 Requirement already satisfied: attrs>=17.3.0 in /usr/local/lib/python3.12/dist-packages (from aiohttp->vllm) (25.4.0)
+146.1s 330 Requirement already satisfied: frozenlist>=1.1.1 in /usr/local/lib/python3.12/dist-packages (from aiohttp->vllm) (1.8.0)
+146.1s 331 Requirement already satisfied: multidict<7.0,>=4.5 in /usr/local/lib/python3.12/dist-packages (from aiohttp->vllm) (6.7.0)
+146.1s 332 Requirement already satisfied: propcache>=0.2.0 in /usr/local/lib/python3.12/dist-packages (from aiohttp->vllm) (0.4.1)
+146.1s 333 Requirement already satisfied: yarl<2.0,>=1.17.0 in /usr/local/lib/python3.12/dist-packages (from aiohttp->vllm) (1.22.0)
+146.1s 334 Requirement already satisfied: importlib_metadata in /usr/local/lib/python3.12/dist-packages (from diffusers->unsloth) (8.7.0)
+146.1s 335 Requirement already satisfied: typeguard>=4.0.0 in /usr/local/lib/python3.12/dist-packages (from tyro->unsloth) (4.4.4)
+146.1s 336 Requirement already satisfied: dnspython>=2.0.0 in /usr/local/lib/python3.12/dist-packages (from email-validator>=2.0.0->fastapi[standard]>=0.115.0->vllm) (2.8.0)
+146.1s 337 Requirement already satisfied: typer>=0.15.1 in /usr/local/lib/python3.12/dist-packages (from fastapi-cli>=0.0.8->fastapi-cli[standard]>=0.0.8; extra == "standard"->fastapi[standard]>=0.115.0->vllm) (0.20.0)
+146.1s 338 Processing /kaggle/tmp/setup/wheels/rich_toolkit-0.17.1-py3-none-any.whl (from fastapi-cli>=0.0.8->fastapi-cli[standard]>=0.0.8; extra == "standard"->fastapi[standard]>=0.115.0->vllm)
+146.1s 339 Processing /kaggle/tmp/setup/wheels/fastapi_cloud_cli-0.8.0-py3-none-any.whl (from fastapi-cli[standard]>=0.0.8; extra == "standard"->fastapi[standard]>=0.115.0->vllm)
+146.1s 340 Requirement already satisfied: httpcore==1.* in /usr/local/lib/python3.12/dist-packages (from httpx<1,>=0.25.0->anthropic==0.71.0->vllm) (1.0.9)
+146.1s 341 Requirement already satisfied: h11>=0.16 in /usr/local/lib/python3.12/dist-packages (from httpcore==1.*->httpx<1,>=0.25.0->anthropic==0.71.0->vllm) (0.16.0)
+146.1s 342 Requirement already satisfied: MarkupSafe>=2.0 in /usr/local/lib/python3.12/dist-packages (from jinja2->torch>=2.4.0->unsloth) (3.0.3)
+146.2s 343 Requirement already satisfied: jsonschema-specifications>=2023.03.6 in /usr/local/lib/python3.12/dist-packages (from jsonschema>=4.21.1->mistral_common>=1.8.5->mistral_common[image]>=1.8.5->vllm) (2025.9.1)
+146.2s 344 Requirement already satisfied: referencing>=0.28.4 in /usr/local/lib/python3.12/dist-packages (from jsonschema>=4.21.1->mistral_common>=1.8.5->mistral_common[image]>=1.8.5->vllm) (0.37.0)
+146.2s 345 Requirement already satisfied: rpds-py>=0.7.1 in /usr/local/lib/python3.12/dist-packages (from jsonschema>=4.21.1->mistral_common>=1.8.5->mistral_common[image]>=1.8.5->vllm) (0.27.1)
+146.2s 346 Processing /kaggle/tmp/setup/wheels/cuda_python-13.1.1-py3-none-any.whl (from nvidia-cutlass-dsl>=4.2.1->flashinfer-python==0.5.2->vllm)
+146.2s 347 Processing /kaggle/tmp/setup/wheels/pycountry-24.6.1-py3-none-any.whl (from pydantic-extra-types[pycountry]>=2.10.5->mistral_common>=1.8.5->mistral_common[image]>=1.8.5->vllm)
+146.2s 348 Requirement already satisfied: python-dotenv>=0.21.0 in /usr/local/lib/python3.12/dist-packages (from pydantic-settings>=2.0.0->fastapi[standard]>=0.115.0->vllm) (1.1.1)
+146.2s 349 Requirement already satisfied: mpmath<1.4,>=1.1.0 in /usr/local/lib/python3.12/dist-packages (from sympy>=1.13.3->torch>=2.4.0->unsloth) (1.3.0)
+146.3s 350 Processing /kaggle/tmp/setup/wheels/httptools-0.7.1-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (from uvicorn[standard]>=0.12.0; extra == "standard"->fastapi[standard]>=0.115.0->vllm)
+146.3s 351 Processing /kaggle/tmp/setup/wheels/uvloop-0.22.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (from uvicorn[standard]>=0.12.0; extra == "standard"->fastapi[standard]>=0.115.0->vllm)
+146.3s 352 Requirement already satisfied: websockets>=10.4 in /usr/local/lib/python3.12/dist-packages (from uvicorn[standard]>=0.12.0; extra == "standard"->fastapi[standard]>=0.115.0->vllm) (15.0.1)
+146.3s 353 Requirement already satisfied: dnspython>=2.0.0 in /usr/local/lib/python3.12/dist-packages (from email-validator>=2.0.0->fastapi[standard]>=0.115.0->vllm) (2.8.0)
+146.3s 354 Requirement already satisfied: typer>=0.15.1 in /usr/local/lib/python3.12/dist-packages (from fastapi-cli>=0.0.8->fastapi-cli[standard]>=0.0.8; extra == "standard"->fastapi[standard]>=0.115.0->vllm) (0.20.0)
+146.3s 355 Processing /kaggle/tmp/setup/wheels/rich_toolkit-0.17.1-py3-none-any.whl (from fastapi-cli>=0.0.8->fastapi-cli[standard]>=0.0.8; extra == "standard"->fastapi[standard]>=0.115.0->vllm)
+146.3s 356 Processing /kaggle/tmp/setup/wheels/fastapi_cloud_cli-0.8.0-py3-none-any.whl (from fastapi-cli[standard]>=0.0.8; extra == "standard"->fastapi[standard]>=0.115.0->vllm)
+146.3s 357 Requirement already satisfied: httpcore==1.* in /usr/local/lib/python3.12/dist-packages (from httpx<1,>=0.25.0->anthropic==0.71.0->vllm) (1.0.9)
+146.3s 358 Requirement already satisfied: h11>=0.16 in /usr/local/lib/python3.12/dist-packages (from httpcore==1.*->httpx<1,>=0.25.0->anthropic==0.71.0->vllm) (0.16.0)
+146.3s 359 Requirement already satisfied: MarkupSafe>=2.0 in /usr/local/lib/python3.12/dist-packages (from jinja2->torch>=2.4.0->unsloth) (3.0.3)
+146.3s 360 Requirement already satisfied: jsonschema-specifications>=2023.03.6 in /usr/local/lib/python3.12/dist-packages (from jsonschema>=4.21.1->mistral_common>=1.8.5->mistral_common[image]>=1.8.5->vllm) (2025.9.1)
+146.3s 361 Requirement already satisfied: referencing>=0.28.4 in /usr/local/lib/python3.12/dist-packages (from jsonschema>=4.21.1->mistral_common>=1.8.5->mistral_common[image]>=1.8.5->vllm) (0.37.0)
+146.3s 362 Requirement already satisfied: rpds-py>=0.7.1 in /usr/local/lib/python3.12/dist-packages (from jsonschema>=4.21.1->mistral_common>=1.8.5->mistral_common[image]>=1.8.5->vllm) (0.27.1)
+146.3s 363 Processing /kaggle/tmp/setup/wheels/cuda_python-13.1.1-py3-none-any.whl (from nvidia-cutlass-dsl>=4.2.1->flashinfer-python==0.5.2->vllm)
+146.3s 364 Processing /kaggle/tmp/setup/wheels/pycountry-24.6.1-py3-none-any.whl (from pydantic-extra-types[pycountry]>=2.10.5->mistral_common>=1.8.5->mistral_common[image]>=1.8.5->vllm)
+146.3s 365 Requirement already satisfied: python-dotenv>=0.21.0 in /usr/local/lib/python3.12/dist-packages (from pydantic-settings>=2.0.0->fastapi[standard]>=0.115.0->vllm) (1.1.1)
+146.3s 366 Requirement already satisfied: mpmath<1.4,>=1.1.0 in /usr/local/lib/python3.12/dist-packages (from sympy>=1.13.3->torch>=2.4.0->unsloth) (1.3.0)
+146.3s 367 Processing /kaggle/tmp/setup/wheels/httptools-0.7.1-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (from uvicorn[standard]>=0.12.0; extra == "standard"->fastapi[standard]>=0.115.0->vllm)
+146.3s 368 Processing /kaggle/tmp/setup/wheels/uvloop-0.22.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (from uvicorn[standard]>=0.12.0; extra == "standard"->fastapi[standard]>=0.115.0->vllm)
+146.3s 369 Requirement already satisfied: websockets>=10.4 in /usr/local/lib/python3.12/dist-packages (from uvicorn[standard]>=0.12.0; extra == "standard"->fastapi[standard]>=0.115.0->vllm) (15.0.1)
+146.3s 370 Requirement already satisfied: fastrlock>=0.5 in /usr/local/lib/python3.12/dist-packages (from cupy-cuda12x->ray[cgraph]>=2.48.0->vllm) (0.8.3)
+146.3s 371 Requirement already satisfied: zipp>=3.20 in /usr/local/lib/python3.12/dist-packages (from importlib_metadata->diffusers->unsloth) (3.23.0)
+146.3s 372 Requirement already satisfied: python-dateutil>=2.8.2 in /usr/local/lib/python3.12/dist-packages (from pandas->datasets!=4.0.*,!=4.1.0,<4.4.0,>=3.4.1->unsloth) (2.9.0.post0)
+146.3s 373 Requirement already satisfied: pytz>=2020.1 in /usr/local/lib/python3.12/dist-packages (from pandas->datasets!=4.0.*,!=4.1.0,<4.4.0,>=3.4.1->unsloth) (2025.2)
+146.3s 374 Requirement already satisfied: tzdata>=2022.7 in /usr/local/lib/python3.12/dist-packages (from pandas->datasets!=4.0.*,!=4.1.0,<4.4.0,>=3.4.1->unsloth) (2025.3)
+146.4s 375 Processing /kaggle/tmp/setup/wheels/cuda_bindings-13.1.1-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (from cuda-python>=12.8->nvidia-cutlass-dsl>=4.2.1->flashinfer-python==0.5.2->vllm)
+146.4s 376 Processing /kaggle/tmp/setup/wheels/cuda_pathfinder-1.3.3-py3-none-any.whl (from cuda-python>=12.8->nvidia-cutlass-dsl>=4.2.1->flashinfer-python==0.5.2->vllm)
+146.4s 377 Processing /kaggle/tmp/setup/wheels/rignore-0.7.6-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (from fastapi-cloud-cli>=0.1.1->fastapi-cli[standard]>=0.0.8; extra == "standard"->fastapi[standard]>=0.115.0->vllm)
+146.4s 378 Requirement already satisfied: sentry-sdk>=2.20.0 in /usr/local/lib/python3.12/dist-packages (from fastapi-cloud-cli>=0.1.1->fastapi-cli[standard]>=0.0.8; extra == "standard"->fastapi[standard]>=0.115.0->vllm) (2.42.1)
+146.4s 379 Processing /kaggle/tmp/setup/wheels/fastar-0.8.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (from fastapi-cloud-cli>=0.1.1->fastapi-cli[standard]>=0.0.8; extra == "standard"->fastapi[standard]>=0.115.0->vllm)
+146.4s 380 Requirement already satisfied: rich>=13.7.1 in /usr/local/lib/python3.12/dist-packages (from rich-toolkit>=0.14.8->fastapi-cli>=0.0.8->fastapi-cli[standard]>=0.0.8; extra == "standard"->fastapi[standard]>=0.115.0->vllm) (14.2.0)
+146.4s 381 Requirement already satisfied: shellingham>=1.3.0 in /usr/local/lib/python3.12/dist-packages (from typer>=0.15.1->fastapi-cli>=0.0.8->fastapi-cli[standard]>=0.0.8; extra == "standard"->fastapi[standard]>=0.115.0->vllm) (1.5.4)
+146.5s 382 Requirement already satisfied: markdown-it-py>=2.2.0 in /usr/local/lib/python3.12/dist-packages (from rich>=13.7.1->rich-toolkit>=0.14.8->fastapi-cli>=0.0.8->fastapi-cli[standard]>=0.0.8; extra == "standard"->fastapi[standard]>=0.115.0->vllm) (4.0.0)
+146.5s 383 Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /usr/local/lib/python3.12/dist-packages (from rich>=13.7.1->rich-toolkit>=0.14.8->fastapi-cli>=0.0.8->fastapi-cli[standard]>=0.0.8; extra == "standard"->fastapi[standard]>=0.115.0->vllm) (2.19.2)
+146.5s 384 Requirement already satisfied: fastrlock>=0.5 in /usr/local/lib/python3.12/dist-packages (from cupy-cuda12x->ray[cgraph]>=2.48.0->vllm) (0.8.3)
+146.5s 385 Requirement already satisfied: zipp>=3.20 in /usr/local/lib/python3.12/dist-packages (from importlib_metadata->diffusers->unsloth) (3.23.0)
+146.5s 386 Requirement already satisfied: python-dateutil>=2.8.2 in /usr/local/lib/python3.12/dist-packages (from pandas->datasets!=4.0.*,!=4.1.0,<4.4.0,>=3.4.1->unsloth) (2.9.0.post0)
+146.5s 387 Requirement already satisfied: pytz>=2020.1 in /usr/local/lib/python3.12/dist-packages (from pandas->datasets!=4.0.*,!=4.1.0,<4.4.0,>=3.4.1->unsloth) (2025.2)
+146.5s 388 Requirement already satisfied: tzdata>=2022.7 in /usr/local/lib/python3.12/dist-packages (from pandas->datasets!=4.0.*,!=4.1.0,<4.4.0,>=3.4.1->unsloth) (2025.3)
+146.5s 389 Processing /kaggle/tmp/setup/wheels/cuda_bindings-13.1.1-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (from cuda-python>=12.8->nvidia-cutlass-dsl>=4.2.1->flashinfer-python==0.5.2->vllm)
+146.5s 390 Processing /kaggle/tmp/setup/wheels/cuda_pathfinder-1.3.3-py3-none-any.whl (from cuda-python>=12.8->nvidia-cutlass-dsl>=4.2.1->flashinfer-python==0.5.2->vllm)
+146.5s 391 Processing /kaggle/tmp/setup/wheels/rignore-0.7.6-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (from fastapi-cloud-cli>=0.1.1->fastapi-cli[standard]>=0.0.8; extra == "standard"->fastapi[standard]>=0.115.0->vllm)
+146.5s 392 Requirement already satisfied: sentry-sdk>=2.20.0 in /usr/local/lib/python3.12/dist-packages (from fastapi-cloud-cli>=0.1.1->fastapi-cli[standard]>=0.0.8; extra == "standard"->fastapi[standard]>=0.115.0->vllm) (2.42.1)
+146.5s 393 Processing /kaggle/tmp/setup/wheels/fastar-0.8.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (from fastapi-cloud-cli>=0.1.1->fastapi-cli[standard]>=0.0.8; extra == "standard"->fastapi[standard]>=0.115.0->vllm)
+146.5s 394 Requirement already satisfied: rich>=13.7.1 in /usr/local/lib/python3.12/dist-packages (from rich-toolkit>=0.14.8->fastapi-cli>=0.0.8->fastapi-cli[standard]>=0.0.8; extra == "standard"->fastapi[standard]>=0.115.0->vllm) (14.2.0)
+146.5s 395 Requirement already satisfied: shellingham>=1.3.0 in /usr/local/lib/python3.12/dist-packages (from typer>=0.15.1->fastapi-cli>=0.0.8->fastapi-cli[standard]>=0.0.8; extra == "standard"->fastapi[standard]>=0.115.0->vllm) (1.5.4)
+146.5s 396 Requirement already satisfied: markdown-it-py>=2.2.0 in /usr/local/lib/python3.12/dist-packages (from rich>=13.7.1->rich-toolkit>=0.14.8->fastapi-cli>=0.0.8->fastapi-cli[standard]>=0.0.8; extra == "standard"->fastapi[standard]>=0.115.0->vllm) (4.0.0)
+146.5s 397 Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /usr/local/lib/python3.12/dist-packages (from rich>=13.7.1->rich-toolkit>=0.14.8->fastapi-cli>=0.0.8->fastapi-cli[standard]>=0.0.8; extra == "standard"->fastapi[standard]>=0.115.0->vllm) (2.19.2)
+146.5s 398 Requirement already satisfied: mdurl~=0.1 in /usr/local/lib/python3.12/dist-packages (from markdown-it-py>=2.2.0->rich>=13.7.1->rich-toolkit>=0.14.8->fastapi-cli>=0.0.8->fastapi-cli[standard]>=0.0.8; extra == "standard"->fastapi[standard]>=0.115.0->vllm) (0.1.2)
+146.7s 399 Requirement already satisfied: mdurl~=0.1 in /usr/local/lib/python3.12/dist-packages (from markdown-it-py>=2.2.0->rich>=13.7.1->rich-toolkit>=0.14.8->fastapi-cli>=0.0.8->fastapi-cli[standard]>=0.0.8; extra == "standard"->fastapi[standard]>=0.115.0->vllm) (0.1.2)
+148.0s 400 Installing collected packages: torchao, supervisor, uvloop, triton, setuptools, setproctitle, rignore, pycountry, pybase64, partial-json-parser, outlines_core, nvidia-nvtx-cu12, nvidia-nvshmem-cu12, nvidia-nvjitlink-cu12, nvidia-nccl-cu12, nvidia-curand-cu12, nvidia-cufile-cu12, nvidia-cudnn-frontend, nvidia-cuda-runtime-cu12, nvidia-cuda-nvrtc-cu12, nvidia-cuda-cupti-cu12, nvidia-cublas-cu12, multiprocess, msgspec, loguru, llvmlite, llguidance, lark, interegular, httptools, gguf, fsspec, fastar, diskcache, cuda-pathfinder, cbor2, astor, apache-tvm-ffi, annotated-doc, watchfiles, tyro, starlette, nvidia-cusparse-cu12, nvidia-cufft-cu12, numba, depyf, cuda-bindings, rich-toolkit, pydantic-extra-types, prometheus-fastapi-instrumentator, openai_harmony, nvidia-cusolver-cu12, lm-format-enforcer, fastapi, cuda-python, anthropic, torch, ray, nvidia-cutlass-dsl, model-hosting-container-standards, fastapi-cloud-cli, fastapi-cli, datasets, xgrammar, xformers, torchvision, torchaudio, mistral_common, flashinfer-python, cut_cross_entropy, compressed-tensors, bitsandbytes, trl, unsloth_zoo, vllm, unsloth
+148.0s 401 Attempting uninstall: torchao
+148.1s 402 Found existing installation: torchao 0.10.0
+148.1s 403 Uninstalling torchao-0.10.0:
+148.2s 404 Installing collected packages: torchao, supervisor, uvloop, triton, setuptools, setproctitle, rignore, pycountry, pybase64, partial-json-parser, outlines_core, nvidia-nvtx-cu12, nvidia-nvshmem-cu12, nvidia-nvjitlink-cu12, nvidia-nccl-cu12, nvidia-curand-cu12, nvidia-cufile-cu12, nvidia-cudnn-frontend, nvidia-cuda-runtime-cu12, nvidia-cuda-nvrtc-cu12, nvidia-cuda-cupti-cu12, nvidia-cublas-cu12, multiprocess, msgspec, loguru, llvmlite, llguidance, lark, interegular, httptools, gguf, fsspec, fastar, diskcache, cuda-pathfinder, cbor2, astor, apache-tvm-ffi, annotated-doc, watchfiles, tyro, starlette, nvidia-cusparse-cu12, nvidia-cufft-cu12, numba, depyf, cuda-bindings, rich-toolkit, pydantic-extra-types, prometheus-fastapi-instrumentator, openai_harmony, nvidia-cusolver-cu12, lm-format-enforcer, fastapi, cuda-python, anthropic, torch, ray, nvidia-cutlass-dsl, model-hosting-container-standards, fastapi-cloud-cli, fastapi-cli, datasets, xgrammar, xformers, torchvision, torchaudio, mistral_common, flashinfer-python, cut_cross_entropy, compressed-tensors, bitsandbytes, trl, unsloth_zoo, vllm, unsloth
+148.2s 405 Attempting uninstall: torchao
+148.2s 406 Found existing installation: torchao 0.10.0
+148.2s 407 Uninstalling torchao-0.10.0:
+148.6s 408 Successfully uninstalled torchao-0.10.0
+148.8s 409 Successfully uninstalled torchao-0.10.0
+149.6s 410 Attempting uninstall: triton
+149.7s 411 Found existing installation: triton 3.4.0
+149.8s 412 Uninstalling triton-3.4.0:
+149.8s 413 Attempting uninstall: triton
+149.8s 414 Found existing installation: triton 3.4.0
+149.8s 415 Uninstalling triton-3.4.0:
+153.6s 416 Successfully uninstalled triton-3.4.0
+153.8s 417 Successfully uninstalled triton-3.4.0
+158.4s 418 Attempting uninstall: setuptools
+158.4s 419 Found existing installation: setuptools 75.2.0
+158.4s 420 Uninstalling setuptools-75.2.0:
+158.6s 421 Attempting uninstall: setuptools
+158.6s 422 Found existing installation: setuptools 75.2.0
+158.6s 423 Uninstalling setuptools-75.2.0:
+159.6s 424 Successfully uninstalled setuptools-75.2.0
+159.8s 425 Successfully uninstalled setuptools-75.2.0
+160.5s 426 Attempting uninstall: nvidia-nvtx-cu12
+160.6s 427 Found existing installation: nvidia-nvtx-cu12 12.6.77
+160.6s 428 Uninstalling nvidia-nvtx-cu12-12.6.77:
+160.7s 429 Successfully uninstalled nvidia-nvtx-cu12-12.6.77
+160.7s 430 Attempting uninstall: nvidia-nvshmem-cu12
+160.7s 431 Attempting uninstall: nvidia-nvtx-cu12
+160.7s 432 Found existing installation: nvidia-nvtx-cu12 12.6.77
+160.7s 433 Uninstalling nvidia-nvtx-cu12-12.6.77:
+160.7s 434 Successfully uninstalled nvidia-nvtx-cu12-12.6.77
+160.7s 435 Attempting uninstall: nvidia-nvshmem-cu12
+160.9s 436 Found existing installation: nvidia-nvshmem-cu12 3.4.5
+160.9s 437 Uninstalling nvidia-nvshmem-cu12-3.4.5:
+161.1s 438 Found existing installation: nvidia-nvshmem-cu12 3.4.5
+161.1s 439 Uninstalling nvidia-nvshmem-cu12-3.4.5:
+162.5s 440 Successfully uninstalled nvidia-nvshmem-cu12-3.4.5
+162.7s 441 Successfully uninstalled nvidia-nvshmem-cu12-3.4.5
+166.2s 442 Attempting uninstall: nvidia-nvjitlink-cu12
+166.4s 443 Found existing installation: nvidia-nvjitlink-cu12 12.6.85
+166.4s 444 Attempting uninstall: nvidia-nvjitlink-cu12
+166.4s 445 Found existing installation: nvidia-nvjitlink-cu12 12.6.85
+166.4s 446 Uninstalling nvidia-nvjitlink-cu12-12.6.85:
+166.6s 447 Uninstalling nvidia-nvjitlink-cu12-12.6.85:
+166.7s 448 Successfully uninstalled nvidia-nvjitlink-cu12-12.6.85
+166.9s 449 Successfully uninstalled nvidia-nvjitlink-cu12-12.6.85
+167.3s 450 Attempting uninstall: nvidia-nccl-cu12
+167.4s 451 Found existing installation: nvidia-nccl-cu12 2.27.3
+167.4s 452 Uninstalling nvidia-nccl-cu12-2.27.3:
+167.5s 453 Attempting uninstall: nvidia-nccl-cu12
+167.5s 454 Found existing installation: nvidia-nccl-cu12 2.27.3
+167.5s 455 Uninstalling nvidia-nccl-cu12-2.27.3:
+170.7s 456 Successfully uninstalled nvidia-nccl-cu12-2.27.3
+170.9s 457 Successfully uninstalled nvidia-nccl-cu12-2.27.3
+174.3s 458 Attempting uninstall: nvidia-curand-cu12
+174.5s 459 Found existing installation: nvidia-curand-cu12 10.3.7.77
+174.5s 460 Uninstalling nvidia-curand-cu12-10.3.7.77:
+174.5s 461 Attempting uninstall: nvidia-curand-cu12
+174.5s 462 Found existing installation: nvidia-curand-cu12 10.3.7.77
+174.5s 463 Uninstalling nvidia-curand-cu12-10.3.7.77:
+175.5s 464 Successfully uninstalled nvidia-curand-cu12-10.3.7.77
+175.7s 465 Successfully uninstalled nvidia-curand-cu12-10.3.7.77
+176.1s 466 Attempting uninstall: nvidia-cufile-cu12
+176.3s 467 Found existing installation: nvidia-cufile-cu12 1.11.1.6
+176.3s 468 Uninstalling nvidia-cufile-cu12-1.11.1.6:
+176.3s 469 Successfully uninstalled nvidia-cufile-cu12-1.11.1.6
+176.3s 470 Attempting uninstall: nvidia-cufile-cu12
+176.3s 471 Found existing installation: nvidia-cufile-cu12 1.11.1.6
+176.3s 472 Uninstalling nvidia-cufile-cu12-1.11.1.6:
+176.3s 473 Successfully uninstalled nvidia-cufile-cu12-1.11.1.6
+176.5s 474 Attempting uninstall: nvidia-cuda-runtime-cu12
+176.6s 475 Found existing installation: nvidia-cuda-runtime-cu12 12.6.77
+176.6s 476 Uninstalling nvidia-cuda-runtime-cu12-12.6.77:
+176.7s 477 Attempting uninstall: nvidia-cuda-runtime-cu12
+176.7s 478 Found existing installation: nvidia-cuda-runtime-cu12 12.6.77
+176.7s 479 Uninstalling nvidia-cuda-runtime-cu12-12.6.77:
+176.7s 480 Successfully uninstalled nvidia-cuda-runtime-cu12-12.6.77
+176.8s 481 Attempting uninstall: nvidia-cuda-nvrtc-cu12
+176.9s 482 Successfully uninstalled nvidia-cuda-runtime-cu12-12.6.77
+176.9s 483 Attempting uninstall: nvidia-cuda-nvrtc-cu12
+177.0s 484 Found existing installation: nvidia-cuda-nvrtc-cu12 12.6.77
+177.0s 485 Uninstalling nvidia-cuda-nvrtc-cu12-12.6.77:
+177.2s 486 Found existing installation: nvidia-cuda-nvrtc-cu12 12.6.77
+177.2s 487 Uninstalling nvidia-cuda-nvrtc-cu12-12.6.77:
+177.4s 488 Successfully uninstalled nvidia-cuda-nvrtc-cu12-12.6.77
+177.6s 489 Successfully uninstalled nvidia-cuda-nvrtc-cu12-12.6.77
+178.7s 490 Attempting uninstall: nvidia-cuda-cupti-cu12
+178.9s 491 Attempting uninstall: nvidia-cuda-cupti-cu12
+178.9s 492 Found existing installation: nvidia-cuda-cupti-cu12 12.6.80
+178.9s 493 Uninstalling nvidia-cuda-cupti-cu12-12.6.80:
+179.1s 494 Found existing installation: nvidia-cuda-cupti-cu12 12.6.80
+179.1s 495 Uninstalling nvidia-cuda-cupti-cu12-12.6.80:
+179.3s 496 Successfully uninstalled nvidia-cuda-cupti-cu12-12.6.80
+179.5s 497 Attempting uninstall: nvidia-cublas-cu12
+179.5s 498 Successfully uninstalled nvidia-cuda-cupti-cu12-12.6.80
+179.5s 499 Attempting uninstall: nvidia-cublas-cu12
+179.6s 500 Found existing installation: nvidia-cublas-cu12 12.6.4.1
+179.6s 501 Uninstalling nvidia-cublas-cu12-12.6.4.1:
+179.8s 502 Found existing installation: nvidia-cublas-cu12 12.6.4.1
+179.8s 503 Uninstalling nvidia-cublas-cu12-12.6.4.1:
+184.6s 504 Successfully uninstalled nvidia-cublas-cu12-12.6.4.1
+184.8s 505 Successfully uninstalled nvidia-cublas-cu12-12.6.4.1
+189.4s 506 Attempting uninstall: multiprocess
+189.5s 507 Found existing installation: multiprocess 0.70.18
+189.5s 508 Uninstalling multiprocess-0.70.18:
+189.5s 509 Successfully uninstalled multiprocess-0.70.18
+189.6s 510 Attempting uninstall: multiprocess
+189.6s 511 Found existing installation: multiprocess 0.70.18
+189.6s 512 Uninstalling multiprocess-0.70.18:
+189.6s 513 Successfully uninstalled multiprocess-0.70.18
+189.7s 514 Attempting uninstall: llvmlite
+189.9s 515 Found existing installation: llvmlite 0.43.0
+189.9s 516 Uninstalling llvmlite-0.43.0:
+189.9s 517 Attempting uninstall: llvmlite
+189.9s 518 Found existing installation: llvmlite 0.43.0
+189.9s 519 Uninstalling llvmlite-0.43.0:
+190.8s 520 Successfully uninstalled llvmlite-0.43.0
+191.0s 521 Successfully uninstalled llvmlite-0.43.0
+192.4s 522 Attempting uninstall: lark
+192.6s 523 Found existing installation: lark 1.3.0
+192.6s 524 Uninstalling lark-1.3.0:
+192.6s 525 Successfully uninstalled lark-1.3.0
+192.6s 526 Attempting uninstall: lark
+192.6s 527 Found existing installation: lark 1.3.0
+192.6s 528 Uninstalling lark-1.3.0:
+192.8s 529 Attempting uninstall: fsspec
+192.8s 530 Successfully uninstalled lark-1.3.0
+192.8s 531 Attempting uninstall: fsspec
+192.8s 532 Found existing installation: fsspec 2025.10.0
+192.8s 533 Uninstalling fsspec-2025.10.0:
+192.9s 534 Successfully uninstalled fsspec-2025.10.0
+193.0s 535 Found existing installation: fsspec 2025.10.0
+193.0s 536 Uninstalling fsspec-2025.10.0:
+193.0s 537 Successfully uninstalled fsspec-2025.10.0
+193.4s 538 Attempting uninstall: starlette
+193.6s 539 Found existing installation: starlette 0.48.0
+193.6s 540 Uninstalling starlette-0.48.0:
+193.6s 541 Attempting uninstall: starlette
+193.6s 542 Found existing installation: starlette 0.48.0
+193.6s 543 Uninstalling starlette-0.48.0:
+193.6s 544 Successfully uninstalled starlette-0.48.0
+193.7s 545 Attempting uninstall: nvidia-cusparse-cu12
+193.8s 546 Successfully uninstalled starlette-0.48.0
+193.8s 547 Attempting uninstall: nvidia-cusparse-cu12
+193.9s 548 Found existing installation: nvidia-cusparse-cu12 12.5.4.2
+193.9s 549 Uninstalling nvidia-cusparse-cu12-12.5.4.2:
+194.1s 550 Found existing installation: nvidia-cusparse-cu12 12.5.4.2
+194.1s 551 Uninstalling nvidia-cusparse-cu12-12.5.4.2:
+196.5s 552 Successfully uninstalled nvidia-cusparse-cu12-12.5.4.2
+196.7s 553 Successfully uninstalled nvidia-cusparse-cu12-12.5.4.2
+199.7s 554 Attempting uninstall: nvidia-cufft-cu12
+199.8s 555 Found existing installation: nvidia-cufft-cu12 11.3.0.4
+199.8s 556 Uninstalling nvidia-cufft-cu12-11.3.0.4:
+199.9s 557 Attempting uninstall: nvidia-cufft-cu12
+199.9s 558 Found existing installation: nvidia-cufft-cu12 11.3.0.4
+199.9s 559 Uninstalling nvidia-cufft-cu12-11.3.0.4:
+201.7s 560 Successfully uninstalled nvidia-cufft-cu12-11.3.0.4
+201.9s 561 Successfully uninstalled nvidia-cufft-cu12-11.3.0.4
+205.2s 562 Attempting uninstall: numba
+205.4s 563 Found existing installation: numba 0.60.0
+205.4s 564 Attempting uninstall: numba
+205.4s 565 Found existing installation: numba 0.60.0
+205.4s 566 Uninstalling numba-0.60.0:
+205.6s 567 Uninstalling numba-0.60.0:
+206.3s 568 Successfully uninstalled numba-0.60.0
+206.5s 569 Successfully uninstalled numba-0.60.0
+209.2s 570 Attempting uninstall: nvidia-cusolver-cu12
+209.3s 571 Found existing installation: nvidia-cusolver-cu12 11.7.1.2
+209.3s 572 Uninstalling nvidia-cusolver-cu12-11.7.1.2:
+209.4s 573 Attempting uninstall: nvidia-cusolver-cu12
+209.4s 574 Found existing installation: nvidia-cusolver-cu12 11.7.1.2
+209.4s 575 Uninstalling nvidia-cusolver-cu12-11.7.1.2:
+211.0s 576 Successfully uninstalled nvidia-cusolver-cu12-11.7.1.2
+211.2s 577 Successfully uninstalled nvidia-cusolver-cu12-11.7.1.2
+215.0s 578 Attempting uninstall: fastapi
+215.1s 579 Found existing installation: fastapi 0.119.1
+215.2s 580 Uninstalling fastapi-0.119.1:
+215.2s 581 Attempting uninstall: fastapi
+215.2s 582 Found existing installation: fastapi 0.119.1
+215.2s 583 Uninstalling fastapi-0.119.1:
+215.2s 584 Successfully uninstalled fastapi-0.119.1
+215.3s 585 Attempting uninstall: cuda-python
+215.4s 586 Successfully uninstalled fastapi-0.119.1
+215.4s 587 Attempting uninstall: cuda-python
+215.5s 588 Found existing installation: cuda-python 12.6.2.post1
+215.5s 589 Uninstalling cuda-python-12.6.2.post1:
+215.7s 590 Found existing installation: cuda-python 12.6.2.post1
+215.7s 591 Uninstalling cuda-python-12.6.2.post1:
+215.8s 592 Successfully uninstalled cuda-python-12.6.2.post1
+216.0s 593 Successfully uninstalled cuda-python-12.6.2.post1
+216.1s 594 Attempting uninstall: torch
+216.3s 595 Attempting uninstall: torch
+216.3s 596 Found existing installation: torch 2.8.0+cu126
+216.5s 597 Found existing installation: torch 2.8.0+cu126
+216.6s 598 Uninstalling torch-2.8.0+cu126:
+216.8s 599 Uninstalling torch-2.8.0+cu126:
+241.2s 600 Successfully uninstalled torch-2.8.0+cu126
+241.4s 601 Successfully uninstalled torch-2.8.0+cu126
+260.8s 602 Attempting uninstall: ray
+260.9s 603 Found existing installation: ray 2.52.1
+261.0s 604 Uninstalling ray-2.52.1:
+261.0s 605 Attempting uninstall: ray
+261.0s 606 Found existing installation: ray 2.52.1
+261.0s 607 Uninstalling ray-2.52.1:
+264.7s 608 Successfully uninstalled ray-2.52.1
+264.9s 609 Successfully uninstalled ray-2.52.1
+270.0s 610 Attempting uninstall: datasets
+270.1s 611 Found existing installation: datasets 4.4.1
+270.1s 612 Uninstalling datasets-4.4.1:
+270.2s 613 Attempting uninstall: datasets
+270.2s 614 Found existing installation: datasets 4.4.1
+270.2s 615 Uninstalling datasets-4.4.1:
+270.3s 616 Successfully uninstalled datasets-4.4.1
+270.5s 617 Successfully uninstalled datasets-4.4.1
+273.2s 618 Attempting uninstall: torchvision
+273.4s 619 Found existing installation: torchvision 0.23.0+cu126
+273.4s 620 Uninstalling torchvision-0.23.0+cu126:
+273.4s 621 Attempting uninstall: torchvision
+273.4s 622 Found existing installation: torchvision 0.23.0+cu126
+273.4s 623 Uninstalling torchvision-0.23.0+cu126:
+273.8s 624 Successfully uninstalled torchvision-0.23.0+cu126
+274.0s 625 Successfully uninstalled torchvision-0.23.0+cu126
+274.2s 626 Attempting uninstall: torchaudio
+274.4s 627 Attempting uninstall: torchaudio
+274.4s 628 Found existing installation: torchaudio 2.8.0+cu126
+274.5s 629 Uninstalling torchaudio-2.8.0+cu126:
+274.6s 630 Found existing installation: torchaudio 2.8.0+cu126
+274.6s 631 Uninstalling torchaudio-2.8.0+cu126:
+274.7s 632 Successfully uninstalled torchaudio-2.8.0+cu126
+274.9s 633 Successfully uninstalled torchaudio-2.8.0+cu126
+291.0s 634 ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+291.0s 635 kauldron 1.3.0 requires scikit-learn, which is not installed.
+291.0s 636 kauldron 1.3.0 requires tensorflow, which is not installed.
+291.0s 637 ydata-profiling 4.18.0 requires matplotlib<=3.10,>=3.5, which is not installed.
+291.0s 638 pyldavis 3.4.1 requires scikit-learn>=1.0.0, which is not installed.
+291.0s 639 stable-baselines3 2.1.0 requires matplotlib, which is not installed.
+291.0s 640 sentence-transformers 5.1.1 requires scikit-learn, which is not installed.
+291.0s 641 librosa 0.11.0 requires scikit-learn>=1.1.0, which is not installed.
+291.0s 642 cuml-cu12 25.6.0 requires scikit-learn>=1.5, which is not installed.
+291.0s 643 bigframes 2.26.0 requires google-cloud-bigquery-storage<3.0.0,>=2.30.0, which is not installed.
+291.0s 644 bigframes 2.26.0 requires matplotlib>=3.7.1, which is not installed.
+291.0s 645 arviz 0.22.0 requires matplotlib>=3.8, which is not installed.
+291.0s 646 pynndescent 0.5.13 requires scikit-learn>=0.18, which is not installed.
+291.0s 647 Successfully installed annotated-doc-0.0.4 anthropic-0.71.0 apache-tvm-ffi-0.1.7 astor-0.8.1 bitsandbytes-0.49.0 cbor2-5.7.1 compressed-tensors-0.12.2 cuda-bindings-13.1.1 cuda-pathfinder-1.3.3 cuda-python-13.1.1 cut_cross_entropy-25.1.1 datasets-4.3.0 depyf-0.20.0 diskcache-5.6.3 fastapi-0.128.0 fastapi-cli-0.0.20 fastapi-cloud-cli-0.8.0 fastar-0.8.0 flashinfer-python-0.5.2 fsspec-2025.9.0 gguf-0.17.1 httptools-0.7.1 interegular-0.3.3 lark-1.2.2 llguidance-1.3.0 llvmlite-0.44.0 lm-format-enforcer-0.11.3 loguru-0.7.3 mistral_common-1.8.8 model-hosting-container-standards-0.1.12 msgspec-0.20.0 multiprocess-0.70.16 numba-0.61.2 nvidia-cublas-cu12-12.8.4.1 nvidia-cuda-cupti-cu12-12.8.90 nvidia-cuda-nvrtc-cu12-12.8.93 nvidia-cuda-runtime-cu12-12.8.90 nvidia-cudnn-frontend-1.17.0 nvidia-cufft-cu12-11.3.3.83 nvidia-cufile-cu12-1.13.1.3 nvidia-curand-cu12-10.3.9.90 nvidia-cusolver-cu12-11.7.3.90 nvidia-cusparse-cu12-12.5.8.93 nvidia-cutlass-dsl-4.3.4 nvidia-nccl-cu12-2.27.5 nvidia-nvjitlink-cu12-12.8.93 nvidia-nvshmem-cu12-3.3.20 nvidia-nvtx-cu12-12.8.90 openai_harmony-0.0.8 outlines_core-0.2.11 partial-json-parser-0.2.1.1.post7 prometheus-fastapi-instrumentator-7.1.0 pybase64-1.4.3 pycountry-24.6.1 pydantic-extra-types-2.10.6 ray-2.53.0 rich-toolkit-0.17.1 rignore-0.7.6 setproctitle-1.3.7 setuptools-80.9.0 starlette-0.50.0 supervisor-4.3.0 torch-2.9.0+cu128 torchao-0.15.0+cu128 torchaudio-2.9.0+cu128 torchvision-0.24.0+cu128 triton-3.5.0 trl-0.24.0 tyro-1.0.3 unsloth-2025.12.9 unsloth_zoo-2025.12.7 uvloop-0.22.1 vllm-0.11.2 watchfiles-1.1.1 xformers-0.0.33.post1 xgrammar-0.1.25
+291.0s 648 shap 0.49.1 requires scikit-learn, which is not installed.
+291.0s 649 fastai 2.8.4 requires matplotlib, which is not installed.
+291.0s 650 fastai 2.8.4 requires scikit-learn, which is not installed.
+291.0s 651 umap-learn 0.5.9.post2 requires scikit-learn>=1.6, which is not installed.
+291.0s 652 ipython-sql 0.5.0 requires sqlalchemy>=2.0, but you have sqlalchemy 1.2.19 which is incompatible.
+291.0s 653 cudf-cu12 25.6.0 requires cuda-python<13.0a0,>=12.6.2, but you have cuda-python 13.1.1 which is incompatible.
+291.0s 654 cudf-cu12 25.6.0 requires pyarrow<20.0.0a0,>=14.0.0; platform_machine == "x86_64", but you have pyarrow 22.0.0 which is incompatible.
+291.0s 655 gradio 5.49.1 requires pydantic<2.12,>=2.0, but you have pydantic 2.12.5 which is incompatible.
+291.0s 656 cuml-cu12 25.6.0 requires cuda-python<13.0a0,>=12.6.2, but you have cuda-python 13.1.1 which is incompatible.
+291.0s 657 bigframes 2.26.0 requires rich<14,>=12.4.4, but you have rich 14.2.0 which is incompatible.
+291.0s 658 pylibraft-cu12 25.6.0 requires cuda-python<13.0a0,>=12.6.2, but you have cuda-python 13.1.1 which is incompatible.
+291.0s 659 cuvs-cu12 25.6.1 requires cuda-python<13.0a0,>=12.6.2, but you have cuda-python 13.1.1 which is incompatible.
+291.0s 660 fastai 2.8.4 requires torch<2.9,>=1.10, but you have torch 2.9.0+cu128 which is incompatible.
+291.0s 661 rmm-cu12 25.6.0 requires cuda-python<13.0a0,>=12.6.2, but you have cuda-python 13.1.1 which is incompatible.
+291.0s 662 pylibcudf-cu12 25.6.0 requires cuda-python<13.0a0,>=12.6.2, but you have cuda-python 13.1.1 which is incompatible.
+291.0s 663 pylibcudf-cu12 25.6.0 requires pyarrow<20.0.0a0,>=14.0.0; platform_machine == "x86_64", but you have pyarrow 22.0.0 which is incompatible.
+291.0s 664 gcsfs 2025.3.0 requires fsspec==2025.3.0, but you have fsspec 2025.9.0 which is incompatible.
+291.2s 665 Successfully installed annotated-doc-0.0.4 anthropic-0.71.0 apache-tvm-ffi-0.1.7 astor-0.8.1 bitsandbytes-0.49.0 cbor2-5.7.1 compressed-tensors-0.12.2 cuda-bindings-13.1.1 cuda-pathfinder-1.3.3 cuda-python-13.1.1 cut_cross_entropy-25.1.1 datasets-4.3.0 depyf-0.20.0 diskcache-5.6.3 fastapi-0.128.0 fastapi-cli-0.0.20 fastapi-cloud-cli-0.8.0 fastar-0.8.0 flashinfer-python-0.5.2 fsspec-2025.9.0 gguf-0.17.1 httptools-0.7.1 interegular-0.3.3 lark-1.2.2 llguidance-1.3.0 llvmlite-0.44.0 lm-format-enforcer-0.11.3 loguru-0.7.3 mistral_common-1.8.8 model-hosting-container-standards-0.1.12 msgspec-0.20.0 multiprocess-0.70.16 numba-0.61.2 nvidia-cublas-cu12-12.8.4.1 nvidia-cuda-cupti-cu12-12.8.90 nvidia-cuda-nvrtc-cu12-12.8.93 nvidia-cuda-runtime-cu12-12.8.90 nvidia-cudnn-frontend-1.17.0 nvidia-cufft-cu12-11.3.3.83 nvidia-cufile-cu12-1.13.1.3 nvidia-curand-cu12-10.3.9.90 nvidia-cusolver-cu12-11.7.3.90 nvidia-cusparse-cu12-12.5.8.93 nvidia-cutlass-dsl-4.3.4 nvidia-nccl-cu12-2.27.5 nvidia-nvjitlink-cu12-12.8.93 nvidia-nvshmem-cu12-3.3.20 nvidia-nvtx-cu12-12.8.90 openai_harmony-0.0.8 outlines_core-0.2.11 partial-json-parser-0.2.1.1.post7 prometheus-fastapi-instrumentator-7.1.0 pybase64-1.4.3 pycountry-24.6.1 pydantic-extra-types-2.10.6 ray-2.53.0 rich-toolkit-0.17.1 rignore-0.7.6 setproctitle-1.3.7 setuptools-80.9.0 starlette-0.50.0 supervisor-4.3.0 torch-2.9.0+cu128 torchao-0.15.0+cu128 torchaudio-2.9.0+cu128 torchvision-0.24.0+cu128 triton-3.5.0 trl-0.24.0 tyro-1.0.3 unsloth-2025.12.9 unsloth_zoo-2025.12.7 uvloop-0.22.1 vllm-0.11.2 watchfiles-1.1.1 xformers-0.0.33.post1 xgrammar-0.1.25
+291.2s 666 ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+291.2s 667 kauldron 1.3.0 requires scikit-learn, which is not installed.
+291.2s 668 kauldron 1.3.0 requires tensorflow, which is not installed.
+291.2s 669 ydata-profiling 4.18.0 requires matplotlib<=3.10,>=3.5, which is not installed.
+291.2s 670 pyldavis 3.4.1 requires scikit-learn>=1.0.0, which is not installed.
+291.2s 671 stable-baselines3 2.1.0 requires matplotlib, which is not installed.
+291.2s 672 sentence-transformers 5.1.1 requires scikit-learn, which is not installed.
+291.2s 673 librosa 0.11.0 requires scikit-learn>=1.1.0, which is not installed.
+291.2s 674 cuml-cu12 25.6.0 requires scikit-learn>=1.5, which is not installed.
+291.2s 675 bigframes 2.26.0 requires google-cloud-bigquery-storage<3.0.0,>=2.30.0, which is not installed.
+291.2s 676 bigframes 2.26.0 requires matplotlib>=3.7.1, which is not installed.
+291.2s 677 arviz 0.22.0 requires matplotlib>=3.8, which is not installed.
+291.2s 678 pynndescent 0.5.13 requires scikit-learn>=0.18, which is not installed.
+291.2s 679 shap 0.49.1 requires scikit-learn, which is not installed.
+291.2s 680 fastai 2.8.4 requires matplotlib, which is not installed.
+291.2s 681 fastai 2.8.4 requires scikit-learn, which is not installed.
+291.2s 682 umap-learn 0.5.9.post2 requires scikit-learn>=1.6, which is not installed.
+291.2s 683 ipython-sql 0.5.0 requires sqlalchemy>=2.0, but you have sqlalchemy 1.2.19 which is incompatible.
+291.2s 684 cudf-cu12 25.6.0 requires cuda-python<13.0a0,>=12.6.2, but you have cuda-python 13.1.1 which is incompatible.
+291.2s 685 cudf-cu12 25.6.0 requires pyarrow<20.0.0a0,>=14.0.0; platform_machine == "x86_64", but you have pyarrow 22.0.0 which is incompatible.
+291.2s 686 gradio 5.49.1 requires pydantic<2.12,>=2.0, but you have pydantic 2.12.5 which is incompatible.
+291.2s 687 cuml-cu12 25.6.0 requires cuda-python<13.0a0,>=12.6.2, but you have cuda-python 13.1.1 which is incompatible.
+291.2s 688 bigframes 2.26.0 requires rich<14,>=12.4.4, but you have rich 14.2.0 which is incompatible.
+291.2s 689 pylibraft-cu12 25.6.0 requires cuda-python<13.0a0,>=12.6.2, but you have cuda-python 13.1.1 which is incompatible.
+291.2s 690 cuvs-cu12 25.6.1 requires cuda-python<13.0a0,>=12.6.2, but you have cuda-python 13.1.1 which is incompatible.
+291.2s 691 fastai 2.8.4 requires torch<2.9,>=1.10, but you have torch 2.9.0+cu128 which is incompatible.
+291.2s 692 rmm-cu12 25.6.0 requires cuda-python<13.0a0,>=12.6.2, but you have cuda-python 13.1.1 which is incompatible.
+291.2s 693 pylibcudf-cu12 25.6.0 requires cuda-python<13.0a0,>=12.6.2, but you have cuda-python 13.1.1 which is incompatible.
+291.2s 694 pylibcudf-cu12 25.6.0 requires pyarrow<20.0.0a0,>=14.0.0; platform_machine == "x86_64", but you have pyarrow 22.0.0 which is incompatible.
+291.2s 695 gcsfs 2025.3.0 requires fsspec==2025.3.0, but you have fsspec 2025.9.0 which is incompatible.
+291.2s 696 
+291.2s 697 ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+291.2s 698 kauldron 1.3.0 requires scikit-learn, which is not installed.
+291.2s 699 kauldron 1.3.0 requires tensorflow, which is not installed.
+291.2s 700 ydata-profiling 4.18.0 requires matplotlib<=3.10,>=3.5, which is not installed.
+291.2s 701 pyldavis 3.4.1 requires scikit-learn>=1.0.0, which is not installed.
+291.2s 702 stable-baselines3 2.1.0 requires matplotlib, which is not installed.
+291.2s 703 sentence-transformers 5.1.1 requires scikit-learn, which is not installed.
+291.2s 704 librosa 0.11.0 requires scikit-learn>=1.1.0, which is not installed.
+291.2s 705 cuml-cu12 25.6.0 requires scikit-learn>=1.5, which is not installed.
+291.2s 706 bigframes 2.26.0 requires google-cloud-bigquery-storage<3.0.0,>=2.30.0, which is not installed.
+291.2s 707 bigframes 2.26.0 requires matplotlib>=3.7.1, which is not installed.
+291.2s 708 arviz 0.22.0 requires matplotlib>=3.8, which is not installed.
+291.2s 709 pynndescent 0.5.13 requires scikit-learn>=0.18, which is not installed.
+291.2s 710 shap 0.49.1 requires scikit-learn, which is not installed.
+291.2s 711 fastai 2.8.4 requires matplotlib, which is not installed.
+291.2s 712 fastai 2.8.4 requires scikit-learn, which is not installed.
+291.2s 713 umap-learn 0.5.9.post2 requires scikit-learn>=1.6, which is not installed.
+291.2s 714 ipython-sql 0.5.0 requires sqlalchemy>=2.0, but you have sqlalchemy 1.2.19 which is incompatible.
+291.2s 715 cudf-cu12 25.6.0 requires cuda-python<13.0a0,>=12.6.2, but you have cuda-python 13.1.1 which is incompatible.
+291.2s 716 cudf-cu12 25.6.0 requires pyarrow<20.0.0a0,>=14.0.0; platform_machine == "x86_64", but you have pyarrow 22.0.0 which is incompatible.
+291.2s 717 gradio 5.49.1 requires pydantic<2.12,>=2.0, but you have pydantic 2.12.5 which is incompatible.
+291.2s 718 cuml-cu12 25.6.0 requires cuda-python<13.0a0,>=12.6.2, but you have cuda-python 13.1.1 which is incompatible.
+291.2s 719 bigframes 2.26.0 requires rich<14,>=12.4.4, but you have rich 14.2.0 which is incompatible.
+291.2s 720 pylibraft-cu12 25.6.0 requires cuda-python<13.0a0,>=12.6.2, but you have cuda-python 13.1.1 which is incompatible.
+291.2s 721 cuvs-cu12 25.6.1 requires cuda-python<13.0a0,>=12.6.2, but you have cuda-python 13.1.1 which is incompatible.
+291.2s 722 fastai 2.8.4 requires torch<2.9,>=1.10, but you have torch 2.9.0+cu128 which is incompatible.
+291.2s 723 rmm-cu12 25.6.0 requires cuda-python<13.0a0,>=12.6.2, but you have cuda-python 13.1.1 which is incompatible.
+291.2s 724 pylibcudf-cu12 25.6.0 requires cuda-python<13.0a0,>=12.6.2, but you have cuda-python 13.1.1 which is incompatible.
+291.2s 725 pylibcudf-cu12 25.6.0 requires pyarrow<20.0.0a0,>=14.0.0; platform_machine == "x86_64", but you have pyarrow 22.0.0 which is incompatible.
+291.2s 726 gcsfs 2025.3.0 requires fsspec==2025.3.0, but you have fsspec 2025.9.0 which is incompatible.
+291.2s 727 cl100k_base.tiktoken
+291.2s 728 o200k_base.tiktoken
+291.2s 729 cl100k_base.tiktoken
+291.2s 730 o200k_base.tiktoken
+299.4s 731 Loading model weights from /kaggle/input/gpt-oss-120b/transformers/default/1 into OS Page Cache...
+394.2s 732 Processed 26 files (65.28 GB) in 94.77 seconds.
+394.2s 733 
+394.4s 734 Waiting for vLLM server...
+522.9s 735 Server is ready (took 128.44 seconds).
+522.9s 736 
+522.9s 737 Initializing 16 persistent Jupyter kernels...
+525.6s 738 Kernels initialized in 2.92 seconds.
+525.6s 739 
+526.2s 740 
+526.2s 741 Problem: Solve $4+x=4$ for $x$.
+526.2s 742 
+526.2s 743 Budget: 900.00 seconds | Deadline: 1772164092.74
+526.2s 744 
+542.9s 745 
+542.9s 746 === Raw Attempt Results ===
+542.9s 747 
+542.9s 748 === Confidence-Weighted Voting Results ===
+543.1s 749 
+543.1s 750 Final Answer (Confidence-Weighted): 0
+543.1s 751 
+543.1s 752 
+543.1s 753 Problem: What is $1-1$?
+543.1s 754 
+543.1s 755 Budget: 900.00 seconds | Deadline: 1772164109.81
+543.1s 756 
+544.5s 757 
+544.5s 758 === Raw Attempt Results ===
+544.5s 759 
+544.5s 760 === Confidence-Weighted Voting Results ===
+544.7s 761 
+544.7s 762 Final Answer (Confidence-Weighted): 0
+544.7s 763 
+544.7s 764 
+544.7s 765 Problem: What is $0\times10$?
+544.7s 766 
+544.7s 767 Budget: 900.00 seconds | Deadline: 1772164111.36
+544.7s 768 
+546.4s 769 
+546.4s 770 === Raw Attempt Results ===
+546.4s 771 
+546.4s 772 === Confidence-Weighted Voting Results ===
+546.5s 773 
+546.5s 774 Final Answer (Confidence-Weighted): 0
+546.5s 775 
+546.5s 776 
+546.5s 777 === Correct Answers ===
+546.5s 778 
+546.5s 779 === Wrong Answers ===
+546.5s 780 Accuracy: 33.33%
+546.5s 781 Solving Time: 20.04087996482849
+547.6s 782 [ColabKernelApp] ERROR | Event loop stopped before Future completed.
+547.6s 783 Traceback (most recent call last):
+547.6s 784 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/manager.py", line 82, in wrapper
+547.6s 785 out = await method(self, *args, **kwargs)
+547.6s 786 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+547.6s 787 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/manager.py", line 498, in _async_shutdown_kernel
+547.6s 788 await ensure_async(self._kill_kernel())
+547.6s 789 ^^^^^^^^^^^^^^^^^^^
+547.6s 790 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/utils.py", line 30, in wrapped
+547.6s 791 raise e
+547.6s 792 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/utils.py", line 27, in wrapped
+547.6s 793 return loop.run_until_complete(future)
+547.6s 794 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+547.6s 795 File "/usr/local/lib/python3.12/dist-packages/nest_asyncio.py", line 96, in run_until_complete
+547.6s 796 raise RuntimeError(
+547.6s 797 RuntimeError: Event loop stopped before Future completed.
+547.6s 798 [ColabKernelApp] ERROR | Event loop stopped before Future completed.
+547.6s 799 Traceback (most recent call last):
+547.6s 800 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/manager.py", line 82, in wrapper
+547.6s 801 out = await method(self, *args, **kwargs)
+547.6s 802 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+547.6s 803 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/manager.py", line 498, in _async_shutdown_kernel
+547.6s 804 await ensure_async(self._kill_kernel())
+547.6s 805 ^^^^^^^^^^^^^^^^^^^
+547.6s 806 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/utils.py", line 30, in wrapped
+547.6s 807 raise e
+547.6s 808 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/utils.py", line 27, in wrapped
+547.6s 809 return loop.run_until_complete(future)
+547.6s 810 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+547.6s 811 File "/usr/local/lib/python3.12/dist-packages/nest_asyncio.py", line 96, in run_until_complete
+547.6s 812 raise RuntimeError(
+547.6s 813 RuntimeError: Event loop stopped before Future completed.
+547.6s 814 [ColabKernelApp] ERROR | Event loop stopped before Future completed.
+547.6s 815 Traceback (most recent call last):
+547.6s 816 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/manager.py", line 82, in wrapper
+547.6s 817 out = await method(self, *args, **kwargs)
+547.6s 818 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+547.6s 819 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/manager.py", line 498, in _async_shutdown_kernel
+547.6s 820 await ensure_async(self._kill_kernel())
+547.6s 821 ^^^^^^^^^^^^^^^^^^^
+547.6s 822 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/utils.py", line 30, in wrapped
+547.6s 823 raise e
+547.6s 824 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/utils.py", line 27, in wrapped
+547.6s 825 return loop.run_until_complete(future)
+547.6s 826 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+547.6s 827 File "/usr/local/lib/python3.12/dist-packages/nest_asyncio.py", line 96, in run_until_complete
+547.6s 828 raise RuntimeError(
+547.6s 829 RuntimeError: Event loop stopped before Future completed.
+547.6s 830 [ColabKernelApp] ERROR | Event loop stopped before Future completed.
+547.6s 831 Traceback (most recent call last):
+547.6s 832 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/manager.py", line 82, in wrapper
+547.6s 833 out = await method(self, *args, **kwargs)
+547.6s 834 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+547.6s 835 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/manager.py", line 498, in _async_shutdown_kernel
+547.6s 836 await ensure_async(self._kill_kernel())
+547.6s 837 ^^^^^^^^^^^^^^^^^^^
+547.6s 838 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/utils.py", line 30, in wrapped
+547.6s 839 raise e
+547.6s 840 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/utils.py", line 27, in wrapped
+547.6s 841 return loop.run_until_complete(future)
+547.6s 842 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+547.6s 843 File "/usr/local/lib/python3.12/dist-packages/nest_asyncio.py", line 96, in run_until_complete
+547.6s 844 raise RuntimeError(
+547.6s 845 RuntimeError: Event loop stopped before Future completed.
+547.6s 846 [ColabKernelApp] ERROR | Event loop stopped before Future completed.
+547.6s 847 Traceback (most recent call last):
+547.6s 848 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/manager.py", line 82, in wrapper
+547.6s 849 out = await method(self, *args, **kwargs)
+547.6s 850 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+547.6s 851 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/manager.py", line 498, in _async_shutdown_kernel
+547.6s 852 await ensure_async(self._kill_kernel())
+547.6s 853 ^^^^^^^^^^^^^^^^^^^
+547.6s 854 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/utils.py", line 30, in wrapped
+547.6s 855 raise e
+547.6s 856 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/utils.py", line 27, in wrapped
+547.6s 857 return loop.run_until_complete(future)
+547.6s 858 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+547.6s 859 File "/usr/local/lib/python3.12/dist-packages/nest_asyncio.py", line 96, in run_until_complete
+547.6s 860 raise RuntimeError(
+547.6s 861 RuntimeError: Event loop stopped before Future completed.
+547.6s 862 [ColabKernelApp] ERROR | Event loop stopped before Future completed.
+547.6s 863 Traceback (most recent call last):
+547.6s 864 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/manager.py", line 82, in wrapper
+547.6s 865 out = await method(self, *args, **kwargs)
+547.6s 866 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+547.6s 867 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/manager.py", line 498, in _async_shutdown_kernel
+547.6s 868 await ensure_async(self._kill_kernel())
+547.6s 869 ^^^^^^^^^^^^^^^^^^^
+547.6s 870 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/utils.py", line 30, in wrapped
+547.6s 871 raise e
+547.6s 872 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/utils.py", line 27, in wrapped
+547.6s 873 return loop.run_until_complete(future)
+547.6s 874 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+547.6s 875 File "/usr/local/lib/python3.12/dist-packages/nest_asyncio.py", line 96, in run_until_complete
+547.6s 876 raise RuntimeError(
+547.6s 877 RuntimeError: Event loop stopped before Future completed.
+547.6s 878 [ColabKernelApp] ERROR | Event loop stopped before Future completed.
+547.6s 879 Traceback (most recent call last):
+547.6s 880 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/manager.py", line 82, in wrapper
+547.6s 881 out = await method(self, *args, **kwargs)
+547.6s 882 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+547.6s 883 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/manager.py", line 498, in _async_shutdown_kernel
+547.6s 884 await ensure_async(self._kill_kernel())
+547.6s 885 ^^^^^^^^^^^^^^^^^^^
+547.6s 886 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/utils.py", line 30, in wrapped
+547.6s 887 raise e
+547.6s 888 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/utils.py", line 27, in wrapped
+547.6s 889 return loop.run_until_complete(future)
+547.6s 890 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+547.6s 891 File "/usr/local/lib/python3.12/dist-packages/nest_asyncio.py", line 96, in run_until_complete
+547.6s 892 raise RuntimeError(
+547.6s 893 RuntimeError: Event loop stopped before Future completed.
+547.6s 894 [ColabKernelApp] ERROR | Event loop stopped before Future completed.
+547.6s 895 Traceback (most recent call last):
+547.6s 896 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/manager.py", line 82, in wrapper
+547.6s 897 out = await method(self, *args, **kwargs)
+547.6s 898 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+547.6s 899 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/manager.py", line 498, in _async_shutdown_kernel
+547.6s 900 await ensure_async(self._kill_kernel())
+547.6s 901 ^^^^^^^^^^^^^^^^^^^
+547.6s 902 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/utils.py", line 30, in wrapped
+547.6s 903 raise e
+547.6s 904 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/utils.py", line 27, in wrapped
+547.6s 905 return loop.run_until_complete(future)
+547.6s 906 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+547.6s 907 File "/usr/local/lib/python3.12/dist-packages/nest_asyncio.py", line 96, in run_until_complete
+547.6s 908 raise RuntimeError(
+547.6s 909 RuntimeError: Event loop stopped before Future completed.
+547.6s 910 [ColabKernelApp] ERROR | Event loop stopped before Future completed.
+547.6s 911 Traceback (most recent call last):
+547.6s 912 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/manager.py", line 82, in wrapper
+547.6s 913 out = await method(self, *args, **kwargs)
+547.6s 914 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+547.6s 915 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/manager.py", line 498, in _async_shutdown_kernel
+547.6s 916 await ensure_async(self._kill_kernel())
+547.6s 917 ^^^^^^^^^^^^^^^^^^^
+547.6s 918 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/utils.py", line 30, in wrapped
+547.6s 919 raise e
+547.6s 920 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/utils.py", line 27, in wrapped
+547.6s 921 return loop.run_until_complete(future)
+547.6s 922 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+547.6s 923 File "/usr/local/lib/python3.12/dist-packages/nest_asyncio.py", line 96, in run_until_complete
+547.6s 924 raise RuntimeError(
+547.6s 925 RuntimeError: Event loop stopped before Future completed.
+547.6s 926 [ColabKernelApp] ERROR | Event loop stopped before Future completed.
+547.6s 927 Traceback (most recent call last):
+547.6s 928 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/manager.py", line 82, in wrapper
+547.6s 929 out = await method(self, *args, **kwargs)
+547.6s 930 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+547.6s 931 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/manager.py", line 498, in _async_shutdown_kernel
+547.6s 932 await ensure_async(self._kill_kernel())
+547.6s 933 ^^^^^^^^^^^^^^^^^^^
+547.6s 934 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/utils.py", line 30, in wrapped
+547.6s 935 raise e
+547.6s 936 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/utils.py", line 27, in wrapped
+547.6s 937 return loop.run_until_complete(future)
+547.6s 938 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+547.6s 939 File "/usr/local/lib/python3.12/dist-packages/nest_asyncio.py", line 96, in run_until_complete
+547.6s 940 raise RuntimeError(
+547.6s 941 RuntimeError: Event loop stopped before Future completed.
+547.6s 942 [ColabKernelApp] ERROR | Event loop stopped before Future completed.
+547.6s 943 Traceback (most recent call last):
+547.6s 944 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/manager.py", line 82, in wrapper
+547.6s 945 out = await method(self, *args, **kwargs)
+547.6s 946 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+547.6s 947 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/manager.py", line 498, in _async_shutdown_kernel
+547.6s 948 await ensure_async(self._kill_kernel())
+547.6s 949 ^^^^^^^^^^^^^^^^^^^
+547.6s 950 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/utils.py", line 30, in wrapped
+547.6s 951 raise e
+547.6s 952 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/utils.py", line 27, in wrapped
+547.6s 953 return loop.run_until_complete(future)
+547.6s 954 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+547.6s 955 File "/usr/local/lib/python3.12/dist-packages/nest_asyncio.py", line 96, in run_until_complete
+547.6s 956 raise RuntimeError(
+547.6s 957 RuntimeError: Event loop stopped before Future completed.
+547.6s 958 [ColabKernelApp] ERROR | Event loop stopped before Future completed.
+547.6s 959 Traceback (most recent call last):
+547.6s 960 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/manager.py", line 82, in wrapper
+547.6s 961 out = await method(self, *args, **kwargs)
+547.6s 962 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+547.6s 963 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/manager.py", line 498, in _async_shutdown_kernel
+547.6s 964 await ensure_async(self._kill_kernel())
+547.6s 965 ^^^^^^^^^^^^^^^^^^^
+547.6s 966 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/utils.py", line 30, in wrapped
+547.6s 967 raise e
+547.6s 968 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/utils.py", line 27, in wrapped
+547.6s 969 return loop.run_until_complete(future)
+547.6s 970 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+547.6s 971 File "/usr/local/lib/python3.12/dist-packages/nest_asyncio.py", line 96, in run_until_complete
+547.6s 972 raise RuntimeError(
+547.6s 973 RuntimeError: Event loop stopped before Future completed.
+547.6s 974 [ColabKernelApp] ERROR | Event loop stopped before Future completed.
+547.6s 975 Traceback (most recent call last):
+547.6s 976 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/manager.py", line 82, in wrapper
+547.6s 977 out = await method(self, *args, **kwargs)
+547.6s 978 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+547.6s 979 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/manager.py", line 498, in _async_shutdown_kernel
+547.6s 980 await ensure_async(self._kill_kernel())
+547.6s 981 ^^^^^^^^^^^^^^^^^^^
+547.6s 982 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/utils.py", line 30, in wrapped
+547.6s 983 raise e
+547.6s 984 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/utils.py", line 27, in wrapped
+547.6s 985 return loop.run_until_complete(future)
+547.6s 986 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+547.6s 987 File "/usr/local/lib/python3.12/dist-packages/nest_asyncio.py", line 96, in run_until_complete
+547.6s 988 raise RuntimeError(
+547.6s 989 RuntimeError: Event loop stopped before Future completed.
+547.6s 990 [ColabKernelApp] ERROR | Event loop stopped before Future completed.
+547.6s 991 Traceback (most recent call last):
+547.6s 992 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/manager.py", line 82, in wrapper
+547.6s 993 out = await method(self, *args, **kwargs)
+547.6s 994 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+547.6s 995 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/manager.py", line 498, in _async_shutdown_kernel
+547.6s 996 await ensure_async(self._kill_kernel())
+547.6s 997 ^^^^^^^^^^^^^^^^^^^
+547.6s 998 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/utils.py", line 30, in wrapped
+547.6s 999 raise e
+547.6s 1000 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/utils.py", line 27, in wrapped
+547.6s 1001 return loop.run_until_complete(future)
+547.6s 1002 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+547.6s 1003 File "/usr/local/lib/python3.12/dist-packages/nest_asyncio.py", line 96, in run_until_complete
+547.6s 1004 raise RuntimeError(
+547.6s 1005 RuntimeError: Event loop stopped before Future completed.
+547.6s 1006 [ColabKernelApp] ERROR | Event loop stopped before Future completed.
+547.6s 1007 Traceback (most recent call last):
+547.6s 1008 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/manager.py", line 82, in wrapper
+547.6s 1009 out = await method(self, *args, **kwargs)
+547.6s 1010 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+547.6s 1011 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/manager.py", line 498, in _async_shutdown_kernel
+547.6s 1012 await ensure_async(self._kill_kernel())
+547.6s 1013 ^^^^^^^^^^^^^^^^^^^
+547.6s 1014 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/utils.py", line 30, in wrapped
+547.6s 1015 raise e
+547.6s 1016 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/utils.py", line 27, in wrapped
+547.6s 1017 return loop.run_until_complete(future)
+547.6s 1018 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+547.6s 1019 File "/usr/local/lib/python3.12/dist-packages/nest_asyncio.py", line 96, in run_until_complete
+547.6s 1020 raise RuntimeError(
+547.6s 1021 RuntimeError: Event loop stopped before Future completed.
+547.6s 1022 [ColabKernelApp] ERROR | Event loop stopped before Future completed.
+547.6s 1023 Traceback (most recent call last):
+547.6s 1024 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/manager.py", line 82, in wrapper
+547.6s 1025 out = await method(self, *args, **kwargs)
+547.6s 1026 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+547.6s 1027 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/manager.py", line 498, in _async_shutdown_kernel
+547.6s 1028 await ensure_async(self._kill_kernel())
+547.6s 1029 ^^^^^^^^^^^^^^^^^^^
+547.6s 1030 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/utils.py", line 30, in wrapped
+547.6s 1031 raise e
+547.6s 1032 File "/usr/local/lib/python3.12/dist-packages/jupyter_client/utils.py", line 27, in wrapped
+547.6s 1033 return loop.run_until_complete(future)
+547.6s 1034 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+547.6s 1035 File "/usr/local/lib/python3.12/dist-packages/nest_asyncio.py", line 96, in run_until_complete
+547.6s 1036 raise RuntimeError(
+547.6s 1037 RuntimeError: Event loop stopped before Future completed.
+549.9s 1038 /usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+549.9s 1039 cells[i][c] = re.sub('\\\\\|', '|', cell)
+550.0s 1040 /usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+550.0s 1041 text = re.sub(r'_', '\_', text) # Escape underscores in display text
+550.7s 1042 /usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=["remove_papermill_header.RemovePapermillHeader"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.
+550.7s 1043 warn(
+550.8s 1044 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+551.0s 1045 [NbConvertApp] Writing 123698 bytes to __notebook__.ipynb
+553.1s 1046 /usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=["nbconvert.preprocessors.ExtractOutputPreprocessor"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.
+553.1s 1047 warn(
+553.1s 1048 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+553.8s 1049 [NbConvertApp] Writing 487556 bytes to __results__.html
+554.5s 1050 /usr/local/lib/python3.12/dist-packages/fastprogress/fastprogress.py:107: UserWarning: Couldn't import ipywidgets properly, progress bar will use console behavior
+554.5s 1051 warn("Couldn't import ipywidgets properly, progress bar will use console behavior")

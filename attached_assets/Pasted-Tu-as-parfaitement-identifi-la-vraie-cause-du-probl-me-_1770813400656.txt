@@ -1,0 +1,87 @@
+Tu as parfaitement identifié la vraie cause du problème :
+
+	Quand tu actives internet, les pip install imagecodecs, etc. fonctionnent. Quand tu désactives internet (mode requis pour la soumission), ces install échouent car il n’y a plus d’accès externe pour télécharger les paquets — donc le kernel plante avant d’atteindre ta logique.
+
+Ça n’est pas une erreur de code, c’est une contrainte du système Kaggle (soumission offline). Pour résoudre ça, tu dois pré‑installer ou embarquer les dépendances avant la soumission, car pendant l’exécution officielle de ton kernel internet est désactivé. Voici l’explication et les solutions recommandées utilisées par la communauté Kaggle : ￼
+
+✅ Pourquoi pip install (...) échoue en mode offline
+
+Quand tu soumets un notebook :
+	•	Kaggle re joue l’intégralité du notebook du début à la fin automatiquement.
+	•	L’accès internet est désactivé (par politique pour éviter les appels externes).
+Donc toute ligne du type subprocess.check_call([…, "pip install", p]) échouera, car pip ne peut pas contacter PyPI.
+Tu vois exactement l’erreur dans ton log :
+
+Could not find a version that satisfies the requirement imagecodecs… temporary failure in name resolution
+
+→ pas de connexion internet.
+
+Ce n’est pas corrigible en code seul — il faut intégrer les packages avant la soumission. ￼
+
+🧠 Trois méthodes usuelles pour contourner ce problème
+
+🟣 1) Créer un dataset Kaggle contenant les wheels
+	1.	Sur ta machine locale (avec internet), télécharge les wheels (.whl) de toutes les dépendances :
+
+pip download imagecodecs tifffile ...
+
+
+	2.	Compresse les fichiers .whl dans un dossier.
+	3.	Crée un Dataset personnel sur Kaggle (Datasets → New Dataset).
+	4.	Ajoute ces wheels dans ce dataset (comme fichiers).
+	5.	Dans ton notebook, ajoute ce dataset comme Input Data.
+	6.	Installe les wheels localement sans internet :
+
+!pip install --no-index --find-links /kaggle/input/my-wheels/*.whl
+
+ou en code Python équivalent (subprocess.check_call avec --no-index --find-links).
+➡️ Cela fonctionne même si internet est désactivé lors de la soumission. ￼
+
+Pourquoi ça marche ? Parce que Kaggle permet d’utiliser les fichiers dans /kaggle/input/... pendant l’exécution offline. Sans besoin de télécharger quoi que ce soit de l’extérieur.
+
+🟢 2) Embarquer les packages directement dans le repo de ton kernel
+
+Si ce ne sont pas des packages volumineux ou s’ils n’ont pas de dépendances complexes, tu peux :
+	•	Mettre les répertoires sources complets (imagecodecs, …) dans le même dossier que ton notebook
+	•	Ajouter un sys.path.append(...) vers ces dossiers
+pour que Python les charge directement sans pip.
+C’est moins propre, mais ça fonctionne si tu peux inclure les sources. ￼
+
+🔵 3) Installer les paquets dans une session interactive puis capturer l’environnement
+
+Cette méthode consiste à :
+	1.	Ouvrir une session Kaggle avec internet activé
+	2.	Installer toutes les dépendances (pip install ...)
+	3.	Puis sauvegarder /opt/conda/lib/python3.*/site-packages/... dans un dataset
+	4.	Réutiliser ce dataset dans le noyau offline (copier ces libs dans ../working/)
+→ Permet d’éviter pip pendant la soumission.
+Cette méthode est un peu plus lourde mais parfois requise pour des dépendances compilées.
+
+🛠️ Exemple concret prêt à copier pour ton notebook
+
+Supposons que tu as uploadé un dataset Kaggle nommé my-wheels qui contient :
+
+imagecodecs‑2026.1.14‑cp312‑cp312m‑manylinux*.whl
+tifffile‑2026.1.**‑py3*.whl
+
+Ensuite dans ton notebook tu remplaces tes installs de la manière suivante :
+
+# Installer depuis dataset (offline safe pour soumission)
+import subprocess, sys
+subprocess.check_call([
+    sys.executable, "-m", "pip", "install",
+    "--no-index",
+    "--find-links=/kaggle/input/my-wheels",
+    "imagecodecs", "tifffile"
+])
+
+Cette ligne fonctionnera en mode offline car elle ne tente pas de contacter PyPI. ￼
+
+✅ Résumé
+
+🔹 En mode online, pip install ... marche car internet est disponible.
+🔹 En mode offline (soumission), internet est coupé — donc pip ne peut pas télécharger quoi que ce soit.
+👉 Pour soumettre avec succès, tu dois pré‑charger les packages requis comme un dataset Kaggle (ou embarquer les wheels/local sources).
+Sans cette étape, ton kernel passera localement mais échouera au moment de la soumission. ￼
+
+Si tu veux, je peux te faire une checklist complète et un script automatique pour générer ce dataset de wheels avec toutes les dépendances (imagecodecs, tifffile + toutes leurs dépendances) prêt pour Kaggle — explique juste si tu veux multi‑plateforme ou GPU.

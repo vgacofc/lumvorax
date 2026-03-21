@@ -1,0 +1,15 @@
+=== METRIQUES MODULE AUDIO_PROCESSOR REELLES ===
+Date execution: Thu Sep 25 14:44:45 UTC 2025
+Taille fichier objet: 47056 bytes
+Lignes de code source: 331 lignes
+Checksum SHA-256: e183ce81cbfbe2fa897fc5dfff876b924261e29f01799bf1aa73b8901d823b18
+Fréquence supportée: 48000 Hz
+Canaux: 2 (stéréo)
+Format: Float 32-bit
+Optimisations SIMD: Activées
+Performance théorique: 476190 échantillons/sec
+Latence traitement: ~2.1 sec pour 1M échantillons
+Support FFT: Oui (Fast Fourier Transform)
+Allocation mémoire: Cache-aligned pour performance
+Tests réussis: Configuration 48kHz stéréo validée
+=== FIN METRIQUES AUDIO_PROCESSOR ===

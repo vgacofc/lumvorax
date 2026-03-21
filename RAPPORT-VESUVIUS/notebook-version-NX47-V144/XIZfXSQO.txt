@@ -1,0 +1,64 @@
+6.6s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+6.6s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+6.6s 3 0.00s - to python to disable frozen modules.
+6.6s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+7.2s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+7.2s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+7.2s 7 0.00s - to python to disable frozen modules.
+7.2s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+8.2s 9 [NX-46] Activating HFBL-360 Forensic System...
+8.2s 10 [NX-46] Environment: Kaggle
+8.2s 11 [NX-46] Status: 100% Operational (Verified)
+14.8s 12 Traceback (most recent call last):
+14.8s 13 File "<string>", line 1, in <module>
+14.8s 14 File "/usr/local/lib/python3.12/dist-packages/papermill/execute.py", line 131, in execute_notebook
+14.8s 15 raise_for_execution_errors(nb, output_path)
+14.8s 16 File "/usr/local/lib/python3.12/dist-packages/papermill/execute.py", line 251, in raise_for_execution_errors
+14.8s 17 raise error
+14.8s 18 papermill.exceptions.PapermillExecutionError:
+14.8s 19 ---------------------------------------------------------------------------
+14.8s 20 Exception encountered at "In [2]":
+14.8s 21 ---------------------------------------------------------------------------
+14.8s 22 RuntimeError                              Traceback (most recent call last)
+14.8s 23 /tmp/ipykernel_24/2538751647.py in <cell line: 0>()
+14.8s 24 1992         stability_probe_runs=int(os.environ.get('V139_STABILITY_PROBE_RUNS', '0')),
+14.8s 25 1993     )
+14.8s 26 -> 1994     kernel = NX47V139Kernel(
+14.8s 27 1995         root=Path(os.environ.get('VESUVIUS_ROOT', '/kaggle/input/competitions/vesuvius-challenge-surface-detection')),
+14.8s 28 1996         output_dir=Path(os.environ.get('VESUVIUS_OUTPUT', '/kaggle/working')),
+14.8s 29 
+14.8s 30 /tmp/ipykernel_24/2538751647.py in __init__(self, root, output_dir, config)
+14.8s 31 1148         }
+14.8s 32 1149
+14.8s 33 -> 1150         bootstrap_dependencies_fail_fast()
+14.8s 34 1151         if not ensure_imagecodecs():
+14.8s 35 1152             raise RuntimeError('imagecodecs is mandatory for LZW TIFF I/O')
+14.8s 36 
+14.8s 37 /tmp/ipykernel_24/2538751647.py in bootstrap_dependencies_fail_fast()
+14.8s 38 280 def bootstrap_dependencies_fail_fast() -> None:
+14.8s 39 281     install_offline("numpy")
+14.8s 40 --> 282     install_offline("imagecodecs")
+14.8s 41 283     install_offline("tifffile")
+14.8s 42 284     global tifffile
+14.8s 43 
+14.8s 44 /tmp/ipykernel_24/2538751647.py in install_offline(package_name)
+14.8s 45 275             return
+14.8s 46 276
+14.8s 47 --> 277     raise RuntimeError(f"Offline dependency directory not found for {package_name}")
+14.8s 48 278
+14.8s 49 279
+14.8s 50 
+14.8s 51 RuntimeError: Offline dependency directory not found for imagecodecs
+14.8s 52 
+16.9s 53 /usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+16.9s 54 cells[i][c] = re.sub('\\\\\|', '|', cell)
+17.1s 55 /usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+17.1s 56 text = re.sub(r'_', '\_', text) # Escape underscores in display text
+17.7s 57 /usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=["remove_papermill_header.RemovePapermillHeader"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.
+17.7s 58 warn(
+17.8s 59 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+18.1s 60 [NbConvertApp] Writing 123908 bytes to __notebook__.ipynb
+20.4s 61 /usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=["nbconvert.preprocessors.ExtractOutputPreprocessor"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.
+20.4s 62 warn(
+20.5s 63 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+21.7s 64 [NbConvertApp] Writing 812581 bytes to __results__.html

@@ -1,0 +1,6 @@
+{"ts":142889430744546, "mod":"PHYSICS", "ev":"INIT_MASS", "val":"38d7ea4c68000"}
+{"ts":142889431607576, "mod":"PHYSICS", "ev":"INIT_SPIN", "val":"3b7c4580"}
+{"ts":142889432185986, "mod":"PHYSICS", "ev":"HORIZON_P", "val":"71afd498cfe0e"}
+{"ts":142889433283306, "mod":"PHYSICS", "ev":"GEODESIC_R", "val":"4039000000000000"}
+{"ts":142889434860006, "mod":"PHYSICS", "ev":"GEODESIC_THETA", "val":"3ff921ff2e48e8a7"}
+{"ts":142889436673016, "mod":"EVENT", "ev":"HORIZON_CROSS", "val":"0"}

@@ -1,0 +1,64 @@
+1. Avertissements de troncature avec snprintf
+
+Erreurs:
+
+    L'utilisation de snprintf dans plusieurs endroits cause des avertissements de troncature :
+        snprintf(test_file, sizeof(test_file), "%s/.write_test", ctx->storage_directory);
+        snprintf(full_path, sizeof(full_path), "%s/%s", ctx->storage_directory, filename);
+
+Solution:
+Assurez-vous que la taille de ctx->storage_directory est vérifiée avant d'utiliser snprintf. Utilisez strncpy pour limiter la taille de la chaîne ou vérifiez si la concaténation dépasse la taille du buffer alloué. Une solution rapide pourrait être de définir une taille maximum pour ctx->storage_directory, comme suit :
+
+#define MAX_STORAGE_DIRECTORY_LENGTH 1024
+
+// Exemple de code modifié
+snprintf(test_file, sizeof(test_file), "%.*s/.write_test", MAX_STORAGE_DIRECTORY_LENGTH, ctx->storage_directory);
+
+2. Valeurs de cas en double dans
+
+Erreur:
+
+    Vous avez des erreurs de compilation dues à des valeurs de cas dupliquées dans un switch :
+
+    case LUM_BATCH_SORT_BY_ID:
+    // Erreur ici
+    case LUM_BATCH_SORT_BY_ID:
+
+Solution:
+Vérifiez les définitions dans vos énumérations et assurez-vous que chaque case a une valeur unique. Corrigez les doublons en modifiant les valeurs respectives.
+3. Déclaration implicite de fonction
+
+Erreurs:
+
+    Des erreurs apparaissent avec des appels à des fonctions non déclarées comme clock_gettime et getpagesize.
+
+Solution:
+Ajoutez les en-têtes nécessaires :
+
+#include <time.h>  // Pour clock_gettime
+#include <unistd.h> // Pour getpagesize
+
+4. Utilisation de ftruncate et madvise sans déclaration
+
+Solution:
+Ajoutez les nécessaires :
+
+#include <fcntl.h> // Pour ftruncate
+#include <sys/mman.h> // Pour madvise
+
+Mise en œuvre des corrections
+
+Voici ce que vous devez faire dans votre code :
+
+    Mettez à jour 
+
+pour gérer la taille des chaînes avec snprintf.
+Corrigez les valeurs de cas en double dans
+
+    .
+    Ajoutez les en-têtes nécessaires dans les fichiers où vous les utilisez.
+
+Résumé des étapes :
+
+    Effectuez les mises à jour de code illustrées ci-dessus.
+    Relancez la compilation avec le commandement :

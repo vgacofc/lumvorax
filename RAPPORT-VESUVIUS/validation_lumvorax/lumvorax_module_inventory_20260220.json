@@ -1,0 +1,1161 @@
+{
+  "modules": [
+    {
+      "header": "src/lum/lum_core.h",
+      "role": "LUM core structures/security/memory",
+      "function_count": 27,
+      "functions": [
+        {
+          "return": "lum_t*",
+          "name": "lum_create",
+          "args": "uint8_t presence, int32_t x, int32_t y, lum_structure_type_e type"
+        },
+        {
+          "return": "void",
+          "name": "lum_destroy",
+          "args": "lum_t* lum"
+        },
+        {
+          "return": "lum_group_t*",
+          "name": "lum_group_create",
+          "args": "size_t initial_capacity"
+        },
+        {
+          "return": "void",
+          "name": "lum_group_destroy",
+          "args": "lum_group_t* group"
+        },
+        {
+          "return": "void",
+          "name": "lum_group_safe_destroy",
+          "args": "lum_group_t** group_ptr"
+        },
+        {
+          "return": "bool",
+          "name": "lum_group_add",
+          "args": "lum_group_t* group, lum_t* lum"
+        },
+        {
+          "return": "lum_t*",
+          "name": "lum_group_get",
+          "args": "lum_group_t* group, size_t index"
+        },
+        {
+          "return": "size_t",
+          "name": "lum_group_size",
+          "args": "lum_group_t* group"
+        },
+        {
+          "return": "lum_zone_t*",
+          "name": "lum_zone_create",
+          "args": "const char* name"
+        },
+        {
+          "return": "void",
+          "name": "lum_zone_destroy",
+          "args": "lum_zone_t* zone"
+        },
+        {
+          "return": "bool",
+          "name": "lum_zone_add_group",
+          "args": "lum_zone_t* zone, lum_group_t* group"
+        },
+        {
+          "return": "bool",
+          "name": "lum_zone_is_empty",
+          "args": "lum_zone_t* zone"
+        },
+        {
+          "return": "lum_memory_t*",
+          "name": "lum_memory_create",
+          "args": "const char* name"
+        },
+        {
+          "return": "void",
+          "name": "lum_memory_destroy",
+          "args": "lum_memory_t* memory"
+        },
+        {
+          "return": "bool",
+          "name": "lum_memory_store",
+          "args": "lum_memory_t* memory, lum_group_t* group"
+        },
+        {
+          "return": "lum_group_t*",
+          "name": "lum_memory_retrieve",
+          "args": "lum_memory_t* memory"
+        },
+        {
+          "return": "uint32_t",
+          "name": "lum_generate_id",
+          "args": "void"
+        },
+        {
+          "return": "uint64_t",
+          "name": "lum_get_timestamp",
+          "args": "void"
+        },
+        {
+          "return": "void",
+          "name": "lum_print",
+          "args": "const lum_t* lum"
+        },
+        {
+          "return": "void",
+          "name": "lum_group_print",
+          "args": "const lum_group_t* group"
+        },
+        {
+          "return": "bool",
+          "name": "lum_group_process_batch_50m_optimized",
+          "args": "lum_group_t* group, lum_batch_operation_e operation"
+        },
+        {
+          "return": "bool",
+          "name": "lum_group_sort_ultra_fast",
+          "args": "lum_group_t* group"
+        },
+        {
+          "return": "bool",
+          "name": "lum_group_defragment_zero_copy",
+          "args": "lum_group_t* group"
+        },
+        {
+          "return": "void",
+          "name": "lum_safe_destroy",
+          "args": "lum_t** lum_ptr"
+        },
+        {
+          "return": "void",
+          "name": "lum_group_destroy_ultra_secure",
+          "args": "lum_group_t** group_ptr"
+        },
+        {
+          "return": "bool",
+          "name": "lum_security_init",
+          "args": "void"
+        },
+        {
+          "return": "void",
+          "name": "lum_security_cleanup",
+          "args": "void"
+        }
+      ]
+    },
+    {
+      "header": "src/lum/lum_optimized_variants.h",
+      "role": "LUM core structures/security/memory",
+      "function_count": 1,
+      "functions": [
+        {
+          "return": "extern uint64_t",
+          "name": "lum_get_timestamp",
+          "args": "void"
+        }
+      ]
+    },
+    {
+      "header": "src/file_formats/lum_native_file_handler.h",
+      "role": "Universal .lum format encoding/decoding and file manager",
+      "function_count": 74,
+      "functions": [
+        {
+          "return": "lum_file_config_t*",
+          "name": "lum_file_config_create",
+          "args": "lum_file_format_e format"
+        },
+        {
+          "return": "void",
+          "name": "lum_file_config_destroy",
+          "args": "lum_file_config_t** config_ptr"
+        },
+        {
+          "return": "bool",
+          "name": "lum_file_config_set_format",
+          "args": "lum_file_config_t* config, lum_file_format_e format"
+        },
+        {
+          "return": "bool",
+          "name": "lum_file_config_enable_compression",
+          "args": "lum_file_config_t* config, double level"
+        },
+        {
+          "return": "bool",
+          "name": "lum_file_config_set_buffer_size",
+          "args": "lum_file_config_t* config, size_t size"
+        },
+        {
+          "return": "lum_file_metadata_t*",
+          "name": "lum_file_metadata_create",
+          "args": "void"
+        },
+        {
+          "return": "void",
+          "name": "lum_file_metadata_destroy",
+          "args": "lum_file_metadata_t** metadata_ptr"
+        },
+        {
+          "return": "bool",
+          "name": "lum_file_metadata_update",
+          "args": "lum_file_metadata_t* metadata, const lum_group_t* group"
+        },
+        {
+          "return": "bool",
+          "name": "lum_file_metadata_validate",
+          "args": "const lum_file_metadata_t* metadata"
+        },
+        {
+          "return": "lum_file_context_t*",
+          "name": "lum_file_context_create",
+          "args": "const char* filename, lum_file_config_t* config, bool writing"
+        },
+        {
+          "return": "void",
+          "name": "lum_file_context_destroy",
+          "args": "lum_file_context_t** context_ptr"
+        },
+        {
+          "return": "bool",
+          "name": "lum_file_context_open",
+          "args": "lum_file_context_t* context, const char* filename, const char* mode"
+        },
+        {
+          "return": "bool",
+          "name": "lum_file_context_close",
+          "args": "lum_file_context_t* context"
+        },
+        {
+          "return": "lum_file_result_t*",
+          "name": "lum_export_single",
+          "args": "const lum_t* lum, const char* filename, lum_file_config_t* config"
+        },
+        {
+          "return": "lum_file_result_t*",
+          "name": "lum_export_single_binary",
+          "args": "const lum_t* lum, const char* filename, lum_file_config_t* config"
+        },
+        {
+          "return": "lum_file_result_t*",
+          "name": "lum_export_single_text",
+          "args": "const lum_t* lum, const char* filename, lum_file_config_t* config"
+        },
+        {
+          "return": "lum_file_result_t*",
+          "name": "lum_export_single_json",
+          "args": "const lum_t* lum, const char* filename, lum_file_config_t* config"
+        },
+        {
+          "return": "lum_file_result_t*",
+          "name": "lum_export_single_xml",
+          "args": "const lum_t* lum, const char* filename, lum_file_config_t* config"
+        },
+        {
+          "return": "lum_file_result_t*",
+          "name": "lum_export_group",
+          "args": "const lum_group_t* group, const char* filename, lum_file_config_t* config"
+        },
+        {
+          "return": "lum_file_result_t*",
+          "name": "lum_export_group_binary",
+          "args": "const lum_group_t* group, const char* filename, lum_file_config_t* config"
+        },
+        {
+          "return": "lum_file_result_t*",
+          "name": "lum_export_group_text",
+          "args": "const lum_group_t* group, const char* filename, lum_file_config_t* config"
+        },
+        {
+          "return": "lum_file_result_t*",
+          "name": "lum_export_group_json",
+          "args": "const lum_group_t* group, const char* filename, lum_file_config_t* config"
+        },
+        {
+          "return": "lum_file_result_t*",
+          "name": "lum_export_group_xml",
+          "args": "const lum_group_t* group, const char* filename, lum_file_config_t* config"
+        },
+        {
+          "return": "lum_file_result_t*",
+          "name": "lum_export_group_csv",
+          "args": "const lum_group_t* group, const char* filename, lum_file_config_t* config"
+        },
+        {
+          "return": "lum_file_result_t*",
+          "name": "lum_export_multi_groups",
+          "args": "lum_group_t** groups, size_t group_count, const char* filename, lum_file_config_t* config"
+        },
+        {
+          "return": "lum_file_result_t*",
+          "name": "lum_import_single",
+          "args": "lum_t** lum, const char* filename, lum_file_config_t* config"
+        },
+        {
+          "return": "lum_file_result_t*",
+          "name": "lum_import_single_binary",
+          "args": "lum_t** lum, const char* filename, lum_file_config_t* config"
+        },
+        {
+          "return": "lum_file_result_t*",
+          "name": "lum_import_single_text",
+          "args": "lum_t** lum, const char* filename, lum_file_config_t* config"
+        },
+        {
+          "return": "lum_file_result_t*",
+          "name": "lum_import_single_json",
+          "args": "lum_t** lum, const char* filename, lum_file_config_t* config"
+        },
+        {
+          "return": "lum_file_result_t*",
+          "name": "lum_import_single_xml",
+          "args": "lum_t** lum, const char* filename, lum_file_config_t* config"
+        },
+        {
+          "return": "lum_file_result_t*",
+          "name": "lum_import_group",
+          "args": "lum_group_t** group, const char* filename, lum_file_config_t* config"
+        },
+        {
+          "return": "lum_file_result_t*",
+          "name": "lum_import_group_binary",
+          "args": "lum_group_t** group, const char* filename, lum_file_config_t* config"
+        },
+        {
+          "return": "lum_file_result_t*",
+          "name": "lum_import_group_text",
+          "args": "lum_group_t** group, const char* filename, lum_file_config_t* config"
+        },
+        {
+          "return": "lum_file_result_t*",
+          "name": "lum_import_group_json",
+          "args": "lum_group_t** group, const char* filename, lum_file_config_t* config"
+        },
+        {
+          "return": "lum_file_result_t*",
+          "name": "lum_import_group_xml",
+          "args": "lum_group_t** group, const char* filename, lum_file_config_t* config"
+        },
+        {
+          "return": "lum_file_result_t*",
+          "name": "lum_import_group_csv",
+          "args": "lum_group_t** group, const char* filename, lum_file_config_t* config"
+        },
+        {
+          "return": "lum_file_result_t*",
+          "name": "lum_import_multi_groups",
+          "args": "lum_group_t*** groups, size_t* group_count, const char* filename, lum_file_config_t* config"
+        },
+        {
+          "return": "lum_file_format_e",
+          "name": "lum_file_detect_format",
+          "args": "const char* filename"
+        },
+        {
+          "return": "bool",
+          "name": "lum_file_validate_format",
+          "args": "const char* filename, lum_file_format_e expected_format"
+        },
+        {
+          "return": "bool",
+          "name": "lum_file_is_valid_lum_file",
+          "args": "const char* filename"
+        },
+        {
+          "return": "bool",
+          "name": "lum_file_verify_integrity",
+          "args": "const char* filename, lum_file_config_t* config"
+        },
+        {
+          "return": "uint32_t",
+          "name": "lum_file_calculate_checksum",
+          "args": "const char* filename"
+        },
+        {
+          "return": "bool",
+          "name": "lum_file_repair_corruption",
+          "args": "const char* filename, lum_file_config_t* config"
+        },
+        {
+          "return": "lum_file_stats_t*",
+          "name": "lum_file_stats_create",
+          "args": "void"
+        },
+        {
+          "return": "void",
+          "name": "lum_file_stats_destroy",
+          "args": "lum_file_stats_t** stats_ptr"
+        },
+        {
+          "return": "bool",
+          "name": "lum_file_stats_update",
+          "args": "lum_file_stats_t* stats, const lum_file_result_t* result"
+        },
+        {
+          "return": "lum_file_result_t*",
+          "name": "lum_file_get_info",
+          "args": "const char* filename"
+        },
+        {
+          "return": "bool",
+          "name": "lum_file_stress_test_100m_export",
+          "args": "lum_file_config_t* config"
+        },
+        {
+          "return": "bool",
+          "name": "lum_file_stress_test_100m_import",
+          "args": "lum_file_config_t* config"
+        },
+        {
+          "return": "bool",
+          "name": "lum_file_stress_test_all_formats",
+          "args": "size_t lum_count, lum_file_config_t* config"
+        },
+        {
+          "return": "lum_file_result_t*",
+          "name": "lum_file_benchmark_formats",
+          "args": "size_t lum_count, lum_file_config_t* config"
+        },
+        {
+          "return": "uint32_t",
+          "name": "lum_calculate_crc32",
+          "args": "const uint8_t* data, size_t length"
+        },
+        {
+          "return": "bool",
+          "name": "lum_write_serialized",
+          "args": "FILE* file, const lum_t* lum"
+        },
+        {
+          "return": "bool",
+          "name": "lum_read_serialized",
+          "args": "FILE* file, lum_t* lum"
+        },
+        {
+          "return": "bool",
+          "name": "lum_write_metadata_serialized",
+          "args": "FILE* file, const lum_file_metadata_t* metadata"
+        },
+        {
+          "return": "bool",
+          "name": "lum_read_metadata_serialized",
+          "args": "FILE* file, lum_file_metadata_t* metadata"
+        },
+        {
+          "return": "bool",
+          "name": "lum_file_verify_integrity_file",
+          "args": "const char* filename"
+        },
+        {
+          "return": "bool",
+          "name": "lum_file_stress_test_100m_write_read",
+          "args": "void"
+        },
+        {
+          "return": "bool",
+          "name": "lum_file_test_corruption_recovery",
+          "args": "lum_file_config_t* config"
+        },
+        {
+          "return": "bool",
+          "name": "lum_file_test_large_files",
+          "args": "size_t max_size_gb, lum_file_config_t* config"
+        },
+        {
+          "return": "bool",
+          "name": "lum_file_test_concurrent_access",
+          "args": "size_t thread_count, lum_file_config_t* config"
+        },
+        {
+          "return": "lum_file_result_t*",
+          "name": "lum_file_result_create",
+          "args": "void"
+        },
+        {
+          "return": "void",
+          "name": "lum_file_result_destroy",
+          "args": "lum_file_result_t** result_ptr"
+        },
+        {
+          "return": "bool",
+          "name": "lum_file_result_set_success",
+          "args": "lum_file_result_t* result, const char* filename, size_t bytes, size_t lums"
+        },
+        {
+          "return": "bool",
+          "name": "lum_file_result_set_error",
+          "args": "lum_file_result_t* result, const char* error_message"
+        },
+        {
+          "return": "lum_file_config_t*",
+          "name": "lum_file_config_create_default",
+          "args": "void"
+        },
+        {
+          "return": "lum_file_config_t*",
+          "name": "lum_file_config_create_adaptive",
+          "args": "size_t expected_lum_count"
+        },
+        {
+          "return": "lum_file_config_t*",
+          "name": "lum_file_config_create_high_performance",
+          "args": "void"
+        },
+        {
+          "return": "lum_file_config_t*",
+          "name": "lum_file_config_create_high_compression",
+          "args": "void"
+        },
+        {
+          "return": "lum_file_config_t*",
+          "name": "lum_file_config_create_forensic_audit",
+          "args": "void"
+        },
+        {
+          "return": "lum_file_error_messages_t*",
+          "name": "lum_file_get_error_messages",
+          "args": "void"
+        },
+        {
+          "return": "bool",
+          "name": "lum_file_set_custom_error_messages",
+          "args": "const lum_file_error_messages_t* messages"
+        },
+        {
+          "return": "size_t",
+          "name": "lum_file_get_optimal_buffer_size",
+          "args": "void"
+        },
+        {
+          "return": "size_t",
+          "name": "lum_file_calculate_buffer_size_for_count",
+          "args": "size_t lum_count"
+        }
+      ]
+    },
+    {
+      "header": "src/file_formats/lum_native_universal_format.h",
+      "role": "Universal .lum format encoding/decoding and file manager",
+      "function_count": 14,
+      "functions": [
+        {
+          "return": "lum_format_version_t",
+          "name": "lum_get_format_version",
+          "args": "void"
+        },
+        {
+          "return": "bool",
+          "name": "lum_set_format_version",
+          "args": "uint16_t major, uint16_t minor, const char* build_info"
+        },
+        {
+          "return": "const char*",
+          "name": "lum_get_content_type_name",
+          "args": "lum_content_type_e type"
+        },
+        {
+          "return": "bool",
+          "name": "lum_set_custom_content_type_names",
+          "args": "const char* names[], size_t count"
+        },
+        {
+          "return": "lum_universal_file_manager_t*",
+          "name": "lum_universal_file_create",
+          "args": "const char* filepath"
+        },
+        {
+          "return": "lum_universal_file_manager_t*",
+          "name": "lum_universal_file_open",
+          "args": "const char* filepath, bool read_only"
+        },
+        {
+          "return": "bool",
+          "name": "lum_universal_file_save_and_close",
+          "args": "lum_universal_file_manager_t** manager_ptr"
+        },
+        {
+          "return": "void",
+          "name": "lum_universal_file_destroy",
+          "args": "lum_universal_file_manager_t** manager_ptr"
+        },
+        {
+          "return": "bool",
+          "name": "lum_export_to_json",
+          "args": "const char* input_lum_file, const char* output_json_file"
+        },
+        {
+          "return": "bool",
+          "name": "lum_export_to_csv",
+          "args": "const char* input_lum_file, const char* output_csv_file"
+        },
+        {
+          "return": "uint32_t",
+          "name": "lum_calculate_file_checksum",
+          "args": "const char* lum_file_path"
+        },
+        {
+          "return": "bool",
+          "name": "lum_stress_test_100m_elements",
+          "args": "const char* test_file_path"
+        },
+        {
+          "return": "lum_file_info_t*",
+          "name": "lum_get_file_info",
+          "args": "const char* lum_file_path"
+        },
+        {
+          "return": "void",
+          "name": "lum_file_info_destroy",
+          "args": "lum_file_info_t** info_ptr"
+        }
+      ]
+    },
+    {
+      "header": "src/file_formats/lum_secure_serialization.h",
+      "role": "Universal .lum format encoding/decoding and file manager",
+      "function_count": 8,
+      "functions": [
+        {
+          "return": "lum_secure_result_t*",
+          "name": "lum_secure_serialize_group",
+          "args": "lum_group_t* group, bool encrypt"
+        },
+        {
+          "return": "lum_group_t*",
+          "name": "lum_secure_deserialize_group",
+          "args": "const uint8_t* data, size_t data_size, bool decrypt"
+        },
+        {
+          "return": "bool",
+          "name": "lum_secure_save_to_file",
+          "args": "const char* filename, lum_group_t* group, bool encrypt"
+        },
+        {
+          "return": "lum_group_t*",
+          "name": "lum_secure_load_from_file",
+          "args": "const char* filename, bool decrypt"
+        },
+        {
+          "return": "uint32_t",
+          "name": "lum_secure_calculate_checksum",
+          "args": "const uint8_t* data, size_t size"
+        },
+        {
+          "return": "bool",
+          "name": "lum_secure_verify_integrity",
+          "args": "const lum_secure_header_t* header, const uint8_t* data"
+        },
+        {
+          "return": "bool",
+          "name": "lum_secure_stress_test_100m_serialization",
+          "args": "void"
+        },
+        {
+          "return": "void",
+          "name": "lum_secure_result_destroy",
+          "args": "lum_secure_result_t** result_ptr"
+        }
+      ]
+    },
+    {
+      "header": "src/vorax/vorax_3d_volume.h",
+      "role": "VORAX 3D operators/processing",
+      "function_count": 3,
+      "functions": [
+        {
+          "return": "int",
+          "name": "vorax_volume3d_validate",
+          "args": "const vorax_volume3d_t* vol"
+        },
+        {
+          "return": "int",
+          "name": "vorax_volume3d_normalize",
+          "args": "vorax_volume3d_t* vol"
+        },
+        {
+          "return": "int",
+          "name": "vorax_volume3d_threshold",
+          "args": "const vorax_volume3d_t* vol, float threshold, uint8_t* out_mask, size_t out_len"
+        }
+      ]
+    },
+    {
+      "header": "src/vorax/vorax_operations.h",
+      "role": "VORAX 3D operators/processing",
+      "function_count": 16,
+      "functions": [
+        {
+          "return": "vorax_result_t*",
+          "name": "vorax_fuse",
+          "args": "lum_group_t* group1, lum_group_t* group2"
+        },
+        {
+          "return": "vorax_result_t*",
+          "name": "vorax_split",
+          "args": "lum_group_t* group, size_t parts"
+        },
+        {
+          "return": "vorax_result_t*",
+          "name": "vorax_cycle",
+          "args": "lum_group_t* group, size_t modulo"
+        },
+        {
+          "return": "vorax_result_t*",
+          "name": "vorax_move",
+          "args": "lum_zone_t* from_zone, lum_zone_t* to_zone, size_t lum_count"
+        },
+        {
+          "return": "vorax_result_t*",
+          "name": "vorax_store",
+          "args": "lum_memory_t* memory, lum_zone_t* zone, size_t lum_count"
+        },
+        {
+          "return": "vorax_result_t*",
+          "name": "vorax_retrieve",
+          "args": "lum_memory_t* memory, lum_zone_t* zone"
+        },
+        {
+          "return": "vorax_result_t*",
+          "name": "vorax_compress",
+          "args": "lum_group_t* group"
+        },
+        {
+          "return": "vorax_result_t*",
+          "name": "vorax_expand",
+          "args": "lum_group_t* compressed_group, size_t parts"
+        },
+        {
+          "return": "vorax_result_t*",
+          "name": "vorax_result_create",
+          "args": "void"
+        },
+        {
+          "return": "void",
+          "name": "vorax_result_destroy",
+          "args": "vorax_result_t* result"
+        },
+        {
+          "return": "void",
+          "name": "vorax_result_safe_destroy",
+          "args": "vorax_result_t** result_ptr"
+        },
+        {
+          "return": "void",
+          "name": "vorax_result_set_success",
+          "args": "vorax_result_t* result, const char* message"
+        },
+        {
+          "return": "void",
+          "name": "vorax_result_set_error",
+          "args": "vorax_result_t* result, const char* message"
+        },
+        {
+          "return": "size_t",
+          "name": "vorax_count_total_lums",
+          "args": "lum_group_t** groups, size_t group_count"
+        },
+        {
+          "return": "vorax_result_t*",
+          "name": "vorax_create_node",
+          "args": "lum_group_t* group1, lum_group_t* group2"
+        },
+        {
+          "return": "vorax_result_t*",
+          "name": "vorax_emit_lums",
+          "args": "lum_zone_t* zone, size_t count"
+        }
+      ]
+    },
+    {
+      "header": "src/logger/log_manager.h",
+      "role": "Forensic/logging/monitoring",
+      "function_count": 7,
+      "functions": [
+        {
+          "return": "log_manager_t*",
+          "name": "log_manager_create",
+          "args": "void"
+        },
+        {
+          "return": "bool",
+          "name": "log_manager_create_structure",
+          "args": "log_manager_t* manager"
+        },
+        {
+          "return": "bool",
+          "name": "log_manager_archive_session",
+          "args": "log_manager_t* manager, const char* session_id"
+        },
+        {
+          "return": "module_logger_t*",
+          "name": "log_manager_get_module_logger",
+          "args": "log_manager_t* manager, const char* module_name"
+        },
+        {
+          "return": "void",
+          "name": "log_manager_destroy",
+          "args": "log_manager_t* manager"
+        },
+        {
+          "return": "log_manager_t*",
+          "name": "log_manager_get_instance",
+          "args": "void"
+        },
+        {
+          "return": "void",
+          "name": "LOG_MODULE",
+          "args": "const char* module, const char* level, const char* format, ..."
+        }
+      ]
+    },
+    {
+      "header": "src/logger/lum_logger.h",
+      "role": "Forensic/logging/monitoring",
+      "function_count": 25,
+      "functions": [
+        {
+          "return": "lum_logger_t*",
+          "name": "lum_logger_create",
+          "args": "const char* log_filename, bool console_output, bool file_output"
+        },
+        {
+          "return": "void",
+          "name": "lum_logger_destroy",
+          "args": "lum_logger_t* logger"
+        },
+        {
+          "return": "bool",
+          "name": "lum_logger_set_level",
+          "args": "lum_logger_t* logger, lum_log_level_e level"
+        },
+        {
+          "return": "bool",
+          "name": "lum_logger_enable_tracing",
+          "args": "lum_logger_t* logger, bool enable"
+        },
+        {
+          "return": "void",
+          "name": "lum_log_error",
+          "args": "lum_logger_t* logger, const char* error_message"
+        },
+        {
+          "return": "lum_log_analysis_t*",
+          "name": "lum_log_analyze",
+          "args": "const char* log_filename"
+        },
+        {
+          "return": "void",
+          "name": "lum_log_print_analysis",
+          "args": "const lum_log_analysis_t* analysis"
+        },
+        {
+          "return": "void",
+          "name": "lum_log_analysis_destroy",
+          "args": "lum_log_analysis_t* analysis"
+        },
+        {
+          "return": "lum_log_replay_t*",
+          "name": "lum_log_replay_create",
+          "args": "const char* log_filename"
+        },
+        {
+          "return": "void",
+          "name": "lum_log_replay_destroy",
+          "args": "lum_log_replay_t* replay"
+        },
+        {
+          "return": "bool",
+          "name": "lum_log_replay_execute",
+          "args": "lum_log_replay_t* replay, struct vorax_execution_context* ctx"
+        },
+        {
+          "return": "void",
+          "name": "lum_set_global_logger",
+          "args": "lum_logger_t* logger"
+        },
+        {
+          "return": "lum_logger_t*",
+          "name": "lum_get_global_logger",
+          "args": "void"
+        },
+        {
+          "return": "void",
+          "name": "lum_log_message",
+          "args": "lum_logger_t* logger, lum_log_level_e level, const char* message"
+        },
+        {
+          "return": "const char*",
+          "name": "lum_log_level_to_string",
+          "args": "lum_log_level_e level"
+        },
+        {
+          "return": "const char*",
+          "name": "lum_log_entry_type_to_string",
+          "args": "lum_log_entry_type_e type"
+        },
+        {
+          "return": "const char*",
+          "name": "vorax_operation_to_string",
+          "args": "vorax_operation_e operation"
+        },
+        {
+          "return": "bool",
+          "name": "lum_log_export_csv",
+          "args": "const char* log_filename, const char* csv_filename"
+        },
+        {
+          "return": "bool",
+          "name": "lum_log_export_json",
+          "args": "const char* log_filename, const char* json_filename"
+        },
+        {
+          "return": "void",
+          "name": "lum_log_monitor_destroy",
+          "args": "lum_log_monitor_t* monitor"
+        },
+        {
+          "return": "bool",
+          "name": "lum_log_monitor_start",
+          "args": "lum_log_monitor_t* monitor"
+        },
+        {
+          "return": "void",
+          "name": "lum_log_monitor_stop",
+          "args": "lum_log_monitor_t* monitor"
+        },
+        {
+          "return": "void",
+          "name": "lum_log_flush",
+          "args": "void"
+        },
+        {
+          "return": "void",
+          "name": "lum_log",
+          "args": "lum_log_level_e level, const char* format, ..."
+        },
+        {
+          "return": "void",
+          "name": "lum_logf",
+          "args": "lum_log_level_e level, const char* format, ..."
+        }
+      ]
+    },
+    {
+      "header": "src/debug/enhanced_logging.h",
+      "role": "Forensic/logging/monitoring",
+      "function_count": 4,
+      "functions": [
+        {
+          "return": "void",
+          "name": "create_log_directory",
+          "args": "const char* base_path"
+        },
+        {
+          "return": "void",
+          "name": "create_enhanced_log",
+          "args": "const char* filepath, const char* message"
+        },
+        {
+          "return": "void",
+          "name": "log_module_action_enhanced",
+          "args": "const char* module_name, const char* action"
+        },
+        {
+          "return": "void",
+          "name": "log_test_execution",
+          "args": "const char* test_name, const char* result, int line_count"
+        }
+      ]
+    },
+    {
+      "header": "src/debug/forensic_logger.h",
+      "role": "Forensic/logging/monitoring",
+      "function_count": 7,
+      "functions": [
+        {
+          "return": "bool",
+          "name": "forensic_logger_init",
+          "args": "const char* filename"
+        },
+        {
+          "return": "bool",
+          "name": "forensic_logger_init_individual_files",
+          "args": "void"
+        },
+        {
+          "return": "void",
+          "name": "forensic_log_memory_operation",
+          "args": "const char* operation, void* ptr, size_t size"
+        },
+        {
+          "return": "void",
+          "name": "forensic_log_lum_operation",
+          "args": "const char* operation, uint64_t lum_count, double duration_ns"
+        },
+        {
+          "return": "void",
+          "name": "forensic_log_individual_lum",
+          "args": "uint32_t lum_id, const char* operation, uint64_t timestamp_ns"
+        },
+        {
+          "return": "void",
+          "name": "forensic_logger_destroy",
+          "args": "void"
+        },
+        {
+          "return": "void",
+          "name": "forensic_log",
+          "args": "forensic_level_e level, const char* function, const char* format, ..."
+        }
+      ]
+    },
+    {
+      "header": "src/debug/logging_system.h",
+      "role": "Forensic/logging/monitoring",
+      "function_count": 3,
+      "functions": [
+        {
+          "return": "void",
+          "name": "create_log",
+          "args": "const char* filepath, const char* message"
+        },
+        {
+          "return": "void",
+          "name": "log_module_action",
+          "args": "const char* module_name, const char* action"
+        },
+        {
+          "return": "void",
+          "name": "log_error_safe",
+          "args": "const char* module_name, const char* error_msg"
+        }
+      ]
+    },
+    {
+      "header": "src/debug/memory_tracker.h",
+      "role": "Forensic/logging/monitoring",
+      "function_count": 17,
+      "functions": [
+        {
+          "return": "void",
+          "name": "memory_tracker_init",
+          "args": "void"
+        },
+        {
+          "return": "void",
+          "name": "memory_tracker_cleanup",
+          "args": "void"
+        },
+        {
+          "return": "void",
+          "name": "memory_tracker_check_leaks",
+          "args": "void"
+        },
+        {
+          "return": "void",
+          "name": "memory_tracker_destroy",
+          "args": "void"
+        },
+        {
+          "return": "void",
+          "name": "memory_tracker_alloc",
+          "args": "void* ptr, size_t size, const char* file, int line"
+        },
+        {
+          "return": "void",
+          "name": "memory_tracker_free",
+          "args": "void* ptr, const char* file, int line"
+        },
+        {
+          "return": "void",
+          "name": "memory_tracker_report",
+          "args": "void"
+        },
+        {
+          "return": "void*",
+          "name": "tracked_malloc",
+          "args": "size_t size, const char* file, int line, const char* func"
+        },
+        {
+          "return": "void",
+          "name": "tracked_free",
+          "args": "void* ptr, const char* file, int line, const char* func"
+        },
+        {
+          "return": "void*",
+          "name": "tracked_calloc",
+          "args": "size_t nmemb, size_t size, const char* file, int line, const char* func"
+        },
+        {
+          "return": "void*",
+          "name": "tracked_realloc",
+          "args": "void* ptr, size_t size, const char* file, int line, const char* func"
+        },
+        {
+          "return": "void",
+          "name": "memory_tracker_enable",
+          "args": "bool enable"
+        },
+        {
+          "return": "bool",
+          "name": "memory_tracker_is_enabled",
+          "args": "void"
+        },
+        {
+          "return": "void",
+          "name": "memory_tracker_export_json",
+          "args": "const char* filename"
+        },
+        {
+          "return": "void",
+          "name": "memory_tracker_set_release_mode",
+          "args": "bool release_mode"
+        },
+        {
+          "return": "void",
+          "name": "memory_tracker_cleanup",
+          "args": "void"
+        },
+        {
+          "return": "size_t",
+          "name": "memory_tracker_get_current_usage",
+          "args": "void"
+        }
+      ]
+    },
+    {
+      "header": "src/debug/ultra_forensic_logger.h",
+      "role": "Forensic/logging/monitoring",
+      "function_count": 5,
+      "functions": [
+        {
+          "return": "void",
+          "name": "ultra_forensic_logger_init_lum",
+          "args": "const char* log_file"
+        },
+        {
+          "return": "bool",
+          "name": "ultra_forensic_logger_init",
+          "args": "void"
+        },
+        {
+          "return": "void",
+          "name": "ultra_forensic_logger_destroy",
+          "args": "void"
+        },
+        {
+          "return": "bool",
+          "name": "ultra_forensic_validate_all_logs_exist",
+          "args": "void"
+        },
+        {
+          "return": "void",
+          "name": "ultra_forensic_generate_summary_report",
+          "args": "void"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "headers": 14,
+    "functions": 211
+  }
+}

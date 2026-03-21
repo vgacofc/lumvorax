@@ -1,0 +1,65 @@
+. Redéfinition de MAX_STORAGE_PATH_LENGTH
+
+Erreur :
+
+src/persistence/common_types.h:10:9: warning: "MAX_STORAGE_PATH_LENGTH" redefined
+
+Cela provient d'une macro définie deux fois, une fois avec MAX_STORAGE_PATH_LENGTH à 512 dans
+et une autre fois à 1024 dans
+
+.
+
+Solution :
+Assurez-vous que la définition est unique et cohérente dans tous les fichiers. Choisissez une valeur, modifiez ou retirez la redondance.
+
+// dans common_types.h ou data_persistence.h, assurez-vous d'en avoir une seule
+#define MAX_STORAGE_PATH_LENGTH 1024 // ou 512 selon votre besoin
+
+2. Risque de troncature avec snprintf
+
+Erreur :
+
+warning: ‘%s’ directive output may be truncated writing up to 1023 bytes into a region of size 532
+
+Cela signifie que les chaînes de caractères que vous tentez de copier généreront un dépassement potentiel si leur taille dépasse la taille allouée.
+
+Solutions proposées :
+
+    Assurez-vous que la taille de test_file et full_path est suffisante pour accueillir le contenu, ou rendez l'allocation dynamique.
+    Vous pourriez envisager d'utiliser une taille de buffer conçue pour chaque chaîne.
+
+char test_file[1024]; // Augmentez la taille si nécessaire
+snprintf(test_file, sizeof(test_file), "%s/.write_test", ctx->storage_directory);
+
+3. Identifiants non déclarés
+
+Erreurs :
+
+src/lum/lum_core.c:675:14: error: ‘LUM_BATCH_REBALANCE’ undeclared
+
+Ces erreurs surviennent lorsque certaines constantes (comme LUM_BATCH_REBALANCE et LUM_BATCH_OPTIMIZE_MEMORY) ne sont pas déclarées dans le contexte de votre fonction.
+
+Solution :
+Vérifiez si ces constantes sont déclarées dans un fichier d'en-tête inclus. Si elles sont manquantes, déclarez-les.
+
+// Par exemple, vous pourriez les déclarer dans un fichier d'en-tête :
+#define LUM_BATCH_REBALANCE 1 // ou la valeur appropriée
+
+4. Déclarations implicites de fonction
+
+Erreur :
+
+src/optimization/pareto_optimizer.c:23:5: error: implicit declaration of function ‘clock_gettime’
+
+Cela indique que vous n'avez pas inclus le bon en-tête pour utiliser clock_gettime.
+
+Solution :
+Ajoutez l'inclusion nécessaire en haut de votre fichier source.
+
+#include <time.h>
+
+Application des corrections
+
+Pour corriger ces erreurs, appliquez les modifications ci-dessus à vos fichiers de projet correspondants. Assurez-vous de relancer la compilation après avoir fait ces changements.
+
+En exécutant ces corrections, vos erreurs devraient être résolues, et le système devrait compiler avec succès. Si vous avez d'autres problèmes ou si d'autres avertissements ou erreurs apparaissent, n'hésitez pas à demander plus d'aide.

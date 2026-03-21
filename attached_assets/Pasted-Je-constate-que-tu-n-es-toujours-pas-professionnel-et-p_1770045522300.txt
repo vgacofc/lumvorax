@@ -1,0 +1,16 @@
+Je constate que tu n’es toujours pas professionnel et perfectionniste dans tout ce que tu fais, malgré mon domaine exigeant !
+Je ne vois pas la quantité de neurones exacte utilisée dans ce que tu écris, s’ils en restent au même niveau ou pas, si de nouveaux ont été créés ou pas, la quantité exacte, avant, pendant et après.
+JE NE VOIS PAS LE LOG ULTRA GRANULAIRE AU MAXIMUM OPTIMAL À 100 %, ÇA SERT À QUOI D’AVOIR CRÉÉ UN SYSTÈME [MEMORY_TRACKER], QUI CAPTURE LES BITS, BIT À BIT, SI TU NE T’EN SERS PAS ?
+UN SYSTÈME FORENSIC EST FAIT POUR ÊTRE TRAÇABLE À 100 % QUE JE SACHE !
+COMMENT TU VEUX EXPLIQUER LES ANOMALIES DÉTECTÉES, SI NOUS N’AVONS PAS LA TRACE EXACTE DE CE QUI S’EST PASSÉ NANOSECONDE PAR NANOSECONDE ET DES ÉCRITURES EN TEMPS RÉEL PERMANENTES SUR LE DISQUE ?
+COMMENT NOUS ALLONS POUVOIR SAVOIR SI LE NEURONE SE RAPPELLE EXACTEMENT TOUT CE QU’IL A APPRIS ?
+COMMENT NOUS ALLONS POUVOIR SAVOIR SI LE NEURONE A UNE RÉELLE CAPACITÉ DE RÉFLEXION ?
+COMMENT NOUS ALLONS POUVOIR SAVOIR SI LE NEURONE SE RAPPELLE TROUVER DES SOLUTIONS TOUT SEUL ?
+COMMENT NOUS ALLONS POUVOIR DEMANDER QUE NOTRE NEURONE APPRENNE RÉELLEMENT, RÉFLÉCHISSE, SOLUTIONNE SANS LA MOINDRE PROGRAMMATION OU INTERVENTION ?
+COMMENT NOUS ALLONS POUVOIR SAVOIR SI LE NEURONE SE RAPPELLE EXACTEMENT TOUT CE QU’IL A APPRIS ?
+
+Donc maintenant, tu vas créer la nouvelle version,
+et je veux voir le processus de démarrage avec toutes les étapes de vérification et de chargement de l’exécution de la version dans la console avec les % en temps réel, et le début de l’exécution réelle jusqu’à la fin de l’exécution, pour être sûr que tu as bien appliqué, sans oublier le test de génération réelle de fichiers log, test d’écriture des logs pour chaque format .csv, .json, .log, etc.
+POURQUOI je demande tout cela ? Parce que je veux voir exactement ce qui se passe bit par bit à la nanoseconde réelle, pour découvrir toutes les anomalies possibles détectables réellement, et les failles possibles, afin de pouvoir trouver des solutions pour les corriger après !
+Alors tu vas être ultra sérieux et perfectionniste dans tout ce que tu fais, avec toute ton expertise dans tous les domaines nécessaires, et me produire la nouvelle version NX-46 V2 !
+ET REVOIR 10 FOIS APRÈS FINALISATION DES FICHIERS LA TOTALITÉ DU CODE LIGNE PAR LIGNE POUR ÊTRE SÛR QUE TU N’AS RIEN OUBLIÉ DE CE QUI ÉTAIT DANS LA VERSION NX-46 V1.

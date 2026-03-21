@@ -1,0 +1,38 @@
+{
+  "version": "NX47 V144.2",
+  "objective": "Réintégration complète V130 + analyse forensic + plan V132 de A à Z",
+  "v130_log_forensic": {
+    "summary": {
+      "status": "missing",
+      "path": "nx47-vesu-kernel-new-v130.log"
+    },
+    "computed_total_positives": 0,
+    "supervised_mode_files": 0,
+    "best_threshold_mean_supervised": 0.0,
+    "golden_nonce_detected": 0
+  },
+  "pipeline_checklist": [
+    "Split explicite train/val + multi-epoch supervisé",
+    "Calibration threshold par F-beta (scan complet)",
+    "SWI + TTA multi-axes/rotation + fusion sigmoid stable",
+    "Post-process seeded hysteresis 3D + closing anisotropique + dust removal",
+    "Golden nonces top-K extraits et intégrés au masque final",
+    "Audit scientifique complet (logs, métriques, metadata, merkle trace)"
+  ],
+  "concurrent_comparison": {
+    "public_pipeline": "single-path drop-in, seuils fixes, propagation binaire",
+    "v132_advantages": [
+      "apprentissage supervisé réel et audité",
+      "calibration de seuil optimisée F-beta",
+      "intégration golden nonces top-K",
+      "TTA multi-axes/rotation et couverture spatiale renforcée",
+      "traçabilité forensic complète"
+    ]
+  },
+  "remaining_steps_executed_simultaneously": [
+    "Consolider rapport forensic dans les artefacts V132",
+    "Préparer base CV 5-fold (pilotage par variables d'environnement)",
+    "Préparer extension ensemble multi-backbone (slot unet_25d déjà maintenu)",
+    "Conserver compatibilité Kaggle submission.zip"
+  ]
+}

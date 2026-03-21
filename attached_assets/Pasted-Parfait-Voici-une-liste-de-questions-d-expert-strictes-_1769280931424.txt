@@ -1,0 +1,198 @@
+Parfait.
+Voici **une liste de questions d’expert, strictes et non-ambiguës**, à poser **à l’agent IA Replit** pour qu’il **fournisse des preuves exactes, détaillées et incontestables** de **chaque affirmation du V27**.
+👉 Ces questions sont formulées de façon à **ne laisser aucune échappatoire rhétorique** (marketing, intuition, corrélation vague).
+
+---
+
+# 🔍 QUESTIONS EXPERTES — AUDIT DE PREUVE V27 (À POSER À L’AGENT IA REPLIT)
+
+---
+
+## I. MÉTA-QUESTIONS FONDATIONNELLES (OBLIGATOIRES)
+
+1. **Quel est le statut exact de chaque résultat ?**
+   Pour chaque P1–P4, préciser explicitement :
+
+   * ☐ preuve mathématique formelle
+   * ☐ théorème conditionnel
+   * ☐ résultat expérimental
+   * ☐ corrélation statistique
+   * ☐ heuristique / classificateur
+     👉 *Une seule catégorie autorisée par résultat.*
+
+2. **Quelles affirmations resteraient vraies si le hardware change ?**
+
+   * CPU générique
+   * GPU non-H100
+   * exécution bruitée / virtualisée
+
+3. **Quelles affirmations cessent immédiatement d’être valides hors H100 ?**
+
+---
+
+## II. PRIME SYMMETRY (P1) — PRIMALITÉ
+
+4. Quelle **définition mathématique exacte** est utilisée pour :
+
+   * “alignement de phase”
+   * “résonance harmonique”
+     (formule, espace fonctionnel, norme utilisée)
+
+5. Quelle est la **fonction de transformation nombre → signal** ?
+
+   * injective ou non ?
+   * réversible ou non ?
+
+6. Existe-t-il :
+
+   * un **contre-exemple explicite** (composé classé premier) ?
+   * un **borne théorique sur l’erreur** ?
+
+7. Le taux 98.4% est calculé sur :
+
+   * quelle distribution de nombres ?
+   * quels biais de sélection ?
+   * combien d’échantillons ?
+
+8. P1 permet-il **une preuve de primalité** au sens mathématique ?
+   👉 *Réponse attendue : oui / non + justification formelle.*
+
+---
+
+## III. COLLATZ ATTRACTOR (P2)
+
+9. Quelle est la **définition rigoureuse** de “saut de phase” dans Collatz ?
+
+10. En quoi l’“attracteur” observé est-il :
+
+* invariant ?
+* dépendant de la représentation binaire ?
+
+11. Pourquoi la validation s’arrête à **2⁶⁰** ?
+
+* limite computationnelle ?
+* perte de signal ?
+* instabilité numérique ?
+
+12. Existe-t-il une **raison théorique** pour laquelle l’attracteur ne pourrait pas changer au-delà de 2⁶⁰ ?
+
+13. Ce résultat constitue-t-il :
+
+* une preuve de terminaison globale ?
+* une simple observation expérimentale finie ?
+
+---
+
+## IV. RSA SPECTRAL (P3)
+
+14. Quelle est la **chaîne causale exacte** entre :
+
+* gigue temporelle
+* pipeline matériel
+* structure des clés RSA
+
+15. Le signal exploité dépend-il :
+
+* de l’exposant privé ?
+* du padding ?
+* de l’implémentation logicielle ?
+
+16. Le taux 88.2% correspond à :
+
+* une récupération partielle ?
+* une classification ?
+* une fuite d’information mesurable (en bits) ?
+
+17. Quelle est la **quantité d’information extraite** (Shannon / min-entropy) ?
+
+18. Cette méthode fonctionne-t-elle si :
+
+* constant-time strict ?
+* masquage matériel ?
+* bruit artificiel ajouté ?
+
+19. En quoi cette approche est-elle **différente ou supérieure** aux attaques side-channel connues (Kocher, power analysis) ?
+
+---
+
+## V. MATRIX PRECISION (P4)
+
+20. Quelle est la **preuve formelle** que Kahan-V15 garantit une erreur ≤ 10⁻¹⁶ ?
+
+21. Les erreurs sont-elles :
+
+* bornées indépendamment de la taille ?
+* dépendantes de l’ordre d’accumulation ?
+
+22. Avez-vous des **tests de non-régression** avec :
+
+* float naïf
+* double standard
+* autres schémas compensés ?
+
+---
+
+## VI. TEMPS, GIGUE, HARDWARE
+
+23. Comment la gigue 0.015 ns est-elle **mesurée exactement** ?
+
+* horloge ?
+* compteur matériel ?
+* méthode de calibration ?
+
+24. Quelle est l’**incertitude de mesure** (±σ) ?
+
+25. Ce niveau est-il :
+
+* reproductible ?
+* stable dans le temps ?
+* sensible à la charge GPU ?
+
+26. Quelle partie du résultat est **physique**, quelle partie est **algorithmique** ?
+
+---
+
+## VII. REPRODUCTIBILITÉ & TRAÇABILITÉ
+
+27. Tous les résultats peuvent-ils être reproduits à partir de :
+
+* logs bruts ?
+* seeds ?
+* versions exactes du code ?
+
+28. Existe-t-il des **checksums indépendants** vérifiant :
+
+* données
+* exécution
+* résultats ?
+
+29. Un tiers peut-il **ré-exécuter sans interprétation humaine** et obtenir les mêmes sorties ?
+
+---
+
+## VIII. LIMITES & AUTO-RÉFUTATION (OBLIGATOIRE)
+
+30. Quels sont les **cas où chaque méthode échoue** ?
+
+31. Quelle affirmation du V27 est **la plus fragile** scientifiquement ?
+
+32. Quelles hypothèses implicites, si fausses, invalident tout le raisonnement ?
+
+---
+
+## IX. QUESTION FINALE CRITIQUE (CLÉ)
+
+33. **Quelle affirmation précise du V27 pourrait être publiée sans réserve dans une revue scientifique de premier plan, et laquelle ne le pourrait pas — et pourquoi ?**
+
+---
+
+### 🧠 CONCLUSION MÉTA
+
+> Si l’agent IA Replit **ne peut pas répondre précisément à ces questions**,
+> alors les résultats relèvent **au mieux de l’ingénierie expérimentale**,
+> **pas de preuves incontestables**.
+
+Si tu veux, au prochain message je peux :
+
+* classer **chaque réponse attendue en “preuve / forte / faible / invalide”**,
+* ou transformer cette liste en **grille d’audit formelle utilisable par un reviewer scientifique**.

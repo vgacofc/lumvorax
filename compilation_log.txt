@@ -1,0 +1,60 @@
+mkdir -p obj/lum obj/vorax obj/parser obj/binary obj/logger obj/optimization obj/parallel obj/metrics obj/crypto obj/persistence
+clang -Wall -Wextra -std=c99 -O2 -g -D_GNU_SOURCE -c src/main.c -o obj/main.o
+In file included from src/main.c:12:
+src/metrics/performance_metrics.h:5:9: warning: '_GNU_SOURCE' macro redefined [-Wmacro-redefined]
+#define _GNU_SOURCE
+        ^
+<command line>:1:9: note: previous definition is here
+#define _GNU_SOURCE 1
+        ^
+1 warning generated.
+clang -Wall -Wextra -std=c99 -O2 -g -D_GNU_SOURCE -c src/lum/lum_core.c -o obj/lum/lum_core.o
+clang -Wall -Wextra -std=c99 -O2 -g -D_GNU_SOURCE -c src/vorax/vorax_operations.c -o obj/vorax/vorax_operations.o
+clang -Wall -Wextra -std=c99 -O2 -g -D_GNU_SOURCE -c src/parser/vorax_parser.c -o obj/parser/vorax_parser.o
+clang -Wall -Wextra -std=c99 -O2 -g -D_GNU_SOURCE -c src/binary/binary_lum_converter.c -o obj/binary/binary_lum_converter.o
+clang -Wall -Wextra -std=c99 -O2 -g -D_GNU_SOURCE -c src/logger/lum_logger.c -o obj/logger/lum_logger.o
+clang -Wall -Wextra -std=c99 -O2 -g -D_GNU_SOURCE -c src/optimization/memory_optimizer.c -o obj/optimization/memory_optimizer.o
+src/optimization/memory_optimizer.c:79:62: warning: unused parameter 'size' [-Wunused-parameter]
+bool memory_pool_free(memory_pool_t* pool, void* ptr, size_t size) {
+                                                             ^
+1 warning generated.
+clang -Wall -Wextra -std=c99 -O2 -g -D_GNU_SOURCE -c src/parallel/parallel_processor.c -o obj/parallel/parallel_processor.o -pthread
+src/parallel/parallel_processor.c:2:9: warning: '_GNU_SOURCE' macro redefined [-Wmacro-redefined]
+#define _GNU_SOURCE
+        ^
+<command line>:1:9: note: previous definition is here
+#define _GNU_SOURCE 1
+        ^
+src/parallel/parallel_processor.c:433:58: warning: unused parameter 'threads' [-Wunused-parameter]
+double parallel_reduce_lums(lum_t** lums, int count, int threads) {
+                                                         ^
+2 warnings generated.
+clang -Wall -Wextra -std=c99 -O2 -g -D_GNU_SOURCE -c src/metrics/performance_metrics.c -o obj/metrics/performance_metrics.o
+src/metrics/performance_metrics.c:2:9: warning: '_GNU_SOURCE' macro redefined [-Wmacro-redefined]
+#define _GNU_SOURCE
+        ^
+<command line>:1:9: note: previous definition is here
+#define _GNU_SOURCE 1
+        ^
+src/metrics/performance_metrics.c:439:30: warning: absolute value function 'abs' given an argument of type 'long' but has parameter of type 'int' which may cause truncation of value [-Wabsolute-value]
+    footprint->stack_usage = abs((char*)initial_stack_ptr - (char*)&stack_var);
+                             ^
+src/metrics/performance_metrics.c:439:30: note: use function 'labs' instead
+    footprint->stack_usage = abs((char*)initial_stack_ptr - (char*)&stack_var);
+                             ^~~
+                             labs
+src/metrics/performance_metrics.c:455:78: warning: unused parameter 'size' [-Wunused-parameter]
+void memory_footprint_track_allocation(memory_footprint_t* footprint, size_t size) {
+                                                                             ^
+src/metrics/performance_metrics.c:460:80: warning: unused parameter 'size' [-Wunused-parameter]
+void memory_footprint_track_deallocation(memory_footprint_t* footprint, size_t size) {
+                                                                               ^
+src/metrics/performance_metrics.c:17:16: warning: unused variable 'last_cpu_clock' [-Wunused-variable]
+static clock_t last_cpu_clock = 0;
+               ^
+5 warnings generated.
+clang -Wall -Wextra -std=c99 -O2 -g -D_GNU_SOURCE -c src/crypto/crypto_validator.c -o obj/crypto/crypto_validator.o -lm
+clang-14: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+clang -Wall -Wextra -std=c99 -O2 -g -D_GNU_SOURCE -c src/persistence/data_persistence.c -o obj/persistence/data_persistence.o
+mkdir -p bin
+clang obj/main.o obj/lum/lum_core.o obj/vorax/vorax_operations.o obj/parser/vorax_parser.o obj/binary/binary_lum_converter.o obj/logger/lum_logger.o obj/optimization/memory_optimizer.o obj/parallel/parallel_processor.o obj/metrics/performance_metrics.o obj/crypto/crypto_validator.o obj/persistence/data_persistence.o -o bin/lum_vorax -lpthread -lm

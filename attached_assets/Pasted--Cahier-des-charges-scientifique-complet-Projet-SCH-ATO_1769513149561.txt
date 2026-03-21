@@ -1,0 +1,174 @@
+# 📘 Cahier des charges scientifique complet
+
+## Projet SCH-ATOM – Phase C-3 & Phase D
+
+**Projet :** System Cerebral Human (SCH)
+
+**Branche :** C/D – Reconstruction atomistique
+
+**Objectif global :** Finaliser l’exploration *sans abstraction* de la dynamique neuronale atomique, identifier les invariants transitoires causaux, et formaliser le passage rigoureux de la réalité atomique brute vers les niveaux biophysiques (A) et fonctionnels (B).
+
+---
+
+# 🧩 PARTIE I — PHASE C-3.1 : CARTOGRAPHIE DES INVARIANTS ATOMIQUES
+
+## 1. Objectif scientifique (C-3.1)
+
+Établir une **classification exhaustive et falsifiable** des invariants atomiques transitoires apparaissant dans la simulation SCH-ATOM, sans aucun mécanisme de stabilisation numérique.
+
+Un invariant est défini comme :
+
+> une configuration atomique locale non aléatoire, transitoirement cohérente, reproductible statistiquement, et causalement nécessaire à l’émergence de motifs de niveau supérieur.
+
+---
+
+## 2. Hypothèses testées
+
+* H1 : Il existe plusieurs **classes distinctes** d’invariants atomiques, et non un bruit homogène.
+* H2 : Certaines classes sont **nécessaires** à l’émergence de structures neuronales mesoscopiques.
+* H3 : Ces invariants disparaissent sous falsification ciblée.
+
+---
+
+## 3. Méthodologie imposée
+
+### 3.1 Modélisation
+
+* Simulation atomique intégrale (H, C, N, O, ions).
+* Dynamique stochastique hors équilibre.
+* Aucune compartimentation.
+* Aucun thermostat numérique.
+* Aucune correction ou renormalisation.
+
+### 3.2 Détection
+
+* Détection automatique des événements sub-nanométriques (< 0.3 nm).
+* Fenêtre temporelle femtoseconde (< 10 fs).
+* Clustering spatial + temporel.
+
+### 3.3 Classification
+
+Chaque événement détecté doit être classé selon :
+
+* distance interatomique
+* durée de cohérence
+* type d’interaction (van der Waals, hydrogène, ionique)
+* énergie locale dissipée
+* fréquence d’apparition
+
+---
+
+## 4. Résultats attendus (C-3.1)
+
+* Typologie complète des invariants atomiques.
+* Distribution statistique par classe.
+* Séparation claire entre :
+
+  * **Invariants forts** (structurels, nécessaires)
+  * **Événements uniques** (fluctuations non causales)
+
+---
+
+## 5. Fichiers obligatoires générés (C-3.1)
+
+* `logs_AIMO3/sch/atom/C-3.1_transient_events.log`
+* `logs_AIMO3/sch/atom/C-3.1_invariants_classified.json`
+* `RAPPORT_IAM03/SCH_ATOM/C-3.1_INVARIANTS_MAPPING.md`
+* `RAPPORT_IAM03/SCH_ATOM/C-3.1_STATISTICAL_ANALYSIS.md`
+
+Chaque fichier doit inclure :
+
+* horodatage UTC
+* checksum d’intégrité
+* signature de fin d’exécution
+
+---
+
+## 6. Critères de validation (C-3.1)
+
+* Reproductibilité statistique (> 3 runs indépendants).
+* Robustesse face au bruit thermique.
+* Effondrement partiel sous suppression ciblée (préparation Phase D).
+
+---
+
+# 🧠 PARTIE II — PHASE D.1 : FALSIFICATION ET PASSAGE D’ÉCHELLE
+
+## 1. Objectif scientifique (D.1)
+
+Tester **causalement** le rôle des invariants atomiques identifiés en Phase C-3 et formaliser le passage entre :
+
+> réalité atomique → biophysique (A) → fonction computationnelle (B)
+
+---
+
+## 2. Hypothèses testées
+
+* H4 : La fonction neuronale dépend causalement d’un sous-ensemble d’invariants atomiques.
+* H5 : La suppression ciblée de ces invariants entraîne l’effondrement des motifs A et B.
+* H6 : La stabilité neuronale est une propriété émergente statistique, non physique.
+
+---
+
+## 3. Méthodologie imposée
+
+### 3.1 Mode Falsification
+
+* Activation explicite du `FALSIFICATION_MODE`.
+* Suppression ciblée et paramétrée de classes d’invariants.
+* Aucun autre paramètre modifié.
+
+### 3.2 Tests croisés
+
+Pour chaque suppression :
+
+* mesurer impact sur motifs biophysiques (A)
+* mesurer impact sur performance algorithmique (B)
+* mesurer persistance ou disparition des motifs atomiques restants
+
+---
+
+## 4. Résultats attendus (D.1)
+
+* Démonstration expérimentale que :
+
+  * la fonction neuronale **échoue sans instabilité contrôlée**
+  * la stabilité détruit l’émergence fonctionnelle
+* Identification des invariants **nécessaires vs contingents**
+
+---
+
+## 5. Fichiers obligatoires générés (D.1)
+
+* `logs_AIMO3/sch/atom/D.1_falsification_events.log`
+* `logs_AIMO3/sch/atom/D.1_collapse_metrics.json`
+* `RAPPORT_IAM03/SCH_ATOM/D.1_FALSIFICATION_RESULTS.md`
+* `RAPPORT_IAM03/SCH_ATOM/D.1_SCALE_BRIDGING_THEORY.md`
+
+---
+
+## 6. Critères de validation (D.1)
+
+* Effondrement reproductible sous falsification ciblée.
+* Absence d’effondrement hors suppression causale.
+* Traçabilité forensique complète.
+
+---
+
+# 🧾 PROMPT OPÉRATIONNEL GLOBAL (C-3 + D)
+
+> Exécuter SCH-ATOM sans aucune abstraction ni stabilisation.
+> Détecter, classifier et cartographier tous les invariants atomiques transitoires.
+> Tester causalement leur nécessité par falsification ciblée.
+> Générer exclusivement des résultats bruts, horodatés, traçables et non corrigés.
+> Toute convergence artificielle invalide l’exécution.
+
+---
+
+## 📌 Conclusion
+
+Ce cahier de charges définit **le premier programme expérimental complet** visant à établir que la computation neuronale est un **régime dissipatif fondé sur l’exploitation d’instabilités atomiques transitoires**, et non sur un substrat stable.
+
+**Aucune étape ne peut être omise sans invalider la thèse.**
+
+Me

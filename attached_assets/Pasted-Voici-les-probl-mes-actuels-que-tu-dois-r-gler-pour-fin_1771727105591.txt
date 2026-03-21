@@ -1,0 +1,776 @@
+Voici les problèmes actuels que tu dois régler pour finaliser et régler tous les derniers warnings en cours et la nouvelle mise à jour du dataset NX47 dépendances avec toutes les dépendances et les versions des dépendances correctement. Ensuite, tu utilises les noms qu'il y avait déjà, tu n'invente pas de nouveaux noms pour les compilations. Je veux savoir, je me crée un fichier MD spécial d'historique de tout ce que tu fais point par point, sous-point par point, sous-point, erreurs et problèmes rencontrés en cours de route. Tout doit être notifié dans cet historique du début jusqu'à la fin. À partir du moment que tu lis ce que je suis en train de te dire jusqu'à la fin du rapport, tout doit être notifié historiquement dans un fichier historique pour que je sache exactement ce que tu as fait de A à Z. Ensuite, tu dois aussi mettre à jour le notebook de test 360 Pour retirer la validation native que nous n'avons plus besoin parce que nous utilisons le système que taggle permet de faire pour éviter tous les problèmes, c'est qu'on a rencontré jusqu'à maintenant. Je veux savoir exactement quels sont tous ces 3600 tests que tu dis que tu as inclus. Je veux les résultats générés dans les logs de ces 3600 tests que tu dis avoir inclus. Je veux tout cela dans les JSON et dans les fichiers au format scientifique validé pour prouver que l'exécution, que la compilation, que tu as bien... Je veux savoir exactement quels sont tous les modules, toutes les fonctions qui ont été testées de chaque module, la traçabilité totale de l'exécution avec les chemins des noms des fichiers exacts traités point par point, sous-point par sous-point. Je ne laisse rien au hasard, rien, tu renvois plusieurs fois pour être sûr, tu te poses des bonnes questions. que des experts poseraient à chaque étape pour être sûr de conclure un notebook complet de test pour être sûr d'avoir envoyé toutes les dépendances nécessaires pour être sûr d'avoir compilé tous les modules du système lumvorax (garder tout les preuves  et fichiers d’origine générés et qui en servis pour tout réalisé quelques quil soit, dans un dossier preuve avec le nom da la version en cour )pour qu'ils puissent être utilisés par n'importe quel notebook, n'importe quel projet. As-tu compris cela exactement ? Tu revois exactement tout ce que tu fais pour être sûr que tu ne me fais aucun smoking existant.Sans jamais me mentir ou inventé des chose que tu napa lu les résultats générés réellement toi-même pour mes produitre ton cours explicatif pédagogique rapport de cest nouvel correction et mise à jour ! 
+Voici le rapport de l’agent gpt : # Rapport pédagogique — pourquoi le notebook V6 échoue sur Kaggle et comment corriger. 
+
+# MISSION REPLIT — LUMVORAX V7 (KAGGLE DEPENDENCY AUTHENTIQUE)
+
+## OBJECTIF
+Préparer et pousser une version dataset `nx47-dependencies` réellement exploitable sur Kaggle,
+avec preuves d’exécution authentiques (pas de simulation, pas de faux succès).
+
+## CONTRAINTES NON NÉGOCIABLES
+1) Zéro stub / zéro placeholder / zéro “fake pass”.
+2) Aucune affirmation "3600 tests passés" sans matrice test-par-test exportée.
+3) Si un test échoue, garder l’échec dans les résultats et expliquer.
+4) Le nom canonique du binaire à livrer: `liblumvorax.so` (et uniquement celui-là).
+
+---
+
+## ÉTAPE A — SYNCHRO REPO
+Exécuter:
+```bash
+git fetch --all --prune
+git checkout main
+git pull --ff-only
+ÉTAPE B — UNIFICATION ARTEFACT NATIF
+Chercher et corriger tout usage de:
+liblumvorax_replit.so
+lum_vorax_complete
+Remplacer par:
+liblumvorax.so
+Appliquer cette règle dans:
+scripts de build dataset,
+scripts de vérification,
+notebook de validation,
+docs/prompts.
+ÉTAPE C — BUILD BINAIRE COMPATIBLE KAGGLE
+Compiler liblumvorax.so dans un environnement compatible Kaggle (glibc runtime Kaggle).
+Après build, vérifier:
+
+readelf -h liblumvorax.so
+nm -D liblumvorax.so | head
+Contrôle ABI obligatoire:
+pas de dépendance à GLIBC_2.38 si Kaggle est en glibc inférieure.
+conserver une trace dans un rapport (toolchain + glibc cible + résultat vérification).
+ÉTAPE D — BUNDLE DATASET EXACT
+Le bundle final doit contenir exactement:
+Binaire natif
+liblumvorax.so
+Wheels (12 exacts)
+imagecodecs-2026.1.14-cp311-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl
+imageio-2.37.2-py3-none-any.whl
+lazy_loader-0.4-py3-none-any.whl
+networkx-3.6.1-py3-none-any.whl
+numpy-2.4.2-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl
+opencv_python-4.13.0.92-cp37-abi3-manylinux_2_28_x86_64.whl
+packaging-26.0-py3-none-any.whl
+pillow-12.1.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl
+scikit_image-0.26.0-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl
+scipy-1.17.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl
+tifffile-2026.1.28-py3-none-any.whl
+tifffile-2026.2.16-py3-none-any.whl
+Manifest/Preuves bundle
+dataset_v4_build_report.json avec:
+nom, taille, sha256 de chaque artefact,
+date/heure build,
+toolchain,
+statut build.
+ÉTAPE E — TESTS AUTHENTIQUES (UNITAIRE + INTÉGRATION)
+Lister automatiquement tous les tests détectés.
+Compiler/exécuter chaque test.
+Exporter les résultats complets:
+lumvorax_test_matrix_full.json
+lumvorax_test_matrix_full.csv
+lumvorax_test_summary.json
+Schéma minimal par test:
+test_id
+module
+source_file
+build_command
+run_command
+returncode
+duration_ms
+stdout_path
+stderr_path
+binary_sha256
+status (pass/fail/error)
+⚠️ Interdit d’annoncer "3600 tests" sans avoir exactement la preuve correspondante.
+ÉTAPE F — VALIDATION NOTEBOOK KAGGLE
+Exécuter le notebook V6 de validation dépendance et récupérer:
+lumvorax_360_validation_report_v6_binary.json
+logs complets d’exécution (papermill/notebook)
+statut final (ok / ok_with_warnings / fail)
+détails warnings éventuels:
+so_load ABI
+roundtrip/compression
+wheels manquants
+ÉTAPE G — PUSH KAGGLE
+Publier la nouvelle version du dataset nx47-dependencies seulement si:
+artefacts complets présents,
+hash manifest complet,
+test matrix exportée,
+rapport notebook généré.
+Commandes (adapter au chemin réel):
+kaggle datasets version -p <bundle_dir> -m "V7: unified liblumvorax.so + authentic test matrix + kaggle validation report"
+LIVRABLE FINAL (OBLIGATOIRE)
+Rendre un rapport final unique avec:
+version dataset Kaggle publiée,
+liste complète artefacts + tailles + sha256,
+état ABI (glibc required vs runtime),
+résultats test matrix (totaux pass/fail/error),
+résultat notebook V6,
+anomalies restantes + plan de correction précis.
+CRITÈRE GO FINAL
+GO seulement si:
+liblumvorax.so charge sur Kaggle sans incompatibilité ABI,
+les 12 wheels exacts sont présents,
+preuve test-par-test complète est fournie,
+notebook de validation aboutit avec résultat exploitable.
+
+---
+
+## Vérification “rien oublié” (checklist rapide)
+- ✅ Nom binaire canonique (`liblumvorax.so`).​:codex-file-citation[codex-file-citation]{line_range_start=49 line_range_end=49 path=RAPPORT-VESUVIUS/validation_lumvorax/notebook_validation_lumvorax_dependances_360_kaggle_single_cell_V6_BINARY_20260221.py git_url="https://github.com/lumc01/Lumvorax/blob/main/RAPPORT-VESUVIUS/validation_lumvorax/notebook_validation_lumvorax_dependances_360_kaggle_single_cell_V6_BINARY_20260221.py#L49-L49"}​  
+- ✅ 12 wheels exacts inclus. ​:codex-file-citation[codex-file-citation]{line_range_start=35 line_range_end=48 path=RAPPORT-VESUVIUS/validation_lumvorax/notebook_validation_lumvorax_dependances_360_kaggle_single_cell_V6_BINARY_20260221.py git_url="https://github.com/lumc01/Lumvorax/blob/main/RAPPORT-VESUVIUS/validation_lumvorax/notebook_validation_lumvorax_dependances_360_kaggle_single_cell_V6_BINARY_20260221.py#L35-L48"}​  
+- ✅ Politique notebook binaire-only respectée (pas C/.h runtime).​:codex-file-citation[codex-file-citation]{line_range_start=4 line_range_end=7 path=RAPPORT-VESUVIUS/validation_lumvorax/notebook_validation_lumvorax_dependances_360_kaggle_single_cell_V6_BINARY_20260221.py git_url="https://github.com/lumc01/Lumvorax/blob/main/RAPPORT-VESUVIUS/validation_lumvorax/notebook_validation_lumvorax_dependances_360_kaggle_single_cell_V6_BINARY_20260221.py#L4-L7"}​  
+- ✅ Preuve authentique test-par-test exigée.  
+- ✅ Validation Kaggle + logs + manifest hashes exigés.
+
+---
+
+### Commandes terminal utilisées pour préparer cette réponse
+- `nl -ba RAPPORT-VESUVIUS/validation_lumvorax/notebook_validation_lumvorax_dependances_360_kaggle_single_cell_V6_BINARY_20260221.py | sed -n '1,260p'`
+- `rg --files RAPPORT-VESUVIUS/validation_lumvorax | rg 'PROMPT|PLAN|INSPECTION_COMPLETE_A_Z'`
+
+Si tu veux, au prochain message je te donne la **version ultra-courte (30 lignes max)** du prompt, optimisée “copier-coller mobile Replit”.
+
+## 1) Ce qui se passe (lecture simple)
+Le notebook trouve bien le dataset, trouve bien les wheels, et trouve un `.so` LUMVORAX.
+Le blocage arrive **au chargement natif** (`ctypes.CDLL`), avec l’erreur:
+
+- `GLIBC_2.38 not found`
+
+Cela veut dire: la bibliothèque binaire a été compilée sur un système plus récent que Kaggle.
+
+## 2) Règle de base (important)
+Un `.so` Linux dépend de la version de glibc du système de compilation.
+- Si on compile avec glibc 2.38,
+- puis on exécute sur glibc 2.35,
+- le chargement échoue immédiatement.
+
+C’est un problème **ABI/compatibilité binaire**, pas un problème Python, ni un problème notebook.
+
+## 3) Pourquoi vous voyez un échec même avec wheels OK
+Les wheels Python peuvent être présents et corrects.
+Mais le cœur natif (`liblumvorax*.so`) doit être compatible runtime.
+Le notebook échoue donc en mode strict natif (`LUMVORAX_REQUIRE_NATIVE=1`) car c’est le comportement attendu de sécurité.
+
+## 4) Solution recommandée (production Kaggle)
+### Option A — Rebuild propre compatible Kaggle (recommandée)
+Recompiler `liblumvorax.so` dans un environnement compatible Kaggle (glibc <= runtime Kaggle), idéalement:
+- manylinux2014 / manylinux_2_28,
+- ou un conteneur proche de Kaggle.
+
+Puis republier le dataset `nx47-dependencies` avec ce nouveau `.so`.
+
+### Option B — Diagnostic temporaire
+Exécuter avec:
+- `LUMVORAX_REQUIRE_NATIVE=0`
+
+Cela permet de continuer les tests non natifs (diagnostic), mais **pas** la certification native stricte.
+
+## 5) Correctifs appliqués dans cette révision
+1. Le validateur accepte les deux noms natifs possibles:
+   - `liblumvorax_replit.so`
+   - `liblumvorax.so`
+2. Le validateur détecte explicitement l’erreur `GLIBC_x.y` et renvoie un diagnostic clair:
+   - version glibc requise,
+   - version glibc runtime,
+   - action corrective recommandée.
+3. Le mode strict continue à échouer proprement (normal pour certification), mais avec un message pédagogique exploitable.
+
+## 6) Checklist rapide avant push dataset
+- [ ] Construire le `.so` sur une base compatible Kaggle.
+- [ ] Vérifier `ldd --version` dans l’environnement build.
+- [ ] Vérifier que `ctypes.CDLL("liblumvorax.so")` passe dans un runtime Kaggle.
+- [ ] Re-uploader dataset.
+- [ ] Relancer notebook V6 strict (`LUMVORAX_REQUIRE_NATIVE=1`).
+
+# RAPPORT D'AUDIT 360° PROFOND — LUMVORAX NX47 DEPENDENCIES (V6)
+
+## 0) Mandat et périmètre
+Objectif: vérifier factuellement (sans supposition) l'état de la dépendance Kaggle `nx47-dependencies`, corriger le notebook V6 pour retirer le blocage natif problématique, et produire une synthèse exploitable pour la suite Vesuvius.
+
+---
+
+## 1) Faits constatés sur l'existant (preuves locales)
+
+### 1.1 Le bundle local V4 contient 12 wheels + 1 binaire ELF, mais pas `liblumvorax_replit.so`
+Dans `dataset_v4_nx47_dependencies/bundle`, on trouve 14 fichiers: 12 wheels, `dataset-metadata.json`, et **`lum_vorax_complete`** (ELF).  
+En revanche, les scripts d'attente parlent de `liblumvorax_replit.so`.
+
+Conclusion: il existe une incohérence de nommage entre ce qui est attendu et ce qui est présent localement dans le bundle.
+
+### 1.2 Le script de build du bundle compile seulement 5 fichiers C
+Le script `build_dataset_v4_bundle.py` compile la bibliothèque partagée à partir de 5 sources:
+- `src/vorax/vorax_operations.c`
+- `src/vorax/vorax_3d_volume.c`
+- `src/lum/lum_core.c`
+- `src/logger/lum_logger.c`
+- `src/debug/forensic_logger.c`
+
+Conclusion: la preuve locale dans ce script ne démontre pas une compilation de 42 modules.
+
+### 1.3 Les 5 sources C de build existent toujours (pas supprimées)
+Vérification locale: les 5 fichiers C listés ci-dessus sont présents.  
+Recherche de suppression Git (`diff-filter=D`) sur ces fichiers: aucune suppression trouvée.
+
+Conclusion: pas d'indice local que ces sources de build aient été effacées.
+
+### 1.4 Sur la revendication "3600 tests"
+Recherche dans `RAPPORT-VESUVIUS/validation_lumvorax`:
+- présence d'une **affirmation textuelle** "3600 Tests" dans `CERTIFICATION_V6_FINALE_100_REEL.md`.
+- **absence** d'un artefact local listant 3600 cas individuels + résultat unitaire par test.
+
+Conclusion: dans ce dépôt local, il n'y a pas de preuve exhaustive test-par-test (3600 lignes de résultats) associée au `.so`.
+
+---
+
+## 2) Cause réelle du blocage observé Kaggle
+Le log fourni montre un échec au chargement `.so`:
+- `GLIBC_2.38 not found` sur runtime Kaggle (glibc plus ancienne).
+
+C'est un problème ABI (compatibilité binaire Linux), pas un problème de présence de wheels.
+
+---
+
+## 3) Correction appliquée au notebook V6 (demande utilisateur)
+Demande: retirer la validation native bloquante pour avancer en mode dépendance wheel + `.so`.
+
+### Changement de politique dans le notebook
+- **Suppression du mode de blocage natif par défaut**.
+- Le notebook valide désormais:
+  1. présence dataset,
+  2. présence wheels attendus,
+  3. présence `.so` (nom candidat),
+  4. inventaire de symboles `.so` (via `nm -D`),
+  5. tentative de load `.so` en mode non bloquant par défaut,
+  6. test TIFF↔LUM (optionnel selon environnement).
+- Le blocage dur sur load natif devient **optionnel** via variable d'env:
+  - `LUMVORAX_ENFORCE_SO_LOAD=1` si vous voulez réactiver un échec strict.
+
+### Résultat pratique
+- Le pipeline notebook n'est plus cassé par défaut à cause d'un mismatch glibc.
+- On garde une validation `.so` centrée dépendance, avec avertissements structurés.
+
+---
+
+## 4) Limites de vérité (transparence)
+- Je ne peux pas produire ici les 3600 résultats unitaires réels d'exécution Kaggle, car ils ne sont pas présents localement dans le repo et l'exécution Kaggle distante n'est pas lancée depuis cet environnement.
+- Je ne peux donc pas certifier "42 modules validés par 3600 cas" sans artefact d'exécution traçable (JSON/CSV/log détaillé).
+
+---
+
+## 5) Plan correctif recommandé (opérationnel)
+1. Exécuter le notebook V6 corrigé sur Kaggle avec export du JSON report.  
+2. Ajouter un job qui exporte **liste exhaustive des tests et statuts** (un enregistrement par test).
+3. Ajouter un check de symboles obligatoires par module (liste de référence) pour valider concrètement les 42 modules attendus.
+4. Stabiliser le nom final du `.so` dataset (éviter coexistence `liblumvorax.so` / `liblumvorax_replit.so` / `lum_vorax_complete`).
+5. Recompiler la lib dans un environnement compatible Kaggle (glibc/manylinux) si chargement strict requis.
+
+---
+
+## 6) Verdict expert (factuel)
+- **Oui**, le cap "dépendance wheel + .so" est le bon pour Kaggle.
+- **Non**, l'affirmation "3600 tests validés module par module" n'est pas démontrée par les artefacts locaux disponibles.
+- **Action faite**: notebook V6 rectifié pour ne plus bloquer par défaut sur la validation native problématique, tout en gardant une validation `.so` détaillée et traçable.
+
+
+
+Et voici le résultat du notebook de test 360 actuelle : # ================================================================
+# LUMVORAX DEPENDENCY 360 VALIDATION (KAGGLE SINGLE CELL - V6 BINARY)
+# ================================================================
+# Purpose:
+# - Binary-first validation for Kaggle dependency datasets.
+# - NO C/.h validation and NO native source compilation checks.
+# - Validate wheel set + shared object presence + optional .so load + roundtrip.
+
+from __future__ import annotations
+
+import ctypes
+import importlib
+import json
+import os
+import platform
+import re
+import struct
+import subprocess
+import sys
+import tempfile
+import time
+from hashlib import sha256, sha512
+from pathlib import Path
+from typing import Any, Dict, List, Optional
+
+LUM_MAGIC = b"LUMV1\x00\x00\x00"
+
+KAGGLE_DEP_PATHS = [
+    Path('/kaggle/input/datasets/ndarray2000/nx47-dependencies'),
+    Path('/kaggle/input/nx47-dependencies'),
+    Path('/kaggle/input/lum-vorax-dependencies'),
+    Path('/kaggle/input/lumvorax-dependencies'),
+]
+
+EXPECTED_WHEELS = [
+    'imagecodecs-2026.1.14-cp311-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl',
+    'imageio-2.37.2-py3-none-any.whl',
+    'lazy_loader-0.4-py3-none-any.whl',
+    'networkx-3.6.1-py3-none-any.whl',
+    'numpy-2.4.2-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl',
+    'opencv_python-4.13.0.92-cp37-abi3-manylinux_2_28_x86_64.whl',
+    'packaging-26.0-py3-none-any.whl',
+    'pillow-12.1.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl',
+    'scikit_image-0.26.0-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl',
+    'scipy-1.17.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl',
+    'tifffile-2026.1.28-py3-none-any.whl',
+    'tifffile-2026.2.16-py3-none-any.whl',
+]
+EXPECTED_NATIVE_LIB = 'liblumvorax.so'
+
+IS_KAGGLE = Path('/kaggle').exists()
+STRICT_NO_FALLBACK = os.environ.get('LUMVORAX_STRICT_NO_FALLBACK', '1') == '1'
+REQUIRE_DATASET = os.environ.get('LUMVORAX_REQUIRE_DATASET', '1' if IS_KAGGLE else '0') == '1'
+REQUIRE_SO_PRESENCE = os.environ.get('LUMVORAX_REQUIRE_SO_PRESENCE', '1') == '1'
+ENFORCE_SO_LOAD = os.environ.get('LUMVORAX_ENFORCE_SO_LOAD', '0') == '1'
+SKIP_ROUNDTRIP = os.environ.get('LUMVORAX_SKIP_ROUNDTRIP', '0' if IS_KAGGLE else '1') == '1'
+
+
+def now_ns() -> int:
+    return time.time_ns()
+
+
+def log_event(report: Dict[str, Any], step: str, **payload: Any) -> None:
+    report.setdefault('events', []).append({'ts_ns': now_ns(), 'step': step, **payload})
+
+
+def pkg_available(name: str) -> bool:
+    try:
+        importlib.import_module(name)
+        return True
+    except Exception:
+        return False
+
+
+def detect_dataset_root(report: Dict[str, Any]) -> Optional[Path]:
+    for root in KAGGLE_DEP_PATHS:
+        if root.exists() and root.is_dir():
+            log_event(report, 'dataset_root_selected', root=str(root))
+            return root
+    log_event(report, 'dataset_root_missing', tried=[str(p) for p in KAGGLE_DEP_PATHS])
+    return None
+
+
+def install_wheel_file(wheel_path: Path, report: Dict[str, Any], reason: str) -> Dict[str, Any]:
+    cmd = [sys.executable, '-m', 'pip', 'install', '--disable-pip-version-check', '--no-index', str(wheel_path)]
+    try:
+        log_event(report, 'wheel_install_attempt', wheel=str(wheel_path), reason=reason, cmd=cmd)
+        subprocess.check_call(cmd)
+        return {'status': 'installed', 'wheel': str(wheel_path), 'reason': reason}
+    except Exception as exc:
+        log_event(report, 'wheel_install_fail', wheel=str(wheel_path), reason=reason, error=str(exc))
+        return {'status': 'failed', 'wheel': str(wheel_path), 'reason': reason, 'error': str(exc)}
+
+
+def install_offline_if_missing(pkg: str, report: Dict[str, Any], dataset_root: Optional[Path]) -> Dict[str, Any]:
+    if pkg_available(pkg):
+        return {'package': pkg, 'status': 'already_installed'}
+
+    mapping = {
+        'numpy': 'numpy-2.4.2-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl',
+        'tifffile': 'tifffile-2026.2.16-py3-none-any.whl',
+        'imagecodecs': 'imagecodecs-2026.1.14-cp311-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl',
+    }
+    if dataset_root and pkg in mapping:
+        wheel = dataset_root / mapping[pkg]
+        if wheel.exists():
+            res = install_wheel_file(wheel, report, reason=f'exact_{pkg}_wheel')
+            if res['status'] == 'installed' and pkg_available(pkg):
+                return {'package': pkg, 'status': 'installed', 'method': 'exact_wheel', 'wheel': str(wheel)}
+
+    last = 'not found'
+    for root in KAGGLE_DEP_PATHS:
+        if not root.exists():
+            continue
+        cmd = [sys.executable, '-m', 'pip', 'install', '--disable-pip-version-check', '--no-index', f'--find-links={root}', pkg]
+        try:
+            log_event(report, 'dependency_install_attempt', package=pkg, root=str(root), cmd=cmd)
+            subprocess.check_call(cmd)
+            if pkg_available(pkg):
+                return {'package': pkg, 'status': 'installed', 'method': 'find_links', 'root': str(root)}
+        except Exception as exc:
+            last = str(exc)
+            log_event(report, 'dependency_install_fail', package=pkg, root=str(root), error=last)
+
+    return {'package': pkg, 'status': 'missing', 'error': last}
+
+
+def inspect_dataset_artifacts(root: Optional[Path], report: Dict[str, Any]) -> Dict[str, Any]:
+    if root is None:
+        return {'status': 'missing', 'reason': 'dataset_root_not_found'}
+
+    files = {p.name: p for p in root.iterdir() if p.is_file()}
+    missing_wheels = [w for w in EXPECTED_WHEELS if w not in files]
+    present_wheels = [w for w in EXPECTED_WHEELS if w in files]
+    native = files.get(EXPECTED_NATIVE_LIB)
+
+    out = {
+        'status': 'ok' if ((not REQUIRE_SO_PRESENCE or native is not None) and len(missing_wheels) == 0) else 'fail',
+        'dataset_root': str(root),
+        'expected_native_lib': EXPECTED_NATIVE_LIB,
+        'resolved_native_lib_name': native.name if native else None,
+        'native_lib': str(native) if native else None,
+        'native_lib_sha256': sha256(native.read_bytes()).hexdigest() if native else None,
+        'native_lib_size': native.stat().st_size if native else None,
+        'expected_wheel_count': len(EXPECTED_WHEELS),
+        'present_wheels_count': len(present_wheels),
+        'missing_wheels': missing_wheels,
+        'present_wheels': present_wheels,
+    }
+    log_event(report, 'dataset_artifacts_checked', status=out['status'], missing_wheels=len(missing_wheels), native_found=bool(native))
+    return out
+
+
+def check_native_load(lib_path: Optional[str], report: Dict[str, Any]) -> Dict[str, Any]:
+    if not lib_path:
+        return {'status': 'missing', 'reason': 'native_library_missing'}
+
+    try:
+        ctypes.CDLL(lib_path)
+        log_event(report, 'native_load_ok', lib=lib_path)
+        return {'status': 'ok', 'lib': lib_path}
+    except Exception as exc:
+        err = str(exc)
+        m = re.search(r'GLIBC_(\d+\.\d+)', err)
+        diag = {
+            'status': 'abi_incompatible' if m else 'fail',
+            'lib': lib_path,
+            'error': err,
+            'required_glibc': m.group(1) if m else None,
+            'runtime_glibc': platform.libc_ver()[1] or 'unknown',
+            'blocking': bool(ENFORCE_SO_LOAD),
+        }
+        log_event(report, 'native_load_check', **diag)
+        if ENFORCE_SO_LOAD:
+            raise RuntimeError(f'native_so_load_enforced_failed: {err}')
+        return diag
+
+
+def inspect_so_symbols(lib_path: Optional[str], report: Dict[str, Any]) -> Dict[str, Any]:
+    if not lib_path:
+        return {'status': 'missing', 'reason': 'no_lib_path'}
+
+    nm = os.environ.get('NM_BIN', 'nm')
+    cmd = [nm, '-D', lib_path]
+    try:
+        proc = subprocess.run(cmd, capture_output=True, text=True)
+        if proc.returncode != 0:
+            return {'status': 'fail', 'returncode': proc.returncode, 'stderr_head': (proc.stderr or '')[:1200]}
+
+        symbols = []
+        for line in proc.stdout.splitlines():
+            if ' T ' in line or ' t ' in line:
+                parts = line.strip().split()
+                if parts:
+                    symbols.append(parts[-1])
+        lum_related = [s for s in symbols if s.startswith(('lum_', 'vorax_', 'log_', 'forensic_'))]
+        out = {
+            'status': 'ok',
+            'symbol_count_total': len(symbols),
+            'symbol_count_lum_related': len(lum_related),
+            'lum_related_head': lum_related[:200],
+        }
+        log_event(report, 'so_symbols_scanned', total=out['symbol_count_total'], lum_related=out['symbol_count_lum_related'])
+        return out
+    except Exception as exc:
+        return {'status': 'fail', 'error': str(exc), 'cmd': cmd}
+
+
+def normalize_volume(arr):
+    import numpy as np
+
+    if arr.ndim == 2:
+        arr = arr[np.newaxis, :, :]
+    if arr.ndim != 3:
+        raise ValueError(f'Expected 2D/3D volume, got {arr.shape}')
+    return np.ascontiguousarray(arr.astype(np.float32, copy=False))
+
+
+def encode_lum_v1(arr3d):
+    z, h, w = arr3d.shape
+    payload = arr3d.tobytes()
+    digest16 = sha512(payload).digest()[:16]
+    header = struct.pack('<8sIII16s', LUM_MAGIC, z, h, w, digest16)
+    return header + payload
+
+
+def decode_lum_v1(blob: bytes):
+    import numpy as np
+
+    hs = struct.calcsize('<8sIII16s')
+    magic, z, h, w, digest16 = struct.unpack('<8sIII16s', blob[:hs])
+    if magic != LUM_MAGIC:
+        raise ValueError('invalid LUM magic')
+    payload = blob[hs:]
+    expected = int(z) * int(h) * int(w) * 4
+    if len(payload) != expected:
+        raise ValueError('payload size mismatch')
+    if sha512(payload).digest()[:16] != digest16:
+        raise ValueError('payload checksum mismatch')
+    return np.frombuffer(payload, dtype=np.float32).reshape((z, h, w))
+
+
+
+
+def _tiff_compression_plan(report: Dict[str, Any]) -> List[tuple[str, Optional[str]]]:
+    """Build a robust compression plan for Kaggle runtimes.
+
+    Some Kaggle images run Python 3.12 while the dataset ships cp311 imagecodecs wheels.
+    In that case import may appear installed but LZW backend is unavailable at runtime.
+    """
+    plan: List[tuple[str, Optional[str]]] = []
+
+    lzw_ready = False
+    lzw_error = None
+    try:
+        import imagecodecs  # type: ignore
+        lzw_ready = hasattr(imagecodecs, 'lzw_encode')
+        if not lzw_ready:
+            lzw_error = 'imagecodecs imported but lzw_encode missing'
+    except Exception as exc:
+        lzw_error = str(exc)
+
+    if lzw_ready:
+        plan.append(('LZW', 'LZW'))
+    else:
+        report.setdefault('warnings', []).append({
+            'type': 'compression',
+            'detail': {
+                'status': 'lzw_unavailable',
+                'reason': lzw_error,
+                'note': 'Falling back to ADOBE_DEFLATE/NONE for runtime stability.'
+            }
+        })
+
+    # keep deterministic fallback chain
+    plan.append(('ADOBE_DEFLATE', 'ADOBE_DEFLATE'))
+    plan.append(('NONE', None))
+
+    # if strict requested and LZW is ready, prioritize only LZW first
+    if STRICT_NO_FALLBACK and lzw_ready:
+        return [('LZW', 'LZW')]
+    return plan
+
+def tiff_lum_roundtrip_test(report: Dict[str, Any]) -> Dict[str, Any]:
+    import numpy as np
+    import tifffile
+
+    with tempfile.TemporaryDirectory() as td:
+        td = Path(td)
+        tif_path = td / 'synthetic_teacher.tif'
+        lum_path = td / 'synthetic_teacher.lum'
+
+        rng = np.random.default_rng(42)
+        vol = (rng.random((8, 32, 32)) > 0.87).astype(np.uint8)
+
+        compressions = _tiff_compression_plan(report)
+
+        used = None
+        errors: List[Dict[str, str]] = []
+        for tag, comp in compressions:
+            try:
+                tifffile.imwrite(tif_path, vol, compression=comp)
+                used = tag
+                break
+            except Exception as exc:
+                errors.append({'attempt': tag, 'error': str(exc)})
+
+        if used is None:
+            report.setdefault('warnings', []).append({'type': 'roundtrip', 'detail': {'status': 'write_failed', 'errors': errors}})
+            return {'status': 'skipped', 'reason': 'tiff_write_unavailable', 'forensic_write': {'write_errors': errors, 'write_compression_used': None}}
+
+        arr3d = normalize_volume(tifffile.imread(tif_path))
+        blob = encode_lum_v1(arr3d)
+        lum_path.write_bytes(blob)
+        restored = decode_lum_v1(blob)
+
+        return {
+            'status': 'ok',
+            'shape': [int(x) for x in restored.shape],
+            'roundtrip_ok': bool((arr3d == restored).all()),
+            'write_compression_used': used,
+            'forensic_write': {'write_errors': errors, 'write_compression_used': used},
+        }
+
+
+def main() -> None:
+    t0 = now_ns()
+    report: Dict[str, Any] = {
+        'report_name': 'lumvorax_dependency_360_kaggle_single_cell_v6_binary',
+        'timestamp_ns': now_ns(),
+        'runtime': {
+            'python': sys.version,
+            'platform': platform.platform(),
+            'cwd': str(Path.cwd()),
+            'is_kaggle': IS_KAGGLE,
+        },
+        'policy': {
+            'strict_no_fallback': STRICT_NO_FALLBACK,
+            'require_dataset': REQUIRE_DATASET,
+            'require_so_presence': REQUIRE_SO_PRESENCE,
+            'enforce_so_load': ENFORCE_SO_LOAD,
+            'skip_roundtrip': SKIP_ROUNDTRIP,
+            'source_header_validation_enabled': False,
+            'c_syntax_smoke_enabled': False,
+        },
+        'dataset_expected': {
+            'native_lib': EXPECTED_NATIVE_LIB,
+            'wheels': EXPECTED_WHEELS,
+        },
+        'events': [],
+        'warnings': [],
+    }
+
+    try:
+        dataset_root = detect_dataset_root(report)
+        report['dataset_root'] = str(dataset_root) if dataset_root else None
+
+        if REQUIRE_DATASET and dataset_root is None:
+            raise RuntimeError('dataset_root_required_but_not_found')
+
+        report['install_report'] = [install_offline_if_missing(p, report, dataset_root) for p in ('numpy', 'tifffile', 'imagecodecs')]
+        report['imports'] = {p: pkg_available(p) for p in ('numpy', 'tifffile', 'imagecodecs', 'pyarrow')}
+
+        report['dataset_artifacts'] = inspect_dataset_artifacts(dataset_root, report)
+        if report['dataset_artifacts'].get('status') != 'ok':
+            if REQUIRE_DATASET:
+                raise RuntimeError('dataset_artifacts_incomplete')
+            report['warnings'].append({'type': 'dataset', 'detail': report['dataset_artifacts']})
+            report['so_symbol_inventory'] = {'status': 'skipped', 'reason': 'dataset_artifacts_not_ok'}
+            report['so_load_check'] = {'status': 'skipped', 'reason': 'dataset_artifacts_not_ok'}
+        else:
+            native_lib = report['dataset_artifacts'].get('native_lib')
+            report['so_symbol_inventory'] = inspect_so_symbols(native_lib, report)
+            report['so_load_check'] = check_native_load(native_lib, report)
+
+            if report['so_load_check'].get('status') != 'ok':
+                report['warnings'].append({'type': 'so_load', 'detail': report['so_load_check']})
+
+        if SKIP_ROUNDTRIP:
+            report['tiff_lum_roundtrip_test'] = {'status': 'skipped', 'reason': 'LUMVORAX_SKIP_ROUNDTRIP=1'}
+        else:
+            report['tiff_lum_roundtrip_test'] = tiff_lum_roundtrip_test(report)
+
+        report['status'] = 'ok_with_warnings' if report['warnings'] else 'ok'
+    except Exception as exc:
+        report['status'] = 'fail'
+        report['error_type'] = type(exc).__name__
+        report['error'] = str(exc)
+        log_event(report, 'fatal_error', error_type=type(exc).__name__, error=str(exc))
+
+    report['elapsed_ns'] = now_ns() - t0
+    report['elapsed_s'] = report['elapsed_ns'] / 1_000_000_000
+
+    out = Path('/kaggle/working/lumvorax_360_validation_report_v6_binary.json')
+    if not out.parent.exists():
+        out = Path('lumvorax_360_validation_report_v6_binary.json')
+    out.write_text(json.dumps(report, indent=2), encoding='utf-8')
+
+    print(json.dumps({
+        'status': report.get('status'),
+        'error_type': report.get('error_type'),
+        'error': report.get('error'),
+        'report': str(out),
+        'dataset_root': report.get('dataset_root'),
+        'native_lib': report.get('dataset_artifacts', {}).get('native_lib') if isinstance(report.get('dataset_artifacts'), dict) else None,
+        'present_wheels_count': report.get('dataset_artifacts', {}).get('present_wheels_count') if isinstance(report.get('dataset_artifacts'), dict) else None,
+        'missing_wheels_count': len(report.get('dataset_artifacts', {}).get('missing_wheels', [])) if isinstance(report.get('dataset_artifacts'), dict) else None,
+        'so_load_status': report.get('so_load_check', {}).get('status') if isinstance(report.get('so_load_check'), dict) else None,
+        'so_symbol_count': report.get('so_symbol_inventory', {}).get('symbol_count_lum_related') if isinstance(report.get('so_symbol_inventory'), dict) else None,
+        'roundtrip_status': report.get('tiff_lum_roundtrip_test', {}).get('status') if isinstance(report.get('tiff_lum_roundtrip_test'), dict) else None,
+        'warnings_count': len(report.get('warnings', [])),
+        'events_count': len(report.get('events', [])),
+        'elapsed_ns': report.get('elapsed_ns'),
+    }, indent=2))
+
+    if report.get('status') == 'fail':
+        raise SystemExit(2)
+
+
+if __name__ == '__main__':
+    main()
+Processing /kaggle/input/datasets/ndarray2000/nx47-dependencies/imagecodecs-2026.1.14-cp311-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl
+Requirement already satisfied: numpy in /usr/local/lib/python3.12/dist-packages (from imagecodecs==2026.1.14) (2.0.2)
+Installing collected packages: imagecodecs
+Successfully installed imagecodecs-2026.1.14
+{
+  "status": "ok_with_warnings",
+  "error_type": null,
+  "error": null,
+  "report": "/kaggle/working/lumvorax_360_validation_report_v6_binary.json",
+  "dataset_root": "/kaggle/input/datasets/ndarray2000/nx47-dependencies",
+  "native_lib": "/kaggle/input/datasets/ndarray2000/nx47-dependencies/liblumvorax.so",
+  "present_wheels_count": 12,
+  "missing_wheels_count": 0,
+  "so_load_status": "abi_incompatible",
+  "so_symbol_count": 189,
+  "roundtrip_status": "skipped",
+  "warnings_count": 2,
+  "events_count": 5,
+  "elapsed_ns": 6364308218
+}
+
+…….
+
+Successfully ran in 26.8s
+Accelerator
+GPU P100
+Environment
+Latest Container Image
+
+Output
+12.6 kB
+
+Time	#	Log Message
+9.9s	1	0.00s - Debugger warning: It seems that frozen modules are being used, which may
+9.9s	2	0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+9.9s	3	0.00s - to python to disable frozen modules.
+9.9s	4	0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+10.6s	5	0.00s - Debugger warning: It seems that frozen modules are being used, which may
+10.6s	6	0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+10.6s	7	0.00s - to python to disable frozen modules.
+10.6s	8	0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+15.3s	9	Processing /kaggle/input/datasets/ndarray2000/nx47-dependencies/imagecodecs-2026.1.14-cp311-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl
+15.5s	10	Processing /kaggle/input/datasets/ndarray2000/nx47-dependencies/imagecodecs-2026.1.14-cp311-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl
+15.6s	11	Requirement already satisfied: numpy in /usr/local/lib/python3.12/dist-packages (from imagecodecs==2026.1.14) (2.0.2)
+15.8s	12	Requirement already satisfied: numpy in /usr/local/lib/python3.12/dist-packages (from imagecodecs==2026.1.14) (2.0.2)
+17.6s	13	Installing collected packages: imagecodecs
+17.8s	14	Installing collected packages: imagecodecs
+18.1s	15	Successfully installed imagecodecs-2026.1.14
+18.3s	16	Successfully installed imagecodecs-2026.1.14
+18.4s	17	{
+18.4s	18	"status": "ok_with_warnings",
+18.4s	19	"error_type": null,
+18.4s	20	"error": null,
+18.4s	21	"report": "/kaggle/working/lumvorax_360_validation_report_v6_binary.json",
+18.4s	22	"dataset_root": "/kaggle/input/datasets/ndarray2000/nx47-dependencies",
+18.4s	23	"native_lib": "/kaggle/input/datasets/ndarray2000/nx47-dependencies/liblumvorax.so",
+18.4s	24	"present_wheels_count": 12,
+18.4s	25	"missing_wheels_count": 0,
+18.4s	26	"so_load_status": "abi_incompatible",
+18.4s	27	"so_symbol_count": 189,
+18.4s	28	"roundtrip_status": "skipped",
+18.4s	29	"warnings_count": 2,
+18.4s	30	"events_count": 5,
+18.4s	31	"elapsed_ns": 6364308218
+18.4s	32	}
+21.1s	33	/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+21.1s	34	cells[i][c] = re.sub('\\\\\|', '|', cell)
+21.3s	35	/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+21.3s	36	text = re.sub(r'_', '\_', text) # Escape underscores in display text
+22.0s	37	/usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=["remove_papermill_header.RemovePapermillHeader"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.
+22.0s	38	warn(
+22.0s	39	[NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+22.4s	40	[NbConvertApp] Writing 24251 bytes to __notebook__.ipynb
+24.9s	41	/usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=["nbconvert.preprocessors.ExtractOutputPreprocessor"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.
+24.9s	42	warn(
+24.9s	43	[NbConvertApp] Converting notebook __notebook__.ipynb to html
+25.9s	44	[NbConvertApp] Writing 359815 bytes to __results__.htm

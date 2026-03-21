@@ -1,0 +1,10 @@
+{
+  "paths": [
+    "/kaggle/input/datasets/ndarray2000/nx47-dependencies",
+    "/kaggle/input/nx47-dependencies"
+  ],
+  "packages": {
+    "imagecodecs": true,
+    "tifffile": true
+  }
+}

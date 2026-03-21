@@ -2,7 +2,7 @@ AUTO-PROMPT — MODÈLE DE REQUÊTE POUR CE TYPE D'ANALYSE
 (Inclus en tête de rapport conformément aux instructions des cycles précédents. À réutiliser tel quel pour les cycles suivants.)
 
 Tu es SUPER ULTRA MEGA INTELIGENT et expert dans tous les domaines nécessaires, que tu dois identifier en temps réel et me notifier avec ton expertise., lis toi-même ligne par ligne, fichier par fichier, sous-dossier par sous-dossier, chaque
-CSV, JSON, log, MD et code source .c, .h, .py, .sh des nouveaux runs ainsi que les anciens runs de référence
+CSV, JSON, log, MD et code source .c, .h, .py, .sh des nouveaux runs ainsi que les anciens runs de référece
 et TOUTES les analyses antérieures dans CHAT/ (ne jamais modifier les anciens fichiers) :
 
 NOUVEAUX RUNS (à analyser en priorité) :

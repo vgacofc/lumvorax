@@ -1,0 +1,1273 @@
+[
+  {
+    "ts_ns": 1771962128115549682,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.2799943685531616,
+    "sha512": "6c63aeeb0b08d08480cbee242eb90590a0e232288d71532b5e41d41f24a64c2882c67e84d2c788e45452956026e9791e40b96b4dfb797e7b86845f58943988cd"
+  },
+  {
+    "ts_ns": 1771962129537623327,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.5078943371772766,
+    "sha512": "5bf76917c9f6f2592cef1eff52e6952541811b9ddf813034aa622f2327d865a73e853edde6a83bf15c402c6eadb44714fd9d5589779b55babd95d581c22c0ceb"
+  },
+  {
+    "ts_ns": 1771962130863387178,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.2847338914871216,
+    "sha512": "3aea0eb62f2cafb0ddf0c0361ed2b1c6fd5823dcbfec309af9ebace4b5761e76011fb9bf8f1821965adf247ef8b64c4c970661fb4a52b6f850aba942662edebd"
+  },
+  {
+    "ts_ns": 1771962132112360803,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.515710711479187,
+    "sha512": "73a40126ca1a0f8836d34ec2c41d1177997c44ee77436ae6c59e42b5aeff48025d0e086df7ae8f8857b3786f44ce3e5e1a810081c9ab8fa22e56c18073b1f475"
+  },
+  {
+    "ts_ns": 1771962133552135873,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.27927330136299133,
+    "sha512": "ef8804b7a51422b0a8c9abec513b4c4d59c47110db23df67b0a6fe62c6f81433aad2917c16dd590df6a1273c79c0ad90c36751099b85f5bc15f73854c7019953"
+  },
+  {
+    "ts_ns": 1771962134855367811,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.24179492890834808,
+    "sha512": "c7d938b831c63b8d01a36fdf506e957ab03a3b11aeabd65ead4dff942af7113a731e19f735586697b72c2a828da07968ebd47884e28312f6e05a151cc565d621"
+  },
+  {
+    "ts_ns": 1771962136404990056,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.2424418330192566,
+    "sha512": "e5f2092552e962a006416e514ae95e6786b74ab2efd43bf2734d9e959be27c5bf5402e200f2e2fca7a4a1a6b5a98fbb9fb905271fabddd60aead06c408c950ee"
+  },
+  {
+    "ts_ns": 1771962137772751899,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.27424895763397217,
+    "sha512": "cc64ab8c61992cc904af457800ba42a824ecffde5ef9add904114350c4d2f68cadd57fa67e3028ee0d8cd28c2cc6f3a8cd01bafe15cb4af2a36e9cf5f0ad541a"
+  },
+  {
+    "ts_ns": 1771962139207442061,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.2364487498998642,
+    "sha512": "2bedfcacd42b0f48cdbb938ba7a13ff62adf0ee1383052b64199f64dcc2964f7ec7505428eac4426ecfad47fbde2c64a76c5f66d54562776515fa3b9cdb2a588"
+  },
+  {
+    "ts_ns": 1771962140371442672,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.3368280231952667,
+    "sha512": "3026c81e32a594d0b2f22efb2b043d527d0292c2af8f82f19c616a4adf2613b1e8f5f0d24bede7a398f1e5584a1d604d62e4029f850976accbda24aead936ef4"
+  },
+  {
+    "ts_ns": 1771962141642408990,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.35008543729782104,
+    "sha512": "b37859f7c18fc5e2151358d4b278784095c43b02b2a43cb361ec9659945ef7ec75a632f9fdb842f51fa8ac36bbf47a74b72b4a3279065e2445419eb1a860e3d6"
+  },
+  {
+    "ts_ns": 1771962142811857845,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.32965904474258423,
+    "sha512": "b160df879acfa13dda272c0593dfb502ece68e15c14beb0aa6008a50de927f718b94f37f1b332dcbf498743be9b745e412b030d8b8a0da85a6ce30bcf3ef261d"
+  },
+  {
+    "ts_ns": 1771962144091486604,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.26441439986228943,
+    "sha512": "912d0b7d9851937cbada79e16ea6f61317445d1acc86c54f14934370d77f68a501440900521df8629bcbfd4e91af44bbf18f50cbef9ebac40e59c76c31e82c5c"
+  },
+  {
+    "ts_ns": 1771962145409104644,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.2464560568332672,
+    "sha512": "b7930804214362de31c8cd2964b26d2726ed37dbbcf310f465f91c806031534a3df2e833831bc2191b051e3b24f99f7477caf6b36c63d86b42e3c9e1e51f2fe9"
+  },
+  {
+    "ts_ns": 1771962146779440105,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.23834346234798431,
+    "sha512": "275210ae8e0ad4918aa06263571bc319d430b370aec0d74f2fef08916ae1bb04896c36d794a536821956ce873a7c286ee9c440af78c7ade00324513cf15184b3"
+  },
+  {
+    "ts_ns": 1771962148038504995,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.2629418671131134,
+    "sha512": "3bca1a3008201730e5d0480cf86337ded33bfab464701aa76f7cb0a94bec17861aaa78fa9331b48902a0f174bbad390730d44535421864060ea30d3124b99f99"
+  },
+  {
+    "ts_ns": 1771962149442927665,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.24735912680625916,
+    "sha512": "357624b129511663cf5ecb5f71012cfe1430cb9f05a60a7609404bd99db98d2071f54531a8fc0c4b2715aa5aa57154e2c5282ae2861df85648eeca6340d024c5"
+  },
+  {
+    "ts_ns": 1771962150737053333,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.3692725896835327,
+    "sha512": "771b98eb64776b04b4b0083aa8ad739deed92c9caddb8b9f28a100eb87f385e622e7f22558234d3665afbfcd9e1d2c125d037ea841c70a73553fd538883629d4"
+  },
+  {
+    "ts_ns": 1771962151987256641,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.28905028104782104,
+    "sha512": "b69179d80ad6c44f20331a4b98e3839b932cf7d4f5cb201290642b8e5d03524f264f05711694b068d4acb50f3a4626cb313999edaf545759c95166497b214603"
+  },
+  {
+    "ts_ns": 1771962153619778144,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.288054883480072,
+    "sha512": "e7f6bf4f3dc9ee11cb3e54202ca273654b8c5fed1f73f9f98bea11a4c71f17ea764770c0361dd8d327478a39f94703aaae14e10993280910fbe087bed8161405"
+  },
+  {
+    "ts_ns": 1771962154865213877,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.46965932846069336,
+    "sha512": "dc97ebd4fd70a0f14e7a5d6172a078c20d4eb450b9415194397e6497c6c8b6c65e0f6895003189ce70b85969123ff2e6ec17970edde7f9ccac93c029dfeef2d0"
+  },
+  {
+    "ts_ns": 1771962156130198320,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.5392505526542664,
+    "sha512": "4d3d4ab192d946035a2b06e7e6aff561c5c9dbde92291310e347aa432bdfae728ffabf1cc63cc1f446ee7bdf8976e56d22235e63b6c0cb33f7858264506ec566"
+  },
+  {
+    "ts_ns": 1771962157537692161,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.2756001651287079,
+    "sha512": "60193c4b4f862a2495cfeaff81d504c89d5c9dfaea3b053d16dcccbfbee1b3c5db4d285612d1b8d080f0448264c4eee880ff341d0852b1e3382d53ea69150682"
+  },
+  {
+    "ts_ns": 1771962158402550743,
+    "stage": "volume",
+    "shape": [
+      256,
+      256,
+      256
+    ],
+    "dtype": "float32",
+    "bytes": 67108864,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.23395772278308868,
+    "sha512": "11e642b854a8aff7d9b9652e6711f5beb701d6116a1752aebaccf28e4e7dfa41901ad5d15a22c879554d9d73b74ea2d83b7673474367a4e6ce8725c4b882a89d"
+  },
+  {
+    "ts_ns": 1771962159482190633,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.30411410331726074,
+    "sha512": "ccf968295aa2c184c3da0e5bff05e18bb753f2fff4ba5cfad9543b25cefa694960e6781f0b50559c1fb5f7d6da26d0fea422a1e5792272bdaf85a508d38ded6b"
+  },
+  {
+    "ts_ns": 1771962161028567781,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.24940010905265808,
+    "sha512": "71b51406891184ccf2b4e091512128ed04b23e6ac819a746acdce4dec8e86df7052d1a2a7ca264444a932e55428540ad673ea0d550dcfea4b4e72c4ea237e639"
+  },
+  {
+    "ts_ns": 1771962162341184339,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.28121981024742126,
+    "sha512": "c727a19da32090341d9faa51a88ed45d2b355b42f5a63bd8bf093ac891be7ae0c5a7ab52215df38e1ed0a9b3b3cc7c7a0fa7add86ab760243169b9946b8e0482"
+  },
+  {
+    "ts_ns": 1771962163521168544,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.32055264711380005,
+    "sha512": "58e88fe1edd4fdac41220ebdbb2936e94f375c25002dbb358050619df72ce4f6096dc80103603c5ac63cb6dddaa21eef6efa07732722b05d6a6cf775cbceecb2"
+  },
+  {
+    "ts_ns": 1771962164908770656,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.2762707769870758,
+    "sha512": "8002dcb712be017bf478087f60312f08e8669ee86788b822354e65e23228c15265c67ffc9341a949be96f55147746f56e98281e5a8123e7aa90e34493502ce98"
+  },
+  {
+    "ts_ns": 1771962166200028289,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.26947054266929626,
+    "sha512": "70c51218b5603cc3ac49178f1e6e33b8757fd66e6192976b66b939331435e5209c07c551ac8590bcc791709a5a89b9735dd7df0ac5be8fa088d2eb556658f875"
+  },
+  {
+    "ts_ns": 1771962167563366586,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.3725607097148895,
+    "sha512": "d622aa047bf80500c7b31f4934e09aabf03d2c73552d94979b5c09ec6543d51f94307cde445976c81205915bdb865d9e75ccf7532c34fe3b440cf46a1a61b44f"
+  },
+  {
+    "ts_ns": 1771962168910642365,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.29056602716445923,
+    "sha512": "b5f3e50acf5cab37f78e66e0c58453799352831f52a1b72da5049fbf8e95a2c166158f1cb445bd7323b4424ce4465051c911ee75e32d2214dae9f0bf918f5f28"
+  },
+  {
+    "ts_ns": 1771962170208012621,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.2882342040538788,
+    "sha512": "0f3568b7ce4f82533881b19e6c7132c5e0379d5608dfce2f6092aec8a4ea6ea987cb36731a52d8070cd33173c143491819a0b985fbc70e4a76e9855f34e1722d"
+  },
+  {
+    "ts_ns": 1771962171870217441,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.23107792437076569,
+    "sha512": "d9a8327ee8af1ac16cec32366562602601976dc3b6d8d799a248275f2f7fdf0f7f54500157d46cddc6c8b972fdb7fe28ae4c321b060c1fd02f6717224a419922"
+  },
+  {
+    "ts_ns": 1771962173220285123,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.4748987555503845,
+    "sha512": "a04c81c68058207c098e731dada5d27e860f645b85024601f71cadb9914ec2ee5c2a3869448ddc6dd1eefa85984aa72441a1105f2557aa9ad91cf9824e97574d"
+  },
+  {
+    "ts_ns": 1771962174581052782,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.29054543375968933,
+    "sha512": "d1467b2d3b6c288a183d4d45e06a5c1e4edc135e5651a23ae169a769a8dcffb19966e4fac546ed7793add34855119588c6af271e64e53b082863561633d4675b"
+  },
+  {
+    "ts_ns": 1771962175892524785,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.300462007522583,
+    "sha512": "c56f027dae8557eca9e152f74c5887b97f8d38446fd08f0cea9826f1b28bcb57d54c66cb1bdd65bd8adcca07139d0d9a73230fbe9796db1fb9c4a9f47c6d498f"
+  },
+  {
+    "ts_ns": 1771962177272088625,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.47768405079841614,
+    "sha512": "bc90cbb6b7563239a20758899b22434f6291a3802543573e25c9b3006c0e217d7af4781c081d467626d2bc3996956916ee2f57e3fd892b184335d8f2ef34945d"
+  },
+  {
+    "ts_ns": 1771962178512508003,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.28698673844337463,
+    "sha512": "61e46d2cbe9d44f34e193b3dc1dc44855cbc7aee9e98238154b8f450cfb2ff2dabcbc7830851c6ee1fe36daab00b4096746f6b16839f9e1ae6a1890f4e04c1be"
+  },
+  {
+    "ts_ns": 1771962179952745676,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.24074691534042358,
+    "sha512": "785c151ae14b53302ba268138c0e8bb6f8399b871c1c57c49e87f2d028826ba7fd0f507bdc386c84d6eeda1c4e0e2d254bd8521210433b36ca5b2d34bdab0347"
+  },
+  {
+    "ts_ns": 1771962180842670181,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.32956865429878235,
+    "sha512": "5524a4a4076379a2cb650a3ab5e1affe1ed337887a3a24b8ae095db181734b8ededb9e20b5082f9546fa192e3b945626c364cfb0b676a92c8023d54afbc34f77"
+  },
+  {
+    "ts_ns": 1771962182495597211,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.2799943685531616,
+    "sha512": "6c63aeeb0b08d08480cbee242eb90590a0e232288d71532b5e41d41f24a64c2882c67e84d2c788e45452956026e9791e40b96b4dfb797e7b86845f58943988cd"
+  },
+  {
+    "ts_ns": 1771962183677627749,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.5078943371772766,
+    "sha512": "5bf76917c9f6f2592cef1eff52e6952541811b9ddf813034aa622f2327d865a73e853edde6a83bf15c402c6eadb44714fd9d5589779b55babd95d581c22c0ceb"
+  },
+  {
+    "ts_ns": 1771962184737186670,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.2847338914871216,
+    "sha512": "3aea0eb62f2cafb0ddf0c0361ed2b1c6fd5823dcbfec309af9ebace4b5761e76011fb9bf8f1821965adf247ef8b64c4c970661fb4a52b6f850aba942662edebd"
+  },
+  {
+    "ts_ns": 1771962185788067018,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.515710711479187,
+    "sha512": "73a40126ca1a0f8836d34ec2c41d1177997c44ee77436ae6c59e42b5aeff48025d0e086df7ae8f8857b3786f44ce3e5e1a810081c9ab8fa22e56c18073b1f475"
+  },
+  {
+    "ts_ns": 1771962186837139926,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.27927330136299133,
+    "sha512": "ef8804b7a51422b0a8c9abec513b4c4d59c47110db23df67b0a6fe62c6f81433aad2917c16dd590df6a1273c79c0ad90c36751099b85f5bc15f73854c7019953"
+  },
+  {
+    "ts_ns": 1771962187883209805,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.24179492890834808,
+    "sha512": "c7d938b831c63b8d01a36fdf506e957ab03a3b11aeabd65ead4dff942af7113a731e19f735586697b72c2a828da07968ebd47884e28312f6e05a151cc565d621"
+  },
+  {
+    "ts_ns": 1771962188938913907,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.2424418330192566,
+    "sha512": "e5f2092552e962a006416e514ae95e6786b74ab2efd43bf2734d9e959be27c5bf5402e200f2e2fca7a4a1a6b5a98fbb9fb905271fabddd60aead06c408c950ee"
+  },
+  {
+    "ts_ns": 1771962189984979572,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.27424895763397217,
+    "sha512": "cc64ab8c61992cc904af457800ba42a824ecffde5ef9add904114350c4d2f68cadd57fa67e3028ee0d8cd28c2cc6f3a8cd01bafe15cb4af2a36e9cf5f0ad541a"
+  },
+  {
+    "ts_ns": 1771962191041803234,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.2364487498998642,
+    "sha512": "2bedfcacd42b0f48cdbb938ba7a13ff62adf0ee1383052b64199f64dcc2964f7ec7505428eac4426ecfad47fbde2c64a76c5f66d54562776515fa3b9cdb2a588"
+  },
+  {
+    "ts_ns": 1771962192099854116,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.3368280231952667,
+    "sha512": "3026c81e32a594d0b2f22efb2b043d527d0292c2af8f82f19c616a4adf2613b1e8f5f0d24bede7a398f1e5584a1d604d62e4029f850976accbda24aead936ef4"
+  },
+  {
+    "ts_ns": 1771962193153225590,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.35008543729782104,
+    "sha512": "b37859f7c18fc5e2151358d4b278784095c43b02b2a43cb361ec9659945ef7ec75a632f9fdb842f51fa8ac36bbf47a74b72b4a3279065e2445419eb1a860e3d6"
+  },
+  {
+    "ts_ns": 1771962194191302846,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.32965904474258423,
+    "sha512": "b160df879acfa13dda272c0593dfb502ece68e15c14beb0aa6008a50de927f718b94f37f1b332dcbf498743be9b745e412b030d8b8a0da85a6ce30bcf3ef261d"
+  },
+  {
+    "ts_ns": 1771962195234331638,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.26441439986228943,
+    "sha512": "912d0b7d9851937cbada79e16ea6f61317445d1acc86c54f14934370d77f68a501440900521df8629bcbfd4e91af44bbf18f50cbef9ebac40e59c76c31e82c5c"
+  },
+  {
+    "ts_ns": 1771962196282513605,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.2464560568332672,
+    "sha512": "b7930804214362de31c8cd2964b26d2726ed37dbbcf310f465f91c806031534a3df2e833831bc2191b051e3b24f99f7477caf6b36c63d86b42e3c9e1e51f2fe9"
+  },
+  {
+    "ts_ns": 1771962197329377306,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.23834346234798431,
+    "sha512": "275210ae8e0ad4918aa06263571bc319d430b370aec0d74f2fef08916ae1bb04896c36d794a536821956ce873a7c286ee9c440af78c7ade00324513cf15184b3"
+  },
+  {
+    "ts_ns": 1771962198381355648,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.2629418671131134,
+    "sha512": "3bca1a3008201730e5d0480cf86337ded33bfab464701aa76f7cb0a94bec17861aaa78fa9331b48902a0f174bbad390730d44535421864060ea30d3124b99f99"
+  },
+  {
+    "ts_ns": 1771962199439587919,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.24735912680625916,
+    "sha512": "357624b129511663cf5ecb5f71012cfe1430cb9f05a60a7609404bd99db98d2071f54531a8fc0c4b2715aa5aa57154e2c5282ae2861df85648eeca6340d024c5"
+  },
+  {
+    "ts_ns": 1771962200488561880,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.3692725896835327,
+    "sha512": "771b98eb64776b04b4b0083aa8ad739deed92c9caddb8b9f28a100eb87f385e622e7f22558234d3665afbfcd9e1d2c125d037ea841c70a73553fd538883629d4"
+  },
+  {
+    "ts_ns": 1771962201545432314,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.28905028104782104,
+    "sha512": "b69179d80ad6c44f20331a4b98e3839b932cf7d4f5cb201290642b8e5d03524f264f05711694b068d4acb50f3a4626cb313999edaf545759c95166497b214603"
+  },
+  {
+    "ts_ns": 1771962202602273037,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.288054883480072,
+    "sha512": "e7f6bf4f3dc9ee11cb3e54202ca273654b8c5fed1f73f9f98bea11a4c71f17ea764770c0361dd8d327478a39f94703aaae14e10993280910fbe087bed8161405"
+  },
+  {
+    "ts_ns": 1771962203649829340,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.46965932846069336,
+    "sha512": "dc97ebd4fd70a0f14e7a5d6172a078c20d4eb450b9415194397e6497c6c8b6c65e0f6895003189ce70b85969123ff2e6ec17970edde7f9ccac93c029dfeef2d0"
+  },
+  {
+    "ts_ns": 1771962204703506683,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.5392505526542664,
+    "sha512": "4d3d4ab192d946035a2b06e7e6aff561c5c9dbde92291310e347aa432bdfae728ffabf1cc63cc1f446ee7bdf8976e56d22235e63b6c0cb33f7858264506ec566"
+  },
+  {
+    "ts_ns": 1771962205761885029,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.2756001651287079,
+    "sha512": "60193c4b4f862a2495cfeaff81d504c89d5c9dfaea3b053d16dcccbfbee1b3c5db4d285612d1b8d080f0448264c4eee880ff341d0852b1e3382d53ea69150682"
+  },
+  {
+    "ts_ns": 1771962206664825287,
+    "stage": "volume",
+    "shape": [
+      256,
+      256,
+      256
+    ],
+    "dtype": "float32",
+    "bytes": 67108864,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.23395772278308868,
+    "sha512": "11e642b854a8aff7d9b9652e6711f5beb701d6116a1752aebaccf28e4e7dfa41901ad5d15a22c879554d9d73b74ea2d83b7673474367a4e6ce8725c4b882a89d"
+  },
+  {
+    "ts_ns": 1771962207427023622,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.30411410331726074,
+    "sha512": "ccf968295aa2c184c3da0e5bff05e18bb753f2fff4ba5cfad9543b25cefa694960e6781f0b50559c1fb5f7d6da26d0fea422a1e5792272bdaf85a508d38ded6b"
+  },
+  {
+    "ts_ns": 1771962208476227242,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.24940010905265808,
+    "sha512": "71b51406891184ccf2b4e091512128ed04b23e6ac819a746acdce4dec8e86df7052d1a2a7ca264444a932e55428540ad673ea0d550dcfea4b4e72c4ea237e639"
+  },
+  {
+    "ts_ns": 1771962209528141387,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.28121981024742126,
+    "sha512": "c727a19da32090341d9faa51a88ed45d2b355b42f5a63bd8bf093ac891be7ae0c5a7ab52215df38e1ed0a9b3b3cc7c7a0fa7add86ab760243169b9946b8e0482"
+  },
+  {
+    "ts_ns": 1771962210560250215,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.32055264711380005,
+    "sha512": "58e88fe1edd4fdac41220ebdbb2936e94f375c25002dbb358050619df72ce4f6096dc80103603c5ac63cb6dddaa21eef6efa07732722b05d6a6cf775cbceecb2"
+  },
+  {
+    "ts_ns": 1771962211603698183,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.2762707769870758,
+    "sha512": "8002dcb712be017bf478087f60312f08e8669ee86788b822354e65e23228c15265c67ffc9341a949be96f55147746f56e98281e5a8123e7aa90e34493502ce98"
+  },
+  {
+    "ts_ns": 1771962212687449700,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.26947054266929626,
+    "sha512": "70c51218b5603cc3ac49178f1e6e33b8757fd66e6192976b66b939331435e5209c07c551ac8590bcc791709a5a89b9735dd7df0ac5be8fa088d2eb556658f875"
+  },
+  {
+    "ts_ns": 1771962213728760615,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.3725607097148895,
+    "sha512": "d622aa047bf80500c7b31f4934e09aabf03d2c73552d94979b5c09ec6543d51f94307cde445976c81205915bdb865d9e75ccf7532c34fe3b440cf46a1a61b44f"
+  },
+  {
+    "ts_ns": 1771962214764323037,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.29056602716445923,
+    "sha512": "b5f3e50acf5cab37f78e66e0c58453799352831f52a1b72da5049fbf8e95a2c166158f1cb445bd7323b4424ce4465051c911ee75e32d2214dae9f0bf918f5f28"
+  },
+  {
+    "ts_ns": 1771964542228644908,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.2799943685531616,
+    "sha512": "6c63aeeb0b08d08480cbee242eb90590a0e232288d71532b5e41d41f24a64c2882c67e84d2c788e45452956026e9791e40b96b4dfb797e7b86845f58943988cd"
+  },
+  {
+    "ts_ns": 1771964543119948622,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.5078943371772766,
+    "sha512": "5bf76917c9f6f2592cef1eff52e6952541811b9ddf813034aa622f2327d865a73e853edde6a83bf15c402c6eadb44714fd9d5589779b55babd95d581c22c0ceb"
+  },
+  {
+    "ts_ns": 1771964544023491384,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.2847338914871216,
+    "sha512": "3aea0eb62f2cafb0ddf0c0361ed2b1c6fd5823dcbfec309af9ebace4b5761e76011fb9bf8f1821965adf247ef8b64c4c970661fb4a52b6f850aba942662edebd"
+  },
+  {
+    "ts_ns": 1771964544926302535,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.515710711479187,
+    "sha512": "73a40126ca1a0f8836d34ec2c41d1177997c44ee77436ae6c59e42b5aeff48025d0e086df7ae8f8857b3786f44ce3e5e1a810081c9ab8fa22e56c18073b1f475"
+  },
+  {
+    "ts_ns": 1771964545822553691,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.30411410331726074,
+    "sha512": "ccf968295aa2c184c3da0e5bff05e18bb753f2fff4ba5cfad9543b25cefa694960e6781f0b50559c1fb5f7d6da26d0fea422a1e5792272bdaf85a508d38ded6b"
+  },
+  {
+    "ts_ns": 1771964546710434558,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.24940010905265808,
+    "sha512": "71b51406891184ccf2b4e091512128ed04b23e6ac819a746acdce4dec8e86df7052d1a2a7ca264444a932e55428540ad673ea0d550dcfea4b4e72c4ea237e639"
+  },
+  {
+    "ts_ns": 1771964553755751468,
+    "stage": "volume",
+    "shape": [
+      320,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 131072000,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.32956865429878235,
+    "sha512": "5524a4a4076379a2cb650a3ab5e1affe1ed337887a3a24b8ae095db181734b8ededb9e20b5082f9546fa192e3b945626c364cfb0b676a92c8023d54afbc34f77"
+  },
+  {
+    "ts_ns": 1771964554368738322,
+    "stage": "features_selected",
+    "shape": [
+      6,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 2457600,
+    "min": -14.045258522033691,
+    "max": 9.18480396270752,
+    "mean": 1.7087440795648945e-08,
+    "sha512": "14dbe63324426bf95d2782671247c01b60fe46a6115fc40c2127f9eac66c036c95f15b59f6a234714be245571a828b06f3f433cbd699966b6cc1a30adb05632b"
+  },
+  {
+    "ts_ns": 1771964554386865957,
+    "stage": "probability_map",
+    "shape": [
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "bytes": 409600,
+    "min": 9.357622912219837e-14,
+    "max": 0.1458509862422943,
+    "mean": 0.09743015468120575,
+    "sha512": "6efbed618ab1e768c7c4097253d94fb1756e62d67acff35ca7ae319d3649dab7c17aa02770e17adef4cbe871996a1095f22a87e768034e364a94b96d505b8ae1"
+  },
+  {
+    "ts_ns": 1771964554908464180,
+    "stage": "mask_hysteresis",
+    "shape": [
+      320,
+      320
+    ],
+    "dtype": "uint8",
+    "bytes": 102400,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0,
+    "sha512": "5f6dbea410beee80292b16df6fcc767ae6baf058ab4c38fa6a4fc72b7828374af42bd6da094eada2ad006d1a0754f9ff7bdd94c0ef9540e6651729b74fb9ea46"
+  },
+  {
+    "ts_ns": 1771964554909941976,
+    "stage": "mask_calibrated",
+    "shape": [
+      320,
+      320
+    ],
+    "dtype": "uint8",
+    "bytes": 102400,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.06,
+    "sha512": "4f39e8ef37fc186d1c27c6e4f8050f61d2c8fecbb663a61fa25eefa6e260ad043f6dd50c4ebb880c8e771ed69a29227c124aa50246fec51fd0883de8eeaaf1e4"
+  },
+  {
+    "ts_ns": 1771964554911247445,
+    "stage": "mask_final",
+    "shape": [
+      320,
+      320
+    ],
+    "dtype": "uint8",
+    "bytes": 102400,
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.06,
+    "sha512": "4f39e8ef37fc186d1c27c6e4f8050f61d2c8fecbb663a61fa25eefa6e260ad043f6dd50c4ebb880c8e771ed69a29227c124aa50246fec51fd0883de8eeaaf1e4"
+  }
+]

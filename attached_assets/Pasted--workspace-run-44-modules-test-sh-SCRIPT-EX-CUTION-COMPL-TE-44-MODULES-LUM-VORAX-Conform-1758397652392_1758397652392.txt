@@ -1,0 +1,117 @@
+~/workspace$ ./run_44_modules_test.sh
+=== SCRIPT EXÉCUTION COMPLÈTE 44 MODULES LUM/VORAX ===
+Conformité standards forensiques ISO/IEC 27037
+
+Phase 1: Nettoyage et préparation
+rm -rf obj bin logs
+mkdir -p obj bin logs
+
+Phase 2: Compilation système complet
+gcc -Wall -Wextra -std=c99 -g -O2 -fPIC -c src/lum/lum_core.c -o obj/lum/lum_core.o
+gcc -Wall -Wextra -std=c99 -g -O2 -fPIC -c src/vorax/vorax_operations.c -o obj/vorax/vorax_operations.o
+gcc -Wall -Wextra -std=c99 -g -O2 -fPIC -c src/binary/binary_lum_converter.c -o obj/binary/binary_lum_converter.o
+gcc -Wall -Wextra -std=c99 -g -O2 -fPIC -c src/parser/vorax_parser.c -o obj/parser/vorax_parser.o
+gcc -Wall -Wextra -std=c99 -g -O2 -fPIC -c src/logger/lum_logger.c -o obj/logger/lum_logger.o
+gcc -Wall -Wextra -std=c99 -g -O2 -fPIC -c src/logger/log_manager.c -o obj/logger/log_manager.o
+gcc -Wall -Wextra -std=c99 -g -O2 -fPIC -c src/debug/memory_tracker.c -o obj/debug/memory_tracker.o
+gcc -Wall -Wextra -std=c99 -g -O2 -fPIC -c src/debug/forensic_logger.c -o obj/debug/forensic_logger.o
+gcc -Wall -Wextra -std=c99 -g -O2 -fPIC -c src/debug/ultra_forensic_logger.c -o obj/debug/ultra_forensic_logger.o
+gcc -Wall -Wextra -std=c99 -g -O2 -fPIC -c src/crypto/crypto_validator.c -o obj/crypto/crypto_validator.o
+gcc -Wall -Wextra -std=c99 -g -O2 -fPIC -c src/persistence/data_persistence.c -o obj/persistence/data_persistence.o
+In file included from src/persistence/../debug/forensic_logger.h:8,
+                 from src/persistence/data_persistence.c:4:
+src/persistence/../debug/../common/common_types.h:10:9: warning: "MAX_STORAGE_PATH_LENGTH" redefined
+   10 | #define MAX_STORAGE_PATH_LENGTH 512
+      |         ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from src/persistence/data_persistence.c:1:
+src/persistence/data_persistence.h:9:9: note: this is the location of the previous definition
+    9 | #define MAX_STORAGE_PATH_LENGTH 1024
+      |         ^~~~~~~~~~~~~~~~~~~~~~~
+gcc -Wall -Wextra -std=c99 -g -O2 -fPIC -c src/persistence/transaction_wal_extension.c -o obj/persistence/transaction_wal_extension.o
+gcc -Wall -Wextra -std=c99 -g -O2 -fPIC -c src/persistence/recovery_manager_extension.c -o obj/persistence/recovery_manager_extension.o
+src/persistence/data_persistence.c: In function ‘persistence_context_create’:
+src/persistence/data_persistence.c:66:45: warning: ‘%s’ directive output may be truncated writing up to 1023 bytes into a region of size 532 [-Wformat-truncation=]
+   66 |     snprintf(test_file, sizeof(test_file), "%s/.write_test", ctx->storage_directory);
+      |                                             ^~
+src/persistence/data_persistence.c:66:5: note: ‘snprintf’ output between 13 and 1036 bytes into a destination of size 532
+   66 |     snprintf(test_file, sizeof(test_file), "%s/.write_test", ctx->storage_directory);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/persistence/data_persistence.c: In function ‘persistence_save_lum’:
+src/persistence/data_persistence.c:307:48: warning: ‘%s’ directive output may be truncated writing up to 509 bytes into a region of size between 2 and 511 [-Wformat-truncation=]
+  307 |     snprintf(full_path, sizeof(full_path), "%s/%s", ctx->storage_directory, filename);
+      |                                                ^~
+src/persistence/data_persistence.c:307:5: note: ‘snprintf’ output between 2 and 1020 bytes into a destination of size 512
+  307 |     snprintf(full_path, sizeof(full_path), "%s/%s", ctx->storage_directory, filename);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -Wall -Wextra -std=c99 -g -O2 -fPIC -c src/optimization/memory_optimizer.c -o obj/optimization/memory_optimizer.o
+src/persistence/data_persistence.c: In function ‘persistence_load_lum’:
+src/persistence/data_persistence.c:386:48: warning: ‘%s’ directive output may be truncated writing up to 509 bytes into a region of size between 2 and 511 [-Wformat-truncation=]
+  386 |     snprintf(full_path, sizeof(full_path), "%s/%s", ctx->storage_directory, filename);
+      |                                                ^~
+src/persistence/data_persistence.c:386:5: note: ‘snprintf’ output between 2 and 1020 bytes into a destination of size 512
+  386 |     snprintf(full_path, sizeof(full_path), "%s/%s", ctx->storage_directory, filename);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/persistence/data_persistence.c: In function ‘persistence_save_group’:
+src/persistence/data_persistence.c:483:48: warning: ‘%s’ directive output may be truncated writing up to 509 bytes into a region of size between 2 and 511 [-Wformat-truncation=]
+  483 |     snprintf(full_path, sizeof(full_path), "%s/%s", ctx->storage_directory, filename);
+      |                                                ^~
+src/persistence/data_persistence.c:483:5: note: ‘snprintf’ output between 2 and 1020 bytes into a destination of size 512
+  483 |     snprintf(full_path, sizeof(full_path), "%s/%s", ctx->storage_directory, filename);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/persistence/data_persistence.c: In function ‘persistence_load_group’:
+src/persistence/data_persistence.c:582:48: warning: ‘%s’ directive output may be truncated writing up to 509 bytes into a region of size between 2 and 511 [-Wformat-truncation=]
+  582 |     snprintf(full_path, sizeof(full_path), "%s/%s", ctx->storage_directory, filename);
+      |                                                ^~
+src/persistence/data_persistence.c:582:5: note: ‘snprintf’ output between 2 and 1020 bytes into a destination of size 512
+  582 |     snprintf(full_path, sizeof(full_path), "%s/%s", ctx->storage_directory, filename);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from src/persistence/../debug/forensic_logger.h:8,
+                 from src/persistence/transaction_wal_extension.c:12:
+src/persistence/../debug/../common/common_types.h:10:9: warning: "MAX_STORAGE_PATH_LENGTH" redefined
+   10 | #define MAX_STORAGE_PATH_LENGTH 512
+      |         ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from src/persistence/transaction_wal_extension.h:4,
+                 from src/persistence/transaction_wal_extension.c:4:
+src/persistence/data_persistence.h:9:9: note: this is the location of the previous definition
+    9 | #define MAX_STORAGE_PATH_LENGTH 1024
+      |         ^~~~~~~~~~~~~~~~~~~~~~~
+gcc -Wall -Wextra -std=c99 -g -O2 -fPIC -c src/optimization/pareto_optimizer.c -o obj/optimization/pareto_optimizer.o
+gcc -Wall -Wextra -std=c99 -g -O2 -fPIC -c src/optimization/pareto_inverse_optimizer.c -o obj/optimization/pareto_inverse_optimizer.o
+src/lum/lum_core.c: In function ‘lum_group_process_batch_50m_optimized’:
+src/lum/lum_core.c:675:14: error: ‘LUM_BATCH_REBALANCE’ undeclared (first use in this function)
+  675 |         case LUM_BATCH_REBALANCE:
+      |              ^~~~~~~~~~~~~~~~~~~
+src/lum/lum_core.c:675:14: note: each undeclared identifier is reported only once for each function it appears in
+src/lum/lum_core.c:689:14: error: ‘LUM_BATCH_OPTIMIZE_MEMORY’ undeclared (first use in this function)
+  689 |         case LUM_BATCH_OPTIMIZE_MEMORY:
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~
+src/lum/lum_core.c:692:31: error: ‘lum_t’ has no member named ‘zone_id’
+  692 |                 group->lums[i].zone_id = (group->lums[i].zone_id % 1000) + 1;
+      |                               ^
+src/lum/lum_core.c:692:57: error: ‘lum_t’ has no member named ‘zone_id’
+  692 |                 group->lums[i].zone_id = (group->lums[i].zone_id % 1000) + 1;
+      |                                                         ^
+make: *** [Makefile:117: obj/lum/lum_core.o] Error 1
+make: *** Waiting for unfinished jobs....
+src/optimization/pareto_optimizer.c: In function ‘calculate_system_efficiency’:
+src/optimization/pareto_optimizer.c:23:5: error: implicit declaration of function ‘clock_gettime’ [-Wimplicit-function-declaration]
+   23 |     clock_gettime(CLOCK_REALTIME, &ts);
+      |     ^~~~~~~~~~~~~
+src/optimization/pareto_optimizer.c:23:19: error: ‘CLOCK_REALTIME’ undeclared (first use in this function)
+   23 |     clock_gettime(CLOCK_REALTIME, &ts);
+      |                   ^~~~~~~~~~~~~~
+src/optimization/pareto_optimizer.c:23:19: note: each undeclared identifier is reported only once for each function it appears in
+src/optimization/pareto_optimizer.c: In function ‘get_microseconds’:
+src/optimization/pareto_optimizer.c:84:23: error: ‘CLOCK_MONOTONIC’ undeclared (first use in this function)
+   84 |     if (clock_gettime(CLOCK_MONOTONIC, &ts) == 0) {
+      |                       ^~~~~~~~~~~~~~~
+src/optimization/pareto_optimizer.c:90:31: error: ‘CLOCK_REALTIME’ undeclared (first use in this function)
+   90 |             if (clock_gettime(CLOCK_REALTIME, &ts) == 0) {
+      |                               ^~~~~~~~~~~~~~
+src/optimization/pareto_optimizer.c: In function ‘calculate_adaptive_weights’:
+src/optimization/pareto_optimizer.c:272:19: error: ‘CLOCK_REALTIME’ undeclared (first use in this function)
+  272 |     clock_gettime(CLOCK_REALTIME, &ts);
+      |                   ^~~~~~~~~~~~~~
+make: *** [Makefile:141: obj/optimization/pareto_optimizer.o] Error 1
+❌ Échec compilation - arrêt du processus
+~/workspace$ 

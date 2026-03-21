@@ -1,0 +1,24 @@
+{
+  "version": "v1",
+  "description": "Common protocol scaffold for software-only competitor benchmarks.",
+  "required_metrics": [
+    "throughput_nqubits_per_sec",
+    "latency_p95_ns",
+    "latency_p99_ns",
+    "max_memory_mb",
+    "fidelity_proxy",
+    "success_rate"
+  ],
+  "competitors": [
+    {"name": "cuQuantum", "method": "state_vector_gpu", "target_qubits": "36-40+"},
+    {"name": "Qiskit Aer", "method": "state_vector_cpu_gpu", "target_qubits": "30-40"},
+    {"name": "Tensor Network MPS", "method": "tensor_network", "target_qubits": "100+ (structured circuits)"},
+    {"name": "Intel Quantum Simulator", "method": "state_vector_mpi", "target_qubits": "~40"},
+    {"name": "Qulacs/mpiQulacs", "method": "state_vector_cpu_hpc", "target_qubits": "36+"},
+    {"name": "QuEST", "method": "state_vector_hpc", "target_qubits": "30-35"},
+    {"name": "MQT DDSIM", "method": "decision_diagram", "target_qubits": "variable"},
+    {"name": "Qrack", "method": "state_vector_approx_gpu", "target_qubits": "~30"},
+    {"name": "ProjectQ", "method": "state_vector", "target_qubits": "~30"},
+    {"name": "QuTiP", "method": "open_quantum_systems", "target_qubits": "variable"}
+  ]
+}

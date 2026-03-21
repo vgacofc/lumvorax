@@ -1,0 +1,103 @@
+Tu es un agent d’exécution DevOps/DataOps dans le repo /workspace/Lumvorax.
+Objectif: exécuter le pipeline Replit V3, pousser le notebook Kaggle V4, récupérer les outputs/logs Kaggle, attendre 59 secondes, et tout stocker dans un nouveau dossier local.
+
+CONTRAINTES IMPORTANTES
+1) Priorité Replit d’abord, ensuite Kaggle.
+2) Créer un nouveau dossier de collecte dans le même repo:
+   src/advanced_calculations/quantum_simulator_v4_kaggle_pack/replit_kaggle_run_<timestamp_utc>/
+3) Journaliser TOUTES les commandes exécutées dans:
+   <run_dir>/execution_commands.log
+4) Si Kaggle API/token indisponible, ne pas bloquer:
+   - écrire l’erreur complète dans <run_dir>/kaggle_error.log
+   - continuer la collecte locale des artefacts Replit.
+5) Attendre exactement 59 secondes avant la récupération finale des outputs/logs Kaggle.
+6) Ne modifier aucun fichier officiel hors dossiers staging/v4_kaggle_pack.
+
+ETAPES A EXECUTER
+
+A. Préparation
+- set -euo pipefail
+- cd /workspace/Lumvorax
+- RUN_ID=$(date -u +%Y%m%d_%H%M%S)
+- RUN_DIR="src/advanced_calculations/quantum_simulator_v4_kaggle_pack/replit_kaggle_run_${RUN_ID}"
+- mkdir -p "$RUN_DIR"
+- exec > >(tee -a "$RUN_DIR/execution_commands.log") 2>&1
+- echo "RUN_DIR=$RUN_DIR"
+
+B. Exécution pipeline Replit V3 (référence)
+- Lancer:
+  bash src/advanced_calculations/quantum_simulator_v3_staging/run_on_replit_v3.sh /workspace/Lumvorax 30 360 1400
+- Capturer le dernier dossier généré:
+  LAST_V3_RUN=$(ls -1dt src/advanced_calculations/quantum_simulator_v3_staging/results/* | head -n1)
+- Copier les artefacts vers RUN_DIR/replit_v3_results/
+  mkdir -p "$RUN_DIR/replit_v3_results"
+  cp -r "$LAST_V3_RUN"/. "$RUN_DIR/replit_v3_results/"
+
+C. Notebook Kaggle V4
+- Regénérer le notebook:
+  python src/advanced_calculations/quantum_simulator_v4_kaggle_pack/tools/generate_kaggle_notebook_v4.py
+- Copier notebook dans RUN_DIR/notebook/
+  mkdir -p "$RUN_DIR/notebook"
+  cp src/advanced_calculations/quantum_simulator_v4_kaggle_pack/notebook/lumvorax_quantum_v4_kaggle.ipynb "$RUN_DIR/notebook/"
+
+D. Push Kaggle (si API dispo)
+- Vérifier:
+  if [ -f "$HOME/.kaggle/kaggle.json" ] || [ -n "${KAGGLE_USERNAME:-}" ]; then
+      echo "Kaggle credentials detected"
+    else
+      echo "Kaggle credentials missing" | tee "$RUN_DIR/kaggle_error.log"
+    fi
+- Si credentials présents:
+  1) Créer dossier submission:
+     KDIR="$RUN_DIR/kaggle_submission"
+     mkdir -p "$KDIR"
+     cp "$RUN_DIR/notebook/lumvorax_quantum_v4_kaggle.ipynb" "$KDIR/"
+  2) Créer metadata notebook simplifiée:
+     cat > "$KDIR/kernel-metadata.json" << 'JSON'
+     {
+       "id": "lumc01/lumvorax-quantum-v4",
+       "title": "Lumvorax Quantum V4",
+       "code_file": "lumvorax_quantum_v4_kaggle.ipynb",
+       "language": "python",
+       "kernel_type": "notebook",
+       "is_private": true,
+       "enable_gpu": true,
+       "enable_internet": true,
+       "dataset_sources": [],
+       "competition_sources": [],
+       "kernel_sources": []
+     }
+JSON
+  3) Push:
+     kaggle kernels push -p "$KDIR" | tee "$RUN_DIR/kaggle_push.log"
+
+E. Attente obligatoire
+- sleep 59
+
+F. Récupération outputs/logs Kaggle
+- Si credentials présents:
+  1) Essayer pull notebook:
+     kaggle kernels pull lumc01/lumvorax-quantum-v4 -p "$RUN_DIR/kaggle_pull" | tee "$RUN_DIR/kaggle_pull.log" || true
+  2) Capturer status:
+     kaggle kernels status lumc01/lumvorax-quantum-v4 | tee "$RUN_DIR/kaggle_status.log" || true
+- Sinon:
+  echo "Skip pull/status: no Kaggle credentials" | tee -a "$RUN_DIR/kaggle_error.log"
+
+G. Rapport final local
+- Générer un résumé:
+  cat > "$RUN_DIR/summary.md" << EOF
+# Replit + Kaggle Run Summary
+- run_dir: $RUN_DIR
+- replit_v3_run: ${LAST_V3_RUN:-N/A}
+- kaggle_credentials: $( [ -f "$HOME/.kaggle/kaggle.json" ] || [ -n "${KAGGLE_USERNAME:-}" ] && echo yes || echo no )
+- wait_seconds: 59
+- notes:
+  - Replit V3 exécuté en priorité.
+  - Outputs/logs copiés localement.
+  - Kaggle exécuté si credentials disponibles.
+EOF
+
+H. Afficher les chemins finaux
+- echo "DONE"
+- echo "Artifacts in: $RUN_DIR"
+- find "$RUN_DIR" -maxdepth 3 -type f | sort

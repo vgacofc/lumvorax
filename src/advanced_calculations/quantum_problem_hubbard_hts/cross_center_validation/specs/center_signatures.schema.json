@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "center_signatures",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["cluster_id", "result_hash", "execution_signature"],
+    "properties": {
+      "cluster_id": {"type": "string"},
+      "result_hash": {"type": "string"},
+      "execution_signature": {"type": "string"},
+      "metadata": {"type": "object"}
+    }
+  }
+}

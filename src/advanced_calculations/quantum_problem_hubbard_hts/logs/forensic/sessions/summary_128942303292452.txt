@@ -1,0 +1,35 @@
+=== RAPPORT RÉSUMÉ FORENSIQUE ULTRA-STRICT v3.0 ===
+Timestamp: 128942303292452 | Modules: 26
+
+Hardware final: cpu_delta=33.33% mem_used=69.85% rss=7336KB peak=10052KB
+
+  hubbard_hts_advanced_parallel: metrics=1 ops=0 anomalies=0 mem=0
+  simulate_adv: metrics=7615434 ops=0 anomalies=3 mem=0
+  sign_problem_module: metrics=45 ops=0 anomalies=0 mem=0
+  worm_mc_ultra: metrics=8 ops=0 anomalies=0 mem=0
+  pt_mc_therm: metrics=760114 ops=0 anomalies=0 mem=0
+  pt_mc: metrics=390 ops=0 anomalies=0 mem=0
+  pt_mc_swap_detail: metrics=10640000 ops=0 anomalies=0 mem=0
+  pt_mc_vs_mc: metrics=304 ops=0 anomalies=0 mem=0
+  ed_validation_2x2: metrics=8 ops=0 anomalies=0 mem=0
+  von_neumann: metrics=90 ops=0 anomalies=0 mem=0
+  benchmark_adv: metrics=6 ops=0 anomalies=0 mem=0
+  tr_research_execution_log: metrics=1 ops=0 anomalies=0 mem=0
+  tr_baseline_reanalysis: metrics=1 ops=0 anomalies=0 mem=0
+  tr_new_tests_results: metrics=1 ops=0 anomalies=0 mem=0
+  tr_expert_questions_matrix: metrics=1 ops=0 anomalies=0 mem=0
+  tr_provenance_log: metrics=1 ops=0 anomalies=0 mem=0
+  tr_benchmark_qmc_dmrg: metrics=1 ops=0 anomalies=0 mem=0
+  tr_benchmark_ext_modules: metrics=1 ops=0 anomalies=0 mem=0
+  tr_module_metadata: metrics=1 ops=0 anomalies=0 mem=0
+  tr_detailed_trace: metrics=1 ops=0 anomalies=0 mem=0
+  tr_nstab: metrics=1 ops=0 anomalies=0 mem=0
+  tr_toy_cases: metrics=1 ops=0 anomalies=0 mem=0
+  tr_temporal_series: metrics=1 ops=0 anomalies=0 mem=0
+  tr_comparison_report: metrics=1 ops=0 anomalies=0 mem=0
+  tr_tc_estimation_ptmc: metrics=1 ops=0 anomalies=0 mem=0
+  tr_thermodynamic_limit_extrap: metrics=1 ops=0 anomalies=0 mem=0
+
+Totaux: metrics=19016415 ops=0 anomalies=3
+
+=== FIN RAPPORT RÉSUMÉ ===

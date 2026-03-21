@@ -1,0 +1,87 @@
+6.5s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+6.5s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+6.5s 3 0.00s - to python to disable frozen modules.
+6.5s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+7.1s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+7.1s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+7.1s 7 0.00s - to python to disable frozen modules.
+7.1s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+10.0s 9 Looking in links: /kaggle/input/nx47-dependencies
+10.1s 10 Processing /kaggle/input/nx47-dependencies/imagecodecs-2026.1.14-cp311-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl
+10.2s 11 Looking in links: /kaggle/input/nx47-dependencies
+10.2s 12 Processing /kaggle/input/nx47-dependencies/imagecodecs-2026.1.14-cp311-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl
+10.6s 13 Requirement already satisfied: numpy in /usr/local/lib/python3.12/dist-packages (from imagecodecs) (2.0.2)
+10.8s 14 Requirement already satisfied: numpy in /usr/local/lib/python3.12/dist-packages (from imagecodecs) (2.0.2)
+12.5s 15 Installing collected packages: imagecodecs
+12.7s 16 Installing collected packages: imagecodecs
+13.0s 17 Successfully installed imagecodecs-2026.1.14
+13.3s 18 Successfully installed imagecodecs-2026.1.14
+14.1s 19 Looking in links: /kaggle/input/nx47-dependencies
+14.1s 20 Requirement already satisfied: tifffile in /usr/local/lib/python3.12/dist-packages (2025.10.16)
+14.1s 21 Requirement already satisfied: numpy in /usr/local/lib/python3.12/dist-packages (from tifffile) (2.0.2)
+14.3s 22 Looking in links: /kaggle/input/nx47-dependencies
+14.3s 23 Requirement already satisfied: tifffile in /usr/local/lib/python3.12/dist-packages (2025.10.16)
+14.3s 24 Requirement already satisfied: numpy in /usr/local/lib/python3.12/dist-packages (from tifffile) (2.0.2)
+18.7s 25 [1771420660117207566][SEQ:000001] LOGGER_INIT {"gpu": true}
+18.7s 26 [1771420660150577546][SEQ:000001][SYSTEM][a78785b8e53f6bca] LOGGER_V28_INIT | DATA: {"session": "cdffa7284d7d4c78"}
+18.9s 27 [1771420660151732338][SEQ:000002] NX47_OK {}
+18.9s 28 [1771420660168252069][SEQ:000003] AIMO3_OK {}
+19.2s 29 [1771420660383189268][SEQ:000004] FILES_READY {"count": 1}
+22.0s 30 [1771420663379283635][SEQ:000002][INFO][c1439aa04c85d892] BLOC1_START: Performance brute CPU/Mémoire
+22.0s 31 [1771420663380324892][SEQ:000003][INFO][cfe002ea92858277] BLOC1_TEST_CREATE_DESTROY: iterations=10000
+22.0s 32 [1771420663396222827][SEQ:000004][METRIC][912ce07a2e415526] METRIC: B1_CREATE_DESTROY_OPS_SEC=1292959.3836204028ops/s
+22.0s 33 [1771420663397171011][SEQ:000005][METRIC][fa27983e3a48dd7c] METRIC: B1_CREATE_DESTROY_MEAN=773.4195ns
+22.0s 34 [1771420663398129183][SEQ:000006][INFO][2524c539ab404844] BLOC1_TEST_MOVE: size=1024, iterations=5000
+22.0s 35 [1771420663402009789][SEQ:000007][METRIC][eed4cfc04c183a08] METRIC: B1_MOVE_THROUGHPUT=3.3312729756986235GB/s
+22.0s 36 [1771420663402978726][SEQ:000008][INFO][4eec6791ea45e7f2] BLOC1_TEST_FUSE: n_elements=100, iterations=1000
+22.0s 37 [1771420663435309337][SEQ:000009][METRIC][73e827967ec48b2a] METRIC: B1_FUSE_ELEM_SEC=9371261.45238434elem/s
+22.0s 38 [1771420663436109237][SEQ:000010][INFO][82df06452a54b9b1] BLOC1_TEST_SPLIT: size=4096, splits=8, iterations=1000
+22.0s 39 [1771420663439196983][SEQ:000011][METRIC][00d7caed1c81b2e2] METRIC: B1_SPLIT_PER_SEC=5391638.512204311splits/s
+22.0s 40 [1771420663440077496][SEQ:000012][INFO][ae49256afaac2db9] BLOC1_TEST_ALIGN_AB: size=8192, iterations=2000
+22.3s 41 [1771420663776305761][SEQ:000013][METRIC][9220f4caf792dbc1] METRIC: B1_ALIGN_SPEEDUP=0.6708206123054716x
+22.3s 42 [1771420663777266418][SEQ:000014][INFO][0e0f757fa3b65de2] BLOC1_TEST_SCALING: base_work=10000, threads=[1, 2, 4]
+22.4s 43 [1771420663781351610][SEQ:000015][METRIC][ffd10a87ebd0be83] METRIC: B1_SCALING_2T_EFF=55.90944708359861%
+22.4s 44 [1771420663782138260][SEQ:000016][INFO][02a89db2ba2437bd] BLOC1_COMPLETE | DATA: {"tests": 6}
+22.4s 45 [1771420663782853050 ns][AUDIT] SOLVER_INIT: sum all values
+22.5s 46 [1771420663814646367][SEQ:000005] FUSION_SCORE_GLOBAL {"file": "1407735.tif", "score": 0.0}
+27.7s 47 [1771420668964950296][SEQ:000006] FILE_DONE {"file": "1407735.tif", "checksum": "1ffbed07500aba29", "slices": 320}
+27.9s 48 
+27.9s 49 ===== SLICE SUMMARY (ALL FILES) =====
+27.9s 50 latency_ms                                 fusion_score            \
+27.9s 51 count       mean       min        max        count mean  min
+27.9s 52 file
+27.9s 53 1407735.tif        320  13.962458  8.386568  1172.5619          320  0.0  0.0
+27.9s 54 
+27.9s 55 weight            ...       p_hi             p_lo             \
+27.9s 56 max  count      mean  ...        min        max count       mean
+27.9s 57 file                               ...
+27.9s 58 1407735.tif  0.0    320  0.181828  ...  90.633904  92.407372   320  85.542331
+27.9s 59 
+27.9s 60 w_mean
+27.9s 61 min        max  count      mean       min       max
+27.9s 62 file
+27.9s 63 1407735.tif  84.633904  86.407372    320  0.109108  0.098496  0.120121
+27.9s 64 
+27.9s 65 [1 rows x 24 columns]
+27.9s 66 
+27.9s 67 ===== GLOBAL SLICE MEAN (ALL FILES) =====
+27.9s 68 13.962458403124998 ms
+27.9s 69 
+27.9s 70 ===== FILE CHECKSUMS =====
+27.9s 71 file         checksum  slices
+27.9s 72 1407735.tif 1ffbed07500aba29     320
+27.9s 73 [1771420669286661814][SEQ:000007] SUBMISSION_READY {"zip": "/kaggle/working/submission.zip"}
+27.9s 74 [1771420669286722745][SEQ:000008] EXEC_COMPLETE {}
+27.9s 75 READY: /kaggle/working/submission.zip
+30.3s 76 /usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+30.3s 77 cells[i][c] = re.sub('\\\\\|', '|', cell)
+30.4s 78 /usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+30.4s 79 text = re.sub(r'_', '\_', text) # Escape underscores in display text
+31.2s 80 /usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=["remove_papermill_header.RemovePapermillHeader"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.
+31.2s 81 warn(
+31.2s 82 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+31.6s 83 [NbConvertApp] Writing 18257 bytes to __notebook__.ipynb
+34.0s 84 /usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=["nbconvert.preprocessors.ExtractOutputPreprocessor"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.
+34.0s 85 warn(
+34.0s 86 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+34.8s 87 [NbConvertApp] Writing 323994 bytes to __results__.html

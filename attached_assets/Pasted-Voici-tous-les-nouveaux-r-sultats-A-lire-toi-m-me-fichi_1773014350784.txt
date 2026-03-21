@@ -1,0 +1,36 @@
+Voici tous les nouveaux résultats. A lire toi même fichier par fichier, ligne par ligne, de la première a la dernière ligne  pour me produire ton rapport dans le même répertoire sans toucher aux anciens : src/advanced_calculations/quantum_problem_hubbard_hts/results/research_20260308T233331Z_840
+
+Pour valider ou invalider les nouveaux tests de la dernière correction . 
+lecture directe des CSV/logs du dépôt local, extraction manuelle des résultats, et interprétation module par module.
+Si tu veux, au prochain message je peux te donner une version encore plus “forensique”, avec :
+* classement complet par risque numérique,
+* score de confiance par module,
+* tableau “question ouverte → test ciblé à lancer” (sans exécution).
+
+Et inclus tout les détails dans j’aurais oublier de précisé à inclure! 
+
+
+Arrête de faire des simples résumés quand tu ne me réponds pas. Je veux des réponses complètes, ultra-détaillées et explicatives pour comprendre de quoi tu parles exactement. Et quels sont les résultats par rapport à chaque problème ? Combien de pourcentage exactement par résultat ? Je ne veux plus de simples résumés ! état d'avancement pour chaque simulation de c’est résultat en pourcentage, combien il reste pour pouvoir compléter et valider les solutions. Et applique une bonne fois pour toutes tout ce qui doit être appliqué. Pour des nom expert una que tu a resté répondu pour des expert ( tu traduit en langage pédagogique et explication desdes erreur et  solutions ) Arrête de faire les choses petit par petit. Faites tout en une seule fois, simultanément . quel sont tout les nouvelles chose non intégrée de c’est analyses  avec les explications comme demander ci haut! 
+
+Je voudrais aussi que que tu m’explique comment dans un cours complet pédagogique pout chacun des problèmes individuellement qui ne passé passe pas pour les problèmes de benchmark. Pour que je puise comprendre ce qui bloque et ce qui faut faire pour débloquer ces problèmes avec des c’est à dire ? Pour chacun. Des donc? Pour chacun. Des conclusions ? Pour chacun, et des résumés ? Pour chacun et de me pour chaque observed, les points fort et faire des résultats, les autres critiques 
+Ta réponse dans un nouveau fichier sans touche au ancien! 
+
+pour m’expliquer toutes ces phrases et nom et termes techniques pédagogiques clairement comme dans un cour déboutant,  quel sont toutes les questions que des expert dans les domaines poserait ? Quel sont les réponses que les résultats en reveler? Quel sont tous les découvertes inconnues a ce domaines et anomalie, les explications a des questions qui navais pas de réponse claire et inconnue de la littérature du domaine ? Et comparaison avec les résultats disponibles en ligne des simulations existantes et leur nom actuel et connaissance littérature du domaine. Quel sont toutes les questions et nouveaux test a réalisé en utilisant cette simulation pour répondre à toutes ces questions ?
+Quel sont tout les algorithmes utilisé et quoi il serve exactement pour chaque simulation? 
+
+(1. Structure de base pour chaque problème et réponse er solution.
+
+Introduction (thèse + contexte)
+
+Développement (argumentation)
+
+Conclusion (solution + clôture)
+
+2. Connecteurs corrects. 
+Utilisez des mots qui relient les idées :
+
+De plus, en outre, également, de même
+
+Opposition : cependant, néanmoins, pourtant
+
+Conclusion : donc, ainsi, de cette manière)

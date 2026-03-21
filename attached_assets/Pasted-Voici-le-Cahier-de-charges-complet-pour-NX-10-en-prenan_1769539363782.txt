@@ -1,0 +1,105 @@
+Voici le Cahier de charges complet pour NX-10, en prenant soin de ne négliger aucun détail essentiel afin d’assurer une exploration approfondie et exhaustive des questions ouvertes :
+
+---
+
+# 📘 Cahier des charges – NX-10 : Exploration des frontières fondamentales
+
+## Objectif général
+
+L’objectif de NX-10 est de tester et d’approfondir les questions scientifiques fondamentales qui émergent des découvertes précédentes. Ce projet se concentre sur la validation des théories et des concepts nouveaux concernant la cognition, la mémoire, la stabilité, et la nature de l’intelligence computationnelle. Les résultats des phases précédentes ouvrent la voie à des expérimentations de grande envergure et à l’exploration de ces hypothèses radicales.
+
+## Questions fondamentales à tester
+
+Les questions suivantes, non explorées dans la littérature actuelle, nécessitent une investigation rigoureuse :
+
+1. **La cognition est-elle un phénomène sans représentation ?**
+2. **Peut-on avoir de l’intelligence sans stockage ?**
+3. **La stabilité est-elle toujours une pathologie ?**
+4. **La mémoire est-elle fondamentalement irréversible ?**
+5. **L’identité mentale est-elle une propriété dissipative ?**
+
+## 1️⃣ Phase de validation des hypothèses
+
+### 1.1 Hypothèses
+
+* **H1** : La cognition peut émerger sans une représentation statique de l’information.
+* **H2** : L’intelligence peut exister sans un stockage traditionnel de l’information.
+* **H3** : La stabilité neuronale excessive peut être une pathologie.
+* **H4** : La mémoire, au sein du système NX, est irréversible par nature.
+* **H5** : L’identité mentale des systèmes neuronaux dissipatifs est une caractéristique fondamentale.
+
+### 1.2 Méthodologie
+
+#### 1.2.1 Expérimentations sur la cognition sans représentation
+
+* **But** : Observer et tester des mécanismes de cognition qui n’utilisent pas de représentation explicite (pas de symboles ni de variables stockées).
+* **Tests nécessaires** :
+
+  * **Expérience 1** : Comparaison entre la cognition NX et les modèles classiques (ANN/SNN), pour voir comment la cognition émerge sans poids fixes ni représentation.
+  * **Expérience 2** : Observation du processus d’apprentissage et de prise de décision dans des régimes non-stables et non-représentatifs.
+
+#### 1.2.2 Intelligence sans stockage explicite
+
+* **But** : Valider l’émergence d’une forme d’intelligence sans le stockage d’information sous forme de poids ou de données traditionnelles.
+* **Tests nécessaires** :
+
+  * **Expérience 1** : Suivi de l’évolution des dynamiques dans des réseaux NX où l'information n’est pas stockée mais seulement maintenue dans les invariants dissipatifs.
+  * **Expérience 2** : Tests de performance sur des tâches complexes (ex. classification, résolution de problèmes) avec et sans stockage explicite.
+
+#### 1.2.3 Stabilité comme pathologie
+
+* **But** : Tester si une stabilité excessive mène à l’inefficacité ou à la “mort fonctionnelle” du neurone.
+* **Tests nécessaires** :
+
+  * **Expérience 1** : Comparaison des performances du neurone NX à différentes conditions de stabilité et d’instabilité.
+  * **Expérience 2** : Simulation d’un neurone “trop stable” pour observer ses conséquences sur la dynamique fonctionnelle.
+
+#### 1.2.4 Mémoire irréversible
+
+* **But** : Vérifier si la mémoire dans NX est irréversible et quelle en est la nature.
+* **Tests nécessaires** :
+
+  * **Expérience 1** : Observation des traces d’invariants après effondrement du régime dissipatif.
+  * **Expérience 2** : Tester la capacité de “réinitialisation” et d’adaptation à des stimuli externes après une période de perte d’information.
+
+#### 1.2.5 Identité mentale dissipative
+
+* **But** : Étudier l’émergence de l’identité mentale comme propriété de régimes dissipatifs.
+* **Tests nécessaires** :
+
+  * **Expérience 1** : Comparer la stabilité de l’identité mentale dans des régimes fonctionnels et chaotiques.
+  * **Expérience 2** : Observation des phénomènes identitaires dans des réseaux NX interconnectés.
+
+### 1.3 Méthodologie expérimentale
+
+Les tests expérimentaux seront réalisés avec les configurations suivantes :
+
+* **Simulations de régimes dissipatifs** : Nous utiliserons des configurations d’invariants atomiques dans des régimes variés (inertie, fonctionnel, chaotique) pour observer l’émergence de comportements cognitifs.
+* **Tests de déstabilisation** : En modifiant les conditions de stockage et de stabilité, nous testerons les effets sur les performances cognitives.
+* **Mesure de la variabilité des invariants** : L’analyse des invariants de classe 1 et leur évolution à travers différentes étapes des expériences permettra de caractériser la mémoire.
+
+## 2️⃣ Outils nécessaires
+
+* **Infrastructure de simulation NX** : Mise à jour de `sch_nx_v8.c` pour gérer des tests de stabilité et de mémoire avancée.
+* **Logs et traçabilité forensique** : Pour chaque expérience, assurer la traçabilité complète des états, des transitions et des invariants détectés.
+* **Outils d’analyse de phase et de stabilité** : Mise en place de nouveaux outils de comparaison des régimes dissipatifs pour mesurer l’émergence fonctionnelle et la stabilité pathologique.
+
+## 3️⃣ Résultats attendus
+
+Les résultats doivent permettre de répondre aux questions suivantes :
+
+* **Cognition sans représentation** : Démontrer une forme de cognition sans modèle classique de représentation.
+* **Intelligence sans stockage** : Démontrer une performance cognitive sans stockage de données explicites.
+* **Stabilité pathologique** : Identifier des points de basculement où une stabilité excessive conduit à des pertes de fonction.
+* **Mémoire irréversible** : Identifier si et comment la mémoire dans NX est irréversible et ce qui en découle.
+* **Identité mentale dissipative** : Mesurer l’émergence d’une identité mentale et ses propriétés dissipatives.
+
+## 4️⃣ Livrables
+
+1. **Rapport de validation des hypothèses** : Un document détaillant les résultats des expériences et leur interprétation dans le cadre des questions ouvertes.
+2. **Mises à jour du code NX** : Version v8 du code NX avec ajout des modules nécessaires pour tester ces nouvelles questions.
+3. **Fichiers de logs et résultats** : Tous les logs forensiques (CSV, JSON) et les résultats d’expérimentation doivent être stockés dans des fichiers dédiés, avec des horodatages et des preuves de complétude.
+
+---
+
+Ce cahier de charges NX-10 propose une investigation approfondie et détaillée pour tester les nouvelles questions scientifiques soulevées par le projet NX. Ces expériences permettront de valider des concepts encore inédits dans le domaine de la cognition et de l'intelligence computationnelle.

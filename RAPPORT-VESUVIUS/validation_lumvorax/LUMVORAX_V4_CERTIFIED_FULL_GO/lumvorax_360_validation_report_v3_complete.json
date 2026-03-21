@@ -1,0 +1,200 @@
+{
+  "report_name": "lumvorax_dependency_360_kaggle_single_cell_v3_complete",
+  "timestamp_ns": 1771695378743499771,
+  "runtime": {
+    "python": "3.12.12 (main, Oct 10 2025, 08:52:57) [GCC 11.4.0]",
+    "platform": "Linux-6.6.113+-x86_64-with-glibc2.35",
+    "cwd": "/kaggle/working",
+    "is_kaggle": true
+  },
+  "policy": {
+    "strict_no_fallback": true,
+    "require_native": true
+  },
+  "events": [
+    {
+      "ts_ns": 1771695378743574549,
+      "step": "dependency_already_installed",
+      "package": "numpy"
+    },
+    {
+      "ts_ns": 1771695378954519261,
+      "step": "dependency_already_installed",
+      "package": "tifffile"
+    },
+    {
+      "ts_ns": 1771695378958704949,
+      "step": "dependency_install_attempt",
+      "package": "imagecodecs",
+      "root": "/kaggle/input/datasets/ndarray2000/nx47-dependencies",
+      "cmd": [
+        "/usr/bin/python3",
+        "-m",
+        "pip",
+        "install",
+        "--disable-pip-version-check",
+        "--no-index",
+        "/kaggle/input/datasets/ndarray2000/nx47-dependencies/imagecodecs-2026.1.14-cp311-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl"
+      ]
+    },
+    {
+      "ts_ns": 1771695384071278746,
+      "step": "dependency_install_ok",
+      "package": "imagecodecs",
+      "root": "/kaggle/input/datasets/ndarray2000/nx47-dependencies"
+    },
+    {
+      "ts_ns": 1771695384099533234,
+      "step": "imports_checked",
+      "imports": {
+        "numpy": true,
+        "tifffile": true,
+        "imagecodecs": true,
+        "pyarrow": true
+      }
+    },
+    {
+      "ts_ns": 1771695384105089305,
+      "step": "dataset_paths_checked",
+      "paths": [
+        {
+          "path": "/kaggle/input/datasets/ndarray2000/nx47-dependencies",
+          "exists": true,
+          "files_count": 30
+        },
+        {
+          "path": "/kaggle/input/nx47-dependencies",
+          "exists": false,
+          "files_count": 0
+        },
+        {
+          "path": "/kaggle/input/lum-vorax-dependencies",
+          "exists": false,
+          "files_count": 0
+        },
+        {
+          "path": "/kaggle/input/lumvorax-dependencies",
+          "exists": false,
+          "files_count": 0
+        }
+      ]
+    },
+    {
+      "ts_ns": 1771695384105106025,
+      "step": "source_dir_missing",
+      "directory": "/kaggle/working/src/lum"
+    },
+    {
+      "ts_ns": 1771695384105133048,
+      "step": "source_dir_missing",
+      "directory": "/kaggle/working/src/file_formats"
+    },
+    {
+      "ts_ns": 1771695384105142776,
+      "step": "source_dir_missing",
+      "directory": "/kaggle/working/src/vorax"
+    },
+    {
+      "ts_ns": 1771695384105152066,
+      "step": "source_dir_missing",
+      "directory": "/kaggle/working/src/logger"
+    },
+    {
+      "ts_ns": 1771695384105161050,
+      "step": "source_dir_missing",
+      "directory": "/kaggle/working/src/debug"
+    },
+    {
+      "ts_ns": 1771695384105173018,
+      "step": "source_dir_missing",
+      "directory": "src/lum"
+    },
+    {
+      "ts_ns": 1771695384105182447,
+      "step": "source_dir_missing",
+      "directory": "src/file_formats"
+    },
+    {
+      "ts_ns": 1771695384105190382,
+      "step": "source_dir_missing",
+      "directory": "src/vorax"
+    },
+    {
+      "ts_ns": 1771695384105197687,
+      "step": "source_dir_missing",
+      "directory": "src/logger"
+    },
+    {
+      "ts_ns": 1771695384105205033,
+      "step": "source_dir_missing",
+      "directory": "src/debug"
+    },
+    {
+      "ts_ns": 1771695384105206263,
+      "step": "header_scan_done",
+      "headers": 0,
+      "functions": 0
+    },
+    {
+      "ts_ns": 1771695384105212878,
+      "step": "fatal_error",
+      "error_type": "RuntimeError",
+      "error": "no_native_headers_found"
+    }
+  ],
+  "install_report": [
+    {
+      "package": "numpy",
+      "status": "already_installed"
+    },
+    {
+      "package": "tifffile",
+      "status": "already_installed"
+    },
+    {
+      "package": "imagecodecs",
+      "status": "installed",
+      "root": "/kaggle/input/datasets/ndarray2000/nx47-dependencies"
+    }
+  ],
+  "imports": {
+    "numpy": true,
+    "tifffile": true,
+    "imagecodecs": true,
+    "pyarrow": true
+  },
+  "dependency_dataset_paths": [
+    {
+      "path": "/kaggle/input/datasets/ndarray2000/nx47-dependencies",
+      "exists": true,
+      "files_count": 30
+    },
+    {
+      "path": "/kaggle/input/nx47-dependencies",
+      "exists": false,
+      "files_count": 0
+    },
+    {
+      "path": "/kaggle/input/lum-vorax-dependencies",
+      "exists": false,
+      "files_count": 0
+    },
+    {
+      "path": "/kaggle/input/lumvorax-dependencies",
+      "exists": false,
+      "files_count": 0
+    }
+  ],
+  "module_inventory": {
+    "summary": {
+      "headers": 0,
+      "functions": 0
+    },
+    "modules": []
+  },
+  "status": "fail",
+  "error_type": "RuntimeError",
+  "error": "no_native_headers_found",
+  "elapsed_ns": 5361715398,
+  "elapsed_s": 5.361715398
+}

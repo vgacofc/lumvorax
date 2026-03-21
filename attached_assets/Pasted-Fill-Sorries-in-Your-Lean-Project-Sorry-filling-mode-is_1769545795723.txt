@@ -1,0 +1,98 @@
+Fill Sorries in Your Lean Project
+
+Sorry filling mode is designed to make filling all the sorries in your lean file simple. Selection option [1] in the menu, and point Aristotle at a file.
+
+Imports
+
+Aristotle automatically understands and handles the dependencies of your file.
+
+    Aristotle will see all files and transitive imports of your file.
+    Aristotle will not see any file that isn't transitively imported. Aristotle doesn't add imports on its own.
+    Aristotle will only modify the contents of the specified file. It will not modify any transitive dependencies.
+
+Guide Aristotle in English within your project.
+
+You can provide natural language hints to guide Aristotle's proof search. Simply include your english proof sketch in the header comment of the theorem, tagged with "PROVIDED SOLUTION". You can make your sketch as general or detailed as you want.
+lean
+
+/--
+Given x, y ∈ [0, π/2], show that cos(sqrt(x ^ 2 + y ^ 2)) ≤ cos x * cos y.
+
+PROVIDED SOLUTION
+Set r := sqrt(x^2 + y^2). If r > π/2, then the inquality holds trivially.
+So consider the case r ≤ π/2. Write x = r cos φ, y = r sin φ.
+Consider the function F(φ) := log(cos(r cos φ)) + log(cos(r sin φ)). Then
+F(0) = F(π/2) = log r, so it suffices to show that for F(φ) ≥ F(0) = F(π/2).
+The derivative of F is F'(φ) = r(sin φ tan(r cos φ) - cos φ tan(r * sin φ)).
+Define G(u) := tan u / u. The derivative of G on (0, π/2) is
+(u - sin u cos u) / (u ^ 2 * (cos u) ^ 2), which is nonnegative on (0, π/2),
+so G is increasing on (0, π/2).
+
+For φ in [0, π/4], we have r * cos φ ≥ r * sin φ, so by monotonicity of G,
+tan(r * cos φ)/(r * cos φ) ≥ tan(r * sin φ)/(r * sin φ). On [π/4, π/2],
+the inequality is reversed. Multiplying this by r^2 cos φ sin φ gives that
+F' is nonnegative on [0, π/4] and nonpositive on [π/4, π/2]. This means that
+for φ in [0, π/4], F(φ) ≥ F(0), and for φ in [π/4, π/2], F(φ) ≥ F(π/2),
+completing the proof.
+-/
+theorem final (x y : ℝ) (hx : 0 ≤ x) (hx' : x ≤ Real.pi / 2) (hy : 0 ≤ y) (hy' : y ≤ Real.pi / 2) :
+    Real.cos (Real.sqrt (x ^ 2 + y ^ 2)) ≤ Real.cos x * Real.cos y := by
+sorry
+
+Aristotle will not see comments inside proof blocks.
+Find Counterexamples and Negations Automatically
+
+Aristotle can disprove statements and find counterexamples, helping you find logical errors, missed edge cases, or even misformalizations. When a statement is false, Aristotle will leave a comment on the theorem with a the counterexample for you to investigate.
+lean
+
+/-
+Aristotle found this block to be false.
+Here is a proof of the negation:
+theorem my_favorite_theorem (k : ℕ) :
+  ∑' n : ℕ, (1 : ℝ) / Nat.choose (n + k + 1) n = 1 + 1 / k := by
+    -- Wait, there's a mistake. We can actually prove the opposite.
+    negate_state;
+    -- Proof starts here:
+    use 0; norm_num;
+    erw [ tsum_eq_zero_of_not_summable ] <;> norm_num;
+    exact_mod_cast mt ( summable_nat_add_iff 1 |> Iff.mp ) Real.not_summable_natCast_inv
+-/
+theorem my_favorite_theorem (k : ℕ) :
+  ∑' n : ℕ, (1 : ℝ) / Nat.choose (n + k + 1) n = 1 + 1 / k := by
+sorry
+
+You can find code for the custom negate_state tactic automatically included in the file header, and below:
+lean
+
+import Mathlib
+open Lean Meta Elab Tactic in
+elab "revert_all" : tactic => do
+  let goals ← getGoals
+  let mut newGoals : List MVarId := []
+  for mvarId in goals do
+    newGoals := newGoals.append [(← mvarId.revertAll)]
+  setGoals newGoals
+
+open Lean.Elab.Tactic in
+macro "negate_state" : tactic => `(tactic|
+  (
+    guard_goal_nums 1
+    revert_all
+    refine @(((by admit) : ∀ {p : Prop}, ¬p → p) ?_)
+    try push_neg
+  )
+)
+
+Working with Data
+
+    Aristotle will not modify your data by default. For example, the below will not be modified:
+
+lean
+
+def foo: Nat := by sorry
+
+    Aristotle will create its own data where needed.
+
+Leaving sorrys Unfilled
+
+By default, Aristotle attempts to fill in all sorries in a file. If you are only interested in Aristotle filling in one (or a few) sorrys, you can replace the others with admit. This could be useful if you have structures and defs that aren't yet complete, or want to get faster results on just one proof.

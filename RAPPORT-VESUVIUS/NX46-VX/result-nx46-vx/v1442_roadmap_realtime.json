@@ -1,0 +1,42 @@
+{
+  "generated_at_ns": 1771964555282140220,
+  "roadmap": [
+    {
+      "name": "discovery",
+      "description": "Validation dataset et assets",
+      "progress_percent": 100.0,
+      "done": true
+    },
+    {
+      "name": "load",
+      "description": "Chargement volume",
+      "progress_percent": 100.0,
+      "done": true
+    },
+    {
+      "name": "features",
+      "description": "Extraction + s\u00e9lection features",
+      "progress_percent": 100.0,
+      "done": true
+    },
+    {
+      "name": "train",
+      "description": "Apprentissage neurone NX-47 L1/L2",
+      "progress_percent": 100.0,
+      "done": true
+    },
+    {
+      "name": "segment",
+      "description": "Probabilit\u00e9 + hysteresis + calibration",
+      "progress_percent": 20.0,
+      "done": false
+    },
+    {
+      "name": "package",
+      "description": "G\u00e9n\u00e9ration submission zip",
+      "progress_percent": 100.0,
+      "done": true
+    }
+  ],
+  "overall_progress_percent": 86.67
+}

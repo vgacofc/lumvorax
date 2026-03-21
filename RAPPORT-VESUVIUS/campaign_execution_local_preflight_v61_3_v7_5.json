@@ -1,0 +1,346 @@
+{
+  "v61_3": [
+    {
+      "run_id": "v61.3-run-01",
+      "returncode": 0,
+      "stdout_tail": [
+        "[1771430888544620673][SEQ:000001] LOGGER_INIT {\"gpu\": false}",
+        "[1771430888545958475][SEQ:000002] NX47_AIMO3_DRYRUN_BYPASS {}",
+        "[1771430888576882459][SEQ:000003] DRY_RUN_EXIT {\"run_tag\": \"v61.3-run-01\", \"note\": \"preflight mode before Kaggle IO scan\"}",
+        "DRY_RUN READY: /tmp/nx47_dry/submission.zip"
+      ],
+      "stderr_tail": [],
+      "params": {
+        "run_id": "v61.3-run-01",
+        "NX47_PCTL_HI_BASE": 87.5,
+        "NX47_PCTL_HI_GAIN": 5.0,
+        "NX47_PCTL_HI_MIN": 87.0,
+        "NX47_PCTL_HI_MAX": 96.0,
+        "NX47_PCTL_LO_GAP": 6.0,
+        "NX47_PCTL_LO_MIN": 80.0
+      }
+    },
+    {
+      "run_id": "v61.3-run-02",
+      "returncode": 0,
+      "stdout_tail": [
+        "[1771430889720359036][SEQ:000001] LOGGER_INIT {\"gpu\": false}",
+        "[1771430889721768964][SEQ:000002] NX47_AIMO3_DRYRUN_BYPASS {}",
+        "[1771430889750467596][SEQ:000003] DRY_RUN_EXIT {\"run_tag\": \"v61.3-run-02\", \"note\": \"preflight mode before Kaggle IO scan\"}",
+        "DRY_RUN READY: /tmp/nx47_dry/submission.zip"
+      ],
+      "stderr_tail": [],
+      "params": {
+        "run_id": "v61.3-run-02",
+        "NX47_PCTL_HI_BASE": 87.5,
+        "NX47_PCTL_HI_GAIN": 6.0,
+        "NX47_PCTL_HI_MIN": 87.0,
+        "NX47_PCTL_HI_MAX": 96.0,
+        "NX47_PCTL_LO_GAP": 6.0,
+        "NX47_PCTL_LO_MIN": 80.0
+      }
+    },
+    {
+      "run_id": "v61.3-run-03",
+      "returncode": 0,
+      "stdout_tail": [
+        "[1771430890890206607][SEQ:000001] LOGGER_INIT {\"gpu\": false}",
+        "[1771430890894922653][SEQ:000002] NX47_AIMO3_DRYRUN_BYPASS {}",
+        "[1771430890923440957][SEQ:000003] DRY_RUN_EXIT {\"run_tag\": \"v61.3-run-03\", \"note\": \"preflight mode before Kaggle IO scan\"}",
+        "DRY_RUN READY: /tmp/nx47_dry/submission.zip"
+      ],
+      "stderr_tail": [],
+      "params": {
+        "run_id": "v61.3-run-03",
+        "NX47_PCTL_HI_BASE": 88,
+        "NX47_PCTL_HI_GAIN": 5.0,
+        "NX47_PCTL_HI_MIN": 87.0,
+        "NX47_PCTL_HI_MAX": 96.0,
+        "NX47_PCTL_LO_GAP": 6.0,
+        "NX47_PCTL_LO_MIN": 80.0
+      }
+    },
+    {
+      "run_id": "v61.3-run-04",
+      "returncode": 0,
+      "stdout_tail": [
+        "[1771430891978086169][SEQ:000001] LOGGER_INIT {\"gpu\": false}",
+        "[1771430891978350823][SEQ:000002] NX47_AIMO3_DRYRUN_BYPASS {}",
+        "[1771430892014313941][SEQ:000003] DRY_RUN_EXIT {\"run_tag\": \"v61.3-run-04\", \"note\": \"preflight mode before Kaggle IO scan\"}",
+        "DRY_RUN READY: /tmp/nx47_dry/submission.zip"
+      ],
+      "stderr_tail": [],
+      "params": {
+        "run_id": "v61.3-run-04",
+        "NX47_PCTL_HI_BASE": 88,
+        "NX47_PCTL_HI_GAIN": 6.0,
+        "NX47_PCTL_HI_MIN": 87.0,
+        "NX47_PCTL_HI_MAX": 96.0,
+        "NX47_PCTL_LO_GAP": 6.0,
+        "NX47_PCTL_LO_MIN": 80.0
+      }
+    },
+    {
+      "run_id": "v61.3-run-05",
+      "returncode": 0,
+      "stdout_tail": [
+        "[1771430893063611903][SEQ:000001] LOGGER_INIT {\"gpu\": false}",
+        "[1771430893065691734][SEQ:000002] NX47_AIMO3_DRYRUN_BYPASS {}",
+        "[1771430893091553573][SEQ:000003] DRY_RUN_EXIT {\"run_tag\": \"v61.3-run-05\", \"note\": \"preflight mode before Kaggle IO scan\"}",
+        "DRY_RUN READY: /tmp/nx47_dry/submission.zip"
+      ],
+      "stderr_tail": [],
+      "params": {
+        "run_id": "v61.3-run-05",
+        "NX47_PCTL_HI_BASE": 88.5,
+        "NX47_PCTL_HI_GAIN": 5.0,
+        "NX47_PCTL_HI_MIN": 87.0,
+        "NX47_PCTL_HI_MAX": 96.0,
+        "NX47_PCTL_LO_GAP": 6.0,
+        "NX47_PCTL_LO_MIN": 80.0
+      }
+    },
+    {
+      "run_id": "v61.3-run-06",
+      "returncode": 0,
+      "stdout_tail": [
+        "[1771430894167693192][SEQ:000001] LOGGER_INIT {\"gpu\": false}",
+        "[1771430894167968370][SEQ:000002] NX47_AIMO3_DRYRUN_BYPASS {}",
+        "[1771430894195735947][SEQ:000003] DRY_RUN_EXIT {\"run_tag\": \"v61.3-run-06\", \"note\": \"preflight mode before Kaggle IO scan\"}",
+        "DRY_RUN READY: /tmp/nx47_dry/submission.zip"
+      ],
+      "stderr_tail": [],
+      "params": {
+        "run_id": "v61.3-run-06",
+        "NX47_PCTL_HI_BASE": 88.5,
+        "NX47_PCTL_HI_GAIN": 6.0,
+        "NX47_PCTL_HI_MIN": 87.0,
+        "NX47_PCTL_HI_MAX": 96.0,
+        "NX47_PCTL_LO_GAP": 6.0,
+        "NX47_PCTL_LO_MIN": 80.0
+      }
+    },
+    {
+      "run_id": "v61.3-run-07",
+      "returncode": 0,
+      "stdout_tail": [
+        "[1771430895256694785][SEQ:000001] LOGGER_INIT {\"gpu\": false}",
+        "[1771430895256926857][SEQ:000002] NX47_AIMO3_DRYRUN_BYPASS {}",
+        "[1771430895284107333][SEQ:000003] DRY_RUN_EXIT {\"run_tag\": \"v61.3-run-07\", \"note\": \"preflight mode before Kaggle IO scan\"}",
+        "DRY_RUN READY: /tmp/nx47_dry/submission.zip"
+      ],
+      "stderr_tail": [],
+      "params": {
+        "run_id": "v61.3-run-07",
+        "NX47_PCTL_HI_BASE": 89,
+        "NX47_PCTL_HI_GAIN": 5.0,
+        "NX47_PCTL_HI_MIN": 87.0,
+        "NX47_PCTL_HI_MAX": 96.0,
+        "NX47_PCTL_LO_GAP": 6.0,
+        "NX47_PCTL_LO_MIN": 80.0
+      }
+    },
+    {
+      "run_id": "v61.3-run-08",
+      "returncode": 0,
+      "stdout_tail": [
+        "[1771430896358864244][SEQ:000001] LOGGER_INIT {\"gpu\": false}",
+        "[1771430896360262571][SEQ:000002] NX47_AIMO3_DRYRUN_BYPASS {}",
+        "[1771430896390269213][SEQ:000003] DRY_RUN_EXIT {\"run_tag\": \"v61.3-run-08\", \"note\": \"preflight mode before Kaggle IO scan\"}",
+        "DRY_RUN READY: /tmp/nx47_dry/submission.zip"
+      ],
+      "stderr_tail": [],
+      "params": {
+        "run_id": "v61.3-run-08",
+        "NX47_PCTL_HI_BASE": 89,
+        "NX47_PCTL_HI_GAIN": 6.0,
+        "NX47_PCTL_HI_MIN": 87.0,
+        "NX47_PCTL_HI_MAX": 96.0,
+        "NX47_PCTL_LO_GAP": 6.0,
+        "NX47_PCTL_LO_MIN": 80.0
+      }
+    },
+    {
+      "run_id": "v61.3-run-09",
+      "returncode": 0,
+      "stdout_tail": [
+        "[1771430897461697759][SEQ:000001] LOGGER_INIT {\"gpu\": false}",
+        "[1771430897461935935][SEQ:000002] NX47_AIMO3_DRYRUN_BYPASS {}",
+        "[1771430897488435726][SEQ:000003] DRY_RUN_EXIT {\"run_tag\": \"v61.3-run-09\", \"note\": \"preflight mode before Kaggle IO scan\"}",
+        "DRY_RUN READY: /tmp/nx47_dry/submission.zip"
+      ],
+      "stderr_tail": [],
+      "params": {
+        "run_id": "v61.3-run-09",
+        "NX47_PCTL_HI_BASE": 89.5,
+        "NX47_PCTL_HI_GAIN": 5.0,
+        "NX47_PCTL_HI_MIN": 87.0,
+        "NX47_PCTL_HI_MAX": 96.0,
+        "NX47_PCTL_LO_GAP": 6.0,
+        "NX47_PCTL_LO_MIN": 80.0
+      }
+    },
+    {
+      "run_id": "v61.3-run-10",
+      "returncode": 0,
+      "stdout_tail": [
+        "[1771430898568090742][SEQ:000001] LOGGER_INIT {\"gpu\": false}",
+        "[1771430898569604452][SEQ:000002] NX47_AIMO3_DRYRUN_BYPASS {}",
+        "[1771430898597013215][SEQ:000003] DRY_RUN_EXIT {\"run_tag\": \"v61.3-run-10\", \"note\": \"preflight mode before Kaggle IO scan\"}",
+        "DRY_RUN READY: /tmp/nx47_dry/submission.zip"
+      ],
+      "stderr_tail": [],
+      "params": {
+        "run_id": "v61.3-run-10",
+        "NX47_PCTL_HI_BASE": 89.5,
+        "NX47_PCTL_HI_GAIN": 6.0,
+        "NX47_PCTL_HI_MIN": 87.0,
+        "NX47_PCTL_HI_MAX": 96.0,
+        "NX47_PCTL_LO_GAP": 6.0,
+        "NX47_PCTL_LO_MIN": 80.0
+      }
+    }
+  ],
+  "v7_5": [
+    {
+      "run_id": "v7.5-run-01",
+      "returncode": 0,
+      "stdout_tail": [
+        "{\"status\": \"dry_run\", \"run_tag\": \"v7.5-run-01\", \"threshold_quantile\": 0.97, \"score_blend_3d_weight\": 0.68, \"z_smoothing_radius\": 2}"
+      ],
+      "stderr_tail": [],
+      "params": {
+        "run_id": "v7.5-run-01",
+        "NX46_THRESHOLD_QUANTILE": 0.97,
+        "NX46_SCORE_BLEND_3D_WEIGHT": 0.68,
+        "NX46_Z_SMOOTHING_RADIUS": 2
+      }
+    },
+    {
+      "run_id": "v7.5-run-02",
+      "returncode": 0,
+      "stdout_tail": [
+        "{\"status\": \"dry_run\", \"run_tag\": \"v7.5-run-02\", \"threshold_quantile\": 0.97, \"score_blend_3d_weight\": 0.72, \"z_smoothing_radius\": 2}"
+      ],
+      "stderr_tail": [],
+      "params": {
+        "run_id": "v7.5-run-02",
+        "NX46_THRESHOLD_QUANTILE": 0.97,
+        "NX46_SCORE_BLEND_3D_WEIGHT": 0.72,
+        "NX46_Z_SMOOTHING_RADIUS": 2
+      }
+    },
+    {
+      "run_id": "v7.5-run-03",
+      "returncode": 0,
+      "stdout_tail": [
+        "{\"status\": \"dry_run\", \"run_tag\": \"v7.5-run-03\", \"threshold_quantile\": 0.972, \"score_blend_3d_weight\": 0.68, \"z_smoothing_radius\": 2}"
+      ],
+      "stderr_tail": [],
+      "params": {
+        "run_id": "v7.5-run-03",
+        "NX46_THRESHOLD_QUANTILE": 0.972,
+        "NX46_SCORE_BLEND_3D_WEIGHT": 0.68,
+        "NX46_Z_SMOOTHING_RADIUS": 2
+      }
+    },
+    {
+      "run_id": "v7.5-run-04",
+      "returncode": 0,
+      "stdout_tail": [
+        "{\"status\": \"dry_run\", \"run_tag\": \"v7.5-run-04\", \"threshold_quantile\": 0.972, \"score_blend_3d_weight\": 0.72, \"z_smoothing_radius\": 2}"
+      ],
+      "stderr_tail": [],
+      "params": {
+        "run_id": "v7.5-run-04",
+        "NX46_THRESHOLD_QUANTILE": 0.972,
+        "NX46_SCORE_BLEND_3D_WEIGHT": 0.72,
+        "NX46_Z_SMOOTHING_RADIUS": 2
+      }
+    },
+    {
+      "run_id": "v7.5-run-05",
+      "returncode": 0,
+      "stdout_tail": [
+        "{\"status\": \"dry_run\", \"run_tag\": \"v7.5-run-05\", \"threshold_quantile\": 0.974, \"score_blend_3d_weight\": 0.68, \"z_smoothing_radius\": 2}"
+      ],
+      "stderr_tail": [],
+      "params": {
+        "run_id": "v7.5-run-05",
+        "NX46_THRESHOLD_QUANTILE": 0.974,
+        "NX46_SCORE_BLEND_3D_WEIGHT": 0.68,
+        "NX46_Z_SMOOTHING_RADIUS": 2
+      }
+    },
+    {
+      "run_id": "v7.5-run-06",
+      "returncode": 0,
+      "stdout_tail": [
+        "{\"status\": \"dry_run\", \"run_tag\": \"v7.5-run-06\", \"threshold_quantile\": 0.974, \"score_blend_3d_weight\": 0.72, \"z_smoothing_radius\": 2}"
+      ],
+      "stderr_tail": [],
+      "params": {
+        "run_id": "v7.5-run-06",
+        "NX46_THRESHOLD_QUANTILE": 0.974,
+        "NX46_SCORE_BLEND_3D_WEIGHT": 0.72,
+        "NX46_Z_SMOOTHING_RADIUS": 2
+      }
+    },
+    {
+      "run_id": "v7.5-run-07",
+      "returncode": 0,
+      "stdout_tail": [
+        "{\"status\": \"dry_run\", \"run_tag\": \"v7.5-run-07\", \"threshold_quantile\": 0.976, \"score_blend_3d_weight\": 0.68, \"z_smoothing_radius\": 2}"
+      ],
+      "stderr_tail": [],
+      "params": {
+        "run_id": "v7.5-run-07",
+        "NX46_THRESHOLD_QUANTILE": 0.976,
+        "NX46_SCORE_BLEND_3D_WEIGHT": 0.68,
+        "NX46_Z_SMOOTHING_RADIUS": 2
+      }
+    },
+    {
+      "run_id": "v7.5-run-08",
+      "returncode": 0,
+      "stdout_tail": [
+        "{\"status\": \"dry_run\", \"run_tag\": \"v7.5-run-08\", \"threshold_quantile\": 0.976, \"score_blend_3d_weight\": 0.72, \"z_smoothing_radius\": 2}"
+      ],
+      "stderr_tail": [],
+      "params": {
+        "run_id": "v7.5-run-08",
+        "NX46_THRESHOLD_QUANTILE": 0.976,
+        "NX46_SCORE_BLEND_3D_WEIGHT": 0.72,
+        "NX46_Z_SMOOTHING_RADIUS": 2
+      }
+    },
+    {
+      "run_id": "v7.5-run-09",
+      "returncode": 0,
+      "stdout_tail": [
+        "{\"status\": \"dry_run\", \"run_tag\": \"v7.5-run-09\", \"threshold_quantile\": 0.978, \"score_blend_3d_weight\": 0.68, \"z_smoothing_radius\": 2}"
+      ],
+      "stderr_tail": [],
+      "params": {
+        "run_id": "v7.5-run-09",
+        "NX46_THRESHOLD_QUANTILE": 0.978,
+        "NX46_SCORE_BLEND_3D_WEIGHT": 0.68,
+        "NX46_Z_SMOOTHING_RADIUS": 2
+      }
+    },
+    {
+      "run_id": "v7.5-run-10",
+      "returncode": 0,
+      "stdout_tail": [
+        "{\"status\": \"dry_run\", \"run_tag\": \"v7.5-run-10\", \"threshold_quantile\": 0.978, \"score_blend_3d_weight\": 0.72, \"z_smoothing_radius\": 2}"
+      ],
+      "stderr_tail": [],
+      "params": {
+        "run_id": "v7.5-run-10",
+        "NX46_THRESHOLD_QUANTILE": 0.978,
+        "NX46_SCORE_BLEND_3D_WEIGHT": 0.72,
+        "NX46_Z_SMOOTHING_RADIUS": 2
+      }
+    }
+  ]
+}

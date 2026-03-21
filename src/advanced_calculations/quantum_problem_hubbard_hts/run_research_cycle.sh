@@ -438,4 +438,20 @@ checkpoint_save 99
 echo "[$(date -u +%Y-%m-%dT%H:%M:%S.%N)Z] Run complet à 100% — checkpoint supprimé"
 rm -f "$CHECKPOINT_PHASE_FILE" "$CHECKPOINT_FILE"
 
+# ── C59-SUPABASE : Upload automatique vers Supabase + suppression locale ──────
+echo "[$(date -u +%Y-%m-%dT%H:%M:%S.%N)Z] [SUPABASE] Upload du run vers Supabase..."
+if python3 "$ROOT_DIR/tools/upload_to_supabase.py" "$RUN_DIR" --delete-after 2>&1; then
+    echo "[$(date -u +%Y-%m-%dT%H:%M:%S.%N)Z] [SUPABASE] Upload fullscale run OK — fichiers locaux supprimés"
+else
+    echo "[$(date -u +%Y-%m-%dT%H:%M:%S.%N)Z] [SUPABASE-WARN] Upload partiel ou échoué — fichiers conservés localement"
+fi
+if [ -n "$ADV_RUN_DIR" ] && [ -d "$ADV_RUN_DIR" ]; then
+    if python3 "$ROOT_DIR/tools/upload_to_supabase.py" "$ADV_RUN_DIR" --delete-after 2>&1; then
+        echo "[$(date -u +%Y-%m-%dT%H:%M:%S.%N)Z] [SUPABASE] Upload advanced run OK — fichiers locaux supprimés"
+    else
+        echo "[$(date -u +%Y-%m-%dT%H:%M:%S.%N)Z] [SUPABASE-WARN] Upload advanced partiel — fichiers conservés localement"
+    fi
+fi
+print_progress "supabase upload + nettoyage local"
+
 echo "[$(date -u +%Y-%m-%dT%H:%M:%S.%N)Z] ===== run_research_cycle.sh TERMINÉ AVEC SUCCÈS ====="

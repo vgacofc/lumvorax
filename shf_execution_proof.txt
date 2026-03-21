@@ -1,0 +1,7 @@
+[SHF] Initialisation de la résonance pour N = 136117223861
+[SHF] RÉSONANCE TROUVÉE : p = 104729, q = 1299709
+[SHF] Métriques réelles :
+ - Itérations : 264210
+ - Temps CPU : 0.001223 s
+ - Débit : 215857843.14 calc/s
+ - RAM : 112.00 bytes

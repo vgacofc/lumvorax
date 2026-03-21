@@ -1,0 +1,43 @@
+Version 17 failed to run after 13.9s
+Accelerator
+
+GPU P100
+Environment
+
+Latest Container Image
+Output
+
+12.68 kB
+Time
+	
+#
+	
+Log Message
+4.2s	1	Processing /kaggle/input/nx47-dependencies/imagecodecs-2026.1.14-cp311-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl
+4.7s	2	Requirement already satisfied: numpy in /usr/local/lib/python3.12/dist-packages (from imagecodecs==2026.1.14) (2.0.2)
+6.6s	3	Installing collected packages: imagecodecs
+7.1s	4	Successfully installed imagecodecs-2026.1.14
+8.9s	5	{
+8.9s	6	  "status": "fail",
+8.9s	7	  "error_type": "RuntimeError",
+8.9s	8	  "error": "native_so_load_enforced_failed: /kaggle/input/nx47-dependencies/liblumvorax.so: undefined symbol: neural_config_create_default",
+8.9s	9	  "report": "/kaggle/working/lumvorax_360_validation_report_v13_strict.json",
+8.9s	10	  "dataset_root": "/kaggle/input/nx47-dependencies",
+8.9s	11	  "native_lib": "/kaggle/input/nx47-dependencies/liblumvorax.so",
+8.9s	12	  "missing_required_packages": [],
+8.9s	13	  "incompatible_required_packages": [],
+8.9s	14	  "so_load_status": null,
+8.9s	15	  "so_symbol_count": 143,
+8.9s	16	  "roundtrip_status": null,
+8.9s	17	  "warnings_count": 0,
+8.9s	18	  "events_count": 6,
+8.9s	19	  "elapsed_ns": 8012940245
+8.9s	20	}
+10.9s	21	/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+10.9s	22	  cells[i][c] = re.sub('\\\\\|', '|', cell)
+11.2s	23	/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+11.2s	24	  text = re.sub(r'_', '\_', text) # Escape underscores in display text
+11.8s	25	/usr/local/lib/python3.12/dist-packages/traitlets/traitlets.py:2915: FutureWarning: --Exporter.preprocessors=["nbconvert.preprocessors.ExtractOutputPreprocessor"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.
+11.8s	26	  warn(
+11.8s	27	[NbConvertApp] Converting notebook __script__.ipynb to html
+13.2s	28	[NbConvertApp] Writing 369690 bytes to __results__.html

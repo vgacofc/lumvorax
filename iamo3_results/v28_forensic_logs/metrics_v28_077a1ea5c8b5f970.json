@@ -1,0 +1,223 @@
+{
+  "config": {
+    "version": "V28-PROOF",
+    "timestamp_start": 1770071840451952119,
+    "alignment_bytes": 64,
+    "simd_enabled": true,
+    "forensic_mode": "FULL",
+    "cache_line_size": 64,
+    "l1_cache_size": 32768,
+    "l2_cache_size": 262144,
+    "l3_cache_size": 8388608
+  },
+  "summary": {
+    "session_id": "077a1ea5c8b5f970",
+    "total_events": 76,
+    "total_metrics": 25,
+    "duration_ns": 43033003857,
+    "log_file": "./v28_forensic_logs/forensic_v28_077a1ea5c8b5f970.log",
+    "wal_file": "./v28_forensic_logs/wal_v28_077a1ea5c8b5f970.bin"
+  },
+  "metrics": [
+    {
+      "name": "B1_CREATE_DESTROY_OPS_SEC",
+      "value": 1275063.2813906553,
+      "unit": "ops/s",
+      "category": "BLOC1",
+      "timestamp_ns": 1770071840471222542,
+      "metadata": {}
+    },
+    {
+      "name": "B1_CREATE_DESTROY_MEAN",
+      "value": 784.2748,
+      "unit": "ns",
+      "category": "BLOC1",
+      "timestamp_ns": 1770071840471465323,
+      "metadata": {}
+    },
+    {
+      "name": "B1_MOVE_THROUGHPUT",
+      "value": 3.2001360057802453,
+      "unit": "GB/s",
+      "category": "BLOC1",
+      "timestamp_ns": 1770071840474980227,
+      "metadata": {}
+    },
+    {
+      "name": "B1_FUSE_ELEM_SEC",
+      "value": 8774203.42078114,
+      "unit": "elem/s",
+      "category": "BLOC1",
+      "timestamp_ns": 1770071840509536546,
+      "metadata": {}
+    },
+    {
+      "name": "B1_SPLIT_PER_SEC",
+      "value": 5643105.993754492,
+      "unit": "splits/s",
+      "category": "BLOC1",
+      "timestamp_ns": 1770071840512148276,
+      "metadata": {}
+    },
+    {
+      "name": "B1_ALIGN_SPEEDUP",
+      "value": 0.6823238414744361,
+      "unit": "x",
+      "category": "BLOC1",
+      "timestamp_ns": 1770071840893022413,
+      "metadata": {}
+    },
+    {
+      "name": "B1_SCALING_2T_EFF",
+      "value": 61.51206145062038,
+      "unit": "%",
+      "category": "BLOC1",
+      "timestamp_ns": 1770071840897006522,
+      "metadata": {}
+    },
+    {
+      "name": "B2_L1_SEQ_RAND_RATIO",
+      "value": 2.0816045604724764,
+      "unit": "x",
+      "category": "BLOC2",
+      "timestamp_ns": 1770071841400140041,
+      "metadata": {}
+    },
+    {
+      "name": "B2_LOCALITY_256W",
+      "value": 50.524600249023436,
+      "unit": "ns/access",
+      "category": "BLOC2",
+      "timestamp_ns": 1770071882146208705,
+      "metadata": {}
+    },
+    {
+      "name": "B2_CACHELINE_RATIO",
+      "value": 0.968760972442631,
+      "unit": "x",
+      "category": "BLOC2",
+      "timestamp_ns": 1770071882924681452,
+      "metadata": {}
+    },
+    {
+      "name": "B2_SATURATION_MB",
+      "value": 0,
+      "unit": "MB",
+      "category": "BLOC2",
+      "timestamp_ns": 1770071883038364622,
+      "metadata": {}
+    },
+    {
+      "name": "B3_REPLAY_SUCCESS",
+      "value": 100.0,
+      "unit": "%",
+      "category": "BLOC3",
+      "timestamp_ns": 1770071883044522124,
+      "metadata": {}
+    },
+    {
+      "name": "B3_FAULT_DETECT",
+      "value": 1,
+      "unit": "bool",
+      "category": "BLOC3",
+      "timestamp_ns": 1770071883045146942,
+      "metadata": {}
+    },
+    {
+      "name": "B3_LOG_COMPLETE",
+      "value": 100.0,
+      "unit": "%",
+      "category": "BLOC3",
+      "timestamp_ns": 1770071883045754014,
+      "metadata": {}
+    },
+    {
+      "name": "B3_LOG_OVERHEAD",
+      "value": 48.12718255988842,
+      "unit": "%",
+      "category": "BLOC3",
+      "timestamp_ns": 1770071883052677661,
+      "metadata": {}
+    },
+    {
+      "name": "B4_LUM_OVERHEAD_AVG",
+      "value": 471.2709360237989,
+      "unit": "%",
+      "category": "BLOC4",
+      "timestamp_ns": 1770071883063802435,
+      "metadata": {}
+    },
+    {
+      "name": "B4_DIFFERENTIATION",
+      "value": 60.0,
+      "unit": "%",
+      "category": "BLOC4",
+      "timestamp_ns": 1770071883064113373,
+      "metadata": {}
+    },
+    {
+      "name": "B4_IMPL_LOC",
+      "value": 1250,
+      "unit": "lines",
+      "category": "BLOC4",
+      "timestamp_ns": 1770071883064362068,
+      "metadata": {}
+    },
+    {
+      "name": "B5_WAL_ROTATION_COUNT",
+      "value": 0,
+      "unit": "rotations",
+      "category": "BLOC5",
+      "timestamp_ns": 1770071883076191243,
+      "metadata": {}
+    },
+    {
+      "name": "B5_COMPRESSION_RATIO",
+      "value": 358.56573705179284,
+      "unit": "x",
+      "category": "BLOC5",
+      "timestamp_ns": 1770071883079092504,
+      "metadata": {}
+    },
+    {
+      "name": "B5_SAMPLING_1K_RATE",
+      "value": 0.5,
+      "unit": "ratio",
+      "category": "BLOC5",
+      "timestamp_ns": 1770071883300018471,
+      "metadata": {}
+    },
+    {
+      "name": "B6_SPEC_COMPLETE",
+      "value": 1,
+      "unit": "bool",
+      "category": "BLOC6",
+      "timestamp_ns": 1770071883301015889,
+      "metadata": {}
+    },
+    {
+      "name": "B6_TERM_STABILITY",
+      "value": 100.0,
+      "unit": "%",
+      "category": "BLOC6",
+      "timestamp_ns": 1770071883301235871,
+      "metadata": {}
+    },
+    {
+      "name": "B6_IMPLEMENT_SCORE",
+      "value": 80.0,
+      "unit": "%",
+      "category": "BLOC6",
+      "timestamp_ns": 1770071883301432244,
+      "metadata": {}
+    },
+    {
+      "name": "B6_AUDIT_READY",
+      "value": 1,
+      "unit": "bool",
+      "category": "BLOC6",
+      "timestamp_ns": 1770071883301768973,
+      "metadata": {}
+    }
+  ]
+}

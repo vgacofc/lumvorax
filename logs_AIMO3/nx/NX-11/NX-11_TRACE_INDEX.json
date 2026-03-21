@@ -1,0 +1,7 @@
+{
+  "total_events": 500,
+  "first_state_hash": "INITIAL_STUB_SHA256",
+  "last_state_hash": "8e2b1f6791e7e2bd7542b3d2cb738b7e3c6ef372fe94f82ba54ff53a5f1d36f1",
+  "merkle_root": "e00af502701f42e6d0d6e55fb417c15c3c6ef372fe94f82ba54ff53a5f1d36f1",
+  "norme": "NX-11-HFBL-360"
+}

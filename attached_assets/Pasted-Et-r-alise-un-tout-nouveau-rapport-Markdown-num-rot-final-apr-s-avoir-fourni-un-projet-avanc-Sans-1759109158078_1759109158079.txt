@@ -1,0 +1,31 @@
+Et réalise un tout nouveau rapport Markdown numéroté final après avoir fourni un projet avancé. Sans avertissements, tout doit être corrigé automatiquement s’il y a des erreurs et sans erreur, tout doit être corrigé. Rapport final complet avec les résultats des logs réels générés. Je veux savoir les valeurs réelles de chaque type de métrique : vitesse, latence, CPU, RAM, OPS, TPS, etc. et autoprompt pour que tu puisses te fournir tous les résultats réels authentiques pour si tu es chargé comme expert de récolter toutes les preuves réelles pour valider ou non les résultats et preuves du concept lumvorax sans omissions et sans invention de résultats ou prévisions qui n’existent pas. Réalise toutes ces lectures et vérifications et inspections fines toi-même pour valider l’authenticité de tes corrections et procède à tout cela avec l'expertise nécessaire en temps réel.
+
+Tu vas aussi ajouter dans le fichier prompt.txt les règles nécessaires si elles n’existent pas pour que les erreurs ne se reproduisent plus dans les prochaines modifications, quelles qu’elles soient.
+
+Pour effectuer ces tâches, voici quelques conseils généraux :
+
+1. **Analyse des modules de code :**
+   - Passez en revue chaque ligne de code dans chaque module pour identifier les anomalies, les erreurs, les solutions potentielles et les optimisations.
+   - Utilisez des outils d'analyse statique pour vous aider à identifier les problèmes potentiels.
+   - Documentez chaque problème identifié avec une explication pédagogique et des solutions proposées.
+
+2. **Génération des logs et analyse des métriques :**
+   - Exécutez le code et générez des logs détaillés pour chaque test.
+   - Mesurez les métriques telles que la vitesse, la latence, l'utilisation du CPU, la RAM, les OPS (opérations par seconde), et les TPS (transactions par seconde).
+   - Analysez ces métriques pour identifier les goulots d'étranglement et les domaines à améliorer.
+
+3. **Corrections et optimisations :**
+   - Corrigez les erreurs identifiées et optimisez le code pour améliorer les performances.
+   - Assurez-vous que toutes les corrections sont effectuées sans introduire de nouvelles erreurs.
+   - Testez à nouveau le code pour vous assurer que toutes les corrections ont été efficaces.
+
+4. **Génération du rapport final :**
+   - Créez un nouveau fichier Markdown numéroté pour documenter toutes les corrections, les optimisations et les résultats des tests.
+   - Incluez dans ce rapport les valeurs réelles des métriques mesurées, les logs générés et une explication détaillée des erreurs et des solutions.
+   - Assurez-vous que le rapport est complet et sans erreurs.
+
+5. **Mise à jour des règles dans promp.txt :**
+   - Ajoutez des règles supplémentaires dans le fichier promp.txt pour éviter que les erreurs ne se reproduisent dans les prochaines modifications.
+   - Assurez-vous que ces règles sont claires et faciles à suivre pour les futurs développeurs.
+
+Si vous pouvez fournir plus de détails sur les modules de code, les fichiers mentionnés et les métriques spécifiques que vous souhaitez analyser, je pourrai vous fournir des conseils plus spécifiques et détaillés.

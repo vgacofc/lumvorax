@@ -1,0 +1,198 @@
+Très bien. Tes réponses lèvent toutes les ambiguïtés bloquantes.
+Je passe donc du mode questionnement au mode finalisation architecturale + approfondissement expert, sans revenir en arrière.
+
+Ci-dessous :
+	1.	validation explicite de tes choix,
+	2.	complément technique manquant (transport radiatif expliqué clairement),
+	3.	verrouillage du design final,
+	4.	ce que cela implique concrètement pour le code C, les logs et les tests,
+	5.	prochaine étape réelle (sans promesse vague).
+
+TROUNOIRDOCUMENTATIONGLOBAL.md
+
+Addendum expert — verrouillage après réponses utilisateur
+
+1) Validation explicite de tes décisions
+
+Toutes tes réponses sont cohérentes entre elles et compatibles avec une simulation extrême.
+
+Point	Décision	Validation experte
+Métrique	Kerr complet	✅ Indispensable pour un trou noir type Gargantua
+Logs	Illimités	✅ Autorise traçage bit-par-bit réel
+Hardware counters	Accès total	✅ Permet audit physique réel
+Mode	Temps réel	⚠️ Très coûteux mais faisable
+CPU + GPU	Auto-détection	✅ Architecture adaptative requise
+Transport radiatif	Oui	✅ Clé du réalisme visuel et physique
+
+Aucune contradiction. On peut avancer.
+
+2) Le trou noir ciblé (référence scientifique)
+
+Le trou noir de référence est celui inspiré de Interstellar, appelé Gargantua.
+
+Points essentiels (non négociables) :
+	•	Trou noir en rotation rapide (spin proche de 1)
+	•	Disque d’accrétion relativiste mince
+	•	Effets visuels issus de la lentille gravitationnelle extrême
+	•	Asymétrie de luminosité due au Doppler relativiste
+
+Le rendu scientifique du film a été produit par Double Negative, via un moteur (DNGR) fondé sur des équations exactes, pas sur du rendu graphique approximatif.
+
+➡️ Notre simulation vise le même niveau scientifique, pas un moteur graphique.
+
+3) Transport radiatif — explication claire (sans jargon inutile)
+
+3.1 Ce que c’est (simplement)
+
+Le transport radiatif, c’est le calcul de :
+
+	comment la lumière naît, se propage, se transforme et arrive à l’observateur
+
+dans un milieu non vide, en mouvement, courbé par la gravité.
+
+Sans transport radiatif :
+	•	tu peux tracer des rayons,
+	•	mais tu ne sais pas quelle lumière ils portent réellement.
+
+3.2 Pourquoi il est indispensable ici
+
+Dans ton cas :
+	•	le disque d’accrétion émet de la lumière,
+	•	cette lumière :
+	•	est décalée en fréquence (Doppler),
+	•	est rougie par la gravité (redshift),
+	•	est amplifiée ou atténuée selon l’angle,
+	•	peut faire plusieurs tours autour du trou noir.
+
+👉 Le transport radiatif calcule l’intensité réelle reçue, pas juste la trajectoire.
+
+3.3 Ce que nous implémentons (concrètement)
+
+Pour chaque rayon lumineux :
+	1.	Émission locale dans le disque
+	•	température
+	•	densité
+	•	spectre (fréquence)
+	2.	Propagation le long d’une géodésique de Kerr
+	•	courbure extrême
+	•	temps propre ≠ temps observateur
+	3.	À chaque pas :
+	•	absorption
+	•	émission secondaire
+	•	décalage fréquentiel exact
+	4.	Arrivée à la caméra :
+	•	énergie finale
+	•	fréquence observée
+	•	intensité réelle
+
+➡️ Chaque opération est numérique, traçable, loggée.
+
+4) Architecture finale verrouillée (après tes réponses)
+
+/trou_noir_sim/
+│
+├── core/
+│   ├── time_ns.c          # horloge ns + cycles CPU
+│   ├── hw_counters.c      # PMU, cache, GPU metrics
+│   ├── progress.c         # barre 0–100 %
+│
+├── physics/
+│   ├── kerr_metric.c      # métrique complète de Kerr
+│   ├── geodesics.c        # photons & matière
+│   ├── accretion_disk.c   # disque relativiste
+│   ├── radiative.c        # transport radiatif
+│
+├── compute/
+│   ├── cpu_backend.c
+│   ├── gpu_backend.c      # activé si GPU détecté
+│
+├── tracing/
+│   ├── cpu_trace.c        # instruction / registre
+│   ├── mem_trace.c        # lecture / écriture / cache
+│   ├── event_trace.c
+│
+├── logging/
+│   ├── log_writer.c
+│   ├── log_reader.c
+│   ├── checksum.c
+│
+├── tests/
+│   ├── test_time_ns.c
+│   ├── test_kerr.c
+│   ├── test_geodesics.c
+│   ├── test_radiative.c
+│   ├── test_logs.c
+│
+└── main.c
+
+Aucun stub.
+Aucune valeur magique.
+Tout est calculé ou mesuré.
+
+5) Logging niveau 360 — implications réelles
+
+Avec logs illimités + temps réel, cela implique :
+	•	Flush disque fréquent (sinon perte de données)
+	•	Fichiers très volumineux (To possibles)
+	•	Ordonnancement strict :
+	•	temps réel > performance
+
+Chaque log contient :
+
+[TS_NS][CPU][CORE][THREAD]
+[INSTR][REG_AVANT][REG_APRES]
+[MEM_ADDR][CACHE_LINE][VALUE_BITS]
+[PHYS_VAR][FLOAT_BITS]
+
+➡️ C’est un audit physique du calcul, pas un log applicatif.
+
+6) Tests unitaires 360 — clarification
+
+Les tests ne valident pas “le trou noir”.
+Ils valident que la machine ne ment pas.
+
+Exemples :
+	•	même calcul → même bits
+	•	horloge monotone
+	•	redshift mesuré = redshift théorique
+	•	géodésique fermée impossible (sanity check)
+	•	checksum identique à relecture
+
+Sans ces tests, toute simulation est invalide.
+
+7) Ce que cette simulation peut révéler (réellement)
+
+Potentielles découvertes hors littérature standard :
+	•	instabilités numériques induites par la courbure extrême
+	•	amplification d’erreurs liées au transport radiatif couplé
+	•	micro-non-déterminisme CPU/GPU sous charge relativiste
+	•	différences mesurables entre intégrateurs ODE classiques
+
+Ces phénomènes sont rarement étudiés car :
+	•	trop coûteux,
+	•	trop complexes,
+	•	impossibles sans logs totaux.
+
+8) Ce que je fais maintenant (prochaine étape réelle)
+
+Tu as validé toutes les décisions.
+Donc la prochaine étape logique est une seule :
+
+👉 Générer le design C détaillé du premier module
+
+Je te propose l’ordre optimal :
+	1.	Structures de données exactes (C)
+	•	géodésiques
+	•	métrique de Kerr
+	•	photon packet
+	•	log entry niveau 360
+	2.	Module temps + compteurs hardware
+	3.	Intégrateur Kerr (sans raccourci)
+
+Dis-moi simplement :
+
+	Tu veux que je commence par :
+A) les structures C + formats de logs
+B) le module Kerr (math + code)
+
+Une fois choisi, je déroule sans interruption, conformément à ton cahier des charges.

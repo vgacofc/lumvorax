@@ -1,0 +1,235 @@
+# AUDIT SCIENTIFIQUE GLOBAL — STRATÉGIE POUR DÉPASSER L’ÉTAT DE L’ART
+
+Objectif : définir **toutes les questions, preuves et tests** nécessaires pour que votre simulation produise des résultats que les infrastructures actuelles ne réalisent pas — ou réalisent difficilement — et qui permettraient de **valider ou réfuter de nouvelles hypothèses** en relativité numérique.
+
+Références de comparaison actuelles :
+
+* Einstein Toolkit
+* GRChombo
+* EinsteinPy
+
+---
+
+# I. CE QU’UN EXPERT EXIGERA AVANT TOUTE NOUVELLE HYPOTHÈSE
+
+## 1️⃣ Validité mathématique complète
+
+Un expert demandera systématiquement :
+
+* Formulation exacte (ADM, BSSN, métrique analytique Kerr ?)
+* Équations écrites explicitement
+* Vérification des contraintes d’Einstein :
+
+  * Hamiltonienne
+  * Contraintes de moment
+* Étude de convergence d’ordre (pas seulement ratio ponctuel)
+* Conservation des invariants (E, Lz, Carter)
+* Étude multi-solveur
+
+Sans ces éléments, aucune hypothèse nouvelle n’est scientifiquement recevable.
+
+---
+
+# II. DOMAINES OÙ VOUS POUVEZ RÉELLEMENT DÉPASSER LES SYSTÈMES ACTUELS
+
+## AXE 1 — Régime Kerr quasi-extrémal ultra-précis
+
+### Hypothèse H1
+
+Les solutions Kerr pour ( a \to 1 ) possèdent une structure dynamique fine invisible en double précision.
+
+### Pourquoi les codes actuels limitent ?
+
+* bruit numérique dominant
+* coût AMR élevé
+* instabilités près de l’extrémalité
+
+### Tests nécessaires
+
+* ( a = 0.999999M )
+* multi-précision (64/128/arbitrary)
+* analyse des modes quasi-normaux
+* stabilité sur 10⁶ pas
+
+Si vous détectez :
+
+* un comportement invariant sous solveur
+* indépendant de la coordonnée
+* stable sous raffinement
+
+→ cela devient publication potentielle.
+
+---
+
+## AXE 2 — Structure interne du trou noir
+
+Les simulateurs standards évitent souvent :
+
+* région sous horizon interne
+* analyse fine des géodésiques internes
+
+### Hypothèse H2
+
+La dynamique interne de Kerr présente un régime chaotique fin sous-résolu actuellement.
+
+### Tests requis
+
+* Kerr-Schild (coordonnées régulières)
+* calcul exposants de Lyapunov
+* cartes de Poincaré
+* conservation Carter haute précision
+
+---
+
+## AXE 3 — Limite informationnelle du calcul
+
+### Hypothèse H3
+
+Il existe un rayon critique ( r^* ) où la dynamique devient dominée par la granularité numérique.
+
+Cela ne serait pas nouvelle physique,
+mais un résultat fondamental en calcul scientifique.
+
+### Tests
+
+* double vs quad vs multiprecision arbitraire
+* variation solveur (RK4 vs symplectique)
+* mesure dérive invariants vs précision
+
+---
+
+## AXE 4 — Processus de Penrose ultra-fin
+
+Référence théorique :
+Roger Penrose
+
+Limite théorique ≈ 20.9%.
+
+### Hypothèse H4
+
+Le comportement asymptotique vers 20.9% présente une structure fine non documentée.
+
+Tests :
+
+* raffinement massif
+* analyse stabilité énergétique
+* sensibilité aux angles d’impact
+
+---
+
+## AXE 5 — Chaos relativiste profond
+
+Peu de codes publient :
+
+* exposants de Lyapunov internes
+* analyse spectrale interne Kerr extrémal
+
+Cela pourrait être une niche scientifique réelle.
+
+---
+
+# III. QUESTIONS CRITIQUES À TESTER ABSOLUMENT
+
+1. Le phénomène persiste-t-il sous changement de coordonnées ?
+2. Persiste-t-il sous changement de solveur ?
+3. Persiste-t-il en multiprécision arbitraire ?
+4. Est-il stable sous raffinement spatial/temporal ?
+5. Est-il compatible avec les équations d’Einstein exactes ?
+6. Peut-il être reproduit par un autre groupe ?
+
+---
+
+# IV. CE QUI SERAIT VRAIMENT NOUVEAU
+
+Une découverte deviendrait sérieuse si :
+
+* indépendante de la précision numérique
+* indépendante du solveur
+* indépendante de la coordonnée
+* reproductible indépendamment
+* mesurable quantitativement
+
+Sinon :
+→ amélioration numérique, pas nouvelle physique.
+
+---
+
+# V. TESTS AVANCÉS À IMPLÉMENTER
+
+## 🔬 Batterie V13 recommandée
+
+### T1 — Étude convergence complète (jusqu’à h/32)
+
+### T2 — Multi-solveur (RK4, symplectique, implicite)
+
+### T3 — Multi-coordonnées
+
+### T4 — Lyapunov + chaos
+
+### T5 — Analyse spectrale quasi-normale
+
+### T6 — Multiprécision arbitraire
+
+### T7 — Perturbation contrôlée bruit blanc
+
+---
+
+# VI. CE QUE VOUS AVEZ OUBLIÉ DE PRÉCISER
+
+Un expert demandera :
+
+* conditions initiales exactes
+* taille pas temporel
+* critère CFL
+* métrique d’erreur utilisée
+* architecture matérielle détaillée
+* reproductibilité indépendante
+* incertitudes statistiques
+
+---
+
+# VII. CE QUE LES SYSTÈMES ACTUELS NE FONT PAS BIEN
+
+| Domaine                       | Limitation actuelle |
+| ----------------------------- | ------------------- |
+| Kerr extrémal ultra-fin       | bruit numérique     |
+| Région interne profonde       | rarement explorée   |
+| Analyse chaos interne         | peu documentée      |
+| Multiprécision arbitraire     | coût prohibitif     |
+| Étude limite informationnelle | quasi inexistante   |
+
+---
+
+# VIII. STRATÉGIE RÉALISTE POUR DÉPASSER L’ÉTAT DE L’ART
+
+1. Cibler un régime peu étudié (interne Kerr extrémal)
+2. Démontrer supériorité numérique mesurable
+3. Fournir validation multi-méthodes
+4. Publier protocole reproductible
+5. Comparer quantitativement avec GRChombo
+
+---
+
+# IX. CONCLUSION GLOBALE
+
+Pour que votre simulation :
+
+* valide ou réfute une hypothèse nouvelle
+* dépasse réellement les systèmes existants
+* produise une contribution scientifique solide
+
+elle doit démontrer :
+
+* robustesse mathématique formelle
+* indépendance numérique
+* reproductibilité externe
+* métriques quantitatives strictes
+
+Sans cela, elle restera une amélioration technique, pas une avancée théorique.
+
+---
+
+
+
+* construire un **programme de recherche complet structuré (V13–V20)**
+* formuler une hypothèse unique ambitieuse à tester de manière exhaustive.
