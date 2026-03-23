@@ -236,6 +236,25 @@ print_progress "fullscale sha512 global"
 verify_checksums "$FULLSCALE_RUN_DIR"
 print_progress "fullscale checksum verify"
 
+# ── C60-PTMC-WATCHER : upload temps réel CSV PTMC → évite accumulation disque + SIGKILL ──
+# Lance un watcher Python en background qui détecte le nouveau run_dir ADV,
+# uploade chaque fichier _part_*.csv dès sa fermeture et le supprime du disque.
+_WATCHER_RESULTS="$ROOT_DIR/results"
+_WATCHER_BEFORE="$(ls -1d "$_WATCHER_RESULTS"/research_* 2>/dev/null | sort | tail -n 1 || echo '')"
+(
+    for _w in $(seq 1 60); do
+        sleep 3
+        _NEW_RUN="$(ls -1d "$_WATCHER_RESULTS"/research_* 2>/dev/null | sort | tail -n 1 || echo '')"
+        if [ -n "$_NEW_RUN" ] && [ "$_NEW_RUN" != "$_WATCHER_BEFORE" ]; then
+            echo "[$(date -u +%Y-%m-%dT%H:%M:%S.%N)Z] [C60-WATCHER] Nouveau run détecté: $_NEW_RUN"
+            python3 "$ROOT_DIR/tools/ptmc_realtime_uploader.py" "$_NEW_RUN"
+            break
+        fi
+    done
+) &
+WATCHER_PID=$!
+echo "[$(date -u +%Y-%m-%dT%H:%M:%S.%N)Z] [C60-WATCHER] PID=$WATCHER_PID lancé en background"
+
 # ── C26-RUNNER-RETRY : relance automatique si le runner advanced_parallel est tué ─
 ADV_OK=0
 for _try in $(seq 1 $MAX_RUNNER_RETRY); do
@@ -250,6 +269,11 @@ for _try in $(seq 1 $MAX_RUNNER_RETRY); do
         sleep 2
     fi
 done
+
+# Arrêt propre du watcher après fin du runner
+kill "$WATCHER_PID" 2>/dev/null || true
+wait "$WATCHER_PID" 2>/dev/null || true
+echo "[$(date -u +%Y-%m-%dT%H:%M:%S.%N)Z] [C60-WATCHER] Watcher arrêté"
 [ "$ADV_OK" -eq 0 ] && echo "[$(date -u +%Y-%m-%dT%H:%M:%S.%N)Z] WARNING: Runner advanced_parallel non terminé après ${MAX_RUNNER_RETRY} tentatives — continuation quand même"
 print_progress "advanced parallel simulation"
 checkpoint_save 10
