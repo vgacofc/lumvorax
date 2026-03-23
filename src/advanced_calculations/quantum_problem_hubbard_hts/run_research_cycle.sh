@@ -67,6 +67,10 @@ echo "[$(date -u +%Y-%m-%dT%H:%M:%S.%N)Z] RESUME_FROM_PHASE=${RESUME_FROM_PHASE}
 ulimit -v unlimited 2>/dev/null || true
 ulimit -m unlimited 2>/dev/null || true
 ulimit -s unlimited 2>/dev/null || true
+# C60-BUG-LV01-FIX : augmenter la limite de fichiers ouverts pour le runner advanced_parallel
+# Sans ce fix, FOPEN_DIAG échoue (EMFILE) → research_execution.log reste 0 bytes → score=0
+ulimit -n 8192 2>/dev/null || ulimit -n 4096 2>/dev/null || true
+echo "[$(date -u +%Y-%m-%dT%H:%M:%S.%N)Z] [C60] ulimit -n=$(ulimit -n) (limite descripteurs fichiers)"
 # Priorité maximale pour le processus (nice -20 si possible)
 renice -n -10 $$ 2>/dev/null || true
 

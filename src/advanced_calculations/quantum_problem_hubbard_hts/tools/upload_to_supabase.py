@@ -36,10 +36,25 @@ except ImportError:
 ROOT = Path(__file__).resolve().parent.parent
 RESULTS_DIR = ROOT / "results"
 
-SUPABASE_URL = os.environ.get("SUPABASE_URL", "").rstrip("/")
 SERVICE_KEY  = os.environ.get("SUPABASE_SERVICE_ROLE_KEY", "")
 MAX_CSV_ROWS = 100_000
 BATCH_SIZE   = 200
+
+# C60-FIX : dériver l'URL correcte depuis SUPABASE_DB_HOST si SUPABASE_URL pointe
+# vers le mauvais projet. Les clés JWT contiennent le bon project_id dans leur payload.
+def _derive_supabase_url() -> str:
+    explicit = os.environ.get("SUPABASE_URL", "").rstrip("/")
+    db_host  = os.environ.get("SUPABASE_DB_HOST", "")
+    if db_host and db_host.startswith("db.") and ".supabase.co" in db_host:
+        project_id = db_host[3:].replace(".supabase.co", "")
+        derived = f"https://{project_id}.supabase.co"
+        if explicit and explicit != derived:
+            print(f"[C60-FIX] SUPABASE_URL ({explicit}) != SUPABASE_DB_HOST projet ({derived})")
+            print(f"[C60-FIX] Utilisation de l'URL dérivée depuis SUPABASE_DB_HOST : {derived}")
+        return derived
+    return explicit
+
+SUPABASE_URL = _derive_supabase_url()
 
 if not SUPABASE_URL or not SERVICE_KEY:
     print("[WARN] SUPABASE_URL ou SUPABASE_SERVICE_ROLE_KEY absent — upload désactivé")
