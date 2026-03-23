@@ -497,6 +497,12 @@ wheels = [
 ]
 
 [[package]]
+name = "fpdf"
+version = "1.7.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/37/c6/608a9e6c172bf9124aa687ec8b9f0e8e5d697d59a5f4fad0e2d5ec2a7556/fpdf-1.7.2.tar.gz", hash = "sha256:125840783289e7d12552b1e86ab692c37322e7a65b96a99e0ea86cca041b6779", size = 39504, upload-time = "2015-01-21T00:07:47.493Z" }
+
+[[package]]
 name = "frozenlist"
 version = "1.8.0"
 source = { registry = "https://pypi.org/simple" }
@@ -1778,11 +1784,13 @@ dependencies = [
     { name = "aiohttp" },
     { name = "aristotlelib" },
     { name = "bitstring" },
+    { name = "fpdf" },
     { name = "imagecodecs" },
     { name = "kaggle" },
     { name = "matplotlib" },
     { name = "numpy" },
     { name = "opencv-python" },
+    { name = "packaging" },
     { name = "pandas", version = "2.3.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
     { name = "pandas", version = "3.0.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14'" },
     { name = "pillow" },
@@ -1801,11 +1809,13 @@ requires-dist = [
     { name = "aiohttp", specifier = ">=3.13.3" },
     { name = "aristotlelib", specifier = ">=0.6.0" },
     { name = "bitstring", specifier = ">=4.3.1" },
+    { name = "fpdf", specifier = ">=1.7.2" },
     { name = "imagecodecs", specifier = ">=2026.1.14" },
     { name = "kaggle", specifier = ">=1.8.3" },
     { name = "matplotlib", specifier = ">=3.10.8" },
     { name = "numpy", specifier = "==1.26.4" },
     { name = "opencv-python", specifier = ">=4.11.0.86" },
+    { name = "packaging", specifier = ">=26.0" },
     { name = "pandas", specifier = ">=2.2.0" },
     { name = "pillow", specifier = ">=12.1.1" },
     { name = "psutil", specifier = ">=7.2.1" },

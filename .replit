@@ -77,7 +77,7 @@ args = "cd src/advanced_calculations/quantum_problem_hubbard_hts && bash run_res
 outputType = "console"
 
 [nix]
-packages = ["arrow-cpp", "cairo", "clang", "ffmpeg-full", "file", "freetype", "gcc", "gdb", "ghostscript", "glib", "glibc", "glibcLocales", "gnumake", "gobject-introspection", "gtk3", "kaggle", "lcms2", "libimagequant", "libjpeg", "libtiff", "libwebp", "libxcrypt", "nano", "openjpeg", "openssh", "pkg-config", "qhull", "tcl", "tk", "tree", "vim-full", "xsimd", "zlib", "rsync", "got"]
+packages = ["arrow-cpp", "cairo", "clang", "ffmpeg-full", "file", "freetype", "gcc", "gdb", "ghostscript", "glib", "glibc", "glibcLocales", "gnumake", "gobject-introspection", "got", "gtk3", "kaggle", "lcms2", "libGL", "libGLU", "libimagequant", "libjpeg", "libtiff", "libwebp", "libxcrypt", "nano", "openjpeg", "openssh", "pkg-config", "qhull", "rsync", "tcl", "tk", "tree", "vim-full", "xsimd", "zlib"]
 channel = "stable-25_05"
 
 [deployment]
