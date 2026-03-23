@@ -1,4 +1,0 @@
-# C59-FIX : Git LFS SUPPRIME TOTALEMENT ET DEFINITIVEMENT.
-# Aucune regle LFS — aucun fichier ne sera jamais suivi par LFS.
-# Les gros fichiers (CSV, logs de run) sont stockes dans Supabase
-# via tools/upload_to_supabase.py et exclus du depot via .gitignore.
