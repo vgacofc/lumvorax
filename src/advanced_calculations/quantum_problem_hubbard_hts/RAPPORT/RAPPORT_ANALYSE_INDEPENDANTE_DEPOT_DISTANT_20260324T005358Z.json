@@ -1,0 +1,84 @@
+{
+  "generated_at_utc": "2026-03-24T00:53:58.959779+00:00",
+  "remote_url": "https://github.com/lumc01/Lumvorax.git",
+  "head": "8a6c4b80b3675cafd74c3ea95190b2b22ed9d989",
+  "fetch_head": "09b4597c80701ffcbe8c256db524f92d4089600d",
+  "fetch_status": "ok",
+  "fetch_details": "",
+  "run": "research_20260324T005353Z_2406",
+  "integrated_modules": [],
+  "control_tests": [],
+  "questions_complete": {
+    "complete": 0,
+    "total": 0,
+    "pct": 0.0
+  },
+  "unresolved_cpu_ram_modules": [
+    {
+      "module": "spin_liquid_exotic",
+      "domain": "Matière condensée",
+      "observables": "énergie, pairing, densité locale, corrélations courte/moyenne portée",
+      "constraints": "réseaux 1D/2D petits-moyens; coût RAM élevé en 2D dense",
+      "status": "NON_INTÉGRÉ"
+    },
+    {
+      "module": "topological_correlated_materials",
+      "domain": "Matière condensée",
+      "observables": "énergie, pairing, corrélateurs topologiques, estimateurs Chern approchés",
+      "constraints": "invariants sur petites grilles; pas de grande taille réaliste",
+      "status": "NON_INTÉGRÉ"
+    },
+    {
+      "module": "correlated_fermions_non_hubbard",
+      "domain": "Condensée / chimie",
+      "observables": "énergie, pairing, densité locale, corrélateurs simples",
+      "constraints": "Hamiltoniens complexes limités à espaces réduits",
+      "status": "NON_INTÉGRÉ"
+    },
+    {
+      "module": "multi_state_excited_chemistry",
+      "domain": "Chimie quantique",
+      "observables": "énergie par état, densité électronique locale, gap excité, pairing fullscale",
+      "constraints": "petites molécules et bases réduites",
+      "status": "NON_INTÉGRÉ"
+    },
+    {
+      "module": "bosonic_multimode_systems",
+      "domain": "Physique quantique",
+      "observables": "occupation de modes, énergie, corrélations mode-à-mode",
+      "constraints": "troncature de Fock nécessaire sur CPU",
+      "status": "NON_INTÉGRÉ"
+    },
+    {
+      "module": "multiscale_nonlinear_field_models",
+      "domain": "Théorie des champs",
+      "observables": "énergie, pseudo-spectres locaux, extrema spatiaux/temps",
+      "constraints": "pas de QCD full-scale; schémas explicites bornés par stabilité",
+      "status": "NON_INTÉGRÉ"
+    },
+    {
+      "module": "far_from_equilibrium_kinetic_lattices",
+      "domain": "Théorie des champs / noneq",
+      "observables": "énergie, pairing, spectre k, charge locale",
+      "constraints": "forte sensibilité au pas de temps",
+      "status": "NON_INTÉGRÉ"
+    },
+    {
+      "module": "multi_correlated_fermion_boson_networks",
+      "domain": "Statistique / condensée",
+      "observables": "énergie, pairing, densité locale, corrélations moyenne portée",
+      "constraints": "montée combinatoire des interactions",
+      "status": "NON_INTÉGRÉ"
+    }
+  ],
+  "toy_rows_current_run": 0,
+  "toy_empty_runs": [],
+  "checksums": {
+    "results/research_20260324T005353Z_2406/tests/new_tests_results.csv": "ee6d9c1a6e1fdd1bba1f0101d44129ff76ec35ec54587e8e859dfebde3a776c1",
+    "results/research_20260324T005353Z_2406/tests/expert_questions_matrix.csv": "90105e092f486748fabd53cf0120077dd51448c1d89bd336ff2b96f8e6e916a1",
+    "results/research_20260324T005353Z_2406/tests/module_physics_metadata.csv": "103a9f525171eebec0357a85af03ed9d979a503479dfafcd408d26cb6928b758",
+    "results/research_20260324T005353Z_2406/tests/toy_model_validation.csv": "16c80bbb65e678a450f4627a3e1598d003f514ee49a5a1a3a76a1cf36729b6c9",
+    "results/research_20260324T005353Z_2406/logs/baseline_reanalysis_metrics.csv": "46fa334ab28c2637973410ba5577f6ec19c093361833731eaffd6d299609c099"
+  },
+  "report": "RAPPORT/RAPPORT_ANALYSE_INDEPENDANTE_DEPOT_DISTANT_20260324T005358Z.md"
+}

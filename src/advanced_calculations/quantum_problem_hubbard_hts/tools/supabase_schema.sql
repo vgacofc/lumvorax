@@ -1,5 +1,5 @@
--- SCHEMA SUPABASE — C59 — À exécuter UNE FOIS dans l'éditeur SQL de Supabase
--- URL: https://cnupzztyrvjmdsmfbxnn.supabase.co → SQL Editor
+-- SCHEMA SUPABASE — C59/C60 — À exécuter UNE FOIS dans l'éditeur SQL de Supabase
+-- URL: https://mwdeqpfxbcdayaelwqht.supabase.co → SQL Editor
 
 CREATE TABLE IF NOT EXISTS quantum_run_files (
     id              BIGSERIAL PRIMARY KEY,

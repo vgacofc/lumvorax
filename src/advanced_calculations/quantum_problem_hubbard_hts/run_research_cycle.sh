@@ -62,6 +62,16 @@ exec > >(stdbuf -oL tee -a "$SESSION_LOG") 2>&1
 echo "[$(date -u +%Y-%m-%dT%H:%M:%S.%N)Z] run_research_cycle start stamp=${STAMP_UTC}"
 echo "[$(date -u +%Y-%m-%dT%H:%M:%S.%N)Z] RESUME_FROM_PHASE=${RESUME_FROM_PHASE}"
 
+# ── C60-SUPABASE-DOWNLOAD : récupération des fichiers depuis Supabase au démarrage ──
+# Garantit que chaque nouvelle session Replit dispose des benchmarks et du dernier run
+# même si LFS est désactivé et que les fichiers locaux ont disparu après un push.
+echo "[$(date -u +%Y-%m-%dT%H:%M:%S.%N)Z] [C60-DL] Téléchargement depuis Supabase..."
+if python3 "$ROOT_DIR/tools/download_from_supabase.py" 2>&1; then
+    echo "[$(date -u +%Y-%m-%dT%H:%M:%S.%N)Z] [C60-DL] Download Supabase OK"
+else
+    echo "[$(date -u +%Y-%m-%dT%H:%M:%S.%N)Z] [C60-DL-WARN] Download partiel ou pas de connexion — continue sans"
+fi
+
 # ── BC-LV04 fix : Suppression TOTALE de toutes les restrictions de ressources ──
 # Aucun ulimit RAM/CPU — test jusqu'aux limites hardware réelles (99% dynamique)
 ulimit -v unlimited 2>/dev/null || true
