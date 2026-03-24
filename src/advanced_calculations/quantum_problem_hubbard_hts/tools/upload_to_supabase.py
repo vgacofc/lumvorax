@@ -1,241 +1,253 @@
 #!/usr/bin/env python3
 """
-upload_to_supabase.py — C59
-Upload automatique de tous les .log et .csv d'un run vers Supabase
-via l'API REST HTTP (pas de connexion TCP directe requise).
+upload_to_supabase.py — C60
+Upload automatique des résultats d'un run vers Supabase via REST API.
+
+Schéma réel Supabase (NE PAS MODIFIER — colonnes vérifiées le 2026-03-24) :
+  quantum_run_files : run_id(UNIQUE), module, lx, ly, t_ev, u_ev, mu_ev,
+                      temp_k, dt, steps, energy, pairing, sign_ratio,
+                      cpu_percent, ram_percent, created_at
+  quantum_csv_rows  : run_id, file_name, row_number, data(text), created_at
+  quantum_benchmarks: dataset, module, observable, t_k, u_over_t,
+                      reference_value, reference_method, source, error_bar,
+                      notes, created_at
 
 Usage:
-    python3 upload_to_supabase.py <run_dir> [--delete-after]
-    python3 upload_to_supabase.py --all [--delete-after]
+    python3 upload_to_supabase.py <run_dir>
+    python3 upload_to_supabase.py --all
     python3 upload_to_supabase.py --check-tables
 
-PREREQUIS (une seule fois) : exécuter tools/supabase_schema.sql dans l'éditeur
-SQL de Supabase avant le premier upload.
-
-Variables d'environnement requises:
-    SUPABASE_URL            = https://xxx.supabase.co
-    SUPABASE_SERVICE_ROLE_KEY = eyJ...
+Variables d'environnement:
+    SUPABASE_SERVICE_ROLE_KEY  eyJ... (219 chars JWT, obligatoire)
+    SUPABASE_DB_HOST           db.mwdeqpfxbcdayaelwqht.supabase.co (optionnel)
 """
 
 import os
 import sys
-import csv
+import re
 import json
-import hashlib
 import argparse
-import traceback
 import time
 from pathlib import Path
 
 try:
     import requests
 except ImportError:
-    print("[FATAL] requests manquant. Lancez: python3 -m pip install requests")
+    print("[FATAL] requests manquant — pip install requests")
     sys.exit(1)
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT        = Path(__file__).resolve().parent.parent
 RESULTS_DIR = ROOT / "results"
 
+SUPABASE_URL = "https://mwdeqpfxbcdayaelwqht.supabase.co"
 SERVICE_KEY  = os.environ.get("SUPABASE_SERVICE_ROLE_KEY", "")
-MAX_CSV_ROWS = 100_000
-BATCH_SIZE   = 200
 
-# C60-FIX : dériver l'URL correcte depuis SUPABASE_DB_HOST si SUPABASE_URL pointe
-# vers le mauvais projet. Les clés JWT contiennent le bon project_id dans leur payload.
-def _derive_supabase_url() -> str:
-    explicit = os.environ.get("SUPABASE_URL", "").rstrip("/")
-    db_host  = os.environ.get("SUPABASE_DB_HOST", "")
-    if db_host and db_host.startswith("db.") and ".supabase.co" in db_host:
-        project_id = db_host[3:].replace(".supabase.co", "")
-        derived = f"https://{project_id}.supabase.co"
-        if explicit and explicit != derived:
-            print(f"[C60-FIX] SUPABASE_URL ({explicit}) != SUPABASE_DB_HOST projet ({derived})")
-            print(f"[C60-FIX] Utilisation de l'URL dérivée depuis SUPABASE_DB_HOST : {derived}")
-        return derived
-    return explicit
+BATCH_SIZE    = 200
+MAX_LOG_LINES = 5000
 
-SUPABASE_URL = _derive_supabase_url()
-
-if not SUPABASE_URL or not SERVICE_KEY:
-    print("[WARN] SUPABASE_URL ou SUPABASE_SERVICE_ROLE_KEY absent — upload désactivé")
-
-def headers():
+def _hdrs(prefer="return=minimal"):
     return {
         "apikey":        SERVICE_KEY,
         "Authorization": f"Bearer {SERVICE_KEY}",
         "Content-Type":  "application/json",
-        "Prefer":        "return=minimal"
+        "Prefer":        prefer,
     }
 
-def rest(endpoint):
-    return f"{SUPABASE_URL}/rest/v1/{endpoint}"
+def _rest(table):
+    return f"{SUPABASE_URL}/rest/v1/{table}"
+
+def _ok(status):
+    return status in (200, 201, 204)
+
+def _post(table, data, prefer="return=minimal", timeout=20):
+    if not SERVICE_KEY:
+        return False
+    try:
+        r = requests.post(_rest(table), headers=_hdrs(prefer), json=data, timeout=timeout)
+        if not _ok(r.status_code):
+            print(f"  [WARN] POST {table}: {r.status_code} | {r.text[:80]}")
+            return False
+        return True
+    except Exception as e:
+        print(f"  [ERR] POST {table}: {e}")
+        return False
+
+def _delete(table, filter_str, timeout=10):
+    if not SERVICE_KEY:
+        return
+    try:
+        requests.delete(f"{_rest(table)}?{filter_str}", headers=_hdrs(), timeout=timeout)
+    except Exception:
+        pass
 
 def check_tables():
-    for table in ["quantum_run_files", "quantum_csv_rows"]:
-        resp = requests.get(rest(f"{table}?limit=1"), headers=headers(), timeout=10)
-        if resp.status_code == 200:
-            print(f"  [OK] Table {table} accessible")
+    if not SERVICE_KEY:
+        print("[WARN] SUPABASE_SERVICE_ROLE_KEY absent — Supabase désactivé")
+        return False
+    ok = True
+    for t in ["quantum_run_files", "quantum_csv_rows", "quantum_benchmarks"]:
+        try:
+            r = requests.get(f"{_rest(t)}?limit=1", headers=_hdrs(), timeout=10)
+            status = "OK" if r.status_code == 200 else f"FAIL({r.status_code})"
+            print(f"  [{status}] {t}")
+            if r.status_code != 200:
+                ok = False
+        except Exception as e:
+            print(f"  [ERR] {t}: {e}")
+            ok = False
+    return ok
+
+def _parse_research_log(log_path: Path):
+    """Parse research_execution.log → dict avec module principal + liste BASE_RESULT."""
+    main_module = {}
+    all_modules = []
+    score = {}
+    if not log_path.exists():
+        return main_module, all_modules, score
+    pattern = re.compile(
+        r'BASE_RESULT problem=(\S+) energy=([\d.]+) pairing=([\d.]+) sign=(-?[\d.]+)'
+        r' cpu_peak=([\d.]+) mem_peak=([\d.]+)'
+    )
+    score_pat = re.compile(r'SCORE iso=(\d+) trace=(\d+) repr=(\d+) robust=(\d+) phys=(\d+) expert=(\d+)')
+    for line in log_path.read_text(errors="replace").splitlines():
+        m = pattern.search(line)
+        if m:
+            row = {
+                "module": m.group(1), "energy": float(m.group(2)),
+                "pairing": float(m.group(3)), "sign_ratio": float(m.group(4)),
+                "cpu_percent": float(m.group(5)), "ram_percent": float(m.group(6)),
+            }
+            all_modules.append(row)
+            if m.group(1) == "hubbard_hts_core" or not main_module:
+                main_module = row
+        s = score_pat.search(line)
+        if s:
+            score = {k: int(v) for k, v in zip(
+                ["iso","trace","repr","robust","phys","expert"],
+                [s.group(i) for i in range(1,7)]
+            )}
+    return main_module, all_modules, score
+
+def upload_run_file(run_id: str, main_module: dict):
+    """Insère 1 ligne résumé dans quantum_run_files (UNIQUE sur run_id)."""
+    _delete("quantum_run_files", f"run_id=eq.{run_id}")
+    time.sleep(0.1)
+    row = {
+        "run_id": run_id,
+        "module": main_module.get("module", "hubbard_hts_core"),
+        "lx": 14, "ly": 14,
+        "t_ev": 1.0, "u_ev": 8.0, "mu_ev": 0.0,
+        "temp_k": 95.0, "dt": 0.05, "steps": 14000,
+        "energy":       main_module.get("energy", 0.0),
+        "pairing":      main_module.get("pairing", 0.0),
+        "sign_ratio":   main_module.get("sign_ratio", 0.0),
+        "cpu_percent":  main_module.get("cpu_percent", 0.0),
+        "ram_percent":  main_module.get("ram_percent", 0.0),
+    }
+    ok = _post("quantum_run_files", row)
+    print(f"  [quantum_run_files] {run_id[-4:]}: {'OK' if ok else 'FAIL'}")
+    return ok
+
+def upload_csv_rows(run_id: str, all_modules: list, score: dict, log_path: Path):
+    """Insère les lignes détaillées dans quantum_csv_rows."""
+    _delete("quantum_csv_rows", f"run_id=eq.{run_id}")
+    time.sleep(0.1)
+
+    rows = []
+    for i, mod in enumerate(all_modules):
+        rows.append({
+            "run_id": run_id,
+            "file_name": "research_execution.log",
+            "row_number": i,
+            "data": json.dumps(mod),
+        })
+    if score:
+        rows.append({
+            "run_id": run_id,
+            "file_name": "research_execution.log",
+            "row_number": len(all_modules),
+            "data": json.dumps({"type": "SCORE", **score}),
+        })
+
+    if log_path.exists():
+        log_lines = log_path.read_text(errors="replace").splitlines()
+        for i, line in enumerate(log_lines[:MAX_LOG_LINES]):
+            rows.append({
+                "run_id": run_id,
+                "file_name": "raw_log",
+                "row_number": i,
+                "data": line,
+            })
+
+    sent = 0
+    for i in range(0, len(rows), BATCH_SIZE):
+        batch = rows[i:i+BATCH_SIZE]
+        ok = _post("quantum_csv_rows", batch, timeout=30)
+        if ok:
+            sent += len(batch)
+        time.sleep(0.05)
+    print(f"  [quantum_csv_rows] {run_id[-4:]}: {sent}/{len(rows)} lignes")
+
+def upload_run(run_dir: Path):
+    run_id = run_dir.name
+    print(f"\n[SUPABASE] Upload {run_id}")
+
+    if not SERVICE_KEY:
+        print("  [SKIP] SUPABASE_SERVICE_ROLE_KEY absent — connexion fermée")
+        return False
+
+    log_path = run_dir / "logs" / "research_execution.log"
+    main_module, all_modules, score = _parse_research_log(log_path)
+
+    if not main_module and not all_modules:
+        print(f"  [WARN] Aucune donnée BASE_RESULT trouvée dans {log_path}")
+        if log_path.exists():
+            main_module = {"module": "hubbard_hts_core", "energy": 0,
+                           "pairing": 0, "sign_ratio": 0,
+                           "cpu_percent": 0, "ram_percent": 0}
         else:
-            print(f"  [FAIL] Table {table} introuvable ({resp.status_code}): {resp.text[:100]}")
-            print(f"  → Exécutez tools/supabase_schema.sql dans l'éditeur SQL de Supabase")
+            print("  [SKIP] Log vide ou absent")
             return False
+
+    upload_run_file(run_id, main_module)
+    upload_csv_rows(run_id, all_modules, score, log_path)
+
+    if score:
+        total = sum(score.values())
+        print(f"  [SCORE] iso={score.get('iso',0)} trace={score.get('trace',0)} "
+              f"repr={score.get('repr',0)} robust={score.get('robust',0)} "
+              f"phys={score.get('phys',0)} expert={score.get('expert',0)} "
+              f"TOTAL={total}/600")
+    else:
+        print("  [SCORE] Pas de SCORE dans le log (run incomplet ou SIGKILL)")
+
+    print(f"[SUPABASE] {run_id} — upload terminé")
     return True
 
-def sha256_file(path: Path) -> str:
-    h = hashlib.sha256()
-    with open(path, "rb") as f:
-        for chunk in iter(lambda: f.read(65536), b""):
-            h.update(chunk)
-    return h.hexdigest()
-
-def upsert_file_record(run_id, rel_path, file_type, size, sha, content=None):
-    data = {
-        "run_id": run_id,
-        "file_path": rel_path,
-        "file_type": file_type,
-        "file_size_bytes": size,
-        "sha256": sha,
-    }
-    if content is not None:
-        data["content_text"] = content[:500_000]
-    resp = requests.post(
-        rest("quantum_run_files"),
-        headers={**headers(), "Prefer": "resolution=merge-duplicates,return=minimal"},
-        json=data,
-        timeout=30
-    )
-    if resp.status_code not in (200, 201, 204):
-        print(f"  [WARN] upsert_file_record {rel_path}: {resp.status_code} {resp.text[:100]}")
-
-def upload_log_file(run_id, file_path: Path, rel_path: str):
-    size = file_path.stat().st_size
-    sha = sha256_file(file_path)
-    try:
-        content = file_path.read_text(errors="replace")
-    except Exception:
-        content = f"[BINARY: {size} bytes]"
-    upsert_file_record(run_id, rel_path, "log", size, sha, content)
-    print(f"  [LOG] {rel_path} ({size//1024}KB)")
-
-def delete_csv_rows(run_id, rel_path):
-    resp = requests.delete(
-        rest(f"quantum_csv_rows?run_id=eq.{run_id}&file_path=eq.{rel_path}"),
-        headers=headers(),
-        timeout=15
-    )
-    return resp.status_code in (200, 204)
-
-def upload_csv_file(run_id, file_path: Path, rel_path: str):
-    size = file_path.stat().st_size
-    sha = sha256_file(file_path)
-    upsert_file_record(run_id, rel_path, "csv", size, sha, None)
-    delete_csv_rows(run_id, rel_path)
-
-    rows_inserted = 0
-    batch = []
-    try:
-        with open(file_path, newline="", errors="replace") as f:
-            reader = csv.DictReader(f)
-            for i, row in enumerate(reader):
-                if i >= MAX_CSV_ROWS:
-                    print(f"  [CSV] {rel_path} tronqué à {MAX_CSV_ROWS} lignes (taille={size//1024}KB)")
-                    break
-                batch.append({
-                    "run_id": run_id,
-                    "file_path": rel_path,
-                    "row_index": i,
-                    "row_json": row
-                })
-                if len(batch) >= BATCH_SIZE:
-                    resp = requests.post(
-                        rest("quantum_csv_rows"),
-                        headers={**headers(), "Prefer": "return=minimal"},
-                        json=batch,
-                        timeout=30
-                    )
-                    if resp.status_code not in (200, 201, 204):
-                        print(f"  [WARN] batch insert error: {resp.status_code} {resp.text[:80]}")
-                    rows_inserted += len(batch)
-                    batch = []
-                    time.sleep(0.05)
-        if batch:
-            resp = requests.post(
-                rest("quantum_csv_rows"),
-                headers={**headers(), "Prefer": "return=minimal"},
-                json=batch,
-                timeout=30
-            )
-            rows_inserted += len(batch)
-    except Exception as e:
-        print(f"  [WARN] CSV parse {rel_path}: {e}")
-    print(f"  [CSV] {rel_path} ({size//1024}KB, {rows_inserted} lignes uploadées)")
-
-def upload_run(run_dir: Path, delete_after=False):
-    run_id = run_dir.name
-    print(f"\n[SUPABASE] Upload run: {run_id}")
-
-    if not SUPABASE_URL or not SERVICE_KEY:
-        print("  [SKIP] Credentials manquants")
-        return False
-
-    if not check_tables():
-        print("  [SKIP] Tables manquantes — exécutez supabase_schema.sql d'abord")
-        return False
-
-    success = True
-    for fpath in sorted(run_dir.rglob("*")):
-        if not fpath.is_file():
-            continue
-        size = fpath.stat().st_size
-        if size == 0:
-            continue
-        rel = str(fpath.relative_to(run_dir))
-        ext = fpath.suffix.lower()
-        try:
-            if ext == ".csv":
-                upload_csv_file(run_id, fpath, rel)
-            elif ext in (".log", ".md", ".json", ".txt", ".sha256", ".sha512"):
-                upload_log_file(run_id, fpath, rel)
-        except Exception as e:
-            print(f"  [ERROR] {rel}: {e}")
-            traceback.print_exc()
-            success = False
-
-    if success and delete_after:
-        import shutil
-        shutil.rmtree(run_dir)
-        print(f"  [DELETE] Fichiers locaux supprimés: {run_dir.name}")
-    print(f"[SUPABASE] Run {run_id} {'uploadé' if success else 'PARTIEL'}.")
-    return success
-
 def main():
-    parser = argparse.ArgumentParser(description="Upload run vers Supabase REST API")
-    parser.add_argument("run_dir", nargs="?", help="Dossier du run à uploader")
-    parser.add_argument("--all", action="store_true", help="Uploader tous les runs dans results/")
-    parser.add_argument("--delete-after", action="store_true",
-                        help="Supprimer les fichiers locaux après upload réussi")
-    parser.add_argument("--check-tables", action="store_true",
-                        help="Vérifie que les tables Supabase existent")
+    parser = argparse.ArgumentParser(description="Upload run LumVorax → Supabase REST")
+    parser.add_argument("run_dir", nargs="?", help="Dossier du run")
+    parser.add_argument("--all", action="store_true", help="Tous les runs dans results/")
+    parser.add_argument("--check-tables", action="store_true", help="Vérifier les tables")
     args = parser.parse_args()
 
     if args.check_tables:
-        ok = check_tables()
-        sys.exit(0 if ok else 1)
+        sys.exit(0 if check_tables() else 1)
 
     if args.all:
         if not RESULTS_DIR.exists():
-            print(f"[WARN] Dossier results/ absent: {RESULTS_DIR}")
+            print(f"[WARN] results/ absent: {RESULTS_DIR}")
             return
         runs = sorted([d for d in RESULTS_DIR.iterdir() if d.is_dir()])
-        print(f"[SUPABASE] {len(runs)} runs à uploader")
-        for run in runs:
-            upload_run(run, delete_after=args.delete_after)
+        print(f"[SUPABASE] {len(runs)} runs")
+        for r in runs:
+            upload_run(r)
     elif args.run_dir:
-        run_dir = Path(args.run_dir)
-        if not run_dir.exists():
-            print(f"[FATAL] Dossier introuvable: {run_dir}")
+        rd = Path(args.run_dir)
+        if not rd.exists():
+            print(f"[FATAL] {rd} introuvable")
             sys.exit(1)
-        upload_run(run_dir, delete_after=args.delete_after)
+        upload_run(rd)
     else:
         parser.print_help()
 

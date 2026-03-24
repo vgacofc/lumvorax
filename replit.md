@@ -24,7 +24,7 @@ A scientific computing project focused on quantum physics research, black hole s
 - `evidence/` — Scientific evidence/results
 - `docs/` — Documentation
 
-## Quantum Hubbard/HTS Research — Cycle Status (2026-03-18 — C43)
+## Quantum Hubbard/HTS Research — Cycle Status (2026-03-24 — C60)
 
 ### Runner: `hubbard_hts_research_runner_advanced_parallel` (recompilé C43 — 153 KB)
 - PT-MC : **15 modules** actifs (+ fermionic_sign_problem), **8 répliques**, **20 000 sweeps**, 4 000 therma, 500 steps/sweep
