@@ -62,7 +62,7 @@ Deux fichiers avec contenu identique = **header seul, aucune donnée chargée**.
 - `benchmark,external_modules_rmse,rmse,1000000000.0000000000,FAIL`
 - 4 benchmarks FAIL → expert reste à 57 (Q11 partial, Q20 partial, Q21 partial, Q22 partial)
 
-**Impact calculé** : Selon C58, le benchmark fonctionnel apportait environ +27 points sur expert (57→84) et +4 sur robust (94→98). Le répertoire vide explique **la totalité de la régression expert**.
+**Impact calculé** : Selon C58, .le benchmark fonctionnel apportait environ +27 points sur expert (57→84) et +4 sur robust (94→98). Le répertoire vide explique **la totalité de la régression expert**.
 
 **Diagnostic de la cause du vide** : En C58, les fichiers benchmark existaient (`benchmarks/qmc_dmrg_reference_v2.csv`). Entre C58 et C61, un `git reset` ou une suppression a effacé le répertoire entier. Le contenu n'a jamais été recréé.
 
