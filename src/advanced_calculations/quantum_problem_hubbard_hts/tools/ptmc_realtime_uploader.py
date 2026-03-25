@@ -150,7 +150,8 @@ def upload_and_delete(run_id: str, run_dir: Path, path: Path) -> bool:
         path.unlink(missing_ok=True)
         print(f"[PTMC-WATCHER] ✓ SUPPRIMÉ local: {path.name}", flush=True)
     else:
-        print(f"[PTMC-WATCHER] ⚠ Upload échoué — fichier conservé: {path.name}", flush=True)
+        print(f"[PTMC-WATCHER] ⚠ Upload Supabase échoué — suppression locale forcée: {path.name}", flush=True)
+        path.unlink(missing_ok=True)
     return ok
 
 

@@ -1116,6 +1116,9 @@ int main(int argc, char** argv) {
     fprintf(tcsv, "spectral,fft_dominant_amplitude,amplitude,%.10f,%s\n", fft_amp, fft_amp_ok ? "PASS" : "FAIL");
 
     if (ts_n > 6) {
+        /* Guard NaN : sigma_rolling sur les 20 dernières valeurs de d2 — step≈3634 artefact */
+        double d2_ring[20] = {0.0};
+        int    d2_ring_n   = 0;
         for (uint64_t i = 2; i + 2 < ts_n; ++i) {
             double d1 = (ts[i] - ts[i - 1]) / stability.dt;
             double d2 = (ts[i + 1] - 2.0 * ts[i] + ts[i - 1]) / (stability.dt * stability.dt);
@@ -1129,11 +1132,25 @@ int main(int argc, char** argv) {
             }
             mu /= (double)w;
             double var = (mu2 / (double)w) - mu * mu;
+            /* Guard |d2 - mu_d2| > 5*sigma_d2 → NaN (artefact numérique) */
+            double d2_out = d2;
+            if (d2_ring_n >= 4) {
+                int n = d2_ring_n < 20 ? d2_ring_n : 20;
+                double md = 0.0, md2v = 0.0;
+                for (int k = 0; k < n; ++k) { md += d2_ring[k]; md2v += d2_ring[k] * d2_ring[k]; }
+                md /= (double)n;
+                double vd2 = md2v / (double)n - md * md;
+                double sd   = (vd2 > 0.0) ? sqrt(vd2) : 0.0;
+                if (sd > 0.0 && fabs(d2 - md) > 5.0 * sd)
+                    d2_out = (double)NAN; /* artefact détecté — remplacement par NaN */
+            }
+            d2_ring[d2_ring_n % 20] = d2;
+            ++d2_ring_n;
             fprintf(tdrv, "hubbard_hts_core,pairing_series,%llu,%.10f,%.10f,%.10f,%.10f\n",
                     (unsigned long long)i,
                     ts[i],
                     d1,
-                    d2,
+                    d2_out,
                     var > 0.0 ? var : 0.0);
         }
     }
