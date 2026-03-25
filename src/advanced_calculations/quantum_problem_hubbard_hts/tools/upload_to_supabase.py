@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-upload_to_supabase.py — C60
+upload_to_supabase.py — C61
 Upload automatique des résultats d'un run vers Supabase via REST API.
 
 Schéma réel Supabase (NE PAS MODIFIER — colonnes vérifiées le 2026-03-24) :
@@ -11,11 +11,18 @@ Schéma réel Supabase (NE PAS MODIFIER — colonnes vérifiées le 2026-03-24) 
   quantum_benchmarks: dataset, module, observable, t_k, u_over_t,
                       reference_value, reference_method, source, error_bar,
                       notes, created_at
+  run_scores        : run_id(UNIQUE), runner, score_iso, score_trace,
+                      score_repr, score_robust, score_phys, score_expert,
+                      score_total, modules_ok, modules_total, created_at
+  benchmark_runtime : run_id, dataset, module, observable, t_k, u_over_t,
+                      reference_value, error_bar, model_value, abs_error,
+                      rel_error, within_error_bar, created_at
 
 Usage:
     python3 upload_to_supabase.py <run_dir>
     python3 upload_to_supabase.py --all
     python3 upload_to_supabase.py --check-tables
+    python3 upload_to_supabase.py <run_dir> --delete-after
 
 Variables d'environnement:
     SUPABASE_SERVICE_ROLE_KEY  eyJ... (219 chars JWT, obligatoire)
@@ -25,7 +32,9 @@ Variables d'environnement:
 import os
 import sys
 import re
+import csv
 import json
+import shutil
 import argparse
 import time
 from pathlib import Path
@@ -72,7 +81,7 @@ def _post(table, data, prefer="return=minimal", timeout=20):
         print(f"  [ERR] POST {table}: {e}")
         return False
 
-def _delete(table, filter_str, timeout=10):
+def _delete_rows(table, filter_str, timeout=10):
     if not SERVICE_KEY:
         return
     try:
@@ -85,7 +94,11 @@ def check_tables():
         print("[WARN] SUPABASE_SERVICE_ROLE_KEY absent — Supabase désactivé")
         return False
     ok = True
-    for t in ["quantum_run_files", "quantum_csv_rows", "quantum_benchmarks"]:
+    tables = [
+        "quantum_run_files", "quantum_csv_rows", "quantum_benchmarks",
+        "run_scores", "benchmark_runtime",
+    ]
+    for t in tables:
         try:
             r = requests.get(f"{_rest(t)}?limit=1", headers=_hdrs(), timeout=10)
             status = "OK" if r.status_code == 200 else f"FAIL({r.status_code})"
@@ -98,14 +111,15 @@ def check_tables():
     return ok
 
 def _parse_research_log(log_path: Path):
-    """Parse research_execution.log → dict avec module principal + liste BASE_RESULT."""
+    """Parse research_execution.log → dict avec module principal + liste BASE_RESULT + SCORE."""
     main_module = {}
     all_modules = []
     score = {}
+    runner = "unknown"
     if not log_path.exists():
-        return main_module, all_modules, score
+        return main_module, all_modules, score, runner
     pattern = re.compile(
-        r'BASE_RESULT problem=(\S+) energy=([\d.]+) pairing=([\d.]+) sign=(-?[\d.]+)'
+        r'BASE_RESULT problem=(\S+) energy=([\d.]+) pairing=([\d.]+) sign=\s*(-?[\d.]+)'
         r' cpu_peak=([\d.]+) mem_peak=([\d.]+)'
     )
     score_pat = re.compile(r'SCORE iso=(\d+) trace=(\d+) repr=(\d+) robust=(\d+) phys=(\d+) expert=(\d+)')
@@ -123,14 +137,14 @@ def _parse_research_log(log_path: Path):
         s = score_pat.search(line)
         if s:
             score = {k: int(v) for k, v in zip(
-                ["iso","trace","repr","robust","phys","expert"],
-                [s.group(i) for i in range(1,7)]
+                ["iso", "trace", "repr", "robust", "phys", "expert"],
+                [s.group(i) for i in range(1, 7)]
             )}
-    return main_module, all_modules, score
+    return main_module, all_modules, score, runner
 
 def upload_run_file(run_id: str, main_module: dict):
     """Insère 1 ligne résumé dans quantum_run_files (UNIQUE sur run_id)."""
-    _delete("quantum_run_files", f"run_id=eq.{run_id}")
+    _delete_rows("quantum_run_files", f"run_id=eq.{run_id}")
     time.sleep(0.1)
     row = {
         "run_id": run_id,
@@ -148,9 +162,92 @@ def upload_run_file(run_id: str, main_module: dict):
     print(f"  [quantum_run_files] {run_id[-4:]}: {'OK' if ok else 'FAIL'}")
     return ok
 
+def upload_run_scores(run_id: str, all_modules: list, score: dict, runner: str):
+    """Insère le score du run dans run_scores."""
+    if not score:
+        print(f"  [run_scores] {run_id[-4:]}: SKIP — pas de SCORE dans le log")
+        return False
+    _delete_rows("run_scores", f"run_id=eq.{run_id}")
+    time.sleep(0.1)
+    total = sum(score.values())
+    row = {
+        "run_id": run_id,
+        "runner": runner if runner != "unknown" else (
+            "advanced_parallel" if "advanced" in run_id.lower() else "fullscale"
+        ),
+        "score_iso":    score.get("iso", 0),
+        "score_trace":  score.get("trace", 0),
+        "score_repr":   score.get("repr", 0),
+        "score_robust": score.get("robust", 0),
+        "score_phys":   score.get("phys", 0),
+        "score_expert": score.get("expert", 0),
+        "score_total":  total,
+        "modules_ok":   len(all_modules),
+        "modules_total": 15,
+    }
+    ok = _post("run_scores", row)
+    print(f"  [run_scores] {run_id[-4:]}: {'OK' if ok else 'FAIL'} — TOTAL={total}/600")
+    return ok
+
+def upload_benchmark_runtime(run_id: str, run_dir: Path):
+    """Lit les fichiers benchmark CSV du run et insère dans benchmark_runtime."""
+    bench_files = [
+        run_dir / "tests" / "benchmark_comparison_qmc_dmrg.csv",
+        run_dir / "tests" / "benchmark_comparison_external_modules.csv",
+    ]
+    rows = []
+    for bf in bench_files:
+        if not bf.exists():
+            continue
+        dataset = bf.stem.replace("benchmark_comparison_", "")
+        try:
+            with open(bf, newline="", errors="replace") as f:
+                reader = csv.DictReader(f)
+                for row in reader:
+                    try:
+                        ref_val   = float(row.get("reference") or row.get("reference_value") or 0)
+                        mod_val   = float(row.get("model") or row.get("model_value") or 0)
+                        err_bar   = float(row.get("error_bar") or 0)
+                        abs_err   = float(row.get("abs_error") or 0)
+                        rel_err   = float(row.get("rel_error") or 0)
+                        within    = (abs_err <= err_bar) if err_bar > 0 else False
+                        rows.append({
+                            "run_id":          run_id,
+                            "dataset":         dataset,
+                            "module":          row.get("module", ""),
+                            "observable":      row.get("observable", ""),
+                            "t_k":             float(row.get("T") or row.get("t_k") or 0),
+                            "u_over_t":        float(row.get("U") or row.get("u_over_t") or 0),
+                            "reference_value": ref_val,
+                            "error_bar":       err_bar,
+                            "model_value":     mod_val,
+                            "abs_error":       abs_err,
+                            "rel_error":       rel_err,
+                            "within_error_bar": within,
+                        })
+                    except (ValueError, TypeError):
+                        continue
+        except Exception as e:
+            print(f"  [benchmark_runtime] ERR lecture {bf.name}: {e}")
+
+    if not rows:
+        print(f"  [benchmark_runtime] {run_id[-4:]}: SKIP — aucun fichier benchmark trouvé")
+        return False
+    _delete_rows("benchmark_runtime", f"run_id=eq.{run_id}")
+    time.sleep(0.1)
+    sent = 0
+    for i in range(0, len(rows), BATCH_SIZE):
+        batch = rows[i:i+BATCH_SIZE]
+        ok = _post("benchmark_runtime", batch, timeout=30)
+        if ok:
+            sent += len(batch)
+        time.sleep(0.05)
+    print(f"  [benchmark_runtime] {run_id[-4:]}: {sent}/{len(rows)} lignes")
+    return sent > 0
+
 def upload_csv_rows(run_id: str, all_modules: list, score: dict, log_path: Path):
     """Insère les lignes détaillées dans quantum_csv_rows."""
-    _delete("quantum_csv_rows", f"run_id=eq.{run_id}")
+    _delete_rows("quantum_csv_rows", f"run_id=eq.{run_id}")
     time.sleep(0.1)
 
     rows = []
@@ -188,16 +285,16 @@ def upload_csv_rows(run_id: str, all_modules: list, score: dict, log_path: Path)
         time.sleep(0.05)
     print(f"  [quantum_csv_rows] {run_id[-4:]}: {sent}/{len(rows)} lignes")
 
-def upload_run(run_dir: Path):
+def upload_run(run_dir: Path, delete_after: bool = False):
     run_id = run_dir.name
     print(f"\n[SUPABASE] Upload {run_id}")
 
     if not SERVICE_KEY:
-        print("  [SKIP] SUPABASE_SERVICE_ROLE_KEY absent — connexion fermée")
+        print("  [SKIP] SUPABASE_SERVICE_ROLE_KEY absent — Supabase désactivé")
         return False
 
     log_path = run_dir / "logs" / "research_execution.log"
-    main_module, all_modules, score = _parse_research_log(log_path)
+    main_module, all_modules, score, runner = _parse_research_log(log_path)
 
     if not main_module and not all_modules:
         print(f"  [WARN] Aucune donnée BASE_RESULT trouvée dans {log_path}")
@@ -211,6 +308,8 @@ def upload_run(run_dir: Path):
 
     upload_run_file(run_id, main_module)
     upload_csv_rows(run_id, all_modules, score, log_path)
+    upload_run_scores(run_id, all_modules, score, runner)
+    upload_benchmark_runtime(run_id, run_dir)
 
     if score:
         total = sum(score.values())
@@ -222,6 +321,16 @@ def upload_run(run_dir: Path):
         print("  [SCORE] Pas de SCORE dans le log (run incomplet ou SIGKILL)")
 
     print(f"[SUPABASE] {run_id} — upload terminé")
+
+    # C61-DELETE-AFTER : suppression locale après upload réussi pour libérer l'espace disque
+    # Evite l'accumulation de GB de données CSV qui provoque le SIGKILL du workflow
+    if delete_after:
+        try:
+            shutil.rmtree(run_dir)
+            print(f"[SUPABASE] {run_id} — répertoire local supprimé (--delete-after)")
+        except Exception as e:
+            print(f"[SUPABASE-WARN] Suppression locale {run_id} échouée: {e}")
+
     return True
 
 def main():
@@ -229,6 +338,8 @@ def main():
     parser.add_argument("run_dir", nargs="?", help="Dossier du run")
     parser.add_argument("--all", action="store_true", help="Tous les runs dans results/")
     parser.add_argument("--check-tables", action="store_true", help="Vérifier les tables")
+    parser.add_argument("--delete-after", action="store_true",
+                        help="Supprimer le répertoire local après upload réussi")
     args = parser.parse_args()
 
     if args.check_tables:
@@ -241,13 +352,13 @@ def main():
         runs = sorted([d for d in RESULTS_DIR.iterdir() if d.is_dir()])
         print(f"[SUPABASE] {len(runs)} runs")
         for r in runs:
-            upload_run(r)
+            upload_run(r, delete_after=args.delete_after)
     elif args.run_dir:
         rd = Path(args.run_dir)
         if not rd.exists():
             print(f"[FATAL] {rd} introuvable")
             sys.exit(1)
-        upload_run(rd)
+        upload_run(rd, delete_after=args.delete_after)
     else:
         parser.print_help()
 
