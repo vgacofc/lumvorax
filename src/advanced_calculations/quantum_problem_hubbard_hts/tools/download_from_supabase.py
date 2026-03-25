@@ -1,8 +1,17 @@
 #!/usr/bin/env python3
 """
-download_from_supabase.py — C60-DOWNLOAD
+download_from_supabase.py — C61-DOWNLOAD
 Télécharge depuis Supabase les fichiers nécessaires à l'exécution du cycle de recherche.
 Permet à chaque nouvelle session Replit de reprendre là où la précédente s'est arrêtée.
+
+Tables réelles (vérifiées C61) :
+  quantum_run_files  : id, run_id, module, lx, ly, t_ev, u_ev, mu_ev, temp_k, dt, steps,
+                       energy, pairing, sign_ratio, cpu_percent, ram_percent, created_at
+  quantum_csv_rows   : id, run_id, file_name, row_number, data, created_at
+  quantum_benchmarks : id, dataset, module, observable, t_k, u_over_t,
+                       reference_value, reference_method, source, error_bar, notes, created_at
+  run_scores         : run_id, iso, trace, repr, robust, phys, expert, total, created_at
+  benchmark_runtime  : run_id, module, observable, sim_value, ref_value, rmse, created_at
 
 Usage:
     python3 tools/download_from_supabase.py [--run-id <run_id>] [--latest] [--list]
@@ -15,9 +24,9 @@ Variables d'environnement:
 import os
 import sys
 import json
-import time
 import argparse
 from pathlib import Path
+from collections import defaultdict
 
 try:
     import requests
@@ -34,7 +43,10 @@ def _derive_url() -> str:
     if db_host.startswith("db.") and ".supabase.co" in db_host:
         pid = db_host[3:].replace(".supabase.co", "")
         return f"https://{pid}.supabase.co"
-    return os.environ.get("SUPABASE_URL", "").rstrip("/")
+    url = os.environ.get("SUPABASE_URL", "").rstrip("/")
+    if url.startswith("postgresql://") or url.startswith("postgres://"):
+        return ""
+    return url
 
 
 SERVICE_KEY  = os.environ.get("SUPABASE_SERVICE_ROLE_KEY", "")
@@ -61,60 +73,82 @@ def _check_credentials() -> bool:
 
 
 def list_runs() -> list:
-    # C60-FIX : ne pas utiliser order=uploaded_at si la colonne n'existe pas
-    # On récupère juste les run_id distincts sans tri par date
+    """Récupère les run_ids distincts depuis quantum_csv_rows."""
     resp = requests.get(
-        _rest("quantum_run_files?select=run_id"),
+        _rest("quantum_csv_rows?select=run_id"),
         headers=_headers(), timeout=15
     )
     if resp.status_code != 200:
-        print(f"[DOWNLOAD-WARN] list_runs: {resp.status_code} {resp.text[:100]}")
+        print(f"[DOWNLOAD-WARN] list_runs: {resp.status_code} {resp.text[:100]}", flush=True)
         return []
     rows = resp.json()
     seen = set()
     runs = []
     for r in rows:
         rid = r.get("run_id", "")
-        if rid and rid not in seen:
+        if rid and rid.startswith("research_") and rid not in seen:
             seen.add(rid)
             runs.append(rid)
-    # Trier par nom (format research_YYYYMMDDTHHMMSSZ) desc = plus récent en premier
     runs.sort(reverse=True)
     return runs
 
 
 def download_run(run_id: str, out_dir: Path) -> int:
-    """Télécharge tous les fichiers d'un run depuis Supabase vers out_dir."""
+    """Télécharge tous les fichiers d'un run depuis quantum_csv_rows vers out_dir.
+    
+    Les fichiers sont stockés ligne par ligne dans quantum_csv_rows :
+    - file_name  : nom relatif du fichier (ex: logs/research_execution.log)
+    - row_number : numéro de ligne (0-indexé)
+    - data       : contenu de la ligne
+    """
     print(f"[DOWNLOAD] Téléchargement run={run_id} → {out_dir}", flush=True)
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    resp = requests.get(
-        _rest(f"quantum_run_files?run_id=eq.{run_id}&select=file_path,file_type,content_text,file_size_bytes"),
-        headers=_headers(), timeout=30
-    )
-    if resp.status_code != 200:
-        print(f"[DOWNLOAD-WARN] Erreur récupération liste: {resp.status_code} {resp.text[:100]}")
+    offset = 0
+    limit  = 1000
+    all_rows = []
+    while True:
+        resp = requests.get(
+            _rest(f"quantum_csv_rows?run_id=eq.{run_id}"
+                  f"&select=file_name,row_number,data"
+                  f"&order=file_name.asc,row_number.asc"
+                  f"&offset={offset}&limit={limit}"),
+            headers=_headers(), timeout=30
+        )
+        if resp.status_code != 200:
+            print(f"[DOWNLOAD-WARN] Erreur récupération: {resp.status_code} {resp.text[:100]}", flush=True)
+            break
+        batch = resp.json()
+        if not batch:
+            break
+        all_rows.extend(batch)
+        if len(batch) < limit:
+            break
+        offset += limit
+
+    if not all_rows:
+        print(f"[DOWNLOAD] Aucune donnée pour run={run_id}", flush=True)
         return 0
 
-    files = resp.json()
-    print(f"[DOWNLOAD] {len(files)} fichiers trouvés pour run={run_id}", flush=True)
+    by_file = defaultdict(list)
+    for r in all_rows:
+        fname = r.get("file_name", "")
+        if fname:
+            by_file[fname].append(r)
+
     count = 0
-
-    for f in files:
-        rel  = f.get("file_path", "")
-        text = f.get("content_text", "")
-        if not rel:
+    for fname, rows in by_file.items():
+        rows.sort(key=lambda x: x.get("row_number", 0))
+        target = out_dir / fname
+        if target.exists() and target.stat().st_size > 0:
             continue
-        target = out_dir / rel
         target.parent.mkdir(parents=True, exist_ok=True)
+        lines = [r.get("data", "") for r in rows]
+        target.write_text("\n".join(lines) + "\n", encoding="utf-8", errors="replace")
+        count += 1
+        print(f"  [DL] {fname} ({len(lines)} lignes)", flush=True)
 
-        if not target.exists() or target.stat().st_size == 0:
-            if text:
-                target.write_text(text, encoding="utf-8", errors="replace")
-                count += 1
-                print(f"  [DL] {rel} ({len(text)} chars)", flush=True)
-            else:
-                target.touch()
+    print(f"[DOWNLOAD] {count} fichiers écrits → {out_dir}", flush=True)
     return count
 
 
@@ -175,63 +209,111 @@ def generate_problems_csv_from_supabase() -> bool:
 
 
 def download_benchmarks() -> int:
-    """Télécharge les fichiers de référence benchmark depuis Supabase (table run_id='benchmarks')."""
+    """Télécharge les données de référence depuis quantum_benchmarks vers benchmarks/."""
     bench_dir = ROOT / "benchmarks"
     bench_dir.mkdir(exist_ok=True)
 
+    qmc_file  = bench_dir / "qmc_dmrg_reference_v2.csv"
+    ext_file  = bench_dir / "external_module_benchmarks_v1.csv"
+
+    if qmc_file.exists() and qmc_file.stat().st_size > 100 and \
+       ext_file.exists() and ext_file.stat().st_size > 100:
+        print("[DOWNLOAD-BENCH] Fichiers benchmark déjà présents — skip", flush=True)
+        return 0
+
     resp = requests.get(
-        _rest("quantum_run_files?run_id=eq.benchmarks&select=file_path,content_text"),
+        _rest("quantum_benchmarks?order=dataset.asc,module.asc"
+              "&select=dataset,module,observable,t_k,u_over_t,reference_value,reference_method,source,error_bar"),
         headers=_headers(), timeout=15
     )
     if resp.status_code != 200:
         print(f"[DOWNLOAD-BENCH] Erreur: {resp.status_code}", flush=True)
         return 0
 
-    files = resp.json()
+    rows = resp.json()
+    if not rows:
+        print("[DOWNLOAD-BENCH] Aucune donnée dans quantum_benchmarks", flush=True)
+        return 0
+
+    qmc_rows = [r for r in rows if r.get("dataset", "").startswith("qmc")]
+    ext_rows = [r for r in rows if r.get("dataset", "").startswith("ext")]
+
     count = 0
-    for f in files:
-        rel  = f.get("file_path", "")
-        text = f.get("content_text", "")
-        if rel and text:
-            target = bench_dir / rel
-            if not target.exists() or target.stat().st_size == 0:
-                target.write_text(text, encoding="utf-8", errors="replace")
-                count += 1
-                print(f"  [DL-BENCH] {rel}", flush=True)
+    if qmc_rows and (not qmc_file.exists() or qmc_file.stat().st_size < 100):
+        header = "module,observable,t_k,u_over_t,reference_value,reference_method,source,error_bar"
+        lines  = [header]
+        for r in qmc_rows:
+            lines.append(
+                f"{r.get('module','')},{r.get('observable','')},{r.get('t_k','')},"
+                f"{r.get('u_over_t','')},{r.get('reference_value','')},{r.get('reference_method','')},"
+                f"{r.get('source','')},{r.get('error_bar','')}"
+            )
+        qmc_file.write_text("\n".join(lines) + "\n", encoding="utf-8")
+        print(f"  [DL-BENCH] qmc_dmrg_reference_v2.csv ({len(qmc_rows)} lignes)", flush=True)
+        count += 1
+
+    if ext_rows and (not ext_file.exists() or ext_file.stat().st_size < 100):
+        header = "module,observable,t_k,u_over_t,reference_value,reference_method,source,error_bar"
+        lines  = [header]
+        for r in ext_rows:
+            lines.append(
+                f"{r.get('module','')},{r.get('observable','')},{r.get('t_k','')},"
+                f"{r.get('u_over_t','')},{r.get('reference_value','')},{r.get('reference_method','')},"
+                f"{r.get('source','')},{r.get('error_bar','')}"
+            )
+        ext_file.write_text("\n".join(lines) + "\n", encoding="utf-8")
+        print(f"  [DL-BENCH] external_module_benchmarks_v1.csv ({len(ext_rows)} lignes)", flush=True)
+        count += 1
+
     return count
 
 
 def upload_benchmarks() -> int:
-    """Upload les fichiers benchmark vers Supabase sous run_id='benchmarks'."""
+    """Upload les fichiers benchmark locaux vers quantum_benchmarks sur Supabase."""
     bench_dir = ROOT / "benchmarks"
     if not bench_dir.exists():
         return 0
     count = 0
-    for fpath in sorted(bench_dir.rglob("*")):
-        if not fpath.is_file() or fpath.stat().st_size == 0:
+    for fpath in sorted(bench_dir.rglob("*.csv")):
+        if not fpath.is_file() or fpath.stat().st_size < 50:
             continue
+
+        dataset = "qmc" if "qmc" in fpath.stem else "ext"
         try:
-            text = fpath.read_text(errors="replace")
+            lines = fpath.read_text(errors="replace").splitlines()
         except Exception:
             continue
-        rel = fpath.name
-        data = {
-            "run_id": "benchmarks",
-            "file_path": rel,
-            "file_type": "benchmark",
-            "file_size_bytes": fpath.stat().st_size,
-            "sha256": "NA",
-            "content_text": text[:500_000],
-        }
-        resp = requests.post(
-            _rest("quantum_run_files"),
-            headers={**_headers(), "Prefer": "resolution=merge-duplicates,return=minimal"},
-            json=data, timeout=20
-        )
-        if resp.status_code in (200, 201, 204):
-            count += 1
-        else:
-            print(f"  [UPL-BENCH-WARN] {rel}: {resp.status_code}", flush=True)
+
+        if len(lines) < 2:
+            continue
+        header_cols = [c.strip() for c in lines[0].split(",")]
+
+        for line in lines[1:]:
+            parts = [p.strip() for p in line.split(",")]
+            if len(parts) < len(header_cols):
+                continue
+            row_dict = dict(zip(header_cols, parts))
+            data = {
+                "dataset":          dataset,
+                "module":           row_dict.get("module", ""),
+                "observable":       row_dict.get("observable", ""),
+                "t_k":              float(row_dict["t_k"])           if row_dict.get("t_k")           else None,
+                "u_over_t":         float(row_dict["u_over_t"])      if row_dict.get("u_over_t")      else None,
+                "reference_value":  float(row_dict["reference_value"]) if row_dict.get("reference_value") else None,
+                "reference_method": row_dict.get("reference_method", ""),
+                "source":           row_dict.get("source", ""),
+                "error_bar":        float(row_dict["error_bar"])     if row_dict.get("error_bar")     else None,
+            }
+            resp = requests.post(
+                _rest("quantum_benchmarks"),
+                headers={**_headers(), "Prefer": "resolution=merge-duplicates,return=minimal"},
+                json=data, timeout=20
+            )
+            if resp.status_code in (200, 201, 204):
+                count += 1
+            else:
+                print(f"  [UPL-BENCH-WARN] {fpath.name}: {resp.status_code} {resp.text[:80]}", flush=True)
+
     return count
 
 
@@ -262,7 +344,7 @@ def main():
 
     if args.upload_benchmarks:
         n = upload_benchmarks()
-        print(f"[UPLOAD-BENCH] {n} fichiers benchmark uploadés vers Supabase")
+        print(f"[UPLOAD-BENCH] {n} lignes benchmark uploadées vers Supabase")
         return
 
     if args.run_id:
