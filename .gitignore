@@ -1,16 +1,1 @@
-# Rapports, documents, logs non suivis
-*.pdf
 
-# C59 — Fichiers volumineux de simulation stockes dans Supabase
-# Aucun fichier de resultats ne doit rester dans git
-src/advanced_calculations/quantum_problem_hubbard_hts/results/
-*.csv
-*.log
-*.tar
-*.tar.gz
-*.bin
-forensic_report_*.json
-lumvorax_src.tar
-lumvorax_*.bin
-GLOBAL_CHECKSUM.*
-checksums.*
